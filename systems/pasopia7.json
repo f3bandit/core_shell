@@ -1,0 +1,393 @@
+{
+ "coreshell_profile": 1,
+ "system": "pasopia7",
+ "variant": "stock",
+ "name": "Pasopia7",
+ "rbf": "_Computer/Pasopia7",
+ "setname": null,
+ "core_name": "Pasopia7",
+ "config_file": "Pasopia7.CFG",
+ "games_dir": "games/Pasopia7",
+ "saves_dir": "saves/Pasopia7",
+ "rom": {
+  "index": 0,
+  "type": "f",
+  "exts": [
+   "ROM"
+  ]
+ },
+ "slots": [
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load ROM"
+  },
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load Pasopia ROM"
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load Kanji ROM"
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "D88"
+   ],
+   "label": "Pri. FDD 1"
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "D88"
+   ],
+   "label": "FDD 2"
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "CAS",
+    "WAV"
+   ],
+   "label": "Tape"
+  },
+  {
+   "index": 3,
+   "type": "s",
+   "exts": [
+    "BIN"
+   ],
+   "label": "RAM PAC 1"
+  },
+  {
+   "index": 4,
+   "type": "s",
+   "exts": [
+    "BIN"
+   ],
+   "label": "RAM PAC 2"
+  }
+ ],
+ "files": [
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load ROM",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load Pasopia ROM",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load Kanji ROM",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "D88"
+   ],
+   "label": "Pri. FDD 1",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "D88"
+   ],
+   "label": "FDD 2",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "CAS",
+    "WAV"
+   ],
+   "label": "Tape",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 3,
+   "type": "s",
+   "exts": [
+    "BIN"
+   ],
+   "label": "RAM PAC 1",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 4,
+   "type": "s",
+   "exts": [
+    "BIN"
+   ],
+   "label": "RAM PAC 2",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Apply and reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Rewind tape",
+   "bits": [
+    10,
+    10
+   ],
+   "kind": "toggle",
+   "page": 1,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "Machine",
+   "name": "Model",
+   "values": [
+    "Pasopia 7",
+    "Pasopia 7 LCD",
+    "Pasopia"
+   ],
+   "default": "Pasopia 7",
+   "bits": [
+    11,
+    12
+   ],
+   "core_flags": [],
+   "key": "Machine/Model",
+   "mgl_ok": true
+  },
+  {
+   "page": "Machine",
+   "name": "Tape speed",
+   "values": [
+    "5x",
+    "Normal"
+   ],
+   "default": "5x",
+   "bits": [
+    7,
+    7
+   ],
+   "core_flags": [],
+   "key": "Machine/Tape speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "Machine",
+   "name": "Tape shaper",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    13,
+    13
+   ],
+   "core_flags": [],
+   "key": "Machine/Tape shaper",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Display",
+   "values": [
+    "Color",
+    "B&W",
+    "Green",
+    "Amber"
+   ],
+   "default": "Color",
+   "bits": [
+    5,
+    6
+   ],
+   "core_flags": [],
+   "key": "Video/Display",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    19,
+    20
+   ],
+   "core_flags": [],
+   "key": "Video/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    21,
+    22
+   ],
+   "core_flags": [],
+   "key": "Video/Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    23,
+    25
+   ],
+   "core_flags": [],
+   "key": "Video/Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Tape overlay",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    8,
+    8
+   ],
+   "core_flags": [],
+   "key": "Video/Tape overlay",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Keyboard symbols",
+   "values": [
+    "US",
+    "By position (JP)"
+   ],
+   "default": "US",
+   "bits": [
+    31,
+    31
+   ],
+   "core_flags": [],
+   "key": "Input/Keyboard symbols",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Swap Alt/Win keys",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    30,
+    30
+   ],
+   "core_flags": [],
+   "key": "Input/Swap Alt/Win keys",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio",
+   "name": "Tape audio",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    9,
+    9
+   ],
+   "core_flags": [],
+   "key": "Audio/Tape audio",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "repo": "MiSTer-devel/Pasopia7_MiSTer",
+  "commit": "2fe7d00d611d340088ddb40adbadd226b61ab021",
+  "file": "Pasopia7.sv",
+  "rbf": "Pasopia7_20261120.rbf",
+  "rbf_md5": "b467f1a738b80e5c58181a784082bbc1"
+ }
+}

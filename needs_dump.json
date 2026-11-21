@@ -90,6 +90,12 @@
   "has_profile": false
  },
  {
+  "rbf": "_LLAPI Enhanced/_Experimental/SNES_Enhanced_1.0_20261121_Experimental.rbf",
+  "md5": "7c1555cd7fd711e9444e0a2bf9176f95",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
   "rbf": "_LLAPI Enhanced/cores/1943-LLAPI-SNAC.rbf",
   "md5": "29e60b058785155249c614e52c0defa1",
   "db": "llapi_folder",
@@ -114,6 +120,30 @@
   "has_profile": false
  },
  {
+  "rbf": "_LLAPI Enhanced/cores/DonkeyKong_llapi10.rbf",
+  "md5": "3a8ba0fd400b369f1e592c9f7468ad0d",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI Enhanced/cores/Pacman_llapi10.rbf",
+  "md5": "8e71347675de0fdebcbb4c7f2095a991",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI Enhanced/cores/PinballAction_llapi10.rbf",
+  "md5": "17d2efc3034278a6b4fe70db84bbd3f5",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI Enhanced/cores/S32_ga2_llapi10.rbf",
+  "md5": "c97b2919b87718f65952b6cef7398568",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
   "rbf": "_LLAPI Enhanced/cores/S32_ga2_llapi10_exp.rbf",
   "md5": "f686fb5d9b2c16b28e1ca7835994b0cb",
   "db": "llapi_folder",
@@ -126,6 +156,12 @@
   "has_profile": false
  },
  {
+  "rbf": "_LLAPI Enhanced/cores/jt1943_llapi10.rbf",
+  "md5": "1978b8a95dfb21a838a03d5748c4b8a1",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
   "rbf": "_LLAPI Enhanced/cores/jt1944_llapi050.rbf",
   "md5": "c054e996ca8e95acd24ba6b564cb2306",
   "db": "llapi_folder",
@@ -134,6 +170,24 @@
  {
   "rbf": "_LLAPI Enhanced/cores/jt1944_llapi_enhanced_v0_2_0_20261101.rbf",
   "md5": "67512471b22752436c33fb5e1fc328d1",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI Enhanced/cores/jtajax_llapi10.rbf",
+  "md5": "0571f0588ca09a3573719abfd672f092",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI Enhanced/cores/jtaliens_llapi10.rbf",
+  "md5": "1c906f590a8291b81d5d575ae2c3fd2d",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI Enhanced/cores/jtaliens_scontra_llapi10.rbf",
+  "md5": "8acfb9e9237e70a8965ac69b42a7dd9e",
   "db": "llapi_folder",
   "has_profile": false
  },
@@ -168,8 +222,26 @@
   "has_profile": false
  },
  {
+  "rbf": "_LLAPI Enhanced/cores/jtexed_llapi10.rbf",
+  "md5": "32677771747cbb570d37c2d342f0dac2",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
   "rbf": "_LLAPI Enhanced/cores/jtffight_llapi10.rbf",
   "md5": "9545c92adc95cc14b4f00cb127d20d29",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI Enhanced/cores/jtflane_llapi10.rbf",
+  "md5": "f27ef45813c5cd2e663aa20f5dcfd665",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI Enhanced/cores/jtgaiden_llapi10.rbf",
+  "md5": "37b360cb5b11d6c5880821b424aa8d6d",
   "db": "llapi_folder",
   "has_profile": false
  },
@@ -182,6 +254,18 @@
  {
   "rbf": "_LLAPI Enhanced/cores/jtgoldnaxe_llapi10.rbf",
   "md5": "e56a775fcd5e10a28f0ef1c427a33184",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI Enhanced/cores/jtgrad3_llapi10.rbf",
+  "md5": "5b467626d5d36a7f48bf47fba56a1d89",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI Enhanced/cores/jtgunsmk_llapi10.rbf",
+  "md5": "8a6a2a3c1c4aae150a46fcf6312aeb42",
   "db": "llapi_folder",
   "has_profile": false
  },
@@ -204,6 +288,18 @@
   "has_profile": false
  },
  {
+  "rbf": "_LLAPI Enhanced/cores/jtpang_llapi10.rbf",
+  "md5": "3ae8fd0b92dce4465b69d0cc2855e696",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI Enhanced/cores/jtparoda_llapi10.rbf",
+  "md5": "ab61421a6bfcabbcaa50b68c8f450b5a",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
   "rbf": "_LLAPI Enhanced/cores/jtpunish_llapi10.rbf",
   "md5": "9ebadf5b308a533613244b96b5f7ebd5",
   "db": "llapi_folder",
@@ -216,8 +312,44 @@
   "has_profile": false
  },
  {
+  "rbf": "_LLAPI Enhanced/cores/jtriders_llapi10.rbf",
+  "md5": "ab089beff8f889f3ac5d3c5283bb4ff9",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
   "rbf": "_LLAPI Enhanced/cores/jtsectnz_llapi10.rbf",
   "md5": "f6f01e45e41e976b53f4631f5ce8cfb0",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI Enhanced/cores/jtsimson_llapi10.rbf",
+  "md5": "2eaf611c56a709bc50668628f2477699",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI Enhanced/cores/jtsimson_vendetta_llapi10.rbf",
+  "md5": "2eaf611c56a709bc50668628f2477699",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI Enhanced/cores/jtthundr_llapi10.rbf",
+  "md5": "e97bf586f80622a0a5f546efef7170f9",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI Enhanced/cores/jttmnt_llapi10.rbf",
+  "md5": "cae5e7b23fbc8cb42db79d71d95641be",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI Enhanced/cores/jttoki_llapi10.rbf",
+  "md5": "9e77890fb1e3226c81cace1f964ede86",
   "db": "llapi_folder",
   "has_profile": false
  },
@@ -234,8 +366,20 @@
   "has_profile": false
  },
  {
+  "rbf": "_LLAPI Enhanced/cores/jtvigil_llapi10.rbf",
+  "md5": "8276dd20545e2052388e3e23c88f938b",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
   "rbf": "_LLAPI Enhanced/cores/jtyiear_llapi10.rbf",
   "md5": "712d3a674d4749d1b9b5670508100899",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI Enhanced/cores/ninjakun_llapi10.rbf",
+  "md5": "b17bad50bed0d7740abf08060a61b273",
   "db": "llapi_folder",
   "has_profile": false
  },
