@@ -264,6 +264,31 @@ python3 -m coreshell kernel accept       # the state now is the known-good one
 python3 -m coreshell kernel hold|unhold
 ```
 
+### Restore points of the system files
+
+Before MiSTer's own updaters run from the Scripts menu (Update All, the downloader), `bin/run-script` saves a restore
+point of the system files: Main (`MiSTer`), the menu core and the kernel, with Linux recorded by its version. If an
+update gets past the watches and breaks something, a rollback puts back exactly what was there before it. The update
+itself runs as on stock MiSTer. Ported from Phosphor's update-guard; where update-guard is installed, it takes the
+commands, so there is one set of restore points.
+
+- Each file is kept once, however many points use it (a few MB for Main, the menu core and the kernel). Three points
+  are kept, plus the newest "pre-rollback" one.
+- A rollback checks the saved copies first and changes nothing if one is damaged. It saves what it replaces first, so
+  it can be undone, and swaps files the way MiSTer's own updater does: written beside, then renamed over. A Linux
+  version that differs is downloaded from MiSTer-devel's SD installer releases.
+- Settings in `settings/restore-points.ini`: `SYSTEM_FILES="MiSTer|menu.rbf|linux/zImage_dtb"` (add `|linux/linux.img`
+  to keep the image too, 375 MB) and `KEEP_POINTS="3"`.
+
+```
+bin/restore-points points                     # saved sets, newest first
+bin/restore-points save-point [label]         # save the current system files now
+bin/restore-points rollback [point] [--hold]  # go back (default: to before the last update); then reboot.
+                                              #   --hold: kernel hold as well
+bin/restore-points delete-point <point>...
+bin/restore-points status
+```
+
 ## Updating, and the developer command line
 
 `python3 -m coreshell update` brings the whole install up to the latest release: code, core profiles, quirks, ARM
