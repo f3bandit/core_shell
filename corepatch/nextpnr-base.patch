@@ -100,9 +100,11 @@ new file mode 100644
 index 0000000..e0414f9
 --- /dev/null
 +++ b/mistral/base.cc
-@@ -0,0 +1,242 @@
+@@ -0,0 +1,244 @@
 +/*
 + *  nextpnr -- Next Generation Place and Route
++ *
++ *  Copyright (C) 2026 f3bandit
 + *
 + *  Placing a small design into an existing (stock) Cyclone V bitstream.
 + *

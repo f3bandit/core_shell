@@ -258,6 +258,7 @@
  ],
  "hide": [],
  "source": {
+  "from": "source",
   "repo": "MiSTer-devel/MacSE30_MiSTer",
   "commit": "82aff539a4d97d83476d7c52aa16062e939bbee1",
   "file": "MacSE30.sv",

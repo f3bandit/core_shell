@@ -296,6 +296,7 @@
  ],
  "hide": [],
  "source": {
+  "from": "source",
   "repo": "MiSTer-devel/TK2000_MiSTer",
   "commit": "7800adaab7d81f6153feac0b86a2824fe082e846",
   "file": "TK2000.sv",

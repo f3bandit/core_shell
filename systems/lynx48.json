@@ -280,6 +280,7 @@
  ],
  "hide": [],
  "source": {
+  "from": "source",
   "repo": "MiSTer-devel/Lynx48_MiSTer",
   "commit": "5083814cd85a9fc3c46a860365fc2fd785775973",
   "file": "Lynx48.sv",

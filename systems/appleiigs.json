@@ -496,6 +496,7 @@
  ],
  "hide": [],
  "source": {
+  "from": "source",
   "repo": "MiSTer-devel/Apple-IIgs_MiSTer",
   "commit": "d75c8cea07ca1237bd2b6b1c9ce693ec46643d97",
   "file": "Apple-IIgs.sv",

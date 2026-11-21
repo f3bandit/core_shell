@@ -631,6 +631,7 @@
  ],
  "hide": [],
  "source": {
+  "from": "source",
   "repo": "MiSTer-devel/VideoBrain_MiSTer",
   "commit": "447a0c247e4b1ed8267dc93916a6156f8bdb6e84",
   "file": "VideoBrain.sv",

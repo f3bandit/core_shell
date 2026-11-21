@@ -6,7 +6,7 @@ carries:
 - the code and tools
 - the core profiles (`systems/`)
 - the quirks tables (`quirks/quirks.json`)
-- the ARM programs (discfs, corepatch)
+- the ARM program (corepatch)
 - the Mains manifest, and the shim build of every Main on the MiSTer
 
 ```
@@ -95,8 +95,6 @@ the built-in tables in `coreshell/quirks.py`. A fix for an odd core can ship as 
 
 | Table | What it holds |
 |---|---|
-| `ra_console` | RetroAchievements console ids, by the RA core's file name |
-| `ra_by_ext` | a game's extension that's another console on that core (`"NES/FDS": 81`) |
 | `core_folders` | the folders Coreshell keeps core profiles of |
 | `core_skip` | core files with nothing to set (menu, memtest, ...) |
 | `card_no_picker` | systems the Super MemCard keeps memory cards for itself |

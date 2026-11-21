@@ -230,6 +230,7 @@
  ],
  "hide": [],
  "source": {
+  "from": "source",
   "repo": "MiSTer-devel/SharpMZ2500_MiSTer",
   "commit": "7de4765379175e9391975fe47cfb30008676b710",
   "file": "SharpMZ2500.sv",

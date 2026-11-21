@@ -156,15 +156,12 @@ core started) and when it ends. Nothing reads from inside MiSTer_RA. It sets the
 RetroAchievements' own login, the Web API key with the web API, then the RA Viewer's `config.ini` written as the
 user would.
 
-## Games from the disc drive (discfs)
+## Games from the disc drive
 
-`discfs/` (C, static, no libfuse) serves the disc in the drive as an ordinary `<name>.cue` and `<name>.bin` under
-`/tmp/coreshell/disc`, reading the drive's raw sectors (READ TOC / READ CD) on demand. A `<system>@disc` launch
-mounts it, names it after the game on it (PS1: volume and serial, `WIPEOUT2 (SCUS-94351)`; Saturn and Mega CD:
-title and product number), and launches the system's own profile with the cue. The frontend's Main runs it like a
-game on the SD card, with Coreshell's settings, Super MemCard and the in-game menu: no `MiSTer_Physical-CD`.
-A game from the SD card unmounts it. Installed at `coreshell/bin/discfs`; `discfs --toc` prints the disc's tracks.
-A disc swapped during a game is seen at the next launch from the drive.
+A `<system>@disc` launch (Update All's Physical-CD MGLs, `_Physical Disc Cores/*.mgl`) loads the stock core under
+its `A0CD-<name>` set name with no game: MiSTer.ini's `[A0CD-*] main=MiSTer_Physical-CD` starts Anime0t4ku and
+bonna79's Physical-CD Main, which reads the disc in the drive, as stock. Coreshell only starts it, with the user's
+settings for that `A0CD-*` profile.
 
 ## Display sets
 
@@ -318,4 +315,7 @@ the copyright lines and pass [NOTICE](NOTICE) on with it. Coreshell runs as a
 separate program from the GPL Mains and cores it drives, isn't linked with them,
 and incorporates no GPL source; core patches change a stock core only on the
 user's device as it loads. Other people's work it uses, and their licences, are
-in [NOTICE](NOTICE).
+in [NOTICE](NOTICE) and [THIRD_PARTY.md](THIRD_PARTY.md).
+
+Coreshell is not part of, affiliated with or endorsed by the MiSTer project (MiSTer-devel) or any of the
+authors credited in NOTICE.

@@ -437,6 +437,7 @@
  ],
  "hide": [],
  "source": {
+  "from": "source",
   "repo": "MiSTer-devel/Svi328_MiSTer",
   "commit": "b61a72fdc0b9b99f26e11f6bfa85fb1b7a5b46e3",
   "file": "Svi328.sv",

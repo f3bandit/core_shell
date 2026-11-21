@@ -204,7 +204,7 @@ def rebuild(path, entry, old):
         prof = pf.build(text, p['system'], p['name'], p['rbf'],
                         games_dir=p['games_dir'], saves_dir=p['saves_dir'],
                         setname=p.get('setname'), variant=p.get('variant', 'stock'),
-                        source=dict(src, rbf=os.path.basename(path), rbf_md5=entry['md5']))
+                        source=dict(src, rbf=os.path.basename(path), rbf_md5=entry['md5'], **{'from': 'source'}))
         if p.get('rom'):
             prof['rom'] = p['rom']
         prof['hide'] = p.get('hide', [])
@@ -212,7 +212,7 @@ def rebuild(path, entry, old):
             prof['show'] = p['show']
     else:
         fname, prof = pd.from_dump({'rbf': path, 'rbf_md5': entry['md5'], 'confstr': text}, {})
-        prof['source'] = dict(src, rbf=os.path.basename(path), rbf_md5=entry['md5'])
+        prof['source'] = dict(src, rbf=os.path.basename(path), rbf_md5=entry['md5'], **{'from': 'source'})
     return prof
 
 

@@ -396,6 +396,7 @@
  ],
  "hide": [],
  "source": {
+  "from": "source",
   "repo": "MiSTer-devel/Laser310_MiSTer",
   "commit": "d0d9d7f016d5071ce8d17fdd37d168b65aa0f33f",
   "file": "Laser310.sv",

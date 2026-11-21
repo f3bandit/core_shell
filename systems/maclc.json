@@ -448,6 +448,7 @@
  ],
  "hide": [],
  "source": {
+  "from": "source",
   "repo": "MiSTer-devel/MacLC_MiSTer",
   "commit": "d1b90db2e7de66cda1a16275c916709f4c704e7a",
   "file": "MacLC.sv",

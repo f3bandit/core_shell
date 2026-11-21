@@ -11,9 +11,6 @@
   },
   {
    "path": "phosphor/bin/MiSTer_phosphor"
-  },
-  {
-   "path": "coreshell/bin/discfs"
   }
  ],
  "note": "The A0CD-* Main (Update All: Physical CD Support), or a frontend Main with it merged."

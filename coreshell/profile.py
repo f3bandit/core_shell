@@ -180,29 +180,6 @@ def visible_menu(prof):
             if not named(o, hidden) and (named(o, shown) or not is_junk(o))]
 
 
-def check_against(prof, confstr_text):
-    """Compare a profile with a (newer) core's CONF_STR.
-
-    Returns a list of problems; an empty list means every option the profile
-    knows still exists with the same values. Bit moves are reported but are
-    harmless when Main supports MGL options.
-    """
-    newer = build(confstr_text, prof['system'], prof['name'], prof['rbf'])
-    problems = []
-    for o in prof['menu']:
-        n = find_option(newer, option_key(o))
-        if not n:
-            problems.append({'option': option_key(o), 'problem': 'missing'})
-            continue
-        gone = [v for v in o['values'] if v not in n['values']]
-        if gone:
-            problems.append({'option': option_key(o), 'problem': 'values_gone', 'values': gone})
-        if n['bits'] != o['bits']:
-            problems.append({'option': option_key(o), 'problem': 'bits_moved',
-                             'from': o['bits'], 'to': n['bits']})
-    return problems
-
-
 def diff(old, new):
     """What changed between two profiles of one core.
 

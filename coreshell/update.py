@@ -1,5 +1,5 @@
 """coreshell update: Coreshell brought up to its latest release from GitHub, all of it in one go: the code, the tools,
-the core profiles, the quirks tables, the ARM programs (discfs, corepatch), the Mains manifest, and the
+the core profiles, the quirks tables, the ARM program (corepatch), the Mains manifest, and the
 shim build of any Main on this MiSTer that has one in the release (fetched by its md5).
 
     python3 -m coreshell update            the latest release, if it's newer than this one
@@ -42,7 +42,7 @@ MAINS_TAG = 'shim-mains'
 # What a release replaces (whole folders: code; merged: data)
 CODE = ['coreshell', 'tools', 'scripts', 'quirks', 'corepatch', 'docs']
 FILES = ['coreshell.sh', 'VERSION', 'README.md', 'LICENSE']
-BINS = ['bin/discfs', 'bin/corepatch']
+BINS = ['bin/corepatch']
 KEEP_BACKUPS = 3
 
 

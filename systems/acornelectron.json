@@ -453,6 +453,7 @@
  ],
  "hide": [],
  "source": {
+  "from": "source",
   "repo": "MiSTer-devel/AcornElectron_MiSTer",
   "commit": "9fb9fdd941ee0eb1decd886af88f3e54abc19dde",
   "file": "AcornElectron.sv",

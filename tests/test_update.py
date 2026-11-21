@@ -11,13 +11,8 @@ class Quirks(unittest.TestCase):
     def test_builtin_and_added(self):
         d = tempfile.mkdtemp()
         p = os.path.join(d, 'q.json')
-        self.assertEqual(quirks.ra_console('NES', 'FDS', p), 81)
-        self.assertEqual(quirks.ra_console('NES', 'NES', p), 7)
-        self.assertIsNone(quirks.ra_console('Vectrex', 'VEC', p))
-        json.dump({'ra_console': {'Vectrex': 46}, 'card_no_picker': ['Saturn'], 'core_skip': '^(menu|foo)'},
-                  open(p, 'w'))
-        self.assertEqual(quirks.ra_console('Vectrex', 'VEC', p), 46)
-        self.assertEqual(quirks.ra_console('NES', 'NES', p), 7)              # (the built-in ones stay)
+        self.assertEqual(quirks.card_no_picker(p), {'PSX'})
+        json.dump({'card_no_picker': ['Saturn'], 'core_skip': '^(menu|foo)'}, open(p, 'w'))
         self.assertEqual(quirks.card_no_picker(p), {'PSX', 'Saturn'})
         self.assertTrue(quirks.core_skip(p).match('Foo_2026.rbf'))
         open(p, 'w').write('{broken')
@@ -59,7 +54,7 @@ class Install(unittest.TestCase):
             for f in fs:
                 files[os.path.relpath(os.path.join(base, f), SRC)] = open(os.path.join(base, f), 'rb').read()
         files.update({'VERSION': 'v2026.11.20', 'quirks/quirks.json': '{"card_no_picker": ["X"]}',
-                      'bin/discfs': 'ELF', 'coreshell/NEW_MARK': 'new', 'systems/overrides/x.json': '{}',
+                      'bin/corepatch': 'ELF', 'coreshell/NEW_MARK': 'new', 'systems/overrides/x.json': '{}',
                       'systems/nes.json': json.dumps({'rbf': '_Console/NES', 'source': {'rbf': 'NES_20261001.rbf'}}),
                       'systems/snes.json': json.dumps({'rbf': '_Console/SNES', 'source': {'rbf': 'SNES_20261001.rbf'}}),
                       'mains/mains.json': json.dumps({'bbb': {'name': 'MiSTer_RA', 'shim': 'ra_shim'}})})
@@ -71,7 +66,7 @@ class Install(unittest.TestCase):
         h = lambda p: open(os.path.join(self.home, p)).read()
         self.assertEqual(h('VERSION'), 'v2026.11.20')
         self.assertEqual(h('coreshell/NEW_MARK'), 'new')
-        self.assertTrue(os.access(os.path.join(self.home, 'bin/discfs'), os.X_OK))
+        self.assertTrue(os.access(os.path.join(self.home, 'bin/corepatch'), os.X_OK))
         self.assertEqual(h('settings/psx.json'), '{"mine": 1}')                  # (the user's: untouched)
         self.assertIn('NES_20261101', h('systems/nes.json'))                     # (re-dumped here, newer: kept)
         self.assertIn('SNES_20261001', h('systems/snes.json'))                   # (the release's: matches the core)

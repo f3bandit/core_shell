@@ -1,7 +1,7 @@
 """Coreshell - a game's ID, for the memory card (Super MemCard's SELECT puts that game's own card on the bus).
 
 PSX: the product code from the disc's SYSTEM.CNF (BOOT = cdrom:\\SLUS_010.41;1 -> SLUS-01041), read from a CUE/BIN,
-a BIN or an ISO, with disc.py's parser (the one the drive's discs use). CHD images aren't read here: the frontend's
+a BIN or an ISO. CHD images aren't read here: the frontend's
 library has their serial and passes it as the launch's game_id.
 
 Copyright (c) 2026 f3bandit. Licensed under the Apache License 2.0 (LICENSE, NOTICE).
@@ -9,8 +9,6 @@ Copyright (c) 2026 f3bandit. Licensed under the Apache License 2.0 (LICENSE, NOT
 
 import os
 import re
-
-from . import disc
 
 _TRACK = re.compile(r'^\s*TRACK\s+\d+\s+(MODE1/2048|MODE1/2352|MODE2/2352|MODE2/2336)', re.I)
 _FILE = re.compile(r'^\s*FILE\s+"?([^"]+?)"?\s+BINARY', re.I)
@@ -72,6 +70,64 @@ def psx(path):
         pvd = read(16)
         if pvd[1:6] != b'CD001':
             return None
-        return disc._psx_serial(pvd, 0, read)
+        return _psx_serial(pvd, read)
     except (OSError, ValueError, KeyError):
         return None
+
+
+def _psx_serial(pvd, read):
+    """SCUS-94351 from SYSTEM.CNF's BOOT line (ISO 9660 root directory). read(lba, n): the image's data track,
+    2048 bytes of user data a sector."""
+    root = pvd[156:190]
+    lba, size = int.from_bytes(root[2:6], 'little'), int.from_bytes(root[10:14], 'little')
+    d = read(lba, max(1, min(4, size // 2048)))
+    i = 0
+    while i < len(d):
+        n = d[i]
+        if not n:
+            i = (i // 2048 + 1) * 2048
+            continue
+        name = d[i + 33:i + 33 + d[i + 32]]
+        if name.upper().startswith(b'SYSTEM.CNF'):
+            cnf = read(int.from_bytes(d[i + 2:i + 6], 'little')).decode('ascii', 'replace')
+            return psx_code_from_cnf(cnf)
+        i += n
+    return None
+
+
+def psx_code_from_cnf(cnf):
+    """The product code from SYSTEM.CNF's BOOT line, as phosphord's ident.c (psx_boot) reads it: the boot file's
+    name after its last \\ : or /, up to ; CR LF or a space."""
+    b = cnf.find('BOOT')
+    if b < 0:
+        return None
+    eq = cnf.find('=', b)
+    if eq < 0:
+        return None
+    name = cnf[eq + 1:]
+    k = 0
+    while k < len(name) and name[k] not in '\n\r;':
+        if name[k] in '\\:/':
+            name, k = name[k + 1:], 0
+            continue
+        k += 1
+    name = name.lstrip(' ')
+    e = 0
+    while e < len(name) and name[e] not in ';\r\n ':
+        e += 1
+    name = name[:e]
+    return psx_code(name) if name else None
+
+
+def psx_code(raw):
+    """SLUS_010.41 -> SLUS-01041: phosphord's ident.c psx_serial, ported (the same code everywhere: the library,
+    smcd, the card). The letters, a dash, the rest; a boot file with an extra letter (SLUSP012.06) drops it."""
+    t = ''.join(c.upper() for c in raw if c.isalnum())[:31]
+    a = 0
+    while a < len(t) and t[a].isalpha():
+        a += 1
+    if a == 5 and a < len(t) and t[a].isdigit():
+        t, a = t[:4] + t[5:], 4
+    if 3 <= a <= 4 and t[a:]:
+        return '%s-%s' % (t[:a], t[a:])
+    return t or None

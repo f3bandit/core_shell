@@ -50,7 +50,6 @@ from . import supermemcard as smc
 from . import refresh as rf
 from . import tools as tl
 from . import raviewer as rav
-from . import disc as dsc
 from . import gameid as gid
 from . import cmdpipe as cp
 from . import events as evm
@@ -132,7 +131,6 @@ class Coreshell(object):
         # RetroAchievements for the frontend's screens: the RA Viewer add-on's data, hidden (raviewer.py)
         self.raviewer = rav.RAViewer(self.paths.root, say=_log)
         self.events.listeners.append(self.raviewer.on_event)
-        self.disc = dsc.Disc(self.paths)
         # the kernel's display, kept working across Linux updates (kernel.py): checked at start (serve)
         self.kernel = krn.Kernel(self.paths.home, self.paths.root, say=_log, emit=self.events.emit)
         try:                             # an INI left patched by a launch (power cut): put back
@@ -587,15 +585,6 @@ class Coreshell(object):
         out['ini'], out['display'] = self.display()
         return {'plan': out}
 
-    def _from_drive(self, req):
-        """A <system>@disc launch: the disc in the drive, mounted (discfs) and launched like a game on the SD card
-        with the system's own profile, under the frontend's Main (not MiSTer_Physical-CD)."""
-        p = self.profile(self._pid(req))
-        if not p.get('disc_drive'):
-            return req
-        cue, name, _ = self.disc.mount()
-        return dict(req, profile=p.get('from_profile') or p['system'], rbf=None, rom=cue, game=name + '.cue')
-
     def cmd_launch(self, req):
         self.refresher.cancel()          # a game wins over updating core menus
         if req.get('kind') == 'arcade':
@@ -606,10 +595,6 @@ class Coreshell(object):
             if req.get('rbf') and not req.get('profile'):
                 return self._bare_launch(req, e)
             raise
-        with self.lock:
-            req = self._from_drive(req)
-            if not self.disc.serving(req.get('rom')):
-                self.disc.unmount()      # a game from the SD card: the drive's disc isn't served
         p, rom, sysv, gamev = self._plan_args(req)
         _step('start', '%s %s' % (p.get('system'), rom or '(no game)'))
         card = self._card_in(p, rom, req.get('game_id'))
@@ -641,7 +626,6 @@ class Coreshell(object):
         if not mra.lower().endswith('.mra') or not os.path.isfile(mra):
             raise RuntimeError("That arcade game's .mra isn't there")
         with self.lock:
-            self.disc.unmount()          # (the drive's disc isn't served to an arcade core)
             bridge_replaced(self.paths.root)   # (a Main replaced while it runs: mains.py)
             write_main(self.fifo, 'load_core %s' % mra)
         _step('load', mra)
@@ -669,8 +653,6 @@ class Coreshell(object):
                 int(slot.get('delay') or 0), slot['type'], int(slot.get('index') or 0), _xml(rom)))
         lines.append('</mistergamedescription>')
         with self.lock:
-            if not self.disc.serving(rom):
-                self.disc.unmount()
             os.makedirs(self.paths.launch, exist_ok=True)
             mgl = os.path.join(self.paths.launch, 'bare.mgl')
             with open(mgl, 'w', encoding='utf-8') as f:

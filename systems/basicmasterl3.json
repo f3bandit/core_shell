@@ -323,6 +323,7 @@
  ],
  "hide": [],
  "source": {
+  "from": "source",
   "repo": "MiSTer-devel/BasicMasterL3_MiSTer",
   "commit": "30aefc45610a62cd40b9a462ea5c8c4fa3bde83f",
   "file": "BasicMasterL3.sv",

@@ -46,13 +46,13 @@ jobs:
           curl -sSL https://developer.arm.com/-/media/Files/downloads/gnu-a/10.2-2020.11/binrel/gcc-arm-10.2-2020.11-x86_64-arm-none-linux-gnueabihf.tar.xz \
             | tar xJ -C /opt/gcc-arm --strip-components=1
 
-      - name: discfs, corepatch (static ARM)
+      - name: corepatch (static ARM)
         env:
           CFLAGS: -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=hard
           LDFLAGS: -static -s
         run: |
           export PATH=/opt/gcc-arm/bin:$PATH
-          for d in discfs corepatch; do make -C $d clean; make -C $d CC=arm-none-linux-gnueabihf-gcc; done
+          make -C corepatch clean; make -C corepatch CC=arm-none-linux-gnueabihf-gcc
 
       - name: coreshell.tar.gz
         run: |
@@ -63,7 +63,7 @@ jobs:
           cp bin/restore-points pkg/bin/        # (restore points of the system files, before an update)
           cp scripts/coreshell.sh pkg/coreshell.sh
           cp README.md LICENSE pkg/
-          cp discfs/discfs corepatch/corepatch pkg/bin/
+          cp corepatch/corepatch pkg/bin/
           rm -f pkg/corepatch/corepatch
           find pkg -name __pycache__ -prune -exec rm -rf {} +
           echo "$TAG" > pkg/VERSION

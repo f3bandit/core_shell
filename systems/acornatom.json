@@ -370,6 +370,7 @@
  ],
  "hide": [],
  "source": {
+  "from": "source",
   "repo": "MiSTer-devel/AcornAtom_MiSTer",
   "commit": "83e204883a92d4662e9b86c8c0fae59cadf14813",
   "file": "AcornAtom.sv",

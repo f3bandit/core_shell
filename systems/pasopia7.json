@@ -384,6 +384,7 @@
  ],
  "hide": [],
  "source": {
+  "from": "source",
   "repo": "MiSTer-devel/Pasopia7_MiSTer",
   "commit": "2fe7d00d611d340088ddb40adbadd226b61ab021",
   "file": "Pasopia7.sv",

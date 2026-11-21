@@ -112,15 +112,6 @@ class Profiles(unittest.TestCase):
         self.assertNotIn('Stereo Mix', names)
         self.assertEqual(pf.find_option(self.p, 'Aspect Ratio')['default'], 'Full Screen')
 
-    def test_check_against(self):
-        moved = SAMPLE.replace('OJK,Stereo Mix', 'O[90:89],Stereo Mix')
-        gone = SAMPLE.replace('OJK,Stereo Mix,None,25%,50%,100%;', '')
-        self.assertEqual(pf.check_against(self.p, SAMPLE), [])
-        self.assertEqual(pf.check_against(self.p, moved)[0]['problem'], 'bits_moved')
-        self.assertEqual(pf.check_against(self.p, gone)[0]['problem'], 'missing')
-
-
-class Launch(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
         self.paths = ln.Paths(self.tmp.name)

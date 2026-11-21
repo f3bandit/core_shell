@@ -3,8 +3,6 @@
 
 Each table has its built-in value here (what this version of the code was written with); quirks/quirks.json, when
 there is one, adds to it and wins where they differ:
-    ra_console       {RA core file: RetroAchievements console id}
-    ra_by_ext        {"<core>/<EXT>": console id}: a game's extension that's another console on that core
     core_folders     the folders on the SD card whose cores Coreshell keeps profiles of     (refresh.py)
     core_skip        a regex: core files with nothing to set, or ours (menu, memtest, ...)
     card_no_picker   systems the card itself keeps memory cards for (no card picker)     (supermemcard.py)
@@ -23,15 +21,6 @@ HOME = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FILE = os.path.join(HOME, 'quirks', 'quirks.json')
 
 BUILTIN = {
-    'ra_console': {
-        'NES': 7, 'SNES': 3, 'MegaDrive': 1, 'SMS': 11, 'Gameboy': 4, 'GBA': 5, 'N64': 2, 'PSX': 12,
-        'MegaCD': 9, 'NeoGeo': 27, 'TurboGrafx16': 8, 'Atari7800': 51, 'S32X': 10, 'Saturn': 39,
-        'VirtualBoy': 28,
-    },
-    'ra_by_ext': {
-        'NES/FDS': 81, 'SMS/GG': 15, 'Gameboy/GBC': 6, 'Atari7800/A26': 25,
-        'TurboGrafx16/CUE': 76, 'TurboGrafx16/CHD': 76,
-    },
     'core_folders': ['_Console', '_Computer', '_Other', '_Utility', '_RA_Cores/Cores', '_Console (Dual SDRAM)',
                      '_Physical Disc Cores'],
     'core_skip': r'^(menu|memtest|ss1_|chip-id|linker)',
@@ -68,10 +57,6 @@ def get(name, path=None):
     if isinstance(base, list) and isinstance(extra, list):
         return base + [x for x in extra if x not in base]
     return extra
-
-
-def ra_console(core, ext, path=None):
-    return get('ra_by_ext', path).get('%s/%s' % (core, ext), get('ra_console', path).get(core))
 
 
 def core_skip(path=None):
