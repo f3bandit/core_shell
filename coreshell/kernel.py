@@ -35,7 +35,6 @@ import struct
 import time
 
 FB_DEV = '/dev/fb0'
-FB_SYS = '/sys/class/graphics/fb0'
 MFB = '/sys/module/MiSTer_fb/parameters'
 MAIN_FB_ADDR = 0x22001000                 # where Main's Linux framebuffer starts (video.cpp FB_ADDR + 4096: the first page is the driver's)
 FBIOGET_VSCREENINFO = 0x4600
