@@ -1,0 +1,787 @@
+{
+ "coreshell_profile": 1,
+ "system": "megacd",
+ "variant": "stock",
+ "name": "MegaCD",
+ "rbf": "_Console/MegaCD",
+ "setname": null,
+ "core_name": "MegaCD",
+ "config_file": "MegaCD.CFG",
+ "games_dir": "games/MegaCD",
+ "saves_dir": "saves/MegaCD",
+ "rom": {
+  "index": 0,
+  "type": "s",
+  "exts": [
+   "CUE",
+   "CHD"
+  ]
+ },
+ "slots": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "CUE",
+    "CHD"
+   ],
+   "label": "Insert Disk"
+  }
+ ],
+ "files": [],
+ "mounts": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "CUE",
+    "CHD"
+   ],
+   "label": "Insert Disk",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Reload Backup RAM",
+   "bits": [
+    16,
+    16
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "D0"
+   ]
+  },
+  {
+   "name": "Save Backup RAM",
+   "bits": [
+    17,
+    17
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "D0"
+   ]
+  },
+  {
+   "name": "Reset & Eject CD",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": true,
+ "menu": [
+  {
+   "page": "",
+   "name": "Region",
+   "values": [
+    "Auto(JP)",
+    "JP",
+    "US",
+    "EU"
+   ],
+   "default": "Auto(JP)",
+   "bits": [
+    6,
+    7
+   ],
+   "core_flags": [
+    "h6"
+   ],
+   "key": "Region",
+   "mgl_ok": false
+  },
+  {
+   "page": "",
+   "name": "Region",
+   "values": [
+    "Auto(US)",
+    "JP",
+    "US",
+    "EU"
+   ],
+   "default": "Auto(US)",
+   "bits": [
+    6,
+    7
+   ],
+   "core_flags": [
+    "h7"
+   ],
+   "key": "Region #2",
+   "mgl_ok": false
+  },
+  {
+   "page": "",
+   "name": "Region",
+   "values": [
+    "Auto(EU)",
+    "JP",
+    "US",
+    "EU"
+   ],
+   "default": "Auto(EU)",
+   "bits": [
+    6,
+    7
+   ],
+   "core_flags": [
+    "h8"
+   ],
+   "key": "Region #3",
+   "mgl_ok": false
+  },
+  {
+   "page": "",
+   "name": "Cheats Enabled",
+   "values": [
+    "Yes",
+    "No"
+   ],
+   "default": "Yes",
+   "bits": [
+    24,
+    24
+   ],
+   "core_flags": [
+    "H5"
+   ],
+   "key": "Cheats Enabled",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Backup RAM",
+   "values": [
+    "Internal",
+    "Internal+Cart"
+   ],
+   "default": "Internal",
+   "bits": [
+    3,
+    3
+   ],
+   "core_flags": [],
+   "key": "Backup RAM",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Autosave",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    13,
+    13
+   ],
+   "core_flags": [
+    "D0"
+   ],
+   "key": "Autosave",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    49,
+    50
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "320x224 Aspect",
+   "values": [
+    "Original",
+    "Corrected"
+   ],
+   "default": "Original",
+   "bits": [
+    30,
+    30
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/320x224 Aspect",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    33,
+    35
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Vertical Crop",
+   "values": [
+    "Disabled",
+    "216p(5x)"
+   ],
+   "default": "Disabled",
+   "bits": [
+    32,
+    32
+   ],
+   "core_flags": [
+    "d9"
+   ],
+   "key": "Audio & Video/Vertical Crop",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Crop Offset",
+   "values": [
+    "0",
+    "2",
+    "4",
+    "8",
+    "10",
+    "12",
+    "-12",
+    "-10",
+    "-8",
+    "-6",
+    "-4",
+    "-2"
+   ],
+   "default": "0",
+   "bits": [
+    51,
+    54
+   ],
+   "core_flags": [
+    "d9"
+   ],
+   "key": "Audio & Video/Crop Offset",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    55,
+    56
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Border",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    29,
+    29
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Border",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Composite Blend",
+   "values": [
+    "Off",
+    "On",
+    "Adaptive"
+   ],
+   "default": "Off",
+   "bits": [
+    47,
+    48
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Composite Blend",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "CRAM Dots",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    10,
+    10
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/CRAM Dots",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Sprite Limit",
+   "values": [
+    "Normal",
+    "High"
+   ],
+   "default": "Normal",
+   "bits": [
+    31,
+    31
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Sprite Limit",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Audio Filter",
+   "values": [
+    "Model 1",
+    "Model 2",
+    "Minimal",
+    "No Filter"
+   ],
+   "default": "Model 1",
+   "bits": [
+    14,
+    15
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Audio Filter",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "CD Audio",
+   "values": [
+    "Unfiltered",
+    "Filtered"
+   ],
+   "default": "Unfiltered",
+   "bits": [
+    27,
+    27
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/CD Audio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Audio Boost",
+   "values": [
+    "No",
+    "2x",
+    "4x"
+   ],
+   "default": "No",
+   "bits": [
+    57,
+    58
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Audio Boost",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "FM Chip",
+   "values": [
+    "YM2612",
+    "YM3438"
+   ],
+   "default": "YM2612",
+   "bits": [
+    8,
+    8
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/FM Chip",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "HiFi PCM",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    23,
+    23
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/HiFi PCM",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Swap Joysticks",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    4,
+    4
+   ],
+   "core_flags": [],
+   "key": "Input/Swap Joysticks",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "6 Buttons Mode",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    5,
+    5
+   ],
+   "core_flags": [],
+   "key": "Input/6 Buttons Mode",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Multitap",
+   "values": [
+    "Disabled",
+    "4-Way",
+    "TeamPlayer: Port1",
+    "TeamPlayer: Port2"
+   ],
+   "default": "Disabled",
+   "bits": [
+    21,
+    22
+   ],
+   "core_flags": [],
+   "key": "Input/Multitap",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Mouse",
+   "values": [
+    "None",
+    "Port1",
+    "Port2"
+   ],
+   "default": "None",
+   "bits": [
+    18,
+    19
+   ],
+   "core_flags": [],
+   "key": "Input/Mouse",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Mouse Flip Y",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    20,
+    20
+   ],
+   "core_flags": [],
+   "key": "Input/Mouse Flip Y",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Gun Control",
+   "values": [
+    "Disabled",
+    "Joy1",
+    "Joy2",
+    "Mouse"
+   ],
+   "default": "Disabled",
+   "bits": [
+    40,
+    41
+   ],
+   "core_flags": [],
+   "key": "Input/Gun Control",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Gun Fire",
+   "values": [
+    "Joy",
+    "Mouse"
+   ],
+   "default": "Joy",
+   "bits": [
+    42,
+    42
+   ],
+   "core_flags": [
+    "D4"
+   ],
+   "key": "Input/Gun Fire",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Cross",
+   "values": [
+    "Small",
+    "Medium",
+    "Big",
+    "None"
+   ],
+   "default": "Small",
+   "bits": [
+    43,
+    44
+   ],
+   "core_flags": [
+    "D4"
+   ],
+   "key": "Input/Cross",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Gun Type",
+   "values": [
+    "Justifier",
+    "Menacer"
+   ],
+   "default": "Justifier",
+   "bits": [
+    45,
+    45
+   ],
+   "core_flags": [
+    "D4"
+   ],
+   "key": "Input/Gun Type",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Serial",
+   "values": [
+    "OFF",
+    "SNAC"
+   ],
+   "default": "OFF",
+   "bits": [
+    46,
+    46
+   ],
+   "core_flags": [],
+   "key": "Input/Serial",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Enable FM",
+   "values": [
+    "Yes",
+    "No"
+   ],
+   "default": "Yes",
+   "bits": [
+    11,
+    11
+   ],
+   "core_flags": [
+    "H2"
+   ],
+   "key": "Enable FM",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Enable PSG",
+   "values": [
+    "Yes",
+    "No"
+   ],
+   "default": "Yes",
+   "bits": [
+    12,
+    12
+   ],
+   "core_flags": [
+    "H2"
+   ],
+   "key": "Enable PSG",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Enable PCM",
+   "values": [
+    "Yes",
+    "No"
+   ],
+   "default": "Yes",
+   "bits": [
+    25,
+    25
+   ],
+   "core_flags": [
+    "H2"
+   ],
+   "key": "Enable PCM",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Enable CDDA",
+   "values": [
+    "Yes",
+    "No"
+   ],
+   "default": "Yes",
+   "bits": [
+    26,
+    26
+   ],
+   "core_flags": [
+    "H2"
+   ],
+   "key": "Enable CDDA",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Enable BGA",
+   "values": [
+    "Yes",
+    "No"
+   ],
+   "default": "Yes",
+   "bits": [
+    36,
+    36
+   ],
+   "core_flags": [
+    "H2"
+   ],
+   "key": "Enable BGA",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Enable BGB",
+   "values": [
+    "Yes",
+    "No"
+   ],
+   "default": "Yes",
+   "bits": [
+    37,
+    37
+   ],
+   "core_flags": [
+    "H2"
+   ],
+   "key": "Enable BGB",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Enable SPR",
+   "values": [
+    "Yes",
+    "No"
+   ],
+   "default": "Yes",
+   "bits": [
+    38,
+    38
+   ],
+   "core_flags": [
+    "H2"
+   ],
+   "key": "Enable SPR",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "MCD RAM",
+   "values": [
+    "Banks 2&3",
+    "Banks 0&1"
+   ],
+   "default": "Banks 2&3",
+   "bits": [
+    39,
+    39
+   ],
+   "core_flags": [
+    "H2"
+   ],
+   "key": "MCD RAM",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "MegaCD_20260603.rbf",
+  "rbf_md5": "faa950ae05d02fb45e5311bffd50a438",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:08:05",
+  "confstr_sha1": "230d119d778af5c1d4531ab75c5e553a06cc1ecd"
+ }
+}

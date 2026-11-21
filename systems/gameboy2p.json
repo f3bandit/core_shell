@@ -1,0 +1,488 @@
+{
+ "coreshell_profile": 1,
+ "system": "gameboy2p",
+ "variant": "stock",
+ "name": "GAMEBOY2P",
+ "rbf": "_Console/Gameboy2P",
+ "setname": null,
+ "core_name": "GAMEBOY2P",
+ "config_file": "GAMEBOY2P.CFG",
+ "games_dir": "games/GAMEBOY2P",
+ "saves_dir": "saves/GAMEBOY2P",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "GBC",
+   "GB",
+   "BIN"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "GBC",
+    "GB",
+    "BIN"
+   ],
+   "label": "Load ROM"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "GBC",
+    "GB",
+    "BIN"
+   ],
+   "label": "Load ROM",
+   "page": 0,
+   "flags": [],
+   "remember_dir": true
+  },
+  {
+   "index": 3,
+   "type": "f",
+   "exts": [
+    "GBP"
+   ],
+   "label": "Load Palette",
+   "page": 1,
+   "flags": [
+    "h1"
+   ],
+   "remember_dir": false
+  },
+  {
+   "index": 4,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load GBC Boot",
+   "page": 2,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 5,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load DMG Boot",
+   "page": 2,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 6,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load SGB Boot",
+   "page": 2,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Reload Backup RAM",
+   "bits": [
+    9,
+    9
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "h2"
+   ]
+  },
+  {
+   "name": "Save Backup RAM",
+   "bits": [
+    10,
+    10
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "h2"
+   ]
+  },
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Rom for second GB",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    6,
+    6
+   ],
+   "core_flags": [],
+   "key": "Rom for second GB",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "System",
+   "values": [
+    "Auto",
+    "Gameboy",
+    "Gameboy Color",
+    "MegaDuck"
+   ],
+   "default": "Auto",
+   "bits": [
+    14,
+    15
+   ],
+   "core_flags": [],
+   "key": "System",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Mapper",
+   "values": [
+    "Auto",
+    "WisdomTree",
+    "Mani161",
+    "MBC1",
+    "MBC3"
+   ],
+   "default": "Auto",
+   "bits": [
+    39,
+    41
+   ],
+   "core_flags": [
+    "D7"
+   ],
+   "key": "Mapper",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Dupe Save to GB 2",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    11,
+    11
+   ],
+   "core_flags": [],
+   "key": "Dupe Save to GB 2",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Autosave",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    13,
+    13
+   ],
+   "core_flags": [],
+   "key": "Autosave",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Extra sprites",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    44,
+    44
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Extra sprites",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Seperator Line",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    23,
+    23
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Seperator Line",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Inverted color",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    12,
+    12
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Inverted color",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Custom Palette",
+   "values": [
+    "Off",
+    "Auto",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    1,
+    2
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Custom Palette",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "GBC Colors",
+   "values": [
+    "Corrected",
+    "Raw"
+   ],
+   "default": "Corrected",
+   "bits": [
+    30,
+    30
+   ],
+   "core_flags": [
+    "d4"
+   ],
+   "key": "Audio & Video/GBC Colors",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Sync Video",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    5,
+    5
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Sync Video",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    3,
+    4
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    21,
+    22
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    18,
+    20
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Stereo mix",
+   "values": [
+    "none",
+    "25%",
+    "50%",
+    "100%"
+   ],
+   "default": "none",
+   "bits": [
+    7,
+    8
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Stereo mix",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Audio mode",
+   "values": [
+    "Accurate",
+    "No Pops"
+   ],
+   "default": "Accurate",
+   "bits": [
+    43,
+    43
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Audio mode",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Audioselect",
+   "values": [
+    "GB 1",
+    "GB 2",
+    "Mixed",
+    "Split 1=L 2=R"
+   ],
+   "default": "GB 1",
+   "bits": [
+    16,
+    17
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Audioselect",
+   "mgl_ok": true
+  },
+  {
+   "page": "Misc.",
+   "name": "GBC/GBA mode",
+   "values": [
+    "GBC",
+    "GBA"
+   ],
+   "default": "GBC",
+   "bits": [
+    37,
+    37
+   ],
+   "core_flags": [
+    "d6"
+   ],
+   "key": "Misc./GBC/GBA mode",
+   "mgl_ok": true
+  },
+  {
+   "page": "Misc.",
+   "name": "Fast boot",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    42,
+    42
+   ],
+   "core_flags": [
+    "d8"
+   ],
+   "key": "Misc./Fast boot",
+   "mgl_ok": true
+  },
+  {
+   "page": "Misc.",
+   "name": "Rumble",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    38,
+    38
+   ],
+   "core_flags": [],
+   "key": "Misc./Rumble",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "Gameboy2P_20250621.rbf",
+  "rbf_md5": "8678e2110def280b6aec80c2d07f8024",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:04:47",
+  "confstr_sha1": "0a9f22b04e5a22b07b2168681c3c33f634cfb9ab"
+ }
+}

@@ -1,0 +1,7 @@
+{
+ "rbf": "_Console/PokemonMini_20250903.rbf",
+ "rbf_md5": "fecbbf18135daa4e16280d99b496efb5",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "PokemonMini;;-;FS1,min,Load ROM;-;d0R[09],Reload Backup RAM;d0R[10],Save Backup RAM;d0O[11],Autosave,Off,On;-;O[98],Frame Blend,Off,On;O[122:121],Aspect ratio,Original,Full Screen,[ARC1],[ARC2];O[3:2],Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%;O[33],Audio Mode,1,2;O[30],240p Mode,On,Off;d1O[29:28],240p Mode Scaling,3x,2x,1x;-;T[0],Reset;R[0],Reset and close OSD;J1,A,B,C,Shock Sensor,Power;jn,A,B,R,L,select;jp,A,B,R,L,select;V,v250903",
+ "dumped": "2026-11-13T23:08:36"
+}

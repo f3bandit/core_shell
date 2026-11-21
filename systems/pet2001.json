@@ -1,0 +1,460 @@
+{
+ "coreshell_profile": 1,
+ "system": "pet2001",
+ "variant": "stock",
+ "name": "PET2001",
+ "rbf": "_Computer/PET2001",
+ "setname": null,
+ "core_name": "PET2001",
+ "config_file": "PET2001.CFG",
+ "games_dir": "games/PET2001",
+ "saves_dir": "saves/PET2001",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "TAP",
+   "PRG"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "TAP",
+    "PRG"
+   ],
+   "label": ""
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "D80",
+    "D82"
+   ],
+   "label": " Mount #8.0"
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "D80",
+    "D82"
+   ],
+   "label": " Mount #8.1"
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "D64"
+   ],
+   "label": " Mount #8.0"
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "D64"
+   ],
+   "label": " Mount #8.1"
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "D80",
+    "D82"
+   ],
+   "label": " Mount #9.0"
+  },
+  {
+   "index": 3,
+   "type": "s",
+   "exts": [
+    "D80",
+    "D82"
+   ],
+   "label": " Mount #9.1"
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "D64"
+   ],
+   "label": " Mount #9.0"
+  },
+  {
+   "index": 3,
+   "type": "s",
+   "exts": [
+    "D64"
+   ],
+   "label": " Mount #9.1"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "TAP",
+    "PRG"
+   ],
+   "label": "",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load System ROM",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "D80",
+    "D82"
+   ],
+   "label": " Mount #8.0",
+   "page": 0,
+   "flags": [
+    "H0",
+    "H2"
+   ]
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "D80",
+    "D82"
+   ],
+   "label": " Mount #8.1",
+   "page": 0,
+   "flags": [
+    "H0",
+    "H2"
+   ]
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "D64"
+   ],
+   "label": " Mount #8.0",
+   "page": 0,
+   "flags": [
+    "H0",
+    "h2"
+   ]
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "D64"
+   ],
+   "label": " Mount #8.1",
+   "page": 0,
+   "flags": [
+    "H0",
+    "h2"
+   ]
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "D80",
+    "D82"
+   ],
+   "label": " Mount #9.0",
+   "page": 0,
+   "flags": [
+    "H1",
+    "H3"
+   ]
+  },
+  {
+   "index": 3,
+   "type": "s",
+   "exts": [
+    "D80",
+    "D82"
+   ],
+   "label": " Mount #9.1",
+   "page": 0,
+   "flags": [
+    "H1",
+    "H3"
+   ]
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "D64"
+   ],
+   "label": " Mount #9.0",
+   "page": 0,
+   "flags": [
+    "H1",
+    "h3"
+   ]
+  },
+  {
+   "index": 3,
+   "type": "s",
+   "exts": [
+    "D64"
+   ],
+   "label": " Mount #9.1",
+   "page": 0,
+   "flags": [
+    "H1",
+    "h3"
+   ]
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Reset Drives",
+   "bits": [
+    15,
+    15
+   ],
+   "kind": "reset",
+   "page": 1,
+   "flags": []
+  },
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Drive #8 Type",
+   "values": [
+    "8250",
+    "4040"
+   ],
+   "default": "8250",
+   "bits": [
+    20,
+    20
+   ],
+   "core_flags": [
+    "HA"
+   ],
+   "key": "Drive #8 Type",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Drive #9 Type",
+   "values": [
+    "8250",
+    "4040"
+   ],
+   "default": "8250",
+   "bits": [
+    21,
+    21
+   ],
+   "core_flags": [
+    "HB"
+   ],
+   "key": "Drive #9 Type",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Enable Drive #8",
+   "values": [
+    "If Mounted",
+    "Always",
+    "Never"
+   ],
+   "default": "If Mounted",
+   "bits": [
+    16,
+    17
+   ],
+   "core_flags": [],
+   "key": "Hardware/Enable Drive #8",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Enable Drive #9",
+   "values": [
+    "If Mounted",
+    "Always",
+    "Never"
+   ],
+   "default": "If Mounted",
+   "bits": [
+    18,
+    19
+   ],
+   "core_flags": [],
+   "key": "Hardware/Enable Drive #9",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "TAP mode",
+   "values": [
+    "Fast",
+    "Normal",
+    "Normal+Sound"
+   ],
+   "default": "Fast",
+   "bits": [
+    7,
+    8
+   ],
+   "core_flags": [],
+   "key": "Hardware/TAP mode",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "CPU Speed",
+   "values": [
+    "Normal",
+    "x2",
+    "x4",
+    "x8"
+   ],
+   "default": "Normal",
+   "bits": [
+    9,
+    10
+   ],
+   "core_flags": [],
+   "key": "Hardware/CPU Speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Diag",
+   "values": [
+    "Off",
+    "On(needs Reset)"
+   ],
+   "default": "Off",
+   "bits": [
+    3,
+    3
+   ],
+   "core_flags": [],
+   "key": "Hardware/Diag",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Screen Color",
+   "values": [
+    "White",
+    "Green"
+   ],
+   "default": "White",
+   "bits": [
+    2,
+    2
+   ],
+   "core_flags": [],
+   "key": "Screen Color",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    11,
+    12
+   ],
+   "core_flags": [],
+   "key": "Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    4,
+    6
+   ],
+   "core_flags": [],
+   "key": "Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    13,
+    14
+   ],
+   "core_flags": [],
+   "key": "Scale",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "PET2001_20260603.rbf",
+  "rbf_md5": "0767c7d6579dcaed0671aebdb9eb9422",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:12:45",
+  "confstr_sha1": "9aaab03bd3aae1ffe9b3b933b5365783767886d7"
+ }
+}

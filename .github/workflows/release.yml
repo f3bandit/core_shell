@@ -1,0 +1,77 @@
+name: Release
+
+# A tag vYYYY.MM.DD[.n] pushed: the tests, the ARM programs built, and a GitHub release with coreshell.tar.gz,
+# which `python3 -m coreshell update` on a MiSTer installs (docs/UPDATING.md).
+
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Release tag (vYYYY.MM.DD[.n])'
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      TAG: ${{ github.event.inputs.tag || github.ref_name }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Tests
+        run: |
+          python -m unittest discover -s tests
+          # the MiSTer has Python 3.9: nothing newer than that in the code
+          pip install -q vermin && vermin --no-tips --violations -t=3.9- coreshell tools
+
+      - name: ARM toolchain
+        uses: actions/cache@v4
+        id: tc
+        with:
+          path: /opt/gcc-arm
+          key: gcc-arm-10.2-2020.11
+      - if: steps.tc.outputs.cache-hit != 'true'
+        run: |
+          sudo mkdir -p /opt/gcc-arm && sudo chown $USER /opt/gcc-arm
+          curl -sSL https://developer.arm.com/-/media/Files/downloads/gnu-a/10.2-2020.11/binrel/gcc-arm-10.2-2020.11-x86_64-arm-none-linux-gnueabihf.tar.xz \
+            | tar xJ -C /opt/gcc-arm --strip-components=1
+
+      - name: discfs, corepatch (static ARM)
+        env:
+          CFLAGS: -mcpu=cortex-a9 -mfpu=neon -mfloat-abi=hard
+          LDFLAGS: -static -s
+        run: |
+          export PATH=/opt/gcc-arm/bin:$PATH
+          for d in discfs corepatch; do make -C $d clean; make -C $d CC=arm-none-linux-gnueabihf-gcc; done
+
+      - name: coreshell.tar.gz
+        run: |
+          set -e
+          rm -rf pkg && mkdir -p pkg/bin pkg/mains
+          cp -r coreshell tools scripts quirks corepatch docs systems addons caps compat pkg/
+          cp bin/run-script pkg/bin/            # (the Mains run scripts through it: addons/, compat/)
+          cp scripts/coreshell.sh pkg/coreshell.sh
+          cp README.md LICENSE pkg/
+          cp discfs/discfs corepatch/corepatch pkg/bin/
+          rm -f pkg/corepatch/corepatch
+          find pkg -name __pycache__ -prune -exec rm -rf {} +
+          echo "$TAG" > pkg/VERSION
+          tar czf coreshell.tar.gz -C pkg .
+          sha256sum coreshell.tar.gz > coreshell.tar.gz.sha256
+
+      - name: GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view "$TAG" >/dev/null 2>&1 || gh release create "$TAG" --title "Coreshell $TAG" --generate-notes
+          gh release upload "$TAG" coreshell.tar.gz coreshell.tar.gz.sha256 --clobber

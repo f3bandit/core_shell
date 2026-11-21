@@ -1,0 +1,641 @@
+{
+ "coreshell_profile": 1,
+ "system": "videobrain",
+ "variant": "stock",
+ "name": "VideoBrain",
+ "rbf": "_Computer/VideoBrain",
+ "setname": null,
+ "core_name": "VideoBrain",
+ "config_file": "VideoBrain_v1.CFG",
+ "games_dir": "games/VideoBrain",
+ "saves_dir": "saves/VideoBrain",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "BIN"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "BIN",
+    "VBC"
+   ],
+   "label": "Load Cartridge"
+  },
+  {
+   "index": 4,
+   "type": "f",
+   "exts": [
+    "VBK"
+   ],
+   "label": "Load Keyboard File"
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load Expander 1 ROM"
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "VBT"
+   ],
+   "label": "Mount Playback Tape"
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "VBT"
+   ],
+   "label": "Mount Record Tape"
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "VBP"
+   ],
+   "label": "Mount Capture Image"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "BIN",
+    "VBC"
+   ],
+   "label": "Load Cartridge",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 4,
+   "type": "f",
+   "exts": [
+    "VBK"
+   ],
+   "label": "Load Keyboard File",
+   "page": 4,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load BIOS",
+   "page": 2,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load Expander 1 ROM",
+   "page": 2,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "VBT"
+   ],
+   "label": "Mount Playback Tape",
+   "page": 6,
+   "flags": [
+    "d8"
+   ]
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "VBT"
+   ],
+   "label": "Mount Record Tape",
+   "page": 6,
+   "flags": [
+    "d8"
+   ]
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "VBP"
+   ],
+   "label": "Mount Capture Image",
+   "page": 5,
+   "flags": [
+    "d6"
+   ]
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Calibrate Sticks",
+   "bits": [
+    20,
+    20
+   ],
+   "kind": "reset",
+   "page": 3,
+   "flags": [
+    "D4"
+   ]
+  },
+  {
+   "name": "Rewind Playback Tape",
+   "bits": [
+    23,
+    23
+   ],
+   "kind": "toggle",
+   "page": 6,
+   "flags": []
+  },
+  {
+   "name": "Rewind Record Tape",
+   "bits": [
+    30,
+    30
+   ],
+   "kind": "toggle",
+   "page": 6,
+   "flags": []
+  },
+  {
+   "name": "Start Capture",
+   "bits": [
+    34,
+    34
+   ],
+   "kind": "toggle",
+   "page": 5,
+   "flags": [
+    "d7"
+   ]
+  },
+  {
+   "name": "Stop Capture and Save",
+   "bits": [
+    35,
+    35
+   ],
+   "kind": "toggle",
+   "page": 5,
+   "flags": [
+    "DE"
+   ]
+  },
+  {
+   "name": "Show Capture Status",
+   "bits": [
+    36,
+    36
+   ],
+   "kind": "toggle",
+   "page": 5,
+   "flags": [
+    "DE"
+   ]
+  },
+  {
+   "name": "Apply Video Output",
+   "bits": [
+    43,
+    43
+   ],
+   "kind": "toggle",
+   "page": 1,
+   "flags": []
+  },
+  {
+   "name": "Unload Cartridge",
+   "bits": [
+    28,
+    28
+   ],
+   "kind": "reset",
+   "page": 2,
+   "flags": [
+    "DA"
+   ]
+  },
+  {
+   "name": "Master Control (Soft Reset)",
+   "bits": [
+    27,
+    27
+   ],
+   "kind": "toggle",
+   "page": 2,
+   "flags": []
+  },
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "Joysticks",
+   "name": "Joysticks",
+   "values": [
+    "Connected",
+    "Disconnected"
+   ],
+   "default": "Connected",
+   "bits": [
+    5,
+    5
+   ],
+   "core_flags": [],
+   "key": "Joysticks/Joysticks",
+   "mgl_ok": true
+  },
+  {
+   "page": "Joysticks",
+   "name": "Stick Preset",
+   "values": [
+    "Auto",
+    "Tennis",
+    "Gladiator"
+   ],
+   "default": "Auto",
+   "bits": [
+    14,
+    15
+   ],
+   "core_flags": [
+    "D4"
+   ],
+   "key": "Joysticks/Stick Preset",
+   "mgl_ok": true
+  },
+  {
+   "page": "Joysticks",
+   "name": "Analog Mode",
+   "values": [
+    "Absolute",
+    "Relative"
+   ],
+   "default": "Absolute",
+   "bits": [
+    38,
+    38
+   ],
+   "core_flags": [
+    "D4"
+   ],
+   "key": "Joysticks/Analog Mode",
+   "mgl_ok": true
+  },
+  {
+   "page": "Joysticks",
+   "name": "Relative Speed",
+   "values": [
+    "Slow",
+    "Normal",
+    "Fast"
+   ],
+   "default": "Slow",
+   "bits": [
+    39,
+    40
+   ],
+   "core_flags": [
+    "DD"
+   ],
+   "key": "Joysticks/Relative Speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "Joysticks",
+   "name": "Paired Sticks",
+   "values": [
+    "Off",
+    "1+2 / 3+4 (Pinball)",
+    "1+3 / 2+4 (Doubles)"
+   ],
+   "default": "Off",
+   "bits": [
+    16,
+    17
+   ],
+   "core_flags": [
+    "D4"
+   ],
+   "key": "Joysticks/Paired Sticks",
+   "mgl_ok": true
+  },
+  {
+   "page": "Keyboard",
+   "name": "OSD Aborts VBK",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    31,
+    31
+   ],
+   "core_flags": [],
+   "key": "Keyboard/OSD Aborts VBK",
+   "mgl_ok": true
+  },
+  {
+   "page": "Keyboard",
+   "name": "Music Mode",
+   "values": [
+    "Playback",
+    "Record"
+   ],
+   "default": "Playback",
+   "bits": [
+    18,
+    18
+   ],
+   "core_flags": [
+    "H5"
+   ],
+   "key": "Keyboard/Music Mode",
+   "mgl_ok": false
+  },
+  {
+   "page": "Keyboard",
+   "name": "Music Mode",
+   "values": [
+    "Playback"
+   ],
+   "default": "Playback",
+   "bits": [
+    18,
+    18
+   ],
+   "core_flags": [
+    "h5",
+    "D5"
+   ],
+   "key": "Keyboard/Music Mode #2",
+   "mgl_ok": false
+  },
+  {
+   "page": "Keyboard",
+   "name": "Music Repeat",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    19,
+    19
+   ],
+   "core_flags": [],
+   "key": "Keyboard/Music Repeat",
+   "mgl_ok": true
+  },
+  {
+   "page": "Keyboard",
+   "name": "Esc Soft Reset",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    29,
+    29
+   ],
+   "core_flags": [],
+   "key": "Keyboard/Esc Soft Reset",
+   "mgl_ok": true
+  },
+  {
+   "page": "Printer",
+   "name": "Capture Baud",
+   "values": [
+    "300",
+    "110"
+   ],
+   "default": "300",
+   "bits": [
+    33,
+    33
+   ],
+   "core_flags": [],
+   "key": "Printer/Capture Baud",
+   "mgl_ok": true
+  },
+  {
+   "page": "Printer",
+   "name": "Info. Manager Fix",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    37,
+    37
+   ],
+   "core_flags": [],
+   "key": "Printer/Info. Manager Fix",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Output",
+   "values": [
+    "480i (Original)",
+    "240p",
+    "480p"
+   ],
+   "default": "480i (Original)",
+   "bits": [
+    41,
+    42
+   ],
+   "core_flags": [],
+   "key": "Video/Output",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Colors",
+   "values": [
+    "16 (Original)",
+    "32 (Patent)"
+   ],
+   "default": "16 (Original)",
+   "bits": [
+    45,
+    45
+   ],
+   "core_flags": [],
+   "key": "Video/Colors",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Aspect Ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    121,
+    122
+   ],
+   "core_flags": [],
+   "key": "Video/Aspect Ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "HV-Integer-",
+    "HV-Integer+",
+    "HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    123,
+    125
+   ],
+   "core_flags": [],
+   "key": "Video/Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "System",
+   "name": "Info Messages",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    22,
+    22
+   ],
+   "core_flags": [],
+   "key": "System/Info Messages",
+   "mgl_ok": true
+  },
+  {
+   "page": "System",
+   "name": "Reset on Load",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    24,
+    24
+   ],
+   "core_flags": [],
+   "key": "System/Reset on Load",
+   "mgl_ok": true
+  },
+  {
+   "page": "System",
+   "name": "BIOS Clock",
+   "values": [
+    "Manual",
+    "Auto (RTC)"
+   ],
+   "default": "Manual",
+   "bits": [
+    44,
+    44
+   ],
+   "core_flags": [],
+   "key": "System/BIOS Clock",
+   "mgl_ok": true
+  },
+  {
+   "page": "System",
+   "name": "UART Output",
+   "values": [
+    "Modem",
+    "Printer"
+   ],
+   "default": "Modem",
+   "bits": [
+    32,
+    32
+   ],
+   "core_flags": [],
+   "key": "System/UART Output",
+   "mgl_ok": true
+  },
+  {
+   "page": "System",
+   "name": "Mapper Fallback",
+   "values": [
+    "Standard",
+    "Timeshare",
+    "Money Minder",
+    "APL/S",
+    "Info. Manager",
+    "4K RAM",
+    "BASIC"
+   ],
+   "default": "Standard",
+   "bits": [
+    9,
+    11
+   ],
+   "core_flags": [],
+   "key": "System/Mapper Fallback",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "repo": "MiSTer-devel/VideoBrain_MiSTer",
+  "commit": "447a0c247e4b1ed8267dc93916a6156f8bdb6e84",
+  "file": "VideoBrain.sv",
+  "rbf": "VideoBrain_20261113.rbf",
+  "rbf_md5": "b67faff9ce488c39434dcc2fd01cfe09",
+  "confstr_sha1": "990bd99fb32fe655e0d7b98e258e47cdc17296dd"
+ }
+}

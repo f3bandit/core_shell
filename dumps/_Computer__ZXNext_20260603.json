@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/ZXNext_20260603.rbf",
+ "rbf_md5": "4ed2e7e29d4093de1a6106baa3eda236",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "ZXNext;;SC0,VHD,Mount C:;SC1,VHD,Mount D:;O1,Hard Reset on C: mount,No,Yes;-;F1,TZXCSW,Load Tape,30000000;-;O78,Aspect Ratio,Original,Full Screen,[ARC1],[ARC2];O56,Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%;ODE,Narrow Border,No,276,288,320;OF,Center Image,Yes,No;H2d1OS,Vertical Crop,No,Yes;h2d1OST,Vertical Crop,No,270,216;OQR,Scale,Normal,V-Integer,Narrower HV-Integer,Wider HV-Integer;O34,Stereo Mix,none,25%,50%,100%;O2,Joysticks Swap,No,Yes;-;h3TA,CPU Clock:           3.5MHz;h4TA,CPU Clock:             7MHz;h5TA,CPU Clock:            14MHz;h6TA,CPU Clock:            28MHz;R0,Soft Reset;R9,Hard Reset;h7-;h7P3,Debug;h7P3-;h7P3O[11],Machine,Mister,Next;h7P3O[12],Issue,2,4;-   ;J,A,B,C,X,Y,Z,Start;V,v260603",
+ "dumped": "2026-11-13T23:14:23"
+}

@@ -1,0 +1,274 @@
+{
+ "coreshell_profile": 1,
+ "system": "next",
+ "variant": "stock",
+ "name": "NeXT",
+ "rbf": "_Computer/NeXT",
+ "setname": null,
+ "core_name": "NeXT",
+ "config_file": "NeXT.CFG",
+ "games_dir": "games/NeXT",
+ "saves_dir": "saves/NeXT",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "BIN",
+   "ROM"
+  ]
+ },
+ "slots": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "VHD",
+    "IMG"
+   ],
+   "label": "SCSI Disk 0"
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "VHD",
+    "IMG"
+   ],
+   "label": "SCSI Disk 1"
+  },
+  {
+   "index": 3,
+   "type": "s",
+   "exts": [
+    "ISO",
+    "CUE",
+    "BIN",
+    "CHD"
+   ],
+   "label": "CD-ROM"
+  },
+  {
+   "index": 4,
+   "type": "s",
+   "exts": [
+    "IMG",
+    "IMA",
+    "FLP",
+    "VFD",
+    "FD"
+   ],
+   "label": "Floppy"
+  },
+  {
+   "index": 5,
+   "type": "s",
+   "exts": [
+    "IMG",
+    "MO",
+    "OD"
+   ],
+   "label": "Magneto-optical"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "BIN",
+    "ROM"
+   ],
+   "label": "Boot ROM",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "VHD",
+    "IMG"
+   ],
+   "label": "SCSI Disk 0",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "VHD",
+    "IMG"
+   ],
+   "label": "SCSI Disk 1",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 3,
+   "type": "s",
+   "exts": [
+    "ISO",
+    "CUE",
+    "BIN",
+    "CHD"
+   ],
+   "label": "CD-ROM",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 4,
+   "type": "s",
+   "exts": [
+    "IMG",
+    "IMA",
+    "FLP",
+    "VFD",
+    "FD"
+   ],
+   "label": "Floppy",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 5,
+   "type": "s",
+   "exts": [
+    "IMG",
+    "MO",
+    "OD"
+   ],
+   "label": "Magneto-optical",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Reset and close OSD",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    121,
+    122
+   ],
+   "core_flags": [],
+   "key": "Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Network",
+   "values": [
+    "Off",
+    "eth0",
+    "eth1",
+    "macvlan",
+    "tap0"
+   ],
+   "default": "Off",
+   "bits": [
+    52,
+    54
+   ],
+   "core_flags": [],
+   "key": "Network",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Ethernet cable",
+   "values": [
+    "Connected",
+    "Disconnected"
+   ],
+   "default": "Connected",
+   "bits": [
+    58,
+    58
+   ],
+   "core_flags": [],
+   "key": "Ethernet cable",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Audio input",
+   "values": [
+    "Silence",
+    "ADC"
+   ],
+   "default": "Silence",
+   "bits": [
+    59,
+    59
+   ],
+   "core_flags": [],
+   "key": "Audio input",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Boot device",
+   "values": [
+    "Auto",
+    "Disk",
+    "Floppy",
+    "Network",
+    "ROM Default",
+    "Optical",
+    "CD-ROM probe"
+   ],
+   "default": "Auto",
+   "bits": [
+    55,
+    57
+   ],
+   "core_flags": [],
+   "key": "Boot device",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "NeXT_20260924.rbf",
+  "rbf_md5": "9c8ea44735550bca8c871627d11b285f",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:12:15",
+  "confstr_sha1": "40f27187ed0a6c6ca06d62de1e62f802f44741f4"
+ }
+}

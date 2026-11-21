@@ -1,0 +1,227 @@
+{
+ "coreshell_profile": 1,
+ "system": "ql",
+ "variant": "stock",
+ "name": "QL",
+ "rbf": "_Computer/QL",
+ "setname": null,
+ "core_name": "QL",
+ "config_file": "QL.CFG",
+ "games_dir": "games/QL",
+ "saves_dir": "saves/QL",
+ "rom": {
+  "index": 2,
+  "type": "f",
+  "exts": [
+   "MDV"
+  ]
+ },
+ "slots": [
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "MDV"
+   ],
+   "label": "Load MDV image"
+  },
+  {
+   "index": 4,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load OS"
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "WIN"
+   ],
+   "label": "Mount HD image"
+  }
+ ],
+ "files": [
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "MDV"
+   ],
+   "label": "Load MDV image",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 4,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load OS",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "WIN"
+   ],
+   "label": "Mount HD image",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Reset & unload MDV",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "MDV direction",
+   "values": [
+    "normal",
+    "reverse"
+   ],
+   "default": "normal",
+   "bits": [
+    2,
+    2
+   ],
+   "core_flags": [],
+   "key": "MDV direction",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Video mode",
+   "values": [
+    "PAL",
+    "NTSC"
+   ],
+   "default": "PAL",
+   "bits": [
+    3,
+    3
+   ],
+   "core_flags": [],
+   "key": "Video mode",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    11,
+    12
+   ],
+   "core_flags": [],
+   "key": "Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%"
+   ],
+   "default": "None",
+   "bits": [
+    9,
+    10
+   ],
+   "core_flags": [],
+   "key": "Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    13,
+    14
+   ],
+   "core_flags": [],
+   "key": "Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "CPU speed",
+   "values": [
+    "QL",
+    "16 Mhz",
+    "24 Mhz",
+    "Full"
+   ],
+   "default": "QL",
+   "bits": [
+    7,
+    8
+   ],
+   "core_flags": [],
+   "key": "CPU speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "RAM",
+   "values": [
+    "128k",
+    "640k",
+    "896k",
+    "4096k"
+   ],
+   "default": "128k",
+   "bits": [
+    4,
+    5
+   ],
+   "core_flags": [],
+   "key": "RAM",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "QL_20260603.rbf",
+  "rbf_md5": "049d963df76b3aa5984868f8c8421275",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:12:50",
+  "confstr_sha1": "ca5373cffc77287fb22a28209093a21f4333b24d"
+ }
+}

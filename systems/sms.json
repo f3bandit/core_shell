@@ -1,0 +1,833 @@
+{
+ "coreshell_profile": 1,
+ "system": "sms",
+ "variant": "stock",
+ "name": "SMS",
+ "rbf": "_Console/SMS",
+ "setname": null,
+ "core_name": "SMS",
+ "config_file": "SMS.CFG",
+ "games_dir": "games/SMS",
+ "saves_dir": "saves/SMS",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "SMS",
+   "SG",
+   "SC"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "SMS",
+    "SG",
+    "SC"
+   ],
+   "label": ""
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "GG"
+   ],
+   "label": ""
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "SMS",
+    "SG",
+    "SC"
+   ],
+   "label": "",
+   "page": 0,
+   "flags": [
+    "H8"
+   ],
+   "remember_dir": true
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "GG"
+   ],
+   "label": "",
+   "page": 0,
+   "flags": [
+    "H8"
+   ],
+   "remember_dir": true
+  },
+  {
+   "index": 3,
+   "type": "f",
+   "exts": [
+    "BIN",
+    "SMS"
+   ],
+   "label": "Load SMS BIOS",
+   "page": 0,
+   "flags": [
+    "H8"
+   ],
+   "remember_dir": false
+  },
+  {
+   "index": 4,
+   "type": "f",
+   "exts": [
+    "BIN",
+    "GG"
+   ],
+   "label": "Load GG BIOS",
+   "page": 0,
+   "flags": [
+    "H8"
+   ],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Save State (Alt+F1)",
+   "bits": [
+    61,
+    61
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Load State (F1)",
+   "bits": [
+    62,
+    62
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Load Backup RAM",
+   "bits": [
+    6,
+    6
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "H8",
+    "H9",
+    "D0"
+   ]
+  },
+  {
+   "name": "Save Backup RAM",
+   "bits": [
+    7,
+    7
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "H8",
+    "H9",
+    "D0"
+   ]
+  },
+  {
+   "name": "Soft Reset",
+   "bits": [
+    11,
+    11
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "H8"
+   ]
+  },
+  {
+   "name": "Eject ROM",
+   "bits": [
+    9,
+    9
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "H8"
+   ]
+  },
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": true,
+ "menu": [
+  {
+   "page": "",
+   "name": "SaveState Slot",
+   "values": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "default": "1",
+   "bits": [
+    15,
+    16
+   ],
+   "core_flags": [],
+   "key": "SaveState Slot",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Cheats Enabled",
+   "values": [
+    "ON",
+    "OFF"
+   ],
+   "default": "ON",
+   "bits": [
+    24,
+    24
+   ],
+   "core_flags": [
+    "H1"
+   ],
+   "key": "Cheats Enabled",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Autosave",
+   "values": [
+    "OFF",
+    "ON"
+   ],
+   "default": "OFF",
+   "bits": [
+    25,
+    25
+   ],
+   "core_flags": [
+    "H8"
+   ],
+   "key": "Autosave",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Region",
+   "values": [
+    "US/EU",
+    "Japan"
+   ],
+   "default": "US/EU",
+   "bits": [
+    10,
+    10
+   ],
+   "core_flags": [
+    "H8"
+   ],
+   "key": "Region",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "SMS BIOS",
+   "values": [
+    "Disable",
+    "Internal",
+    "Ext. File"
+   ],
+   "default": "Disable",
+   "bits": [
+    43,
+    44
+   ],
+   "core_flags": [
+    "H8"
+   ],
+   "key": "SMS BIOS",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "GG BIOS",
+   "values": [
+    "Disable",
+    "Ext. File"
+   ],
+   "default": "Disable",
+   "bits": [
+    49,
+    49
+   ],
+   "core_flags": [
+    "H8"
+   ],
+   "key": "GG BIOS",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Mapper",
+   "values": [
+    "Auto",
+    "Sega",
+    "Codemasters",
+    "Dahjee A",
+    "Linear",
+    "Zemina/MSX"
+   ],
+   "default": "Auto",
+   "bits": [
+    45,
+    48
+   ],
+   "core_flags": [
+    "H8"
+   ],
+   "key": "Mapper",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Z80 Speed",
+   "values": [
+    "Normal",
+    "Turbo"
+   ],
+   "default": "Normal",
+   "bits": [
+    40,
+    40
+   ],
+   "core_flags": [
+    "H8"
+   ],
+   "key": "Z80 Speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "VDPs",
+   "values": [
+    "Both",
+    "2",
+    "1",
+    "None"
+   ],
+   "default": "Both",
+   "bits": [
+    33,
+    34
+   ],
+   "core_flags": [
+    "H7"
+   ],
+   "key": "VDPs",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "PSGs",
+   "values": [
+    "Both",
+    "2",
+    "1",
+    "None"
+   ],
+   "default": "Both",
+   "bits": [
+    35,
+    36
+   ],
+   "core_flags": [
+    "H7"
+   ],
+   "key": "PSGs",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "TV System",
+   "values": [
+    "NTSC",
+    "PAL"
+   ],
+   "default": "NTSC",
+   "bits": [
+    2,
+    2
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/TV System",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Orientation",
+   "values": [
+    "Horz",
+    "Vert"
+   ],
+   "default": "Horz",
+   "bits": [
+    41,
+    41
+   ],
+   "core_flags": [
+    "h8"
+   ],
+   "key": "Audio & Video/Orientation",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Flip Screen",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    42,
+    42
+   ],
+   "core_flags": [
+    "h8"
+   ],
+   "key": "Audio & Video/Flip Screen",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    26,
+    27
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    3,
+    5
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Vertical Crop",
+   "values": [
+    "Disabled",
+    "216p(5x)"
+   ],
+   "default": "Disabled",
+   "bits": [
+    50,
+    50
+   ],
+   "core_flags": [
+    "d6"
+   ],
+   "key": "Audio & Video/Vertical Crop",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Crop Offset",
+   "values": [
+    "0",
+    "2",
+    "4",
+    "8",
+    "10",
+    "12",
+    "-12",
+    "-10",
+    "-8",
+    "-6",
+    "-4",
+    "-2"
+   ],
+   "default": "0",
+   "bits": [
+    51,
+    54
+   ],
+   "core_flags": [
+    "d6"
+   ],
+   "key": "Audio & Video/Crop Offset",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    30,
+    31
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Border",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    13,
+    13
+   ],
+   "core_flags": [
+    "D2"
+   ],
+   "key": "Audio & Video/Border",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Masked Left Column",
+   "values": [
+    "BG",
+    "Black",
+    "Cut"
+   ],
+   "default": "BG",
+   "bits": [
+    28,
+    29
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Masked Left Column",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Sprites Per Line",
+   "values": [
+    "Standard",
+    "All"
+   ],
+   "default": "Standard",
+   "bits": [
+    8,
+    8
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Sprites Per Line",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Game Gear Res.",
+   "values": [
+    "Standard",
+    "Extended"
+   ],
+   "default": "Standard",
+   "bits": [
+    39,
+    39
+   ],
+   "core_flags": [
+    "d2"
+   ],
+   "key": "Audio & Video/Game Gear Res.",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "SMS FM Sound",
+   "values": [
+    "Enable",
+    "Disable"
+   ],
+   "default": "Enable",
+   "bits": [
+    12,
+    12
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/SMS FM Sound",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Swap Joysticks",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    1,
+    1
+   ],
+   "core_flags": [],
+   "key": "Input/Swap Joysticks",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Multitap",
+   "values": [
+    "Disabled",
+    "Port1"
+   ],
+   "default": "Disabled",
+   "bits": [
+    14,
+    14
+   ],
+   "core_flags": [],
+   "key": "Input/Multitap",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "USERIO",
+   "values": [
+    "Off",
+    "SNAC",
+    "Gear2Gear"
+   ],
+   "default": "Off",
+   "bits": [
+    55,
+    56
+   ],
+   "core_flags": [],
+   "key": "Input/USERIO",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Pause Btn Combo",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    17,
+    17
+   ],
+   "core_flags": [
+    "D3"
+   ],
+   "key": "Input/Pause Btn Combo",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Gun Control",
+   "values": [
+    "Disabled",
+    "Joy1",
+    "Joy2",
+    "Mouse"
+   ],
+   "default": "Disabled",
+   "bits": [
+    18,
+    19
+   ],
+   "core_flags": [
+    "D2"
+   ],
+   "key": "Input/Gun Control",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Gun Fire",
+   "values": [
+    "Joy",
+    "Mouse"
+   ],
+   "default": "Joy",
+   "bits": [
+    20,
+    20
+   ],
+   "core_flags": [
+    "D4"
+   ],
+   "key": "Input/Gun Fire",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Gun Port",
+   "values": [
+    "Port1",
+    "Port2"
+   ],
+   "default": "Port1",
+   "bits": [
+    21,
+    21
+   ],
+   "core_flags": [
+    "D4"
+   ],
+   "key": "Input/Gun Port",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Cross",
+   "values": [
+    "Small",
+    "Medium",
+    "Big",
+    "None"
+   ],
+   "default": "Small",
+   "bits": [
+    22,
+    23
+   ],
+   "core_flags": [
+    "D4"
+   ],
+   "key": "Input/Cross",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Paddle Control",
+   "values": [
+    "Disabled",
+    "Paddle",
+    "Joy"
+   ],
+   "default": "Disabled",
+   "bits": [
+    37,
+    38
+   ],
+   "core_flags": [],
+   "key": "Input/Paddle Control",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "SK-1100",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    57,
+    57
+   ],
+   "core_flags": [],
+   "key": "Input/SK-1100",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "SC-3000",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    58,
+    58
+   ],
+   "core_flags": [],
+   "key": "Input/SC-3000",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "SG/SC Cart RAM",
+   "values": [
+    "Off",
+    "2KB",
+    "16KB",
+    "32KB"
+   ],
+   "default": "Off",
+   "bits": [
+    59,
+    60
+   ],
+   "core_flags": [],
+   "key": "Input/SG/SC Cart RAM",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "SMS_20260823.rbf",
+  "rbf_md5": "148b75236f3ab1bc96ca1f16c05f1ec9",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:09:07",
+  "confstr_sha1": "3c7e47fa5dd0fab28f0e34395909a7a362855eb3"
+ }
+}

@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/AliceMC10_20210116.rbf",
+ "rbf_md5": "9ac9681a659b227eb39b7ea06a5be454",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "AliceMC10;;-;O1,Aspect ratio,4:3,16:9;OC,16k expansion,Off,On;-;OF,Tape Input,File,ADC;D0F1,c10,Tape Load;D0TA,Tape Play/Pause;D0TB,Tape Rewind;OD,Show tape stream,Off,On;OE,Enable tape audio,Off,On;-;T0,Reset;R0,Reset and close OSD;J1,Button;V,v210116",
+ "dumped": "2026-11-13T23:09:49"
+}

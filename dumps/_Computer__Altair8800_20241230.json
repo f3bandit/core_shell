@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/Altair8800_20241230.rbf",
+ "rbf_md5": "ce91474e605bb7d9ad536c5e99583149",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "Altair8800;;-;F0,ROM,Load Program;OA,Enable TurnMon,No,Yes;OC,Serial Port,Console Port,User IO Port;T0,Reset;-;V,v2.0.241230",
+ "dumped": "2026-11-13T23:09:52"
+}

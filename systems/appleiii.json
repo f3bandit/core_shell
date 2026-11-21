@@ -1,0 +1,708 @@
+{
+ "coreshell_profile": 1,
+ "system": "appleiii",
+ "variant": "stock",
+ "name": "Apple-III",
+ "rbf": "_Computer/Apple-III",
+ "setname": null,
+ "core_name": "Apple-III",
+ "config_file": "Apple-III.CFG",
+ "games_dir": "games/Apple-III",
+ "saves_dir": "saves/Apple-III",
+ "rom": {
+  "index": 2,
+  "type": "f",
+  "exts": [
+   "ROM",
+   "BIN"
+  ]
+ },
+ "slots": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "WOZ",
+    "DSK",
+    "DO",
+    "PO",
+    "NIB",
+    "2MG"
+   ],
+   "label": "Mount Drive 1"
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "WOZ",
+    "DSK",
+    "DO",
+    "PO",
+    "NIB",
+    "2MG"
+   ],
+   "label": "Mount Drive 2"
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "WOZ",
+    "DSK",
+    "DO",
+    "PO",
+    "NIB",
+    "2MG"
+   ],
+   "label": "Mount Drive 3"
+  },
+  {
+   "index": 3,
+   "type": "s",
+   "exts": [
+    "WOZ",
+    "DSK",
+    "DO",
+    "PO",
+    "NIB",
+    "2MG"
+   ],
+   "label": "Mount Drive 4"
+  },
+  {
+   "index": 6,
+   "type": "s",
+   "exts": [
+    "PO",
+    "HDV",
+    "2MG"
+   ],
+   "label": "ProFile Disk 1"
+  },
+  {
+   "index": 7,
+   "type": "s",
+   "exts": [
+    "PO",
+    "HDV",
+    "2MG"
+   ],
+   "label": "ProFile Disk 2"
+  },
+  {
+   "index": 4,
+   "type": "s",
+   "exts": [
+    "PO",
+    "HDV",
+    "2MG"
+   ],
+   "label": "Block Disk 1"
+  },
+  {
+   "index": 5,
+   "type": "s",
+   "exts": [
+    "PO",
+    "HDV",
+    "2MG"
+   ],
+   "label": "Block Disk 2"
+  }
+ ],
+ "files": [
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "ROM",
+    "BIN"
+   ],
+   "label": "Load Boot ROM",
+   "page": 1,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "WOZ",
+    "DSK",
+    "DO",
+    "PO",
+    "NIB",
+    "2MG"
+   ],
+   "label": "Mount Drive 1",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "WOZ",
+    "DSK",
+    "DO",
+    "PO",
+    "NIB",
+    "2MG"
+   ],
+   "label": "Mount Drive 2",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "WOZ",
+    "DSK",
+    "DO",
+    "PO",
+    "NIB",
+    "2MG"
+   ],
+   "label": "Mount Drive 3",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 3,
+   "type": "s",
+   "exts": [
+    "WOZ",
+    "DSK",
+    "DO",
+    "PO",
+    "NIB",
+    "2MG"
+   ],
+   "label": "Mount Drive 4",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 6,
+   "type": "s",
+   "exts": [
+    "PO",
+    "HDV",
+    "2MG"
+   ],
+   "label": "ProFile Disk 1",
+   "page": 0,
+   "flags": [
+    "h5"
+   ]
+  },
+  {
+   "index": 7,
+   "type": "s",
+   "exts": [
+    "PO",
+    "HDV",
+    "2MG"
+   ],
+   "label": "ProFile Disk 2",
+   "page": 0,
+   "flags": [
+    "h6"
+   ]
+  },
+  {
+   "index": 4,
+   "type": "s",
+   "exts": [
+    "PO",
+    "HDV",
+    "2MG"
+   ],
+   "label": "Block Disk 1",
+   "page": 0,
+   "flags": [
+    "h4"
+   ]
+  },
+  {
+   "index": 5,
+   "type": "s",
+   "exts": [
+    "PO",
+    "HDV",
+    "2MG"
+   ],
+   "label": "Block Disk 2",
+   "page": 0,
+   "flags": [
+    "h4"
+   ]
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Write Protect 1",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    6,
+    6
+   ],
+   "core_flags": [],
+   "key": "Write Protect 1",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Write Protect 2",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    7,
+    7
+   ],
+   "core_flags": [],
+   "key": "Write Protect 2",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Write Protect 3",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    11,
+    11
+   ],
+   "core_flags": [],
+   "key": "Write Protect 3",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Write Protect 4",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    12,
+    12
+   ],
+   "core_flags": [],
+   "key": "Write Protect 4",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Model",
+   "values": [
+    "Apple ///",
+    "/// Plus"
+   ],
+   "default": "Apple ///",
+   "bits": [
+    8,
+    8
+   ],
+   "core_flags": [],
+   "key": "Model",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Text Interlace",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    15,
+    15
+   ],
+   "core_flags": [
+    "h0"
+   ],
+   "key": "Text Interlace",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Video",
+   "values": [
+    "RGB",
+    "Color Composite",
+    "Mono Composite"
+   ],
+   "default": "RGB",
+   "bits": [
+    13,
+    14
+   ],
+   "core_flags": [],
+   "key": "Video",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Display",
+   "values": [
+    "RGB Monitor",
+    "Monitor /// Green",
+    "Amber",
+    "Color TV"
+   ],
+   "default": "RGB Monitor",
+   "bits": [
+    16,
+    17
+   ],
+   "core_flags": [
+    "H1"
+   ],
+   "key": "Display",
+   "mgl_ok": true
+  },
+  {
+   "page": "System & ROM",
+   "name": "Memory",
+   "values": [
+    "256K",
+    "128K",
+    "512K"
+   ],
+   "default": "256K",
+   "bits": [
+    30,
+    31
+   ],
+   "core_flags": [
+    "h7"
+   ],
+   "key": "System & ROM/Memory",
+   "mgl_ok": false
+  },
+  {
+   "page": "System & ROM",
+   "name": "Memory",
+   "values": [
+    "256K",
+    "128K"
+   ],
+   "default": "256K",
+   "bits": [
+    30,
+    31
+   ],
+   "core_flags": [
+    "H7"
+   ],
+   "key": "System & ROM/Memory #2",
+   "mgl_ok": false
+  },
+  {
+   "page": "System & ROM",
+   "name": "Video Standard",
+   "values": [
+    "NTSC",
+    "PAL"
+   ],
+   "default": "NTSC",
+   "bits": [
+    19,
+    19
+   ],
+   "core_flags": [],
+   "key": "System & ROM/Video Standard",
+   "mgl_ok": true
+  },
+  {
+   "page": "System & ROM",
+   "name": "Boot ROM",
+   "values": [
+    "Apple",
+    "soshdboot"
+   ],
+   "default": "Apple",
+   "bits": [
+    26,
+    26
+   ],
+   "core_flags": [],
+   "key": "System & ROM/Boot ROM",
+   "mgl_ok": true
+  },
+  {
+   "page": "Scaling & Filters",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    121,
+    122
+   ],
+   "core_flags": [],
+   "key": "Scaling & Filters/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Scaling & Filters",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    20,
+    21
+   ],
+   "core_flags": [],
+   "key": "Scaling & Filters/Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "Scaling & Filters",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    3,
+    5
+   ],
+   "core_flags": [],
+   "key": "Scaling & Filters/Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "Scaling & Filters",
+   "name": "Deinterlacing",
+   "values": [
+    "Weave",
+    "Bob"
+   ],
+   "default": "Weave",
+   "bits": [
+    22,
+    22
+   ],
+   "core_flags": [
+    "h2"
+   ],
+   "key": "Scaling & Filters/Deinterlacing",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Slot 1",
+   "values": [
+    "Block Card",
+    "ProFile 1",
+    "ProFile 2",
+    "Mouse Card",
+    "Empty"
+   ],
+   "default": "Block Card",
+   "bits": [
+    32,
+    34
+   ],
+   "core_flags": [],
+   "key": "Hardware/Slot 1",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Slot 2",
+   "values": [
+    "Empty",
+    "Block Card",
+    "ProFile 1",
+    "ProFile 2",
+    "Mouse Card"
+   ],
+   "default": "Empty",
+   "bits": [
+    35,
+    37
+   ],
+   "core_flags": [],
+   "key": "Hardware/Slot 2",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Slot 3",
+   "values": [
+    "Empty",
+    "Block Card",
+    "ProFile 1",
+    "ProFile 2",
+    "Mouse Card"
+   ],
+   "default": "Empty",
+   "bits": [
+    38,
+    40
+   ],
+   "core_flags": [],
+   "key": "Hardware/Slot 3",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Slot 4",
+   "values": [
+    "ProFile 1",
+    "ProFile 2",
+    "Mouse Card",
+    "Empty",
+    "Block Card"
+   ],
+   "default": "ProFile 1",
+   "bits": [
+    41,
+    43
+   ],
+   "core_flags": [],
+   "key": "Hardware/Slot 4",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Mouse Speed",
+   "values": [
+    "Normal",
+    "Fast",
+    "Faster",
+    "Fastest"
+   ],
+   "default": "Normal",
+   "bits": [
+    24,
+    25
+   ],
+   "core_flags": [
+    "h3"
+   ],
+   "key": "Hardware/Mouse Speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Joystick 1 on",
+   "values": [
+    "Port B",
+    "Port A"
+   ],
+   "default": "Port B",
+   "bits": [
+    10,
+    10
+   ],
+   "core_flags": [],
+   "key": "Hardware/Joystick 1 on",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Serial CTS",
+   "values": [
+    "Always ready",
+    "Host RTS"
+   ],
+   "default": "Always ready",
+   "bits": [
+    9,
+    9
+   ],
+   "core_flags": [],
+   "key": "Hardware/Serial CTS",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Serial DSR",
+   "values": [
+    "Always ready",
+    "Host DTR"
+   ],
+   "default": "Always ready",
+   "bits": [
+    29,
+    29
+   ],
+   "core_flags": [],
+   "key": "Hardware/Serial DSR",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Serial DCD",
+   "values": [
+    "Always on",
+    "Host DTR",
+    "Off"
+   ],
+   "default": "Always on",
+   "bits": [
+    27,
+    28
+   ],
+   "core_flags": [],
+   "key": "Hardware/Serial DCD",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "Apple-III_20261024.rbf",
+  "rbf_md5": "5427ca731b034dfca045b8fcb59d219c",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:10:06",
+  "confstr_sha1": "db673010fdf36c54b842431343fb2d694827679f"
+ }
+}

@@ -1,0 +1,10 @@
+{
+ "name": "Super Attract Mode",
+ "kind": "addon",
+ "by": "mrchrisster (MiSTer_SAM)",
+ "any": [
+  {
+   "path": "Scripts/MiSTer_SAM_on.sh"
+  }
+ ]
+}

@@ -1,0 +1,25 @@
+#!/bin/sh
+# Coreshell: on the PATH of the scripts our Mains run (the Scripts menu's /tmp/script; ported from Phosphor's
+# phosphor/compat). "MiSTer" means whichever Main is running: on stock MiSTer it's /media/fat/MiSTer; here it may be
+# a frontend's (MiSTer_phosphor), corehost (MiSTer_corehost) or another fork (MiSTer_<name>). A script that stops
+# or looks for "MiSTer" (DreamSTer's "killall MiSTer" before it takes the FPGA over) means that one. Starting
+# /media/fat/MiSTer again afterwards follows MiSTer.ini's [MiSTer] main=, as at boot (Coreshell brings the frontend's
+# Main back if it doesn't lead there). Any other name goes straight to the real pidof.
+# Copyright (c) 2026 f3bandit. Licensed under the Apache License 2.0 (LICENSE, NOTICE).
+real=/usr/bin/pidof
+[ -x "$real" ] || real=/bin/pidof
+running_main() {     # the Main reading /dev/MiSTer_cmd: its process name (MiSTer_*, corehost)
+	for p in /proc/[0-9]*; do
+		n=$(cat "$p/comm" 2>/dev/null) || continue
+		case "$n" in MiSTer_*|Mister_*|corehost) ls -l "$p/fd" 2>/dev/null | grep -q MiSTer_cmd && { echo "$n"; return; } ;; esac
+	done
+}
+for a; do
+	if [ "$a" = MiSTer ] && ! /usr/bin/pidof MiSTer > /dev/null 2>&1; then
+		m=$(running_main)
+		[ -n "$m" ] && a=$m
+	fi
+	set -- "$@" "$a"
+	shift
+done
+exec "$real" "$@"

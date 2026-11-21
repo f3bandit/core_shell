@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/Neon_20261025.rbf",
+ "rbf_md5": "6676f2da439fb0c486d65f8492cb61c3",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "Neon;;-;S0,DSK,Floppy FD0;S1,DSK,Floppy FD1;S2,IMG,Hard disk;-;O[3:2],RAM,4 MB,512 KB,1 MB,2 MB;O[4],Timer IRQ5,50 Hz frame,64 Hz clock;-;O[122:121],Aspect ratio,Original,Full Screen,[ARC1],[ARC2];-;T[0],Reset;R[0],Reset and close OSD;V,v261024",
+ "dumped": "2026-11-13T23:12:18"
+}

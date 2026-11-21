@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/Sun-3_20261024.rbf",
+ "rbf_md5": "36ccaad3b821604d28b6b83cbde16ad1",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "Sun-3;UART9600;-;SC0,IMGVHD,Pri. disk (ID 0);SC1,IMGVHD,Disk (ID 1);S2,QIC,Tape (ID 4);O[4:3],Tape volume,1,2,3;SC4,ISO,CD-ROM (ID 6);F0,ROM,Load ROM;-;O[11:9],Network interface,eth0,None,eth1,macvlan,tap0;-;P1,Machine;P2,Video;P3,Input;P4,Audio;P5,Advanced;-;h0-,Changes pending;R[0],Apply and reset;P1O[14:13],CPU clock,20 MHz,25 MHz,33 MHz;P1O[12],Colour board,On,Off;H1P1O[19],Colour board type,cg4,GX;P1-;P1T[17],Stop-A (abort);P2O[2:1],Aspect ratio,Original,Full Screen,[ARC1],[ARC2];P2O[6:5],Scale,V-Integer,Normal,Narrower HV-Integer,Wider HV-Integer;P3O[18],Swap Alt/Win keys,No,Yes;P4O[8:7],Keyboard bell,Normal,Loud,Quiet,Off;P5O[15],Diag switch,Normal,Diag;P5O[16],Clock,MiSTer's time,28 years back;P5-;P5SC3,NVR,EEPROM image;v,1;V,v261024",
+ "dumped": "2026-11-13T23:13:25"
+}

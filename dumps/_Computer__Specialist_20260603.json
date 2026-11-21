@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/Specialist_20260603.rbf",
+ "rbf_md5": "c96e003df97537e593b4e65b3ebd3a65",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "SPMX;;-;F0,RKS,Load Tape;S0,ODI,Mount Disk;-;O9A,Aspect ratio,Original,Full Screen,[ARC1],[ARC2];O78,Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%;OBC,Scale,Normal,V-Integer,Narrower HV-Integer,Wider HV-Integer;-;O4,CPU Speed,2MHz,4MHz;O23,Model,Original,MX & Disk,MX;-;R6,Cold Reset;V,v260603",
+ "dumped": "2026-11-13T23:13:19"
+}

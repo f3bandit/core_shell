@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/SAMCoupe_20260603.rbf",
+ "rbf_md5": "b5cc11a5358b022a1e65953618c4060c",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "SAMCOUPE;;-;S0,DSKMGTIMG,Drive 1;S1,DSKMGTIMG,Drive 2;-;ODE,Aspect ratio,Original,Full Screen,[ARC1],[ARC2];O12,Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%;-;d1OF,Vertical Crop,No,Yes;OGH,Scale,Normal,V-Integer,Narrower HV-Integer,Wider HV-Integer;-;O67,Stereo mix,none,25%,50%,100%;-;O8A,CPU Speed,Normal,6MHz,9.6MHz,12MHz,24MHz;OBC,ZX Mode Speed,Emulated,Full,Real;O5,External RAM,on,off;-;R0,Reset;J,Fire 1,Fire 2;V,v260603",
+ "dumped": "2026-11-13T23:12:56"
+}

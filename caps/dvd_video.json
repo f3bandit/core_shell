@@ -1,0 +1,20 @@
+{
+ "name": "DVD video",
+ "kind": "addon",
+ "by": "owenb321 (MiSTer_DVD)",
+ "all": [
+  {
+   "path": "MiSTer_DVDcss"
+  },
+  {
+   "glob": "_Other/DVD_*.rbf"
+  }
+ ],
+ "launch": {
+  "rbf": "_Other/DVD_*.rbf"
+ },
+ "note": "MiSTer.ini [DVD] main=MiSTer_DVDcss starts its Main when the core loads (the stock way).",
+ "needs": [
+  "disc_drive"
+ ]
+}

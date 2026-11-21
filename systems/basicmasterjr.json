@@ -1,0 +1,210 @@
+{
+ "coreshell_profile": 1,
+ "system": "basicmasterjr",
+ "variant": "stock",
+ "name": "BasicMasterJr",
+ "rbf": "_Computer/BasicMasterJr",
+ "setname": null,
+ "core_name": "BasicMasterJr",
+ "config_file": "BasicMasterJr.CFG",
+ "games_dir": "games/BasicMasterJr",
+ "saves_dir": "saves/BasicMasterJr",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "BMT",
+   "BIN",
+   "SAV"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "BMT",
+    "BIN",
+    "SAV"
+   ],
+   "label": "Tape"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "BMT",
+    "BIN",
+    "SAV"
+   ],
+   "label": "Tape",
+   "page": 0,
+   "flags": [],
+   "remember_dir": true
+  }
+ ],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Rewind tape",
+   "bits": [
+    126,
+    126
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "New tape recording",
+   "bits": [
+    119,
+    119
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Reset and close OSD",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Tape speed",
+   "values": [
+    "32x",
+    "Normal"
+   ],
+   "default": "32x",
+   "bits": [
+    124,
+    124
+   ],
+   "core_flags": [],
+   "key": "Tape speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    115,
+    117
+   ],
+   "core_flags": [],
+   "key": "Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    121,
+    122
+   ],
+   "core_flags": [],
+   "key": "Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Tape overlay",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    125,
+    125
+   ],
+   "core_flags": [],
+   "key": "Tape overlay",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Keyboard layout",
+   "values": [
+    "JIS",
+    "US"
+   ],
+   "default": "JIS",
+   "bits": [
+    123,
+    123
+   ],
+   "core_flags": [],
+   "key": "Keyboard layout",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Swap Alt/Win keys",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    127,
+    127
+   ],
+   "core_flags": [],
+   "key": "Swap Alt/Win keys",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Gamepad to keys",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    114,
+    114
+   ],
+   "core_flags": [],
+   "key": "Gamepad to keys",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "BasicMasterJr_20261031.rbf",
+  "rbf_md5": "576e5cbd1560429b8cb59b486a404b3c",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:10:39",
+  "confstr_sha1": "8838d3d27ef21546c3ce45b76daacb194eb2760a"
+ }
+}

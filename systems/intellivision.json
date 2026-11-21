@@ -1,0 +1,348 @@
+{
+ "coreshell_profile": 1,
+ "system": "intellivision",
+ "variant": "stock",
+ "name": "Intellivision",
+ "rbf": "_Console/Intellivision",
+ "setname": null,
+ "core_name": "Intellivision",
+ "config_file": "Intellivision.CFG",
+ "games_dir": "games/Intellivision",
+ "saves_dir": "saves/Intellivision",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "ROM",
+   "INT",
+   "BIN"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "ROM",
+    "INT",
+    "BIN"
+   ],
+   "label": "Cartridge"
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "CFG"
+   ],
+   "label": "CFG Mapping"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "ROM",
+    "INT",
+    "BIN"
+   ],
+   "label": "Cartridge",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "CFG"
+   ],
+   "label": "CFG Mapping",
+   "page": 0,
+   "flags": [
+    "d2"
+   ],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "SAV"
+   ],
+   "label": "JLP RW FLASH",
+   "page": 0,
+   "flags": [
+    "d1"
+   ]
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Format",
+   "values": [
+    "Raw & Intellicart",
+    "CFG mapping"
+   ],
+   "default": "Raw & Intellicart",
+   "bits": [
+    22,
+    22
+   ],
+   "core_flags": [],
+   "key": "Format",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "MAP",
+   "values": [
+    "Auto",
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10"
+   ],
+   "default": "Auto",
+   "bits": [
+    5,
+    8
+   ],
+   "core_flags": [
+    "d3"
+   ],
+   "key": "MAP",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "ECS",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    9,
+    9
+   ],
+   "core_flags": [],
+   "key": "ECS",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Voice",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    10,
+    10
+   ],
+   "core_flags": [],
+   "key": "Voice",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "JLP Acceleration",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    24,
+    24
+   ],
+   "core_flags": [],
+   "key": "JLP Acceleration",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    3,
+    4
+   ],
+   "core_flags": [],
+   "key": "Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    12,
+    14
+   ],
+   "core_flags": [],
+   "key": "Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Vertical Crop",
+   "values": [
+    "Disabled",
+    "216p(5x)"
+   ],
+   "default": "Disabled",
+   "bits": [
+    17,
+    17
+   ],
+   "core_flags": [
+    "d0"
+   ],
+   "key": "Vertical Crop",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Crop Offset",
+   "values": [
+    "0",
+    "2",
+    "4",
+    "8",
+    "10",
+    "12",
+    "-12",
+    "-10",
+    "-8",
+    "-6",
+    "-4",
+    "-2"
+   ],
+   "default": "0",
+   "bits": [
+    18,
+    21
+   ],
+   "core_flags": [
+    "d0"
+   ],
+   "key": "Crop Offset",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    15,
+    16
+   ],
+   "core_flags": [],
+   "key": "Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Video standard",
+   "values": [
+    "NTSC",
+    "PAL"
+   ],
+   "default": "NTSC",
+   "bits": [
+    11,
+    11
+   ],
+   "core_flags": [],
+   "key": "Video standard",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Swap Joystick",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    1,
+    1
+   ],
+   "core_flags": [],
+   "key": "Swap Joystick",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Pause When OSD is Open",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    23,
+    23
+   ],
+   "core_flags": [],
+   "key": "Pause When OSD is Open",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "Intellivision_20261001.rbf",
+  "rbf_md5": "ce982c93c88a8868fef59453659ae02c",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:04:58",
+  "confstr_sha1": "8e7b06175d9798802314c0a896df53617ad42868"
+ }
+}

@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/Lynx48_20250907.rbf",
+ "rbf_md5": "3d5cd90d1efad46765767449a95a78fa",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "Lynx48;;-;F[1],TAP,Load Cassette;-;O[5],Aspect ratio,4:3,16:9;O[2:1],Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%;-;O[4:3],Machine,Lynx 48K,Lynx 96k,96k Scorpion,Lynx 128k;O[6],BASIC Autostart,On,Off;-;OD,Joysticks Swap,No,Yes;-;T[0],Reset;R[0],Reset and close OSD;J,Button;jn,A;V,v250907",
+ "dumped": "2026-11-13T23:11:40"
+}

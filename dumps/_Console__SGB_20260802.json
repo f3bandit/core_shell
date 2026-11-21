@@ -1,0 +1,7 @@
+{
+ "rbf": "_Console/SGB_20260802.rbf",
+ "rbf_md5": "acc50a4bc7efa111dc90d16bec2560d7",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "SGB;SS3F800000:100000;FS1,GBCGB ;OPR,GB Mapper,Auto,WisdomTree,Mani161,MBC1,MBC3;-;O[50],Save state to SD,Off,On;O[52:51],Savestate Slot,1,2,3,4;d6RU,Save state (Alt-F1);d6RV,Load state (F1);-;FC4,SFC,Load SGB BIOS;O[29:28],SGB Speed,SGB1,SGB2,SNES;OE,Video Region,NTSC,PAL;-;C,Cheats;H2OO,Cheats Enabled,Yes,No;-;D0RC,Load Backup RAM;D0RD,Save Backup RAM;D0ON,Autosave,Off,On;D0-;P1,Audio & Video;P1-;P1O[44],GB Extra sprites,No,Yes;P1-;P1o02,Aspect ratio,Original,Original GB,Full Screen,[ARC1],[ARC2];P1O9B,Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%,CRT 75%;P1-;d5P1o7,Vertical Crop,Disabled,216p(5x);d5P1o36,Crop Offset,0,2,4,8,10,12,-12,-10,-8,-6,-4,-2;P1o89,Scale,Normal,V-Integer,Narrower HV-Integer,Wider HV-Integer;P1oA,Force 256px,Off,On;P1-;P1O[43],GB Audio mode,Accurate,No Pops;P1OJK,Stereo Mix,None,25%,50%,100%;P2,Hardware;P2-;P2FC5,BIN,Load SGB Boot;P2-;P2OH,Multitap,Disabled,Port2;P2O34,Serial,OFF,SNAC SNES,SNAC GB;P2-;-;O56,Mouse,None,Port1,Port2;O7,Swap Joysticks,No,Yes;-;R0,Reset;J1,A,B,X,Y,L,R,Select,Start,SaveState;I,Slot=DPAD|Save/Load=Pause+DPAD,Active Slot 1,Active Slot 2,Active Slot 3,Active Slot 4,Save to state 1,Restore state 1,Save to state 2,Restore state 2,Save to state 3,Restore state 3,Save to state 4,Restore state 4,V,v260802",
+ "dumped": "2026-11-13T23:21:28"
+}

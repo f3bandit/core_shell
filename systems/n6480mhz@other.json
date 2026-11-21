@@ -1,0 +1,1119 @@
+{
+ "coreshell_profile": 1,
+ "system": "n6480mhz",
+ "variant": "other",
+ "name": "N64",
+ "rbf": "_Other/N64_80MHz",
+ "setname": null,
+ "core_name": "N64",
+ "config_file": "N64.CFG",
+ "games_dir": "games/N64",
+ "saves_dir": "saves/N64",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "N64",
+   "z64",
+   "n64",
+   "v64"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "N64",
+    "z64",
+    "n64",
+    "v64"
+   ],
+   "label": "Load"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "N64",
+    "z64",
+    "n64",
+    "v64"
+   ],
+   "label": "Load",
+   "page": 0,
+   "flags": [],
+   "remember_dir": true
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "GBC",
+    "GB"
+   ],
+   "label": "Load GB-Transfer",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Reload Backup RAM",
+   "bits": [
+    40,
+    40
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Save Backup RAM",
+   "bits": [
+    41,
+    41
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": true,
+ "menu": [
+  {
+   "page": "",
+   "name": "Cheats Enabled",
+   "values": [
+    "Yes",
+    "No"
+   ],
+   "default": "Yes",
+   "bits": [
+    103,
+    103
+   ],
+   "core_flags": [],
+   "key": "Cheats Enabled",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Autosave",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    42,
+    42
+   ],
+   "core_flags": [],
+   "key": "Autosave",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Pad 1 Type",
+   "values": [
+    "N64Pad",
+    "None",
+    "ControllerPak",
+    "RumblePak",
+    "SNAC",
+    "TransferPak"
+   ],
+   "default": "N64Pad",
+   "bits": [
+    49,
+    51
+   ],
+   "core_flags": [],
+   "key": "Pad 1 Type",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Pad 2 Type",
+   "values": [
+    "N64Pad",
+    "None",
+    "ControllerPak",
+    "RumblePak",
+    "SNAC"
+   ],
+   "default": "N64Pad",
+   "bits": [
+    52,
+    54
+   ],
+   "core_flags": [],
+   "key": "Pad 2 Type",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Pad 3 Type",
+   "values": [
+    "N64Pad",
+    "None",
+    "ControllerPak",
+    "RumblePak",
+    "SNAC"
+   ],
+   "default": "N64Pad",
+   "bits": [
+    55,
+    57
+   ],
+   "core_flags": [],
+   "key": "Pad 3 Type",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Pad 4 Type",
+   "values": [
+    "N64Pad",
+    "None",
+    "ControllerPak",
+    "RumblePak",
+    "SNAC"
+   ],
+   "default": "N64Pad",
+   "bits": [
+    58,
+    60
+   ],
+   "core_flags": [],
+   "key": "Pad 4 Type",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Swap Analog<->DPAD",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    92,
+    92
+   ],
+   "core_flags": [],
+   "key": "Swap Analog<->DPAD",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Mouse for P1",
+   "values": [
+    "Off",
+    "Buttons ABZ",
+    "Buttons ZAB",
+    "Buttons ZBA"
+   ],
+   "default": "Off",
+   "bits": [
+    84,
+    86
+   ],
+   "core_flags": [],
+   "key": "Mouse for P1",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Dual Controller",
+   "values": [
+    "Off",
+    "P1->P2",
+    "P1->P3"
+   ],
+   "default": "Off",
+   "bits": [
+    61,
+    62
+   ],
+   "core_flags": [],
+   "key": "Dual Controller",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Analog Stick Swap",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    63,
+    63
+   ],
+   "core_flags": [],
+   "key": "Analog Stick Swap",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video & Audio",
+   "name": "Stereo Mix",
+   "values": [
+    "None",
+    "25%",
+    "50%",
+    "100%"
+   ],
+   "default": "None",
+   "bits": [
+    7,
+    8
+   ],
+   "core_flags": [],
+   "key": "Video & Audio/Stereo Mix",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video & Audio",
+   "name": "Fixed Video Blanks",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    82,
+    82
+   ],
+   "core_flags": [],
+   "key": "Video & Audio/Fixed Video Blanks",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video & Audio",
+   "name": "Crop Vertical",
+   "values": [
+    "None",
+    "8",
+    "12"
+   ],
+   "default": "None",
+   "bits": [
+    44,
+    45
+   ],
+   "core_flags": [
+    "D0"
+   ],
+   "key": "Video & Audio/Crop Vertical",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video & Audio",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    47,
+    48
+   ],
+   "core_flags": [],
+   "key": "Video & Audio/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video & Audio",
+   "name": "Video Out",
+   "values": [
+    "Original(VI)",
+    "Clean HDMI"
+   ],
+   "default": "Original(VI)",
+   "bits": [
+    105,
+    105
+   ],
+   "core_flags": [],
+   "key": "Video & Audio/Video Out",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video & Audio",
+   "name": "VI Colorbits",
+   "values": [
+    "Original(21)",
+    "24"
+   ],
+   "default": "Original(21)",
+   "bits": [
+    104,
+    104
+   ],
+   "core_flags": [
+    "D1"
+   ],
+   "key": "Video & Audio/VI Colorbits",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video & Audio",
+   "name": "VI Bilinear",
+   "values": [
+    "Original",
+    "Off"
+   ],
+   "default": "Original",
+   "bits": [
+    32,
+    32
+   ],
+   "core_flags": [
+    "D1"
+   ],
+   "key": "Video & Audio/VI Bilinear",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video & Audio",
+   "name": "VI Deblur",
+   "values": [
+    "Original",
+    "On"
+   ],
+   "default": "Original",
+   "bits": [
+    89,
+    89
+   ],
+   "core_flags": [
+    "D1"
+   ],
+   "key": "Video & Audio/VI Deblur",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video & Audio",
+   "name": "VI Gamma",
+   "values": [
+    "Original",
+    "Off"
+   ],
+   "default": "Original",
+   "bits": [
+    33,
+    33
+   ],
+   "core_flags": [
+    "D1"
+   ],
+   "key": "Video & Audio/VI Gamma",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video & Audio",
+   "name": "VI Dedither",
+   "values": [
+    "Original",
+    "Off",
+    "Force"
+   ],
+   "default": "Original",
+   "bits": [
+    87,
+    88
+   ],
+   "core_flags": [
+    "D1"
+   ],
+   "key": "Video & Audio/VI Dedither",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video & Audio",
+   "name": "VI Antialias",
+   "values": [
+    "Original",
+    "Off"
+   ],
+   "default": "Original",
+   "bits": [
+    35,
+    35
+   ],
+   "core_flags": [
+    "D1"
+   ],
+   "key": "Video & Audio/VI Antialias",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video & Audio",
+   "name": "VI Divot",
+   "values": [
+    "Original",
+    "Off"
+   ],
+   "default": "Original",
+   "bits": [
+    36,
+    36
+   ],
+   "core_flags": [
+    "D1"
+   ],
+   "key": "Video & Audio/VI Divot",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video & Audio",
+   "name": "VI Noisedither",
+   "values": [
+    "Original",
+    "Off"
+   ],
+   "default": "Original",
+   "bits": [
+    37,
+    37
+   ],
+   "core_flags": [
+    "D1"
+   ],
+   "key": "Video & Audio/VI Noisedither",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video & Audio",
+   "name": "Texture Filter",
+   "values": [
+    "Original",
+    "Off"
+   ],
+   "default": "Original",
+   "bits": [
+    30,
+    30
+   ],
+   "core_flags": [],
+   "key": "Video & Audio/Texture Filter",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video & Audio",
+   "name": "Dithering",
+   "values": [
+    "Original",
+    "Off"
+   ],
+   "default": "Original",
+   "bits": [
+    31,
+    31
+   ],
+   "core_flags": [],
+   "key": "Video & Audio/Dithering",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video & Audio",
+   "name": "LOD Textures",
+   "values": [
+    "Original",
+    "Off"
+   ],
+   "default": "Original",
+   "bits": [
+    34,
+    34
+   ],
+   "core_flags": [],
+   "key": "Video & Audio/LOD Textures",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video & Audio",
+   "name": "Error Overlay",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    2,
+    2
+   ],
+   "core_flags": [],
+   "key": "Video & Audio/Error Overlay",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video & Audio",
+   "name": "FPS Overlay",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    28,
+    28
+   ],
+   "core_flags": [],
+   "key": "Video & Audio/FPS Overlay",
+   "mgl_ok": true
+  },
+  {
+   "page": "System settings",
+   "name": "Auto Detect",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    64,
+    64
+   ],
+   "core_flags": [],
+   "key": "System settings/Auto Detect",
+   "mgl_ok": true
+  },
+  {
+   "page": "System settings",
+   "name": "Patch games",
+   "values": [
+    "Yes(Auto)",
+    "Off"
+   ],
+   "default": "Yes(Auto)",
+   "bits": [
+    90,
+    90
+   ],
+   "core_flags": [],
+   "key": "System settings/Patch games",
+   "mgl_ok": true
+  },
+  {
+   "page": "System settings",
+   "name": "RAM size",
+   "values": [
+    "8MByte",
+    "4MByte"
+   ],
+   "default": "8MByte",
+   "bits": [
+    70,
+    70
+   ],
+   "core_flags": [],
+   "key": "System settings/RAM size",
+   "mgl_ok": true
+  },
+  {
+   "page": "System settings",
+   "name": "System Type",
+   "values": [
+    "NTSC",
+    "PAL"
+   ],
+   "default": "NTSC",
+   "bits": [
+    79,
+    80
+   ],
+   "core_flags": [],
+   "key": "System settings/System Type",
+   "mgl_ok": true
+  },
+  {
+   "page": "System settings",
+   "name": "CIC",
+   "values": [
+    "6101",
+    "6102",
+    "7101",
+    "7102",
+    "6103",
+    "7103",
+    "6105",
+    "7105",
+    "6106",
+    "7106",
+    "8303",
+    "8401",
+    "5167",
+    "DDUS",
+    "5101"
+   ],
+   "default": "6101",
+   "bits": [
+    65,
+    68
+   ],
+   "core_flags": [],
+   "key": "System settings/CIC",
+   "mgl_ok": true
+  },
+  {
+   "page": "System settings",
+   "name": "Auto Setup Pak Type",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    81,
+    81
+   ],
+   "core_flags": [],
+   "key": "System settings/Auto Setup Pak Type",
+   "mgl_ok": true
+  },
+  {
+   "page": "System settings",
+   "name": "ControllerPak",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    71,
+    71
+   ],
+   "core_flags": [],
+   "key": "System settings/ControllerPak",
+   "mgl_ok": true
+  },
+  {
+   "page": "System settings",
+   "name": "RumblePak",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    72,
+    72
+   ],
+   "core_flags": [],
+   "key": "System settings/RumblePak",
+   "mgl_ok": true
+  },
+  {
+   "page": "System settings",
+   "name": "TransferPak",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    73,
+    73
+   ],
+   "core_flags": [],
+   "key": "System settings/TransferPak",
+   "mgl_ok": true
+  },
+  {
+   "page": "System settings",
+   "name": "RTC",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    74,
+    74
+   ],
+   "core_flags": [],
+   "key": "System settings/RTC",
+   "mgl_ok": true
+  },
+  {
+   "page": "System settings",
+   "name": "Save Type",
+   "values": [
+    "None",
+    "EEPROM4",
+    "EEPROM16",
+    "SRAM32",
+    "SRAM96",
+    "Flash"
+   ],
+   "default": "None",
+   "bits": [
+    75,
+    77
+   ],
+   "core_flags": [],
+   "key": "System settings/Save Type",
+   "mgl_ok": true
+  },
+  {
+   "page": "Debug settings",
+   "name": "Fast RAM access",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    83,
+    83
+   ],
+   "core_flags": [],
+   "key": "Debug settings/Fast RAM access",
+   "mgl_ok": true
+  },
+  {
+   "page": "Debug settings",
+   "name": "Fast ROM access",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    106,
+    106
+   ],
+   "core_flags": [],
+   "key": "Debug settings/Fast ROM access",
+   "mgl_ok": true
+  },
+  {
+   "page": "Debug settings",
+   "name": "Instr Cache",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    93,
+    93
+   ],
+   "core_flags": [],
+   "key": "Debug settings/Instr Cache",
+   "mgl_ok": true
+  },
+  {
+   "page": "Debug settings",
+   "name": "Data Cache",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    43,
+    43
+   ],
+   "core_flags": [],
+   "key": "Debug settings/Data Cache",
+   "mgl_ok": true
+  },
+  {
+   "page": "Debug settings",
+   "name": "Data Cache from TLB",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    100,
+    100
+   ],
+   "core_flags": [],
+   "key": "Debug settings/Data Cache from TLB",
+   "mgl_ok": true
+  },
+  {
+   "page": "Debug settings",
+   "name": "Data FORCE WB",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    29,
+    29
+   ],
+   "core_flags": [],
+   "key": "Debug settings/Data FORCE WB",
+   "mgl_ok": true
+  },
+  {
+   "page": "Debug settings",
+   "name": "DTLB Mini Cache",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    99,
+    99
+   ],
+   "core_flags": [],
+   "key": "Debug settings/DTLB Mini Cache",
+   "mgl_ok": true
+  },
+  {
+   "page": "Debug settings",
+   "name": "Cache Delay",
+   "values": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15"
+   ],
+   "default": "0",
+   "bits": [
+    24,
+    27
+   ],
+   "core_flags": [],
+   "key": "Debug settings/Cache Delay",
+   "mgl_ok": true
+  },
+  {
+   "page": "Debug settings",
+   "name": "DDR3 Delay",
+   "values": [
+    "0",
+    "16",
+    "24",
+    "32",
+    "40",
+    "48",
+    "56",
+    "64",
+    "72",
+    "80",
+    "88",
+    "96",
+    "104",
+    "112"
+   ],
+   "default": "0",
+   "bits": [
+    20,
+    23
+   ],
+   "core_flags": [],
+   "key": "Debug settings/DDR3 Delay",
+   "mgl_ok": true
+  },
+  {
+   "page": "Debug settings",
+   "name": "RDRAM Calib Waittime",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    98,
+    98
+   ],
+   "core_flags": [],
+   "key": "Debug settings/RDRAM Calib Waittime",
+   "mgl_ok": true
+  },
+  {
+   "page": "Debug settings",
+   "name": "Write Bit 9",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    11,
+    11
+   ],
+   "core_flags": [],
+   "key": "Debug settings/Write Bit 9",
+   "mgl_ok": true
+  },
+  {
+   "page": "Debug settings",
+   "name": "Read Bit 9",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    12,
+    12
+   ],
+   "core_flags": [],
+   "key": "Debug settings/Read Bit 9",
+   "mgl_ok": true
+  },
+  {
+   "page": "Debug settings",
+   "name": "Wait Bit 9",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    13,
+    13
+   ],
+   "core_flags": [],
+   "key": "Debug settings/Wait Bit 9",
+   "mgl_ok": true
+  },
+  {
+   "page": "Debug settings",
+   "name": "Write Z",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    14,
+    14
+   ],
+   "core_flags": [],
+   "key": "Debug settings/Write Z",
+   "mgl_ok": true
+  },
+  {
+   "page": "Debug settings",
+   "name": "Read Z",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    15,
+    15
+   ],
+   "core_flags": [],
+   "key": "Debug settings/Read Z",
+   "mgl_ok": true
+  },
+  {
+   "page": "Debug settings",
+   "name": "Swap Interlaced",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    1,
+    1
+   ],
+   "core_flags": [],
+   "key": "Debug settings/Swap Interlaced",
+   "mgl_ok": true
+  },
+  {
+   "page": "Debug settings",
+   "name": "AI processing",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    101,
+    101
+   ],
+   "core_flags": [],
+   "key": "Debug settings/AI processing",
+   "mgl_ok": true
+  },
+  {
+   "page": "Debug settings",
+   "name": "AI IRQ",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    102,
+    102
+   ],
+   "core_flags": [],
+   "key": "Debug settings/AI IRQ",
+   "mgl_ok": true
+  },
+  {
+   "page": "Debug settings",
+   "name": "SNAC Compare",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    91,
+    91
+   ],
+   "core_flags": [],
+   "key": "Debug settings/SNAC Compare",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "N64_80MHz_20250811.rbf",
+  "rbf_md5": "44d9b9eada4a6189abad03e435c7e4af",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:15:53",
+  "confstr_sha1": "4193fa8f6bed9127c050613f1170d414ba181919"
+ }
+}

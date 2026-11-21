@@ -1,0 +1,606 @@
+{
+ "coreshell_profile": 1,
+ "system": "jaguar",
+ "variant": "stock",
+ "name": "Jaguar",
+ "rbf": "_Console/Jaguar",
+ "setname": null,
+ "core_name": "Jaguar",
+ "config_file": "Jaguar.CFG",
+ "games_dir": "games/Jaguar",
+ "saves_dir": "saves/Jaguar",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "JAG",
+   "J64",
+   "ROM",
+   "BIN"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "JAG",
+    "J64",
+    "ROM",
+    "BIN"
+   ],
+   "label": ""
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "CDI"
+   ],
+   "label": "Stream CD"
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "JMC"
+   ],
+   "label": "MemoryTrack Save"
+  },
+  {
+   "index": 3,
+   "type": "s",
+   "exts": [
+    "JCE"
+   ],
+   "label": "CD EEPROM Save"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "JAG",
+    "J64",
+    "ROM",
+    "BIN"
+   ],
+   "label": "",
+   "page": 0,
+   "flags": [],
+   "remember_dir": true
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "JAG",
+    "J64",
+    "ROM",
+    "BIN"
+   ],
+   "label": "Assign Jaguar BIOS",
+   "page": 3,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 3,
+   "type": "f",
+   "exts": [
+    "JAG",
+    "J64",
+    "ROM",
+    "BIN"
+   ],
+   "label": "Assign CD BIOS",
+   "page": 3,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 4,
+   "type": "f",
+   "exts": [
+    "JAG",
+    "J64",
+    "ROM",
+    "BIN"
+   ],
+   "label": "Assign MemoryTrack BIOS",
+   "page": 3,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "CDI"
+   ],
+   "label": "Stream CD",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "JMC"
+   ],
+   "label": "MemoryTrack Save",
+   "page": 0,
+   "flags": [
+    "H2"
+   ]
+  },
+  {
+   "index": 3,
+   "type": "s",
+   "exts": [
+    "JCE"
+   ],
+   "label": "CD EEPROM Save",
+   "page": 3,
+   "flags": []
+  }
+ ],
+ "triggers": [
+  {
+   "name": "P1+P2 Pause",
+   "bits": [
+    22,
+    22
+   ],
+   "kind": "reset",
+   "page": 2,
+   "flags": [
+    "d4"
+   ]
+  },
+  {
+   "name": "Load Backup RAM",
+   "bits": [
+    12,
+    12
+   ],
+   "kind": "reset",
+   "page": 4,
+   "flags": [
+    "D0"
+   ]
+  },
+  {
+   "name": "Save Backup RAM",
+   "bits": [
+    11,
+    11
+   ],
+   "kind": "reset",
+   "page": 4,
+   "flags": [
+    "D0"
+   ]
+  },
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": true,
+ "menu": [
+  {
+   "page": "",
+   "name": "Cheats Enabled",
+   "values": [
+    "Yes",
+    "No"
+   ],
+   "default": "Yes",
+   "bits": [
+    23,
+    23
+   ],
+   "core_flags": [
+    "H1"
+   ],
+   "key": "Cheats Enabled",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Region Setting",
+   "values": [
+    "NTSC",
+    "PAL"
+   ],
+   "default": "NTSC",
+   "bits": [
+    4,
+    4
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Region Setting",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    7,
+    8
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    95,
+    97
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Vertical Crop",
+   "values": [
+    "Disabled",
+    "216p(5x)"
+   ],
+   "default": "Disabled",
+   "bits": [
+    88,
+    88
+   ],
+   "core_flags": [
+    "d3"
+   ],
+   "key": "Audio & Video/Vertical Crop",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Crop Offset",
+   "values": [
+    "0",
+    "2",
+    "4",
+    "6",
+    "8",
+    "10",
+    "-12",
+    "-10",
+    "-8",
+    "-6",
+    "-4",
+    "-2"
+   ],
+   "default": "0",
+   "bits": [
+    89,
+    92
+   ],
+   "core_flags": [
+    "d3"
+   ],
+   "key": "Audio & Video/Crop Offset",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    93,
+    94
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Visual Area",
+   "values": [
+    "Active",
+    "Original"
+   ],
+   "default": "Active",
+   "bits": [
+    87,
+    87
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Visual Area",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input Options",
+   "name": "Numstick",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    85,
+    85
+   ],
+   "core_flags": [],
+   "key": "Input Options/Numstick",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input Options",
+   "name": "Keyboard As P1",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    83,
+    83
+   ],
+   "core_flags": [],
+   "key": "Input Options/Keyboard As P1",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input Options",
+   "name": "Swap P1/P2",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    86,
+    86
+   ],
+   "core_flags": [],
+   "key": "Input Options/Swap P1/P2",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input Options",
+   "name": "Spinner Speed",
+   "values": [
+    "Normal",
+    "Faster",
+    "Slow",
+    "Slower"
+   ],
+   "default": "Normal",
+   "bits": [
+    20,
+    21
+   ],
+   "core_flags": [],
+   "key": "Input Options/Spinner Speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input Options",
+   "name": "Team Tap",
+   "values": [
+    "Disabled",
+    "JoyPort1",
+    "JoyPort2"
+   ],
+   "default": "Disabled",
+   "bits": [
+    32,
+    33
+   ],
+   "core_flags": [],
+   "key": "Input Options/Team Tap",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input Options",
+   "name": "Mouse",
+   "values": [
+    "Disabled",
+    "JoyPort1",
+    "JoyPort2"
+   ],
+   "default": "Disabled",
+   "bits": [
+    5,
+    6
+   ],
+   "core_flags": [],
+   "key": "Input Options/Mouse",
+   "mgl_ok": true
+  },
+  {
+   "page": "Advanced Options",
+   "name": "Autosave",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    13,
+    13
+   ],
+   "core_flags": [
+    "D0"
+   ],
+   "key": "Advanced Options/Autosave",
+   "mgl_ok": true
+  },
+  {
+   "page": "Advanced Options",
+   "name": "Homebrew Support",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    30,
+    30
+   ],
+   "core_flags": [],
+   "key": "Advanced Options/Homebrew Support",
+   "mgl_ok": true
+  },
+  {
+   "page": "Advanced Options",
+   "name": "Force CD Enabled",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    52,
+    52
+   ],
+   "core_flags": [],
+   "key": "Advanced Options/Force CD Enabled",
+   "mgl_ok": true
+  },
+  {
+   "page": "Advanced Options",
+   "name": "Force MemoryTrack",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    56,
+    56
+   ],
+   "core_flags": [
+    "H2"
+   ],
+   "key": "Advanced Options/Force MemoryTrack",
+   "mgl_ok": true
+  },
+  {
+   "page": "Advanced Options",
+   "name": "Force Music CD",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    55,
+    55
+   ],
+   "core_flags": [],
+   "key": "Advanced Options/Force Music CD",
+   "mgl_ok": true
+  },
+  {
+   "page": "Advanced Options",
+   "name": "CD Timing",
+   "values": [
+    "Accurate",
+    "Fast"
+   ],
+   "default": "Accurate",
+   "bits": [
+    82,
+    82
+   ],
+   "core_flags": [],
+   "key": "Advanced Options/CD Timing",
+   "mgl_ok": true
+  },
+  {
+   "page": "Advanced Options",
+   "name": "FastRAM1",
+   "values": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7"
+   ],
+   "default": "0",
+   "bits": [
+    34,
+    36
+   ],
+   "core_flags": [],
+   "key": "Advanced Options/FastRAM1",
+   "mgl_ok": true
+  },
+  {
+   "page": "Advanced Options",
+   "name": "FastRAM2",
+   "values": [
+    "7",
+    "6",
+    "5",
+    "4",
+    "3",
+    "2",
+    "1",
+    "0"
+   ],
+   "default": "7",
+   "bits": [
+    37,
+    39
+   ],
+   "core_flags": [],
+   "key": "Advanced Options/FastRAM2",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "Jaguar_20260811.rbf",
+  "rbf_md5": "aa72b98e8bd3f69ddf4809fd3c3b7fdb",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:05:01",
+  "confstr_sha1": "497f63bfb0700c52158e2e3e30407fe603e9bde9"
+ }
+}

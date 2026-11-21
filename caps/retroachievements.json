@@ -1,0 +1,13 @@
+{
+ "name": "RetroAchievements cores",
+ "kind": "addon",
+ "by": "odelot (Main_MiSTer RA, RA cores)",
+ "any": [
+  {
+   "path": "MiSTer_RA"
+  },
+  {
+   "path": "_RA_Cores"
+  }
+ ]
+}

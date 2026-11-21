@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/Galaksija_20251007.rbf",
+ "rbf_md5": "8720bb6c61eba1ac34a08c1e7d6e000b",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "Galaksija;;-;F,TAP;-;O23,Screen Color,White,Green,Amber,Cyan;O1,Aspect Ratio,16:9,4:3;R5,Break;R9,Reset;-;T4,Type OLD before loading!;V,v0.1.251007",
+ "dumped": "2026-11-13T23:11:20"
+}

@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/Casio_PV-2000_20250622.rbf",
+ "rbf_md5": "8f0ebe64d7418b98800359de19ad6196",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "Casio_PV-2000;;-;F1,BINROM,Load Cartridge;-;P2,Video Settings;P2O[2],Aspect ratio,Original,Full Screen;P2O[3],Show Border,No,Yes;P2O[5:4],Scale,Normal,V-Integer,Narrower HV-Integer,Wider HV-Integer;-;R[6],Eject Cartridge and Reset;R[0],Reset;J,Attack 0,Attack 1,Select,Start;V,v250622",
+ "dumped": "2026-11-13T23:10:53"
+}

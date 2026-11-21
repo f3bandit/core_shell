@@ -1,0 +1,7 @@
+{
+ "rbf": "_Other/Chip8_20250905.rbf",
+ "rbf_md5": "fda536d4de337fa224a1f0b2eb74147e",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "Chip8;;-;F,CH8;-;O4,Aspect ratio,4:3,16:9;O8A,Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%,CRT 75%;-;O2,CPU Speed,Fast,Slow;-;R0,Reset;V,v250905",
+ "dumped": "2026-11-13T23:14:41"
+}

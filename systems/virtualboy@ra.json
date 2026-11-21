@@ -1,0 +1,504 @@
+{
+ "coreshell_profile": 1,
+ "system": "virtualboy",
+ "variant": "ra",
+ "name": "VirtualBoy",
+ "rbf": "_RA_Cores/Cores/VirtualBoy",
+ "setname": "RA_VirtualBoy",
+ "core_name": "VirtualBoy",
+ "config_file": "RA_VirtualBoy_v15.CFG",
+ "games_dir": "games/VirtualBoy",
+ "saves_dir": "saves/VirtualBoy",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "VB"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "VB"
+   ],
+   "label": "Load ROM"
+  },
+  {
+   "index": 4,
+   "type": "f",
+   "exts": [
+    "VBT"
+   ],
+   "label": "Load Brightness Table"
+  },
+  {
+   "index": 5,
+   "type": "f",
+   "exts": [
+    "TAS"
+   ],
+   "label": "Load TAS"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "VB"
+   ],
+   "label": "Load ROM",
+   "page": 0,
+   "flags": [],
+   "remember_dir": true
+  },
+  {
+   "index": 3,
+   "type": "f",
+   "exts": [
+    "GBP"
+   ],
+   "label": "Load Palette",
+   "page": 1,
+   "flags": [
+    "H1"
+   ],
+   "remember_dir": false
+  },
+  {
+   "index": 4,
+   "type": "f",
+   "exts": [
+    "VBT"
+   ],
+   "label": "Load Brightness Table",
+   "page": 2,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 5,
+   "type": "f",
+   "exts": [
+    "TAS"
+   ],
+   "label": "Load TAS",
+   "page": 2,
+   "flags": [
+    "H8"
+   ],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Save State(Alt+F1-F4)",
+   "bits": [
+    42,
+    42
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "d7"
+   ]
+  },
+  {
+   "name": "Restore State(F1-F4)",
+   "bits": [
+    43,
+    43
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "H8",
+    "d7"
+   ]
+  },
+  {
+   "name": "Load Backup RAM",
+   "bits": [
+    9,
+    9
+   ],
+   "kind": "reset",
+   "page": 2,
+   "flags": []
+  },
+  {
+   "name": "Save Backup RAM",
+   "bits": [
+    10,
+    10
+   ],
+   "kind": "reset",
+   "page": 2,
+   "flags": []
+  },
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": true,
+ "menu": [
+  {
+   "page": "",
+   "name": "Savestate Slot",
+   "values": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "default": "1",
+   "bits": [
+    45,
+    46
+   ],
+   "core_flags": [],
+   "key": "Savestate Slot",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Color Mode",
+   "values": [
+    "Red",
+    "Multicolor",
+    "Palette",
+    "Anaglyph",
+    "ColorCode",
+    "TriOviz",
+    "Custom"
+   ],
+   "default": "Red",
+   "bits": [
+    3,
+    5
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Color Mode",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Use True Black",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    41,
+    41
+   ],
+   "core_flags": [
+    "H1"
+   ],
+   "key": "Audio & Video/Use True Black",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "L Color",
+   "values": [
+    "Red",
+    "Magenta",
+    "Blue",
+    "Cyan",
+    "Green",
+    "Yellow",
+    "White"
+   ],
+   "default": "Red",
+   "bits": [
+    12,
+    14
+   ],
+   "core_flags": [
+    "H0"
+   ],
+   "key": "Audio & Video/L Color",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "R Color",
+   "values": [
+    "Red",
+    "Magenta",
+    "Blue",
+    "Cyan",
+    "Green",
+    "Yellow",
+    "White"
+   ],
+   "default": "Red",
+   "bits": [
+    17,
+    19
+   ],
+   "core_flags": [
+    "H0"
+   ],
+   "key": "Audio & Video/R Color",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Stereo Scale",
+   "values": [
+    "100%",
+    "75%",
+    "62.5%",
+    "50%",
+    "37.5%",
+    "25%",
+    "12.5%",
+    "0%"
+   ],
+   "default": "100%",
+   "bits": [
+    25,
+    27
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Stereo Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Eye Drawn",
+   "values": [
+    "Left",
+    "Right",
+    "Both",
+    "Side by Side"
+   ],
+   "default": "Left",
+   "bits": [
+    7,
+    8
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Eye Drawn",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Video Timing",
+   "values": [
+    "Native 50 Hz",
+    "Buffered 60 Hz"
+   ],
+   "default": "Native 50 Hz",
+   "bits": [
+    29,
+    29
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Video Timing",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Aspect Ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    1,
+    2
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Aspect Ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Vertical Crop",
+   "values": [
+    "Disabled",
+    "216p(5x)"
+   ],
+   "default": "Disabled",
+   "bits": [
+    31,
+    31
+   ],
+   "core_flags": [
+    "d2"
+   ],
+   "key": "Audio & Video/Vertical Crop",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Crop Offset",
+   "values": [
+    "0",
+    "2",
+    "4",
+    "6",
+    "8",
+    "10",
+    "-12",
+    "-10",
+    "-8",
+    "-6",
+    "-4",
+    "-2"
+   ],
+   "default": "0",
+   "bits": [
+    32,
+    35
+   ],
+   "core_flags": [
+    "d2"
+   ],
+   "key": "Audio & Video/Crop Offset",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    36,
+    37
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Audio Mix",
+   "values": [
+    "None",
+    "25%",
+    "50%",
+    "100%"
+   ],
+   "default": "None",
+   "bits": [
+    38,
+    39
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Audio Mix",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Brightness Map",
+   "values": [
+    "SDR",
+    "HDR HLG"
+   ],
+   "default": "SDR",
+   "bits": [
+    47,
+    47
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Brightness Map",
+   "mgl_ok": true
+  },
+  {
+   "page": "Advanced",
+   "name": "Enable Large SRAM",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    40,
+    40
+   ],
+   "core_flags": [],
+   "key": "Advanced/Enable Large SRAM",
+   "mgl_ok": true
+  },
+  {
+   "page": "Advanced",
+   "name": "Serial Port",
+   "values": [
+    "Rumble",
+    "None"
+   ],
+   "default": "Rumble",
+   "bits": [
+    28,
+    28
+   ],
+   "core_flags": [],
+   "key": "Advanced/Serial Port",
+   "mgl_ok": true
+  },
+  {
+   "page": "Advanced",
+   "name": "Savestates to SD Card",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    44,
+    44
+   ],
+   "core_flags": [],
+   "key": "Advanced/Savestates to SD Card",
+   "mgl_ok": true
+  },
+  {
+   "page": "Advanced",
+   "name": "Autosave",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    11,
+    11
+   ],
+   "core_flags": [],
+   "key": "Advanced/Autosave",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "VirtualBoy.rbf",
+  "rbf_md5": "ec9971f9713ede869510c8b1ad81f9ca",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:19:28",
+  "confstr_sha1": "ba4836804aa590af65abe37cbe55b9c317a6c75d"
+ }
+}

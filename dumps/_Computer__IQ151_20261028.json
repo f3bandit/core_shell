@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/IQ151_20261028.rbf",
+ "rbf_md5": "159a0a9585cfd23561a1d697f61debfa",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "IQ151;;-;O1,RAM,32kB,64kB;OA,Monitor,Std,CPM;-;O2,Video Module,Video32,Video64;O3,Graphics Module,On,Off;-;O45,Language Module,None,Basic G,Basic 6,Amos ASM+PAS+PAS1;-;O6,SD-Rom (Staper) Module,On,Off;O7,RS232 Module,Sestyk (8251),None;-;O9,Floppy Module,Disc2 (8272),None;S1,DSK,Floppy 0 (A):;S0,DSK,Floppy 1 (B):;-;R0,Reset IQ151;V,v261028",
+ "dumped": "2026-11-13T23:11:25"
+}

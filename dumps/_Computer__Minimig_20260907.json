@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/Minimig_20260907.rbf",
+ "rbf_md5": "cc55fa86c11f691f3c15521d8cc38017",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "Minimig;UART115200:230400,MIDI;J,Red(Fire),Blue,Yellow,Green,RT,LT,Pause;jn,A,B,X,Y,R,L,Start;jp,B,A,X,Y,R,L,Start;-;I,MT32-pi: SoundFont #0,MT32-pi: SoundFont #1,MT32-pi: SoundFont #2,MT32-pi: SoundFont #3,MT32-pi: SoundFont #4,MT32-pi: SoundFont #5,MT32-pi: SoundFont #6,MT32-pi: SoundFont #7,MT32-pi: MT-32 v1,MT32-pi: MT-32 v2,MT32-pi: CM-32L,MT32-pi: Unknown mode;V,v260907",
+ "dumped": "2026-11-13T23:12:06"
+}

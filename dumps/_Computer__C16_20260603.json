@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/C16_20260603.rbf",
+ "rbf_md5": "c682b5a7278ee6bbe7927c36a19dca9e",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "C16;;S0,D64G64,Mount #8;S1,D64G64,Mount #9;-;h4F1,PRGTAPBIN,Load;H4F1,PRGTAP,Load;-;h3RG,Tape Play/Pause;h3RI,Tape Unload;h3OH,Tape Sound,Off,On;h3OA,Tape Autoplay,Yes,No;h3-;O5,Joysticks swap,No,Yes;-;OJK,Aspect ratio,Original,Full Screen,[ARC1],[ARC2];O24,Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%,CRT 75%;O78,TV Standard,from Kernal,Force PAL,Force NTSC;H2d1ON,Vertical Crop,No,Yes;h2d1ONO,Vertical Crop,No,270,216;OPQ,Scale,Normal,V-Integer,Narrower HV-Integer,Wider HV-Integer;-;ODE,SID card,Disabled,6581,8580;OB,External IEC,Disabled,Enabled;-;O9,Model,C16,Plus/4;D0O6,Kernal,Loaded,Original;FC3,ROM,Load Kernal;-;R0,Reset & Apply;J,Fire;V,v260603",
+ "dumped": "2026-11-13T23:10:45"
+}

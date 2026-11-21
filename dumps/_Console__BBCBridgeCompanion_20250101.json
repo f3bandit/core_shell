@@ -1,0 +1,7 @@
+{
+ "rbf": "_Console/BBCBridgeCompanion_20250101.rbf",
+ "rbf_md5": "1ebe43ebbc1c8639d40cc6a533787d48",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "BBCBridgeCompanion;;O35,Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%,CRT 75%;O89,Aspect ratio,Original,Full Screen,[ARC1],[ARC2];-;OAD,Cartridge,Empty,Advanced Bidding,Advanced Defence,Bridge Builder,Conventions 1,Club Play 1,Club Play 2,Club Play 3,Duplicate 1,Master Play 1;-;F0,BIN,Load BIOS;F1,BIN,Load custom cartridge;-;R0,Reset;J1,Pass,NT,Dbl,Rdbl,Start,Back,Play/Yes,Play/NoJn,X,Y,A,B,R,L,Z,C;V,v250101",
+ "dumped": "2026-11-13T23:04:09"
+}

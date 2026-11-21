@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/Ondra_SPO186_20251219.rbf",
+ "rbf_md5": "40b5086b40b9dac015c60ea67955d96d",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "Ondra SPO 186;;-;O56,ROM,ViLi,Tesla v5,Ondra PLUS 1.4,Test ROM;-;O7,ADC line pass through,On,Off;O8,Cassette out to audio,On,Off;-;O9,Ondra SD,On,Off;OA,Ondra Melodik,On,Off;-;R0,Reset Ondra;J,Fire 1;V,v251219",
+ "dumped": "2026-11-13T23:12:24"
+}

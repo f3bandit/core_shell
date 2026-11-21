@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/ColecoAdam_20260922.rbf",
+ "rbf_md5": "d06c748cfec60b315e1198c40f69eef2",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "Adam;;-;F,COLBINROM,Load CART;S0,DSK,Load Floppy 1;S1,DSK,Load Floppy 2;S2,DSK,Load Floppy 3;S3,DSK,Load Floppy 4;S4,DDP,Load Tape 1;S5,DDP,Load Tape 2;S6,DDP,Load Tape 3;S7,DDP,Load Tape 4;-;O12,Aspect ratio,Original,Full Screen,[ARC1],[ARC2];O79,Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%;-;O6,Border,No,Yes;OAB,Scale,Normal,V-Integer,Narrower HV-Integer,Wider HV-Integer;-;O3,Joysticks swap,No,Yes;OD,Keypad on numpad,Off,On;OE,Stick keypad,Off,On;OFG,Spinner,Off,Spinner,Stick X,Stick XY;-;OC,Mode,Computer,Console;OHJ,Expansion RAM,64K,256K,512K,1M,2M,None;R0,Reset;J,Fire 1,Fire 2,*,#,0,1,2,3,4,5,6,7,8,9,Purple Tr,Blue Tr;V,v260922",
+ "dumped": "2026-11-13T23:11:04"
+}

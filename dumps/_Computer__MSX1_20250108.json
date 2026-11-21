@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/MSX1_20250108.rbf",
+ "rbf_md5": "0c2def7f3d8da9567b269978cd0d1564",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "MSX1;;-;h2OHK,SLOT A,ROM mapper auto,ROM mapper none,ROM mapper gamemaster2,ROM mapper Konami,ROM mapper KonamiSCC,ROM mapper ASCII8,ROM mapper ASCII16,ROM mapper linear64k,ROM mapper R-TYPE,FDD VY0010;H2OHK,SLOT A,Empty,FDD VY0010,Gamemaster2;h1S0,DSK,Mount Drive A:;H3F2,ROM,SLOT A load;OLO,SLOT B,ROM mapper Auto,ROM mapper none,ROM mapper gamemaster2,ROM mapper Konami,ROM mapper KonamiSCC,ROM mapper ASCII8,ROM mapper ASCII16,ROM mapper linear64k,ROM mapper R-TYPE;F3,ROM,SLOT B load;-;OC,Tape Input,File,ADC;H0F4,CAS,Cas File;H0TD,Tape Rewind;-;P1,Video settings;P1OG,Video mode,PAL,NTSC;P1O12,Aspect ratio,Original,Full Screen,[ARC1],[ARC2];P1O3,Border,No,Yes;P1O79,Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%;P1OAB,Scale,Normal,V-Integer,Narrower HV-Integer,Wider HV-Integer;P2,Advanced settings;P2F1,ROM,Load BIOS;-;T0,Reset;RF,Reset & Detach ROM Cartridge;R0,Reset and close OSD;I,Unkn,NOmpaer,GM2,Konami,KonamiSCC,Ascii8,Ascii16;V,v250108",
+ "dumped": "2026-11-13T23:11:43"
+}

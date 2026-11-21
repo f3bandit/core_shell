@@ -1,0 +1,28 @@
+{
+ "coreshell_profile": 1,
+ "system": "atarist",
+ "variant": "stock",
+ "name": "AtariST",
+ "rbf": "_Computer/AtariST",
+ "setname": null,
+ "core_name": "AtariST",
+ "config_file": "AtariST.CFG",
+ "games_dir": "games/AtariST",
+ "saves_dir": "saves/AtariST",
+ "rom": null,
+ "slots": [],
+ "files": [],
+ "mounts": [],
+ "triggers": [],
+ "cheats": false,
+ "menu": [],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "AtariST_20260603.rbf",
+  "rbf_md5": "e9bf1cf47efd7cbd4769debda60dd421",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:10:30",
+  "confstr_sha1": "5d39c373def2ed142729017434efb0621309153c"
+ }
+}

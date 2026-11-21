@@ -1,0 +1,677 @@
+{
+ "coreshell_profile": 1,
+ "system": "appleii",
+ "variant": "stock",
+ "name": "Apple-II",
+ "rbf": "_Computer/Apple-II",
+ "setname": null,
+ "core_name": "Apple-II",
+ "config_file": "Apple-II.CFG",
+ "games_dir": "games/Apple-II",
+ "saves_dir": "saves/Apple-II",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "BIN"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load 8k Video ROM"
+  },
+  {
+   "index": 3,
+   "type": "f",
+   "exts": [
+    "A2K"
+   ],
+   "label": "Load Joy Map"
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "NIB",
+    "DSK",
+    "DO",
+    "PO",
+    "WOZ"
+   ],
+   "label": "Drive 1"
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "NIB",
+    "DSK",
+    "DO",
+    "PO",
+    "WOZ"
+   ],
+   "label": "Drive 2"
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "HDV"
+   ],
+   "label": ""
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load 8k Video ROM",
+   "page": 1,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "A2P"
+   ],
+   "label": "Custom palette",
+   "page": 2,
+   "flags": [
+    "d0"
+   ],
+   "remember_dir": false
+  },
+  {
+   "index": 3,
+   "type": "f",
+   "exts": [
+    "A2K"
+   ],
+   "label": "Load Joy Map",
+   "page": 4,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "NIB",
+    "DSK",
+    "DO",
+    "PO",
+    "WOZ"
+   ],
+   "label": "Drive 1",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "NIB",
+    "DSK",
+    "DO",
+    "PO",
+    "WOZ"
+   ],
+   "label": "Drive 2",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "HDV"
+   ],
+   "label": "",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Save state (F6)",
+   "bits": [
+    48,
+    48
+   ],
+   "kind": "reset",
+   "page": 5,
+   "flags": []
+  },
+  {
+   "name": "Restore state (F5)",
+   "bits": [
+    49,
+    49
+   ],
+   "kind": "reset",
+   "page": 5,
+   "flags": []
+  },
+  {
+   "name": "Cold Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Write Protect",
+   "values": [
+    "None",
+    "Drive 1",
+    "Drive 2",
+    "Drive 1 & 2"
+   ],
+   "default": "None",
+   "bits": [
+    26,
+    27
+   ],
+   "core_flags": [],
+   "key": "Write Protect",
+   "mgl_ok": true
+  },
+  {
+   "page": "System & BIOS",
+   "name": "CPU",
+   "values": [
+    "65C02",
+    "6502"
+   ],
+   "default": "65C02",
+   "bits": [
+    5,
+    5
+   ],
+   "core_flags": [],
+   "key": "System & BIOS/CPU",
+   "mgl_ok": true
+  },
+  {
+   "page": "System & BIOS",
+   "name": "PAL Mode",
+   "values": [
+    "NTSC",
+    "PAL"
+   ],
+   "default": "NTSC",
+   "bits": [
+    22,
+    22
+   ],
+   "core_flags": [],
+   "key": "System & BIOS/PAL Mode",
+   "mgl_ok": true
+  },
+  {
+   "page": "System & BIOS",
+   "name": "Pause when OSD is open",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    44,
+    44
+   ],
+   "core_flags": [],
+   "key": "System & BIOS/Pause when OSD is open",
+   "mgl_ok": true
+  },
+  {
+   "page": "System & BIOS",
+   "name": "Video Rom",
+   "values": [
+    "US",
+    "LOCAL"
+   ],
+   "default": "US",
+   "bits": [
+    23,
+    23
+   ],
+   "core_flags": [],
+   "key": "System & BIOS/Video Rom",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Stereo mix",
+   "values": [
+    "none",
+    "25%",
+    "50%",
+    "100%"
+   ],
+   "default": "none",
+   "bits": [
+    7,
+    8
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Stereo mix",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Display",
+   "values": [
+    "Color",
+    "B&W",
+    "Green",
+    "Amber"
+   ],
+   "default": "Color",
+   "bits": [
+    19,
+    20
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Display",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Video Mode",
+   "values": [
+    "NTSC //e TV",
+    "NTSC //e RGB",
+    "AppleWin TV",
+    "AppleWin RGB",
+    "IIgs RGB",
+    "Faded Tube TV",
+    "Sharp Muted TV",
+    "Custom RGB"
+   ],
+   "default": "NTSC //e TV",
+   "bits": [
+    52,
+    54
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Video Mode",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Pixel Clock",
+   "values": [
+    "Double",
+    "Normal"
+   ],
+   "default": "Double",
+   "bits": [
+    16,
+    16
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Pixel Clock",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Lo-Res Text",
+   "values": [
+    "Clean",
+    "Composite"
+   ],
+   "default": "Clean",
+   "bits": [
+    21,
+    21
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Lo-Res Text",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "TV Saturation",
+   "values": [
+    "0",
+    "-16",
+    "+16",
+    "+32"
+   ],
+   "default": "0",
+   "bits": [
+    126,
+    127
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/TV Saturation",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "NTSC Vert. Comb Filter",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    32,
+    32
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/NTSC Vert. Comb Filter",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    9,
+    11
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    12,
+    13
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    14,
+    15
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Slot 4",
+   "values": [
+    "Mocking board",
+    "Mouse",
+    "Z80 Softcard",
+    "Empty"
+   ],
+   "default": "Mocking board",
+   "bits": [
+    28,
+    29
+   ],
+   "core_flags": [],
+   "key": "Hardware/Slot 4",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Slot 5",
+   "values": [
+    "Mouse",
+    "Mocking board",
+    "256K Saturn",
+    "Empty"
+   ],
+   "default": "Mouse",
+   "bits": [
+    30,
+    31
+   ],
+   "core_flags": [],
+   "key": "Hardware/Slot 5",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Analog X/Y",
+   "values": [
+    "Normal",
+    "Swapped"
+   ],
+   "default": "Normal",
+   "bits": [
+    6,
+    6
+   ],
+   "core_flags": [],
+   "key": "Hardware/Analog X/Y",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Paddle as analog",
+   "values": [
+    "No",
+    "X",
+    "Y"
+   ],
+   "default": "No",
+   "bits": [
+    17,
+    18
+   ],
+   "core_flags": [],
+   "key": "Hardware/Paddle as analog",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Analog X center",
+   "values": [
+    "0",
+    "-16",
+    "-32",
+    "-48",
+    "-64",
+    "-72",
+    "+32",
+    "+48"
+   ],
+   "default": "0",
+   "bits": [
+    36,
+    38
+   ],
+   "core_flags": [],
+   "key": "Hardware/Analog X center",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Joystick mode",
+   "values": [
+    "Absolute",
+    "Relative"
+   ],
+   "default": "Absolute",
+   "bits": [
+    39,
+    39
+   ],
+   "core_flags": [],
+   "key": "Hardware/Joystick mode",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Disk LED overlay",
+   "values": [
+    "Yes",
+    "No"
+   ],
+   "default": "Yes",
+   "bits": [
+    35,
+    35
+   ],
+   "core_flags": [],
+   "key": "Hardware/Disk LED overlay",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Disk drive sound",
+   "values": [
+    "Off",
+    "On (2x)",
+    "On (4x)"
+   ],
+   "default": "Off",
+   "bits": [
+    33,
+    34
+   ],
+   "core_flags": [],
+   "key": "Hardware/Disk drive sound",
+   "mgl_ok": true
+  },
+  {
+   "page": "Virtual keyboard",
+   "name": "Virtual keyboard",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    42,
+    42
+   ],
+   "core_flags": [],
+   "key": "Virtual keyboard/Virtual keyboard",
+   "mgl_ok": true
+  },
+  {
+   "page": "Virtual keyboard",
+   "name": "Keypad visibility",
+   "values": [
+    "100%",
+    "75%",
+    "50%",
+    "25%"
+   ],
+   "default": "100%",
+   "bits": [
+    40,
+    41
+   ],
+   "core_flags": [],
+   "key": "Virtual keyboard/Keypad visibility",
+   "mgl_ok": true
+  },
+  {
+   "page": "Virtual keyboard",
+   "name": "Joystick to keys",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    43,
+    43
+   ],
+   "core_flags": [],
+   "key": "Virtual keyboard/Joystick to keys",
+   "mgl_ok": true
+  },
+  {
+   "page": "Save States",
+   "name": "Savestates to SDCard",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    45,
+    45
+   ],
+   "core_flags": [
+    "d8"
+   ],
+   "key": "Save States/Savestates to SDCard",
+   "mgl_ok": true
+  },
+  {
+   "page": "Save States",
+   "name": "Savestate Slot",
+   "values": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "default": "1",
+   "bits": [
+    46,
+    47
+   ],
+   "core_flags": [],
+   "key": "Save States/Savestate Slot",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "Apple-II_20261013.rbf",
+  "rbf_md5": "1779afc8fd76a0790c42721df1597019",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:10:09",
+  "confstr_sha1": "2db5101a85d6c415469ff5f2402d3fab26966457"
+ }
+}

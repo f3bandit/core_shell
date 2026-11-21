@@ -1,0 +1,150 @@
+{
+ "coreshell_profile": 1,
+ "system": "edsac",
+ "variant": "stock",
+ "name": "EDSAC",
+ "rbf": "_Computer/EDSAC",
+ "setname": null,
+ "core_name": "EDSAC",
+ "config_file": "EDSAC.CFG",
+ "games_dir": "games/EDSAC",
+ "saves_dir": "saves/EDSAC",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "TAP"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "TAP"
+   ],
+   "label": "Load tape"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "TAP"
+   ],
+   "label": "Load tape",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [],
+ "triggers": [],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Tape Reader Speed",
+   "values": [
+    "Normal",
+    "Fast"
+   ],
+   "default": "Normal",
+   "bits": [
+    16,
+    16
+   ],
+   "core_flags": [],
+   "key": "Tape Reader Speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Initial Orders ver",
+   "values": [
+    "2",
+    "1"
+   ],
+   "default": "2",
+   "bits": [
+    15,
+    15
+   ],
+   "core_flags": [],
+   "key": "Initial Orders ver",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Tank group",
+   "values": [
+    "One",
+    "Two"
+   ],
+   "default": "One",
+   "bits": [
+    14,
+    14
+   ],
+   "core_flags": [],
+   "key": "Tank group",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Memory Tank",
+   "values": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15"
+   ],
+   "default": "0",
+   "bits": [
+    3,
+    6
+   ],
+   "core_flags": [],
+   "key": "Memory Tank",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Aspect Ratio",
+   "values": [
+    "16:9",
+    "4:3"
+   ],
+   "default": "16:9",
+   "bits": [
+    1,
+    1
+   ],
+   "core_flags": [],
+   "key": "Aspect Ratio",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "EDSAC_20250904.rbf",
+  "rbf_md5": "fbd8a941327b16bf93cfca7d0baa4e5c",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:11:11",
+  "confstr_sha1": "508d68da4e12d00bd9fa6f6c32dc9006a3b72c11"
+ }
+}

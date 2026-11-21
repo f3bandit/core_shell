@@ -1,0 +1,66 @@
+{
+ "coreshell_profile": 1,
+ "system": "misterlaggy",
+ "variant": "stock",
+ "name": "MiSTerLaggy",
+ "rbf": "_Utility/MiSTerLaggy",
+ "setname": null,
+ "core_name": "MiSTerLaggy",
+ "config_file": "MiSTerLaggy.CFG",
+ "games_dir": "games/MiSTerLaggy",
+ "saves_dir": "saves/MiSTerLaggy",
+ "rom": {
+  "index": 0,
+  "type": "f",
+  "exts": [
+   "BIN"
+  ]
+ },
+ "slots": [
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load CPU ROM"
+  }
+ ],
+ "files": [
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load CPU ROM",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "MiSTerLaggy_20241113.rbf",
+  "rbf_md5": "c1b13fcdf14c16e6118d6b374952b5b8",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:17:48",
+  "confstr_sha1": "1c80370d07ebe5eea8b2d01729d31ce5f04e013e"
+ }
+}

@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/SonySMC777_20261103.rbf",
+ "rbf_md5": "6650272c5dd3a627c786023e3a80fe1f",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "SonySMC777;;-;S0,D881DDD77,Pri. Drive A;S1,D881DDD77,Drive B;S2,WAV,Tape;F0,ROM,Load ROM;-;P1,Machine;P2,Video;P3,Input;P4,Audio;-;h0-,Changes pending;R[0],Apply and reset;P1O[7],Tape speed,8x,Normal;P1-;P1T[10],Rewind tape;P1T[1],RESET key (warm);P2O[122:121],Aspect ratio,Original,Full Screen,[ARC1],[ARC2];P2O[4:3],Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%;P2O[5],Border,Off,On;P2O[8],Tape overlay,On,Off;P2O[11],Interlace text,SMC-777,SMC-70;P3O[6],Port 2,Joystick,Mouse;P4O[9],Tape audio,Off,On;I,Tape ready (rewound)\nIn System 1.1J BASIC type\nCLOAD \"NAME\" or CLOAD \"\",Tape format not supported,Tape ready (rewound)\nBoot System 1.1J on drive A\nthen in BASIC type CLOAD \"\";J1,Trigger 1,Trigger 2;jn,A,B;V,v261103",
+ "dumped": "2026-11-13T23:13:13"
+}

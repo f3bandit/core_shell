@@ -1,0 +1,296 @@
+{
+ "coreshell_profile": 1,
+ "system": "sunsparcstation",
+ "variant": "stock",
+ "name": "SunSparcStation",
+ "rbf": "_Computer/SunSparcStation20",
+ "setname": null,
+ "core_name": "SunSparcStation",
+ "config_file": "SunSparcStation.CFG",
+ "games_dir": "games/SunSparcStation",
+ "saves_dir": "saves/SunSparcStation",
+ "rom": {
+  "index": 0,
+  "type": "f",
+  "exts": [
+   "ROM"
+  ]
+ },
+ "slots": [
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load ROM"
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "VHD",
+    "IMG",
+    "HDA",
+    "RAW"
+   ],
+   "label": "Pri. disk (ID 3)"
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "VHD",
+    "IMG",
+    "HDA",
+    "RAW"
+   ],
+   "label": "Disk (ID 1)"
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "ISO",
+    "CUE",
+    "CHD"
+   ],
+   "label": "CD-ROM (ID 6)"
+  },
+  {
+   "index": 3,
+   "type": "s",
+   "exts": [
+    "NVR"
+   ],
+   "label": "NVRAM image"
+  }
+ ],
+ "files": [
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load ROM",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "VHD",
+    "IMG",
+    "HDA",
+    "RAW"
+   ],
+   "label": "Pri. disk (ID 3)",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "VHD",
+    "IMG",
+    "HDA",
+    "RAW"
+   ],
+   "label": "Disk (ID 1)",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "ISO",
+    "CUE",
+    "CHD"
+   ],
+   "label": "CD-ROM (ID 6)",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 3,
+   "type": "s",
+   "exts": [
+    "NVR"
+   ],
+   "label": "NVRAM image",
+   "page": 5,
+   "flags": []
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Apply and reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Memory",
+   "values": [
+    "464MB",
+    "256MB",
+    "128MB",
+    "64MB"
+   ],
+   "default": "464MB",
+   "bits": [
+    22,
+    23
+   ],
+   "core_flags": [],
+   "key": "Memory",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Network interface",
+   "values": [
+    "eth0",
+    "None",
+    "eth1",
+    "macvlan",
+    "tap0"
+   ],
+   "default": "eth0",
+   "bits": [
+    24,
+    26
+   ],
+   "core_flags": [],
+   "key": "Network interface",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Display",
+   "values": [
+    "Graphics",
+    "Serial console"
+   ],
+   "default": "Graphics",
+   "bits": [
+    9,
+    9
+   ],
+   "core_flags": [],
+   "key": "Video/Display",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    6,
+    7
+   ],
+   "core_flags": [],
+   "key": "Video/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Scale",
+   "values": [
+    "V-Integer",
+    "Normal",
+    "Narrower HV-Integer",
+    "Wider HV-Integer",
+    "HV-Integer"
+   ],
+   "default": "V-Integer",
+   "bits": [
+    28,
+    30
+   ],
+   "core_flags": [],
+   "key": "Video/Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Keyboard layout",
+   "values": [
+    "US",
+    "French",
+    "German",
+    "Spanish"
+   ],
+   "default": "US",
+   "bits": [
+    12,
+    13
+   ],
+   "core_flags": [],
+   "key": "Input/Keyboard layout",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Swap Alt/Win keys",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    27,
+    27
+   ],
+   "core_flags": [],
+   "key": "Input/Swap Alt/Win keys",
+   "mgl_ok": true
+  },
+  {
+   "page": "Advanced",
+   "name": "Autoboot",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    8,
+    8
+   ],
+   "core_flags": [],
+   "key": "Advanced/Autoboot",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "SunSparcStation20_20261019.rbf",
+  "rbf_md5": "14ea4dfeb521719476382f84aa01fedb",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:13:28",
+  "confstr_sha1": "a9f9ac38fa9c4a9583ec210ead8b7a833451cbe0"
+ }
+}

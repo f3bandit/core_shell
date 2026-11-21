@@ -1,0 +1,7 @@
+{
+ "rbf": "_Other/Tamagotchi_20260515.rbf",
+ "rbf_md5": "31bf2e4f73c834df85c605252dcd522f",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "Tamagotchi;SS3E000000:1000;FS0,binb  ,Load ROM;-;h0O[38:37],Savestate Slot,1,2,3,4;h0RS,Save state (Alt-F1);h0RT,Restore state (F1);-;O[1],Sound,On,Off;-;O[4:2],System Speed,1x,2x,4x,50x,Max;O[5],End Turbo on Event,On,Off;O[6],Skip Evt at Turbo Start,On,Off;-;O[8:7],LCD Type,Sep. Pixels w/BG,Sep. Pixels wo/BG,Solid Pixels;-;T[0],Reset (Will delete Tama);J1,Right Button (Cancel),Bottom Button (Execute),Left Button (Input),Decrease Turbo,Increase Turbo,Savestates;jn,A,B,Y,L,R;I,Slot=DPAD|Save/Load=Start+DPAD,Active Slot 1,Active Slot 2,Active Slot 3,Active Slot 4,Save to state 1,Restore state 1,Save to state 2,Restore state 2,Save to state 3,Restore state 3,Save to state 4,Restore state 4,v,0;V,v260515",
+ "dumped": "2026-11-13T23:17:33"
+}

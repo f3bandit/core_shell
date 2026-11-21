@@ -1,0 +1,312 @@
+{
+ "coreshell_profile": 1,
+ "system": "atarilynx2p",
+ "variant": "stock",
+ "name": "AtariLynx2P",
+ "rbf": "_Console/AtariLynx2P",
+ "setname": null,
+ "core_name": "AtariLynx2P",
+ "config_file": "AtariLynx2P.CFG",
+ "games_dir": "games/AtariLynx2P",
+ "saves_dir": "saves/AtariLynx2P",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "LNX",
+   "LYX"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "LNX",
+    "LYX"
+   ],
+   "label": "Load ROM"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "LNX",
+    "LYX"
+   ],
+   "label": "Load ROM",
+   "page": 0,
+   "flags": [],
+   "remember_dir": true
+  }
+ ],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Lynx instances",
+   "values": [
+    "2",
+    "3",
+    "4"
+   ],
+   "default": "2",
+   "bits": [
+    48,
+    49
+   ],
+   "core_flags": [],
+   "key": "Lynx instances",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "External ComLynx",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    50,
+    50
+   ],
+   "core_flags": [],
+   "key": "External ComLynx",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Pause when OSD is open",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    26,
+    26
+   ],
+   "core_flags": [],
+   "key": "Pause when OSD is open",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "CPU GPU Turbo",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    9,
+    9
+   ],
+   "core_flags": [],
+   "key": "CPU GPU Turbo",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Orientation",
+   "values": [
+    "Horz",
+    "Vert",
+    "Vert180"
+   ],
+   "default": "Horz",
+   "bits": [
+    10,
+    11
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Orientation",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Separator Line",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    6,
+    6
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Separator Line",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "CRT H-Sync Adjust",
+   "values": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "-8",
+    "-7",
+    "-6",
+    "-5",
+    "-4",
+    "-3",
+    "-2",
+    "-1"
+   ],
+   "default": "0",
+   "bits": [
+    16,
+    19
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/CRT H-Sync Adjust",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "CRT V-Sync Adjust",
+   "values": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "-8",
+    "-7",
+    "-6",
+    "-5",
+    "-4",
+    "-3",
+    "-2",
+    "-1"
+   ],
+   "default": "0",
+   "bits": [
+    20,
+    23
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/CRT V-Sync Adjust",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Sync core to 60 Hz",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    24,
+    24
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Sync core to 60 Hz",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Video Timing for YC",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    45,
+    45
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Video Timing for YC",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "FPS Overlay",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    12,
+    12
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/FPS Overlay",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Stereo mix",
+   "values": [
+    "none",
+    "25%",
+    "50%",
+    "100%"
+   ],
+   "default": "none",
+   "bits": [
+    7,
+    8
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Stereo mix",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Audioselect",
+   "values": [
+    "Lynx 1",
+    "Lynx 2",
+    "Mixed",
+    "Split odd/even"
+   ],
+   "default": "Lynx 1",
+   "bits": [
+    46,
+    47
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Audioselect",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "AtariLynx2P_20260713.rbf",
+  "rbf_md5": "cb08b6563c473c77ca2394975fe07c86",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:04:06",
+  "confstr_sha1": "80a80c039354e3bab5252852a561aa8e17aff15b"
+ }
+}

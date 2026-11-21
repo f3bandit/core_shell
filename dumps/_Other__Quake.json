@@ -1,0 +1,7 @@
+{
+ "rbf": "_Other/Quake.rbf",
+ "rbf_md5": "f8d5b7290ba32867b0e4c065c95bd560",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "MiSTer_Quake;O[10],Music,On,Off;O[12:11],FPS Overlay,Off,Simple,Detailed;O[14:13],Scanlines,Off,25%,50%,75%;O[38:37],Scale,Normal,V-Integer,Narrower HV-Integer,Wider HV-Integer;O[42:39],H Size,0,+1,+2,+3,+4,-4,-3,-2,-1;O[50:47],V Size,0,+1,+2,+3,+4,-4,-3,-2,-1;O[29:25],H Position,0,+1,+2,+3,+4,+5,+6,+7,+8,-8,-7,-6,-5,-4,-3,-2,-1;O[46:43],V Position,0,+1,+2,+3,+4,+5,+6,+7,-8,-7,-6,-5,-4,-3,-2,-1;-;T[22],Restart;-;J1,Fire,Jump,Next Weapon,Prev Weapon,Select,Start;jn,A,B,X,Y,Select,Start;V,v",
+ "dumped": "2026-11-13T23:21:33"
+}

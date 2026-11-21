@@ -1,0 +1,496 @@
+{
+ "coreshell_profile": 1,
+ "system": "sgb",
+ "variant": "stock",
+ "name": "SGB",
+ "rbf": "_Console/SGB",
+ "setname": null,
+ "core_name": "SGB",
+ "config_file": "SGB.CFG",
+ "games_dir": "games/SGB",
+ "saves_dir": "saves/SGB",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "GBC",
+   "GB"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "GBC",
+    "GB"
+   ],
+   "label": ""
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "GBC",
+    "GB"
+   ],
+   "label": "",
+   "page": 0,
+   "flags": [],
+   "remember_dir": true
+  },
+  {
+   "index": 4,
+   "type": "f",
+   "exts": [
+    "SFC"
+   ],
+   "label": "Load SGB BIOS",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 5,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load SGB Boot",
+   "page": 2,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Save state (Alt-F1)",
+   "bits": [
+    30,
+    30
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "d6"
+   ]
+  },
+  {
+   "name": "Load state (F1)",
+   "bits": [
+    31,
+    31
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "d6"
+   ]
+  },
+  {
+   "name": "Load Backup RAM",
+   "bits": [
+    12,
+    12
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "D0"
+   ]
+  },
+  {
+   "name": "Save Backup RAM",
+   "bits": [
+    13,
+    13
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "D0"
+   ]
+  },
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": true,
+ "menu": [
+  {
+   "page": "",
+   "name": "GB Mapper",
+   "values": [
+    "Auto",
+    "WisdomTree",
+    "Mani161",
+    "MBC1",
+    "MBC3"
+   ],
+   "default": "Auto",
+   "bits": [
+    25,
+    27
+   ],
+   "core_flags": [],
+   "key": "GB Mapper",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Save state to SD",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    50,
+    50
+   ],
+   "core_flags": [],
+   "key": "Save state to SD",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Savestate Slot",
+   "values": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "default": "1",
+   "bits": [
+    51,
+    52
+   ],
+   "core_flags": [],
+   "key": "Savestate Slot",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "SGB Speed",
+   "values": [
+    "SGB1",
+    "SGB2",
+    "SNES"
+   ],
+   "default": "SGB1",
+   "bits": [
+    28,
+    29
+   ],
+   "core_flags": [],
+   "key": "SGB Speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Video Region",
+   "values": [
+    "NTSC",
+    "PAL"
+   ],
+   "default": "NTSC",
+   "bits": [
+    14,
+    14
+   ],
+   "core_flags": [],
+   "key": "Video Region",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Cheats Enabled",
+   "values": [
+    "Yes",
+    "No"
+   ],
+   "default": "Yes",
+   "bits": [
+    24,
+    24
+   ],
+   "core_flags": [
+    "H2"
+   ],
+   "key": "Cheats Enabled",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Autosave",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    23,
+    23
+   ],
+   "core_flags": [
+    "D0"
+   ],
+   "key": "Autosave",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "GB Extra sprites",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    44,
+    44
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/GB Extra sprites",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Original GB",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    32,
+    34
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    9,
+    11
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Vertical Crop",
+   "values": [
+    "Disabled",
+    "216p(5x)"
+   ],
+   "default": "Disabled",
+   "bits": [
+    39,
+    39
+   ],
+   "core_flags": [
+    "d5"
+   ],
+   "key": "Audio & Video/Vertical Crop",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Crop Offset",
+   "values": [
+    "0",
+    "2",
+    "4",
+    "8",
+    "10",
+    "12",
+    "-12",
+    "-10",
+    "-8",
+    "-6",
+    "-4",
+    "-2"
+   ],
+   "default": "0",
+   "bits": [
+    35,
+    38
+   ],
+   "core_flags": [
+    "d5"
+   ],
+   "key": "Audio & Video/Crop Offset",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    40,
+    41
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Force 256px",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    42,
+    42
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Force 256px",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "GB Audio mode",
+   "values": [
+    "Accurate",
+    "No Pops"
+   ],
+   "default": "Accurate",
+   "bits": [
+    43,
+    43
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/GB Audio mode",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Stereo Mix",
+   "values": [
+    "None",
+    "25%",
+    "50%",
+    "100%"
+   ],
+   "default": "None",
+   "bits": [
+    19,
+    20
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Stereo Mix",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Multitap",
+   "values": [
+    "Disabled",
+    "Port2"
+   ],
+   "default": "Disabled",
+   "bits": [
+    17,
+    17
+   ],
+   "core_flags": [],
+   "key": "Hardware/Multitap",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Serial",
+   "values": [
+    "OFF",
+    "SNAC SNES",
+    "SNAC GB"
+   ],
+   "default": "OFF",
+   "bits": [
+    3,
+    4
+   ],
+   "core_flags": [],
+   "key": "Hardware/Serial",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Mouse",
+   "values": [
+    "None",
+    "Port1",
+    "Port2"
+   ],
+   "default": "None",
+   "bits": [
+    5,
+    6
+   ],
+   "core_flags": [],
+   "key": "Mouse",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Swap Joysticks",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    7,
+    7
+   ],
+   "core_flags": [],
+   "key": "Swap Joysticks",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "SGB_20260802.rbf",
+  "rbf_md5": "acc50a4bc7efa111dc90d16bec2560d7",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:21:28",
+  "confstr_sha1": "abb8b41648f4cadda56d87002786ac910a99d073"
+ }
+}

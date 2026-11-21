@@ -1,0 +1,58 @@
+{
+ "coreshell_profile": 1,
+ "system": "donut",
+ "variant": "other",
+ "name": "Donut",
+ "rbf": "_Other/Donut",
+ "setname": null,
+ "core_name": "Donut",
+ "config_file": "Donut.CFG",
+ "games_dir": "games/Donut",
+ "saves_dir": "saves/Donut",
+ "rom": null,
+ "slots": [],
+ "files": [],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Reset and close OSD",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    121,
+    122
+   ],
+   "core_flags": [],
+   "key": "Aspect ratio",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "Donut_20250217.rbf",
+  "rbf_md5": "46a2c684c3fca527eea8d3f91d23afb3",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:21:31",
+  "confstr_sha1": "d468a44144c63666830f2818f8fa11c8b543fee1"
+ }
+}

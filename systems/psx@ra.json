@@ -1,0 +1,1185 @@
+{
+ "coreshell_profile": 1,
+ "system": "psx",
+ "variant": "ra",
+ "name": "PSX",
+ "rbf": "_RA_Cores/Cores/PSX",
+ "setname": "RA_PSX",
+ "core_name": "PSX",
+ "config_file": "RA_PSX.CFG",
+ "games_dir": "games/PSX",
+ "saves_dir": "saves/PSX",
+ "rom": {
+  "index": 1,
+  "type": "s",
+  "exts": [
+   "CUE",
+   "CHD"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "CUE",
+    "CHD"
+   ],
+   "label": "Load CD"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "EXE"
+   ],
+   "label": "Load Exe",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "CUE",
+    "CHD"
+   ],
+   "label": "Load CD",
+   "page": 0,
+   "flags": [
+    "H7"
+   ]
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "SAV",
+    "MCD"
+   ],
+   "label": "Mount Memory Card 1",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 3,
+   "type": "s",
+   "exts": [
+    "SAV",
+    "MCD"
+   ],
+   "label": "Mount Memory Card 2",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Save Memory Cards",
+   "bits": [
+    13,
+    13
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Save state (Alt-F1)",
+   "bits": [
+    17,
+    17
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Restore state (F1)",
+   "bits": [
+    18,
+    18
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "DB"
+   ]
+  },
+  {
+   "name": "Advance Pause",
+   "bits": [
+    1,
+    1
+   ],
+   "kind": "toggle",
+   "page": 3,
+   "flags": [
+    "h3"
+   ]
+  },
+  {
+   "name": "Sound IRQ Trigger",
+   "bits": [
+    2,
+    2
+   ],
+   "kind": "toggle",
+   "page": 3,
+   "flags": [
+    "h3"
+   ]
+  },
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": true,
+ "menu": [
+  {
+   "page": "",
+   "name": "Cheats Enabled",
+   "values": [
+    "Yes",
+    "No"
+   ],
+   "default": "Yes",
+   "bits": [
+    6,
+    6
+   ],
+   "core_flags": [
+    "h6"
+   ],
+   "key": "Cheats Enabled",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Save to SDCard",
+   "values": [
+    "On Open OSD",
+    "Manual"
+   ],
+   "default": "On Open OSD",
+   "bits": [
+    71,
+    71
+   ],
+   "core_flags": [],
+   "key": "Save to SDCard",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Automount Memory Card 1",
+   "values": [
+    "Yes",
+    "No"
+   ],
+   "default": "Yes",
+   "bits": [
+    63,
+    63
+   ],
+   "core_flags": [],
+   "key": "Automount Memory Card 1",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Savestates to SDCard",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    36,
+    36
+   ],
+   "core_flags": [],
+   "key": "Savestates to SDCard",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Autoincrement Slot",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    68,
+    68
+   ],
+   "core_flags": [],
+   "key": "Autoincrement Slot",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Savestate Slot",
+   "values": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "default": "1",
+   "bits": [
+    37,
+    38
+   ],
+   "core_flags": [],
+   "key": "Savestate Slot",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "System Type",
+   "values": [
+    "Auto",
+    "NTSC-U",
+    "NTSC-J",
+    "PAL"
+   ],
+   "default": "Auto",
+   "bits": [
+    39,
+    40
+   ],
+   "core_flags": [],
+   "key": "System Type",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Pad1",
+   "values": [
+    "Dualshock",
+    "Off",
+    "Digital",
+    "Analog",
+    "GunCon",
+    "NeGcon",
+    "Wheel-NegCon",
+    "Wheel-Analog",
+    "Mouse",
+    "Justifier",
+    "SNAC-port1",
+    "Analog Joystick",
+    "Pop'n"
+   ],
+   "default": "Dualshock",
+   "bits": [
+    45,
+    48
+   ],
+   "core_flags": [
+    "D8"
+   ],
+   "key": "Pad1",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Pad2",
+   "values": [
+    "Dualshock",
+    "Off",
+    "Digital",
+    "Analog",
+    "GunCon",
+    "NeGcon",
+    "Wheel-NegCon",
+    "Wheel-Analog",
+    "Mouse",
+    "Justifier",
+    "SNAC-port2",
+    "Analog Joystick",
+    "Pop'n"
+   ],
+   "default": "Dualshock",
+   "bits": [
+    49,
+    52
+   ],
+   "core_flags": [
+    "D8"
+   ],
+   "key": "Pad2",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "SNAC MemCard",
+   "values": [
+    "Virtual",
+    "Real"
+   ],
+   "default": "Virtual",
+   "bits": [
+    66,
+    66
+   ],
+   "core_flags": [
+    "D8",
+    "h0"
+   ],
+   "key": "SNAC MemCard",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "NeGcon Rumble",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    91,
+    91
+   ],
+   "core_flags": [
+    "D8",
+    "hF"
+   ],
+   "key": "NeGcon Rumble",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Show Crosshair",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    9,
+    9
+   ],
+   "core_flags": [
+    "D8",
+    "h2"
+   ],
+   "key": "Show Crosshair",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "DS Mode",
+   "values": [
+    "L3+R3+Up/Dn | Click",
+    "L1+L2+R1+R2+Up/Dn"
+   ],
+   "default": "L3+R3+Up/Dn | Click",
+   "bits": [
+    31,
+    31
+   ],
+   "core_flags": [
+    "D8",
+    "h4"
+   ],
+   "key": "DS Mode",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Multitap",
+   "values": [
+    "Off",
+    "Port1: 4 x Digital",
+    "Port1: 4 x Analog"
+   ],
+   "default": "Off",
+   "bits": [
+    56,
+    57
+   ],
+   "core_flags": [],
+   "key": "Multitap",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video & Audio",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    32,
+    33
+   ],
+   "core_flags": [],
+   "key": "Video & Audio/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video & Audio",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    34,
+    35
+   ],
+   "core_flags": [],
+   "key": "Video & Audio/Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video & Audio",
+   "name": "Fixed HBlank",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    62,
+    62
+   ],
+   "core_flags": [
+    "DE"
+   ],
+   "key": "Video & Audio/Fixed HBlank",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video & Audio",
+   "name": "Fixed VBlank",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    55,
+    55
+   ],
+   "core_flags": [
+    "DE"
+   ],
+   "key": "Video & Audio/Fixed VBlank",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video & Audio",
+   "name": "Vertical Crop",
+   "values": [
+    "Off",
+    "On(224/270)",
+    "On(216/256)"
+   ],
+   "default": "Off",
+   "bits": [
+    3,
+    4
+   ],
+   "core_flags": [
+    "d5"
+   ],
+   "key": "Video & Audio/Vertical Crop",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video & Audio",
+   "name": "Horizontal Crop",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    67,
+    67
+   ],
+   "core_flags": [],
+   "key": "Video & Audio/Horizontal Crop",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video & Audio",
+   "name": "Black Transitions",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    61,
+    61
+   ],
+   "core_flags": [],
+   "key": "Video & Audio/Black Transitions",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video & Audio",
+   "name": "Deinterlacing",
+   "values": [
+    "Weave",
+    "Bob"
+   ],
+   "default": "Weave",
+   "bits": [
+    41,
+    41
+   ],
+   "core_flags": [],
+   "key": "Video & Audio/Deinterlacing",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video & Audio",
+   "name": "Sync 480i for HDMI",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    60,
+    60
+   ],
+   "core_flags": [],
+   "key": "Video & Audio/Sync 480i for HDMI",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video & Audio",
+   "name": "Rotate",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    24,
+    24
+   ],
+   "core_flags": [],
+   "key": "Video & Audio/Rotate",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video & Audio",
+   "name": "Dithering",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    22,
+    22
+   ],
+   "core_flags": [],
+   "key": "Video & Audio/Dithering",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video & Audio",
+   "name": "Render 24 Bit",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    84,
+    84
+   ],
+   "core_flags": [
+    "DE"
+   ],
+   "key": "Video & Audio/Render 24 Bit",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video & Audio",
+   "name": "Dither 24 Bit for VGA",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    73,
+    73
+   ],
+   "core_flags": [],
+   "key": "Video & Audio/Dither 24 Bit for VGA",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video & Audio",
+   "name": "480i to 480p Hack",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    89,
+    89
+   ],
+   "core_flags": [],
+   "key": "Video & Audio/480i to 480p Hack",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video & Audio",
+   "name": "Widescreen Hack",
+   "values": [
+    "Off",
+    "3:2",
+    "5:3",
+    "16:9"
+   ],
+   "default": "Off",
+   "bits": [
+    53,
+    54
+   ],
+   "core_flags": [],
+   "key": "Video & Audio/Widescreen Hack",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video & Audio",
+   "name": "Texture Filter",
+   "values": [
+    "Off",
+    "All Polygon",
+    "Dithered",
+    "Dith+Shaded"
+   ],
+   "default": "Off",
+   "bits": [
+    81,
+    82
+   ],
+   "core_flags": [],
+   "key": "Video & Audio/Texture Filter",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video & Audio",
+   "name": "Filter Strength",
+   "values": [
+    "25%",
+    "50%",
+    "75%",
+    "100%"
+   ],
+   "default": "25%",
+   "bits": [
+    86,
+    87
+   ],
+   "core_flags": [
+    "hD"
+   ],
+   "key": "Video & Audio/Filter Strength",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video & Audio",
+   "name": "Filter 2D Detect",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    83,
+    83
+   ],
+   "core_flags": [
+    "hD"
+   ],
+   "key": "Video & Audio/Filter 2D Detect",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video & Audio",
+   "name": "SPU RAM select",
+   "values": [
+    "DDR3",
+    "SDRAM2"
+   ],
+   "default": "DDR3",
+   "bits": [
+    44,
+    44
+   ],
+   "core_flags": [
+    "d1"
+   ],
+   "key": "Video & Audio/SPU RAM select",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video & Audio",
+   "name": "Stereo Mix",
+   "values": [
+    "None",
+    "25%",
+    "50%",
+    "100%"
+   ],
+   "default": "None",
+   "bits": [
+    7,
+    8
+   ],
+   "core_flags": [],
+   "key": "Video & Audio/Stereo Mix",
+   "mgl_ok": true
+  },
+  {
+   "page": "Miscellaneous",
+   "name": "Fastboot",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    16,
+    16
+   ],
+   "core_flags": [],
+   "key": "Miscellaneous/Fastboot",
+   "mgl_ok": true
+  },
+  {
+   "page": "Miscellaneous",
+   "name": "CD Lid",
+   "values": [
+    "Closed",
+    "Open"
+   ],
+   "default": "Closed",
+   "bits": [
+    42,
+    42
+   ],
+   "core_flags": [],
+   "key": "Miscellaneous/CD Lid",
+   "mgl_ok": true
+  },
+  {
+   "page": "Miscellaneous",
+   "name": "Pause when OSD open",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    64,
+    64
+   ],
+   "core_flags": [],
+   "key": "Miscellaneous/Pause when OSD open",
+   "mgl_ok": true
+  },
+  {
+   "page": "Miscellaneous",
+   "name": "Turbo(Cheats Off)",
+   "values": [
+    "Off",
+    "Low(U)",
+    "Medium(U)",
+    "High(U)"
+   ],
+   "default": "Off",
+   "bits": [
+    79,
+    80
+   ],
+   "core_flags": [],
+   "key": "Miscellaneous/Turbo(Cheats Off)",
+   "mgl_ok": true
+  },
+  {
+   "page": "Miscellaneous",
+   "name": "Pause when CD slow",
+   "values": [
+    "On",
+    "Off(U)"
+   ],
+   "default": "On",
+   "bits": [
+    72,
+    72
+   ],
+   "core_flags": [],
+   "key": "Miscellaneous/Pause when CD slow",
+   "mgl_ok": true
+  },
+  {
+   "page": "Miscellaneous",
+   "name": "PAL 60Hz Hack",
+   "values": [
+    "Off",
+    "On(U)"
+   ],
+   "default": "Off",
+   "bits": [
+    15,
+    15
+   ],
+   "core_flags": [],
+   "key": "Miscellaneous/PAL 60Hz Hack",
+   "mgl_ok": true
+  },
+  {
+   "page": "Miscellaneous",
+   "name": "CD Fast Seek",
+   "values": [
+    "Off",
+    "On(U)"
+   ],
+   "default": "Off",
+   "bits": [
+    21,
+    21
+   ],
+   "core_flags": [],
+   "key": "Miscellaneous/CD Fast Seek",
+   "mgl_ok": true
+  },
+  {
+   "page": "Miscellaneous",
+   "name": "CD Speed",
+   "values": [
+    "Original",
+    "Forced 1X(U)",
+    "Forced 2X(U)",
+    "Hack 4X(U)",
+    "Hack 6X(U)",
+    "Hack 8X(U)"
+   ],
+   "default": "Original",
+   "bits": [
+    75,
+    77
+   ],
+   "core_flags": [],
+   "key": "Miscellaneous/CD Speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "Miscellaneous",
+   "name": "Limit Max CD Speed",
+   "values": [
+    "Off",
+    "On(U)"
+   ],
+   "default": "Off",
+   "bits": [
+    78,
+    78
+   ],
+   "core_flags": [],
+   "key": "Miscellaneous/Limit Max CD Speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "Miscellaneous",
+   "name": "RAM(Homebrew)",
+   "values": [
+    "2 MByte",
+    "8 MByte(U)"
+   ],
+   "default": "2 MByte",
+   "bits": [
+    85,
+    85
+   ],
+   "core_flags": [],
+   "key": "Miscellaneous/RAM(Homebrew)",
+   "mgl_ok": true
+  },
+  {
+   "page": "Miscellaneous",
+   "name": "GPU Slowdown",
+   "values": [
+    "Off",
+    "On(U)"
+   ],
+   "default": "Off",
+   "bits": [
+    90,
+    90
+   ],
+   "core_flags": [],
+   "key": "Miscellaneous/GPU Slowdown",
+   "mgl_ok": true
+  },
+  {
+   "page": "Miscellaneous",
+   "name": "Old GPU(CXD8514Q)",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    92,
+    92
+   ],
+   "core_flags": [],
+   "key": "Miscellaneous/Old GPU(CXD8514Q)",
+   "mgl_ok": true
+  },
+  {
+   "page": "Miscellaneous",
+   "name": "FPS Overlay",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    28,
+    28
+   ],
+   "core_flags": [],
+   "key": "Miscellaneous/FPS Overlay",
+   "mgl_ok": true
+  },
+  {
+   "page": "Miscellaneous",
+   "name": "Error Overlay",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    74,
+    74
+   ],
+   "core_flags": [],
+   "key": "Miscellaneous/Error Overlay",
+   "mgl_ok": true
+  },
+  {
+   "page": "Miscellaneous",
+   "name": "CD Slow Overlay",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    59,
+    59
+   ],
+   "core_flags": [],
+   "key": "Miscellaneous/CD Slow Overlay",
+   "mgl_ok": true
+  },
+  {
+   "page": "Miscellaneous",
+   "name": "CD Overlay",
+   "values": [
+    "Read",
+    "Read+Seek"
+   ],
+   "default": "Read",
+   "bits": [
+    70,
+    70
+   ],
+   "core_flags": [
+    "h9"
+   ],
+   "key": "Miscellaneous/CD Overlay",
+   "mgl_ok": true
+  },
+  {
+   "page": "Debug",
+   "name": "DDR3 Framebuffer",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    14,
+    14
+   ],
+   "core_flags": [
+    "h3"
+   ],
+   "key": "Debug/DDR3 Framebuffer",
+   "mgl_ok": true
+  },
+  {
+   "page": "Debug",
+   "name": "DDR3 FB Color",
+   "values": [
+    "16",
+    "24"
+   ],
+   "default": "16",
+   "bits": [
+    10,
+    10
+   ],
+   "core_flags": [
+    "h3"
+   ],
+   "key": "Debug/DDR3 FB Color",
+   "mgl_ok": true
+  },
+  {
+   "page": "Debug",
+   "name": "VRAMViewer",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    11,
+    11
+   ],
+   "core_flags": [
+    "h3"
+   ],
+   "key": "Debug/VRAMViewer",
+   "mgl_ok": true
+  },
+  {
+   "page": "Debug",
+   "name": "Sound",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    30,
+    30
+   ],
+   "core_flags": [
+    "h3"
+   ],
+   "key": "Debug/Sound",
+   "mgl_ok": true
+  },
+  {
+   "page": "Debug",
+   "name": "RepTimingSPUDMA",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    43,
+    43
+   ],
+   "core_flags": [
+    "h3"
+   ],
+   "key": "Debug/RepTimingSPUDMA",
+   "mgl_ok": true
+  },
+  {
+   "page": "Debug",
+   "name": "Textures",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    27,
+    27
+   ],
+   "core_flags": [
+    "h3"
+   ],
+   "key": "Debug/Textures",
+   "mgl_ok": true
+  },
+  {
+   "page": "Debug",
+   "name": "LBA Overlay",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    69,
+    69
+   ],
+   "core_flags": [
+    "h3"
+   ],
+   "key": "Debug/LBA Overlay",
+   "mgl_ok": true
+  },
+  {
+   "page": "Debug",
+   "name": "Fast CD DMA Timing",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    88,
+    88
+   ],
+   "core_flags": [
+    "h3"
+   ],
+   "key": "Debug/Fast CD DMA Timing",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "PSX.rbf",
+  "rbf_md5": "667f0061c7a6333594f91bbcafb0acea",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:18:23",
+  "confstr_sha1": "400fdef1a8828f090d66b23df832a4a2e0c0bd36"
+ }
+}

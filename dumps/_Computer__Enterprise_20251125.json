@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/Enterprise_20251125.rbf",
+ "rbf_md5": "241e64c6759bc47e0f1ba20d1a73f9b7",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "Enterprise;;SC0,VHD,Mount SD;S1,IMGDSK,Mount A:;-;F0,ROM,Load ROM;-;O[11:9],Available RAM,1 MB,2 MB,3 MB,64 KB,128 KB,256 KB,512 KB;O[8:7],CPU Speed,4 MHz,8 MHz,16 MHz;-;P1,Audio  & Video;P1-;P1O[5:4],Aspect Ratio,Original,Full Screen,[ARC1],[ARC2];P1O[16:15],Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%;P1-;H2d1P1O[28],Vertical Crop,No,Yes;h2d1P1O[29:28],Vertical Crop,No,270,216;P1O[27:26],Scale,Normal,V-Integer,Narrower HV-Integer,Wider HV-Integer;P1-;P1O[3:2],Stereo Mix,none,25%,50%,100%;R[0],Reset;R[12],Cold Reset;J,Fire 1,Fire 2;V,v251125",
+ "dumped": "2026-11-13T23:11:14"
+}

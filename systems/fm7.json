@@ -1,0 +1,304 @@
+{
+ "coreshell_profile": 1,
+ "system": "fm7",
+ "variant": "stock",
+ "name": "FM-7",
+ "rbf": "_Computer/FM-7",
+ "setname": null,
+ "core_name": "FM-7",
+ "config_file": "FM-7_v4.CFG",
+ "games_dir": "games/FM-7",
+ "saves_dir": "saves/FM-7",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "t77"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "t77"
+   ],
+   "label": "Load Tape"
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "d77",
+    "d88"
+   ],
+   "label": "Mount Disk 1"
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "d77",
+    "d88"
+   ],
+   "label": "Mount Disk 2"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "t77"
+   ],
+   "label": "Load Tape",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "d77",
+    "d88"
+   ],
+   "label": "Mount Disk 1",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "d77",
+    "d88"
+   ],
+   "label": "Mount Disk 2",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Tape Rewind",
+   "bits": [
+    8,
+    8
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Reset and close OSD",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Disk 1 image",
+   "values": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8"
+   ],
+   "default": "1",
+   "bits": [
+    13,
+    15
+   ],
+   "core_flags": [],
+   "key": "Disk 1 image",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Disk 2 image",
+   "values": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8"
+   ],
+   "default": "1",
+   "bits": [
+    16,
+    18
+   ],
+   "core_flags": [],
+   "key": "Disk 2 image",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Tape Audio",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    9,
+    9
+   ],
+   "core_flags": [],
+   "key": "Tape Audio",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Tape speed",
+   "values": [
+    "3x",
+    "Normal"
+   ],
+   "default": "3x",
+   "bits": [
+    22,
+    22
+   ],
+   "core_flags": [],
+   "key": "Tape speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Tape overlay",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    21,
+    21
+   ],
+   "core_flags": [],
+   "key": "Tape overlay",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Boot ROM",
+   "values": [
+    "0 disk",
+    "1 alt",
+    "2 dos-a",
+    "3 empty"
+   ],
+   "default": "0 disk",
+   "bits": [
+    10,
+    11
+   ],
+   "core_flags": [],
+   "key": "Boot ROM",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Machine",
+   "values": [
+    "FM-7",
+    "FM77AV"
+   ],
+   "default": "FM-7",
+   "bits": [
+    12,
+    12
+   ],
+   "core_flags": [],
+   "key": "Machine",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "System ROM",
+   "values": [
+    "Japanese",
+    "Spanish"
+   ],
+   "default": "Japanese",
+   "bits": [
+    19,
+    19
+   ],
+   "core_flags": [],
+   "key": "System ROM",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Joypad keys",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    20,
+    20
+   ],
+   "core_flags": [],
+   "key": "Joypad keys",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    121,
+    122
+   ],
+   "core_flags": [],
+   "key": "Aspect ratio",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "FM-7_20261102.rbf",
+  "rbf_md5": "56a1dc66b482062278030eba0c697f40",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:11:17",
+  "confstr_sha1": "21023180419fcfb023f49c35871bd8a096cd1c9f"
+ }
+}

@@ -1,0 +1,140 @@
+{
+ "coreshell_profile": 1,
+ "system": "solarus",
+ "variant": "other",
+ "name": "Solarus",
+ "rbf": "_Other/Solarus",
+ "setname": null,
+ "core_name": "Solarus",
+ "config_file": "Solarus.CFG",
+ "games_dir": "games/Solarus",
+ "saves_dir": "saves/Solarus",
+ "rom": {
+  "index": 0,
+  "type": "s",
+  "exts": [
+   "SOL"
+  ]
+ },
+ "slots": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "SOL"
+   ],
+   "label": "Load Quest"
+  }
+ ],
+ "files": [],
+ "mounts": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "SOL"
+   ],
+   "label": "Load Quest",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Restart Quest",
+   "bits": [
+    19,
+    19
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "H Position (CRT)",
+   "values": [
+    "0",
+    "+1",
+    "+2",
+    "+3",
+    "-3",
+    "-2",
+    "-1"
+   ],
+   "default": "0",
+   "bits": [
+    12,
+    14
+   ],
+   "core_flags": [],
+   "key": "H Position (CRT)",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "V Position (CRT)",
+   "values": [
+    "0",
+    "+1",
+    "+2",
+    "+3",
+    "-3",
+    "-2",
+    "-1"
+   ],
+   "default": "0",
+   "bits": [
+    15,
+    17
+   ],
+   "core_flags": [],
+   "key": "V Position (CRT)",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Vertical Crop (224p)",
+   "values": [
+    "Disabled",
+    "Enabled"
+   ],
+   "default": "Disabled",
+   "bits": [
+    18,
+    18
+   ],
+   "core_flags": [],
+   "key": "Vertical Crop (224p)",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "FPS Overlay",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    20,
+    20
+   ],
+   "core_flags": [],
+   "key": "FPS Overlay",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "Solarus_20260927.rbf",
+  "rbf_md5": "3d28e6bbacf40b7d935375cfa1b66a16",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:21:43",
+  "confstr_sha1": "d40052547dbdd3f3fc53c8158256b462e80c5cc1"
+ }
+}

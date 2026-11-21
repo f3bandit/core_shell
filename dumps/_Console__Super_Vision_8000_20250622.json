@@ -1,0 +1,7 @@
+{
+ "rbf": "_Console/Super_Vision_8000_20250622.rbf",
+ "rbf_md5": "4a09992905fa5f958a31d6b8962c7384",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "SuperVision8000;;-;FC1,BIN,Load Cartridge;-;O[4],Swap Controllers, No, Yes;-;O[3:2],Aspect ratio,Original,Full Screen,[ARC1],[ARC2];-;R[0],Reset;J,Fire 1,Fire 2,1,2,3,4,5,6,7,8,9,0,*,#;V,v250622",
+ "dumped": "2026-11-13T23:09:25"
+}

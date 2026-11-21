@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/RX78_20250717.rbf",
+ "rbf_md5": "459267782a51e05c6a06c057af70b1e5",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "RX78;;-;F1,BIN,Load Cartridge;-;OA,Swap Joysticks,Off,On;OB,EXT RAM,Off,On;OC,Pause,Off,On;-;O89,Aspect ratio,Original,Full Screen,[ARC1],[ARC2];ODF,Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%,CRT 75%;-;R0,Reset;J,Fire1,Fire2,Start;jn,A,B,Start;V,v250717",
+ "dumped": "2026-11-13T23:12:53"
+}

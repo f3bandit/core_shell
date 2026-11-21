@@ -1,0 +1,159 @@
+{
+ "coreshell_profile": 1,
+ "system": "chess",
+ "variant": "other",
+ "name": "Chess",
+ "rbf": "_Other/Chess",
+ "setname": null,
+ "core_name": "Chess",
+ "config_file": "Chess.CFG",
+ "games_dir": "games/Chess",
+ "saves_dir": "saves/Chess",
+ "rom": null,
+ "slots": [],
+ "files": [],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Opponent",
+   "values": [
+    "AI",
+    "Human"
+   ],
+   "default": "AI",
+   "bits": [
+    7,
+    7
+   ],
+   "core_flags": [],
+   "key": "Opponent",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "AI Strength",
+   "values": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7"
+   ],
+   "default": "1",
+   "bits": [
+    4,
+    6
+   ],
+   "core_flags": [],
+   "key": "AI Strength",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "AI Randomness",
+   "values": [
+    "0",
+    "1",
+    "2",
+    "3"
+   ],
+   "default": "0",
+   "bits": [
+    2,
+    3
+   ],
+   "core_flags": [],
+   "key": "AI Randomness",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Player Color",
+   "values": [
+    "White",
+    "Black"
+   ],
+   "default": "White",
+   "bits": [
+    1,
+    1
+   ],
+   "core_flags": [],
+   "key": "Player Color",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Boardview",
+   "values": [
+    "White",
+    "Black"
+   ],
+   "default": "White",
+   "bits": [
+    9,
+    9
+   ],
+   "core_flags": [],
+   "key": "Boardview",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Overlay",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    10,
+    10
+   ],
+   "core_flags": [],
+   "key": "Overlay",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Aspect Ratio",
+   "values": [
+    "4:3",
+    "16:9"
+   ],
+   "default": "4:3",
+   "bits": [
+    8,
+    8
+   ],
+   "core_flags": [],
+   "key": "Aspect Ratio",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "Chess_20240410.rbf",
+  "rbf_md5": "e9f2605826ddd4dafffc5ac353ce0d65",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:14:38",
+  "confstr_sha1": "111eb0359adf491dc932278838f5e054e04f7d06"
+ }
+}

@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/QL_20260603.rbf",
+ "rbf_md5": "049d963df76b3aa5984868f8c8421275",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "QL;;SC0,WIN,Mount HD image;-;F2,MDV,Load MDV image;O2,MDV direction,normal,reverse;-;F4,ROM,Load OS;-;O3,Video mode,PAL,NTSC;OBC,Aspect ratio,Original,Full Screen,[ARC1],[ARC2];O9A,Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%;ODE,Scale,Normal,V-Integer,Narrower HV-Integer,Wider HV-Integer;-;O78,CPU speed,QL,16 Mhz,24 Mhz,Full;O45,RAM,128k,640k,896k,4096k;R0,Reset & unload MDV;V,v260603",
+ "dumped": "2026-11-13T23:12:50"
+}

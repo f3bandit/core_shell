@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/Apple-Lisa_20260721.rbf",
+ "rbf_md5": "a648247c8c0c858be7a8b8019862b7c9",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "Apple-Lisa;UART19200:9600:4800:2400:1200:300;-;S0,IMGVHD,Mount Hard Disk;S1,DC4DSKIMG,Mount Floppy;-;O9A,Aspect ratio,4:3,Original,Full Screen,[ARC1];OBC,Scale,Normal,V-Integer,Narrower HV-Integer,Wider HV-Integer;-;O34,RAM Size,512KB,1MB,1.5MB,2MB;O56,CPU Speed,1x (5MHz),2x,3x;O7,CPU ROM,H ROM,3A ROM;O8,I/O ROM,A8 ROM,40 ROM;ODE,Screen Color,Paper White,Green CRT,Amber CRT;-;R0,Reset & Apply;v,0;V,v260721",
+ "dumped": "2026-11-13T23:10:18"
+}

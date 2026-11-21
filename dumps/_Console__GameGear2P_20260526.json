@@ -1,0 +1,7 @@
+{
+ "rbf": "_Console/GameGear2P_20260526.rbf",
+ "rbf_md5": "70c08083e35338ca6026a1f3c25efcab",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "GAMEGEAR2P;;-;H8FS2,GG;DIP;-;H8OP,Autosave,OFF,ON;H8H9D0R6,Load Backup RAM;H8H9D0R7,Save Backup RAM;H8-;H8OA,Region,US/EU,Japan;H8o8,Z80 Speed,Normal,Turbo;P1,Audio & Video;P1-;P1OQR,Aspect ratio,Original,Full Screen,[ARC1],[ARC2];P1O35,Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%,CRT 75%;P1OUV,Scale,Normal,V-Integer,Narrower HV-Integer,Wider HV-Integer;P1-;P1O8,Sprites Per Line,Standard,All;P1-;P1oT,Separator Line,Off,On;P1oUV,Audioselect,GG 1,GG 2,Mixed,Split 1=L 2=R;-;R0,Reset;J1,Fire 1,Fire 2,Pause;jn,A|P,B,Start;jp,Y|P,A,Start;V,v260526",
+ "dumped": "2026-11-13T23:04:41"
+}

@@ -1,0 +1,28 @@
+{
+ "coreshell_profile": 1,
+ "system": "minimig",
+ "variant": "stock",
+ "name": "Minimig",
+ "rbf": "_Computer/Minimig",
+ "setname": null,
+ "core_name": "Minimig",
+ "config_file": "Minimig.CFG",
+ "games_dir": "games/Minimig",
+ "saves_dir": "saves/Minimig",
+ "rom": null,
+ "slots": [],
+ "files": [],
+ "mounts": [],
+ "triggers": [],
+ "cheats": false,
+ "menu": [],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "Minimig_20260907.rbf",
+  "rbf_md5": "cc55fa86c11f691f3c15521d8cc38017",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:12:06",
+  "confstr_sha1": "7d913c5fba441495908a561e1b76f477b23ed305"
+ }
+}

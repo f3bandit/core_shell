@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/eg2000_20220930.rbf",
+ "rbf_md5": "19a1b465f3f43498e0d9d7dda671b5dd",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "eg2000;;-;F1,CAS,Load Cassette;H2-;h3-,-Basic Tape Loaded-;h4-,-System Tape Loaded-;h5-,-Data Tape Loaded-;-;h0d0T1,Play/Pause;h0D1T2,Rewind;h0D1T3,Eject;h4R4,Paste Filename;-;O[6:5],Tape Volume,Muted,Low,High;O[7],Joystick 1,Analog,DPAD;O[8],Joystick 2,Analog,DPAD;P1,Video Settings;P1O[12:11],Aspect ratio,Original,Full Screen,[ARC1],[ARC2];P1O[14:13],Scandoubler,Off,On,HQ2x;P1O[16:15],Scale,Normal,V-Integer,Narrower HV-Integer,Wider HV-Integer;-;R[0],Reset;J,*,#,0,1,2,3,4,5,6,7,8,9;V,v220930",
+ "dumped": "2026-11-13T23:14:29"
+}

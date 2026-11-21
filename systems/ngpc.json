@@ -1,0 +1,363 @@
+{
+ "coreshell_profile": 1,
+ "system": "ngpc",
+ "variant": "stock",
+ "name": "NGPC",
+ "rbf": "_Console/NGPC",
+ "setname": null,
+ "core_name": "NGPC",
+ "config_file": "NGPC_v11.CFG",
+ "games_dir": "games/NGPC",
+ "saves_dir": "saves/NGPC",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "NGP",
+   "NGC",
+   "NPC"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "NGP",
+    "NGC",
+    "NPC"
+   ],
+   "label": "Load Cartridge"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "NGP",
+    "NGC",
+    "NPC"
+   ],
+   "label": "Load Cartridge",
+   "page": 0,
+   "flags": [],
+   "remember_dir": true
+  }
+ ],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Save State (Alt-F1..F4)",
+   "bits": [
+    42,
+    42
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "d7"
+   ]
+  },
+  {
+   "name": "Restore State (F1..F4)",
+   "bits": [
+    43,
+    43
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "d7"
+   ]
+  },
+  {
+   "name": "Save Backup",
+   "bits": [
+    11,
+    11
+   ],
+   "kind": "reset",
+   "page": 3,
+   "flags": []
+  },
+  {
+   "name": "Load Backup",
+   "bits": [
+    12,
+    12
+   ],
+   "kind": "reset",
+   "page": 3,
+   "flags": []
+  },
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": true,
+ "menu": [
+  {
+   "page": "",
+   "name": "System",
+   "values": [
+    "NGPC",
+    "Auto",
+    "NGP"
+   ],
+   "default": "NGPC",
+   "bits": [
+    1,
+    2
+   ],
+   "core_flags": [],
+   "key": "System",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Savestate Slot",
+   "values": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "default": "1",
+   "bits": [
+    45,
+    46
+   ],
+   "core_flags": [
+    "d7"
+   ],
+   "key": "Savestate Slot",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "LCD Response",
+   "values": [
+    "Raw",
+    "Panel"
+   ],
+   "default": "Raw",
+   "bits": [
+    20,
+    20
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/LCD Response",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Saturation",
+   "values": [
+    "75%",
+    "50%",
+    "25%",
+    "100%"
+   ],
+   "default": "75%",
+   "bits": [
+    21,
+    22
+   ],
+   "core_flags": [
+    "H0"
+   ],
+   "key": "Audio & Video/Saturation",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    121,
+    122
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    4,
+    6
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Stereo Mix",
+   "values": [
+    "None",
+    "25%",
+    "50%",
+    "100%"
+   ],
+   "default": "None",
+   "bits": [
+    7,
+    8
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Stereo Mix",
+   "mgl_ok": true
+  },
+  {
+   "page": "BIOS Settings",
+   "name": "Language",
+   "values": [
+    "English",
+    "Japanese"
+   ],
+   "default": "English",
+   "bits": [
+    3,
+    3
+   ],
+   "core_flags": [],
+   "key": "BIOS Settings/Language",
+   "mgl_ok": true
+  },
+  {
+   "page": "BIOS Settings",
+   "name": "NGP Palette",
+   "values": [
+    "B&W",
+    "Red",
+    "Green",
+    "Blue",
+    "Classic"
+   ],
+   "default": "B&W",
+   "bits": [
+    14,
+    16
+   ],
+   "core_flags": [
+    "H0"
+   ],
+   "key": "BIOS Settings/NGP Palette",
+   "mgl_ok": true
+  },
+  {
+   "page": "BIOS Settings",
+   "name": "Skip BIOS Animation",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    19,
+    19
+   ],
+   "core_flags": [],
+   "key": "BIOS Settings/Skip BIOS Animation",
+   "mgl_ok": true
+  },
+  {
+   "page": "Advanced",
+   "name": "RTC",
+   "values": [
+    "MiSTer Time",
+    "BIOS Default"
+   ],
+   "default": "MiSTer Time",
+   "bits": [
+    17,
+    17
+   ],
+   "core_flags": [],
+   "key": "Advanced/RTC",
+   "mgl_ok": true
+  },
+  {
+   "page": "Advanced",
+   "name": "Automatic Power",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    18,
+    18
+   ],
+   "core_flags": [],
+   "key": "Advanced/Automatic Power",
+   "mgl_ok": true
+  },
+  {
+   "page": "Advanced",
+   "name": "Autosave",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    10,
+    10
+   ],
+   "core_flags": [],
+   "key": "Advanced/Autosave",
+   "mgl_ok": true
+  },
+  {
+   "page": "Advanced",
+   "name": "Savestate to SD",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    44,
+    44
+   ],
+   "core_flags": [
+    "d7"
+   ],
+   "key": "Advanced/Savestate to SD",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "NGPC_20260824.rbf",
+  "rbf_md5": "38e6cb691d9b17c0cd82bf99440f73d2",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:08:21",
+  "confstr_sha1": "ccdbe459150ee43f95de07dfc1787e24b9b793f9"
+ }
+}

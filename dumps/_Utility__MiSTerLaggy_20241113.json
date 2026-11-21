@@ -1,0 +1,7 @@
+{
+ "rbf": "_Utility/MiSTerLaggy_20241113.rbf",
+ "rbf_md5": "c1b13fcdf14c16e6118d6b374952b5b8",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "MiSTerLaggy;;FC0,BIN,Load CPU ROM;-;T[0],Reset;J1,Ok,Back,Menu;jn,A,B,Start;V,v241113",
+ "dumped": "2026-11-13T23:17:48"
+}

@@ -1,0 +1,7 @@
+{
+ "rbf": "_Utility/ChipID.rbf",
+ "rbf_md5": "b76824424e180042b0af3141a88cf4ee",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "ChipID;;-;R0,Reset;-;V,v1.0;-;",
+ "dumped": "2026-11-13T23:17:42"
+}

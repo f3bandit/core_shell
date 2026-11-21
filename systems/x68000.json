@@ -1,0 +1,724 @@
+{
+ "coreshell_profile": 1,
+ "system": "x68000",
+ "variant": "stock",
+ "name": "X68000",
+ "rbf": "_Computer/X68000",
+ "setname": null,
+ "core_name": "X68000",
+ "config_file": "X68000.CFG",
+ "games_dir": "games/X68000",
+ "saves_dir": "saves/X68000",
+ "rom": {
+  "index": 0,
+  "type": "s",
+  "exts": [
+   "D88",
+   "XDF",
+   "DIM",
+   "HDM"
+  ]
+ },
+ "slots": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "D88",
+    "XDF",
+    "DIM",
+    "HDM"
+   ],
+   "label": "FDD0"
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "D88",
+    "XDF",
+    "DIM",
+    "HDM"
+   ],
+   "label": "FDD1"
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "HDF"
+   ],
+   "label": "SASI Hard Disk"
+  },
+  {
+   "index": 4,
+   "type": "s",
+   "exts": [
+    "HDS"
+   ],
+   "label": "SXSI Hard Disk 1"
+  },
+  {
+   "index": 5,
+   "type": "s",
+   "exts": [
+    "HDS"
+   ],
+   "label": "SXSI Hard Disk 2"
+  },
+  {
+   "index": 6,
+   "type": "s",
+   "exts": [
+    "HDS"
+   ],
+   "label": "SXSI Hard Disk 3"
+  },
+  {
+   "index": 7,
+   "type": "s",
+   "exts": [
+    "HDS"
+   ],
+   "label": "SXSI Hard Disk 4"
+  },
+  {
+   "index": 3,
+   "type": "s",
+   "exts": [
+    "RAM"
+   ],
+   "label": "SRAM"
+  }
+ ],
+ "files": [],
+ "mounts": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "D88",
+    "XDF",
+    "DIM",
+    "HDM"
+   ],
+   "label": "FDD0",
+   "page": 1,
+   "flags": []
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "D88",
+    "XDF",
+    "DIM",
+    "HDM"
+   ],
+   "label": "FDD1",
+   "page": 1,
+   "flags": []
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "HDF"
+   ],
+   "label": "SASI Hard Disk",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 4,
+   "type": "s",
+   "exts": [
+    "HDS"
+   ],
+   "label": "SXSI Hard Disk 1",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 5,
+   "type": "s",
+   "exts": [
+    "HDS"
+   ],
+   "label": "SXSI Hard Disk 2",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 6,
+   "type": "s",
+   "exts": [
+    "HDS"
+   ],
+   "label": "SXSI Hard Disk 3",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 7,
+   "type": "s",
+   "exts": [
+    "HDS"
+   ],
+   "label": "SXSI Hard Disk 4",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 3,
+   "type": "s",
+   "exts": [
+    "RAM"
+   ],
+   "label": "SRAM",
+   "page": 3,
+   "flags": []
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Save FDD0 changes to SD",
+   "bits": [
+    9,
+    9
+   ],
+   "kind": "reset",
+   "page": 1,
+   "flags": []
+  },
+  {
+   "name": "Eject FDD0",
+   "bits": [
+    11,
+    11
+   ],
+   "kind": "reset",
+   "page": 1,
+   "flags": []
+  },
+  {
+   "name": "Save FDD1 changes to SD",
+   "bits": [
+    10,
+    10
+   ],
+   "kind": "reset",
+   "page": 1,
+   "flags": []
+  },
+  {
+   "name": "Eject FDD1",
+   "bits": [
+    12,
+    12
+   ],
+   "kind": "reset",
+   "page": 1,
+   "flags": []
+  },
+  {
+   "name": "Load SRAM from SD Card",
+   "bits": [
+    13,
+    13
+   ],
+   "kind": "reset",
+   "page": 3,
+   "flags": []
+  },
+  {
+   "name": "Save SRAM to SD Card",
+   "bits": [
+    14,
+    14
+   ],
+   "kind": "reset",
+   "page": 3,
+   "flags": []
+  },
+  {
+   "name": "Inject SXSI driver (+reset)",
+   "bits": [
+    75,
+    75
+   ],
+   "kind": "reset",
+   "page": 3,
+   "flags": []
+  },
+  {
+   "name": "Reset Hanging Notes",
+   "bits": [
+    40,
+    40
+   ],
+   "kind": "reset",
+   "page": 5,
+   "flags": [
+    "h1"
+   ]
+  },
+  {
+   "name": "NMI Button",
+   "bits": [
+    7,
+    7
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Power Button",
+   "bits": [
+    8,
+    8
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "Floppy Disk",
+   "name": "FDD wait (XDF/DIM)",
+   "values": [
+    "disable",
+    "seek",
+    "data",
+    "seek+data"
+   ],
+   "default": "disable",
+   "bits": [
+    47,
+    48
+   ],
+   "core_flags": [],
+   "key": "Floppy Disk/FDD wait (XDF/DIM)",
+   "mgl_ok": true
+  },
+  {
+   "page": "SRAM",
+   "name": "CPU RAM",
+   "values": [
+    "DDR3",
+    "SDRAM"
+   ],
+   "default": "DDR3",
+   "bits": [
+    68,
+    68
+   ],
+   "core_flags": [],
+   "key": "SRAM/CPU RAM",
+   "mgl_ok": true
+  },
+  {
+   "page": "SRAM",
+   "name": "Load SXSI driver on boot",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    76,
+    76
+   ],
+   "core_flags": [],
+   "key": "SRAM/Load SXSI driver on boot",
+   "mgl_ok": true
+  },
+  {
+   "page": "SRAM",
+   "name": "Visible Memory",
+   "values": [
+    "Auto",
+    "1MB",
+    "2MB",
+    "3MB",
+    "4MB",
+    "5MB",
+    "6MB",
+    "7MB",
+    "8MB",
+    "9MB",
+    "10MB",
+    "11MB",
+    "12MB"
+   ],
+   "default": "Auto",
+   "bits": [
+    71,
+    74
+   ],
+   "core_flags": [],
+   "key": "SRAM/Visible Memory",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "OPM Chip",
+   "values": [
+    "JT51",
+    "IKAOPM"
+   ],
+   "default": "JT51",
+   "bits": [
+    58,
+    58
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/OPM Chip",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Stereo Mix",
+   "values": [
+    "None",
+    "25%",
+    "50%",
+    "100%"
+   ],
+   "default": "None",
+   "bits": [
+    2,
+    3
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Stereo Mix",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Crop Offset",
+   "values": [
+    "0",
+    "2",
+    "4",
+    "8",
+    "10",
+    "12",
+    "-12",
+    "-10",
+    "-8",
+    "-6",
+    "-4",
+    "-2"
+   ],
+   "default": "0",
+   "bits": [
+    23,
+    26
+   ],
+   "core_flags": [
+    "d0"
+   ],
+   "key": "Audio & Video/Crop Offset",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    27,
+    28
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Video Frequency",
+   "values": [
+    "60fps",
+    "Original"
+   ],
+   "default": "60fps",
+   "bits": [
+    33,
+    33
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Video Frequency",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Video Mode",
+   "values": [
+    "Stretch",
+    "Native"
+   ],
+   "default": "Stretch",
+   "bits": [
+    69,
+    70
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Video Mode",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    4,
+    5
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "MT32-pi",
+   "name": "Use MT32-pi",
+   "values": [
+    "Yes",
+    "No"
+   ],
+   "default": "Yes",
+   "bits": [
+    18,
+    18
+   ],
+   "core_flags": [
+    "h1"
+   ],
+   "key": "MT32-pi/Use MT32-pi",
+   "mgl_ok": true
+  },
+  {
+   "page": "MT32-pi",
+   "name": "Show Info",
+   "values": [
+    "No",
+    "Yes",
+    "LCD-On(non-FB)",
+    "LCD-Auto(non-FB)"
+   ],
+   "default": "No",
+   "bits": [
+    41,
+    42
+   ],
+   "core_flags": [
+    "h1"
+   ],
+   "key": "MT32-pi/Show Info",
+   "mgl_ok": true
+  },
+  {
+   "page": "MT32-pi",
+   "name": "Synth",
+   "values": [
+    "Munt",
+    "FluidSynth"
+   ],
+   "default": "Munt",
+   "bits": [
+    19,
+    19
+   ],
+   "core_flags": [
+    "h1"
+   ],
+   "key": "MT32-pi/Synth",
+   "mgl_ok": true
+  },
+  {
+   "page": "MT32-pi",
+   "name": "Munt ROM",
+   "values": [
+    "MT-32 v1",
+    "MT-32 v2",
+    "CM-32L"
+   ],
+   "default": "MT-32 v1",
+   "bits": [
+    20,
+    21
+   ],
+   "core_flags": [
+    "h1"
+   ],
+   "key": "MT32-pi/Munt ROM",
+   "mgl_ok": true
+  },
+  {
+   "page": "MT32-pi",
+   "name": "SoundFont",
+   "values": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7"
+   ],
+   "default": "0",
+   "bits": [
+    29,
+    31
+   ],
+   "core_flags": [
+    "h1"
+   ],
+   "key": "MT32-pi/SoundFont",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Joy1 type",
+   "values": [
+    "2 Button",
+    "2 Turbo",
+    "MegaDrive 3",
+    "Magical 6",
+    "Capcom 6",
+    "Double-DPad",
+    "CyberStick"
+   ],
+   "default": "2 Button",
+   "bits": [
+    37,
+    39
+   ],
+   "core_flags": [],
+   "key": "Joy1 type",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Joy2 type",
+   "values": [
+    "2 Button",
+    "2 Turbo",
+    "MegaDrive 3",
+    "Magical 6",
+    "Capcom 6",
+    "Double-DPad",
+    "CyberStick"
+   ],
+   "default": "2 Button",
+   "bits": [
+    44,
+    46
+   ],
+   "core_flags": [],
+   "key": "Joy2 type",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Joystick swap",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    43,
+    43
+   ],
+   "core_flags": [],
+   "key": "Joystick swap",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "KBD layout",
+   "values": [
+    "MiSTer",
+    "JP Func.",
+    "JP Pos.",
+    "US Std",
+    "US Alt"
+   ],
+   "default": "MiSTer",
+   "bits": [
+    34,
+    36
+   ],
+   "core_flags": [],
+   "key": "KBD layout",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "CPU speed",
+   "values": [
+    "Normal",
+    "Turbo"
+   ],
+   "default": "Normal",
+   "bits": [
+    32,
+    32
+   ],
+   "core_flags": [],
+   "key": "CPU speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "MIDI Board",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    67,
+    67
+   ],
+   "core_flags": [],
+   "key": "MIDI Board",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "X68000_20260823.rbf",
+  "rbf_md5": "68904fecec885e153572e2887188262e",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:14:14",
+  "confstr_sha1": "0b29f43adf7cbf3cf8b83446c7c24c91bba9beab"
+ }
+}

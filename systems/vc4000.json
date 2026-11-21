@@ -1,0 +1,159 @@
+{
+ "coreshell_profile": 1,
+ "system": "vc4000",
+ "variant": "stock",
+ "name": "VC4000",
+ "rbf": "_Console/VC4000",
+ "setname": null,
+ "core_name": "VC4000",
+ "config_file": "VC4000.CFG",
+ "games_dir": "games/VC4000",
+ "saves_dir": "saves/VC4000",
+ "rom": {
+  "index": 0,
+  "type": "f",
+  "exts": [
+   "BIN"
+  ]
+ },
+ "slots": [
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load Cartridge"
+  }
+ ],
+ "files": [
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load Cartridge",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Reset and close OSD",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Swap Joystick",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    3,
+    3
+   ],
+   "core_flags": [],
+   "key": "Swap Joystick",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Swap Joystick XY",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    4,
+    4
+   ],
+   "core_flags": [],
+   "key": "Swap Joystick XY",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "D-pad",
+   "values": [
+    "Absolute",
+    "Integration"
+   ],
+   "default": "Absolute",
+   "bits": [
+    13,
+    13
+   ],
+   "core_flags": [],
+   "key": "D-pad",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Bright",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    12,
+    12
+   ],
+   "core_flags": [],
+   "key": "Bright",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    6,
+    7
+   ],
+   "core_flags": [],
+   "key": "Aspect ratio",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "VC4000_20250907.rbf",
+  "rbf_md5": "251e9a49ec62ae2672b4e8674466c658",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:09:32",
+  "confstr_sha1": "fcaf3bd850faff934f15d02cb8d7d1f2b693b48e"
+ }
+}

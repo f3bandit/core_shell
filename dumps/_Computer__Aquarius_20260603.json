@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/Aquarius_20260603.rbf",
+ "rbf_md5": "b60e19483d562c7d808e58de3df1ec75",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "AQUARIUS;;-;F,BIN,Load Cartridge;F,CAQ,Load Tape;O9,Fast loading,No,Yes;-;OAB,Aspect ratio,Original,Full Screen,[ARC1],[ARC2];O24,Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%,CRT 75%;OCD,Scale,Normal,V-Integer,Narrower HV-Integer,Wider HV-Integer;-;O56,CPU Speed,Normal,x2,x4,x8;O78,RAM expansion,16KB,32KB,None,4KB;-;R0,Reset;-;J,K1,K2,K3,K4,K5,K6;V,v260603",
+ "dumped": "2026-11-13T23:10:21"
+}

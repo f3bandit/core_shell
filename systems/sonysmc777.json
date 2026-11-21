@@ -1,0 +1,282 @@
+{
+ "coreshell_profile": 1,
+ "system": "sonysmc777",
+ "variant": "stock",
+ "name": "SonySMC777",
+ "rbf": "_Computer/SonySMC777",
+ "setname": null,
+ "core_name": "SonySMC777",
+ "config_file": "SonySMC777.CFG",
+ "games_dir": "games/SonySMC777",
+ "saves_dir": "saves/SonySMC777",
+ "rom": {
+  "index": 0,
+  "type": "f",
+  "exts": [
+   "ROM"
+  ]
+ },
+ "slots": [
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load ROM"
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "D88",
+    "1DD",
+    "D77"
+   ],
+   "label": "Pri. Drive A"
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "D88",
+    "1DD",
+    "D77"
+   ],
+   "label": "Drive B"
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "WAV"
+   ],
+   "label": "Tape"
+  }
+ ],
+ "files": [
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load ROM",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "D88",
+    "1DD",
+    "D77"
+   ],
+   "label": "Pri. Drive A",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "D88",
+    "1DD",
+    "D77"
+   ],
+   "label": "Drive B",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "WAV"
+   ],
+   "label": "Tape",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Apply and reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Rewind tape",
+   "bits": [
+    10,
+    10
+   ],
+   "kind": "toggle",
+   "page": 1,
+   "flags": []
+  },
+  {
+   "name": "RESET key (warm)",
+   "bits": [
+    1,
+    1
+   ],
+   "kind": "toggle",
+   "page": 1,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "Machine",
+   "name": "Tape speed",
+   "values": [
+    "8x",
+    "Normal"
+   ],
+   "default": "8x",
+   "bits": [
+    7,
+    7
+   ],
+   "core_flags": [],
+   "key": "Machine/Tape speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    121,
+    122
+   ],
+   "core_flags": [],
+   "key": "Video/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%"
+   ],
+   "default": "None",
+   "bits": [
+    3,
+    4
+   ],
+   "core_flags": [],
+   "key": "Video/Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Border",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    5,
+    5
+   ],
+   "core_flags": [],
+   "key": "Video/Border",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Tape overlay",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    8,
+    8
+   ],
+   "core_flags": [],
+   "key": "Video/Tape overlay",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Interlace text",
+   "values": [
+    "SMC-777",
+    "SMC-70"
+   ],
+   "default": "SMC-777",
+   "bits": [
+    11,
+    11
+   ],
+   "core_flags": [],
+   "key": "Video/Interlace text",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Port 2",
+   "values": [
+    "Joystick",
+    "Mouse"
+   ],
+   "default": "Joystick",
+   "bits": [
+    6,
+    6
+   ],
+   "core_flags": [],
+   "key": "Input/Port 2",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio",
+   "name": "Tape audio",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    9,
+    9
+   ],
+   "core_flags": [],
+   "key": "Audio/Tape audio",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "SonySMC777_20261103.rbf",
+  "rbf_md5": "6650272c5dd3a627c786023e3a80fe1f",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:13:13",
+  "confstr_sha1": "17e6977937137c4de6ffadc2a75e4b965385e9e7"
+ }
+}

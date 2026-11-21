@@ -1,0 +1,7 @@
+{
+ "rbf": "_Other/GameOfLife_20260702.rbf",
+ "rbf_md5": "1b04a8cf7eabdb08d1b1cd3a5733b117",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "GameOfLife;;-;F1,MEM,Load board;-;O[4],HighLife,Off,On;O[3],Running,Yes,No;O[2],Seed,Off,On;O[1],Aspect Ratio,16:9,4:3;-;T[0],Reset;v,1;V,v260702",
+ "dumped": "2026-11-13T23:15:44"
+}

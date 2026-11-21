@@ -1,0 +1,7 @@
+{
+ "rbf": "_Console/Gameboy2P_20250621.rbf",
+ "rbf_md5": "8678e2110def280b6aec80c2d07f8024",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "GAMEBOY2P;SS3E000000:40000;FS1,GBCGB BIN,Load ROM;O[6],Rom for second GB,Off,On;OEF,System,Auto,Gameboy,Gameboy Color,MegaDuck;D7o79,Mapper,Auto,WisdomTree,Mani161,MBC1,MBC3;-;O[11],Dupe Save to GB 2,Off,On;h2R9,Reload Backup RAM;h2RA,Save Backup RAM;OD,Autosave,Off,On;-;P1,Audio & Video;P1-;P1O[44],Extra sprites,No,Yes;P1ON,Seperator Line,Off,On;P1OC,Inverted color,No,Yes;P1O12,Custom Palette,Off,Auto,On;h1P1FC3,GBP,Load Palette;d4P1OU,GBC Colors,Corrected,Raw;P1O5,Sync Video,Off,On;P1-;P1O34,Aspect ratio,Original,Full Screen,[ARC1],[ARC2];P1OLM,Scale,Normal,V-Integer,Narrower HV-Integer,Wider HV-Integer;P1OIK,Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%,CRT 75%;P1-;P1O78,Stereo mix,none,25%,50%,100%;P1O[43],Audio mode,Accurate,No Pops;P1OGH,Audioselect,GB 1,GB 2,Mixed,Split 1=L 2=R;P2,Misc.;P2-;P2FC4,BIN,Load GBC Boot;P2FC5,BIN,Load DMG Boot;P2FC6,BIN,Load SGB Boot;P2-;d6P2O[37],GBC/GBA mode,GBC,GBA;d8P2O[42],Fast boot,Off,On;P2o6,Rumble,On,Off;-;R0,Reset;J1,A,B,Select,Start;V,v250621",
+ "dumped": "2026-11-13T23:04:47"
+}

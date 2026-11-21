@@ -1,0 +1,3 @@
+{
+ "_about": "Added to Coreshell's built-in tables (coreshell/quirks.py); comes with `coreshell update`. Tables: ra_console, ra_by_ext, core_folders, core_skip, card_no_picker."
+}

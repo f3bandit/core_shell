@@ -1,0 +1,153 @@
+{
+ "coreshell_profile": 1,
+ "system": "multicomp",
+ "variant": "stock",
+ "name": "MultiComp",
+ "rbf": "_Computer/MultiComp",
+ "setname": null,
+ "core_name": "MultiComp",
+ "config_file": "MultiComp.CFG",
+ "games_dir": "games/MultiComp",
+ "saves_dir": "saves/MultiComp",
+ "rom": {
+  "index": 0,
+  "type": "s",
+  "exts": [
+   "IMG"
+  ]
+ },
+ "slots": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "IMG"
+   ],
+   "label": ""
+  }
+ ],
+ "files": [],
+ "mounts": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "IMG"
+   ],
+   "label": "",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Reset",
+   "bits": [
+    14,
+    14
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Reset after Mount",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    15,
+    15
+   ],
+   "core_flags": [],
+   "key": "Reset after Mount",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "CPU-ROM",
+   "values": [
+    "Z80-CP/M",
+    "Z80-BASIC",
+    "6502-Basic",
+    "6809-Basic",
+    "6809-Forth"
+   ],
+   "default": "Z80-CP/M",
+   "bits": [
+    6,
+    8
+   ],
+   "core_flags": [],
+   "key": "CPU-ROM",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Baud Rate tty",
+   "values": [
+    "115200",
+    "38400",
+    "19200",
+    "9600",
+    "4800",
+    "2400"
+   ],
+   "default": "115200",
+   "bits": [
+    9,
+    11
+   ],
+   "core_flags": [],
+   "key": "Baud Rate tty",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Serial Port",
+   "values": [
+    "Console Port",
+    "User IO Port"
+   ],
+   "default": "Console Port",
+   "bits": [
+    12,
+    12
+   ],
+   "core_flags": [],
+   "key": "Serial Port",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Flow Control",
+   "values": [
+    "None",
+    "RTS/CTS"
+   ],
+   "default": "None",
+   "bits": [
+    14,
+    14
+   ],
+   "core_flags": [],
+   "key": "Flow Control",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "MultiComp_20260809.rbf",
+  "rbf_md5": "1089bb958572497047a19f4a9222679b",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:12:09",
+  "confstr_sha1": "0ae48e6e3378ac1d259dd0424a4eb79946c99c56"
+ }
+}

@@ -1,0 +1,220 @@
+{
+ "coreshell_profile": 1,
+ "system": "eg2000",
+ "variant": "stock",
+ "name": "eg2000",
+ "rbf": "_Computer/eg2000",
+ "setname": null,
+ "core_name": "eg2000",
+ "config_file": "eg2000.CFG",
+ "games_dir": "games/eg2000",
+ "saves_dir": "saves/eg2000",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "CAS"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "CAS"
+   ],
+   "label": "Load Cassette"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "CAS"
+   ],
+   "label": "Load Cassette",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Play/Pause",
+   "bits": [
+    1,
+    1
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": [
+    "h0",
+    "d0"
+   ]
+  },
+  {
+   "name": "Rewind",
+   "bits": [
+    2,
+    2
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": [
+    "h0",
+    "D1"
+   ]
+  },
+  {
+   "name": "Eject",
+   "bits": [
+    3,
+    3
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": [
+    "h0",
+    "D1"
+   ]
+  },
+  {
+   "name": "Paste Filename",
+   "bits": [
+    4,
+    4
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "h4"
+   ]
+  },
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Tape Volume",
+   "values": [
+    "Muted",
+    "Low",
+    "High"
+   ],
+   "default": "Muted",
+   "bits": [
+    5,
+    6
+   ],
+   "core_flags": [],
+   "key": "Tape Volume",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Joystick 1",
+   "values": [
+    "Analog",
+    "DPAD"
+   ],
+   "default": "Analog",
+   "bits": [
+    7,
+    7
+   ],
+   "core_flags": [],
+   "key": "Joystick 1",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Joystick 2",
+   "values": [
+    "Analog",
+    "DPAD"
+   ],
+   "default": "Analog",
+   "bits": [
+    8,
+    8
+   ],
+   "core_flags": [],
+   "key": "Joystick 2",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video Settings",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    11,
+    12
+   ],
+   "core_flags": [],
+   "key": "Video Settings/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video Settings",
+   "name": "Scandoubler",
+   "values": [
+    "Off",
+    "On",
+    "HQ2x"
+   ],
+   "default": "Off",
+   "bits": [
+    13,
+    14
+   ],
+   "core_flags": [],
+   "key": "Video Settings/Scandoubler",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video Settings",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    15,
+    16
+   ],
+   "core_flags": [],
+   "key": "Video Settings/Scale",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "eg2000_20220930.rbf",
+  "rbf_md5": "19a1b465f3f43498e0d9d7dda671b5dd",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:14:29",
+  "confstr_sha1": "2a11700a9c5db2e0b69174fa4377814d960ff94a"
+ }
+}

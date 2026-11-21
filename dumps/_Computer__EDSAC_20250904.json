@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/EDSAC_20250904.rbf",
+ "rbf_md5": "fbd8a941327b16bf93cfca7d0baa4e5c",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "EDSAC;;-;F1,TAP,Load tape;-;OG,Tape Reader Speed,Normal,Fast;OF,Initial Orders ver,2,1;OE,Tank group,One,Two;O36,Memory Tank,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15;O1,Aspect Ratio,16:9,4:3;V,v0.3.250904",
+ "dumped": "2026-11-13T23:11:11"
+}

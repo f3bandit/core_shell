@@ -1,0 +1,7 @@
+{
+ "rbf": "_Console/Loopy_20261002.rbf",
+ "rbf_md5": "278f8c268394488265f7217bd7b32800",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "Loopy;SS3E000000:100000;FS1,BIN,Load Cartridge;-;P3O[19:18],Savestate slot,1,2,3,4;P3R[20],Save state (Alt-F1);P3R[21],Restore state (F1);-;P1,Audio & Video;P1-;P1O[122:121],Aspect ratio,Original,Full Screen,[ARC1],[ARC2];P1O[24:22],Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%,CRT 75%;P1O[27:25],Scale,Normal,V-Integer,Narrower HV-Integer,Wider HV-Integer;d1P1O[4],Vertical Crop,Disabled,216p(5x);P1O[5],Border,Crop,Show;P2,Input;P2-;P2O[12],Port 1 device,Gamepad,Mouse;P2O[14:13],Multitap,Off,2 pads,3 pads,4 pads;P3,Advanced;P3-;P3O[15],Autosave,On,Off;h0P3T[16],Save Backup RAM;h0P3T[17],Restore Backup RAM;P4,Printer;P4-;P4O[7],Seal cassette,Absent,Fitted;P4O[9:8],Print preview,Off,Corner,Full;P4O[11:10],Ink order,YMC,MCY,CYM,CMY;-;R[0],Reset;-;J1,A,B,C,D,L,R,Start,Savestates;jn,A,B,X,Y,L,R,Start;I,-,-,-,-,Slot=L/R Load=U Save=D,Active Slot 1,Active Slot 2,Active Slot 3,Active Slot 4,Save to state 1,Restore state 1,Save to state 2,Restore state 2,Save to state 3,Restore state 3,Save to state 4,Restore state 4;v,1;V,v260927",
+ "dumped": "2026-11-13T23:05:05"
+}

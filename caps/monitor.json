@@ -1,0 +1,10 @@
+{
+ "name": "MiSTer Monitor",
+ "kind": "addon",
+ "by": "MiSTer Monitor",
+ "any": [
+  {
+   "path": "Scripts/MiSTer_Monitor.sh"
+  }
+ ]
+}

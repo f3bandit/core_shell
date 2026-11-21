@@ -1,0 +1,257 @@
+{
+ "coreshell_profile": 1,
+ "system": "superacan",
+ "variant": "stock",
+ "name": "SuperAcan",
+ "rbf": "_Console/SuperAcan",
+ "setname": null,
+ "core_name": "SuperAcan",
+ "config_file": "SuperAcan.CFG",
+ "games_dir": "games/SuperAcan",
+ "saves_dir": "saves/SuperAcan",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "BIN"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load Cartridge"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load Cartridge",
+   "page": 0,
+   "flags": [],
+   "remember_dir": true
+  }
+ ],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Save state (Alt-F1)",
+   "bits": [
+    20,
+    20
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "d0"
+   ]
+  },
+  {
+   "name": "Restore state (F1)",
+   "bits": [
+    21,
+    21
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "d0"
+   ]
+  },
+  {
+   "name": "Save Backup RAM",
+   "bits": [
+    13,
+    13
+   ],
+   "kind": "toggle",
+   "page": 2,
+   "flags": [
+    "h1"
+   ]
+  },
+  {
+   "name": "Restore Backup RAM",
+   "bits": [
+    14,
+    14
+   ],
+   "kind": "toggle",
+   "page": 2,
+   "flags": [
+    "h1"
+   ]
+  },
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": true,
+ "menu": [
+  {
+   "page": "",
+   "name": "Savestate slot",
+   "values": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "default": "1",
+   "bits": [
+    18,
+    19
+   ],
+   "core_flags": [
+    "d0"
+   ],
+   "key": "Savestate slot",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    121,
+    122
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Crop",
+   "values": [
+    "224",
+    "240",
+    "Auto"
+   ],
+   "default": "224",
+   "bits": [
+    15,
+    16
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Crop",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    25,
+    27
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    22,
+    24
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "Advanced",
+   "name": "Autosave",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    12,
+    12
+   ],
+   "core_flags": [],
+   "key": "Advanced/Autosave",
+   "mgl_ok": true
+  },
+  {
+   "page": "Advanced",
+   "name": "Cartridge byte order",
+   "values": [
+    "Auto",
+    "Word-swapped",
+    "Big-endian"
+   ],
+   "default": "Auto",
+   "bits": [
+    30,
+    31
+   ],
+   "core_flags": [],
+   "key": "Advanced/Cartridge byte order",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Multitap",
+   "values": [
+    "Off",
+    "Port 1",
+    "Both"
+   ],
+   "default": "Off",
+   "bits": [
+    28,
+    29
+   ],
+   "core_flags": [],
+   "key": "Multitap",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "SuperAcan_20260911.rbf",
+  "rbf_md5": "0151b5fdb477a099624302e77be41a7e",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:09:20",
+  "confstr_sha1": "829f8fd5dff2caa860a4f5b8238e131854527ac1"
+ }
+}

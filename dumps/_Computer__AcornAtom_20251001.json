@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/AcornAtom_20251001.rbf",
+ "rbf_md5": "20c3ba866c40142b9a97bd6b82c0aed1",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "AcornAtom;;-;S,VHD;-;OBC,Aspect ratio,Original,Full Screen,[ARC1],[ARC2];O13,Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%,CRT 75%;-;O45,Audio,Atom,SID,TAPE,off;O67,Keyboard,UK,US,orig,game;O8,character set,original,xtra;O9,Background,Black,Dark;OA,Mode,Atom,BBC;-;R0,Reset;JA,Fire;V,v251001",
+ "dumped": "2026-11-13T23:09:44"
+}

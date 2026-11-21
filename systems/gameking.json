@@ -1,0 +1,244 @@
+{
+ "coreshell_profile": 1,
+ "system": "gameking",
+ "variant": "stock",
+ "name": "GameKing",
+ "rbf": "_Console/GameKing",
+ "setname": null,
+ "core_name": "GameKing",
+ "config_file": "GameKing.CFG",
+ "games_dir": "games/GameKing",
+ "saves_dir": "saves/GameKing",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "BIN"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load Cartridge"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load Cartridge",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "GBP"
+   ],
+   "label": "Load Palette",
+   "page": 1,
+   "flags": [
+    "H0"
+   ],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Save state (Alt-F1)",
+   "bits": [
+    42,
+    42
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "d7"
+   ]
+  },
+  {
+   "name": "Restore state (F1)",
+   "bits": [
+    43,
+    43
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "d7"
+   ]
+  },
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Savestate Slot",
+   "values": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "default": "1",
+   "bits": [
+    45,
+    46
+   ],
+   "core_flags": [
+    "d7"
+   ],
+   "key": "Savestate Slot",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Palette",
+   "values": [
+    "LCD",
+    "Greyscale",
+    "Custom"
+   ],
+   "default": "LCD",
+   "bits": [
+    2,
+    3
+   ],
+   "core_flags": [],
+   "key": "Video/Palette",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Aspect Ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "16:9"
+   ],
+   "default": "Original",
+   "bits": [
+    8,
+    9
+   ],
+   "core_flags": [],
+   "key": "Video/Aspect Ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Display Mode",
+   "values": [
+    "Glass",
+    "Scaled",
+    "Raw"
+   ],
+   "default": "Glass",
+   "bits": [
+    18,
+    19
+   ],
+   "core_flags": [],
+   "key": "Video/Display Mode",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    11,
+    13
+   ],
+   "core_flags": [],
+   "key": "Video/Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Integer(Narrow)",
+    "Integer(Wide)"
+   ],
+   "default": "Normal",
+   "bits": [
+    14,
+    15
+   ],
+   "core_flags": [],
+   "key": "Video/Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "Advanced",
+   "name": "Region Jumper",
+   "values": [
+    "Other",
+    "Chinese"
+   ],
+   "default": "Other",
+   "bits": [
+    7,
+    7
+   ],
+   "core_flags": [],
+   "key": "Advanced/Region Jumper",
+   "mgl_ok": true
+  },
+  {
+   "page": "Advanced",
+   "name": "Disable Auto-Sleep",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    17,
+    17
+   ],
+   "core_flags": [],
+   "key": "Advanced/Disable Auto-Sleep",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "GameKing_20260903.rbf",
+  "rbf_md5": "6dfe4132d3b3345e3de013328d0ebc50",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:04:44",
+  "confstr_sha1": "fce74510d6bcfbae536ba8f6f054275d5f1d2266"
+ }
+}

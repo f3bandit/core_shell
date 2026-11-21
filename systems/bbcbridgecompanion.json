@@ -1,0 +1,139 @@
+{
+ "coreshell_profile": 1,
+ "system": "bbcbridgecompanion",
+ "variant": "stock",
+ "name": "BBCBridgeCompanion",
+ "rbf": "_Console/BBCBridgeCompanion",
+ "setname": null,
+ "core_name": "BBCBridgeCompanion",
+ "config_file": "BBCBridgeCompanion.CFG",
+ "games_dir": "games/BBCBridgeCompanion",
+ "saves_dir": "saves/BBCBridgeCompanion",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "BIN"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load custom cartridge"
+  }
+ ],
+ "files": [
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load BIOS",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load custom cartridge",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    3,
+    5
+   ],
+   "core_flags": [],
+   "key": "Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    8,
+    9
+   ],
+   "core_flags": [],
+   "key": "Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Cartridge",
+   "values": [
+    "Empty",
+    "Advanced Bidding",
+    "Advanced Defence",
+    "Bridge Builder",
+    "Conventions 1",
+    "Club Play 1",
+    "Club Play 2",
+    "Club Play 3",
+    "Duplicate 1",
+    "Master Play 1"
+   ],
+   "default": "Empty",
+   "bits": [
+    10,
+    13
+   ],
+   "core_flags": [],
+   "key": "Cartridge",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "BBCBridgeCompanion_20250101.rbf",
+  "rbf_md5": "1ebe43ebbc1c8639d40cc6a533787d48",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:04:09",
+  "confstr_sha1": "2702be2863ebb9fe3319075a1e3d4cea44f75ad7"
+ }
+}

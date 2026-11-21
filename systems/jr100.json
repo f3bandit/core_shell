@@ -1,0 +1,234 @@
+{
+ "coreshell_profile": 1,
+ "system": "jr100",
+ "variant": "stock",
+ "name": "JR100",
+ "rbf": "_Computer/JR100",
+ "setname": null,
+ "core_name": "JR100",
+ "config_file": "JR100.CFG",
+ "games_dir": "games/JR100",
+ "saves_dir": "saves/JR100",
+ "rom": {
+  "index": 0,
+  "type": "f",
+  "exts": [
+   "rom"
+  ]
+ },
+ "slots": [
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "rom"
+   ],
+   "label": "Load BASIC ROM"
+  },
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "prg"
+   ],
+   "label": "Load PRG"
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "bas"
+   ],
+   "label": "Load BAS"
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "prg"
+   ],
+   "label": "Mount Save File"
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "cmt"
+   ],
+   "label": "Mount Tape"
+  }
+ ],
+ "files": [
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "rom"
+   ],
+   "label": "Load BASIC ROM",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "prg"
+   ],
+   "label": "Load PRG",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "bas"
+   ],
+   "label": "Load BAS",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "prg"
+   ],
+   "label": "Mount Save File",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "cmt"
+   ],
+   "label": "Mount Tape",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Save BASIC to file",
+   "bits": [
+    3,
+    3
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Tape Play",
+   "bits": [
+    4,
+    4
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    121,
+    122
+   ],
+   "core_flags": [],
+   "key": "Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Display color",
+   "values": [
+    "White",
+    "Green",
+    "Amber",
+    "Cyan",
+    "Orange",
+    "Blue",
+    "Paper",
+    "Mint"
+   ],
+   "default": "White",
+   "bits": [
+    6,
+    8
+   ],
+   "core_flags": [],
+   "key": "Display color",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Extended RAM (reset)",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    2,
+    2
+   ],
+   "core_flags": [],
+   "key": "Extended RAM (reset)",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Autostart loaded program",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    5,
+    5
+   ],
+   "core_flags": [],
+   "key": "Autostart loaded program",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "JR100_20260801.rbf",
+  "rbf_md5": "f2f6a0eaa427dac6992522d909108554",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:11:31",
+  "confstr_sha1": "47344ef97cb121efe717fee59c9bfa4bd8c32831"
+ }
+}

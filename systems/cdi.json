@@ -1,0 +1,419 @@
+{
+ "coreshell_profile": 1,
+ "system": "cdi",
+ "variant": "stock",
+ "name": "CD-i",
+ "rbf": "_Console/CDi",
+ "setname": null,
+ "core_name": "CD-i",
+ "config_file": "CD-i.CFG",
+ "games_dir": "games/CD-i",
+ "saves_dir": "saves/CD-i",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "ROM"
+  ]
+ },
+ "slots": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "CUE",
+    "CHD"
+   ],
+   "label": "Load CD"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Replace Boot ROM",
+   "page": 2,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "CUE",
+    "CHD"
+   ],
+   "label": "Load CD",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Reset and close OSD",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "Audio & Video",
+   "name": "Video Region",
+   "values": [
+    "PAL",
+    "NTSC"
+   ],
+   "default": "PAL",
+   "bits": [
+    4,
+    4
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Video Region",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    32,
+    33
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    34,
+    35
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Vertical Crop",
+   "values": [
+    "Off",
+    "On(270)"
+   ],
+   "default": "Off",
+   "bits": [
+    39,
+    39
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Vertical Crop",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "RGB Scale",
+   "values": [
+    "0-255",
+    "16-235",
+    "16-255"
+   ],
+   "default": "0-255",
+   "bits": [
+    9,
+    10
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/RGB Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "Debug Options",
+   "name": "Disable Audio Att.",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    2,
+    2
+   ],
+   "core_flags": [],
+   "key": "Debug Options/Disable Audio Att.",
+   "mgl_ok": true
+  },
+  {
+   "page": "Debug Options",
+   "name": "UART Fake Space",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    3,
+    3
+   ],
+   "core_flags": [],
+   "key": "Debug Options/UART Fake Space",
+   "mgl_ok": true
+  },
+  {
+   "page": "Debug Options",
+   "name": "Force Video Plane",
+   "values": [
+    "Original",
+    "A",
+    "B",
+    "DVC"
+   ],
+   "default": "Original",
+   "bits": [
+    6,
+    7
+   ],
+   "core_flags": [],
+   "key": "Debug Options/Force Video Plane",
+   "mgl_ok": true
+  },
+  {
+   "page": "Debug Options",
+   "name": "SERVO Audio CD",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    12,
+    12
+   ],
+   "core_flags": [],
+   "key": "Debug Options/SERVO Audio CD",
+   "mgl_ok": true
+  },
+  {
+   "page": "Debug Options",
+   "name": "Disable VCD pixel clock",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    17,
+    17
+   ],
+   "core_flags": [],
+   "key": "Debug Options/Disable VCD pixel clock",
+   "mgl_ok": true
+  },
+  {
+   "page": "Debug Options",
+   "name": "Activate VCD filter",
+   "values": [
+    "Yes",
+    "No"
+   ],
+   "default": "Yes",
+   "bits": [
+    18,
+    18
+   ],
+   "core_flags": [],
+   "key": "Debug Options/Activate VCD filter",
+   "mgl_ok": true
+  },
+  {
+   "page": "Debug Options",
+   "name": "CD image live update",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    19,
+    19
+   ],
+   "core_flags": [],
+   "key": "Debug Options/CD image live update",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware Config",
+   "name": "Ports",
+   "values": [
+    " P1 Front + UART Back",
+    " P1 Back + P2 Front"
+   ],
+   "default": " P1 Front + UART Back",
+   "bits": [
+    15,
+    15
+   ],
+   "core_flags": [],
+   "key": "Hardware Config/Ports",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware Config",
+   "name": "Overclock input device",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    5,
+    5
+   ],
+   "core_flags": [],
+   "key": "Hardware Config/Overclock input device",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware Config",
+   "name": "Disable VMPEG DVC",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    13,
+    13
+   ],
+   "core_flags": [],
+   "key": "Hardware Config/Disable VMPEG DVC",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware Config",
+   "name": "Fast CD Seek",
+   "values": [
+    "No",
+    "Yes(U)"
+   ],
+   "default": "No",
+   "bits": [
+    16,
+    16
+   ],
+   "core_flags": [],
+   "key": "Hardware Config/Fast CD Seek",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware Config",
+   "name": "CPU Turbo",
+   "values": [
+    "No",
+    "Yes(U)"
+   ],
+   "default": "No",
+   "bits": [
+    11,
+    11
+   ],
+   "core_flags": [],
+   "key": "Hardware Config/CPU Turbo",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware Config",
+   "name": "NvRAM live update",
+   "values": [
+    "No",
+    "Yes(U)"
+   ],
+   "default": "No",
+   "bits": [
+    8,
+    8
+   ],
+   "core_flags": [],
+   "key": "Hardware Config/NvRAM live update",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Pointer Speed",
+   "values": [
+    "22ER9021 N",
+    "22ER9021 II",
+    "RV 8701",
+    "22ER9021 I"
+   ],
+   "default": "22ER9021 N",
+   "bits": [
+    19,
+    21
+   ],
+   "core_flags": [],
+   "key": "Pointer Speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Autoplay",
+   "values": [
+    "Yes",
+    "No"
+   ],
+   "default": "Yes",
+   "bits": [
+    14,
+    14
+   ],
+   "core_flags": [],
+   "key": "Autoplay",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "CDi_20260502.rbf",
+  "rbf_md5": "d61b1a3e35723efba184e8ceff963630",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:04:12",
+  "confstr_sha1": "9ab8503ae02bd7412f411cf90b252340393b04b3"
+ }
+}

@@ -1,0 +1,7 @@
+{
+ "rbf": "_Utility/ADCTest_20250619.rbf",
+ "rbf_md5": "feddb9755f1534a0999607805af359a1",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "ADCTest;;-;O[122:121],Aspect ratio,Original,Full Screen,[ARC1],[ARC2];-;O[3],Scale,3.3V,Line Level;O[4],Audio Passthru,No,Yes;-;T[0],Reset;R[0],Reset and close OSD;v,0;V,v250619",
+ "dumped": "2026-11-13T23:17:39"
+}

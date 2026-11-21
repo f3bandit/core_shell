@@ -1,0 +1,183 @@
+{
+ "coreshell_profile": 1,
+ "system": "alicemc10",
+ "variant": "stock",
+ "name": "AliceMC10",
+ "rbf": "_Computer/AliceMC10",
+ "setname": null,
+ "core_name": "AliceMC10",
+ "config_file": "AliceMC10.CFG",
+ "games_dir": "games/AliceMC10",
+ "saves_dir": "saves/AliceMC10",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "c10"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "c10"
+   ],
+   "label": "Tape Load"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "c10"
+   ],
+   "label": "Tape Load",
+   "page": 0,
+   "flags": [
+    "D0"
+   ],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Tape Play/Pause",
+   "bits": [
+    10,
+    10
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": [
+    "D0"
+   ]
+  },
+  {
+   "name": "Tape Rewind",
+   "bits": [
+    11,
+    11
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": [
+    "D0"
+   ]
+  },
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Reset and close OSD",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Aspect ratio",
+   "values": [
+    "4:3",
+    "16:9"
+   ],
+   "default": "4:3",
+   "bits": [
+    1,
+    1
+   ],
+   "core_flags": [],
+   "key": "Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "16k expansion",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    12,
+    12
+   ],
+   "core_flags": [],
+   "key": "16k expansion",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Tape Input",
+   "values": [
+    "File",
+    "ADC"
+   ],
+   "default": "File",
+   "bits": [
+    15,
+    15
+   ],
+   "core_flags": [],
+   "key": "Tape Input",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Show tape stream",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    13,
+    13
+   ],
+   "core_flags": [],
+   "key": "Show tape stream",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Enable tape audio",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    14,
+    14
+   ],
+   "core_flags": [],
+   "key": "Enable tape audio",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "AliceMC10_20210116.rbf",
+  "rbf_md5": "9ac9681a659b227eb39b7ea06a5be454",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:09:49",
+  "confstr_sha1": "517b857aa0d2b287b3ec69030fa72c2c84fa7759"
+ }
+}

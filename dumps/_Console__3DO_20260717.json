@@ -1,0 +1,7 @@
+{
+ "rbf": "_Console/3DO_20260717.rbf",
+ "rbf_md5": "85520af995519761c06d5ac3c70e6adc",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "3DO;;S0,CUEISO,Insert Disk;FS2,BIN,Load bios;-;OFG,Region,BIOS,NTSC,PAL;-;D0RC,Load Backup RAM;D0RD,Save Backup RAM;D0OE,Autosave,Off,On;-;P1,Audio & Video;P1O67,Scale,Normal,V-Integer,Narrower HV-Integer,Wider HV-Integer;P1O89,Vertical Crop,Disabled,216p(5x),224p;P2,Input;P2O[34:32],Pad,1,2,3,4,Off;D1P2O[35],Flightstick,Off,On;D2P2O[36],Mouse,Off,On;P2O[38:37],Arcade control,Off,Trackball;P2O[39],Arcade service,Off,On;P2-;P3,Hardware;P3OJ,Video mode,240p,480i(original);P4,Debug;P4OH,H Interpolation,Off,On;P4OI,V Interpolation,Off,On;-;R0,Reset;J1,A,B,C,P,X,R,L,T/Start,Coin;V,v260717",
+ "dumped": "2026-11-13T22:59:09"
+}

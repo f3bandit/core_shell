@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/Interact_20251005.rbf",
+ "rbf_md5": "a4796da9b9be84606829af4565b28b59",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "Interact;;F,CINK7 ,Load tape;TE,Play;TF,Stop & Rewind;-;OAB,Aspect ratio,Original,Full Screen,[ARC1],[ARC2];O24,Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%,CRT 75%;OCD,Scale,Normal,V-Integer,Narrower HV-Integer,Wider HV-Integer;-;O6,Test Pattern,Off,On;-;T0,Reset;R0,Reset and close OSD;V,v251005",
+ "dumped": "2026-11-13T23:11:28"
+}

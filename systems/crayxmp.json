@@ -1,0 +1,247 @@
+{
+ "coreshell_profile": 1,
+ "system": "crayxmp",
+ "variant": "stock",
+ "name": "Cray-XMP",
+ "rbf": "_Computer/Cray-XMP",
+ "setname": null,
+ "core_name": "Cray-XMP",
+ "config_file": "Cray-XMP_v1.CFG",
+ "games_dir": "games/Cray-XMP",
+ "saves_dir": "saves/Cray-XMP",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "IOS"
+  ]
+ },
+ "slots": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "IMG"
+   ],
+   "label": "Expander disk"
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "IMG"
+   ],
+   "label": "Disk drives"
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "TXT"
+   ],
+   "label": "Printer file"
+  },
+  {
+   "index": 3,
+   "type": "s",
+   "exts": [
+    "TAP"
+   ],
+   "label": "Tape"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "IOS"
+   ],
+   "label": "Load boot file",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "IMG"
+   ],
+   "label": "Expander disk",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "IMG"
+   ],
+   "label": "Disk drives",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "TXT"
+   ],
+   "label": "Printer file",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 3,
+   "type": "s",
+   "exts": [
+    "TAP"
+   ],
+   "label": "Tape",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Reset and close OSD",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    121,
+    122
+   ],
+   "core_flags": [],
+   "key": "Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    5,
+    6
+   ],
+   "core_flags": [],
+   "key": "Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    7,
+    9
+   ],
+   "core_flags": [],
+   "key": "Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Text color",
+   "values": [
+    "White",
+    "Green",
+    "Amber",
+    "Cyan"
+   ],
+   "default": "White",
+   "bits": [
+    3,
+    4
+   ],
+   "core_flags": [],
+   "key": "Text color",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Font",
+   "values": [
+    "8x8 (15kHz)",
+    "8x16 (31kHz)"
+   ],
+   "default": "8x8 (15kHz)",
+   "bits": [
+    14,
+    14
+   ],
+   "core_flags": [],
+   "key": "Font",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Device times",
+   "values": [
+    "Fast",
+    "Real"
+   ],
+   "default": "Fast",
+   "bits": [
+    15,
+    15
+   ],
+   "core_flags": [],
+   "key": "Device times",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "Cray-XMP_20261025.rbf",
+  "rbf_md5": "39e65c4b6fe59108bbc34ca698fe88bc",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:11:08",
+  "confstr_sha1": "871a682c05daf3cdc2491cb20fe8ff2fd115f6a6"
+ }
+}

@@ -1,0 +1,757 @@
+{
+ "coreshell_profile": 1,
+ "system": "ti994a",
+ "variant": "stock",
+ "name": "TI-99_4A",
+ "rbf": "_Computer/Ti994a",
+ "setname": null,
+ "core_name": "TI-99_4A",
+ "config_file": "TI-99_4A.CFG",
+ "games_dir": "games/TI-99_4A",
+ "saves_dir": "saves/TI-99_4A",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "M99",
+   "BIN"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "M99",
+    "BIN"
+   ],
+   "label": "Load Full Cart"
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load Rom Cart"
+  },
+  {
+   "index": 3,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load Grom Cart"
+  },
+  {
+   "index": 4,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Select System Grom"
+  },
+  {
+   "index": 6,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Select Speech Rom "
+  },
+  {
+   "index": 7,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Select Disk DSR   "
+  },
+  {
+   "index": 8,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Select TIPI DSR   "
+  },
+  {
+   "index": 9,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Select P-Code Rom "
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Drive 1"
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Drive 2"
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Drive 3"
+  },
+  {
+   "index": 3,
+   "type": "s",
+   "exts": [
+    "DAT"
+   ],
+   "label": "NVRAM File"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "M99",
+    "BIN"
+   ],
+   "label": "Load Full Cart",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load Rom Cart",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 3,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load Grom Cart",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 4,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Select System Grom",
+   "page": 3,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 5,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Select System Rom ",
+   "page": 3,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 6,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Select Speech Rom ",
+   "page": 3,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 7,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Select Disk DSR   ",
+   "page": 3,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 8,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Select TIPI DSR   ",
+   "page": 3,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 9,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Select P-Code Rom ",
+   "page": 3,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Drive 1",
+   "page": 0,
+   "flags": [
+    "d6"
+   ]
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Drive 2",
+   "page": 0,
+   "flags": [
+    "d6"
+   ]
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Drive 3",
+   "page": 0,
+   "flags": [
+    "d6"
+   ]
+  },
+  {
+   "index": 3,
+   "type": "s",
+   "exts": [
+    "DAT"
+   ],
+   "label": "NVRAM File",
+   "page": 1,
+   "flags": []
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Load NVRAM",
+   "bits": [
+    60,
+    60
+   ],
+   "kind": "reset",
+   "page": 1,
+   "flags": [
+    "D5"
+   ]
+  },
+  {
+   "name": "Save NVRAM",
+   "bits": [
+    61,
+    61
+   ],
+   "kind": "reset",
+   "page": 1,
+   "flags": [
+    "D5"
+   ]
+  },
+  {
+   "name": "Reset & Detach Cart",
+   "bits": [
+    27,
+    27
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "TIFDC Disk Speed",
+   "values": [
+    "Normal",
+    "Turbo"
+   ],
+   "default": "Normal",
+   "bits": [
+    28,
+    28
+   ],
+   "core_flags": [
+    "h2"
+   ],
+   "key": "TIFDC Disk Speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "MyArc FDC Dip Switches",
+   "name": "MyArc Disk Speed",
+   "values": [
+    "Normal",
+    "Turbo"
+   ],
+   "default": "Normal",
+   "bits": [
+    28,
+    28
+   ],
+   "core_flags": [],
+   "key": "MyArc FDC Dip Switches/MyArc Disk Speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "MyArc FDC Dip Switches",
+   "name": "Drive 1 Seek Speed",
+   "values": [
+    "6ms",
+    "20/2ms"
+   ],
+   "default": "6ms",
+   "bits": [
+    29,
+    29
+   ],
+   "core_flags": [
+    "H4"
+   ],
+   "key": "MyArc FDC Dip Switches/Drive 1 Seek Speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "MyArc FDC Dip Switches",
+   "name": "Drive 2 Seek Speed",
+   "values": [
+    "6ms",
+    "20/2ms"
+   ],
+   "default": "6ms",
+   "bits": [
+    30,
+    30
+   ],
+   "core_flags": [
+    "H4"
+   ],
+   "key": "MyArc FDC Dip Switches/Drive 2 Seek Speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "MyArc FDC Dip Switches",
+   "name": "Drive 3 Seek Speed",
+   "values": [
+    "6ms",
+    "20/2ms"
+   ],
+   "default": "6ms",
+   "bits": [
+    31,
+    31
+   ],
+   "core_flags": [
+    "H4"
+   ],
+   "key": "MyArc FDC Dip Switches/Drive 3 Seek Speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "MyArc FDC Dip Switches",
+   "name": "Drive 1 Drive Type",
+   "values": [
+    "5-1/4\"",
+    "3-1/2\""
+   ],
+   "default": "5-1/4\"",
+   "bits": [
+    29,
+    29
+   ],
+   "core_flags": [
+    "h4"
+   ],
+   "key": "MyArc FDC Dip Switches/Drive 1 Drive Type",
+   "mgl_ok": true
+  },
+  {
+   "page": "MyArc FDC Dip Switches",
+   "name": "Drive 2 Drive Type",
+   "values": [
+    "5-1/4\"",
+    "3-1/2\""
+   ],
+   "default": "5-1/4\"",
+   "bits": [
+    30,
+    30
+   ],
+   "core_flags": [
+    "h4"
+   ],
+   "key": "MyArc FDC Dip Switches/Drive 2 Drive Type",
+   "mgl_ok": true
+  },
+  {
+   "page": "MyArc FDC Dip Switches",
+   "name": "Drive 3 Drive Type",
+   "values": [
+    "5-1/4\"",
+    "3-1/2\""
+   ],
+   "default": "5-1/4\"",
+   "bits": [
+    31,
+    31
+   ],
+   "core_flags": [
+    "h4"
+   ],
+   "key": "MyArc FDC Dip Switches/Drive 3 Drive Type",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Cart Type",
+   "values": [
+    "Normal",
+    "MBX",
+    "Paged7",
+    "Paged378",
+    "Paged379",
+    "MiniMem"
+   ],
+   "default": "Normal",
+   "bits": [
+    18,
+    20
+   ],
+   "core_flags": [],
+   "key": "Cart Type",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video Settings",
+   "name": "Video Mode",
+   "values": [
+    "NTSC",
+    " PAL"
+   ],
+   "default": "NTSC",
+   "bits": [
+    13,
+    13
+   ],
+   "core_flags": [],
+   "key": "Video Settings/Video Mode",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video Settings",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x-320",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    7,
+    9
+   ],
+   "core_flags": [],
+   "key": "Video Settings/Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video Settings",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    5,
+    6
+   ],
+   "core_flags": [],
+   "key": "Video Settings/Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video Settings",
+   "name": "Aspect Ratio",
+   "values": [
+    "Original",
+    "Full Screen"
+   ],
+   "default": "Original",
+   "bits": [
+    1,
+    1
+   ],
+   "core_flags": [],
+   "key": "Video Settings/Aspect Ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video Settings",
+   "name": "Vertical Crop",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    21,
+    21
+   ],
+   "core_flags": [
+    "D1"
+   ],
+   "key": "Video Settings/Vertical Crop",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Turbo",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    10,
+    10
+   ],
+   "core_flags": [],
+   "key": "Hardware/Turbo",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Scratchpad RAM",
+   "values": [
+    "256B",
+    "1KB"
+   ],
+   "default": "256B",
+   "bits": [
+    14,
+    14
+   ],
+   "core_flags": [],
+   "key": "Hardware/Scratchpad RAM",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Speech",
+   "values": [
+    "Off",
+    "5220",
+    "5200"
+   ],
+   "default": "Off",
+   "bits": [
+    16,
+    17
+   ],
+   "core_flags": [],
+   "key": "Hardware/Speech",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Alpha Lock on Power Up",
+   "values": [
+    " Off",
+    " On"
+   ],
+   "default": " Off",
+   "bits": [
+    15,
+    15
+   ],
+   "core_flags": [],
+   "key": "Hardware/Alpha Lock on Power Up",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "SAMS Memory",
+   "values": [
+    "Disabled",
+    "Enabled"
+   ],
+   "default": "Disabled",
+   "bits": [
+    22,
+    22
+   ],
+   "core_flags": [],
+   "key": "Hardware/SAMS Memory",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "TiPi",
+   "values": [
+    "Disabled",
+    "Enabled"
+   ],
+   "default": "Disabled",
+   "bits": [
+    23,
+    23
+   ],
+   "core_flags": [],
+   "key": "Hardware/TiPi",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "TiPi CRU Base",
+   "values": [
+    "1000",
+    "1100",
+    "1200",
+    "1400"
+   ],
+   "default": "1000",
+   "bits": [
+    24,
+    25
+   ],
+   "core_flags": [],
+   "key": "Hardware/TiPi CRU Base",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "PCode",
+   "values": [
+    "Disabled",
+    "Enabled"
+   ],
+   "default": "Disabled",
+   "bits": [
+    26,
+    26
+   ],
+   "core_flags": [],
+   "key": "Hardware/PCode",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Arrow Keys",
+   "values": [
+    "Cursor",
+    " Joystick"
+   ],
+   "default": "Cursor",
+   "bits": [
+    12,
+    12
+   ],
+   "core_flags": [],
+   "key": "Arrow Keys",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Swap joysticks",
+   "values": [
+    "NO",
+    "YES"
+   ],
+   "default": "NO",
+   "bits": [
+    11,
+    11
+   ],
+   "core_flags": [],
+   "key": "Swap joysticks",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Mouse",
+   "values": [
+    "Disabled",
+    "Mechatronics",
+    "Joy1",
+    "Joy2"
+   ],
+   "default": "Disabled",
+   "bits": [
+    32,
+    33
+   ],
+   "core_flags": [],
+   "key": "Mouse",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "Ti994a_20251203.rbf",
+  "rbf_md5": "15ca2e01dd2818f370fbe0063e701e3d",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:13:49",
+  "confstr_sha1": "1f26cee6cff5cb28b38df01e6594c773d818c031"
+ }
+}

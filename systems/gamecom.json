@@ -1,0 +1,394 @@
+{
+ "coreshell_profile": 1,
+ "system": "gamecom",
+ "variant": "stock",
+ "name": "Gamecom",
+ "rbf": "_Console/GameCom",
+ "setname": null,
+ "core_name": "Gamecom",
+ "config_file": "Gamecom_v7.CFG",
+ "games_dir": "games/Gamecom",
+ "saves_dir": "saves/Gamecom",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "TGC"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "TGC"
+   ],
+   "label": "Load Cartridge 1"
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "TGC"
+   ],
+   "label": "Load Cartridge 2 (No SS)"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "TGC"
+   ],
+   "label": "Load Cartridge 1",
+   "page": 0,
+   "flags": [],
+   "remember_dir": true
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "TGC"
+   ],
+   "label": "Load Cartridge 2 (No SS)",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 3,
+   "type": "f",
+   "exts": [
+    "GBP"
+   ],
+   "label": "Load Palette",
+   "page": 2,
+   "flags": [
+    "H0"
+   ],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Save state(Alt+F1-F4)",
+   "bits": [
+    42,
+    42
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "d7"
+   ]
+  },
+  {
+   "name": "Restore state(F1-F4)",
+   "bits": [
+    43,
+    43
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "d7"
+   ]
+  },
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": true,
+ "menu": [
+  {
+   "page": "",
+   "name": "Savestate Slot",
+   "values": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "default": "1",
+   "bits": [
+    45,
+    46
+   ],
+   "core_flags": [],
+   "key": "Savestate Slot",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Touch Control",
+   "values": [
+    "Mouse",
+    "Stick",
+    "Hybrid",
+    "Off"
+   ],
+   "default": "Mouse",
+   "bits": [
+    17,
+    18
+   ],
+   "core_flags": [],
+   "key": "Input/Touch Control",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Touch Speed",
+   "values": [
+    "Normal",
+    "Slow",
+    "Fast",
+    "Turbo"
+   ],
+   "default": "Normal",
+   "bits": [
+    19,
+    20
+   ],
+   "core_flags": [],
+   "key": "Input/Touch Speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Touch Cursor",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    23,
+    23
+   ],
+   "core_flags": [],
+   "key": "Input/Touch Cursor",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Serial Port",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    21,
+    21
+   ],
+   "core_flags": [],
+   "key": "Input/Serial Port",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Serial Route",
+   "values": [
+    "Internal",
+    "SNAC"
+   ],
+   "default": "Internal",
+   "bits": [
+    26,
+    26
+   ],
+   "core_flags": [],
+   "key": "Input/Serial Route",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Video Output",
+   "values": [
+    "Buffered 60Hz",
+    "Native 75Hz"
+   ],
+   "default": "Buffered 60Hz",
+   "bits": [
+    25,
+    25
+   ],
+   "core_flags": [],
+   "key": "Video/Video Output",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    1,
+    3
+   ],
+   "core_flags": [],
+   "key": "Video/Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    121,
+    122
+   ],
+   "core_flags": [],
+   "key": "Video/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    119,
+    120
+   ],
+   "core_flags": [],
+   "key": "Video/Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Custom Palette",
+   "values": [
+    "Kit.com",
+    "Greenish",
+    "Greyish",
+    "Custom"
+   ],
+   "default": "Kit.com",
+   "bits": [
+    5,
+    6
+   ],
+   "core_flags": [],
+   "key": "Video/Custom Palette",
+   "mgl_ok": true
+  },
+  {
+   "page": "Advanced",
+   "name": "Stop-Free Boot",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    22,
+    22
+   ],
+   "core_flags": [],
+   "key": "Advanced/Stop-Free Boot",
+   "mgl_ok": true
+  },
+  {
+   "page": "Advanced",
+   "name": "Cart SDRAM ROM",
+   "values": [
+    "2-Cycle",
+    "Wait Ready"
+   ],
+   "default": "2-Cycle",
+   "bits": [
+    27,
+    27
+   ],
+   "core_flags": [],
+   "key": "Advanced/Cart SDRAM ROM",
+   "mgl_ok": true
+  },
+  {
+   "page": "Advanced",
+   "name": "Reset During Cart Load",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    24,
+    24
+   ],
+   "core_flags": [],
+   "key": "Advanced/Reset During Cart Load",
+   "mgl_ok": true
+  },
+  {
+   "page": "Advanced",
+   "name": "Autosave",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    13,
+    13
+   ],
+   "core_flags": [],
+   "key": "Advanced/Autosave",
+   "mgl_ok": true
+  },
+  {
+   "page": "Advanced",
+   "name": "Savestates to SDCard",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    44,
+    44
+   ],
+   "core_flags": [],
+   "key": "Advanced/Savestates to SDCard",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "GameCom_20260903.rbf",
+  "rbf_md5": "d3088bbbe0185343f7831f26c80aefd1",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:04:38",
+  "confstr_sha1": "ac12c2edd90e52196d9b9eae58f18bd05a2e444e"
+ }
+}

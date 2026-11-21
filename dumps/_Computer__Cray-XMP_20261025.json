@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/Cray-XMP_20261025.rbf",
+ "rbf_md5": "39e65c4b6fe59108bbc34ca698fe88bc",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "Cray-XMP;;-;F1,IOS,Load boot file,34000000;S0,IMG,Expander disk;S1,IMG,Disk drives;S2,TXT,Printer file;S3,TAP,Tape;-;O[122:121],Aspect ratio,Original,Full Screen,[ARC1],[ARC2];O[6:5],Scale,Normal,V-Integer,Narrower HV-Integer,Wider HV-Integer;O[9:7],Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%,CRT 75%;O[4:3],Text color,White,Green,Amber,Cyan;O[14],Font,8x8 (15kHz),8x16 (31kHz);O[15],Device times,Fast,Real;-;T[0],Reset;R[0],Reset and close OSD;v,1;V,v261025",
+ "dumped": "2026-11-13T23:11:08"
+}

@@ -1,0 +1,164 @@
+{
+ "coreshell_profile": 1,
+ "system": "neon",
+ "variant": "stock",
+ "name": "Neon",
+ "rbf": "_Computer/Neon",
+ "setname": null,
+ "core_name": "Neon",
+ "config_file": "Neon.CFG",
+ "games_dir": "games/Neon",
+ "saves_dir": "saves/Neon",
+ "rom": {
+  "index": 0,
+  "type": "s",
+  "exts": [
+   "DSK"
+  ]
+ },
+ "slots": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Floppy FD0"
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Floppy FD1"
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "IMG"
+   ],
+   "label": "Hard disk"
+  }
+ ],
+ "files": [],
+ "mounts": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Floppy FD0",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Floppy FD1",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "IMG"
+   ],
+   "label": "Hard disk",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Reset and close OSD",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "RAM",
+   "values": [
+    "4 MB",
+    "512 KB",
+    "1 MB",
+    "2 MB"
+   ],
+   "default": "4 MB",
+   "bits": [
+    2,
+    3
+   ],
+   "core_flags": [],
+   "key": "RAM",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Timer IRQ5",
+   "values": [
+    "50 Hz frame",
+    "64 Hz clock"
+   ],
+   "default": "50 Hz frame",
+   "bits": [
+    4,
+    4
+   ],
+   "core_flags": [],
+   "key": "Timer IRQ5",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    121,
+    122
+   ],
+   "core_flags": [],
+   "key": "Aspect ratio",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "Neon_20261025.rbf",
+  "rbf_md5": "6676f2da439fb0c486d65f8492cb61c3",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:12:18",
+  "confstr_sha1": "fbaad9976834c29175588efc83092bfafe649b3e"
+ }
+}

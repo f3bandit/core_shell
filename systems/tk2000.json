@@ -1,0 +1,306 @@
+{
+ "coreshell_profile": 1,
+ "system": "tk2000",
+ "variant": "stock",
+ "name": "TK2000",
+ "rbf": "_Computer/TK2000",
+ "setname": null,
+ "core_name": "TK2000",
+ "config_file": "TK2000.CFG",
+ "games_dir": "games/TK2000",
+ "saves_dir": "saves/TK2000",
+ "rom": {
+  "index": 0,
+  "type": "s",
+  "exts": [
+   "NIB",
+   "DSK",
+   "DO",
+   "PO"
+  ]
+ },
+ "slots": [
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "CT2"
+   ],
+   "label": "Tape"
+  },
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load ROM"
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "NIB",
+    "DSK",
+    "DO",
+    "PO"
+   ],
+   "label": "Pri. drive (D1)"
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "NIB",
+    "DSK",
+    "DO",
+    "PO"
+   ],
+   "label": "Drive (D2)"
+  }
+ ],
+ "files": [
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "CT2"
+   ],
+   "label": "Tape",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load ROM",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "NIB",
+    "DSK",
+    "DO",
+    "PO"
+   ],
+   "label": "Pri. drive (D1)",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "NIB",
+    "DSK",
+    "DO",
+    "PO"
+   ],
+   "label": "Drive (D2)",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Warm reset (F2)",
+   "bits": [
+    18,
+    18
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Apply and reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Rewind tape",
+   "bits": [
+    11,
+    11
+   ],
+   "kind": "toggle",
+   "page": 1,
+   "flags": []
+  },
+  {
+   "name": "Tape play/stop",
+   "bits": [
+    12,
+    12
+   ],
+   "kind": "toggle",
+   "page": 1,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "Machine",
+   "name": "Disk interface",
+   "values": [
+    "Auto",
+    "On",
+    "Off"
+   ],
+   "default": "Auto",
+   "bits": [
+    16,
+    17
+   ],
+   "core_flags": [],
+   "key": "Machine/Disk interface",
+   "mgl_ok": true
+  },
+  {
+   "page": "Machine",
+   "name": "Tape speed",
+   "values": [
+    "7x",
+    "Normal"
+   ],
+   "default": "7x",
+   "bits": [
+    13,
+    13
+   ],
+   "core_flags": [],
+   "key": "Machine/Tape speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Display",
+   "values": [
+    "Color",
+    "B&W",
+    "Green",
+    "Amber"
+   ],
+   "default": "Color",
+   "bits": [
+    5,
+    6
+   ],
+   "core_flags": [],
+   "key": "Video/Display",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    19,
+    20
+   ],
+   "core_flags": [],
+   "key": "Video/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    21,
+    22
+   ],
+   "core_flags": [],
+   "key": "Video/Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    23,
+    25
+   ],
+   "core_flags": [],
+   "key": "Video/Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Tape overlay",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    14,
+    14
+   ],
+   "core_flags": [],
+   "key": "Video/Tape overlay",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio",
+   "name": "Tape audio",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    15,
+    15
+   ],
+   "core_flags": [],
+   "key": "Audio/Tape audio",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "repo": "MiSTer-devel/TK2000_MiSTer",
+  "commit": "7800adaab7d81f6153feac0b86a2824fe082e846",
+  "file": "TK2000.sv",
+  "rbf": "TK2000_20261108.rbf",
+  "rbf_md5": "cf6e7983c60d8348f38195f8ba5789f4",
+  "confstr_sha1": "eaee805c6fad6e8d139f4e38e3f32cc39b8d4452"
+ }
+}

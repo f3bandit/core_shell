@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/ORAO_20240729.rbf",
+ "rbf_md5": "f3d0a56da55c894a4692b8f257eea5ff",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "ORAO;;-;F,TAP;-;O2,Screen Color,White,Green;O1,Aspect Ratio,4:3,16:9;-;T6,Reset;V,v0.9.240705",
+ "dumped": "2026-11-13T23:12:21"
+}

@@ -1,0 +1,462 @@
+{
+ "coreshell_profile": 1,
+ "system": "coco2",
+ "variant": "stock",
+ "name": "CoCo2",
+ "rbf": "_Computer/CoCo2",
+ "setname": null,
+ "core_name": "CoCo2",
+ "config_file": "CoCo2.CFG",
+ "games_dir": "games/CoCo2",
+ "saves_dir": "saves/CoCo2",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "CCC",
+   "ROM"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "CCC",
+    "ROM"
+   ],
+   "label": "Load Cartridge"
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "CAS"
+   ],
+   "label": "Load Cassette"
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Load Disk Drive 0"
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Load Disk Drive 1"
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Load Disk Drive 2"
+  },
+  {
+   "index": 3,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Load Disk Drive 3"
+  },
+  {
+   "index": 4,
+   "type": "s",
+   "exts": [
+    "CAS"
+   ],
+   "label": "Save Cassette"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "CCC",
+    "ROM"
+   ],
+   "label": "Load Cartridge",
+   "page": 0,
+   "flags": [
+    "H1"
+   ],
+   "remember_dir": false
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "CAS"
+   ],
+   "label": "Load Cassette",
+   "page": 0,
+   "flags": [
+    "H0"
+   ],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Load Disk Drive 0",
+   "page": 0,
+   "flags": [
+    "H2"
+   ]
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Load Disk Drive 1",
+   "page": 0,
+   "flags": [
+    "H2"
+   ]
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Load Disk Drive 2",
+   "page": 0,
+   "flags": [
+    "H2"
+   ]
+  },
+  {
+   "index": 3,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Load Disk Drive 3",
+   "page": 0,
+   "flags": [
+    "H2"
+   ]
+  },
+  {
+   "index": 4,
+   "type": "s",
+   "exts": [
+    "CAS"
+   ],
+   "label": "Save Cassette",
+   "page": 0,
+   "flags": [
+    "H0"
+   ]
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Stop & Rewind",
+   "bits": [
+    27,
+    27
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": [
+    "H0"
+   ]
+  },
+  {
+   "name": "Hard Reset",
+   "bits": [
+    23,
+    23
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Cart Slot",
+   "values": [
+    "Cartridge",
+    "Disk"
+   ],
+   "default": "Cartridge",
+   "bits": [
+    14,
+    14
+   ],
+   "core_flags": [],
+   "key": "Cart Slot",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Tape Input",
+   "values": [
+    "File",
+    "ADC"
+   ],
+   "default": "File",
+   "bits": [
+    12,
+    12
+   ],
+   "core_flags": [],
+   "key": "Tape Input",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Cass Rwd=0 / Rec=1",
+   "values": [
+    "0",
+    "1"
+   ],
+   "default": "0",
+   "bits": [
+    28,
+    28
+   ],
+   "core_flags": [
+    "H0"
+   ],
+   "key": "Cass Rwd=0 / Rec=1",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Monitor Tape Sound",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    13,
+    13
+   ],
+   "core_flags": [],
+   "key": "Monitor Tape Sound",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Show Tape Status",
+   "values": [
+    "Yes",
+    "No"
+   ],
+   "default": "Yes",
+   "bits": [
+    26,
+    26
+   ],
+   "core_flags": [],
+   "key": "Show Tape Status",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video Settings",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen"
+   ],
+   "default": "Original",
+   "bits": [
+    19,
+    19
+   ],
+   "core_flags": [],
+   "key": "Video Settings/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video Settings",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    15,
+    17
+   ],
+   "core_flags": [],
+   "key": "Video Settings/Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video Settings",
+   "name": "Overscan",
+   "values": [
+    "Hidden",
+    "Visible"
+   ],
+   "default": "Hidden",
+   "bits": [
+    4,
+    4
+   ],
+   "core_flags": [],
+   "key": "Video Settings/Overscan",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video Settings",
+   "name": "Artifact",
+   "values": [
+    "Enable",
+    "Disable"
+   ],
+   "default": "Enable",
+   "bits": [
+    3,
+    3
+   ],
+   "core_flags": [],
+   "key": "Video Settings/Artifact",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video Settings",
+   "name": "Artifact Phase",
+   "values": [
+    "Normal",
+    "Reverse"
+   ],
+   "default": "Normal",
+   "bits": [
+    2,
+    2
+   ],
+   "core_flags": [],
+   "key": "Video Settings/Artifact Phase",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Keyboard Layout",
+   "values": [
+    "PC",
+    "CoCo"
+   ],
+   "default": "PC",
+   "bits": [
+    22,
+    22
+   ],
+   "core_flags": [],
+   "key": "Keyboard Layout",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "D-Pad Joystick emu",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    21,
+    21
+   ],
+   "core_flags": [],
+   "key": "D-Pad Joystick emu",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Swap Joysticks",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    10,
+    10
+   ],
+   "core_flags": [],
+   "key": "Swap Joysticks",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Machine",
+   "values": [
+    "CoCo2",
+    "Dragon32",
+    "Dragon64"
+   ],
+   "default": "CoCo2",
+   "bits": [
+    8,
+    9
+   ],
+   "core_flags": [],
+   "key": "Machine",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Debug display",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    11,
+    11
+   ],
+   "core_flags": [],
+   "key": "Debug display",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "CoCo2_20250312.rbf",
+  "rbf_md5": "18ba1fc0d599900ccb5682cb91ae7f18",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:10:56",
+  "confstr_sha1": "d7ee4c98dfecaa47fa0a2d169b605f68b6116beb"
+ }
+}

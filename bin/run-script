@@ -1,0 +1,27 @@
+#!/bin/sh
+# Coreshell: how our Mains run a script from the Scripts menu (in /tmp/script, after cd to its folder), the stock way
+# plus addons/: compat/ first on the PATH, and an add-on Coreshell knows runs as its entry says (its own menu naming
+# the frontend: coreshell/addons.py). Anything else is run exactly as MiSTer's Scripts menu runs it.
+# Copyright (c) 2026 f3bandit. Licensed under the Apache License 2.0 (LICENSE, NOTICE).
+D=/media/fat/coreshell
+export PATH="$D/compat:${PATH:-/usr/bin:/bin:/usr/sbin:/sbin}"
+s="$1"
+b=$(basename "$s")
+# MiSTer's own updaters from the Scripts folder (Update All, the downloader): a restore point of the system files
+# first, the fallback if an update gets past the GitHub watchers and breaks something (Main, the menu core, Linux:
+# what a rollback puts back). Made by update-guard when it's installed (Phosphor's phosphor-modules; to be ported into
+# Coreshell). The update runs either way, as on stock MiSTer.
+case "$s" in
+	/media/fat/Scripts/update_all.sh|/media/fat/Scripts/update.sh|/media/fat/Scripts/downloader.sh)
+		G=/media/fat/phosphor/modules/update-guard/update-guard.sh
+		if [ -x "$G" ]; then
+			echo "Saving a restore point of MiSTer's system files first..."
+			"$G" save-point "before-$(echo "${b%.sh}" | tr '_' '-')" || echo "(couldn't save one: the update goes ahead)"
+			echo
+		fi
+		;;
+esac
+if grep -qsF "\"$b\"" "$D"/addons/*.json && [ -s "$D/state/frontend.json" ]; then
+	cd "$D" && exec python3 -m coreshell run-script "$s"
+fi
+exec "$s"

@@ -1,0 +1,336 @@
+{
+ "coreshell_profile": 1,
+ "system": "3sarm",
+ "variant": "other",
+ "name": "3S-ARM",
+ "rbf": "_Other/3S-ARM",
+ "setname": null,
+ "core_name": "3S-ARM",
+ "config_file": "3S-ARM.CFG",
+ "games_dir": "games/3S-ARM",
+ "saves_dir": "saves/3S-ARM",
+ "rom": null,
+ "slots": [],
+ "files": [],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Button Check",
+   "bits": [
+    23,
+    23
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Reset to Default",
+   "bits": [
+    21,
+    21
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Restart",
+   "bits": [
+    22,
+    22
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Game Mode",
+   "values": [
+    "Console",
+    "Arcade"
+   ],
+   "default": "Console",
+   "bits": [
+    13,
+    13
+   ],
+   "core_flags": [],
+   "key": "Game Mode",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Hold to Pause",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    24,
+    24
+   ],
+   "core_flags": [],
+   "key": "Hold to Pause",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "FPS Counter",
+   "values": [
+    "Off",
+    "FPS",
+    "Debug"
+   ],
+   "default": "Off",
+   "bits": [
+    10,
+    11
+   ],
+   "core_flags": [],
+   "key": "FPS Counter",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Aspect Ratio",
+   "values": [
+    "4:3",
+    "Full"
+   ],
+   "default": "4:3",
+   "bits": [
+    12,
+    12
+   ],
+   "core_flags": [],
+   "key": "Aspect Ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Vertical Crop",
+   "values": [
+    "Disabled",
+    "216p(5x)"
+   ],
+   "default": "Disabled",
+   "bits": [
+    32,
+    32
+   ],
+   "core_flags": [],
+   "key": "Vertical Crop",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Crop Offset",
+   "values": [
+    "0",
+    "2",
+    "4",
+    "6",
+    "8",
+    "10",
+    "-12",
+    "-10",
+    "-8",
+    "-6",
+    "-4",
+    "-2"
+   ],
+   "default": "0",
+   "bits": [
+    33,
+    36
+   ],
+   "core_flags": [],
+   "key": "Crop Offset",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    37,
+    38
+   ],
+   "core_flags": [],
+   "key": "Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "H Size",
+   "values": [
+    "0",
+    "+1",
+    "+2",
+    "+3",
+    "+4",
+    "-4",
+    "-3",
+    "-2",
+    "-1"
+   ],
+   "default": "0",
+   "bits": [
+    39,
+    42
+   ],
+   "core_flags": [],
+   "key": "H Size",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "H Position",
+   "values": [
+    "0",
+    "+1",
+    "+2",
+    "+3",
+    "+4",
+    "+5",
+    "+6",
+    "+7",
+    "-8",
+    "-7",
+    "-6",
+    "-5",
+    "-4",
+    "-3",
+    "-2",
+    "-1"
+   ],
+   "default": "0",
+   "bits": [
+    25,
+    28
+   ],
+   "core_flags": [],
+   "key": "H Position",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "V Position",
+   "values": [
+    "0",
+    "+1",
+    "+2",
+    "+3",
+    "+4",
+    "+5",
+    "+6",
+    "+7",
+    "-8",
+    "-7",
+    "-6",
+    "-5",
+    "-4",
+    "-3",
+    "-2",
+    "-1"
+   ],
+   "default": "0",
+   "bits": [
+    43,
+    46
+   ],
+   "core_flags": [],
+   "key": "V Position",
+   "mgl_ok": true
+  },
+  {
+   "page": "Performance",
+   "name": "Overclock",
+   "values": [
+    "Stock",
+    "1000MHz",
+    "1200MHz"
+   ],
+   "default": "Stock",
+   "bits": [
+    19,
+    20
+   ],
+   "core_flags": [],
+   "key": "Performance/Overclock",
+   "mgl_ok": true
+  },
+  {
+   "page": "Performance",
+   "name": "SA Activation",
+   "values": [
+    "Full",
+    "Cached BG"
+   ],
+   "default": "Full",
+   "bits": [
+    14,
+    14
+   ],
+   "core_flags": [],
+   "key": "Performance/SA Activation",
+   "mgl_ok": true
+  },
+  {
+   "page": "Performance",
+   "name": "SA Ghost Res",
+   "values": [
+    "Full",
+    "Half"
+   ],
+   "default": "Full",
+   "bits": [
+    15,
+    15
+   ],
+   "core_flags": [],
+   "key": "Performance/SA Ghost Res",
+   "mgl_ok": true
+  },
+  {
+   "page": "Performance",
+   "name": "SA Ghost Count",
+   "values": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "default": "0",
+   "bits": [
+    16,
+    18
+   ],
+   "core_flags": [],
+   "key": "Performance/SA Ghost Count",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "3S-ARM.rbf",
+  "rbf_md5": "aa872f87f1b22edf3f7d02c5d7f35c85",
+  "main": "phosphor/bin/MiSTer_3S-ARM",
+  "dumped": "2026-11-13T23:14:32",
+  "confstr_sha1": "f3e74864ce6693372a18962443f7d6a8226961cc"
+ }
+}

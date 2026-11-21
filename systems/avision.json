@@ -1,0 +1,167 @@
+{
+ "coreshell_profile": 1,
+ "system": "avision",
+ "variant": "stock",
+ "name": "AVision",
+ "rbf": "_Console/AdventureVision",
+ "setname": null,
+ "core_name": "AVision",
+ "config_file": "AVision.CFG",
+ "games_dir": "games/AVision",
+ "saves_dir": "saves/AVision",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "BIN"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load Game"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load Game",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 3,
+   "type": "f",
+   "exts": [
+    "GBP"
+   ],
+   "label": "Load Palette",
+   "page": 0,
+   "flags": [
+    "D0"
+   ],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    8,
+    9
+   ],
+   "core_flags": [],
+   "key": "Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    4,
+    6
+   ],
+   "core_flags": [],
+   "key": "Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    2,
+    3
+   ],
+   "core_flags": [],
+   "key": "Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Simulate Mirror",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    1,
+    1
+   ],
+   "core_flags": [],
+   "key": "Simulate Mirror",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Custom Palette",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    7,
+    7
+   ],
+   "core_flags": [],
+   "key": "Custom Palette",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "AdventureVision_20260322.rbf",
+  "rbf_md5": "9a7c8b6153d694bb2d91103120016a42",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T22:59:57",
+  "confstr_sha1": "a315e7c2a9c7cd791014288f4c3b619d0b89225d"
+ }
+}

@@ -1,0 +1,573 @@
+{
+ "coreshell_profile": 1,
+ "system": "tgfx16",
+ "variant": "ra",
+ "name": "TGFX16",
+ "rbf": "_RA_Cores/Cores/TurboGrafx16",
+ "setname": "RA_TurboGrafx16",
+ "core_name": "TGFX16",
+ "config_file": "RA_TurboGrafx16.CFG",
+ "games_dir": "games/TGFX16",
+ "saves_dir": "saves/TGFX16",
+ "rom": {
+  "index": 0,
+  "type": "f",
+  "exts": [
+   "PCE",
+   "BIN"
+  ]
+ },
+ "slots": [
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "PCE",
+    "BIN"
+   ],
+   "label": "Load TurboGrafx"
+  },
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "SGX"
+   ],
+   "label": "Load SuperGrafx"
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "CUE",
+    "CHD"
+   ],
+   "label": "Insert CD"
+  }
+ ],
+ "files": [
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "PCE",
+    "BIN"
+   ],
+   "label": "Load TurboGrafx",
+   "page": 0,
+   "flags": [],
+   "remember_dir": true
+  },
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "SGX"
+   ],
+   "label": "Load SuperGrafx",
+   "page": 0,
+   "flags": [],
+   "remember_dir": true
+  }
+ ],
+ "mounts": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "CUE",
+    "CHD"
+   ],
+   "label": "Insert CD",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Load Backup RAM",
+   "bits": [
+    16,
+    16
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "D0"
+   ]
+  },
+  {
+   "name": "Save Backup RAM",
+   "bits": [
+    7,
+    7
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "D0"
+   ]
+  },
+  {
+   "name": "Format Backup RAM",
+   "bits": [
+    12,
+    12
+   ],
+   "kind": "reset",
+   "page": 2,
+   "flags": [
+    "D0"
+   ]
+  },
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": true,
+ "menu": [
+  {
+   "page": "",
+   "name": "Cheats enabled",
+   "values": [
+    "ON",
+    "OFF"
+   ],
+   "default": "ON",
+   "bits": [
+    5,
+    5
+   ],
+   "core_flags": [
+    "H1"
+   ],
+   "key": "Cheats enabled",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Autosave",
+   "values": [
+    "OFF",
+    "ON"
+   ],
+   "default": "OFF",
+   "bits": [
+    23,
+    23
+   ],
+   "core_flags": [
+    "D0"
+   ],
+   "key": "Autosave",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    24,
+    25
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    8,
+    10
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Vertical Crop",
+   "values": [
+    "Disabled",
+    "216p(5x)"
+   ],
+   "default": "Disabled",
+   "bits": [
+    32,
+    32
+   ],
+   "core_flags": [
+    "d6"
+   ],
+   "key": "Audio & Video/Vertical Crop",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Crop Offset",
+   "values": [
+    "0",
+    "2",
+    "4",
+    "8",
+    "10",
+    "12",
+    "-12",
+    "-10",
+    "-8",
+    "-6",
+    "-4",
+    "-2"
+   ],
+   "default": "0",
+   "bits": [
+    33,
+    36
+   ],
+   "core_flags": [
+    "d6"
+   ],
+   "key": "Audio & Video/Crop Offset",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    37,
+    38
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Colors",
+   "values": [
+    "Original",
+    "Raw RGB"
+   ],
+   "default": "Original",
+   "bits": [
+    28,
+    28
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Colors",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Overscan",
+   "values": [
+    "Hidden",
+    "Visible"
+   ],
+   "default": "Hidden",
+   "bits": [
+    17,
+    17
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Overscan",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Border Color",
+   "values": [
+    "Original",
+    "Black"
+   ],
+   "default": "Original",
+   "bits": [
+    15,
+    15
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Border Color",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Sprites per line",
+   "values": [
+    "Normal",
+    "Extra"
+   ],
+   "default": "Normal",
+   "bits": [
+    11,
+    11
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Sprites per line",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "CD Audio Boost",
+   "values": [
+    "No",
+    "2x"
+   ],
+   "default": "No",
+   "bits": [
+    20,
+    20
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/CD Audio Boost",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "ADPCM Audio Boost",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    22,
+    22
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/ADPCM Audio Boost",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Master Audio Boost",
+   "values": [
+    "No",
+    "2x",
+    "4x"
+   ],
+   "default": "No",
+   "bits": [
+    18,
+    19
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Master Audio Boost",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "ROM Data Swap",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    3,
+    3
+   ],
+   "core_flags": [],
+   "key": "Hardware/ROM Data Swap",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "ROM Storage",
+   "values": [
+    "SDRAM",
+    "SDRAM"
+   ],
+   "default": "SDRAM",
+   "bits": [
+    6,
+    6
+   ],
+   "core_flags": [
+    "D4",
+    "H2"
+   ],
+   "key": "Hardware/ROM Storage",
+   "mgl_ok": false
+  },
+  {
+   "page": "Hardware",
+   "name": "ROM Storage",
+   "values": [
+    "DDR3",
+    "DDR3"
+   ],
+   "default": "DDR3",
+   "bits": [
+    6,
+    6
+   ],
+   "core_flags": [
+    "D4",
+    "H3"
+   ],
+   "key": "Hardware/ROM Storage #2",
+   "mgl_ok": false
+  },
+  {
+   "page": "Hardware",
+   "name": "Arcade Card",
+   "values": [
+    "Disabled",
+    "Enabled"
+   ],
+   "default": "Disabled",
+   "bits": [
+    14,
+    14
+   ],
+   "core_flags": [],
+   "key": "Hardware/Arcade Card",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "CD Seek",
+   "values": [
+    "Normal",
+    "Fast"
+   ],
+   "default": "Normal",
+   "bits": [
+    1,
+    1
+   ],
+   "core_flags": [],
+   "key": "Hardware/CD Seek",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "USER I/O",
+   "values": [
+    "Off",
+    "SNAC"
+   ],
+   "default": "Off",
+   "bits": [
+    13,
+    13
+   ],
+   "core_flags": [],
+   "key": "Hardware/USER I/O",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "MB128",
+   "values": [
+    "Disabled",
+    "Enabled"
+   ],
+   "default": "Disabled",
+   "bits": [
+    21,
+    21
+   ],
+   "core_flags": [
+    "H5"
+   ],
+   "key": "Hardware/MB128",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Turbo Tap",
+   "values": [
+    "Disabled",
+    "Enabled"
+   ],
+   "default": "Disabled",
+   "bits": [
+    2,
+    2
+   ],
+   "core_flags": [
+    "H5"
+   ],
+   "key": "Turbo Tap",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Controller",
+   "values": [
+    "2 Buttons",
+    "2 Turbo",
+    "6 Buttons"
+   ],
+   "default": "2 Buttons",
+   "bits": [
+    29,
+    30
+   ],
+   "core_flags": [
+    "H5"
+   ],
+   "key": "Controller",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Special",
+   "values": [
+    "None",
+    "Mouse",
+    "Pachinko",
+    "XE-1AP"
+   ],
+   "default": "None",
+   "bits": [
+    26,
+    27
+   ],
+   "core_flags": [
+    "H5"
+   ],
+   "key": "Special",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "TurboGrafx16.rbf",
+  "rbf_md5": "a4a4d20591d95a92c9a1745f18ab51e5",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:19:24",
+  "confstr_sha1": "267e5c8b16756edb126c740671fb462b3e5d4620"
+ }
+}

@@ -1,0 +1,463 @@
+{
+ "coreshell_profile": 1,
+ "system": "acornelectron",
+ "variant": "stock",
+ "name": "AcornElectron",
+ "rbf": "_Computer/AcornElectron",
+ "setname": null,
+ "core_name": "AcornElectron",
+ "config_file": "AcornElectron.CFG",
+ "games_dir": "games/AcornElectron",
+ "saves_dir": "saves/AcornElectron",
+ "rom": {
+  "index": 2,
+  "type": "f",
+  "exts": [
+   "UEF"
+  ]
+ },
+ "slots": [
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "UEF",
+    "CAS"
+   ],
+   "label": "Tape"
+  },
+  {
+   "index": 3,
+   "type": "f",
+   "exts": [
+    "ROM",
+    "BIN"
+   ],
+   "label": "Cartridge 1"
+  },
+  {
+   "index": 4,
+   "type": "f",
+   "exts": [
+    "ROM",
+    "BIN"
+   ],
+   "label": "Cartridge 2"
+  },
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load ROM"
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "VHD"
+   ],
+   "label": "Pri. disk (MMB)"
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "ADF",
+    "ADM",
+    "ADL",
+    "SSD",
+    "DSD"
+   ],
+   "label": "Floppy 0 (Plus 3)"
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "ADF",
+    "ADM",
+    "ADL",
+    "SSD",
+    "DSD"
+   ],
+   "label": "Floppy 1 (Plus 3)"
+  }
+ ],
+ "files": [
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "UEF",
+    "CAS"
+   ],
+   "label": "Tape",
+   "page": 0,
+   "flags": [
+    "H1"
+   ],
+   "remember_dir": false
+  },
+  {
+   "index": 3,
+   "type": "f",
+   "exts": [
+    "ROM",
+    "BIN"
+   ],
+   "label": "Cartridge 1",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 4,
+   "type": "f",
+   "exts": [
+    "ROM",
+    "BIN"
+   ],
+   "label": "Cartridge 2",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load ROM",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "VHD"
+   ],
+   "label": "Pri. disk (MMB)",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "ADF",
+    "ADM",
+    "ADL",
+    "SSD",
+    "DSD"
+   ],
+   "label": "Floppy 0 (Plus 3)",
+   "page": 0,
+   "flags": [
+    "H2"
+   ]
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "ADF",
+    "ADM",
+    "ADL",
+    "SSD",
+    "DSD"
+   ],
+   "label": "Floppy 1 (Plus 3)",
+   "page": 0,
+   "flags": [
+    "H2"
+   ]
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Apply and reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Rewind tape",
+   "bits": [
+    15,
+    15
+   ],
+   "kind": "toggle",
+   "page": 1,
+   "flags": []
+  },
+  {
+   "name": "BREAK",
+   "bits": [
+    22,
+    22
+   ],
+   "kind": "toggle",
+   "page": 1,
+   "flags": []
+  },
+  {
+   "name": "Ctrl-BREAK",
+   "bits": [
+    23,
+    23
+   ],
+   "kind": "toggle",
+   "page": 1,
+   "flags": []
+  },
+  {
+   "name": "SHIFT-BREAK (boot)",
+   "bits": [
+    25,
+    25
+   ],
+   "kind": "toggle",
+   "page": 1,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "Machine",
+   "name": "CPU speed",
+   "values": [
+    "Normal",
+    "2 MHz",
+    "4 MHz"
+   ],
+   "default": "Normal",
+   "bits": [
+    16,
+    17
+   ],
+   "core_flags": [],
+   "key": "Machine/CPU speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "Machine",
+   "name": "Plus 3 (floppy)",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    27,
+    27
+   ],
+   "core_flags": [],
+   "key": "Machine/Plus 3 (floppy)",
+   "mgl_ok": true
+  },
+  {
+   "page": "Machine",
+   "name": "Tape speed",
+   "values": [
+    "8x",
+    "Normal"
+   ],
+   "default": "8x",
+   "bits": [
+    26,
+    26
+   ],
+   "core_flags": [],
+   "key": "Machine/Tape speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Interlace",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    18,
+    18
+   ],
+   "core_flags": [],
+   "key": "Video/Interlace",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    8,
+    9
+   ],
+   "core_flags": [],
+   "key": "Video/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    19,
+    20
+   ],
+   "core_flags": [],
+   "key": "Video/Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    3,
+    5
+   ],
+   "core_flags": [],
+   "key": "Video/Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Tape overlay",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    14,
+    14
+   ],
+   "core_flags": [],
+   "key": "Video/Tape overlay",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Swap joysticks",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    10,
+    10
+   ],
+   "core_flags": [],
+   "key": "Input/Swap joysticks",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio",
+   "name": "Tape audio",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    13,
+    13
+   ],
+   "core_flags": [],
+   "key": "Audio/Tape audio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio",
+   "name": "Sound Expansion",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    28,
+    28
+   ],
+   "core_flags": [],
+   "key": "Audio/Sound Expansion",
+   "mgl_ok": true
+  },
+  {
+   "page": "Advanced",
+   "name": "Autoboot",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    24,
+    24
+   ],
+   "core_flags": [],
+   "key": "Advanced/Autoboot",
+   "mgl_ok": true
+  },
+  {
+   "page": "Advanced",
+   "name": "Tape input",
+   "values": [
+    "File",
+    "ADC"
+   ],
+   "default": "File",
+   "bits": [
+    12,
+    12
+   ],
+   "core_flags": [],
+   "key": "Advanced/Tape input",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "repo": "MiSTer-devel/AcornElectron_MiSTer",
+  "commit": "9fb9fdd941ee0eb1decd886af88f3e54abc19dde",
+  "file": "AcornElectron.sv",
+  "rbf": "AcornElectron_20261114.rbf",
+  "rbf_md5": "2d49611e97cd8437c61a3e6bef4548e9",
+  "confstr_sha1": "738ec0b4491a92c57eacf82dfd557273bf104a34"
+ }
+}

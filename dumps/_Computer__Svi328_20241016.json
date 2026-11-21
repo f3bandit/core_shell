@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/Svi328_20241016.rbf",
+ "rbf_md5": "5ae19d7a14a0926f41aebf8666e35057",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "SVI328;;-;F1,BINROM,Load Cartridge;OF,Tape Input,File,ADC;D0F2,CAS,Cas File;D0TD,Tape Rewind;-;O12,Aspect ratio,Original,Full Screen,[ARC1],[ARC2];O79,Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%;-;O6,Border,No,Yes;OAB,Scale,Normal,V-Integer,Narrower HV-Integer,Wider HV-Integer;-;O3,Joysticks swap,No,Yes;R0,Reset;J,Button;jn,A;V,v241016",
+ "dumped": "2026-11-13T23:13:31"
+}

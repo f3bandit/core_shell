@@ -1,0 +1,10 @@
+{
+ "name": "DreamSTer (Dreamcast)",
+ "kind": "addon",
+ "by": "skmp (DreamSTer, minicast)",
+ "any": [
+  {
+   "path": "Scripts/DreamSTer.sh"
+  }
+ ]
+}

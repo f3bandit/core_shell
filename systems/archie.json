@@ -1,0 +1,28 @@
+{
+ "coreshell_profile": 1,
+ "system": "archie",
+ "variant": "stock",
+ "name": "ARCHIE",
+ "rbf": "_Computer/Archie",
+ "setname": null,
+ "core_name": "ARCHIE",
+ "config_file": "ARCHIE.CFG",
+ "games_dir": "games/ARCHIE",
+ "saves_dir": "saves/ARCHIE",
+ "rom": null,
+ "slots": [],
+ "files": [],
+ "mounts": [],
+ "triggers": [],
+ "cheats": false,
+ "menu": [],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "Archie_20260603.rbf",
+  "rbf_md5": "9a91d7a3312b6843bb59731d93817ae6",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:10:24",
+  "confstr_sha1": "6d25de1103160e79705b036324fe1b1d838c8284"
+ }
+}

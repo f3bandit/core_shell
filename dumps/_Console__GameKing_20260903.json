@@ -1,0 +1,7 @@
+{
+ "rbf": "_Console/GameKing_20260903.rbf",
+ "rbf_md5": "6dfe4132d3b3345e3de013328d0ebc50",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "GameKing;;F1,BIN,Load Cartridge;-;d7O[46:45],Savestate Slot,1,2,3,4;d7R[42],Save state (Alt-F1);d7R[43],Restore state (F1);P1,Video;P1-;P1O[3:2],Palette,LCD,Greyscale,Custom;H0P1F2,GBP,Load Palette;P1-;P1O[9:8],Aspect Ratio,Original,Full Screen,16:9;P1O[19:18],Display Mode,Glass,Scaled,Raw;P1O[13:11],Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%,CRT 75%;P1O[15:14],Scale,Normal,V-Integer,Integer(Narrow),Integer(Wide);P2,Advanced;P2-;P2O[7],Region Jumper,Other,Chinese;P2O[17],Disable Auto-Sleep,On,Off;-;R[0],Reset;J1,A,B,Select,Start,Savestates;jn,A,B,Select,Start,L;I,-,-,-,-,Slot=L/R Load=U Save=D,Active Slot 1,Active Slot 2,Active Slot 3,Active Slot 4,Save to state 1,Restore state 1,Save to state 2,Restore state 2,Save to state 3,Restore state 3,Save to state 4,Restore state 4;V,v260904",
+ "dumped": "2026-11-13T23:04:44"
+}

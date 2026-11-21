@@ -1,0 +1,100 @@
+{
+ "coreshell_profile": 1,
+ "system": "adctest",
+ "variant": "stock",
+ "name": "ADCTest",
+ "rbf": "_Utility/ADCTest",
+ "setname": null,
+ "core_name": "ADCTest",
+ "config_file": "ADCTest.CFG",
+ "games_dir": "games/ADCTest",
+ "saves_dir": "saves/ADCTest",
+ "rom": null,
+ "slots": [],
+ "files": [],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Reset and close OSD",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    121,
+    122
+   ],
+   "core_flags": [],
+   "key": "Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Scale",
+   "values": [
+    "3.3V",
+    "Line Level"
+   ],
+   "default": "3.3V",
+   "bits": [
+    3,
+    3
+   ],
+   "core_flags": [],
+   "key": "Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Audio Passthru",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    4,
+    4
+   ],
+   "core_flags": [],
+   "key": "Audio Passthru",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "ADCTest_20250619.rbf",
+  "rbf_md5": "feddb9755f1534a0999607805af359a1",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:17:39",
+  "confstr_sha1": "235ea63e378534773c747858b8d0095ed55805d0"
+ }
+}

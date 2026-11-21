@@ -1,0 +1,7 @@
+{
+ "rbf": "_Console/Intellivision_20261001.rbf",
+ "rbf_md5": "ce982c93c88a8868fef59453659ae02c",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "Intellivision;;-;F1,ROMINTBIN,Cartridge;OM,Format,Raw & Intellicart,CFG mapping;d3O58,MAP,Auto,0,1,2,3,4,5,6,7,8,9,10;d2F2,CFG,CFG Mapping;O9,ECS,Off,On;OA,Voice,On,Off;OO,JLP Acceleration,On,Off;d1S0,SAV,JLP RW FLASH;O34,Aspect ratio,Original,Full Screen,[ARC1],[ARC2];OCE,Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%,CRT 75%;d0OH,Vertical Crop,Disabled,216p(5x);d0OIL,Crop Offset,0,2,4,8,10,12,-12,-10,-8,-6,-4,-2;OFG,Scale,Normal,V-Integer,Narrower HV-Integer,Wider HV-Integer;OB,Video standard,NTSC,PAL;O1,Swap Joystick,Off,On;ON,Pause When OSD is Open,Off,On;-;R0,Reset;J1,Action Up,Action Left,Action Right,Clear,Enter,0,1,2,3,4,5,6,7,8,9;V,v261001",
+ "dumped": "2026-11-13T23:04:58"
+}

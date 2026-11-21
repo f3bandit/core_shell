@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/VT52_20241120.rbf",
+ "rbf_md5": "4b49cb400e4c5007f15c6b22bab94efb",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "VT52;;-;O[122:121],Aspect ratio,Original (4:3),Full Screen;O[4:3],Text Color,White,Red,Green,Blue;OC,Serial Port,User IO Port,Console Port;OE,Font,Terminus 8x16, VT52 rom 8x8;-;T[0],Reset;R[0],Reset and close OSD;V,v241120",
+ "dumped": "2026-11-13T23:14:04"
+}

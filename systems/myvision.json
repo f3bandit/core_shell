@@ -1,0 +1,85 @@
+{
+ "coreshell_profile": 1,
+ "system": "myvision",
+ "variant": "stock",
+ "name": "MyVision",
+ "rbf": "_Console/MyVision",
+ "setname": null,
+ "core_name": "MyVision",
+ "config_file": "MyVision.CFG",
+ "games_dir": "games/MyVision",
+ "saves_dir": "saves/MyVision",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "BIN"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load Cartridge"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load Cartridge",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    2,
+    3
+   ],
+   "core_flags": [],
+   "key": "Aspect ratio",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "MyVision_20250622.rbf",
+  "rbf_md5": "f93d7d38f6931bb9e13cd06d7f7dabf8",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:08:12",
+  "confstr_sha1": "bf8ea5e9ac1df5d0927d2d7610b81548e452a5d7"
+ }
+}

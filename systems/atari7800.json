@@ -1,0 +1,812 @@
+{
+ "coreshell_profile": 1,
+ "system": "atari7800",
+ "variant": "stock",
+ "name": "ATARI7800",
+ "rbf": "_Console/Atari7800",
+ "setname": null,
+ "core_name": "ATARI7800",
+ "config_file": "ATARI7800.CFG",
+ "games_dir": "games/ATARI7800",
+ "saves_dir": "saves/ATARI7800",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "A78",
+   "A26",
+   "BIN"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "A78",
+    "A26",
+    "BIN"
+   ],
+   "label": ""
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "A78",
+    "A26",
+    "BIN"
+   ],
+   "label": "",
+   "page": 0,
+   "flags": [],
+   "remember_dir": true
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "ROM",
+    "BIN"
+   ],
+   "label": "Load BIOS",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 3,
+   "type": "f",
+   "exts": [
+    "PAL"
+   ],
+   "label": "Load Palette",
+   "page": 1,
+   "flags": [
+    "H3"
+   ],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Load Tape From ADC",
+   "bits": [
+    48,
+    48
+   ],
+   "kind": "reset",
+   "page": 4,
+   "flags": [
+    "D2"
+   ]
+  },
+  {
+   "name": "Hard Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Region",
+   "values": [
+    "Auto",
+    "NTSC",
+    "PAL"
+   ],
+   "default": "Auto",
+   "bits": [
+    15,
+    16
+   ],
+   "core_flags": [],
+   "key": "Region",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Difficulty Right",
+   "values": [
+    "A",
+    "B"
+   ],
+   "default": "A",
+   "bits": [
+    12,
+    12
+   ],
+   "core_flags": [],
+   "key": "Difficulty Right",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Difficulty Left",
+   "values": [
+    "A",
+    "B"
+   ],
+   "default": "A",
+   "bits": [
+    13,
+    13
+   ],
+   "core_flags": [],
+   "key": "Difficulty Left",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Stereo Mix",
+   "values": [
+    "None",
+    "25%",
+    "50%",
+    "100%"
+   ],
+   "default": "None",
+   "bits": [
+    2,
+    3
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Stereo Mix",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Stereo TIA",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    4,
+    4
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Stereo TIA",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Vertical Crop",
+   "values": [
+    "Disabled",
+    "216p(5x)"
+   ],
+   "default": "Disabled",
+   "bits": [
+    22,
+    22
+   ],
+   "core_flags": [
+    "d0"
+   ],
+   "key": "Audio & Video/Vertical Crop",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Crop Offset",
+   "values": [
+    "0",
+    "2",
+    "4",
+    "8",
+    "10",
+    "12",
+    "-12",
+    "-10",
+    "-8",
+    "-6",
+    "-4",
+    "-2"
+   ],
+   "default": "0",
+   "bits": [
+    23,
+    26
+   ],
+   "core_flags": [
+    "d0"
+   ],
+   "key": "Audio & Video/Crop Offset",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    27,
+    28
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    50,
+    51
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    9,
+    11
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Show Overscan",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    29,
+    29
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Show Overscan",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Show Border",
+   "values": [
+    "Yes",
+    "No"
+   ],
+   "default": "Yes",
+   "bits": [
+    14,
+    14
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Show Border",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Composite Blending",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    20,
+    20
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Composite Blending",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Temperature Colors",
+   "values": [
+    "Warm",
+    "Cool",
+    "Hot",
+    "Custom"
+   ],
+   "default": "Warm",
+   "bits": [
+    30,
+    31
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Temperature Colors",
+   "mgl_ok": true
+  },
+  {
+   "page": "Peripherals",
+   "name": "High Score Cart",
+   "values": [
+    "Auto",
+    "On",
+    "Off"
+   ],
+   "default": "Auto",
+   "bits": [
+    18,
+    19
+   ],
+   "core_flags": [],
+   "key": "Peripherals/High Score Cart",
+   "mgl_ok": true
+  },
+  {
+   "page": "Peripherals",
+   "name": "Swap Joysticks",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    7,
+    7
+   ],
+   "core_flags": [],
+   "key": "Peripherals/Swap Joysticks",
+   "mgl_ok": true
+  },
+  {
+   "page": "Peripherals",
+   "name": "Port1 Input",
+   "values": [
+    "Auto",
+    "None",
+    "Joystick",
+    "Lightgun",
+    "Paddle",
+    "Trakball",
+    "Keypad",
+    "Driving",
+    "STMouse",
+    "AmigaMouse",
+    "BoosterGrip",
+    "Robotron",
+    "SaveKey",
+    "SNAC"
+   ],
+   "default": "Auto",
+   "bits": [
+    38,
+    41
+   ],
+   "core_flags": [],
+   "key": "Peripherals/Port1 Input",
+   "mgl_ok": true
+  },
+  {
+   "page": "Peripherals",
+   "name": "Port2 Input",
+   "values": [
+    "Auto",
+    "None",
+    "Joystick",
+    "Lightgun",
+    "Paddle",
+    "Trakball",
+    "Keypad",
+    "Driving",
+    "STMouse",
+    "AmigaMouse",
+    "BoosterGrip",
+    "Robotron",
+    "SaveKey",
+    "SNAC"
+   ],
+   "default": "Auto",
+   "bits": [
+    42,
+    45
+   ],
+   "core_flags": [],
+   "key": "Peripherals/Port2 Input",
+   "mgl_ok": true
+  },
+  {
+   "page": "Peripherals",
+   "name": "SNAC Analog",
+   "values": [
+    "Yes",
+    "No"
+   ],
+   "default": "Yes",
+   "bits": [
+    5,
+    5
+   ],
+   "core_flags": [
+    "h1"
+   ],
+   "key": "Peripherals/SNAC Analog",
+   "mgl_ok": true
+  },
+  {
+   "page": "Peripherals",
+   "name": "Allow Multi Paddles",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    52,
+    52
+   ],
+   "core_flags": [],
+   "key": "Peripherals/Allow Multi Paddles",
+   "mgl_ok": true
+  },
+  {
+   "page": "Peripherals",
+   "name": "Sega Phaser Mode",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    6,
+    6
+   ],
+   "core_flags": [
+    "h1"
+   ],
+   "key": "Peripherals/Sega Phaser Mode",
+   "mgl_ok": true
+  },
+  {
+   "page": "Peripherals",
+   "name": "Swap Paddle A<->B",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    49,
+    49
+   ],
+   "core_flags": [],
+   "key": "Peripherals/Swap Paddle A<->B",
+   "mgl_ok": true
+  },
+  {
+   "page": "Peripherals",
+   "name": "Quadtari",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    46,
+    46
+   ],
+   "core_flags": [],
+   "key": "Peripherals/Quadtari",
+   "mgl_ok": true
+  },
+  {
+   "page": "Peripherals",
+   "name": "Gun X Tuning",
+   "values": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7"
+   ],
+   "default": "0",
+   "bits": [
+    70,
+    72
+   ],
+   "core_flags": [],
+   "key": "Peripherals/Gun X Tuning",
+   "mgl_ok": true
+  },
+  {
+   "page": "Peripherals",
+   "name": "Gun Control",
+   "values": [
+    "Joy1",
+    "Joy2",
+    "Mouse"
+   ],
+   "default": "Joy1",
+   "bits": [
+    32,
+    33
+   ],
+   "core_flags": [],
+   "key": "Peripherals/Gun Control",
+   "mgl_ok": true
+  },
+  {
+   "page": "Peripherals",
+   "name": "Gun Fire",
+   "values": [
+    "Joy",
+    "Mouse"
+   ],
+   "default": "Joy",
+   "bits": [
+    34,
+    34
+   ],
+   "core_flags": [],
+   "key": "Peripherals/Gun Fire",
+   "mgl_ok": true
+  },
+  {
+   "page": "Peripherals",
+   "name": "Cross",
+   "values": [
+    "Small",
+    "Medium",
+    "Big",
+    "None"
+   ],
+   "default": "Small",
+   "bits": [
+    36,
+    37
+   ],
+   "core_flags": [],
+   "key": "Peripherals/Cross",
+   "mgl_ok": true
+  },
+  {
+   "page": "Atari2600",
+   "name": "Flickerblend",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    61,
+    61
+   ],
+   "core_flags": [
+    "D2"
+   ],
+   "key": "Atari2600/Flickerblend",
+   "mgl_ok": true
+  },
+  {
+   "page": "Atari2600",
+   "name": "Stabilize Video",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    63,
+    63
+   ],
+   "core_flags": [
+    "D2"
+   ],
+   "key": "Atari2600/Stabilize Video",
+   "mgl_ok": true
+  },
+  {
+   "page": "Atari2600",
+   "name": "De-comb",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    47,
+    47
+   ],
+   "core_flags": [
+    "D2"
+   ],
+   "key": "Atari2600/De-comb",
+   "mgl_ok": true
+  },
+  {
+   "page": "Atari2600",
+   "name": "Black & White",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    62,
+    62
+   ],
+   "core_flags": [
+    "D2"
+   ],
+   "key": "Atari2600/Black & White",
+   "mgl_ok": true
+  },
+  {
+   "page": "Atari2600",
+   "name": "Bankswitching",
+   "values": [
+    "Auto",
+    "F8",
+    "F6",
+    "FE",
+    "E0",
+    "3F",
+    "F4",
+    "P2",
+    "FA",
+    "CV",
+    "2K",
+    "UA",
+    "E7",
+    "F0",
+    "32",
+    "AR",
+    "3E",
+    "SB",
+    "WD",
+    "EF"
+   ],
+   "default": "Auto",
+   "bits": [
+    56,
+    60
+   ],
+   "core_flags": [
+    "D2"
+   ],
+   "key": "Atari2600/Bankswitching",
+   "mgl_ok": true
+  },
+  {
+   "page": "Atari2600",
+   "name": "Fix SC File Checksums",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    55,
+    55
+   ],
+   "core_flags": [],
+   "key": "Atari2600/Fix SC File Checksums",
+   "mgl_ok": true
+  },
+  {
+   "page": "Advanced",
+   "name": "Bypass Bios",
+   "values": [
+    "Yes",
+    "No"
+   ],
+   "default": "Yes",
+   "bits": [
+    17,
+    17
+   ],
+   "core_flags": [],
+   "key": "Advanced/Bypass Bios",
+   "mgl_ok": true
+  },
+  {
+   "page": "Advanced",
+   "name": "Clear Memory",
+   "values": [
+    "Zero",
+    "Random"
+   ],
+   "default": "Zero",
+   "bits": [
+    1,
+    1
+   ],
+   "core_flags": [],
+   "key": "Advanced/Clear Memory",
+   "mgl_ok": true
+  },
+  {
+   "page": "Advanced",
+   "name": "Pokey IRQ Enabled",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    8,
+    8
+   ],
+   "core_flags": [],
+   "key": "Advanced/Pokey IRQ Enabled",
+   "mgl_ok": true
+  },
+  {
+   "page": "Advanced",
+   "name": "CPU Driver",
+   "values": [
+    "TIA",
+    "Maria"
+   ],
+   "default": "TIA",
+   "bits": [
+    21,
+    21
+   ],
+   "core_flags": [
+    "D2"
+   ],
+   "key": "Advanced/CPU Driver",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Pause Core on OSD",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    35,
+    35
+   ],
+   "core_flags": [],
+   "key": "Pause Core on OSD",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "Atari7800_20260530.rbf",
+  "rbf_md5": "c41b07d2f3306d9a74fbc8834abbaf46",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:01:51",
+  "confstr_sha1": "7c4cbb46d84881bdb820e868c52a856eb215086a"
+ }
+}

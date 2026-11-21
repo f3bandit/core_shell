@@ -1,0 +1,11 @@
+{
+ "name": "CD/DVD drive",
+ "kind": "hardware",
+ "by": "the dock (SS1), or any USB drive",
+ "any": [
+  {
+   "glob": "/dev/sr[0-9]*"
+  }
+ ],
+ "note": "A drive is plugged in (no disc needed)."
+}

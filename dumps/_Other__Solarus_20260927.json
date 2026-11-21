@@ -1,0 +1,7 @@
+{
+ "rbf": "_Other/Solarus_20260927.rbf",
+ "rbf_md5": "3d28e6bbacf40b7d935375cfa1b66a16",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "Solarus;;SC0,SOL,Load Quest;-;OCE,H Position (CRT),0,+1,+2,+3,-3,-2,-1;OFH,V Position (CRT),0,+1,+2,+3,-3,-2,-1;OI,Vertical Crop (224p),Disabled,Enabled;-;OK,FPS Overlay,Off,On;TJ,Restart Quest;-;J1,A,B,X,Y,L,R,Select,Start;jn,A,B,X,Y,L,R,Select,Start;-;V,v260927",
+ "dumped": "2026-11-13T23:21:43"
+}

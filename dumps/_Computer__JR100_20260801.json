@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/JR100_20260801.rbf",
+ "rbf_md5": "f2f6a0eaa427dac6992522d909108554",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "JR100;;-;F0,rom,Load BASIC ROM;F1,prg,Load PRG;F2,bas,Load BAS;-;S0,prg,Mount Save File;T[3],Save BASIC to file;-;S1,cmt,Mount Tape;T[4],Tape Play;-;O[122:121],Aspect ratio,Original,Full Screen,[ARC1],[ARC2];O[8:6],Display color,White,Green,Amber,Cyan,Orange,Blue,Paper,Mint;O[2],Extended RAM (reset),Off,On;O[5],Autostart loaded program,No,Yes;-;R[0],Reset;J,Fire;V,v260801",
+ "dumped": "2026-11-13T23:11:31"
+}

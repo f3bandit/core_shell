@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/PMD85_20251219.rbf",
+ "rbf_md5": "81e9249a382166f5f88d63f0c89c50ff",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "PMD85;;-;F1,rmmmrm,Load to ROM Pack;R7,Eject ROM Pack;-;O8,PMD85 version,2A,3;O12,Video,Green,TV,RGB,ColorACE;D6O9,Sound,Beeper,Beeper + MIF85 (K2);O45,Joystick,None,K3,K4;D9O6,Mouse,None,K2;-;R0,Reset PMD;J,Fire;V,v251221",
+ "dumped": "2026-11-13T23:12:48"
+}

@@ -1,0 +1,7 @@
+{
+ "rbf": "_Console/ChannelF_20250907.rbf",
+ "rbf_md5": "7518c1f83837c736797083793b39bcc8",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "ChannelF;;-;FS,ROMBIN;O3,Aspect ratio,4:3,16:9;OA,Video standard,NTSC,PAL;O1,Swap Joystick,Off,On;-;R0,Reset;J1,Time (1),Mode (2),Hold (3),Start (4),Push,Pull,Turn CW,Turn CCW;V,v250907",
+ "dumped": "2026-11-13T23:04:17"
+}

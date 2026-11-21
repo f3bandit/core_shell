@@ -1,0 +1,7 @@
+{
+ "rbf": "_Console/Atari5200_20260823.rbf",
+ "rbf_md5": "539259fe22d097d290b86232e683f2eb",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "ATARI5200;;-;F1,CARA52BINROM,Load Cart;-;O79,CPU Speed,1x,2x,4x,8x,16x;-;OKL,NTSC rate Hz,59.92,59.94,60.0;OMN,Aspect ratio,Original,Full Screen,[ARC1],[ARC2];OHJ,Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%,CRT 75%;OV,NTSC artifacting,No,Yes;d1oN,Artifacting colors,Set 1,Set 2;d1oQ,Swap artif. colors,No,Yes;-;o2,Clip Sides,Off,On;d0OO,Vertical Crop,Disabled,216p(5x);d0OPS,Crop Offset,0,2,4,8,10,12,-12,-10,-8,-6,-4,-2;OTU,Scale,Normal,V-Integer,Narrower HV-Integer,Wider HV-Integer;-;O5,Swap Joysticks 1&2,No,Yes;oO,Mouse X,Normal,Inverted;O6,Mouse Y,Normal,Inverted;-;r8,Cold Reset (F10);R0,Reset (Detach Carts);J1,Fire 1,Fire 2,*,#,Start,Pause,Reset,0,1,2,3,4,5,6,7,8,9;V,v260823",
+ "dumped": "2026-11-13T23:01:14"
+}

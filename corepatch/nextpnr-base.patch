@@ -1,0 +1,407 @@
+diff --git a/mistral/CMakeLists.txt b/mistral/CMakeLists.txt
+index 1f1be40..cc92fff 100644
+--- a/mistral/CMakeLists.txt
++++ b/mistral/CMakeLists.txt
+@@ -1,5 +1,6 @@
+ set(SOURCES
+     arch.cc
++    base.cc
+     archdefs.cc
+     archdefs.h
+     arch.h
+diff --git a/mistral/arch.cc b/mistral/arch.cc
+index 9dd2e81..d11d86c 100644
+--- a/mistral/arch.cc
++++ b/mistral/arch.cc
+@@ -140,6 +140,8 @@ Arch::Arch(ArchArgs args)
+ 
+     log_info("    imported %d wires and %d pips\n", int(wires.size()), pip_count);
+ 
++    init_base(); // NPNR_BASE_RBF: start from an existing bitstream (base.cc)
++
+     BaseArch::init_cell_types();
+     BaseArch::init_bel_buckets();
+ }
+@@ -185,6 +187,8 @@ IdStringList Arch::getBelName(BelId bel) const
+ bool Arch::isBelLocationValid(BelId bel, bool explain_invalid) const
+ {
+     auto &data = bel_data(bel);
++    if (data.bound != nullptr && base_bel_blocked(bel))
++        return false; // the base bitstream's (base.cc)
+     if (data.type.in(id_MISTRAL_COMB, id_MISTRAL_MCOMB)) {
+         return is_alm_legal(data.lab_data.lab, data.lab_data.alm) && check_lab_input_count(data.lab_data.lab) &&
+                check_mlab_groups(data.lab_data.lab);
+diff --git a/mistral/arch.h b/mistral/arch.h
+index 10309bf..068c6d8 100644
+--- a/mistral/arch.h
++++ b/mistral/arch.h
+@@ -357,7 +357,7 @@ struct Arch : BaseArch<ArchRanges>
+         data.bound = nullptr;
+         update_bel(bel);
+     }
+-    bool checkBelAvail(BelId bel) const override { return bel_data(bel).bound == nullptr; }
++    bool checkBelAvail(BelId bel) const override { return bel_data(bel).bound == nullptr && !base_bel_blocked(bel); }
+     CellInfo *getBoundBelCell(BelId bel) const override { return bel_data(bel).bound; }
+     CellInfo *getConflictingBelCell(BelId bel) const override { return bel_data(bel).bound; }
+ 
+@@ -407,14 +407,14 @@ struct Arch : BaseArch<ArchRanges>
+     bool checkPipAvail(PipId pip) const override
+     {
+         // Check reserved routes
+-        if (is_pip_blocked(pip))
++        if (is_pip_blocked(pip) || base_pip_blocked(pip))
+             return false;
+         return BaseArch::checkPipAvail(pip);
+     }
+ 
+     bool checkPipAvailForNet(PipId pip, const NetInfo *net) const override
+     {
+-        if (is_pip_blocked(pip))
++        if (is_pip_blocked(pip) || base_pip_blocked(pip))
+             return false;
+         return BaseArch::checkPipAvailForNet(pip, net);
+     }
+@@ -482,6 +482,33 @@ struct Arch : BaseArch<ArchRanges>
+     void create_control(int x, int y);                 // globals.cc
+     void create_hps_mpu_general_purpose(int x, int y); // globals.cc
+ 
++    // Placing into an existing bitstream (base.cc)
++    bool have_base = false;
++    std::vector<uint8_t> base_rbf;
++    pool<WireId> base_blocked;
++    pool<int> base_tiles;
++    pool<BelId> base_bels;
++    pool<int> only_tiles;
++    dict<IdString, BelId> tap_bels, sink_bels;
++    void init_base();
++    void bind_base_cells();
++    bool base_bel_blocked(BelId bel) const;
++    pool<WireId> shared;
++    dict<WireId, WireId> base_src;
++    bool base_pip_blocked(PipId pip) const
++    {
++        if (!have_base)
++            return false;
++        if (base_blocked.count(WireId(pip.src)) || base_blocked.count(WireId(pip.dst)))
++            return true;
++        // a shared base node keeps its base source
++        if (shared.count(WireId(pip.dst)) && base_src.count(WireId(pip.dst)) &&
++            base_src.at(WireId(pip.dst)) != WireId(pip.src))
++            return true;
++        return false;
++    }
++    CycloneV::rnode_t parse_rnode(const std::string &s) const;
++
+     // -------------------------------------------------
+ 
+     bool is_comb_cell(IdString cell_type) const;        // lab.cc
+diff --git a/mistral/base.cc b/mistral/base.cc
+new file mode 100644
+index 0000000..e0414f9
+--- /dev/null
++++ b/mistral/base.cc
+@@ -0,0 +1,242 @@
++/*
++ *  nextpnr -- Next Generation Place and Route
++ *
++ *  Placing a small design into an existing (stock) Cyclone V bitstream.
++ *
++ *  NPNR_BASE_RBF=<core.rbf>      the bitstream to start from: its used logic blocks and routing are off-limits,
++ *                                and the output is the base with the new design added (not a blank chip)
++ *  NPNR_TAPS=<PIN>,<PIN>,...     package pins whose input (the pin's DATAIN node) a MISTRAL_TAP cell
++ *                                (attribute PIN="<PIN>") can read, even though the base already uses the pin
++ *  NPNR_SINKS=<NAME>=<RNODE>,... routing nodes a MISTRAL_SINK cell (attribute NODE="<NAME>") drives, taking them
++ *                                over from the base (e.g. the HPS UART's RXD input node)
++ *
++ *  Permission to use, copy, modify, and/or distribute this software for any
++ *  purpose with or without fee is hereby granted, provided that the above
++ *  copyright notice and this permission notice appear in all copies.
++ *
++ *  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
++ *  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
++ *  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
++ *  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
++ *  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
++ *  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
++ *  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
++ */
++
++#include <cstdlib>
++#include <fstream>
++#include <iterator>
++#include <sstream>
++
++#include "log.h"
++#include "nextpnr.h"
++
++NEXTPNR_NAMESPACE_BEGIN
++
++using namespace mistral;
++
++static std::vector<std::string> split(const std::string &s, char c)
++{
++    std::vector<std::string> out;
++    std::stringstream ss(s);
++    std::string item;
++    while (std::getline(ss, item, c))
++        if (!item.empty())
++            out.push_back(item);
++    return out;
++}
++
++CycloneV::rnode_t Arch::parse_rnode(const std::string &s) const
++{
++    // TYPE.xxx.yyy.zzzz, as CycloneV::rn2s prints it
++    auto f = split(s, '.');
++    if (f.size() != 4)
++        log_error("bad routing node name '%s'\n", s.c_str());
++    auto t = id2rn_t.find(id(f[0]));
++    if (t == id2rn_t.end())
++        log_error("unknown routing node type in '%s'\n", s.c_str());
++    return CycloneV::rnode(t->second, std::stoi(f[1]), std::stoi(f[2]), std::stoi(f[3]));
++}
++
++void Arch::init_base()
++{
++    const char *base = getenv("NPNR_BASE_RBF");
++    if (!base || !*base)
++        return;
++    std::ifstream f(base, std::ios::binary);
++    if (!f)
++        log_error("can't read base bitstream %s\n", base);
++    base_rbf.assign(std::istreambuf_iterator<char>(f), std::istreambuf_iterator<char>());
++    cyclonev->rbf_load(base_rbf.data(), base_rbf.size());
++    have_base = true;
++
++    // Everything the base routes through, and every logic/memory/DSP block it connects to
++    int links = 0;
++    for (auto &l : cyclonev->route_all_active_links()) {
++        links++;
++        for (auto rn : {l.first, l.second}) {
++            base_blocked.insert(WireId(rn));
++            auto pn = cyclonev->rnode_to_pnode(rn);
++            if (!pn)
++                continue;
++            auto bt = CycloneV::pn2bt(pn);
++            if (bt == CycloneV::LAB || bt == CycloneV::MLAB || bt == CycloneV::M10K || bt == CycloneV::DSP)
++                base_tiles.insert(int(CycloneV::pn2p(pn)));
++        }
++    }
++
++    // Shared nets: the base's routing tree under a node (a global clock) usable by the new design, but only
++    // through the links the base already uses, so nothing the base depends on is re-pointed
++    if (const char *share = getenv("NPNR_SHARE")) {
++        dict<WireId, std::vector<WireId>> down;
++        for (auto &l : cyclonev->route_all_active_links()) {
++            down[WireId(l.first)].push_back(WireId(l.second));
++            base_src[WireId(l.second)] = WireId(l.first);
++        }
++        for (auto &root : split(share, ',')) {
++            std::vector<WireId> todo{WireId(parse_rnode(root))};
++            int n = 0;
++            while (!todo.empty()) {
++                WireId w = todo.back();
++                todo.pop_back();
++                if (shared.count(w))
++                    continue;
++                shared.insert(w);
++                base_blocked.erase(w);
++                n++;
++                if (down.count(w))
++                    for (auto d : down.at(w))
++                        todo.push_back(d);
++            }
++            log_info("shared %s: %d routing nodes\n", root.c_str(), n);
++        }
++    }
++
++    // Block: more base nodes, one per line (e.g. clock-mux leaves only a newer Mistral decodes)
++    if (const char *bf = getenv("NPNR_BLOCK_FILE")) {
++        std::ifstream in(bf);
++        std::string line;
++        int n = 0;
++        while (std::getline(in, line))
++            if (!line.empty()) {
++                base_blocked.insert(WireId(parse_rnode(line)));
++                n++;
++            }
++        log_info("blocked %d more nodes from %s\n", n, bf);
++    }
++
++    // Free: base nodes released for the new design (a private wire into a node it takes over)
++    if (const char *fr = getenv("NPNR_FREE")) {
++        for (auto &n : split(fr, ','))
++            base_blocked.erase(WireId(parse_rnode(n)));
++    }
++
++    // Taps: a pin's input (PIN) or a routing node (NAME=RNODE), readable by the new design
++    if (const char *taps = getenv("NPNR_TAPS")) {
++        for (auto &pin : split(taps, ',')) {
++            if (pin.find('=') != std::string::npos) {
++                auto kv = split(pin, '=');
++                WireId w(parse_rnode(kv.at(1)));
++                BelId bel = add_bel(CycloneV::rn2x(w.node), CycloneV::rn2y(w.node), idf("TAP_%s", kv[0].c_str()),
++                                    id_MISTRAL_TAP);
++                add_bel_pin(bel, id_Q, PORT_OUT, w);
++                base_blocked.erase(w);
++                tap_bels[id(kv[0])] = bel;
++                log_info("tap %s: %s\n", kv[0].c_str(), kv[1].c_str());
++                continue;
++            }
++            auto pin_info = cyclonev->pin_find_name(pin);
++            if (!pin_info)
++                log_error("tap: unknown pin %s\n", pin.c_str());
++            BelId io = get_io_pin_bel(pin_info);
++            if (io == BelId())
++                log_error("tap: pin %s has no IO block\n", pin.c_str());
++            WireId w = getBelPinWire(io, id_O);
++            if (w == WireId())
++                log_error("tap: pin %s has no input node\n", pin.c_str());
++            Loc l = getBelLocation(io);
++            BelId bel = add_bel(l.x, l.y, idf("TAP_%s", pin.c_str()), id_MISTRAL_TAP);
++            add_bel_pin(bel, id_Q, PORT_OUT, w);
++            base_blocked.erase(w);
++            tap_bels[id(pin)] = bel;
++            log_info("tap %s: %s\n", pin.c_str(), CycloneV::rn2s(w.node).c_str());
++        }
++    }
++    // Sinks: base nodes the new design takes over
++    if (const char *sinks = getenv("NPNR_SINKS")) {
++        for (auto &item : split(sinks, ',')) {
++            auto kv = split(item, '=');
++            if (kv.size() != 2)
++                log_error("sink: expected NAME=RNODE, got %s\n", item.c_str());
++            WireId w;
++            if (kv[1].compare(0, 4, "PIN:") == 0) {
++                // a pin's output data input (open-drain pins: 0 pulls the line low, 1 lets it go)
++                auto pin_info = cyclonev->pin_find_name(kv[1].substr(4));
++                BelId io = pin_info ? get_io_pin_bel(pin_info) : BelId();
++                if (io == BelId())
++                    log_error("sink: unknown pin %s\n", kv[1].c_str());
++                w = getBelPinWire(io, id_I);
++            } else
++                w = WireId(parse_rnode(kv[1]));
++            if (!wires.count(w))
++                log_error("sink: no routing node %s\n", kv[1].c_str());
++            BelId bel = add_bel(CycloneV::rn2x(w.node), CycloneV::rn2y(w.node), idf("SINK_%s", kv[0].c_str()),
++                                id_MISTRAL_SINK);
++            add_bel_pin(bel, id_D, PORT_IN, w);
++            base_blocked.erase(w);
++            sink_bels[id(kv[0])] = bel;
++            log_info("sink %s: %s\n", kv[0].c_str(), CycloneV::rn2s(w.node).c_str());
++        }
++    }
++    // Only these logic block positions may be used (x,y;x,y;...), e.g. the ones the shared clock reaches
++    if (const char *only = getenv("NPNR_ONLY_TILES")) {
++        for (auto &xy : split(only, ';')) {
++            auto v = split(xy, ',');
++            only_tiles.insert(int(CycloneV::xy2pos(std::stoi(v.at(0)), std::stoi(v.at(1)))));
++        }
++        log_info("placement limited to %d logic blocks\n", int(only_tiles.size()));
++    }
++
++    // Any other block (clock buffers, ...) with a pin on the base's routing is the base's
++    for (auto &w : wires)
++        if (base_blocked.count(w.first))
++            for (auto &bp : w.second.bel_pins)
++                if (!bel_data(bp.bel).type.in(id_MISTRAL_TAP, id_MISTRAL_SINK))
++                    base_bels.insert(bp.bel);
++    log_info("base %s: %d routing links, %d routing nodes and %d logic/memory blocks off-limits\n", base, links,
++             int(base_blocked.size()), int(base_tiles.size()));
++}
++
++bool Arch::base_bel_blocked(BelId bel) const
++{
++    if (!have_base)
++        return false;
++    if (base_bels.count(bel))
++        return true;
++    IdString t = bel_data(bel).type;
++    bool logic = t.in(id_MISTRAL_COMB, id_MISTRAL_MCOMB, id_MISTRAL_FF, id_MISTRAL_M10K);
++    if (logic && !only_tiles.empty() && !only_tiles.count(int(bel.pos)))
++        return true;
++    return logic && base_tiles.count(int(bel.pos));
++}
++
++void Arch::bind_base_cells()
++{
++    for (auto &cell : cells) {
++        CellInfo *ci = cell.second.get();
++        if (ci->type == id_MISTRAL_TAP || ci->type == id_MISTRAL_SINK) {
++            bool tap = ci->type == id_MISTRAL_TAP;
++            IdString key = id(ci->attrs.count(tap ? id_PIN : id_NODE)
++                                      ? ci->attrs.at(tap ? id_PIN : id_NODE).as_string()
++                                      : std::string());
++            auto &m = tap ? tap_bels : sink_bels;
++            auto it = m.find(key);
++            if (it == m.end())
++                log_error("%s '%s' names %s '%s', which NPNR_%s doesn't list\n", tap ? "tap" : "sink", nameOf(ci),
++                          tap ? "pin" : "node", key.c_str(this), tap ? "TAPS" : "SINKS");
++            bindBel(it->second, ci, STRENGTH_LOCKED);
++        }
++    }
++}
++
++NEXTPNR_NAMESPACE_END
+diff --git a/mistral/bitstream.cc b/mistral/bitstream.cc
+index b46a9f6..9ff1da8 100644
+--- a/mistral/bitstream.cc
++++ b/mistral/bitstream.cc
+@@ -377,8 +377,13 @@ struct MistralBitgen
+ 
+     void run()
+     {
+-        cv->clear();
+-        options();
++        if (ctx->have_base) {
++            // the stock core, with the new design written on top (its options kept as they were)
++            cv->rbf_load(ctx->base_rbf.data(), ctx->base_rbf.size());
++        } else {
++            cv->clear();
++            options();
++        }
+         write_routing();
+         write_cells();
+         write_labs();
+diff --git a/mistral/constids.inc b/mistral/constids.inc
+index 754a96b..10fc850 100644
+--- a/mistral/constids.inc
++++ b/mistral/constids.inc
+@@ -113,3 +113,7 @@ X(oscena)
+ X(placer)
+ X(router)
+ X(step)
++X(MISTRAL_TAP)
++X(MISTRAL_SINK)
++X(PIN)
++X(NODE)
+diff --git a/mistral/globals.cc b/mistral/globals.cc
+index 0d97133..60ea4c3 100644
+--- a/mistral/globals.cc
++++ b/mistral/globals.cc
+@@ -195,7 +195,12 @@ struct MistralGlobalRouter
+             CellInfo *drv = ni->driver.cell;
+             if (drv == nullptr)
+                 continue;
+-            if (drv->type.in(id_MISTRAL_CLKENA, id_MISTRAL_CLKBUF)) {
++            bool tap_clock = false;
++            if (drv->type == id_MISTRAL_TAP)
++                for (auto &usr : ni->users)
++                    if (usr.cell->type == id_MISTRAL_FF && usr.port == id_CLK)
++                        tap_clock = true; // a base global clock, tapped (base.cc)
++            if (tap_clock || drv->type.in(id_MISTRAL_CLKENA, id_MISTRAL_CLKBUF)) {
+                 route_clk_net(ni);
+                 continue;
+             }
+diff --git a/mistral/pack.cc b/mistral/pack.cc
+index 5dae403..f053064 100644
+--- a/mistral/pack.cc
++++ b/mistral/pack.cc
+@@ -507,6 +507,7 @@ bool Arch::pack()
+ {
+     MistralPacker packer(getCtx());
+     packer.run();
++    bind_base_cells(); // taps and sinks into an existing bitstream (base.cc)
+ 
+     assignArchInfo();
+ 

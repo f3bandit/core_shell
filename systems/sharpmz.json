@@ -1,0 +1,748 @@
+{
+ "coreshell_profile": 1,
+ "system": "sharpmz",
+ "variant": "stock",
+ "name": "SharpMZ",
+ "rbf": "_Computer/SharpMZ",
+ "setname": null,
+ "core_name": "SharpMZ",
+ "config_file": "SharpMZ_v6.CFG",
+ "games_dir": "games/SharpMZ",
+ "saves_dir": "saves/SharpMZ",
+ "rom": {
+  "index": 2,
+  "type": "f",
+  "exts": [
+   "MZF"
+  ]
+ },
+ "slots": [
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "MZF"
+   ],
+   "label": "Load Direct to RAM"
+  },
+  {
+   "index": 4,
+   "type": "f",
+   "exts": [
+    "ROM",
+    "BIN"
+   ],
+   "label": "Load System RAM"
+  },
+  {
+   "index": 6,
+   "type": "f",
+   "exts": [
+    "ROM",
+    "BIN"
+   ],
+   "label": "Load CGROM"
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "MZT",
+    "MZF"
+   ],
+   "label": "Tape Image"
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "DSK",
+    "D88",
+    "D77"
+   ],
+   "label": "Floppy Drive A"
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "DSK",
+    "D88",
+    "D77"
+   ],
+   "label": "Floppy Drive B"
+  },
+  {
+   "index": 3,
+   "type": "s",
+   "exts": [
+    "QDF",
+    "MZQ",
+    "MZT",
+    "MZF"
+   ],
+   "label": "Quick Disk"
+  }
+ ],
+ "files": [
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "MZF"
+   ],
+   "label": "Load Direct to RAM",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 3,
+   "type": "f",
+   "exts": [
+    "ROM",
+    "BIN"
+   ],
+   "label": "Load System ROM",
+   "page": 4,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 4,
+   "type": "f",
+   "exts": [
+    "ROM",
+    "BIN"
+   ],
+   "label": "Load System RAM",
+   "page": 4,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 6,
+   "type": "f",
+   "exts": [
+    "ROM",
+    "BIN"
+   ],
+   "label": "Load CGROM",
+   "page": 4,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "MZT",
+    "MZF"
+   ],
+   "label": "Tape Image",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "DSK",
+    "D88",
+    "D77"
+   ],
+   "label": "Floppy Drive A",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "DSK",
+    "D88",
+    "D77"
+   ],
+   "label": "Floppy Drive B",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 3,
+   "type": "s",
+   "exts": [
+    "QDF",
+    "MZQ",
+    "MZT",
+    "MZF"
+   ],
+   "label": "Quick Disk",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Rewind Tape Image",
+   "bits": [
+    31,
+    31
+   ],
+   "kind": "toggle",
+   "page": 2,
+   "flags": []
+  },
+  {
+   "name": "Show Tape Details",
+   "bits": [
+    58,
+    58
+   ],
+   "kind": "reset",
+   "page": 2,
+   "flags": []
+  },
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Reset and close OSD",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "Machine",
+   "name": "Model",
+   "values": [
+    "MZ-80K",
+    "MZ-80C",
+    "MZ-80A",
+    "MZ-1200",
+    "MZ-80B",
+    "MZ-2000",
+    "MZ-700",
+    "MZ-800",
+    "MZ-1500"
+   ],
+   "default": "MZ-80K",
+   "bits": [
+    35,
+    38
+   ],
+   "core_flags": [],
+   "key": "Machine/Model",
+   "mgl_ok": true
+  },
+  {
+   "page": "Machine",
+   "name": "CPU Speed",
+   "values": [
+    "Normal",
+    "2x",
+    "4x",
+    "8x",
+    "16x",
+    "Fastest"
+   ],
+   "default": "Normal",
+   "bits": [
+    4,
+    6
+   ],
+   "core_flags": [],
+   "key": "Machine/CPU Speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "Machine",
+   "name": "MZ-80B/2000 Boot Reset",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    30,
+    30
+   ],
+   "core_flags": [],
+   "key": "Machine/MZ-80B/2000 Boot Reset",
+   "mgl_ok": true
+  },
+  {
+   "page": "Machine",
+   "name": "MZ-800 Mode",
+   "values": [
+    "MZ-700",
+    "MZ-800"
+   ],
+   "default": "MZ-700",
+   "bits": [
+    32,
+    32
+   ],
+   "core_flags": [],
+   "key": "Machine/MZ-800 Mode",
+   "mgl_ok": true
+  },
+  {
+   "page": "Machine",
+   "name": "Region",
+   "values": [
+    "Europe",
+    "Japan"
+   ],
+   "default": "Europe",
+   "bits": [
+    56,
+    56
+   ],
+   "core_flags": [],
+   "key": "Machine/Region",
+   "mgl_ok": true
+  },
+  {
+   "page": "Machine",
+   "name": "MZ-1X03 Joysticks",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    39,
+    39
+   ],
+   "core_flags": [],
+   "key": "Machine/MZ-1X03 Joysticks",
+   "mgl_ok": true
+  },
+  {
+   "page": "Machine",
+   "name": "Keyboard Layout",
+   "values": [
+    "PC",
+    "Sharp"
+   ],
+   "default": "PC",
+   "bits": [
+    51,
+    51
+   ],
+   "core_flags": [],
+   "key": "Machine/Keyboard Layout",
+   "mgl_ok": true
+  },
+  {
+   "page": "Tape",
+   "name": "Tape Buttons",
+   "values": [
+    "Auto",
+    "Off",
+    "Play",
+    "Record"
+   ],
+   "default": "Auto",
+   "bits": [
+    24,
+    25
+   ],
+   "core_flags": [],
+   "key": "Tape/Tape Buttons",
+   "mgl_ok": true
+  },
+  {
+   "page": "Tape",
+   "name": "Fast Tape",
+   "values": [
+    "Fastest",
+    "Off",
+    "2x",
+    "4x",
+    "8x",
+    "16x"
+   ],
+   "default": "Fastest",
+   "bits": [
+    21,
+    23
+   ],
+   "core_flags": [],
+   "key": "Tape/Fast Tape",
+   "mgl_ok": true
+  },
+  {
+   "page": "Tape",
+   "name": "Sharp ASCII Name",
+   "values": [
+    "Off",
+    "On Save",
+    "On Load",
+    "Both"
+   ],
+   "default": "Off",
+   "bits": [
+    26,
+    27
+   ],
+   "core_flags": [],
+   "key": "Tape/Sharp ASCII Name",
+   "mgl_ok": true
+  },
+  {
+   "page": "Tape",
+   "name": "Tape Sound",
+   "values": [
+    "Off",
+    "Mix",
+    "Only"
+   ],
+   "default": "Off",
+   "bits": [
+    53,
+    54
+   ],
+   "core_flags": [],
+   "key": "Tape/Tape Sound",
+   "mgl_ok": true
+  },
+  {
+   "page": "Tape",
+   "name": "Load Direct Start",
+   "values": [
+    "Program",
+    "Reset Only"
+   ],
+   "default": "Program",
+   "bits": [
+    49,
+    49
+   ],
+   "core_flags": [],
+   "key": "Tape/Load Direct Start",
+   "mgl_ok": true
+  },
+  {
+   "page": "Tape",
+   "name": "Tape Image Start",
+   "values": [
+    "Tape",
+    "Direct"
+   ],
+   "default": "Tape",
+   "bits": [
+    52,
+    52
+   ],
+   "core_flags": [],
+   "key": "Tape/Tape Image Start",
+   "mgl_ok": true
+  },
+  {
+   "page": "Tape",
+   "name": "Auto Load Tape",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    59,
+    59
+   ],
+   "core_flags": [],
+   "key": "Tape/Auto Load Tape",
+   "mgl_ok": true
+  },
+  {
+   "page": "Tape",
+   "name": "Tape Messages",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    55,
+    55
+   ],
+   "core_flags": [],
+   "key": "Tape/Tape Messages",
+   "mgl_ok": true
+  },
+  {
+   "page": "Tape",
+   "name": "Tape Details",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    57,
+    57
+   ],
+   "core_flags": [],
+   "key": "Tape/Tape Details",
+   "mgl_ok": true
+  },
+  {
+   "page": "Floppy",
+   "name": "Floppy Interface",
+   "values": [
+    "Auto",
+    "On",
+    "Off"
+   ],
+   "default": "Auto",
+   "bits": [
+    33,
+    34
+   ],
+   "core_flags": [],
+   "key": "Floppy/Floppy Interface",
+   "mgl_ok": true
+  },
+  {
+   "page": "Floppy",
+   "name": "MZ-800 RAM Disk",
+   "values": [
+    "Off",
+    "64 KB"
+   ],
+   "default": "Off",
+   "bits": [
+    40,
+    40
+   ],
+   "core_flags": [],
+   "key": "Floppy/MZ-800 RAM Disk",
+   "mgl_ok": true
+  },
+  {
+   "page": "Floppy",
+   "name": "Floppy CRC Errors",
+   "values": [
+    "Ignore",
+    "Report"
+   ],
+   "default": "Ignore",
+   "bits": [
+    42,
+    42
+   ],
+   "core_flags": [],
+   "key": "Floppy/Floppy CRC Errors",
+   "mgl_ok": true
+  },
+  {
+   "page": "Floppy",
+   "name": "Drive B Unit",
+   "values": [
+    "2nd drive",
+    "3rd (CP/M 4.1 HD)"
+   ],
+   "default": "2nd drive",
+   "bits": [
+    48,
+    48
+   ],
+   "core_flags": [],
+   "key": "Floppy/Drive B Unit",
+   "mgl_ok": true
+  },
+  {
+   "page": "ROM and RAM",
+   "name": "User ROM",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    28,
+    28
+   ],
+   "core_flags": [],
+   "key": "ROM and RAM/User ROM",
+   "mgl_ok": true
+  },
+  {
+   "page": "ROM and RAM",
+   "name": "FDC ROM",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    29,
+    29
+   ],
+   "core_flags": [],
+   "key": "ROM and RAM/FDC ROM",
+   "mgl_ok": true
+  },
+  {
+   "page": "Display",
+   "name": "Display Type",
+   "values": [
+    "Default",
+    "Mono 80x25",
+    "Colour 40x25",
+    "Colour 80x25"
+   ],
+   "default": "Default",
+   "bits": [
+    7,
+    8
+   ],
+   "core_flags": [],
+   "key": "Display/Display Type",
+   "mgl_ok": true
+  },
+  {
+   "page": "Display",
+   "name": "MZ-80K 80-Col Board",
+   "values": [
+    "Off",
+    "On (CP/M)"
+   ],
+   "default": "Off",
+   "bits": [
+    60,
+    60
+   ],
+   "core_flags": [],
+   "key": "Display/MZ-80K 80-Col Board",
+   "mgl_ok": true
+  },
+  {
+   "page": "Display",
+   "name": "VRAM Wait",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    18,
+    18
+   ],
+   "core_flags": [],
+   "key": "Display/VRAM Wait",
+   "mgl_ok": true
+  },
+  {
+   "page": "Display",
+   "name": "MZ-800 Border",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    43,
+    43
+   ],
+   "core_flags": [],
+   "key": "Display/MZ-800 Border",
+   "mgl_ok": true
+  },
+  {
+   "page": "Display",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    44,
+    46
+   ],
+   "core_flags": [],
+   "key": "Display/Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "Display",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    121,
+    122
+   ],
+   "core_flags": [],
+   "key": "Display/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Printer",
+   "name": "Printer",
+   "values": [
+    "None",
+    "UART (mister_printerd)"
+   ],
+   "default": "None",
+   "bits": [
+    47,
+    47
+   ],
+   "core_flags": [],
+   "key": "Printer/Printer",
+   "mgl_ok": true
+  },
+  {
+   "page": "Printer",
+   "name": "Printer Charset",
+   "values": [
+    "Sharp",
+    "ASCII"
+   ],
+   "default": "Sharp",
+   "bits": [
+    50,
+    50
+   ],
+   "core_flags": [],
+   "key": "Printer/Printer Charset",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "SharpMZ_20261102.rbf",
+  "rbf_md5": "2c2b175520ade3e5235e952103ca5447",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:13:07",
+  "confstr_sha1": "29937683d23ce032ec4ec1195bc2752794d7b882"
+ }
+}

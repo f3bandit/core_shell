@@ -1,0 +1,28 @@
+{
+ "coreshell_profile": 1,
+ "system": "memtest",
+ "variant": "stock",
+ "name": "MEMTEST",
+ "rbf": "_Utility/memtest",
+ "setname": null,
+ "core_name": "MEMTEST",
+ "config_file": "MEMTEST.CFG",
+ "games_dir": "games/MEMTEST",
+ "saves_dir": "saves/MEMTEST",
+ "rom": null,
+ "slots": [],
+ "files": [],
+ "mounts": [],
+ "triggers": [],
+ "cheats": false,
+ "menu": [],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "memtest_20210130.rbf",
+  "rbf_md5": "9df7cc52a86d0a4710e074e990744687",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:17:51",
+  "confstr_sha1": "07fb3d7f05a2f9da44bc0815f25ee5f3bee7d40b"
+ }
+}

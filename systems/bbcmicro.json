@@ -1,0 +1,284 @@
+{
+ "coreshell_profile": 1,
+ "system": "bbcmicro",
+ "variant": "stock",
+ "name": "BBCMicro",
+ "rbf": "_Computer/BBCMicro",
+ "setname": null,
+ "core_name": "BBCMicro",
+ "config_file": "BBCMicro.CFG",
+ "games_dir": "games/BBCMicro",
+ "saves_dir": "saves/BBCMicro",
+ "rom": {
+  "index": 0,
+  "type": "s",
+  "exts": [
+   "VHD"
+  ]
+ },
+ "slots": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "VHD"
+   ],
+   "label": ""
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "SSD",
+    "DSD"
+   ],
+   "label": ""
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "SSD",
+    "DSD"
+   ],
+   "label": ""
+  }
+ ],
+ "files": [],
+ "mounts": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "VHD"
+   ],
+   "label": "",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "SSD",
+    "DSD"
+   ],
+   "label": "",
+   "page": 0,
+   "flags": [
+    "H0"
+   ]
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "SSD",
+    "DSD"
+   ],
+   "label": "",
+   "page": 0,
+   "flags": [
+    "H0"
+   ]
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Autostart",
+   "values": [
+    "Yes",
+    "No"
+   ],
+   "default": "Yes",
+   "bits": [
+    12,
+    12
+   ],
+   "core_flags": [],
+   "key": "Autostart",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Dflt Boot",
+   "values": [
+    "MMC (vhd)",
+    "Floppy (SSD/DSD)"
+   ],
+   "default": "MMC (vhd)",
+   "bits": [
+    17,
+    17
+   ],
+   "core_flags": [
+    "H0"
+   ],
+   "key": "Dflt Boot",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    13,
+    14
+   ],
+   "core_flags": [],
+   "key": "Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%"
+   ],
+   "default": "None",
+   "bits": [
+    2,
+    3
+   ],
+   "core_flags": [],
+   "key": "Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    15,
+    16
+   ],
+   "core_flags": [],
+   "key": "Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Mouse as Joystick",
+   "values": [
+    "Yes",
+    "No"
+   ],
+   "default": "Yes",
+   "bits": [
+    10,
+    10
+   ],
+   "core_flags": [],
+   "key": "Mouse as Joystick",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Swap Joysticks",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    11,
+    11
+   ],
+   "core_flags": [],
+   "key": "Swap Joysticks",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Model",
+   "values": [
+    "B(MOS6502)",
+    "Master(R65SC12)"
+   ],
+   "default": "B(MOS6502)",
+   "bits": [
+    4,
+    4
+   ],
+   "core_flags": [],
+   "key": "Model",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Co-Processor",
+   "values": [
+    "None",
+    "MOS65C02"
+   ],
+   "default": "None",
+   "bits": [
+    5,
+    6
+   ],
+   "core_flags": [],
+   "key": "Co-Processor",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Default video mode",
+   "values": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7"
+   ],
+   "default": "0",
+   "bits": [
+    7,
+    9
+   ],
+   "core_flags": [],
+   "key": "Default video mode",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "BBCMicro_20260603.rbf",
+  "rbf_md5": "e9d70c6ddc809d30e150f58166abc751",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:10:33",
+  "confstr_sha1": "32ae1d28dab0bf0341ac4cb318acd308520c4bee"
+ }
+}

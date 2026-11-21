@@ -1,0 +1,177 @@
+{
+ "coreshell_profile": 1,
+ "system": "pdp1",
+ "variant": "stock",
+ "name": "PDP1",
+ "rbf": "_Computer/PDP1",
+ "setname": null,
+ "core_name": "PDP1",
+ "config_file": "PDP1_v1.CFG",
+ "games_dir": "games/PDP1",
+ "saves_dir": "saves/PDP1",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "PDP",
+   "RIM",
+   "BIN"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "PDP",
+    "RIM",
+    "BIN"
+   ],
+   "label": "Load PDP/RIM/BIN"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "PDP",
+    "RIM",
+    "BIN"
+   ],
+   "label": "Load PDP/RIM/BIN",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Enable RIM mode",
+   "bits": [
+    5,
+    5
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Disable RIM mode",
+   "bits": [
+    6,
+    6
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Reset",
+   "bits": [
+    7,
+    7
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Reset and close OSD",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Aspect Ratio",
+   "values": [
+    "Original",
+    "Wide"
+   ],
+   "default": "Original",
+   "bits": [
+    1,
+    1
+   ],
+   "core_flags": [],
+   "key": "Aspect Ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Hardware multiply",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    4,
+    4
+   ],
+   "core_flags": [],
+   "key": "Hardware multiply",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Var. brightness",
+   "values": [
+    "Yes",
+    "No"
+   ],
+   "default": "Yes",
+   "bits": [
+    8,
+    8
+   ],
+   "core_flags": [],
+   "key": "Var. brightness",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "CRT wait",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    9,
+    9
+   ],
+   "core_flags": [],
+   "key": "CRT wait",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "PDP1_20260702.rbf",
+  "rbf_md5": "1adad346cb1923624b8251534fd053a2",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:12:42",
+  "confstr_sha1": "b15090e933555a3e40e44da16f06e8ffa90044b4"
+ }
+}

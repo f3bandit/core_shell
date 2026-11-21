@@ -1,0 +1,171 @@
+{
+ "coreshell_profile": 1,
+ "system": "interact",
+ "variant": "stock",
+ "name": "Interact",
+ "rbf": "_Computer/Interact",
+ "setname": null,
+ "core_name": "Interact",
+ "config_file": "Interact.CFG",
+ "games_dir": "games/Interact",
+ "saves_dir": "saves/Interact",
+ "rom": {
+  "index": 0,
+  "type": "f",
+  "exts": [
+   "CIN",
+   "K7"
+  ]
+ },
+ "slots": [
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "CIN",
+    "K7"
+   ],
+   "label": "Load tape"
+  }
+ ],
+ "files": [
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "CIN",
+    "K7"
+   ],
+   "label": "Load tape",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Play",
+   "bits": [
+    14,
+    14
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Stop & Rewind",
+   "bits": [
+    15,
+    15
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Reset and close OSD",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    10,
+    11
+   ],
+   "core_flags": [],
+   "key": "Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    2,
+    4
+   ],
+   "core_flags": [],
+   "key": "Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    12,
+    13
+   ],
+   "core_flags": [],
+   "key": "Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Test Pattern",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    6,
+    6
+   ],
+   "core_flags": [],
+   "key": "Test Pattern",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "Interact_20251005.rbf",
+  "rbf_md5": "a4796da9b9be84606829af4565b28b59",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:11:28",
+  "confstr_sha1": "766da40751212370a32f312886bf2d815bd3aa63"
+ }
+}

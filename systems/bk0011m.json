@@ -1,0 +1,336 @@
+{
+ "coreshell_profile": 1,
+ "system": "bk0011m",
+ "variant": "stock",
+ "name": "BK0011M",
+ "rbf": "_Computer/BK0011M",
+ "setname": null,
+ "core_name": "BK0011M",
+ "config_file": "BK0011M.CFG",
+ "games_dir": "games/BK0011M",
+ "saves_dir": "saves/BK0011M",
+ "rom": {
+  "index": 0,
+  "type": "f",
+  "exts": [
+   "BIN"
+  ]
+ },
+ "slots": [
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": ""
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Mount FDD(A)"
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Mount FDD(B)"
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "VHD"
+   ],
+   "label": "Mount HDD"
+  }
+ ],
+ "files": [
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Mount FDD(A)",
+   "page": 0,
+   "flags": [
+    "D2"
+   ]
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Mount FDD(B)",
+   "page": 0,
+   "flags": [
+    "D2"
+   ]
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "VHD"
+   ],
+   "label": "Mount HDD",
+   "page": 0,
+   "flags": [
+    "D2"
+   ]
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Reset & Unload Disks",
+   "bits": [
+    2,
+    2
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Monochrome",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    3,
+    3
+   ],
+   "core_flags": [],
+   "key": "Monochrome",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    13,
+    14
+   ],
+   "core_flags": [],
+   "key": "Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%"
+   ],
+   "default": "None",
+   "bits": [
+    7,
+    8
+   ],
+   "core_flags": [],
+   "key": "Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    15,
+    16
+   ],
+   "core_flags": [],
+   "key": "Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Stereo mix",
+   "values": [
+    "none",
+    "25%",
+    "50%",
+    "100%"
+   ],
+   "default": "none",
+   "bits": [
+    10,
+    11
+   ],
+   "core_flags": [],
+   "key": "Stereo mix",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Sound mode",
+   "values": [
+    "PSG",
+    "Covox"
+   ],
+   "default": "PSG",
+   "bits": [
+    12,
+    12
+   ],
+   "core_flags": [],
+   "key": "Sound mode",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Model",
+   "values": [
+    "BK0011M",
+    "BK0010"
+   ],
+   "default": "BK0011M",
+   "bits": [
+    5,
+    5
+   ],
+   "core_flags": [],
+   "key": "Model",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "CPU Speed",
+   "values": [
+    "4MHz",
+    "8MHz"
+   ],
+   "default": "4MHz",
+   "bits": [
+    1,
+    1
+   ],
+   "core_flags": [
+    "H0"
+   ],
+   "key": "CPU Speed",
+   "mgl_ok": false
+  },
+  {
+   "page": "",
+   "name": "CPU Speed",
+   "values": [
+    "3MHz",
+    "6MHz"
+   ],
+   "default": "3MHz",
+   "bits": [
+    1,
+    1
+   ],
+   "core_flags": [
+    "H1"
+   ],
+   "key": "CPU Speed #2",
+   "mgl_ok": false
+  },
+  {
+   "page": "",
+   "name": "FDD/HDD",
+   "values": [
+    "Enable",
+    "Disable"
+   ],
+   "default": "Enable",
+   "bits": [
+    6,
+    6
+   ],
+   "core_flags": [],
+   "key": "FDD/HDD",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "SMK512",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    9,
+    9
+   ],
+   "core_flags": [
+    "H0"
+   ],
+   "key": "SMK512",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "A16M",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    9,
+    9
+   ],
+   "core_flags": [
+    "H1"
+   ],
+   "key": "A16M",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "BK0011M_20260603.rbf",
+  "rbf_md5": "f0ffa7ac75200f88e65112a59e5dcb78",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:10:36",
+  "confstr_sha1": "715175602101bc378f87c17f7cd53cbe0341e50a"
+ }
+}

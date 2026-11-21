@@ -1,0 +1,240 @@
+{
+ "coreshell_profile": 1,
+ "system": "sharpmz2500",
+ "variant": "stock",
+ "name": "SharpMZ2500",
+ "rbf": "_Computer/SharpMZ2500",
+ "setname": null,
+ "core_name": "SharpMZ2500",
+ "config_file": "SharpMZ2500.CFG",
+ "games_dir": "games/SharpMZ2500",
+ "saves_dir": "saves/SharpMZ2500",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "MZT"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "MZT"
+   ],
+   "label": "Load tape"
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "BIN",
+    "DAT"
+   ],
+   "label": "Load RAM image (MZ-2000)"
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "D88",
+    "HDM"
+   ],
+   "label": "Drive 1"
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "D88",
+    "HDM"
+   ],
+   "label": "Drive 2"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "MZT"
+   ],
+   "label": "Load tape",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "BIN",
+    "DAT"
+   ],
+   "label": "Load RAM image (MZ-2000)",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "D88",
+    "HDM"
+   ],
+   "label": "Drive 1",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "D88",
+    "HDM"
+   ],
+   "label": "Drive 2",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Reset and close OSD",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Lines (reset)",
+   "values": [
+    "400 (24 kHz)",
+    "200 (15 kHz)"
+   ],
+   "default": "400 (24 kHz)",
+   "bits": [
+    1,
+    1
+   ],
+   "core_flags": [],
+   "key": "Lines (reset)",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Boot mode (reset)",
+   "values": [
+    "MZ-2500",
+    "MZ-2000",
+    "MZ-80B"
+   ],
+   "default": "MZ-2500",
+   "bits": [
+    2,
+    3
+   ],
+   "core_flags": [],
+   "key": "Boot mode (reset)",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Keyboard",
+   "values": [
+    "Japanese (positional)",
+    "US (symbols)"
+   ],
+   "default": "Japanese (positional)",
+   "bits": [
+    7,
+    7
+   ],
+   "core_flags": [],
+   "key": "Keyboard",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Model (reset)",
+   "values": [
+    "MZ-2500",
+    "MZ-2520"
+   ],
+   "default": "MZ-2500",
+   "bits": [
+    8,
+    8
+   ],
+   "core_flags": [],
+   "key": "Model (reset)",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%"
+   ],
+   "default": "None",
+   "bits": [
+    5,
+    6
+   ],
+   "core_flags": [],
+   "key": "Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    121,
+    122
+   ],
+   "core_flags": [],
+   "key": "Aspect ratio",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "repo": "MiSTer-devel/SharpMZ2500_MiSTer",
+  "commit": "7de4765379175e9391975fe47cfb30008676b710",
+  "file": "SharpMZ2500.sv",
+  "rbf": "SharpMZ2500_20261113.rbf",
+  "rbf_md5": "3923ada652cd856f6e6d7a697105840f",
+  "confstr_sha1": "657b891ad4083126ffcc35d29ce22244dfad411a"
+ }
+}

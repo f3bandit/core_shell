@@ -1,0 +1,298 @@
+{
+ "coreshell_profile": 1,
+ "system": "gba2p",
+ "variant": "stock",
+ "name": "GBA2P",
+ "rbf": "_Console/GBA2P",
+ "setname": null,
+ "core_name": "GBA2P",
+ "config_file": "GBA2P.CFG",
+ "games_dir": "games/GBA2P",
+ "saves_dir": "saves/GBA2P",
+ "rom": {
+  "index": 0,
+  "type": "f",
+  "exts": [
+   "GBA"
+  ]
+ },
+ "slots": [
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "GBA"
+   ],
+   "label": "Load"
+  }
+ ],
+ "files": [
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "GBA"
+   ],
+   "label": "Load",
+   "page": 0,
+   "flags": [],
+   "remember_dir": true
+  }
+ ],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Reload Backup RAM",
+   "bits": [
+    12,
+    12
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "D0"
+   ]
+  },
+  {
+   "name": "Save Backup RAM",
+   "bits": [
+    13,
+    13
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "D0"
+   ]
+  },
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Rom for second GBA",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    6,
+    6
+   ],
+   "core_flags": [],
+   "key": "Rom for second GBA",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Dupe Save to GBA 2",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    17,
+    17
+   ],
+   "core_flags": [],
+   "key": "Dupe Save to GBA 2",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Autosave",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    23,
+    23
+   ],
+   "core_flags": [
+    "D0"
+   ],
+   "key": "Autosave",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Split",
+   "values": [
+    "Vert",
+    "Horz",
+    "Screen 1",
+    "Screen 2"
+   ],
+   "default": "Vert",
+   "bits": [
+    9,
+    10
+   ],
+   "core_flags": [],
+   "key": "Split",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Seperator Line",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    11,
+    11
+   ],
+   "core_flags": [],
+   "key": "Seperator Line",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Audioselect",
+   "values": [
+    "GBA 1",
+    "GBA 2",
+    "Mixed",
+    "Split 1=L 2=R"
+   ],
+   "default": "GBA 1",
+   "bits": [
+    15,
+    16
+   ],
+   "core_flags": [],
+   "key": "Audioselect",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    32,
+    33
+   ],
+   "core_flags": [],
+   "key": "Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    2,
+    4
+   ],
+   "core_flags": [],
+   "key": "Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Stereo Mix",
+   "values": [
+    "None",
+    "25%",
+    "50%",
+    "100%"
+   ],
+   "default": "None",
+   "bits": [
+    7,
+    8
+   ],
+   "core_flags": [],
+   "key": "Stereo Mix",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Spritelimit",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    20,
+    20
+   ],
+   "core_flags": [],
+   "key": "Spritelimit",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    34,
+    35
+   ],
+   "core_flags": [],
+   "key": "Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Pause when OSD is open",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    5,
+    5
+   ],
+   "core_flags": [],
+   "key": "Pause when OSD is open",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "GBA2P_20250916.rbf",
+  "rbf_md5": "1154b450224aafa44604807e8963da61",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:04:26",
+  "confstr_sha1": "04256aab774ab938268948c9c89922f36824f70d"
+ }
+}

@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/MacLC_20260920.rbf",
+ "rbf_md5": "4eee6a51f00b775db7f7989c9b9a3367",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "MACLC;UART57600:115200,MIDI;-;S6,DSKIMG,Mount Floppy;OE,Floppy Write,Off,On;-;SC0,IMGVHDHDA,Mount SCSI-0;SC1,IMGVHDHDA,Mount SCSI-1;SC2,NVR,Mount PRAM;-;SC4,ISOTO*CUEBINCHD,Mount CD-ROM;OI,CD-ROM Drive,Enabled,Disabled;OJ,Ethernet,Off,On;o45,Net interface,eth0,tap0,macvlan,eth1;o03,MAC suffix,0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F;-;O78,Aspect ratio,Original,Full Screen,[ARC1],[ARC2];OCD,Scale,Normal,V-Integer,Narrower HV-Integer,Wider HV-Integer;OA,Monitor @Reset,640x480 VGA,512x384 12in;-;O4,Memory,2MB,10MB;-;R5,Interrupt (NMI / MacsBug);R6,WIPE PRAM (erases settings!);R0,Reset & Apply CPU+Memory;-;P1,MT32-pi;P1-;P1OO,Use MT32-pi,Yes,No;P1OQ,Synth,Munt,FluidSynth;P1ORS,Munt ROM,MT-32 v1,MT-32 v2,CM-32L;P1OTV,SoundFont,0,1,2,3,4,5,6,7;P1OMN,Show Info,No,Yes,LCD-On,LCD-Auto;I,MT32-pi: SoundFont #0,MT32-pi: SoundFont #1,MT32-pi: SoundFont #2,MT32-pi: SoundFont #3,MT32-pi: SoundFont #4,MT32-pi: SoundFont #5,MT32-pi: SoundFont #6,MT32-pi: SoundFont #7,MT32-pi: MT-32 v1,MT32-pi: MT-32 v2,MT32-pi: CM-32L,MT32-pi: Unknown mode;V,v260920",
+ "dumped": "2026-11-13T23:11:52"
+}

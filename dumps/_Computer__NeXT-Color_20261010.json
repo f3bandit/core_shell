@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/NeXT-Color_20261010.rbf",
+ "rbf_md5": "264728c056b7a854f583cf7000d0b0ac",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "NeXT-Color;;-;SC0,HDAVHDIMG,SCSI disk 0;SC1,HDAVHDIMG,SCSI disk 1;S3,ISOCUEBINCHD,CD-ROM;S4,IMGIMAFLPVFDFD ,Floppy;-;O[4:3],Memory,32 MB,64 MB,128 MB,16 MB;O[5],Power-on self test,On,Off;O[8:6],Boot device,SCSI disk,Prompt (NeXT>),Network,Floppy;O[52],Ethernet,Disconnected,Connected;-;O[122:121],Aspect ratio,Original,Full Screen,[ARC1],[ARC2];O[125:123],Scale,V-Integer,Normal,Narrower HV-Integer,Wider HV-Integer;-;F1,ROMBIN,Load boot ROM;-;T[0],Reset;R[0],Reset and close OSD;v,1;V,v261010",
+ "dumped": "2026-11-13T23:12:12"
+}

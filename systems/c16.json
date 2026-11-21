@@ -1,0 +1,412 @@
+{
+ "coreshell_profile": 1,
+ "system": "c16",
+ "variant": "stock",
+ "name": "C16",
+ "rbf": "_Computer/C16",
+ "setname": null,
+ "core_name": "C16",
+ "config_file": "C16.CFG",
+ "games_dir": "games/C16",
+ "saves_dir": "saves/C16",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "PRG",
+   "TAP",
+   "BIN"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "PRG",
+    "TAP",
+    "BIN"
+   ],
+   "label": "Load"
+  },
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "PRG",
+    "TAP"
+   ],
+   "label": "Load"
+  },
+  {
+   "index": 3,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load Kernal"
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "D64",
+    "G64"
+   ],
+   "label": "Mount #8"
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "D64",
+    "G64"
+   ],
+   "label": "Mount #9"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "PRG",
+    "TAP",
+    "BIN"
+   ],
+   "label": "Load",
+   "page": 0,
+   "flags": [
+    "h4"
+   ],
+   "remember_dir": false
+  },
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "PRG",
+    "TAP"
+   ],
+   "label": "Load",
+   "page": 0,
+   "flags": [
+    "H4"
+   ],
+   "remember_dir": false
+  },
+  {
+   "index": 3,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load Kernal",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "D64",
+    "G64"
+   ],
+   "label": "Mount #8",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "D64",
+    "G64"
+   ],
+   "label": "Mount #9",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Tape Play/Pause",
+   "bits": [
+    16,
+    16
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "h3"
+   ]
+  },
+  {
+   "name": "Tape Unload",
+   "bits": [
+    18,
+    18
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "h3"
+   ]
+  },
+  {
+   "name": "Reset & Apply",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Tape Sound",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    17,
+    17
+   ],
+   "core_flags": [
+    "h3"
+   ],
+   "key": "Tape Sound",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Tape Autoplay",
+   "values": [
+    "Yes",
+    "No"
+   ],
+   "default": "Yes",
+   "bits": [
+    10,
+    10
+   ],
+   "core_flags": [
+    "h3"
+   ],
+   "key": "Tape Autoplay",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Joysticks swap",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    5,
+    5
+   ],
+   "core_flags": [],
+   "key": "Joysticks swap",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    19,
+    20
+   ],
+   "core_flags": [],
+   "key": "Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    2,
+    4
+   ],
+   "core_flags": [],
+   "key": "Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "TV Standard",
+   "values": [
+    "from Kernal",
+    "Force PAL",
+    "Force NTSC"
+   ],
+   "default": "from Kernal",
+   "bits": [
+    7,
+    8
+   ],
+   "core_flags": [],
+   "key": "TV Standard",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Vertical Crop",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    23,
+    23
+   ],
+   "core_flags": [
+    "H2",
+    "d1"
+   ],
+   "key": "Vertical Crop",
+   "mgl_ok": false
+  },
+  {
+   "page": "",
+   "name": "Vertical Crop",
+   "values": [
+    "No",
+    "270",
+    "216"
+   ],
+   "default": "No",
+   "bits": [
+    23,
+    24
+   ],
+   "core_flags": [
+    "h2",
+    "d1"
+   ],
+   "key": "Vertical Crop #2",
+   "mgl_ok": false
+  },
+  {
+   "page": "",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    25,
+    26
+   ],
+   "core_flags": [],
+   "key": "Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "SID card",
+   "values": [
+    "Disabled",
+    "6581",
+    "8580"
+   ],
+   "default": "Disabled",
+   "bits": [
+    13,
+    14
+   ],
+   "core_flags": [],
+   "key": "SID card",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "External IEC",
+   "values": [
+    "Disabled",
+    "Enabled"
+   ],
+   "default": "Disabled",
+   "bits": [
+    11,
+    11
+   ],
+   "core_flags": [],
+   "key": "External IEC",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Model",
+   "values": [
+    "C16",
+    "Plus/4"
+   ],
+   "default": "C16",
+   "bits": [
+    9,
+    9
+   ],
+   "core_flags": [],
+   "key": "Model",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Kernal",
+   "values": [
+    "Loaded",
+    "Original"
+   ],
+   "default": "Loaded",
+   "bits": [
+    6,
+    6
+   ],
+   "core_flags": [
+    "D0"
+   ],
+   "key": "Kernal",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "C16_20260603.rbf",
+  "rbf_md5": "c682b5a7278ee6bbe7927c36a19dca9e",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:10:45",
+  "confstr_sha1": "42a8cd0436ac9be5048c961d279638d0495c0bc5"
+ }
+}

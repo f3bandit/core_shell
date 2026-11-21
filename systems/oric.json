@@ -1,0 +1,538 @@
+{
+ "coreshell_profile": 1,
+ "system": "oric",
+ "variant": "stock",
+ "name": "Oric",
+ "rbf": "_Computer/Oric",
+ "setname": null,
+ "core_name": "Oric",
+ "config_file": "Oric.CFG",
+ "games_dir": "games/Oric",
+ "saves_dir": "saves/Oric",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "TAP"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "TAP"
+   ],
+   "label": "Load TAP file"
+  },
+  {
+   "index": 4,
+   "type": "f",
+   "exts": [
+    "SNA"
+   ],
+   "label": "Load Snapshot"
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "NIB",
+    "DSK",
+    "DO"
+   ],
+   "label": "Mount Drive A:"
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "NIB",
+    "DSK",
+    "DO"
+   ],
+   "label": "Mount Drive B:"
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Mount Drive A:"
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Mount Drive B:"
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Mount Drive C:"
+  },
+  {
+   "index": 3,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Mount Drive D:"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "TAP"
+   ],
+   "label": "Load TAP file",
+   "page": 0,
+   "flags": [],
+   "remember_dir": true
+  },
+  {
+   "index": 4,
+   "type": "f",
+   "exts": [
+    "SNA"
+   ],
+   "label": "Load Snapshot",
+   "page": 0,
+   "flags": [],
+   "remember_dir": true
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load Alternative Bios",
+   "page": 1,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "NIB",
+    "DSK",
+    "DO"
+   ],
+   "label": "Mount Drive A:",
+   "page": 0,
+   "flags": [
+    "h6"
+   ]
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "NIB",
+    "DSK",
+    "DO"
+   ],
+   "label": "Mount Drive B:",
+   "page": 0,
+   "flags": [
+    "h6"
+   ]
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Mount Drive A:",
+   "page": 0,
+   "flags": [
+    "H6"
+   ]
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Mount Drive B:",
+   "page": 0,
+   "flags": [
+    "H6"
+   ]
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Mount Drive C:",
+   "page": 0,
+   "flags": [
+    "H6"
+   ]
+  },
+  {
+   "index": 3,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Mount Drive D:",
+   "page": 0,
+   "flags": [
+    "H6"
+   ]
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Rewind Tape",
+   "bits": [
+    53,
+    53
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": [
+    "h0"
+   ]
+  },
+  {
+   "name": "Reset & Apply",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Drive A Write Protect",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    17,
+    17
+   ],
+   "core_flags": [
+    "H2"
+   ],
+   "key": "Drive A Write Protect",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Drive B Write Protect",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    18,
+    18
+   ],
+   "core_flags": [
+    "H3"
+   ],
+   "key": "Drive B Write Protect",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Drive C Write Protect",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    19,
+    19
+   ],
+   "core_flags": [
+    "H6",
+    "H4"
+   ],
+   "key": "Drive C Write Protect",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Drive D Write Protect",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    20,
+    20
+   ],
+   "core_flags": [
+    "H6",
+    "H5"
+   ],
+   "key": "Drive D Write Protect",
+   "mgl_ok": true
+  },
+  {
+   "page": "Settings",
+   "name": "FDD Controller",
+   "values": [
+    "Auto",
+    "Off",
+    "On"
+   ],
+   "default": "Auto",
+   "bits": [
+    5,
+    6
+   ],
+   "core_flags": [],
+   "key": "Settings/FDD Controller",
+   "mgl_ok": true
+  },
+  {
+   "page": "Settings",
+   "name": "Tape Audio",
+   "values": [
+    "Mute",
+    "Low",
+    "High"
+   ],
+   "default": "Mute",
+   "bits": [
+    50,
+    51
+   ],
+   "core_flags": [],
+   "key": "Settings/Tape Audio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Settings",
+   "name": "Tape Input",
+   "values": [
+    "File",
+    "ADC"
+   ],
+   "default": "File",
+   "bits": [
+    52,
+    52
+   ],
+   "core_flags": [],
+   "key": "Settings/Tape Input",
+   "mgl_ok": true
+  },
+  {
+   "page": "Settings",
+   "name": "Tape Load",
+   "values": [
+    "Fast",
+    "Ultra",
+    "Off"
+   ],
+   "default": "Fast",
+   "bits": [
+    58,
+    59
+   ],
+   "core_flags": [],
+   "key": "Settings/Tape Load",
+   "mgl_ok": true
+  },
+  {
+   "page": "Settings",
+   "name": "Autoload TAP",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    57,
+    57
+   ],
+   "core_flags": [],
+   "key": "Settings/Autoload TAP",
+   "mgl_ok": true
+  },
+  {
+   "page": "Settings",
+   "name": "Named CLOAD Rewind",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    60,
+    60
+   ],
+   "core_flags": [],
+   "key": "Settings/Named CLOAD Rewind",
+   "mgl_ok": true
+  },
+  {
+   "page": "Settings",
+   "name": "Joystick Adapter",
+   "values": [
+    "None",
+    "PASE",
+    "IJK"
+   ],
+   "default": "None",
+   "bits": [
+    54,
+    55
+   ],
+   "core_flags": [],
+   "key": "Settings/Joystick Adapter",
+   "mgl_ok": true
+  },
+  {
+   "page": "Settings",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    121,
+    122
+   ],
+   "core_flags": [],
+   "key": "Settings/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Settings",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%"
+   ],
+   "default": "None",
+   "bits": [
+    10,
+    12
+   ],
+   "core_flags": [],
+   "key": "Settings/Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "Settings",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    15,
+    16
+   ],
+   "core_flags": [],
+   "key": "Settings/Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "Settings",
+   "name": "Audio",
+   "values": [
+    "Stereo",
+    "ABC (West Europe)",
+    "ACB (East Europe)"
+   ],
+   "default": "Stereo",
+   "bits": [
+    8,
+    9
+   ],
+   "core_flags": [],
+   "key": "Settings/Audio",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "ROM",
+   "values": [
+    "Pravetz 8D",
+    "Oric Atmos",
+    "Oric 1"
+   ],
+   "default": "Pravetz 8D",
+   "bits": [
+    3,
+    4
+   ],
+   "core_flags": [
+    "H1"
+   ],
+   "key": "ROM",
+   "mgl_ok": false
+  },
+  {
+   "page": "",
+   "name": "ROM",
+   "values": [
+    "Pravetz 8D",
+    "Oric Atmos",
+    "Oric 1",
+    "Loadable Bios"
+   ],
+   "default": "Pravetz 8D",
+   "bits": [
+    3,
+    4
+   ],
+   "core_flags": [
+    "h1"
+   ],
+   "key": "ROM #2",
+   "mgl_ok": false
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "Oric_20260603.rbf",
+  "rbf_md5": "1d3541e97878492508dec4bf6f2096b2",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:12:27",
+  "confstr_sha1": "964fe1776f76a066d395c1a8722879f244884b3e"
+ }
+}

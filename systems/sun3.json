@@ -1,0 +1,361 @@
+{
+ "coreshell_profile": 1,
+ "system": "sun3",
+ "variant": "stock",
+ "name": "Sun-3",
+ "rbf": "_Computer/Sun-3",
+ "setname": null,
+ "core_name": "Sun-3",
+ "config_file": "Sun-3_v1.CFG",
+ "games_dir": "games/Sun-3",
+ "saves_dir": "saves/Sun-3",
+ "rom": {
+  "index": 0,
+  "type": "f",
+  "exts": [
+   "ROM"
+  ]
+ },
+ "slots": [
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load ROM"
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "IMG",
+    "VHD"
+   ],
+   "label": "Pri. disk (ID 0)"
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "IMG",
+    "VHD"
+   ],
+   "label": "Disk (ID 1)"
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "QIC"
+   ],
+   "label": "Tape (ID 4)"
+  },
+  {
+   "index": 4,
+   "type": "s",
+   "exts": [
+    "ISO"
+   ],
+   "label": "CD-ROM (ID 6)"
+  },
+  {
+   "index": 3,
+   "type": "s",
+   "exts": [
+    "NVR"
+   ],
+   "label": "EEPROM image"
+  }
+ ],
+ "files": [
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load ROM",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "IMG",
+    "VHD"
+   ],
+   "label": "Pri. disk (ID 0)",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "IMG",
+    "VHD"
+   ],
+   "label": "Disk (ID 1)",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "QIC"
+   ],
+   "label": "Tape (ID 4)",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 4,
+   "type": "s",
+   "exts": [
+    "ISO"
+   ],
+   "label": "CD-ROM (ID 6)",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 3,
+   "type": "s",
+   "exts": [
+    "NVR"
+   ],
+   "label": "EEPROM image",
+   "page": 5,
+   "flags": []
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Apply and reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Stop-A (abort)",
+   "bits": [
+    17,
+    17
+   ],
+   "kind": "toggle",
+   "page": 1,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Tape volume",
+   "values": [
+    "1",
+    "2",
+    "3"
+   ],
+   "default": "1",
+   "bits": [
+    3,
+    4
+   ],
+   "core_flags": [],
+   "key": "Tape volume",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Network interface",
+   "values": [
+    "eth0",
+    "None",
+    "eth1",
+    "macvlan",
+    "tap0"
+   ],
+   "default": "eth0",
+   "bits": [
+    9,
+    11
+   ],
+   "core_flags": [],
+   "key": "Network interface",
+   "mgl_ok": true
+  },
+  {
+   "page": "Machine",
+   "name": "CPU clock",
+   "values": [
+    "20 MHz",
+    "25 MHz",
+    "33 MHz"
+   ],
+   "default": "20 MHz",
+   "bits": [
+    13,
+    14
+   ],
+   "core_flags": [],
+   "key": "Machine/CPU clock",
+   "mgl_ok": true
+  },
+  {
+   "page": "Machine",
+   "name": "Colour board",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    12,
+    12
+   ],
+   "core_flags": [],
+   "key": "Machine/Colour board",
+   "mgl_ok": true
+  },
+  {
+   "page": "Machine",
+   "name": "Colour board type",
+   "values": [
+    "cg4",
+    "GX"
+   ],
+   "default": "cg4",
+   "bits": [
+    19,
+    19
+   ],
+   "core_flags": [
+    "H1"
+   ],
+   "key": "Machine/Colour board type",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    1,
+    2
+   ],
+   "core_flags": [],
+   "key": "Video/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Scale",
+   "values": [
+    "V-Integer",
+    "Normal",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "V-Integer",
+   "bits": [
+    5,
+    6
+   ],
+   "core_flags": [],
+   "key": "Video/Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Swap Alt/Win keys",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    18,
+    18
+   ],
+   "core_flags": [],
+   "key": "Input/Swap Alt/Win keys",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio",
+   "name": "Keyboard bell",
+   "values": [
+    "Normal",
+    "Loud",
+    "Quiet",
+    "Off"
+   ],
+   "default": "Normal",
+   "bits": [
+    7,
+    8
+   ],
+   "core_flags": [],
+   "key": "Audio/Keyboard bell",
+   "mgl_ok": true
+  },
+  {
+   "page": "Advanced",
+   "name": "Diag switch",
+   "values": [
+    "Normal",
+    "Diag"
+   ],
+   "default": "Normal",
+   "bits": [
+    15,
+    15
+   ],
+   "core_flags": [],
+   "key": "Advanced/Diag switch",
+   "mgl_ok": true
+  },
+  {
+   "page": "Advanced",
+   "name": "Clock",
+   "values": [
+    "MiSTer's time",
+    "28 years back"
+   ],
+   "default": "MiSTer's time",
+   "bits": [
+    16,
+    16
+   ],
+   "core_flags": [],
+   "key": "Advanced/Clock",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "Sun-3_20261024.rbf",
+  "rbf_md5": "36ccaad3b821604d28b6b83cbde16ad1",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:13:25",
+  "confstr_sha1": "ff3ebea76f155fcf7c66ccdedabc93cae60cb204"
+ }
+}

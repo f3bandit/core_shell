@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/CoCo3_20260927.rbf",
+ "rbf_md5": "574a5c379baa30746bc3bfd9b94d6213",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "COCO3;UART19200:9600:4800:2400:1200:300;-;OCD,Multi-Pak,(Slot 2) CoCoSDC,(Slot3) ECB /Cart,(Slot 4) Disk;H3-;H3S2,DSK,Load Disk Drive 0;H3S3,DSK,Load Disk Drive 1;H3S4,DSK,Load Disk Drive 2;H3S5,DSK,Load Disk Drive 3;H2-;H2F1,CCC,Load Cartridge;H1-;H1S0,DSKVHD,Load SDC Drive 0;H1S1,DSKVHD,Load SDC Drive 1;H1-;H1S2,DSK,Load OS9 Floppy /d0;H1S3,DSK,Load OS9 Floppy /d1;H1S4,DSK,Load OS9 Floppy /d3;H1S5,DSK,Load OS9 Floppy /d4;-;F2,CAS,Load Cassette;TF,Stop & Rewind;OH,Monitor Tape Sound,No,Yes;-;S6,CAS,Save Cassette;OE,Cass Rwd=0 / Rec=1,0,1;-;P1,Video Settings;P1-;P1-, -= Video Settings =-;P1-;P1O89,Aspect ratio,Original,Full Screen,Wide,[ARC1];P1O35,Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%,CRT 75%;P1-;P1OL,CoCo3 LC,Yes,No-(SG6=Yes);P1-;P1o56,Artifact Type,MESS,Simple,NONE;P1OI,Artifact Color Set,0,1;-;P2,Debug Menu;P2-;P2-, -= Debug Menu =-;P2-;P2F3,BIN,Load COCO Font;P2OG,Swap MiSTer Uart,RS CART,Default;P2OU,Swap Uart to IO,RS IO,MiSTer;P2OT,Display Debug,Off,On;-;ON,D-Pad Joystick emu,No,Yes;O6,Swap Joysticks,Off,On;OS,Use Mouse for Rt Joystk,Off,On;RA,Easter Egg;-;OO,Force Turbo,No,Yes;o02,Turbo Speed,CoCo Ctrl, 0.89 Mhz,1.78 Mhz,2.86 Mhz, 3.58 Mhz,7.16 Mhz,9.54 Mhz;OPR,Memory Size,512K,1M,2M,16M;o89,Auto Run,No,DOS,AUTO.BAS;-;RM,Cold Boot;R0,Reset;J,Button1,Button2;jn,A,B;v,51;V,v260927-001",
+ "dumped": "2026-11-13T23:11:01"
+}

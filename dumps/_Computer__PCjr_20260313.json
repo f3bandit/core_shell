@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/PCjr_20260313.rbf",
+ "rbf_md5": "f6b6c85673997a07fa7796328766898f",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "PCjr;UART115200:115200;S0,IMGIMAVFD,Floppy A:;OJ,Write Protect,No,Yes;-;O36,RAM Size,128KB,192KB,256KB,320KB,384KB,448KB,512KB,576KB,640KB;-;P1,System & BIOS;P1-;P1O7,Boot Splash Screen,Yes,No;P1-;P1FC1,ROM,PCjr BIOS:;P1-;P1-;P1FC2,JRC,Cartridge 1 (JRC):;P1FC3,JRC,Cartridge 2 (JRC):;P1-;d1P1FC4,JRT,Cassette Tape (JRT):;P1-;P2,Audio & Video;P2-;P2o01,Speaker Volume,1,2,3,4;d2P2o9,Tape sound,Disabled,Enabled;P2o23,PCjr Volume,1,2,3,4;P2o45,Audio Boost,No,2x,4x;P2o67,Stereo Mix,none,25%,50%,100%;P2-;P2oEH,CRT H offset,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15;P2oIK,CRT V offset,0,1,2,3,4,5,6,7;P2oMO,VSync Width,Auto,1,2,3,4,5,6,7;P2oPR,HSync Width,Auto,1,2,3,4,5,6,7;P2-;P2O12,Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%;P2O89,Aspect ratio,Original,Full Screen,[ARC1],[ARC2];P2OT,Border,No,Yes;P2o8,Composite video,Off,On;P2OEG,Display,Full Color,Green,Amber,B&W,Red,Blue,Fuchsia,Purple;P2-;P3,Hardware;P3-;P3ONO,Joystick 1, Analog, Digital, Disabled;P3OPQ,Joystick 2, Analog, Digital, Disabled;P3OR,Sync Joy to CPU Speed,No,Yes;P3OS,Swap Joysticks,No,Yes;P3-;-;R0,Reset & apply settings;J,Fire 1,Fire 2;V,v260313",
+ "dumped": "2026-11-13T23:12:39"
+}

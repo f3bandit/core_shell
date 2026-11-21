@@ -1,0 +1,116 @@
+{
+ "coreshell_profile": 1,
+ "system": "vt52",
+ "variant": "stock",
+ "name": "VT52",
+ "rbf": "_Computer/VT52",
+ "setname": null,
+ "core_name": "VT52",
+ "config_file": "VT52.CFG",
+ "games_dir": "games/VT52",
+ "saves_dir": "saves/VT52",
+ "rom": null,
+ "slots": [],
+ "files": [],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Reset and close OSD",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Aspect ratio",
+   "values": [
+    "Original (4:3)",
+    "Full Screen"
+   ],
+   "default": "Original (4:3)",
+   "bits": [
+    121,
+    122
+   ],
+   "core_flags": [],
+   "key": "Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Text Color",
+   "values": [
+    "White",
+    "Red",
+    "Green",
+    "Blue"
+   ],
+   "default": "White",
+   "bits": [
+    3,
+    4
+   ],
+   "core_flags": [],
+   "key": "Text Color",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Serial Port",
+   "values": [
+    "User IO Port",
+    "Console Port"
+   ],
+   "default": "User IO Port",
+   "bits": [
+    12,
+    12
+   ],
+   "core_flags": [],
+   "key": "Serial Port",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Font",
+   "values": [
+    "Terminus 8x16",
+    " VT52 rom 8x8"
+   ],
+   "default": "Terminus 8x16",
+   "bits": [
+    14,
+    14
+   ],
+   "core_flags": [],
+   "key": "Font",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "VT52_20241120.rbf",
+  "rbf_md5": "4b49cb400e4c5007f15c6b22bab94efb",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:14:04",
+  "confstr_sha1": "ad04d15afbd6bef146dbdba2c22b65570b856974"
+ }
+}

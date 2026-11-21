@@ -1,0 +1,256 @@
+{
+ "coreshell_profile": 1,
+ "system": "gamegear2p",
+ "variant": "stock",
+ "name": "GAMEGEAR2P",
+ "rbf": "_Console/GameGear2P",
+ "setname": null,
+ "core_name": "GAMEGEAR2P",
+ "config_file": "GAMEGEAR2P.CFG",
+ "games_dir": "games/GAMEGEAR2P",
+ "saves_dir": "saves/GAMEGEAR2P",
+ "rom": {
+  "index": 2,
+  "type": "f",
+  "exts": [
+   "GG"
+  ]
+ },
+ "slots": [
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "GG"
+   ],
+   "label": ""
+  }
+ ],
+ "files": [
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "GG"
+   ],
+   "label": "",
+   "page": 0,
+   "flags": [
+    "H8"
+   ],
+   "remember_dir": true
+  }
+ ],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Load Backup RAM",
+   "bits": [
+    6,
+    6
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "H8",
+    "H9",
+    "D0"
+   ]
+  },
+  {
+   "name": "Save Backup RAM",
+   "bits": [
+    7,
+    7
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "H8",
+    "H9",
+    "D0"
+   ]
+  },
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Autosave",
+   "values": [
+    "OFF",
+    "ON"
+   ],
+   "default": "OFF",
+   "bits": [
+    25,
+    25
+   ],
+   "core_flags": [
+    "H8"
+   ],
+   "key": "Autosave",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Region",
+   "values": [
+    "US/EU",
+    "Japan"
+   ],
+   "default": "US/EU",
+   "bits": [
+    10,
+    10
+   ],
+   "core_flags": [
+    "H8"
+   ],
+   "key": "Region",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Z80 Speed",
+   "values": [
+    "Normal",
+    "Turbo"
+   ],
+   "default": "Normal",
+   "bits": [
+    40,
+    40
+   ],
+   "core_flags": [
+    "H8"
+   ],
+   "key": "Z80 Speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    26,
+    27
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    3,
+    5
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    30,
+    31
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Sprites Per Line",
+   "values": [
+    "Standard",
+    "All"
+   ],
+   "default": "Standard",
+   "bits": [
+    8,
+    8
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Sprites Per Line",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Separator Line",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    61,
+    61
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Separator Line",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Audioselect",
+   "values": [
+    "GG 1",
+    "GG 2",
+    "Mixed",
+    "Split 1=L 2=R"
+   ],
+   "default": "GG 1",
+   "bits": [
+    62,
+    63
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Audioselect",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "GameGear2P_20260526.rbf",
+  "rbf_md5": "70c08083e35338ca6026a1f3c25efcab",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:04:41",
+  "confstr_sha1": "d2d8cc6eabc691cd33fdeabf5ea455f039ccd5e5"
+ }
+}

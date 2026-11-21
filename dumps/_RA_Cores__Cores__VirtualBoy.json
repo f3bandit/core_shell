@@ -1,0 +1,7 @@
+{
+ "rbf": "_RA_Cores/Cores/VirtualBoy.rbf",
+ "rbf_md5": "ec9971f9713ede869510c8b1ad81f9ca",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "VirtualBoy;SS32000000:2000000;FS1,VB ,Load ROM;-;H8C,Cheats;-;O[46:45],Savestate Slot,1,2,3,4;d7rA,Save State(Alt+F1-F4);H8d7rB,Restore State(F1-F4);-;P1,Audio & Video;P1-;P1O[5:3],Color Mode,Red,Multicolor,Palette,Anaglyph,ColorCode,TriOviz,Custom;H1P1FC3,GBP,Load Palette;H1P1O[41],Use True Black,On,Off;H0P1O[14:12],L Color,Red,Magenta,Blue,Cyan,Green,Yellow,White;H0P1O[19:17],R Color,Red,Magenta,Blue,Cyan,Green,Yellow,White;P1O[27:25],Stereo Scale,100%,75%,62.5%,50%,37.5%,25%,12.5%,0%;P1O[8:7],Eye Drawn,Left,Right,Both,Side by Side;P1-;P1O[29],Video Timing,Native 50 Hz,Buffered 60 Hz;P1O[2:1],Aspect Ratio,Original,Full Screen,[ARC1],[ARC2];d2P1O[31],Vertical Crop,Disabled,216p(5x);d2P1O[35:32],Crop Offset,0,2,4,6,8,10,-12,-10,-8,-6,-4,-2;P1O[37:36],Scale,Normal,V-Integer,Narrower HV-Integer,Wider HV-Integer;P1O[39:38],Audio Mix,None,25%,50%,100%;P1O[47],Brightness Map,SDR,HDR HLG;P2,Advanced;P2-;P2F4,VBT,Load Brightness Table;P2-;P2O[40],Enable Large SRAM,Off,On;P2O[28],Serial Port,Rumble,None;P2O[44],Savestates to SD Card,On,Off;P2-;P2R9,Load Backup RAM;P2RA,Save Backup RAM;P2OB,Autosave,On,Off;H8P2F5,TAS,Load TAS;-;R0,Reset;J1,A,B,L,R,Select,Start,R.Right,R.Left,R.Down,R.Up,Save State;v,15;V,v260925",
+ "dumped": "2026-11-13T23:19:28"
+}

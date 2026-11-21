@@ -1,0 +1,572 @@
+{
+ "coreshell_profile": 1,
+ "system": "vic20",
+ "variant": "stock",
+ "name": "VIC20",
+ "rbf": "_Computer/VIC20",
+ "setname": null,
+ "core_name": "VIC20",
+ "config_file": "VIC20.CFG",
+ "games_dir": "games/VIC20",
+ "saves_dir": "saves/VIC20",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "PRG",
+   "CRT",
+   "CT?",
+   "TAP"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "PRG",
+    "CRT",
+    "CT?",
+    "TAP"
+   ],
+   "label": "Load"
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "CRT",
+    "ROM"
+   ],
+   "label": "Load Megacart"
+  },
+  {
+   "index": 6,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load Kernal"
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "D64",
+    "G64"
+   ],
+   "label": "Mount #8"
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "D64",
+    "G64"
+   ],
+   "label": "Mount #9"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "PRG",
+    "CRT",
+    "CT?",
+    "TAP"
+   ],
+   "label": "Load",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "CRT",
+    "ROM"
+   ],
+   "label": "Load Megacart",
+   "page": 0,
+   "flags": [],
+   "remember_dir": true
+  },
+  {
+   "index": 6,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load Kernal",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "D64",
+    "G64"
+   ],
+   "label": "Mount #8",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "D64",
+    "G64"
+   ],
+   "label": "Mount #9",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Save NVRAM",
+   "bits": [
+    28,
+    28
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "h4"
+   ]
+  },
+  {
+   "name": "Tape Play/Pause",
+   "bits": [
+    16,
+    16
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "h3"
+   ]
+  },
+  {
+   "name": "Tape Unload",
+   "bits": [
+    18,
+    18
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "h3"
+   ]
+  },
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Reset & Detach Cartridge",
+   "bits": [
+    27,
+    27
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Autosave",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    29,
+    29
+   ],
+   "core_flags": [
+    "h4"
+   ],
+   "key": "Autosave",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Tape Sound",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    17,
+    17
+   ],
+   "core_flags": [
+    "h3"
+   ],
+   "key": "Tape Sound",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Tape Autoplay",
+   "values": [
+    "Yes",
+    "No"
+   ],
+   "default": "Yes",
+   "bits": [
+    22,
+    22
+   ],
+   "core_flags": [
+    "h3"
+   ],
+   "key": "Tape Autoplay",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    19,
+    20
+   ],
+   "core_flags": [],
+   "key": "Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    2,
+    4
+   ],
+   "core_flags": [],
+   "key": "Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Screen center",
+   "values": [
+    "Both",
+    "None",
+    "Horz",
+    "Vert"
+   ],
+   "default": "Both",
+   "bits": [
+    12,
+    13
+   ],
+   "core_flags": [],
+   "key": "Screen center",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "TV mode",
+   "values": [
+    "PAL",
+    "NTSC"
+   ],
+   "default": "PAL",
+   "bits": [
+    14,
+    14
+   ],
+   "core_flags": [],
+   "key": "TV mode",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Vertical Crop",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    23,
+    23
+   ],
+   "core_flags": [
+    "H2",
+    "d1"
+   ],
+   "key": "Vertical Crop",
+   "mgl_ok": false
+  },
+  {
+   "page": "",
+   "name": "Vertical Crop",
+   "values": [
+    "No",
+    "270",
+    "216"
+   ],
+   "default": "No",
+   "bits": [
+    23,
+    24
+   ],
+   "core_flags": [
+    "h2",
+    "d1"
+   ],
+   "key": "Vertical Crop #2",
+   "mgl_ok": false
+  },
+  {
+   "page": "",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    25,
+    26
+   ],
+   "core_flags": [],
+   "key": "Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "ExtRAM $0400(3KB)",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    6,
+    6
+   ],
+   "core_flags": [
+    "H4"
+   ],
+   "key": "ExtRAM $0400(3KB)",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "ExtRAM $2000(8KB)",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    7,
+    7
+   ],
+   "core_flags": [
+    "H4"
+   ],
+   "key": "ExtRAM $2000(8KB)",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "ExtRAM $4000(8KB)",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    8,
+    8
+   ],
+   "core_flags": [
+    "H4"
+   ],
+   "key": "ExtRAM $4000(8KB)",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "ExtRAM $6000(8KB)",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    9,
+    9
+   ],
+   "core_flags": [
+    "H4"
+   ],
+   "key": "ExtRAM $6000(8KB)",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "ExtRAM $A000(8KB)",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    10,
+    10
+   ],
+   "core_flags": [
+    "H4"
+   ],
+   "key": "ExtRAM $A000(8KB)",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "External IEC",
+   "values": [
+    "Disabled",
+    "Enabled"
+   ],
+   "default": "Disabled",
+   "bits": [
+    21,
+    21
+   ],
+   "core_flags": [],
+   "key": "External IEC",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Cart is writable",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    11,
+    11
+   ],
+   "core_flags": [],
+   "key": "Cart is writable",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Kernal",
+   "values": [
+    "Loadable",
+    "Standard"
+   ],
+   "default": "Loadable",
+   "bits": [
+    15,
+    15
+   ],
+   "core_flags": [],
+   "key": "Kernal",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Swap paddles",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    30,
+    30
+   ],
+   "core_flags": [],
+   "key": "Swap paddles",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "SNAC Joystick",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    32,
+    32
+   ],
+   "core_flags": [],
+   "key": "SNAC Joystick",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "SNAC Autofire",
+   "values": [
+    "Off",
+    "Slow",
+    "Fast"
+   ],
+   "default": "Off",
+   "bits": [
+    33,
+    34
+   ],
+   "core_flags": [],
+   "key": "SNAC Autofire",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "VIC20_20260603.rbf",
+  "rbf_md5": "b78b7b500c359c50f9dcee65c156f081",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:14:01",
+  "confstr_sha1": "2c49c1cece28c440b8ba1a4e5370c22ca0863374"
+ }
+}

@@ -1,0 +1,570 @@
+{
+ "coreshell_profile": 1,
+ "system": "saturn",
+ "variant": "ra",
+ "name": "Saturn",
+ "rbf": "_RA_Cores/Cores/Saturn",
+ "setname": "RA_Saturn",
+ "core_name": "Saturn",
+ "config_file": "RA_Saturn.CFG",
+ "games_dir": "games/Saturn",
+ "saves_dir": "saves/Saturn",
+ "rom": {
+  "index": 3,
+  "type": "f",
+  "exts": [
+   "BIN"
+  ]
+ },
+ "slots": [
+  {
+   "index": 3,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load cartridge"
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "CUE",
+    "CHD"
+   ],
+   "label": "Insert Disc"
+  }
+ ],
+ "files": [
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load bios",
+   "page": 0,
+   "flags": [],
+   "remember_dir": true
+  },
+  {
+   "index": 3,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load cartridge",
+   "page": 0,
+   "flags": [],
+   "remember_dir": true
+  }
+ ],
+ "mounts": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "CUE",
+    "CHD"
+   ],
+   "label": "Insert Disc",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "SAV"
+   ],
+   "label": "Mount Backup RAM",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Save Backup RAM",
+   "bits": [
+    25,
+    25
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "D0"
+   ]
+  },
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Reset on insert",
+   "values": [
+    "Yes",
+    "No"
+   ],
+   "default": "Yes",
+   "bits": [
+    4,
+    4
+   ],
+   "core_flags": [],
+   "key": "Reset on insert",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Cartridge",
+   "values": [
+    "None",
+    "ROM 2M",
+    "DRAM 1M",
+    "DRAM 4M",
+    "DRAM 6M DEV",
+    "BACKUP"
+   ],
+   "default": "None",
+   "bits": [
+    21,
+    23
+   ],
+   "core_flags": [],
+   "key": "Cartridge",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Region",
+   "values": [
+    "Japan",
+    "Taiwan",
+    "USA",
+    "Brazil",
+    "Korea",
+    "Asia",
+    "Europe",
+    "Auto"
+   ],
+   "default": "Japan",
+   "bits": [
+    33,
+    35
+   ],
+   "core_flags": [],
+   "key": "Region",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Autosave",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    26,
+    26
+   ],
+   "core_flags": [
+    "D0"
+   ],
+   "key": "Autosave",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    62,
+    63
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "320x224 Aspect",
+   "values": [
+    "Original",
+    "Corrected"
+   ],
+   "default": "Original",
+   "bits": [
+    11,
+    11
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/320x224 Aspect",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Deinterlacing",
+   "values": [
+    " Weave",
+    " Bob"
+   ],
+   "default": " Weave",
+   "bits": [
+    29,
+    29
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Deinterlacing",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Composite Blend",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    50,
+    50
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Composite Blend",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Horizontal Crop",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    64,
+    64
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Horizontal Crop",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Vertical Crop",
+   "values": [
+    "Disabled",
+    "216p(5x)",
+    "224p"
+   ],
+   "default": "Disabled",
+   "bits": [
+    80,
+    81
+   ],
+   "core_flags": [
+    "D8"
+   ],
+   "key": "Audio & Video/Vertical Crop",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Crop Offset",
+   "values": [
+    "0",
+    "2",
+    "4",
+    "8",
+    "10",
+    "12",
+    "-12",
+    "-10",
+    "-8",
+    "-6",
+    "-4",
+    "-2"
+   ],
+   "default": "0",
+   "bits": [
+    51,
+    54
+   ],
+   "core_flags": [
+    "D8"
+   ],
+   "key": "Audio & Video/Crop Offset",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    55,
+    56
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Swap Joysticks",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    76,
+    76
+   ],
+   "core_flags": [],
+   "key": "Input/Swap Joysticks",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Pad 1 SNAC",
+   "values": [
+    "OFF",
+    "ON"
+   ],
+   "default": "OFF",
+   "bits": [
+    27,
+    27
+   ],
+   "core_flags": [],
+   "key": "Input/Pad 1 SNAC",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Pad 1",
+   "values": [
+    "Digital",
+    "Virt LGun",
+    "Wheel",
+    "Mission Stick",
+    "3D Pad",
+    "Dual Mission",
+    "Mouse",
+    "Keyboard",
+    "Off"
+   ],
+   "default": "Digital",
+   "bits": [
+    15,
+    18
+   ],
+   "core_flags": [
+    "D5"
+   ],
+   "key": "Input/Pad 1",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "LGun P1 XY Ctrl",
+   "values": [
+    "Joy 1",
+    "Mouse"
+   ],
+   "default": "Joy 1",
+   "bits": [
+    46,
+    46
+   ],
+   "core_flags": [
+    "D6"
+   ],
+   "key": "Input/LGun P1 XY Ctrl",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "LGun P1 Buttons",
+   "values": [
+    "Joy 1",
+    "Mouse"
+   ],
+   "default": "Joy 1",
+   "bits": [
+    47,
+    47
+   ],
+   "core_flags": [
+    "D6"
+   ],
+   "key": "Input/LGun P1 Buttons",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "LGun P1 Crosshair",
+   "values": [
+    "Small",
+    "Medium",
+    "Big",
+    "None"
+   ],
+   "default": "Small",
+   "bits": [
+    48,
+    49
+   ],
+   "core_flags": [
+    "D6"
+   ],
+   "key": "Input/LGun P1 Crosshair",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Pad 2",
+   "values": [
+    "Digital",
+    "Virt LGun",
+    "Wheel",
+    "Mission Stick",
+    "3D Pad",
+    "Dual Mission",
+    "Mouse",
+    "Keyboard",
+    "Off"
+   ],
+   "default": "Digital",
+   "bits": [
+    42,
+    45
+   ],
+   "core_flags": [
+    "D5"
+   ],
+   "key": "Input/Pad 2",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "LGun P2 XY Ctrl",
+   "values": [
+    "Joy 2",
+    "Mouse"
+   ],
+   "default": "Joy 2",
+   "bits": [
+    57,
+    57
+   ],
+   "core_flags": [
+    "D7"
+   ],
+   "key": "Input/LGun P2 XY Ctrl",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "LGun P2 Buttons",
+   "values": [
+    "Joy 2",
+    "Mouse"
+   ],
+   "default": "Joy 2",
+   "bits": [
+    58,
+    58
+   ],
+   "core_flags": [
+    "D7"
+   ],
+   "key": "Input/LGun P2 Buttons",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "LGun P2 Crosshair",
+   "values": [
+    "Small",
+    "Medium",
+    "Big",
+    "None"
+   ],
+   "default": "Small",
+   "bits": [
+    59,
+    60
+   ],
+   "core_flags": [
+    "D7"
+   ],
+   "key": "Input/LGun P2 Crosshair",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Timing",
+   "values": [
+    "Original",
+    "Fast"
+   ],
+   "default": "Original",
+   "bits": [
+    28,
+    28
+   ],
+   "core_flags": [],
+   "key": "Hardware/Timing",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Blurred VDP1 mesh",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    31,
+    31
+   ],
+   "core_flags": [],
+   "key": "Hardware/Blurred VDP1 mesh",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "Saturn.rbf",
+  "rbf_md5": "1b96cd739fa1c986bd2e769d21c2903f",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:19:21",
+  "confstr_sha1": "4ae478dd6b3e3d32cbf656ba98679640c54a8d0c"
+ }
+}

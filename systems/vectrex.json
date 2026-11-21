@@ -1,0 +1,1284 @@
+{
+ "coreshell_profile": 1,
+ "system": "vectrex",
+ "variant": "stock",
+ "name": "VECTREX",
+ "rbf": "_Console/Vectrex",
+ "setname": null,
+ "core_name": "VECTREX",
+ "config_file": "VECTREX_v2.CFG",
+ "games_dir": "games/VECTREX",
+ "saves_dir": "saves/VECTREX",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "VEC",
+   "BIN",
+   "ROM"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "VEC",
+    "BIN",
+    "ROM"
+   ],
+   "label": ""
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "ART"
+   ],
+   "label": "Load Overlay"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "VEC",
+    "BIN",
+    "ROM"
+   ],
+   "label": "",
+   "page": 0,
+   "flags": [],
+   "remember_dir": true
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "ART"
+   ],
+   "label": "Load Overlay",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Save Cartridge",
+   "bits": [
+    119,
+    119
+   ],
+   "kind": "reset",
+   "page": 3,
+   "flags": [
+    "hF"
+   ]
+  },
+  {
+   "name": "Reset",
+   "bits": [
+    7,
+    7
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "Video Profiles & Effects",
+   "name": "Profile",
+   "values": [
+    "80s Cruise Control",
+    "80s Overdrive",
+    "Neon Blue",
+    "Red Alert",
+    "Ultraviolet",
+    "Custom 1",
+    "Custom 2",
+    "A Touch of CRT"
+   ],
+   "default": "80s Cruise Control",
+   "bits": [
+    12,
+    14
+   ],
+   "core_flags": [],
+   "key": "Video Profiles & Effects/Profile",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video Profiles & Effects",
+   "name": "> Dwell Low Size",
+   "values": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8"
+   ],
+   "default": "1",
+   "bits": [
+    21,
+    23
+   ],
+   "core_flags": [
+    "hC",
+    "h9"
+   ],
+   "key": "Video Profiles & Effects/> Dwell Low Size",
+   "mgl_ok": false
+  },
+  {
+   "page": "Video Profiles & Effects",
+   "name": "> Dwell Mid Growth",
+   "values": [
+    "Same",
+    "+1",
+    "+2",
+    "+3",
+    "+4",
+    "+5",
+    "+6",
+    "+7"
+   ],
+   "default": "Same",
+   "bits": [
+    24,
+    26
+   ],
+   "core_flags": [
+    "hC",
+    "h9"
+   ],
+   "key": "Video Profiles & Effects/> Dwell Mid Growth",
+   "mgl_ok": false
+  },
+  {
+   "page": "Video Profiles & Effects",
+   "name": "> Dwell High Growth",
+   "values": [
+    "Same",
+    "+1",
+    "+2",
+    "+3",
+    "+4",
+    "+5",
+    "+6",
+    "+7"
+   ],
+   "default": "Same",
+   "bits": [
+    27,
+    29
+   ],
+   "core_flags": [
+    "hC",
+    "h9"
+   ],
+   "key": "Video Profiles & Effects/> Dwell High Growth",
+   "mgl_ok": false
+  },
+  {
+   "page": "Video Profiles & Effects",
+   "name": "> Brightness",
+   "values": [
+    "Reduced",
+    "Standard",
+    "Bright",
+    "Boost"
+   ],
+   "default": "Reduced",
+   "bits": [
+    16,
+    17
+   ],
+   "core_flags": [
+    "hC",
+    "h9"
+   ],
+   "key": "Video Profiles & Effects/> Brightness",
+   "mgl_ok": false
+  },
+  {
+   "page": "Video Profiles & Effects",
+   "name": "> Bloom Width",
+   "values": [
+    "Off",
+    "Thin",
+    "Tight",
+    "Soft",
+    "Normal",
+    "Broad",
+    "Wide-",
+    "Wide"
+   ],
+   "default": "Off",
+   "bits": [
+    34,
+    36
+   ],
+   "core_flags": [
+    "hC",
+    "h9"
+   ],
+   "key": "Video Profiles & Effects/> Bloom Width",
+   "mgl_ok": false
+  },
+  {
+   "page": "Video Profiles & Effects",
+   "name": "> Bloom Curve",
+   "values": [
+    "Minimal",
+    "Min+",
+    "Mild",
+    "Mild+",
+    "Moderate",
+    "Mod+",
+    "Strong-",
+    "Strong"
+   ],
+   "default": "Minimal",
+   "bits": [
+    37,
+    39
+   ],
+   "core_flags": [
+    "hC",
+    "h9",
+    "H5"
+   ],
+   "key": "Video Profiles & Effects/> Bloom Curve",
+   "mgl_ok": false
+  },
+  {
+   "page": "Video Profiles & Effects",
+   "name": "> Halo",
+   "values": [
+    "Off",
+    "0.25x",
+    "0.33x",
+    "0.5x",
+    "0.75x",
+    "1.0x",
+    "1.25x",
+    "1.5x"
+   ],
+   "default": "Off",
+   "bits": [
+    40,
+    42
+   ],
+   "core_flags": [
+    "hC",
+    "h9"
+   ],
+   "key": "Video Profiles & Effects/> Halo",
+   "mgl_ok": false
+  },
+  {
+   "page": "Video Profiles & Effects",
+   "name": "> Halo Curve",
+   "values": [
+    "Minimal",
+    "Min+",
+    "Mild",
+    "Mild+",
+    "Moderate",
+    "Mod+",
+    "Strong-",
+    "Strong"
+   ],
+   "default": "Minimal",
+   "bits": [
+    43,
+    45
+   ],
+   "core_flags": [
+    "hC",
+    "h9",
+    "H6"
+   ],
+   "key": "Video Profiles & Effects/> Halo Curve",
+   "mgl_ok": false
+  },
+  {
+   "page": "Video Profiles & Effects",
+   "name": "> Halo Spread",
+   "values": [
+    "Original",
+    "Wide 1",
+    "Wide 2",
+    "Focus"
+   ],
+   "default": "Original",
+   "bits": [
+    46,
+    47
+   ],
+   "core_flags": [
+    "hC",
+    "h9",
+    "H6"
+   ],
+   "key": "Video Profiles & Effects/> Halo Spread",
+   "mgl_ok": false
+  },
+  {
+   "page": "Video Profiles & Effects",
+   "name": "> Halo Compression",
+   "values": [
+    "Off",
+    "2",
+    "4",
+    "6",
+    "8",
+    "10",
+    "16",
+    "24"
+   ],
+   "default": "Off",
+   "bits": [
+    48,
+    50
+   ],
+   "core_flags": [
+    "hC",
+    "h9",
+    "H6"
+   ],
+   "key": "Video Profiles & Effects/> Halo Compression",
+   "mgl_ok": false
+  },
+  {
+   "page": "Video Profiles & Effects",
+   "name": "> Halo Grid",
+   "values": [
+    "16x16",
+    "8x8"
+   ],
+   "default": "16x16",
+   "bits": [
+    51,
+    51
+   ],
+   "core_flags": [
+    "hC",
+    "h9",
+    "H6"
+   ],
+   "key": "Video Profiles & Effects/> Halo Grid",
+   "mgl_ok": false
+  },
+  {
+   "page": "Video Profiles & Effects",
+   "name": "> Inter-Frame Decay",
+   "values": [
+    "Off",
+    "Short",
+    "Medium",
+    "Long"
+   ],
+   "default": "Off",
+   "bits": [
+    30,
+    31
+   ],
+   "core_flags": [
+    "hC",
+    "h9"
+   ],
+   "key": "Video Profiles & Effects/> Inter-Frame Decay",
+   "mgl_ok": false
+  },
+  {
+   "page": "Video Profiles & Effects",
+   "name": "> Intra-Frame Decay",
+   "values": [
+    "Off",
+    "LUT A",
+    "LUT B",
+    "LUT C"
+   ],
+   "default": "Off",
+   "bits": [
+    32,
+    33
+   ],
+   "core_flags": [
+    "hC",
+    "h9"
+   ],
+   "key": "Video Profiles & Effects/> Intra-Frame Decay",
+   "mgl_ok": false
+  },
+  {
+   "page": "Video Profiles & Effects",
+   "name": "> Vector Color",
+   "values": [
+    "Vectrex P4",
+    "Deluxe Blue",
+    "White",
+    "Red",
+    "Purple",
+    "Cyan",
+    "Blue"
+   ],
+   "default": "Vectrex P4",
+   "bits": [
+    18,
+    20
+   ],
+   "core_flags": [
+    "hC",
+    "h9"
+   ],
+   "key": "Video Profiles & Effects/> Vector Color",
+   "mgl_ok": false
+  },
+  {
+   "page": "Video Profiles & Effects",
+   "name": "> Dwell Low Size",
+   "values": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8"
+   ],
+   "default": "1",
+   "bits": [
+    85,
+    87
+   ],
+   "core_flags": [
+    "hC",
+    "H9"
+   ],
+   "key": "Video Profiles & Effects/> Dwell Low Size #2",
+   "mgl_ok": false
+  },
+  {
+   "page": "Video Profiles & Effects",
+   "name": "> Dwell Mid Growth",
+   "values": [
+    "Same",
+    "+1",
+    "+2",
+    "+3",
+    "+4",
+    "+5",
+    "+6",
+    "+7"
+   ],
+   "default": "Same",
+   "bits": [
+    88,
+    90
+   ],
+   "core_flags": [
+    "hC",
+    "H9"
+   ],
+   "key": "Video Profiles & Effects/> Dwell Mid Growth #2",
+   "mgl_ok": false
+  },
+  {
+   "page": "Video Profiles & Effects",
+   "name": "> Dwell High Growth",
+   "values": [
+    "Same",
+    "+1",
+    "+2",
+    "+3",
+    "+4",
+    "+5",
+    "+6",
+    "+7"
+   ],
+   "default": "Same",
+   "bits": [
+    91,
+    93
+   ],
+   "core_flags": [
+    "hC",
+    "H9"
+   ],
+   "key": "Video Profiles & Effects/> Dwell High Growth #2",
+   "mgl_ok": false
+  },
+  {
+   "page": "Video Profiles & Effects",
+   "name": "> Brightness",
+   "values": [
+    "Reduced",
+    "Standard",
+    "Bright",
+    "Boost"
+   ],
+   "default": "Reduced",
+   "bits": [
+    80,
+    81
+   ],
+   "core_flags": [
+    "hC",
+    "H9"
+   ],
+   "key": "Video Profiles & Effects/> Brightness #2",
+   "mgl_ok": false
+  },
+  {
+   "page": "Video Profiles & Effects",
+   "name": "> Bloom Width",
+   "values": [
+    "Off",
+    "Thin",
+    "Tight",
+    "Soft",
+    "Normal",
+    "Broad",
+    "Wide-",
+    "Wide"
+   ],
+   "default": "Off",
+   "bits": [
+    98,
+    100
+   ],
+   "core_flags": [
+    "hC",
+    "H9"
+   ],
+   "key": "Video Profiles & Effects/> Bloom Width #2",
+   "mgl_ok": false
+  },
+  {
+   "page": "Video Profiles & Effects",
+   "name": "> Bloom Curve",
+   "values": [
+    "Minimal",
+    "Min+",
+    "Mild",
+    "Mild+",
+    "Moderate",
+    "Mod+",
+    "Strong-",
+    "Strong"
+   ],
+   "default": "Minimal",
+   "bits": [
+    101,
+    103
+   ],
+   "core_flags": [
+    "hC",
+    "H9",
+    "H5"
+   ],
+   "key": "Video Profiles & Effects/> Bloom Curve #2",
+   "mgl_ok": false
+  },
+  {
+   "page": "Video Profiles & Effects",
+   "name": "> Halo",
+   "values": [
+    "Off",
+    "0.25x",
+    "0.33x",
+    "0.5x",
+    "0.75x",
+    "1.0x",
+    "1.25x",
+    "1.5x"
+   ],
+   "default": "Off",
+   "bits": [
+    104,
+    106
+   ],
+   "core_flags": [
+    "hC",
+    "H9"
+   ],
+   "key": "Video Profiles & Effects/> Halo #2",
+   "mgl_ok": false
+  },
+  {
+   "page": "Video Profiles & Effects",
+   "name": "> Halo Curve",
+   "values": [
+    "Minimal",
+    "Min+",
+    "Mild",
+    "Mild+",
+    "Moderate",
+    "Mod+",
+    "Strong-",
+    "Strong"
+   ],
+   "default": "Minimal",
+   "bits": [
+    107,
+    109
+   ],
+   "core_flags": [
+    "hC",
+    "H9",
+    "H6"
+   ],
+   "key": "Video Profiles & Effects/> Halo Curve #2",
+   "mgl_ok": false
+  },
+  {
+   "page": "Video Profiles & Effects",
+   "name": "> Halo Spread",
+   "values": [
+    "Original",
+    "Wide 1",
+    "Wide 2",
+    "Focus"
+   ],
+   "default": "Original",
+   "bits": [
+    110,
+    111
+   ],
+   "core_flags": [
+    "hC",
+    "H9",
+    "H6"
+   ],
+   "key": "Video Profiles & Effects/> Halo Spread #2",
+   "mgl_ok": false
+  },
+  {
+   "page": "Video Profiles & Effects",
+   "name": "> Halo Compression",
+   "values": [
+    "Off",
+    "2",
+    "4",
+    "6",
+    "8",
+    "10",
+    "16",
+    "24"
+   ],
+   "default": "Off",
+   "bits": [
+    112,
+    114
+   ],
+   "core_flags": [
+    "hC",
+    "H9",
+    "H6"
+   ],
+   "key": "Video Profiles & Effects/> Halo Compression #2",
+   "mgl_ok": false
+  },
+  {
+   "page": "Video Profiles & Effects",
+   "name": "> Halo Grid",
+   "values": [
+    "16x16",
+    "8x8"
+   ],
+   "default": "16x16",
+   "bits": [
+    115,
+    115
+   ],
+   "core_flags": [
+    "hC",
+    "H9",
+    "H6"
+   ],
+   "key": "Video Profiles & Effects/> Halo Grid #2",
+   "mgl_ok": false
+  },
+  {
+   "page": "Video Profiles & Effects",
+   "name": "> Inter-Frame Decay",
+   "values": [
+    "Off",
+    "Short",
+    "Medium",
+    "Long"
+   ],
+   "default": "Off",
+   "bits": [
+    94,
+    95
+   ],
+   "core_flags": [
+    "hC",
+    "H9"
+   ],
+   "key": "Video Profiles & Effects/> Inter-Frame Decay #2",
+   "mgl_ok": false
+  },
+  {
+   "page": "Video Profiles & Effects",
+   "name": "> Intra-Frame Decay",
+   "values": [
+    "Off",
+    "LUT A",
+    "LUT B",
+    "LUT C"
+   ],
+   "default": "Off",
+   "bits": [
+    96,
+    97
+   ],
+   "core_flags": [
+    "hC",
+    "H9"
+   ],
+   "key": "Video Profiles & Effects/> Intra-Frame Decay #2",
+   "mgl_ok": false
+  },
+  {
+   "page": "Video Profiles & Effects",
+   "name": "> Vector Color",
+   "values": [
+    "Vectrex P4",
+    "Deluxe Blue",
+    "White",
+    "Red",
+    "Purple",
+    "Cyan",
+    "Blue"
+   ],
+   "default": "Vectrex P4",
+   "bits": [
+    82,
+    84
+   ],
+   "core_flags": [
+    "hC",
+    "H9"
+   ],
+   "key": "Video Profiles & Effects/> Vector Color #2",
+   "mgl_ok": false
+  },
+  {
+   "page": "Video Overlay & Geometry",
+   "name": "Overlay",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    63,
+    63
+   ],
+   "core_flags": [],
+   "key": "Video Overlay & Geometry/Overlay",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video Overlay & Geometry",
+   "name": "Tint Strength",
+   "values": [
+    "0",
+    "+1",
+    "+2",
+    "+3",
+    "+4",
+    "+5",
+    "+6",
+    "-1"
+   ],
+   "default": "0",
+   "bits": [
+    66,
+    68
+   ],
+   "core_flags": [
+    "h3"
+   ],
+   "key": "Video Overlay & Geometry/Tint Strength",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video Overlay & Geometry",
+   "name": "Translucent Blend",
+   "values": [
+    "60%",
+    "70%",
+    "80%",
+    "10%",
+    "20%",
+    "30%",
+    "40%",
+    "50%"
+   ],
+   "default": "60%",
+   "bits": [
+    69,
+    71
+   ],
+   "core_flags": [
+    "h3"
+   ],
+   "key": "Video Overlay & Geometry/Translucent Blend",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video Overlay & Geometry",
+   "name": "Opaque Brightness",
+   "values": [
+    "50%",
+    "60%",
+    "70%",
+    "80%",
+    "10%",
+    "20%",
+    "30%",
+    "40%"
+   ],
+   "default": "50%",
+   "bits": [
+    72,
+    74
+   ],
+   "core_flags": [
+    "h3"
+   ],
+   "key": "Video Overlay & Geometry/Opaque Brightness",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video Overlay & Geometry",
+   "name": "Orientation",
+   "values": [
+    "Normal",
+    "90 CCW",
+    "90 CW"
+   ],
+   "default": "Normal",
+   "bits": [
+    75,
+    76
+   ],
+   "core_flags": [],
+   "key": "Video Overlay & Geometry/Orientation",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video Overlay & Geometry",
+   "name": "Framing",
+   "values": [
+    "Overlay",
+    "Screen"
+   ],
+   "default": "Overlay",
+   "bits": [
+    64,
+    64
+   ],
+   "core_flags": [],
+   "key": "Video Overlay & Geometry/Framing",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video Overlay & Geometry",
+   "name": "View Area",
+   "values": [
+    "Standard",
+    "Open Matte"
+   ],
+   "default": "Standard",
+   "bits": [
+    65,
+    65
+   ],
+   "core_flags": [],
+   "key": "Video Overlay & Geometry/View Area",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video Overlay & Geometry",
+   "name": "Offset",
+   "values": [
+    "Compensated",
+    "Zero"
+   ],
+   "default": "Compensated",
+   "bits": [
+    77,
+    77
+   ],
+   "core_flags": [],
+   "key": "Video Overlay & Geometry/Offset",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video Overlay & Geometry",
+   "name": "120Hz (720p only)",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    56,
+    56
+   ],
+   "core_flags": [
+    "d0",
+    "D1"
+   ],
+   "key": "Video Overlay & Geometry/120Hz (720p only)",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video Overlay & Geometry",
+   "name": "Direct Video Scan Rate",
+   "values": [
+    "15 kHz",
+    "31 kHz"
+   ],
+   "default": "15 kHz",
+   "bits": [
+    55,
+    55
+   ],
+   "core_flags": [
+    "h0",
+    "h1"
+   ],
+   "key": "Video Overlay & Geometry/Direct Video Scan Rate",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video Overlay & Geometry",
+   "name": "15 kHz Format",
+   "values": [
+    "480i",
+    "240p"
+   ],
+   "default": "480i",
+   "bits": [
+    54,
+    54
+   ],
+   "core_flags": [
+    "h2"
+   ],
+   "key": "Video Overlay & Geometry/15 kHz Format",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video Overlay & Geometry",
+   "name": "CRT Vertical Offset",
+   "values": [
+    "0",
+    "+1",
+    "+2",
+    "+3",
+    "-1",
+    "-2",
+    "-3"
+   ],
+   "default": "0",
+   "bits": [
+    57,
+    59
+   ],
+   "core_flags": [
+    "h1"
+   ],
+   "key": "Video Overlay & Geometry/CRT Vertical Offset",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video Overlay & Geometry",
+   "name": "CRT Horizontal Offset",
+   "values": [
+    "0",
+    "+1",
+    "+2",
+    "+3",
+    "-1",
+    "-2",
+    "-3"
+   ],
+   "default": "0",
+   "bits": [
+    60,
+    62
+   ],
+   "core_flags": [
+    "h1"
+   ],
+   "key": "Video Overlay & Geometry/CRT Horizontal Offset",
+   "mgl_ok": true
+  },
+  {
+   "page": "System",
+   "name": "BIOS",
+   "values": [
+    "Rev 3",
+    "Rev 1"
+   ],
+   "default": "Rev 3",
+   "bits": [
+    1,
+    1
+   ],
+   "core_flags": [],
+   "key": "System/BIOS",
+   "mgl_ok": true
+  },
+  {
+   "page": "System",
+   "name": "Quick Boot",
+   "values": [
+    "Yes",
+    "No"
+   ],
+   "default": "Yes",
+   "bits": [
+    2,
+    2
+   ],
+   "core_flags": [],
+   "key": "System/Quick Boot",
+   "mgl_ok": true
+  },
+  {
+   "page": "System",
+   "name": "Beam Threshold",
+   "values": [
+    "Z 20",
+    "Z 24",
+    "Z 28",
+    "Off"
+   ],
+   "default": "Z 20",
+   "bits": [
+    3,
+    4
+   ],
+   "core_flags": [],
+   "key": "System/Beam Threshold",
+   "mgl_ok": true
+  },
+  {
+   "page": "System",
+   "name": "Port 2",
+   "values": [
+    "Joystick",
+    "VecVoice (SP0256)"
+   ],
+   "default": "Joystick",
+   "bits": [
+    8,
+    8
+   ],
+   "core_flags": [],
+   "key": "System/Port 2",
+   "mgl_ok": true
+  },
+  {
+   "page": "System",
+   "name": "Speech Level",
+   "values": [
+    "Normal",
+    "Low",
+    "High"
+   ],
+   "default": "Normal",
+   "bits": [
+    9,
+    10
+   ],
+   "core_flags": [
+    "d8"
+   ],
+   "key": "System/Speech Level",
+   "mgl_ok": true
+  },
+  {
+   "page": "System",
+   "name": "Cartridge Autosave",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    118,
+    118
+   ],
+   "core_flags": [
+    "hF"
+   ],
+   "key": "System/Cartridge Autosave",
+   "mgl_ok": true
+  },
+  {
+   "page": "System",
+   "name": "Pause when OSD open",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    5,
+    5
+   ],
+   "core_flags": [],
+   "key": "System/Pause when OSD open",
+   "mgl_ok": true
+  },
+  {
+   "page": "System",
+   "name": "Dim video after 60s",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    6,
+    6
+   ],
+   "core_flags": [],
+   "key": "System/Dim video after 60s",
+   "mgl_ok": true
+  },
+  {
+   "page": "Diagnostic",
+   "name": "Effects Bypass",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    11,
+    11
+   ],
+   "core_flags": [],
+   "key": "Diagnostic/Effects Bypass",
+   "mgl_ok": true
+  },
+  {
+   "page": "Diagnostic",
+   "name": "Reference Dwell",
+   "values": [
+    "Standard",
+    "104",
+    "46",
+    "72"
+   ],
+   "default": "Standard",
+   "bits": [
+    120,
+    121
+   ],
+   "core_flags": [],
+   "key": "Diagnostic/Reference Dwell",
+   "mgl_ok": true
+  },
+  {
+   "page": "Diagnostic",
+   "name": "Velocity Comp.",
+   "values": [
+    "0.3",
+    "0.4",
+    "0.5",
+    "Off"
+   ],
+   "default": "0.3",
+   "bits": [
+    122,
+    123
+   ],
+   "core_flags": [],
+   "key": "Diagnostic/Velocity Comp.",
+   "mgl_ok": true
+  },
+  {
+   "page": "Diagnostic",
+   "name": "Halo Correction",
+   "values": [
+    "100%",
+    "75%",
+    "50%",
+    "None"
+   ],
+   "default": "100%",
+   "bits": [
+    124,
+    125
+   ],
+   "core_flags": [],
+   "key": "Diagnostic/Halo Correction",
+   "mgl_ok": true
+  },
+  {
+   "page": "Diagnostic",
+   "name": "Buffer Mode",
+   "values": [
+    "EOF + VBL",
+    "VBL",
+    "EOF"
+   ],
+   "default": "EOF + VBL",
+   "bits": [
+    126,
+    127
+   ],
+   "core_flags": [],
+   "key": "Diagnostic/Buffer Mode",
+   "mgl_ok": true
+  },
+  {
+   "page": "Diagnostic",
+   "name": "Aspect Ratio",
+   "values": [
+    "Optimized",
+    "Stretched",
+    "Pixel Perfect"
+   ],
+   "default": "Optimized",
+   "bits": [
+    78,
+    79
+   ],
+   "core_flags": [],
+   "key": "Diagnostic/Aspect Ratio",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "Vectrex_20261103.rbf",
+  "rbf_md5": "e0fb77988f8bd0c200f03d73eececc72",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:09:34",
+  "confstr_sha1": "7129627e48d32b424c8505d5a27915e7f08ba799"
+ }
+}

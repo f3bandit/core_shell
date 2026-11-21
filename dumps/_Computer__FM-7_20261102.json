@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/FM-7_20261102.rbf",
+ "rbf_md5": "56a1dc66b482062278030eba0c697f40",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "FM-7;;-;F1,t77,Load Tape;S0,d77d88,Mount Disk 1;S1,d77d88,Mount Disk 2;O[15:13],Disk 1 image,1,2,3,4,5,6,7,8;O[18:16],Disk 2 image,1,2,3,4,5,6,7,8;T[8],Tape Rewind;O[9],Tape Audio,Off,On;O[22],Tape speed,3x,Normal;O[21],Tape overlay,On,Off;O[11:10],Boot ROM,0 disk,1 alt,2 dos-a,3 empty;O[12],Machine,FM-7,FM77AV;O[19],System ROM,Japanese,Spanish;O[20],Joypad keys,Off,On;-;O[122:121],Aspect ratio,Original,Full Screen,[ARC1],[ARC2];-;T[0],Reset;R[0],Reset and close OSD;J1,Button A,Button B,Button X,Button Y,L,R,Select,Start;jn,A,B,X,Y,L,R,Select,Start;v,4;V,v261102",
+ "dumped": "2026-11-13T23:11:17"
+}

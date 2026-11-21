@@ -1,0 +1,566 @@
+{
+ "coreshell_profile": 1,
+ "system": "dvd",
+ "variant": "other",
+ "name": "DVD",
+ "rbf": "_Other/DVD",
+ "setname": null,
+ "core_name": "DVD",
+ "config_file": "DVD_v3.CFG",
+ "games_dir": "games/DVD",
+ "saves_dir": "saves/DVD",
+ "rom": {
+  "index": 0,
+  "type": "s",
+  "exts": [
+   "MPG",
+   "M2V",
+   "VOB",
+   "ISO",
+   "BIN",
+   "IMG",
+   "DAT",
+   "WAV",
+   "CUE"
+  ]
+ },
+ "slots": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "MPG",
+    "M2V",
+    "VOB",
+    "ISO",
+    "BIN",
+    "IMG",
+    "DAT",
+    "WAV",
+    "CUE"
+   ],
+   "label": "Load Video"
+  }
+ ],
+ "files": [],
+ "mounts": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "MPG",
+    "M2V",
+    "VOB",
+    "ISO",
+    "BIN",
+    "IMG",
+    "DAT",
+    "WAV",
+    "CUE"
+   ],
+   "label": "Load Video",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Save to Slot",
+   "bits": [
+    55,
+    55
+   ],
+   "kind": "reset",
+   "page": 6,
+   "flags": []
+  },
+  {
+   "name": "Load Slot",
+   "bits": [
+    56,
+    56
+   ],
+   "kind": "reset",
+   "page": 6,
+   "flags": []
+  },
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Disc Menus",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    1,
+    1
+   ],
+   "core_flags": [],
+   "key": "Disc Menus",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Player Language",
+   "values": [
+    "English",
+    "French",
+    "German",
+    "Spanish",
+    "Italian",
+    "Japanese",
+    "Chinese",
+    "Korean",
+    "Portuguese",
+    "Russian",
+    "Dutch",
+    "Swedish",
+    "Danish",
+    "Norwegian",
+    "Finnish",
+    "Polish"
+   ],
+   "default": "English",
+   "bits": [
+    40,
+    43
+   ],
+   "core_flags": [],
+   "key": "Player Language",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Aspect Ratio",
+   "values": [
+    "Auto",
+    "4:3",
+    "16:9"
+   ],
+   "default": "Auto",
+   "bits": [
+    19,
+    20
+   ],
+   "core_flags": [],
+   "key": "Video/Aspect Ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Video Output",
+   "values": [
+    "Auto",
+    "Interlaced",
+    "Progressive"
+   ],
+   "default": "Auto",
+   "bits": [
+    9,
+    10
+   ],
+   "core_flags": [],
+   "key": "Video/Video Output",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Deinterlace",
+   "values": [
+    "Weave",
+    "Bob",
+    "Blend"
+   ],
+   "default": "Weave",
+   "bits": [
+    50,
+    51
+   ],
+   "core_flags": [
+    "H0"
+   ],
+   "key": "Video/Deinterlace",
+   "mgl_ok": false
+  },
+  {
+   "page": "Video",
+   "name": "Deinterlace",
+   "values": [
+    "Weave",
+    "Bob"
+   ],
+   "default": "Weave",
+   "bits": [
+    50,
+    51
+   ],
+   "core_flags": [
+    "h0"
+   ],
+   "key": "Video/Deinterlace #2",
+   "mgl_ok": false
+  },
+  {
+   "page": "Video",
+   "name": "Video Standard",
+   "values": [
+    "Auto",
+    "NTSC",
+    "PAL"
+   ],
+   "default": "Auto",
+   "bits": [
+    16,
+    17
+   ],
+   "core_flags": [],
+   "key": "Video/Video Standard",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Film 24p Out",
+   "values": [
+    "Auto",
+    "Off",
+    "On"
+   ],
+   "default": "Auto",
+   "bits": [
+    24,
+    25
+   ],
+   "core_flags": [],
+   "key": "Video/Film 24p Out",
+   "mgl_ok": true
+  },
+  {
+   "page": "Analog / CRT",
+   "name": "Analog Aspect",
+   "values": [
+    "Auto",
+    "Fit",
+    "Letterbox",
+    "Crop"
+   ],
+   "default": "Auto",
+   "bits": [
+    3,
+    4
+   ],
+   "core_flags": [],
+   "key": "Analog / CRT/Analog Aspect",
+   "mgl_ok": true
+  },
+  {
+   "page": "Analog / CRT",
+   "name": "Analog Dither",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    8,
+    8
+   ],
+   "core_flags": [],
+   "key": "Analog / CRT/Analog Dither",
+   "mgl_ok": true
+  },
+  {
+   "page": "Analog / CRT",
+   "name": "Analog CSync",
+   "values": [
+    "SMPTE",
+    "2H"
+   ],
+   "default": "SMPTE",
+   "bits": [
+    46,
+    46
+   ],
+   "core_flags": [],
+   "key": "Analog / CRT/Analog CSync",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio",
+   "name": "Audio",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    5,
+    5
+   ],
+   "core_flags": [],
+   "key": "Audio/Audio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio",
+   "name": "SPDIF Byte Order",
+   "values": [
+    "Normal",
+    "Swap"
+   ],
+   "default": "Normal",
+   "bits": [
+    7,
+    7
+   ],
+   "core_flags": [],
+   "key": "Audio/SPDIF Byte Order",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio",
+   "name": "A/V Offset",
+   "values": [
+    "0ms",
+    "-200ms",
+    "-100ms",
+    "-50ms",
+    "+50ms",
+    "+100ms",
+    "+150ms",
+    "+200ms"
+   ],
+   "default": "0ms",
+   "bits": [
+    21,
+    23
+   ],
+   "core_flags": [],
+   "key": "Audio/A/V Offset",
+   "mgl_ok": true
+  },
+  {
+   "page": "Subtitles & CC",
+   "name": "Line-21 CC",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    14,
+    14
+   ],
+   "core_flags": [],
+   "key": "Subtitles & CC/Line-21 CC",
+   "mgl_ok": true
+  },
+  {
+   "page": "Subtitles & CC",
+   "name": "Force 4:3 Subpics",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    15,
+    15
+   ],
+   "core_flags": [],
+   "key": "Subtitles & CC/Force 4:3 Subpics",
+   "mgl_ok": true
+  },
+  {
+   "page": "Playback",
+   "name": "D-Pad Seek",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    45,
+    45
+   ],
+   "core_flags": [],
+   "key": "Playback/D-Pad Seek",
+   "mgl_ok": true
+  },
+  {
+   "page": "Playback",
+   "name": "Screensaver",
+   "values": [
+    "5min",
+    "Off",
+    "2min",
+    "10min"
+   ],
+   "default": "5min",
+   "bits": [
+    47,
+    48
+   ],
+   "core_flags": [],
+   "key": "Playback/Screensaver",
+   "mgl_ok": true
+  },
+  {
+   "page": "Save State",
+   "name": "Slot",
+   "values": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "Autosave"
+   ],
+   "default": "1",
+   "bits": [
+    57,
+    60
+   ],
+   "core_flags": [],
+   "key": "Save State/Slot",
+   "mgl_ok": true
+  },
+  {
+   "page": "Debug",
+   "name": "Debug Overlay",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    2,
+    2
+   ],
+   "core_flags": [],
+   "key": "Debug/Debug Overlay",
+   "mgl_ok": true
+  },
+  {
+   "page": "Debug",
+   "name": "Frame Drop",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    12,
+    12
+   ],
+   "core_flags": [],
+   "key": "Debug/Frame Drop",
+   "mgl_ok": true
+  },
+  {
+   "page": "Debug",
+   "name": "A/V Sync",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    13,
+    13
+   ],
+   "core_flags": [],
+   "key": "Debug/A/V Sync",
+   "mgl_ok": true
+  },
+  {
+   "page": "Debug",
+   "name": "Title VTS Tens",
+   "values": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9"
+   ],
+   "default": "0",
+   "bits": [
+    32,
+    35
+   ],
+   "core_flags": [],
+   "key": "Debug/Title VTS Tens",
+   "mgl_ok": true
+  },
+  {
+   "page": "Debug",
+   "name": "Title VTS Units",
+   "values": [
+    "Auto/0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9"
+   ],
+   "default": "Auto/0",
+   "bits": [
+    36,
+    39
+   ],
+   "core_flags": [],
+   "key": "Debug/Title VTS Units",
+   "mgl_ok": true
+  },
+  {
+   "page": "Debug",
+   "name": "CC Test Line",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    44,
+    44
+   ],
+   "core_flags": [],
+   "key": "Debug/CC Test Line",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "DVD_20261102.rbf",
+  "rbf_md5": "9325985b414e19ef0e1b2806b5e4f6f6",
+  "main": "MiSTer_DVDcss",
+  "dumped": "2026-11-13T23:14:47",
+  "confstr_sha1": "986cfcc9e66f1b97f0d4c6ad2c8f0934f6180d2f"
+ }
+}

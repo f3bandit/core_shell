@@ -1,0 +1,372 @@
+{
+ "coreshell_profile": 1,
+ "system": "pocketstation",
+ "variant": "stock",
+ "name": "PocketStation",
+ "rbf": "_Console/PocketStation",
+ "setname": null,
+ "core_name": "PocketStation",
+ "config_file": "PocketStation_v1.CFG",
+ "games_dir": "games/PocketStation",
+ "saves_dir": "saves/PocketStation",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "GME",
+   "SAV",
+   "MCS",
+   "BIN"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "GME",
+    "SAV",
+    "MCS",
+    "BIN"
+   ],
+   "label": "Load Card"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "GME",
+    "SAV",
+    "MCS",
+    "BIN"
+   ],
+   "label": "Load Card",
+   "page": 0,
+   "flags": [
+    "D0"
+   ],
+   "remember_dir": true
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "GBP"
+   ],
+   "label": "Load Palette",
+   "page": 1,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "SAV",
+    "MCD"
+   ],
+   "label": "Mount PS1 Card",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Unmount Card",
+   "bits": [
+    9,
+    9
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": [
+    "h0"
+   ]
+  },
+  {
+   "name": "Save State",
+   "bits": [
+    42,
+    42
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "d7"
+   ]
+  },
+  {
+   "name": "Restore State",
+   "bits": [
+    43,
+    43
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "d7"
+   ]
+  },
+  {
+   "name": "Save Card Now",
+   "bits": [
+    11,
+    11
+   ],
+   "kind": "reset",
+   "page": 2,
+   "flags": []
+  },
+  {
+   "name": "Reload Card",
+   "bits": [
+    12,
+    12
+   ],
+   "kind": "reset",
+   "page": 2,
+   "flags": []
+  },
+  {
+   "name": "Read Card from SNAC",
+   "bits": [
+    22,
+    22
+   ],
+   "kind": "reset",
+   "page": 2,
+   "flags": []
+  },
+  {
+   "name": "Write Card to SNAC",
+   "bits": [
+    23,
+    23
+   ],
+   "kind": "reset",
+   "page": 2,
+   "flags": []
+  },
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Savestate Slot",
+   "values": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "default": "1",
+   "bits": [
+    45,
+    46
+   ],
+   "core_flags": [
+    "d7"
+   ],
+   "key": "Savestate Slot",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Palette",
+   "values": [
+    "LCD",
+    "Black on White",
+    "Green",
+    "Loaded"
+   ],
+   "default": "LCD",
+   "bits": [
+    5,
+    6
+   ],
+   "core_flags": [],
+   "key": "Video/Palette",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Glass",
+   "values": [
+    "Full",
+    "Soft",
+    "Scaled",
+    "Off"
+   ],
+   "default": "Full",
+   "bits": [
+    19,
+    20
+   ],
+   "core_flags": [],
+   "key": "Video/Glass",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Aspect Ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    121,
+    122
+   ],
+   "core_flags": [],
+   "key": "Video/Aspect Ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    16,
+    18
+   ],
+   "core_flags": [],
+   "key": "Video/Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    13,
+    15
+   ],
+   "core_flags": [],
+   "key": "Video/Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "Card & Clock",
+   "name": "Clock Source",
+   "values": [
+    "Host",
+    "Reset Value"
+   ],
+   "default": "Host",
+   "bits": [
+    8,
+    8
+   ],
+   "core_flags": [],
+   "key": "Card & Clock/Clock Source",
+   "mgl_ok": true
+  },
+  {
+   "page": "Card & Clock",
+   "name": "Autosave",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    10,
+    10
+   ],
+   "core_flags": [],
+   "key": "Card & Clock/Autosave",
+   "mgl_ok": true
+  },
+  {
+   "page": "Card & Clock",
+   "name": "SNAC Connector",
+   "values": [
+    "Card 1",
+    "Card 2"
+   ],
+   "default": "Card 1",
+   "bits": [
+    21,
+    21
+   ],
+   "core_flags": [],
+   "key": "Card & Clock/SNAC Connector",
+   "mgl_ok": true
+  },
+  {
+   "page": "Card & Clock",
+   "name": "SNAC Byte Gap",
+   "values": [
+    "Normal",
+    "Slow",
+    "Slower",
+    "Slowest"
+   ],
+   "default": "Normal",
+   "bits": [
+    24,
+    25
+   ],
+   "core_flags": [],
+   "key": "Card & Clock/SNAC Byte Gap",
+   "mgl_ok": true
+  },
+  {
+   "page": "Card & Clock",
+   "name": "Savestate to SD",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    44,
+    44
+   ],
+   "core_flags": [
+    "d7"
+   ],
+   "key": "Card & Clock/Savestate to SD",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "PocketStation_20260903.rbf",
+  "rbf_md5": "332f2a559e51ac01ba629b54772da7bb",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:08:33",
+  "confstr_sha1": "23d4c8f02c9350a0c8a2d1a1f954fa8f34182d44"
+ }
+}

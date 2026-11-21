@@ -1,0 +1,10 @@
+{
+ "name": "Street Fighter III 3rd Strike (ARM)",
+ "kind": "port",
+ "by": "3S-ARM",
+ "any": [
+  {
+   "path": "MiSTer_3S-ARM"
+  }
+ ]
+}

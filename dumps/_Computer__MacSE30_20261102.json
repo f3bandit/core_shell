@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/MacSE30_20261102.rbf",
+ "rbf_md5": "f82f06addf8bff8462d4b4c36e9c453b",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "MACSE30;;-;S0,DSKIMG,Mount Internal Floppy;-;SC2,IMGVHD,Mount SCSI-0;SC3,IMGVHD,Mount SCSI-1;SC4,ISOTO*,Mount CD-ROM;-;SC5,NVR,Mount PRAM;-;O[2:1],Aspect ratio,Original,Full Screen,[ARC1],[ARC2];O[9:8],Scale,Normal,V-Integer,Narrower HV-Integer,Wider HV-Integer;O[4],Memory,8 MB,16 MB;O[7:6],Mouse speed,Normal,/2,/4,/8;-;R[0],Reset & Apply Memory;R[3],Wipe PRAM (erases settings!);v,0;V,v261102",
+ "dumped": "2026-11-13T23:12:02"
+}

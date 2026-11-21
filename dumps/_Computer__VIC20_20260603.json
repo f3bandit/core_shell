@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/VIC20_20260603.rbf",
+ "rbf_md5": "b78b7b500c359c50f9dcee65c156f081",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "VIC20;;S1,D64G64,Mount #8;S2,D64G64,Mount #9;-;F1,PRGCRTCT?TAP,Load;FS2,CRTROM,Load Megacart;h4RS,Save NVRAM;h4OT,Autosave,Off,On;-;h3RG,Tape Play/Pause;h3RI,Tape Unload;h3OH,Tape Sound,Off,On;h3OM,Tape Autoplay,Yes,No;h3-;OJK,Aspect ratio,Original,Full Screen,[ARC1],[ARC2];O24,Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%,CRT 75%;OCD,Screen center,Both,None,Horz,Vert;OE,TV mode,PAL,NTSC;H2d1ON,Vertical Crop,No,Yes;h2d1ONO,Vertical Crop,No,270,216;OPQ,Scale,Normal,V-Integer,Narrower HV-Integer,Wider HV-Integer;-;H4O6,ExtRAM $0400(3KB),Off,On;H4O7,ExtRAM $2000(8KB),Off,On;H4O8,ExtRAM $4000(8KB),Off,On;H4O9,ExtRAM $6000(8KB),Off,On;H4OA,ExtRAM $A000(8KB),Off,On;H4-;OL,External IEC,Disabled,Enabled;OB,Cart is writable,No,Yes;-;OF,Kernal,Loadable,Standard;FC6,ROM,Load Kernal;-;OU,Swap paddles,No,Yes;-;O[32],SNAC Joystick,Off,On;O[34:33],SNAC Autofire,Off,Slow,Fast;-;R0,Reset;RR,Reset & Detach Cartridge;J,Fire,Paddle Fire|P;V,v260603",
+ "dumped": "2026-11-13T23:14:01"
+}

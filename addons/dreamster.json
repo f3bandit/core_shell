@@ -1,0 +1,10 @@
+{
+ "name": "DreamSTer",
+ "script": "DreamSTer.sh",
+ "how": "Python 3 behind a .sh name. Stops Main when it starts (its parent named MiSTer, else killall MiSTer), runs minicast on its own bitstream with its own curses menu, and on every exit loads menu.rbf and starts /media/fat/MiSTer again (which follows MiSTer.ini's [MiSTer] main=).",
+ "menu": [
+  {"from": "(\"exit\", \"Exit To MiSTer\")", "to": "(\"exit\", \"Exit To {frontend}\")"},
+  {"from": "\"Exit returns to MiSTer, leaving it untouched.\"", "to": "\"Exit returns to {frontend}, leaving it untouched.\""}
+ ],
+ "checked": {"md5": "ac0ac2f0f082664afcea976508ecb97b", "on": "2026-11-16"}
+}

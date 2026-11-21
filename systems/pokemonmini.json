@@ -1,0 +1,222 @@
+{
+ "coreshell_profile": 1,
+ "system": "pokemonmini",
+ "variant": "stock",
+ "name": "PokemonMini",
+ "rbf": "_Console/PokemonMini",
+ "setname": null,
+ "core_name": "PokemonMini",
+ "config_file": "PokemonMini.CFG",
+ "games_dir": "games/PokemonMini",
+ "saves_dir": "saves/PokemonMini",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "min"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "min"
+   ],
+   "label": "Load ROM"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "min"
+   ],
+   "label": "Load ROM",
+   "page": 0,
+   "flags": [],
+   "remember_dir": true
+  }
+ ],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Reload Backup RAM",
+   "bits": [
+    9,
+    9
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "d0"
+   ]
+  },
+  {
+   "name": "Save Backup RAM",
+   "bits": [
+    10,
+    10
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "d0"
+   ]
+  },
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Reset and close OSD",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Autosave",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    11,
+    11
+   ],
+   "core_flags": [
+    "d0"
+   ],
+   "key": "Autosave",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Frame Blend",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    98,
+    98
+   ],
+   "core_flags": [],
+   "key": "Frame Blend",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    121,
+    122
+   ],
+   "core_flags": [],
+   "key": "Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%"
+   ],
+   "default": "None",
+   "bits": [
+    2,
+    3
+   ],
+   "core_flags": [],
+   "key": "Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Audio Mode",
+   "values": [
+    "1",
+    "2"
+   ],
+   "default": "1",
+   "bits": [
+    33,
+    33
+   ],
+   "core_flags": [],
+   "key": "Audio Mode",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "240p Mode",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    30,
+    30
+   ],
+   "core_flags": [],
+   "key": "240p Mode",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "240p Mode Scaling",
+   "values": [
+    "3x",
+    "2x",
+    "1x"
+   ],
+   "default": "3x",
+   "bits": [
+    28,
+    29
+   ],
+   "core_flags": [
+    "d1"
+   ],
+   "key": "240p Mode Scaling",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "PokemonMini_20250903.rbf",
+  "rbf_md5": "fecbbf18135daa4e16280d99b496efb5",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:08:36",
+  "confstr_sha1": "cf8b6e44dde8e09fa8c0ef774e04f1e348ee8618"
+ }
+}

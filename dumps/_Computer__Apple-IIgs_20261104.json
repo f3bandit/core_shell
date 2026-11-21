@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/Apple-IIgs_20261104.rbf",
+ "rbf_md5": "d29e230ab84dbc901f09257812205216",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "Apple-IIgs;UART19200:9600:4800:2400:1200:300;-;O[122:121],Aspect ratio,Original,Full Screen,[ARC1],[ARC2];-;S0,HDVPO 2MG;S1,HDVPO 2MG;S2,WOZPO 2MG,WOZ 3.5;S3,WOZDSKDO PO NIB2MG,WOZ 5.25;-;O[14:12],CPU Speed,2.8 MHz (Std),3.6 MHz,4.8 MHz,7.2 MHz,14.3 MHz;O[26],Serial Port,Modem (Slot 2),Printer (Slot 1);P1,Accelerator;P1-;P1O[16:15],Card,ZipGS,TransWarp GS,None (OSD speed only);H0P1O[17],Speaker Delay,Enabled,Disabled;H0P1O[18],Joystick Delay,Enabled,Disabled;H0P1O[20],Counter Delay,Enabled,Disabled;H0P1O[19],Sync to Sys 1MHz (CPS),Off,On;P1O[23],AppleTalk/IRQ Delay,Enabled,Disabled;h0P1O[24],Startup Graphics,On,Off;h0P1O[25],Startup Sound,On,Off;P2,System;P2-;P2O[11],ROM Version,ROM1,ROM3;P2O[10],Force Self Test,OFF,ON;P2-;P2SC4,RAM,PRAM NVRAM;P2R[21],Save NVRAM;P2R[22],Load NVRAM;-;R0,Warm Reset;R1,Cold Reset;JA,Fire 1,Fire 2,Fire 3;jn,A|P,B,Y;jp,Y|P,B,Y;V,v261104",
+ "dumped": "2026-11-13T23:10:12"
+}

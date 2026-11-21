@@ -1,0 +1,406 @@
+{
+ "coreshell_profile": 1,
+ "system": "laser",
+ "variant": "stock",
+ "name": "Laser",
+ "rbf": "_Computer/Laser310",
+ "setname": null,
+ "core_name": "Laser",
+ "config_file": "Laser_v1.CFG",
+ "games_dir": "games/Laser",
+ "saves_dir": "saves/Laser",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "VZ"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "VZ"
+   ],
+   "label": "Load VZ"
+  },
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load ROM"
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Disk 1"
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Disk 2"
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "WAV",
+    "CAS"
+   ],
+   "label": "Tape"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "VZ"
+   ],
+   "label": "Load VZ",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load ROM",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Disk 1",
+   "page": 0,
+   "flags": [
+    "H1"
+   ]
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Disk 2",
+   "page": 0,
+   "flags": [
+    "H1"
+   ]
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "WAV",
+    "CAS"
+   ],
+   "label": "Tape",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Apply and reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Rewind tape",
+   "bits": [
+    15,
+    15
+   ],
+   "kind": "reset",
+   "page": 1,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "Machine",
+   "name": "Disk drives (DOS)",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    6,
+    6
+   ],
+   "core_flags": [],
+   "key": "Machine/Disk drives (DOS)",
+   "mgl_ok": true
+  },
+  {
+   "page": "Machine",
+   "name": "CPU speed",
+   "values": [
+    "Normal",
+    "3x"
+   ],
+   "default": "Normal",
+   "bits": [
+    5,
+    5
+   ],
+   "core_flags": [],
+   "key": "Machine/CPU speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "Machine",
+   "name": "SHRG",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    7,
+    7
+   ],
+   "core_flags": [],
+   "key": "Machine/SHRG",
+   "mgl_ok": true
+  },
+  {
+   "page": "Machine",
+   "name": "Tape speed",
+   "values": [
+    "3x",
+    "Normal"
+   ],
+   "default": "3x",
+   "bits": [
+    12,
+    12
+   ],
+   "core_flags": [],
+   "key": "Machine/Tape speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Video standard",
+   "values": [
+    "PAL (50 Hz)",
+    "NTSC (60 Hz)"
+   ],
+   "default": "PAL (50 Hz)",
+   "bits": [
+    20,
+    20
+   ],
+   "core_flags": [],
+   "key": "Video/Video standard",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    8,
+    9
+   ],
+   "core_flags": [],
+   "key": "Video/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    21,
+    22
+   ],
+   "core_flags": [],
+   "key": "Video/Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    2,
+    4
+   ],
+   "core_flags": [],
+   "key": "Video/Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Tape overlay",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    13,
+    13
+   ],
+   "core_flags": [],
+   "key": "Video/Tape overlay",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Load hints",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    11,
+    11
+   ],
+   "core_flags": [],
+   "key": "Video/Load hints",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Keyboard layout",
+   "values": [
+    "VZ",
+    "PC"
+   ],
+   "default": "VZ",
+   "bits": [
+    23,
+    23
+   ],
+   "core_flags": [],
+   "key": "Input/Keyboard layout",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio",
+   "name": "Tape audio",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    14,
+    14
+   ],
+   "core_flags": [],
+   "key": "Audio/Tape audio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Advanced",
+   "name": "Tape deck",
+   "values": [
+    "Auto",
+    "Play"
+   ],
+   "default": "Auto",
+   "bits": [
+    16,
+    16
+   ],
+   "core_flags": [],
+   "key": "Advanced/Tape deck",
+   "mgl_ok": true
+  },
+  {
+   "page": "Advanced",
+   "name": "Tape polarity",
+   "values": [
+    "Normal",
+    "Inverted"
+   ],
+   "default": "Normal",
+   "bits": [
+    17,
+    17
+   ],
+   "core_flags": [],
+   "key": "Advanced/Tape polarity",
+   "mgl_ok": true
+  },
+  {
+   "page": "Advanced",
+   "name": "Tape pitch",
+   "values": [
+    "Auto",
+    "Normal",
+    "+6%",
+    "+12%"
+   ],
+   "default": "Auto",
+   "bits": [
+    18,
+    19
+   ],
+   "core_flags": [],
+   "key": "Advanced/Tape pitch",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "repo": "MiSTer-devel/Laser310_MiSTer",
+  "commit": "d0d9d7f016d5071ce8d17fdd37d168b65aa0f33f",
+  "file": "Laser310.sv",
+  "rbf": "Laser310_20261118.rbf",
+  "rbf_md5": "04387a97b4a0df55abb81b0aad98d59f",
+  "confstr_sha1": "b8d31d65707f056b47b5810e403923605ee45781"
+ }
+}

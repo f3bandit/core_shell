@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/Tandy1000_20260312.rbf",
+ "rbf_md5": "d964055fe6fa88ff9354c64face71665",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "Tandy1000;UART115200:115200;S0,IMGIMAVFD,Floppy A:;S1,IMGIMAVFD,Floppy B:;OJK,Write Protect,None,A:,B:,A: & B:;-;S2,VHD,IDE 0-0;S3,VHD,IDE 0-1;OLM,2nd SD card,Disable,IDE 0-0,IDE 0-1;-;OHI,CPU Speed,4.77MHz,7.16MHz,9.54MHz,PC/AT 3.5MHz;-;P1,System & BIOS;P1-;P1O7,Boot Splash Screen,Yes,No;P1-;P1FC1,ROM,Tandy BIOS:;P1-;P1FC2,ROM,EC00 BIOS:;P1-;P1OUV,BIOS Writable,None,EC00,Main,All;P1-;P2,Audio & Video;P2-;P2OA,C/MS Audio,Enabled,Disabled;P2oAB,OPL2,Adlib 388h,SB FM 388h/228h, Disabled;P2o01,Speaker Volume,1,2,3,4;P2o23,Tandy Volume,1,2,3,4;P2o45,Audio Boost,No,2x,4x;P2o67,Stereo Mix,none,25%,50%,100%;P2-;P2oEH,CRT H offset,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15;P2oIK,CRT V offset,0,1,2,3,4,5,6,7;P2oMO,VSync Width,Auto,1,2,3,4,5,6,7;P2oPR,HSync Width,Auto,1,2,3,4,5,6,7;P2-;P2O12,Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%;P2O89,Aspect ratio,Original,Full Screen,[ARC1],[ARC2];P2OT,Border,No,Yes;P2o8,Composite video,Off,On;P2OEG,Display,Full Color,Green,Amber,B&W,Red,Blue,Fuchsia,Purple;P2-;P3,Hardware;P3-;P3OB,Lo-tech 2MB EMS,Enabled,Disabled;P3OCD,EMS Frame,C000,D000,E000;P3-;P3o9,A000 UMB,Enabled,Disabled;P3-;P3ONO,Joystick 1, Analog, Digital, Disabled;P3OPQ,Joystick 2, Analog, Digital, Disabled;P3OR,Sync Joy to CPU Speed,No,Yes;P3OS,Swap Joysticks,No,Yes;P3-;-;R0,Reset & apply settings;J,Fire 1,Fire 2;V,v260312",
+ "dumped": "2026-11-13T23:13:43"
+}

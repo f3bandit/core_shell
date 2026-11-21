@@ -1,0 +1,319 @@
+{
+ "coreshell_profile": 1,
+ "system": "sordm5",
+ "variant": "stock",
+ "name": "Sord M5",
+ "rbf": "_Computer/SordM5",
+ "setname": null,
+ "core_name": "Sord M5",
+ "config_file": "Sord M5.CFG",
+ "games_dir": "games/Sord M5",
+ "saves_dir": "saves/Sord M5",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "bin",
+   "ROM"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "bin",
+    "ROM"
+   ],
+   "label": "Load to ROM"
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "CAS"
+   ],
+   "label": "Load Tape"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "bin",
+    "ROM"
+   ],
+   "label": "Load to ROM",
+   "page": 0,
+   "flags": [
+    "h2"
+   ],
+   "remember_dir": false
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "CAS"
+   ],
+   "label": "Load Tape",
+   "page": 0,
+   "flags": [
+    "H3"
+   ],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Reset",
+   "bits": [
+    17,
+    17
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Reset and close OSD",
+   "bits": [
+    17,
+    17
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Memory extension",
+   "values": [
+    "None",
+    "EM-5",
+    "EM-64",
+    "64KBF",
+    "64KRX",
+    "BrnoMod"
+   ],
+   "default": "None",
+   "bits": [
+    0,
+    2
+   ],
+   "core_flags": [],
+   "key": "Memory extension",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Cartrige",
+   "values": [
+    "None",
+    "BASIC-I",
+    "BASIC-G",
+    "BASIC-F"
+   ],
+   "default": "None",
+   "bits": [
+    3,
+    4
+   ],
+   "core_flags": [
+    "h0"
+   ],
+   "key": "Cartrige",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "EM64 mode",
+   "values": [
+    "64KB",
+    "32KB"
+   ],
+   "default": "64KB",
+   "bits": [
+    5,
+    5
+   ],
+   "core_flags": [
+    "h1"
+   ],
+   "key": "EM64 mode",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "EM64 mon. deactivate",
+   "values": [
+    "Dis.",
+    "En."
+   ],
+   "default": "Dis.",
+   "bits": [
+    6,
+    6
+   ],
+   "core_flags": [
+    "h1"
+   ],
+   "key": "EM64 mon. deactivate",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "EM64 wp low 32KB",
+   "values": [
+    "Dis.",
+    "En."
+   ],
+   "default": "Dis.",
+   "bits": [
+    7,
+    7
+   ],
+   "core_flags": [
+    "h1"
+   ],
+   "key": "EM64 wp low 32KB",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "EM64 boot on",
+   "values": [
+    "ROM",
+    "RAM"
+   ],
+   "default": "ROM",
+   "bits": [
+    8,
+    8
+   ],
+   "core_flags": [
+    "h1"
+   ],
+   "key": "EM64 boot on",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Tape Input",
+   "values": [
+    "File",
+    "ADC"
+   ],
+   "default": "File",
+   "bits": [
+    18,
+    18
+   ],
+   "core_flags": [],
+   "key": "Tape Input",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Fast Tape Load",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    9,
+    9
+   ],
+   "core_flags": [
+    "H3"
+   ],
+   "key": "Fast Tape Load",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Tape Sound",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    10,
+    10
+   ],
+   "core_flags": [
+    "H3"
+   ],
+   "key": "Tape Sound",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    12,
+    13
+   ],
+   "core_flags": [],
+   "key": "Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%"
+   ],
+   "default": "None",
+   "bits": [
+    14,
+    15
+   ],
+   "core_flags": [],
+   "key": "Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Border",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    16,
+    16
+   ],
+   "core_flags": [],
+   "key": "Border",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "SordM5_20250903.rbf",
+  "rbf_md5": "c30b142167626239f5b47ce2f057e661",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:13:16",
+  "confstr_sha1": "ea090ea7606c10c9ffeaf2b9cae20eda468aa0bc"
+ }
+}

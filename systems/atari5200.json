@@ -1,0 +1,339 @@
+{
+ "coreshell_profile": 1,
+ "system": "atari5200",
+ "variant": "stock",
+ "name": "ATARI5200",
+ "rbf": "_Console/Atari5200",
+ "setname": null,
+ "core_name": "ATARI5200",
+ "config_file": "ATARI5200.CFG",
+ "games_dir": "games/ATARI5200",
+ "saves_dir": "saves/ATARI5200",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "CAR",
+   "A52",
+   "BIN",
+   "ROM"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "CAR",
+    "A52",
+    "BIN",
+    "ROM"
+   ],
+   "label": "Load Cart"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "CAR",
+    "A52",
+    "BIN",
+    "ROM"
+   ],
+   "label": "Load Cart",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Cold Reset (F10)",
+   "bits": [
+    40,
+    40
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Reset (Detach Carts)",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "CPU Speed",
+   "values": [
+    "1x",
+    "2x",
+    "4x",
+    "8x",
+    "16x"
+   ],
+   "default": "1x",
+   "bits": [
+    7,
+    9
+   ],
+   "core_flags": [],
+   "key": "CPU Speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "NTSC rate Hz",
+   "values": [
+    "59.92",
+    "59.94",
+    "60.0"
+   ],
+   "default": "59.92",
+   "bits": [
+    20,
+    21
+   ],
+   "core_flags": [],
+   "key": "NTSC rate Hz",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    22,
+    23
+   ],
+   "core_flags": [],
+   "key": "Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    17,
+    19
+   ],
+   "core_flags": [],
+   "key": "Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "NTSC artifacting",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    31,
+    31
+   ],
+   "core_flags": [],
+   "key": "NTSC artifacting",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Artifacting colors",
+   "values": [
+    "Set 1",
+    "Set 2"
+   ],
+   "default": "Set 1",
+   "bits": [
+    55,
+    55
+   ],
+   "core_flags": [
+    "d1"
+   ],
+   "key": "Artifacting colors",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Swap artif. colors",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    58,
+    58
+   ],
+   "core_flags": [
+    "d1"
+   ],
+   "key": "Swap artif. colors",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Clip Sides",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    34,
+    34
+   ],
+   "core_flags": [],
+   "key": "Clip Sides",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Vertical Crop",
+   "values": [
+    "Disabled",
+    "216p(5x)"
+   ],
+   "default": "Disabled",
+   "bits": [
+    24,
+    24
+   ],
+   "core_flags": [
+    "d0"
+   ],
+   "key": "Vertical Crop",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Crop Offset",
+   "values": [
+    "0",
+    "2",
+    "4",
+    "8",
+    "10",
+    "12",
+    "-12",
+    "-10",
+    "-8",
+    "-6",
+    "-4",
+    "-2"
+   ],
+   "default": "0",
+   "bits": [
+    25,
+    28
+   ],
+   "core_flags": [
+    "d0"
+   ],
+   "key": "Crop Offset",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    29,
+    30
+   ],
+   "core_flags": [],
+   "key": "Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Swap Joysticks 1&2",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    5,
+    5
+   ],
+   "core_flags": [],
+   "key": "Swap Joysticks 1&2",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Mouse X",
+   "values": [
+    "Normal",
+    "Inverted"
+   ],
+   "default": "Normal",
+   "bits": [
+    56,
+    56
+   ],
+   "core_flags": [],
+   "key": "Mouse X",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Mouse Y",
+   "values": [
+    "Normal",
+    "Inverted"
+   ],
+   "default": "Normal",
+   "bits": [
+    6,
+    6
+   ],
+   "core_flags": [],
+   "key": "Mouse Y",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "Atari5200_20260823.rbf",
+  "rbf_md5": "539259fe22d097d290b86232e683f2eb",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:01:14",
+  "confstr_sha1": "dc3862ace9f16c65b7ae28ab29cc507151a2d2c8"
+ }
+}

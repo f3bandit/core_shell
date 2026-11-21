@@ -1,0 +1,802 @@
+{
+ "coreshell_profile": 1,
+ "system": "genmidi",
+ "variant": "other",
+ "name": "GenMidi",
+ "rbf": "_Other/GenMidi",
+ "setname": null,
+ "core_name": "GenMidi",
+ "config_file": "GenMidi.CFG",
+ "games_dir": "games/GenMidi",
+ "saves_dir": "saves/GenMidi",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "TFI"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "TFI"
+   ],
+   "label": "Load Custom Patch"
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "TFI"
+   ],
+   "label": "Load Custom Patch"
+  },
+  {
+   "index": 3,
+   "type": "f",
+   "exts": [
+    "TFI"
+   ],
+   "label": "Load Custom Patch"
+  },
+  {
+   "index": 4,
+   "type": "f",
+   "exts": [
+    "TFI"
+   ],
+   "label": "Load Custom Patch"
+  },
+  {
+   "index": 5,
+   "type": "f",
+   "exts": [
+    "TFI"
+   ],
+   "label": "Load Custom Patch"
+  },
+  {
+   "index": 6,
+   "type": "f",
+   "exts": [
+    "TFI"
+   ],
+   "label": "Load Custom Patch"
+  },
+  {
+   "index": 7,
+   "type": "f",
+   "exts": [
+    "GPB"
+   ],
+   "label": "Load Patch Bank"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "TFI"
+   ],
+   "label": "Load Custom Patch",
+   "page": 1,
+   "flags": [
+    "D3"
+   ],
+   "remember_dir": false
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "TFI"
+   ],
+   "label": "Load Custom Patch",
+   "page": 2,
+   "flags": [
+    "D4"
+   ],
+   "remember_dir": false
+  },
+  {
+   "index": 3,
+   "type": "f",
+   "exts": [
+    "TFI"
+   ],
+   "label": "Load Custom Patch",
+   "page": 3,
+   "flags": [
+    "D6"
+   ],
+   "remember_dir": false
+  },
+  {
+   "index": 4,
+   "type": "f",
+   "exts": [
+    "TFI"
+   ],
+   "label": "Load Custom Patch",
+   "page": 4,
+   "flags": [
+    "D7"
+   ],
+   "remember_dir": false
+  },
+  {
+   "index": 5,
+   "type": "f",
+   "exts": [
+    "TFI"
+   ],
+   "label": "Load Custom Patch",
+   "page": 5,
+   "flags": [
+    "D8"
+   ],
+   "remember_dir": false
+  },
+  {
+   "index": 6,
+   "type": "f",
+   "exts": [
+    "TFI"
+   ],
+   "label": "Load Custom Patch",
+   "page": 6,
+   "flags": [
+    "D9"
+   ],
+   "remember_dir": false
+  },
+  {
+   "index": 7,
+   "type": "f",
+   "exts": [
+    "GPB"
+   ],
+   "label": "Load Patch Bank",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load BIOS",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Visuals",
+   "values": [
+    "Data",
+    "Scope",
+    "Both"
+   ],
+   "default": "Data",
+   "bits": [
+    89,
+    90
+   ],
+   "core_flags": [],
+   "key": "Visuals",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Midi Source",
+   "values": [
+    "USB",
+    "Din"
+   ],
+   "default": "USB",
+   "bits": [
+    2,
+    2
+   ],
+   "core_flags": [
+    "D1"
+   ],
+   "key": "Midi Source",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Musical Gamepad",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    3,
+    3
+   ],
+   "core_flags": [],
+   "key": "Musical Gamepad",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Selected Voice",
+   "values": [
+    "FM0",
+    "FM5",
+    "PSG",
+    "Noise"
+   ],
+   "default": "FM0",
+   "bits": [
+    67,
+    68
+   ],
+   "core_flags": [
+    "DB"
+   ],
+   "key": "Selected Voice",
+   "mgl_ok": true
+  },
+  {
+   "page": "FM0 Settings",
+   "name": "Patch",
+   "values": [
+    "Lead 1",
+    "Bass 1",
+    "Bell Lead",
+    "Custom"
+   ],
+   "default": "Lead 1",
+   "bits": [
+    19,
+    21
+   ],
+   "core_flags": [],
+   "key": "FM0 Settings/Patch",
+   "mgl_ok": true
+  },
+  {
+   "page": "FM0 Settings",
+   "name": "Vibrato",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    14,
+    14
+   ],
+   "core_flags": [],
+   "key": "FM0 Settings/Vibrato",
+   "mgl_ok": true
+  },
+  {
+   "page": "FM1 Settings",
+   "name": "Patch",
+   "values": [
+    "Lead 1",
+    "Bass 1",
+    "Bell Lead",
+    "Custom"
+   ],
+   "default": "Lead 1",
+   "bits": [
+    36,
+    38
+   ],
+   "core_flags": [],
+   "key": "FM1 Settings/Patch",
+   "mgl_ok": true
+  },
+  {
+   "page": "FM1 Settings",
+   "name": "Vibrato",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    31,
+    31
+   ],
+   "core_flags": [],
+   "key": "FM1 Settings/Vibrato",
+   "mgl_ok": true
+  },
+  {
+   "page": "FM2 Settings",
+   "name": "Patch",
+   "values": [
+    "Lead 1",
+    "Bass 1",
+    "Bell Lead",
+    "Custom"
+   ],
+   "default": "Lead 1",
+   "bits": [
+    49,
+    51
+   ],
+   "core_flags": [],
+   "key": "FM2 Settings/Patch",
+   "mgl_ok": true
+  },
+  {
+   "page": "FM2 Settings",
+   "name": "Vibrato",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    56,
+    56
+   ],
+   "core_flags": [],
+   "key": "FM2 Settings/Vibrato",
+   "mgl_ok": true
+  },
+  {
+   "page": "FM3 Settings",
+   "name": "Patch",
+   "values": [
+    "Lead 1",
+    "Bass 1",
+    "Bell Lead",
+    "Custom"
+   ],
+   "default": "Lead 1",
+   "bits": [
+    69,
+    71
+   ],
+   "core_flags": [],
+   "key": "FM3 Settings/Patch",
+   "mgl_ok": true
+  },
+  {
+   "page": "FM3 Settings",
+   "name": "Vibrato",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    78,
+    78
+   ],
+   "core_flags": [],
+   "key": "FM3 Settings/Vibrato",
+   "mgl_ok": true
+  },
+  {
+   "page": "FM4 Settings",
+   "name": "Patch",
+   "values": [
+    "Lead 1",
+    "Bass 1",
+    "Bell Lead",
+    "Custom"
+   ],
+   "default": "Lead 1",
+   "bits": [
+    72,
+    74
+   ],
+   "core_flags": [],
+   "key": "FM4 Settings/Patch",
+   "mgl_ok": true
+  },
+  {
+   "page": "FM4 Settings",
+   "name": "Vibrato",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    79,
+    79
+   ],
+   "core_flags": [],
+   "key": "FM4 Settings/Vibrato",
+   "mgl_ok": true
+  },
+  {
+   "page": "FM5 Settings",
+   "name": "Patch",
+   "values": [
+    "Lead 1",
+    "Bass 1",
+    "Bell Lead",
+    "Custom"
+   ],
+   "default": "Lead 1",
+   "bits": [
+    75,
+    77
+   ],
+   "core_flags": [],
+   "key": "FM5 Settings/Patch",
+   "mgl_ok": true
+  },
+  {
+   "page": "FM5 Settings",
+   "name": "Vibrato",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    80,
+    80
+   ],
+   "core_flags": [],
+   "key": "FM5 Settings/Vibrato",
+   "mgl_ok": true
+  },
+  {
+   "page": "FM5 Settings",
+   "name": "FM5 as sampler (DAC)",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    86,
+    86
+   ],
+   "core_flags": [],
+   "key": "FM5 Settings/FM5 as sampler (DAC)",
+   "mgl_ok": true
+  },
+  {
+   "page": "PSG0 Settings",
+   "name": "Vibrato",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    81,
+    81
+   ],
+   "core_flags": [],
+   "key": "PSG0 Settings/Vibrato",
+   "mgl_ok": true
+  },
+  {
+   "page": "PSG0 Settings",
+   "name": "Fade Out",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    8,
+    8
+   ],
+   "core_flags": [],
+   "key": "PSG0 Settings/Fade Out",
+   "mgl_ok": true
+  },
+  {
+   "page": "PSG0 Settings",
+   "name": " Fade Speed",
+   "values": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9"
+   ],
+   "default": "0",
+   "bits": [
+    9,
+    12
+   ],
+   "core_flags": [],
+   "key": "PSG0 Settings/ Fade Speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "PSG1 Settings",
+   "name": "Vibrato",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    82,
+    82
+   ],
+   "core_flags": [],
+   "key": "PSG1 Settings/Vibrato",
+   "mgl_ok": true
+  },
+  {
+   "page": "PSG1 Settings",
+   "name": "Detune",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    87,
+    87
+   ],
+   "core_flags": [],
+   "key": "PSG1 Settings/Detune",
+   "mgl_ok": true
+  },
+  {
+   "page": "PSG1 Settings",
+   "name": "Fade Out",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    25,
+    25
+   ],
+   "core_flags": [],
+   "key": "PSG1 Settings/Fade Out",
+   "mgl_ok": true
+  },
+  {
+   "page": "PSG1 Settings",
+   "name": " Fade Speed",
+   "values": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9"
+   ],
+   "default": "0",
+   "bits": [
+    26,
+    29
+   ],
+   "core_flags": [],
+   "key": "PSG1 Settings/ Fade Speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "PSG2 & Noise Settings",
+   "name": "PSG2 Vibrato",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    83,
+    83
+   ],
+   "core_flags": [],
+   "key": "PSG2 & Noise Settings/PSG2 Vibrato",
+   "mgl_ok": true
+  },
+  {
+   "page": "PSG2 & Noise Settings",
+   "name": "PSG2 Fade Out",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    62,
+    62
+   ],
+   "core_flags": [],
+   "key": "PSG2 & Noise Settings/PSG2 Fade Out",
+   "mgl_ok": true
+  },
+  {
+   "page": "PSG2 & Noise Settings",
+   "name": " Fade Speed",
+   "values": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9"
+   ],
+   "default": "0",
+   "bits": [
+    63,
+    66
+   ],
+   "core_flags": [],
+   "key": "PSG2 & Noise Settings/ Fade Speed",
+   "mgl_ok": false
+  },
+  {
+   "page": "PSG2 & Noise Settings",
+   "name": "Noise Fade Out",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    44,
+    44
+   ],
+   "core_flags": [],
+   "key": "PSG2 & Noise Settings/Noise Fade Out",
+   "mgl_ok": true
+  },
+  {
+   "page": "PSG2 & Noise Settings",
+   "name": " Fade Speed",
+   "values": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9"
+   ],
+   "default": "0",
+   "bits": [
+    45,
+    48
+   ],
+   "core_flags": [],
+   "key": "PSG2 & Noise Settings/ Fade Speed #2",
+   "mgl_ok": false
+  },
+  {
+   "page": "",
+   "name": "Echo FM0 to FM1",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    16,
+    16
+   ],
+   "core_flags": [],
+   "key": "Echo FM0 to FM1",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Echo PSG0 to PSG1",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    84,
+    84
+   ],
+   "core_flags": [],
+   "key": "Echo PSG0 to PSG1",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Unison FM0 + PSG0",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    85,
+    85
+   ],
+   "core_flags": [],
+   "key": "Unison FM0 + PSG0",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Auto-Polyphony (FM)",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    7,
+    7
+   ],
+   "core_flags": [
+    "D1",
+    "D5"
+   ],
+   "key": "Auto-Polyphony (FM)",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "ModWheel to",
+   "values": [
+    "Vibrato",
+    "Modulation"
+   ],
+   "default": "Vibrato",
+   "bits": [
+    88,
+    88
+   ],
+   "core_flags": [],
+   "key": "ModWheel to",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "GenMidi_20240817.rbf",
+  "rbf_md5": "b1c021b1d680d8f009df9d7ae65c86da",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:15:47",
+  "confstr_sha1": "fa17ec66863e9e2ff3ae2f5d0e9a9e2fe758cb5d"
+ }
+}

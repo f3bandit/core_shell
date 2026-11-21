@@ -1,0 +1,309 @@
+{
+ "coreshell_profile": 1,
+ "system": "3do",
+ "variant": "stock",
+ "name": "3DO",
+ "rbf": "_Console/3DO",
+ "setname": null,
+ "core_name": "3DO",
+ "config_file": "3DO.CFG",
+ "games_dir": "games/3DO",
+ "saves_dir": "saves/3DO",
+ "rom": {
+  "index": 2,
+  "type": "f",
+  "exts": [
+   "BIN"
+  ]
+ },
+ "slots": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "CUE",
+    "ISO"
+   ],
+   "label": "Insert Disk"
+  }
+ ],
+ "files": [
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load bios",
+   "page": 0,
+   "flags": [],
+   "remember_dir": true
+  }
+ ],
+ "mounts": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "CUE",
+    "ISO"
+   ],
+   "label": "Insert Disk",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Load Backup RAM",
+   "bits": [
+    12,
+    12
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "D0"
+   ]
+  },
+  {
+   "name": "Save Backup RAM",
+   "bits": [
+    13,
+    13
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "D0"
+   ]
+  },
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Region",
+   "values": [
+    "BIOS",
+    "NTSC",
+    "PAL"
+   ],
+   "default": "BIOS",
+   "bits": [
+    15,
+    16
+   ],
+   "core_flags": [],
+   "key": "Region",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Autosave",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    14,
+    14
+   ],
+   "core_flags": [
+    "D0"
+   ],
+   "key": "Autosave",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    6,
+    7
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Vertical Crop",
+   "values": [
+    "Disabled",
+    "216p(5x)",
+    "224p"
+   ],
+   "default": "Disabled",
+   "bits": [
+    8,
+    9
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Vertical Crop",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Pad",
+   "values": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "Off"
+   ],
+   "default": "1",
+   "bits": [
+    32,
+    34
+   ],
+   "core_flags": [],
+   "key": "Input/Pad",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Flightstick",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    35,
+    35
+   ],
+   "core_flags": [
+    "D1"
+   ],
+   "key": "Input/Flightstick",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Mouse",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    36,
+    36
+   ],
+   "core_flags": [
+    "D2"
+   ],
+   "key": "Input/Mouse",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Arcade control",
+   "values": [
+    "Off",
+    "Trackball"
+   ],
+   "default": "Off",
+   "bits": [
+    37,
+    38
+   ],
+   "core_flags": [],
+   "key": "Input/Arcade control",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Arcade service",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    39,
+    39
+   ],
+   "core_flags": [],
+   "key": "Input/Arcade service",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Video mode",
+   "values": [
+    "240p",
+    "480i(original)"
+   ],
+   "default": "240p",
+   "bits": [
+    19,
+    19
+   ],
+   "core_flags": [],
+   "key": "Hardware/Video mode",
+   "mgl_ok": true
+  },
+  {
+   "page": "Debug",
+   "name": "H Interpolation",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    17,
+    17
+   ],
+   "core_flags": [],
+   "key": "Debug/H Interpolation",
+   "mgl_ok": true
+  },
+  {
+   "page": "Debug",
+   "name": "V Interpolation",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    18,
+    18
+   ],
+   "core_flags": [],
+   "key": "Debug/V Interpolation",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "3DO_20260717.rbf",
+  "rbf_md5": "85520af995519761c06d5ac3c70e6adc",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T22:59:09",
+  "confstr_sha1": "df5f8bd3a4d6ffd34ed0fb52792ecff802b50a5d"
+ }
+}

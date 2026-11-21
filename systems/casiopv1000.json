@@ -1,0 +1,85 @@
+{
+ "coreshell_profile": 1,
+ "system": "casiopv1000",
+ "variant": "stock",
+ "name": "Casio_PV-1000",
+ "rbf": "_Console/Casio_PV-1000",
+ "setname": null,
+ "core_name": "Casio_PV-1000",
+ "config_file": "Casio_PV-1000.CFG",
+ "games_dir": "games/Casio_PV-1000",
+ "saves_dir": "saves/Casio_PV-1000",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "BIN"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load Cartridge"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load Cartridge",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    2,
+    3
+   ],
+   "core_flags": [],
+   "key": "Aspect ratio",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "Casio_PV-1000_20250622.rbf",
+  "rbf_md5": "8668b1d7e2fe9077492b2c17e76f274d",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:04:14",
+  "confstr_sha1": "86a2723a75f7304bc40afdd326fe65404d875721"
+ }
+}

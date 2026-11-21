@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/SordM5_20250903.rbf",
+ "rbf_md5": "c30b142167626239f5b47ce2f057e661",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "Sord M5;;-;O02,Memory extension,None,EM-5,EM-64,64KBF,64KRX,BrnoMod;h0O34,Cartrige,None,BASIC-I,BASIC-G,BASIC-F;h1O5,EM64 mode,64KB,32KB;h1O6,EM64 mon. deactivate,Dis.,En.;h1O7,EM64 wp low 32KB,Dis.,En.;h1O8,EM64 boot on,ROM,RAM;h2F1,binROM,Load to ROM;-;OI,Tape Input,File,ADC;H3F2,CAS,Load Tape;H3O9,Fast Tape Load,On,Off;H3OA,Tape Sound,On,Off;-;-;OCD,Aspect ratio,Original,Full Screen,[ARC1],[ARC2];OEF,Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%;OG,Border,No,Yes;-;TH,Reset;RH,Reset and close OSD;V,v250903",
+ "dumped": "2026-11-13T23:13:16"
+}

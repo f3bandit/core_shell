@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/Jupiter_20260603.rbf",
+ "rbf_md5": "96807e701d69ac766a6ed9e89d8101e5",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "Jupiter;;-;F,ACE;-;O89,Aspect ratio,Original,Full Screen,[ARC1],[ARC2];O23,Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%;OAB,Scale,Normal,V-Integer,Narrower HV-Integer,Wider HV-Integer;-;O45,CPU Speed,Normal,x2,x4;R0,Reset;J,Fire;V,v260603",
+ "dumped": "2026-11-13T23:11:34"
+}

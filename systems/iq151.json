@@ -1,0 +1,214 @@
+{
+ "coreshell_profile": 1,
+ "system": "iq151",
+ "variant": "stock",
+ "name": "IQ151",
+ "rbf": "_Computer/IQ151",
+ "setname": null,
+ "core_name": "IQ151",
+ "config_file": "IQ151.CFG",
+ "games_dir": "games/IQ151",
+ "saves_dir": "saves/IQ151",
+ "rom": {
+  "index": 1,
+  "type": "s",
+  "exts": [
+   "DSK"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Floppy 0 (A):"
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Floppy 1 (B):"
+  }
+ ],
+ "files": [],
+ "mounts": [
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Floppy 0 (A):",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Floppy 1 (B):",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Reset IQ151",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "RAM",
+   "values": [
+    "32kB",
+    "64kB"
+   ],
+   "default": "32kB",
+   "bits": [
+    1,
+    1
+   ],
+   "core_flags": [],
+   "key": "RAM",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Monitor",
+   "values": [
+    "Std",
+    "CPM"
+   ],
+   "default": "Std",
+   "bits": [
+    10,
+    10
+   ],
+   "core_flags": [],
+   "key": "Monitor",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Video Module",
+   "values": [
+    "Video32",
+    "Video64"
+   ],
+   "default": "Video32",
+   "bits": [
+    2,
+    2
+   ],
+   "core_flags": [],
+   "key": "Video Module",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Graphics Module",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    3,
+    3
+   ],
+   "core_flags": [],
+   "key": "Graphics Module",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Language Module",
+   "values": [
+    "None",
+    "Basic G",
+    "Basic 6",
+    "Amos ASM+PAS+PAS1"
+   ],
+   "default": "None",
+   "bits": [
+    4,
+    5
+   ],
+   "core_flags": [],
+   "key": "Language Module",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "SD-Rom (Staper) Module",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    6,
+    6
+   ],
+   "core_flags": [],
+   "key": "SD-Rom (Staper) Module",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "RS232 Module",
+   "values": [
+    "Sestyk (8251)",
+    "None"
+   ],
+   "default": "Sestyk (8251)",
+   "bits": [
+    7,
+    7
+   ],
+   "core_flags": [],
+   "key": "RS232 Module",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Floppy Module",
+   "values": [
+    "Disc2 (8272)",
+    "None"
+   ],
+   "default": "Disc2 (8272)",
+   "bits": [
+    9,
+    9
+   ],
+   "core_flags": [],
+   "key": "Floppy Module",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "IQ151_20261028.rbf",
+  "rbf_md5": "159a0a9585cfd23561a1d697f61debfa",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:11:25",
+  "confstr_sha1": "905f3f3b5de177d541e5394958cc609b2021a07e"
+ }
+}

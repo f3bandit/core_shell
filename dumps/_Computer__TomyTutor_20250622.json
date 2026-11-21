@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/TomyTutor_20250622.rbf",
+ "rbf_md5": "fb12bf3212873ae3e4113036c0fa0bfc",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "TomyTutor;;FC2,BIN,Load Cartridge;P1,Tape;P1S0,CAS,Mount Tape Image;D0P1O[2],Tape Read Only,No,Yes;P1O[4:3],Tape Status,Never,Always,When Mounted, With Activity;P1O[5],Tape Audio,Muted,UnMuted;D1P1T[6},Stop   [F5];D1P1T[7],Rewind [F6];h2P2,Dev Menu;h2P2O[13],4000-5FFF Ram,Off,On;h2P2O[14],6000-7FFF Ram,Off,On;h2P2O[15],8000-9FFF Ram,Off,On;h2P2O[16],A000-BFFF Ram,Off,On;h2P2O[17],C000-DFFF Ram,Off,On;-;P3,Video Settings;P3O[8],MAX Num of Sprites,32,4;P3O[10:9],Scale,Normal,V-Integer,Narrower HV-Integer,Wider HV-Integer;P3O[11],Aspect Ratio,Original,Full Screen;P3O[12],Vertical Crop,Off,On;-;FC1,ROM,Select System Rom;-;R[1],Eject Cartridge;-;R[0],Reset;J,Fire 1,Fire 2,1,2,Enter/RT;V,v250622",
+ "dumped": "2026-11-13T23:13:52"
+}

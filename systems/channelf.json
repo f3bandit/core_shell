@@ -1,0 +1,118 @@
+{
+ "coreshell_profile": 1,
+ "system": "channelf",
+ "variant": "stock",
+ "name": "ChannelF",
+ "rbf": "_Console/ChannelF",
+ "setname": null,
+ "core_name": "ChannelF",
+ "config_file": "ChannelF.CFG",
+ "games_dir": "games/ChannelF",
+ "saves_dir": "saves/ChannelF",
+ "rom": {
+  "index": 0,
+  "type": "f",
+  "exts": [
+   "ROM",
+   "BIN"
+  ]
+ },
+ "slots": [
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "ROM",
+    "BIN"
+   ],
+   "label": ""
+  }
+ ],
+ "files": [
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "ROM",
+    "BIN"
+   ],
+   "label": "",
+   "page": 0,
+   "flags": [],
+   "remember_dir": true
+  }
+ ],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Aspect ratio",
+   "values": [
+    "4:3",
+    "16:9"
+   ],
+   "default": "4:3",
+   "bits": [
+    3,
+    3
+   ],
+   "core_flags": [],
+   "key": "Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Video standard",
+   "values": [
+    "NTSC",
+    "PAL"
+   ],
+   "default": "NTSC",
+   "bits": [
+    10,
+    10
+   ],
+   "core_flags": [],
+   "key": "Video standard",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Swap Joystick",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    1,
+    1
+   ],
+   "core_flags": [],
+   "key": "Swap Joystick",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "ChannelF_20250907.rbf",
+  "rbf_md5": "7518c1f83837c736797083793b39bcc8",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:04:17",
+  "confstr_sha1": "004f9b3c5f14613587f0954dc4e4e80ff39950c7"
+ }
+}

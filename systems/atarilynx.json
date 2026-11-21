@@ -1,0 +1,475 @@
+{
+ "coreshell_profile": 1,
+ "system": "atarilynx",
+ "variant": "stock",
+ "name": "AtariLynx",
+ "rbf": "_Console/AtariLynx",
+ "setname": null,
+ "core_name": "AtariLynx",
+ "config_file": "AtariLynx.CFG",
+ "games_dir": "games/AtariLynx",
+ "saves_dir": "saves/AtariLynx",
+ "rom": {
+  "index": 0,
+  "type": "f",
+  "exts": [
+   "LNX",
+   "LYX"
+  ]
+ },
+ "slots": [
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "LNX",
+    "LYX"
+   ],
+   "label": ""
+  }
+ ],
+ "files": [
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "LNX",
+    "LYX"
+   ],
+   "label": "",
+   "page": 0,
+   "flags": [],
+   "remember_dir": true
+  }
+ ],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Save state (Alt-F1)",
+   "bits": [
+    28,
+    28
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "h0"
+   ]
+  },
+  {
+   "name": "Restore state (F1)",
+   "bits": [
+    29,
+    29
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "h0"
+   ]
+  },
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": true,
+ "menu": [
+  {
+   "page": "",
+   "name": "Cheats Enabled",
+   "values": [
+    "Yes",
+    "No"
+   ],
+   "default": "Yes",
+   "bits": [
+    39,
+    39
+   ],
+   "core_flags": [
+    "H1"
+   ],
+   "key": "Cheats Enabled",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Savestates to SDCard",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    36,
+    36
+   ],
+   "core_flags": [],
+   "key": "Savestates to SDCard",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Savestate Slot",
+   "values": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "default": "1",
+   "bits": [
+    37,
+    38
+   ],
+   "core_flags": [],
+   "key": "Savestate Slot",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Pause when OSD is open",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    26,
+    26
+   ],
+   "core_flags": [],
+   "key": "Pause when OSD is open",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "CPU GPU Turbo",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    9,
+    9
+   ],
+   "core_flags": [],
+   "key": "CPU GPU Turbo",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Fastforward Speed",
+   "values": [
+    "400%",
+    "133%",
+    "160%",
+    "200%"
+   ],
+   "default": "400%",
+   "bits": [
+    32,
+    33
+   ],
+   "core_flags": [],
+   "key": "Fastforward Speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Rewind Capture",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    27,
+    27
+   ],
+   "core_flags": [],
+   "key": "Rewind Capture",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Orientation",
+   "values": [
+    "Horz",
+    "Vert",
+    "Vert180"
+   ],
+   "default": "Horz",
+   "bits": [
+    10,
+    11
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Orientation",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "240p Mode",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    15,
+    15
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/240p Mode",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    13,
+    14
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    2,
+    4
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    34,
+    35
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "CRT H-Sync Adjust",
+   "values": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "-8",
+    "-7",
+    "-6",
+    "-5",
+    "-4",
+    "-3",
+    "-2",
+    "-1"
+   ],
+   "default": "0",
+   "bits": [
+    16,
+    19
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/CRT H-Sync Adjust",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "CRT V-Sync Adjust",
+   "values": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "-8",
+    "-7",
+    "-6",
+    "-5",
+    "-4",
+    "-3",
+    "-2",
+    "-1"
+   ],
+   "default": "0",
+   "bits": [
+    20,
+    23
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/CRT V-Sync Adjust",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Sync core to 60 Hz",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    24,
+    24
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Sync core to 60 Hz",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Video Timing for YC",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    45,
+    45
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Video Timing for YC",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Buffer video",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    5,
+    5
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Buffer video",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Flickerblend",
+   "values": [
+    "Off",
+    "2 Frames",
+    "3 Frames"
+   ],
+   "default": "Off",
+   "bits": [
+    30,
+    31
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Flickerblend",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "FPS Overlay",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    12,
+    12
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/FPS Overlay",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Stereo mix",
+   "values": [
+    "none",
+    "25%",
+    "50%",
+    "100%"
+   ],
+   "default": "none",
+   "bits": [
+    7,
+    8
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Stereo mix",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "FastForward Sound",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    25,
+    25
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/FastForward Sound",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "AtariLynx_20260129.rbf",
+  "rbf_md5": "4fbf483b7335f91bd8290facecc747f7",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:03:29",
+  "confstr_sha1": "a7fcd0420755c2b58f733295215a0b827d597c41"
+ }
+}

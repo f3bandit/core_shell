@@ -1,0 +1,131 @@
+{
+ "coreshell_profile": 1,
+ "system": "gameoflife",
+ "variant": "other",
+ "name": "GameOfLife",
+ "rbf": "_Other/GameOfLife",
+ "setname": null,
+ "core_name": "GameOfLife",
+ "config_file": "GameOfLife_v1.CFG",
+ "games_dir": "games/GameOfLife",
+ "saves_dir": "saves/GameOfLife",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "MEM"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "MEM"
+   ],
+   "label": "Load board"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "MEM"
+   ],
+   "label": "Load board",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "HighLife",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    4,
+    4
+   ],
+   "core_flags": [],
+   "key": "HighLife",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Running",
+   "values": [
+    "Yes",
+    "No"
+   ],
+   "default": "Yes",
+   "bits": [
+    3,
+    3
+   ],
+   "core_flags": [],
+   "key": "Running",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Seed",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    2,
+    2
+   ],
+   "core_flags": [],
+   "key": "Seed",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Aspect Ratio",
+   "values": [
+    "16:9",
+    "4:3"
+   ],
+   "default": "16:9",
+   "bits": [
+    1,
+    1
+   ],
+   "core_flags": [],
+   "key": "Aspect Ratio",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "GameOfLife_20260702.rbf",
+  "rbf_md5": "1b04a8cf7eabdb08d1b1cd3a5733b117",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:15:44",
+  "confstr_sha1": "acf47cb7203f9980140d9488b82239e05dcf36fe"
+ }
+}

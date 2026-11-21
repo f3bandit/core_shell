@@ -1,0 +1,183 @@
+{
+ "coreshell_profile": 1,
+ "system": "gamate",
+ "variant": "stock",
+ "name": "Gamate",
+ "rbf": "_Console/Gamate",
+ "setname": null,
+ "core_name": "Gamate",
+ "config_file": "Gamate.CFG",
+ "games_dir": "games/Gamate",
+ "saves_dir": "saves/Gamate",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "bin"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "bin"
+   ],
+   "label": "Load Cartridge"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "bin"
+   ],
+   "label": "Load Cartridge",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 3,
+   "type": "f",
+   "exts": [
+    "SGB",
+    "GBP"
+   ],
+   "label": "Load Palette",
+   "page": 0,
+   "flags": [
+    "D0"
+   ],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    121,
+    122
+   ],
+   "core_flags": [],
+   "key": "Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Flickerblend",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    20,
+    20
+   ],
+   "core_flags": [],
+   "key": "Flickerblend",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%"
+   ],
+   "default": "None",
+   "bits": [
+    2,
+    3
+   ],
+   "core_flags": [],
+   "key": "Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    10,
+    11
+   ],
+   "core_flags": [],
+   "key": "Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Drop Shadows",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    21,
+    21
+   ],
+   "core_flags": [],
+   "key": "Drop Shadows",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Custom Palette",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    7,
+    7
+   ],
+   "core_flags": [],
+   "key": "Custom Palette",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "Gamate_20260530.rbf",
+  "rbf_md5": "2134bf4823a06d2b645f867e9de1e477",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:04:32",
+  "confstr_sha1": "1eaf25cb6d7ab56096eb95a0933ff4c0da410208"
+ }
+}

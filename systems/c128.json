@@ -1,0 +1,1373 @@
+{
+ "coreshell_profile": 1,
+ "system": "c128",
+ "variant": "stock",
+ "name": "C128",
+ "rbf": "_Computer/C128",
+ "setname": null,
+ "core_name": "C128",
+ "config_file": "C128.CFG",
+ "games_dir": "games/C128",
+ "saves_dir": "saves/C128",
+ "rom": {
+  "index": 2,
+  "type": "f",
+  "exts": [
+   "PRG",
+   "CRT",
+   "REU",
+   "TAP"
+  ]
+ },
+ "slots": [
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "PRG",
+    "CRT",
+    "REU",
+    "TAP"
+   ],
+   "label": ""
+  },
+  {
+   "index": 4,
+   "type": "f",
+   "exts": [
+    "ROM",
+    "BIN"
+   ],
+   "label": "Drive ROMs                  "
+  },
+  {
+   "index": 6,
+   "type": "f",
+   "exts": [
+    "ROM",
+    "BIN"
+   ],
+   "label": "Internal Function ROM      "
+  },
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "/_C",
+    "omp",
+    "ute",
+    "r/C",
+    "128",
+    "def",
+    ".mr",
+    "a"
+   ],
+   "label": ""
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "D64",
+    "G64",
+    "D71",
+    "G71",
+    "D81",
+    "T64"
+   ],
+   "label": "Mount #8                    "
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "D64",
+    "G64",
+    "D71",
+    "G71",
+    "D81",
+    "T64"
+   ],
+   "label": "Mount #9                    "
+  }
+ ],
+ "files": [
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "PRG",
+    "CRT",
+    "REU",
+    "TAP"
+   ],
+   "label": "",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 7,
+   "type": "f",
+   "exts": [
+    "FLT"
+   ],
+   "label": "Load Custom Filters",
+   "page": 1,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 3,
+   "type": "f",
+   "exts": [
+    "ROM",
+    "BIN"
+   ],
+   "label": "System ROMs                 ",
+   "page": 2,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 4,
+   "type": "f",
+   "exts": [
+    "ROM",
+    "BIN"
+   ],
+   "label": "Drive ROMs                  ",
+   "page": 2,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 6,
+   "type": "f",
+   "exts": [
+    "ROM",
+    "BIN"
+   ],
+   "label": "Internal Function ROM      ",
+   "page": 2,
+   "flags": [
+    "HC"
+   ],
+   "remember_dir": false
+  },
+  {
+   "index": 5,
+   "type": "f",
+   "exts": [
+    "CRT"
+   ],
+   "label": "Boot Cartridge              ",
+   "page": 2,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "/_C",
+    "omp",
+    "ute",
+    "r/C",
+    "128",
+    "def",
+    ".mr",
+    "a"
+   ],
+   "label": "",
+   "page": 0,
+   "flags": [
+    "DE"
+   ],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "D64",
+    "G64",
+    "D71",
+    "G71",
+    "D81",
+    "T64"
+   ],
+   "label": "Mount #8                    ",
+   "page": 0,
+   "flags": [
+    "H7"
+   ]
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "D64",
+    "G64",
+    "D71",
+    "G71",
+    "D81",
+    "T64"
+   ],
+   "label": "Mount #9                    ",
+   "page": 0,
+   "flags": [
+    "H0"
+   ]
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Save cartridge",
+   "bits": [
+    61,
+    61
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "hA",
+    "dB"
+   ]
+  },
+  {
+   "name": "Tape Play/Pause",
+   "bits": [
+    7,
+    7
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "h3"
+   ]
+  },
+  {
+   "name": "Tape Unload",
+   "bits": [
+    23,
+    23
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "h3"
+   ]
+  },
+  {
+   "name": "Reset Disk Drives",
+   "bits": [
+    6,
+    6
+   ],
+   "kind": "reset",
+   "page": 3,
+   "flags": []
+  },
+  {
+   "name": "Reset & Remove Int.Func.ROM",
+   "bits": [
+    123,
+    123
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "HC",
+    "hE"
+   ]
+  },
+  {
+   "name": "Reset & Remove Cartridge",
+   "bits": [
+    17,
+    17
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "hD"
+   ]
+  },
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Autosave",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    62,
+    62
+   ],
+   "core_flags": [
+    "hA"
+   ],
+   "key": "Autosave",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Tape Sound",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    11,
+    11
+   ],
+   "core_flags": [
+    "h3"
+   ],
+   "key": "Tape Sound",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Video Out",
+   "values": [
+    "Follow 40/80",
+    "VIC",
+    "VDC"
+   ],
+   "default": "Follow 40/80",
+   "bits": [
+    105,
+    106
+   ],
+   "core_flags": [
+    "HC"
+   ],
+   "key": "Audio & Video/Video Out",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "40/80 Display",
+   "values": [
+    "40 col",
+    "80 col"
+   ],
+   "default": "40 col",
+   "bits": [
+    107,
+    107
+   ],
+   "core_flags": [
+    "HC"
+   ],
+   "key": "Audio & Video/40/80 Display",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Video Standard",
+   "values": [
+    "PAL",
+    "NTSC"
+   ],
+   "default": "PAL",
+   "bits": [
+    2,
+    2
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Video Standard",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Aspect Ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    4,
+    5
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Aspect Ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    8,
+    10
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Vertical Crop",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    32,
+    32
+   ],
+   "core_flags": [
+    "d1"
+   ],
+   "key": "Audio & Video/Vertical Crop",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    30,
+    31
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "VIC-II Variant",
+   "values": [
+    "656x",
+    "856x",
+    "Early 856x"
+   ],
+   "default": "656x",
+   "bits": [
+    34,
+    35
+   ],
+   "core_flags": [
+    "hC"
+   ],
+   "key": "Audio & Video/VIC-II Variant",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "VIC-II Palette",
+   "values": [
+    "Colodore",
+    "Ultimate",
+    "Pepto-PAL",
+    "Vice",
+    "Vice6569R1",
+    "Vice6569R5",
+    "Vice8565R2",
+    "Lemon64"
+   ],
+   "default": "Colodore",
+   "bits": [
+    82,
+    84
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/VIC-II Palette",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "VIC-II Jailbars",
+   "values": [
+    "Off",
+    "Low",
+    "Medium",
+    "High"
+   ],
+   "default": "Off",
+   "bits": [
+    110,
+    111
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/VIC-II Jailbars",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "VDC Variant",
+   "values": [
+    "Auto",
+    "8563R9",
+    "8568"
+   ],
+   "default": "Auto",
+   "bits": [
+    125,
+    126
+   ],
+   "core_flags": [
+    "HC"
+   ],
+   "key": "Audio & Video/VDC Variant",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "VDC Position",
+   "values": [
+    "Centered",
+    "Original"
+   ],
+   "default": "Centered",
+   "bits": [
+    124,
+    124
+   ],
+   "core_flags": [
+    "HC"
+   ],
+   "key": "Audio & Video/VDC Position",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "VDC Memory",
+   "values": [
+    "16k",
+    "64k"
+   ],
+   "default": "16k",
+   "bits": [
+    117,
+    117
+   ],
+   "core_flags": [
+    "HC",
+    "H6"
+   ],
+   "key": "Audio & Video/VDC Memory",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "VDC Palette",
+   "values": [
+    "Default",
+    "Analogue",
+    "Monochrome",
+    "Composite"
+   ],
+   "default": "Default",
+   "bits": [
+    115,
+    116
+   ],
+   "core_flags": [
+    "HC"
+   ],
+   "key": "Audio & Video/VDC Palette",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "VDC Mono Colour",
+   "values": [
+    "White",
+    "Green",
+    "Amber",
+    "Red"
+   ],
+   "default": "White",
+   "bits": [
+    113,
+    114
+   ],
+   "core_flags": [
+    "HC",
+    "h2"
+   ],
+   "key": "Audio & Video/VDC Mono Colour",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Left SID",
+   "values": [
+    "Auto",
+    "6581",
+    "8580"
+   ],
+   "default": "Auto",
+   "bits": [
+    13,
+    14
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Left SID",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Right SID",
+   "values": [
+    "Auto",
+    "6581",
+    "8580"
+   ],
+   "default": "Auto",
+   "bits": [
+    15,
+    16
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Right SID",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Left Filter",
+   "values": [
+    "Default",
+    "Custom 1",
+    "Custom 2",
+    "Custom 3",
+    "Adjustable"
+   ],
+   "default": "Default",
+   "bits": [
+    64,
+    66
+   ],
+   "core_flags": [
+    "D4"
+   ],
+   "key": "Audio & Video/Left Filter",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Right Filter",
+   "values": [
+    "Default",
+    "Custom 1",
+    "Custom 2",
+    "Custom 3",
+    "Adjustable"
+   ],
+   "default": "Default",
+   "bits": [
+    67,
+    69
+   ],
+   "core_flags": [
+    "D5"
+   ],
+   "key": "Audio & Video/Right Filter",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Left Fc Offset",
+   "values": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5"
+   ],
+   "default": "0",
+   "bits": [
+    70,
+    72
+   ],
+   "core_flags": [
+    "D4",
+    "D8"
+   ],
+   "key": "Audio & Video/Left Fc Offset",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Right Fc Offset",
+   "values": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5"
+   ],
+   "default": "0",
+   "bits": [
+    73,
+    75
+   ],
+   "core_flags": [
+    "D5",
+    "D9"
+   ],
+   "key": "Audio & Video/Right Fc Offset",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Right SID Port",
+   "values": [
+    "Same",
+    "D420",
+    "DE00",
+    "DF00"
+   ],
+   "default": "Same",
+   "bits": [
+    20,
+    21
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Right SID Port",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "8580 Digifix",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    37,
+    37
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/8580 Digifix",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Sound Expander",
+   "values": [
+    "Disabled",
+    "OPL2"
+   ],
+   "default": "Disabled",
+   "bits": [
+    12,
+    12
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Sound Expander",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "DigiMax",
+   "values": [
+    "Disabled",
+    "DE00",
+    "DF00"
+   ],
+   "default": "Disabled",
+   "bits": [
+    40,
+    41
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/DigiMax",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Stereo Mix",
+   "values": [
+    "None",
+    "25%",
+    "50%",
+    "100%"
+   ],
+   "default": "None",
+   "bits": [
+    18,
+    19
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Stereo Mix",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "C64 mode",
+   "values": [
+    "C128 extensions",
+    "Pure C64"
+   ],
+   "default": "C128 extensions",
+   "bits": [
+    112,
+    112
+   ],
+   "core_flags": [
+    "HC"
+   ],
+   "key": "Hardware/C64 mode",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Internal Memory",
+   "values": [
+    "128K",
+    "256K"
+   ],
+   "default": "128K",
+   "bits": [
+    118,
+    118
+   ],
+   "core_flags": [
+    "HC"
+   ],
+   "key": "Hardware/Internal Memory",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "GeoRAM",
+   "values": [
+    "Disabled",
+    "4MB"
+   ],
+   "default": "Disabled",
+   "bits": [
+    52,
+    52
+   ],
+   "core_flags": [],
+   "key": "Hardware/GeoRAM",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "REU",
+   "values": [
+    "Disabled",
+    "512KB",
+    "2MB",
+    "16MB"
+   ],
+   "default": "Disabled",
+   "bits": [
+    53,
+    54
+   ],
+   "core_flags": [],
+   "key": "Hardware/REU",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "REU wrap",
+   "values": [
+    "512KB",
+    "None"
+   ],
+   "default": "512KB",
+   "bits": [
+    63,
+    63
+   ],
+   "core_flags": [
+    "hF"
+   ],
+   "key": "Hardware/REU wrap",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "External IEC",
+   "values": [
+    "Disabled",
+    "Enabled"
+   ],
+   "default": "Disabled",
+   "bits": [
+    25,
+    25
+   ],
+   "core_flags": [],
+   "key": "Hardware/External IEC",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Expansion",
+   "values": [
+    "Joysticks",
+    "RS232"
+   ],
+   "default": "Joysticks",
+   "bits": [
+    43,
+    43
+   ],
+   "core_flags": [],
+   "key": "Hardware/Expansion",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "RS232 mode",
+   "values": [
+    "UP9600",
+    "VIC-1011"
+   ],
+   "default": "UP9600",
+   "bits": [
+    51,
+    51
+   ],
+   "core_flags": [],
+   "key": "Hardware/RS232 mode",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "RS232 connection",
+   "values": [
+    "Internal",
+    "External"
+   ],
+   "default": "Internal",
+   "bits": [
+    33,
+    33
+   ],
+   "core_flags": [],
+   "key": "Hardware/RS232 connection",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Real-Time Clock",
+   "values": [
+    "Auto",
+    "Disabled"
+   ],
+   "default": "Auto",
+   "bits": [
+    36,
+    36
+   ],
+   "core_flags": [],
+   "key": "Hardware/Real-Time Clock",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "CIA",
+   "values": [
+    "Auto",
+    "6526",
+    "8521"
+   ],
+   "default": "Auto",
+   "bits": [
+    45,
+    46
+   ],
+   "core_flags": [],
+   "key": "Hardware/CIA",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Clear RAM on Reset",
+   "values": [
+    "Yes",
+    "No"
+   ],
+   "default": "Yes",
+   "bits": [
+    24,
+    24
+   ],
+   "core_flags": [],
+   "key": "Hardware/Clear RAM on Reset",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Reset & Run PRG",
+   "values": [
+    "Yes",
+    "No"
+   ],
+   "default": "Yes",
+   "bits": [
+    50,
+    50
+   ],
+   "core_flags": [],
+   "key": "Hardware/Reset & Run PRG",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Pause When OSD is Open",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    42,
+    42
+   ],
+   "core_flags": [],
+   "key": "Hardware/Pause When OSD is Open",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Tape Autoplay",
+   "values": [
+    "Yes",
+    "No"
+   ],
+   "default": "Yes",
+   "bits": [
+    39,
+    39
+   ],
+   "core_flags": [],
+   "key": "Hardware/Tape Autoplay",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Boot EasyFlash",
+   "values": [
+    "Yes",
+    "No"
+   ],
+   "default": "Yes",
+   "bits": [
+    38,
+    38
+   ],
+   "core_flags": [],
+   "key": "Hardware/Boot EasyFlash",
+   "mgl_ok": true
+  },
+  {
+   "page": "Drives",
+   "name": "Enable Drive #8",
+   "values": [
+    "If Mounted",
+    "Always",
+    "Never"
+   ],
+   "default": "If Mounted",
+   "bits": [
+    57,
+    58
+   ],
+   "core_flags": [],
+   "key": "Drives/Enable Drive #8",
+   "mgl_ok": true
+  },
+  {
+   "page": "Drives",
+   "name": "Enable Drive #9",
+   "values": [
+    "If Mounted",
+    "Always",
+    "Never"
+   ],
+   "default": "If Mounted",
+   "bits": [
+    55,
+    56
+   ],
+   "core_flags": [],
+   "key": "Drives/Enable Drive #9",
+   "mgl_ok": true
+  },
+  {
+   "page": "Drives",
+   "name": "Drive #8 5.25\" model",
+   "values": [
+    "Auto",
+    "1541",
+    "1571"
+   ],
+   "default": "Auto",
+   "bits": [
+    121,
+    122
+   ],
+   "core_flags": [
+    "D7"
+   ],
+   "key": "Drives/Drive #8 5.25\" model",
+   "mgl_ok": true
+  },
+  {
+   "page": "Drives",
+   "name": "Drive #9 5.25\" model",
+   "values": [
+    "Auto",
+    "1541",
+    "1571"
+   ],
+   "default": "Auto",
+   "bits": [
+    119,
+    120
+   ],
+   "core_flags": [
+    "D0"
+   ],
+   "key": "Drives/Drive #9 5.25\" model",
+   "mgl_ok": true
+  },
+  {
+   "page": "Drives",
+   "name": "Parallel port",
+   "values": [
+    "Enabled",
+    "Disabled"
+   ],
+   "default": "Enabled",
+   "bits": [
+    44,
+    44
+   ],
+   "core_flags": [],
+   "key": "Drives/Parallel port",
+   "mgl_ok": true
+  },
+  {
+   "page": "Drives",
+   "name": "Drives OSD",
+   "values": [
+    "Activity Only",
+    "If Mounted",
+    "Always",
+    "Off"
+   ],
+   "default": "Activity Only",
+   "bits": [
+    85,
+    86
+   ],
+   "core_flags": [],
+   "key": "Drives/Drives OSD",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input devices",
+   "name": "Pot 1/2",
+   "values": [
+    "Joy 1 Fire 2/3",
+    "Mouse",
+    "Paddles 1/2"
+   ],
+   "default": "Joy 1 Fire 2/3",
+   "bits": [
+    26,
+    27
+   ],
+   "core_flags": [],
+   "key": "Input devices/Pot 1/2",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input devices",
+   "name": "Pot 3/4",
+   "values": [
+    "Joy 2 Fire 2/3",
+    "Mouse",
+    "Paddles 3/4"
+   ],
+   "default": "Joy 2 Fire 2/3",
+   "bits": [
+    28,
+    29
+   ],
+   "core_flags": [],
+   "key": "Input devices/Pot 3/4",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input devices",
+   "name": "SNAC Joystick",
+   "values": [
+    "Disabled",
+    "Joy 1",
+    "Joy 2"
+   ],
+   "default": "Disabled",
+   "bits": [
+    87,
+    88
+   ],
+   "core_flags": [],
+   "key": "Input devices/SNAC Joystick",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input devices",
+   "name": "Key modifier",
+   "values": [
+    "L+R Shift",
+    "L Shift",
+    "R Shift"
+   ],
+   "default": "L+R Shift",
+   "bits": [
+    59,
+    60
+   ],
+   "core_flags": [],
+   "key": "Input devices/Key modifier",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input devices",
+   "name": "Caps Lock mode",
+   "values": [
+    "Auto",
+    "Caps Lock",
+    "ASCII/DIN"
+   ],
+   "default": "Auto",
+   "bits": [
+    108,
+    109
+   ],
+   "core_flags": [
+    "HC"
+   ],
+   "key": "Input devices/Caps Lock mode",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input devices",
+   "name": "Release Keys on Reset",
+   "values": [
+    "Yes",
+    "No"
+   ],
+   "default": "Yes",
+   "bits": [
+    1,
+    1
+   ],
+   "core_flags": [],
+   "key": "Input devices/Release Keys on Reset",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Swap Joysticks",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    3,
+    3
+   ],
+   "core_flags": [],
+   "key": "Swap Joysticks",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "8502 Speed",
+   "values": [
+    "Standard",
+    "x2",
+    "x3",
+    "x4"
+   ],
+   "default": "Standard",
+   "bits": [
+    48,
+    49
+   ],
+   "core_flags": [],
+   "key": "8502 Speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Z80 Speed",
+   "values": [
+    "Standard",
+    "x2"
+   ],
+   "default": "Standard",
+   "bits": [
+    104,
+    104
+   ],
+   "core_flags": [
+    "HC"
+   ],
+   "key": "Z80 Speed",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "C128_20260830.rbf",
+  "rbf_md5": "8ef30110b47cebd8531078b5eb273f83",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:10:42",
+  "confstr_sha1": "079139b49e502e10cfd42b6a847eee92ec6ce342"
+ }
+}

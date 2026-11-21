@@ -1,0 +1,71 @@
+name: Update core profiles
+
+# Once a day: read Update All's databases, rebuild the profile of every core
+# whose build changed (from its source, md5-checked), and list the cores that
+# need a dump on the SS1 in needs_dump.json. Then tools/watch.py checks the
+# Mains, MiSTer Linux and Main_MiSTer's source for what Coreshell relies on and
+# opens an issue when something changed ([BREAKING] when a setting would be
+# lost or an interface is gone); GitHub emails the owner about new issues.
+# Commits only when something changed, so a quiet day costs about a minute.
+
+on:
+  schedule:
+    - cron: '23 7 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: update-profiles
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Cache core repo clones
+        uses: actions/cache@v4
+        with:
+          path: .cache
+          key: core-repos-${{ github.run_id }}
+          restore-keys: core-repos-
+
+      - name: Tests
+        run: python -m unittest discover -s tests
+
+      - name: Update profiles
+        run: python tools/update_db.py | tee update.log
+
+      - name: Watch Mains, Linux and breaking changes
+        run: python tools/watch.py
+
+      - name: 'Alert: a GitHub issue (GitHub emails the owner)'
+        if: hashFiles('alert.md') != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh issue create --title "$(head -1 alert.md | sed 's/^# //')" --body-file alert.md
+
+      - name: Commit changes
+        run: |
+          if [ -z "$(git status --porcelain systems needs_dump.json watch_state.json)" ]; then
+            echo "No core changes."
+            exit 0
+          fi
+          git config user.name f3bandit
+          git config user.email 4943324+f3bandit@users.noreply.github.com
+          git add systems needs_dump.json watch_state.json
+          git commit -q -F - <<EOF
+          Core profiles: $(date -u +%Y-%m-%d)
+
+          $(sed -n '/rebuilt from source/,$p' update.log)
+          EOF
+          git push

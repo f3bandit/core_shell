@@ -1,0 +1,290 @@
+{
+ "coreshell_profile": 1,
+ "system": "lynx48",
+ "variant": "stock",
+ "name": "Lynx48",
+ "rbf": "_Computer/Lynx48",
+ "setname": null,
+ "core_name": "Lynx48",
+ "config_file": "Lynx48_v1.CFG",
+ "games_dir": "games/Lynx48",
+ "saves_dir": "saves/Lynx48",
+ "rom": {
+  "index": 0,
+  "type": "f",
+  "exts": [
+   "TAP"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "TAP",
+    "TZX",
+    "WAV"
+   ],
+   "label": "Tape"
+  },
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load ROM"
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "LDF"
+   ],
+   "label": "Disk"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "TAP",
+    "TZX",
+    "WAV"
+   ],
+   "label": "Tape",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load ROM",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "LDF"
+   ],
+   "label": "Disk",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Apply and reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Rewind tape",
+   "bits": [
+    19,
+    19
+   ],
+   "kind": "toggle",
+   "page": 1,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "Machine",
+   "name": "Model",
+   "values": [
+    "Lynx 48K",
+    "Lynx 96K",
+    "96K Scorpion",
+    "Lynx 128K"
+   ],
+   "default": "Lynx 48K",
+   "bits": [
+    3,
+    4
+   ],
+   "core_flags": [],
+   "key": "Machine/Model",
+   "mgl_ok": true
+  },
+  {
+   "page": "Machine",
+   "name": "CAS blanking",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    5,
+    5
+   ],
+   "core_flags": [
+    "H1"
+   ],
+   "key": "Machine/CAS blanking",
+   "mgl_ok": true
+  },
+  {
+   "page": "Machine",
+   "name": "Tape speed",
+   "values": [
+    "4x",
+    "Normal"
+   ],
+   "default": "4x",
+   "bits": [
+    16,
+    16
+   ],
+   "core_flags": [],
+   "key": "Machine/Tape speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    6,
+    7
+   ],
+   "core_flags": [],
+   "key": "Video/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    8,
+    9
+   ],
+   "core_flags": [],
+   "key": "Video/Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    10,
+    12
+   ],
+   "core_flags": [],
+   "key": "Video/Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Tape overlay",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    15,
+    15
+   ],
+   "core_flags": [],
+   "key": "Video/Tape overlay",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Swap joysticks",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    13,
+    13
+   ],
+   "core_flags": [],
+   "key": "Input/Swap joysticks",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio",
+   "name": "Tape audio",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    17,
+    17
+   ],
+   "core_flags": [],
+   "key": "Audio/Tape audio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio",
+   "name": "Invert tape in",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    18,
+    18
+   ],
+   "core_flags": [],
+   "key": "Audio/Invert tape in",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "repo": "MiSTer-devel/Lynx48_MiSTer",
+  "commit": "5083814cd85a9fc3c46a860365fc2fd785775973",
+  "file": "Lynx48.sv",
+  "rbf": "Lynx48_20261118.rbf",
+  "rbf_md5": "52f857c43a15d8e06f28526fbadf4bb2",
+  "confstr_sha1": "a5af749095de7a30884dde686d028de63eda0c55"
+ }
+}

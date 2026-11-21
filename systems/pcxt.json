@@ -1,0 +1,1168 @@
+{
+ "coreshell_profile": 1,
+ "system": "pcxt",
+ "variant": "stock",
+ "name": "PCXT",
+ "rbf": "_Computer/PCXT",
+ "setname": null,
+ "core_name": "PCXT",
+ "config_file": "PCXT.CFG",
+ "games_dir": "games/PCXT",
+ "saves_dir": "saves/PCXT",
+ "rom": {
+  "index": 5,
+  "type": "f",
+  "exts": [
+   "JRC"
+  ]
+ },
+ "slots": [
+  {
+   "index": 5,
+   "type": "f",
+   "exts": [
+    "JRC"
+   ],
+   "label": "PCjr Cartridge 1:"
+  },
+  {
+   "index": 6,
+   "type": "f",
+   "exts": [
+    "JRC"
+   ],
+   "label": "PCjr Cartridge 2:"
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "IMG",
+    "IMA",
+    "VFD"
+   ],
+   "label": "Floppy A:"
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "IMG",
+    "IMA",
+    "VFD"
+   ],
+   "label": "Floppy B:"
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "VHD"
+   ],
+   "label": "IDE 0-0"
+  },
+  {
+   "index": 3,
+   "type": "s",
+   "exts": [
+    "VHD"
+   ],
+   "label": "IDE 0-1"
+  }
+ ],
+ "files": [
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "PCXT BIOS:",
+   "page": 1,
+   "flags": [
+    "hA"
+   ],
+   "remember_dir": false
+  },
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Tandy BIOS:",
+   "page": 1,
+   "flags": [
+    "hB"
+   ],
+   "remember_dir": false
+  },
+  {
+   "index": 4,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "PCjr BIOS:",
+   "page": 1,
+   "flags": [
+    "hE"
+   ],
+   "remember_dir": false
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "EC00 BIOS:",
+   "page": 1,
+   "flags": [
+    "h2"
+   ],
+   "remember_dir": false
+  },
+  {
+   "index": 5,
+   "type": "f",
+   "exts": [
+    "JRC"
+   ],
+   "label": "PCjr Cartridge 1:",
+   "page": 1,
+   "flags": [
+    "hE"
+   ],
+   "remember_dir": false
+  },
+  {
+   "index": 6,
+   "type": "f",
+   "exts": [
+    "JRC"
+   ],
+   "label": "PCjr Cartridge 2:",
+   "page": 1,
+   "flags": [
+    "hE"
+   ],
+   "remember_dir": false
+  },
+  {
+   "index": 3,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "EGA BIOS:",
+   "page": 1,
+   "flags": [
+    "h8"
+   ],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "IMG",
+    "IMA",
+    "VFD"
+   ],
+   "label": "Floppy A:",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "IMG",
+    "IMA",
+    "VFD"
+   ],
+   "label": "Floppy B:",
+   "page": 0,
+   "flags": [
+    "h2"
+   ]
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "VHD"
+   ],
+   "label": "IDE 0-0",
+   "page": 0,
+   "flags": [
+    "h2"
+   ]
+  },
+  {
+   "index": 3,
+   "type": "s",
+   "exts": [
+    "VHD"
+   ],
+   "label": "IDE 0-1",
+   "page": 0,
+   "flags": [
+    "h2"
+   ]
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Reset Hanging Notes",
+   "bits": [
+    40,
+    40
+   ],
+   "kind": "reset",
+   "page": 4,
+   "flags": [
+    "h3"
+   ]
+  },
+  {
+   "name": "Reset & apply settings",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Write Protect",
+   "values": [
+    "None",
+    "A:",
+    "B:",
+    "A: & B:"
+   ],
+   "default": "None",
+   "bits": [
+    19,
+    20
+   ],
+   "core_flags": [
+    "h2"
+   ],
+   "key": "Write Protect",
+   "mgl_ok": false
+  },
+  {
+   "page": "",
+   "name": "Write Protect",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    19,
+    19
+   ],
+   "core_flags": [
+    "hE"
+   ],
+   "key": "Write Protect #2",
+   "mgl_ok": false
+  },
+  {
+   "page": "",
+   "name": "2nd SD card",
+   "values": [
+    "Disable",
+    "IDE 0-0",
+    "IDE 0-1"
+   ],
+   "default": "Disable",
+   "bits": [
+    21,
+    22
+   ],
+   "core_flags": [
+    "h2"
+   ],
+   "key": "2nd SD card",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "CPU Speed",
+   "values": [
+    "4.77MHz",
+    "7.16MHz",
+    "9.54MHz",
+    "Max"
+   ],
+   "default": "4.77MHz",
+   "bits": [
+    17,
+    18
+   ],
+   "core_flags": [
+    "h2"
+   ],
+   "key": "CPU Speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "System & BIOS",
+   "name": "Machine",
+   "values": [
+    "IBM PCXT",
+    "Tandy 1000",
+    "IBM PCjr"
+   ],
+   "default": "IBM PCXT",
+   "bits": [
+    96,
+    97
+   ],
+   "core_flags": [],
+   "key": "System & BIOS/Machine",
+   "mgl_ok": true
+  },
+  {
+   "page": "System & BIOS",
+   "name": "PCXT Video",
+   "values": [
+    "CGA/HGC",
+    "EGA"
+   ],
+   "default": "CGA/HGC",
+   "bits": [
+    78,
+    78
+   ],
+   "core_flags": [
+    "hA"
+   ],
+   "key": "System & BIOS/PCXT Video",
+   "mgl_ok": true
+  },
+  {
+   "page": "System & BIOS",
+   "name": "PCXT CGA Graphics",
+   "values": [
+    "Yes",
+    "No"
+   ],
+   "default": "Yes",
+   "bits": [
+    76,
+    76
+   ],
+   "core_flags": [
+    "hD"
+   ],
+   "key": "System & BIOS/PCXT CGA Graphics",
+   "mgl_ok": true
+  },
+  {
+   "page": "System & BIOS",
+   "name": "PCXT Hercules Graphics",
+   "values": [
+    "Yes",
+    "No"
+   ],
+   "default": "Yes",
+   "bits": [
+    77,
+    77
+   ],
+   "core_flags": [
+    "hD"
+   ],
+   "key": "System & BIOS/PCXT Hercules Graphics",
+   "mgl_ok": true
+  },
+  {
+   "page": "System & BIOS",
+   "name": "PCXT 1st Video",
+   "values": [
+    "CGA",
+    "Hercules"
+   ],
+   "default": "CGA",
+   "bits": [
+    75,
+    75
+   ],
+   "core_flags": [
+    "hD"
+   ],
+   "key": "System & BIOS/PCXT 1st Video",
+   "mgl_ok": true
+  },
+  {
+   "page": "System & BIOS",
+   "name": "Splash time",
+   "values": [
+    "5 s",
+    "10 s",
+    "15 s",
+    "0 s"
+   ],
+   "default": "5 s",
+   "bits": [
+    103,
+    104
+   ],
+   "core_flags": [],
+   "key": "System & BIOS/Splash time",
+   "mgl_ok": true
+  },
+  {
+   "page": "System & BIOS",
+   "name": "CPU Type",
+   "values": [
+    "8088",
+    "8086"
+   ],
+   "default": "8088",
+   "bits": [
+    63,
+    63
+   ],
+   "core_flags": [
+    "h2"
+   ],
+   "key": "System & BIOS/CPU Type",
+   "mgl_ok": true
+  },
+  {
+   "page": "System & BIOS",
+   "name": "Fake 286 FLAGS",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    53,
+    53
+   ],
+   "core_flags": [
+    "h2"
+   ],
+   "key": "System & BIOS/Fake 286 FLAGS",
+   "mgl_ok": true
+  },
+  {
+   "page": "System & BIOS",
+   "name": "PCjr RAM",
+   "values": [
+    "128K",
+    "192K",
+    "256K",
+    "320K",
+    "384K",
+    "448K",
+    "512K",
+    "576K",
+    "640K"
+   ],
+   "default": "128K",
+   "bits": [
+    98,
+    101
+   ],
+   "core_flags": [
+    "hE"
+   ],
+   "key": "System & BIOS/PCjr RAM",
+   "mgl_ok": true
+  },
+  {
+   "page": "System & BIOS",
+   "name": "BIOS Writable",
+   "values": [
+    "None",
+    "EC00",
+    "Main",
+    "All"
+   ],
+   "default": "None",
+   "bits": [
+    30,
+    31
+   ],
+   "core_flags": [
+    "h2"
+   ],
+   "key": "System & BIOS/BIOS Writable",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Audio 220h",
+   "values": [
+    "C/MS",
+    "Sound Blaster",
+    "Disabled"
+   ],
+   "default": "C/MS",
+   "bits": [
+    84,
+    85
+   ],
+   "core_flags": [
+    "h2"
+   ],
+   "key": "Audio & Video/Audio 220h",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "OPL2",
+   "values": [
+    "Adlib 388h",
+    "SB FM 388h/228h",
+    " Disabled"
+   ],
+   "default": "Adlib 388h",
+   "bits": [
+    42,
+    43
+   ],
+   "core_flags": [
+    "h2"
+   ],
+   "key": "Audio & Video/OPL2",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Tandy Sound",
+   "values": [
+    "Disabled",
+    "Enabled"
+   ],
+   "default": "Disabled",
+   "bits": [
+    87,
+    87
+   ],
+   "core_flags": [
+    "hA"
+   ],
+   "key": "Audio & Video/Tandy Sound",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Tape sound",
+   "values": [
+    "Disabled",
+    "Enabled"
+   ],
+   "default": "Disabled",
+   "bits": [
+    102,
+    102
+   ],
+   "core_flags": [
+    "hE"
+   ],
+   "key": "Audio & Video/Tape sound",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Speaker Volume",
+   "values": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "default": "1",
+   "bits": [
+    32,
+    33
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Speaker Volume",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Audio Boost",
+   "values": [
+    "No",
+    "2x",
+    "4x"
+   ],
+   "default": "No",
+   "bits": [
+    36,
+    37
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Audio Boost",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Stereo Mix",
+   "values": [
+    "none",
+    "25%",
+    "50%",
+    "100%"
+   ],
+   "default": "none",
+   "bits": [
+    38,
+    39
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Stereo Mix",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "CRT H offset",
+   "values": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15"
+   ],
+   "default": "0",
+   "bits": [
+    46,
+    49
+   ],
+   "core_flags": [
+    "d6"
+   ],
+   "key": "Audio & Video/CRT H offset",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "CRT V offset",
+   "values": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7"
+   ],
+   "default": "0",
+   "bits": [
+    50,
+    52
+   ],
+   "core_flags": [
+    "d6"
+   ],
+   "key": "Audio & Video/CRT V offset",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "VSync Width",
+   "values": [
+    "Auto",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7"
+   ],
+   "default": "Auto",
+   "bits": [
+    89,
+    91
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/VSync Width",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "HSync Width",
+   "values": [
+    "Auto",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7"
+   ],
+   "default": "Auto",
+   "bits": [
+    92,
+    94
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/HSync Width",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%"
+   ],
+   "default": "None",
+   "bits": [
+    1,
+    2
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    8,
+    9
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Border",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    72,
+    72
+   ],
+   "core_flags": [
+    "h7"
+   ],
+   "key": "Audio & Video/Border",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Border CRT offsets",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    73,
+    73
+   ],
+   "core_flags": [
+    "h9"
+   ],
+   "key": "Audio & Video/Border CRT offsets",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "CRTC Frame Stacking",
+   "values": [
+    "Native",
+    "Rebuilt"
+   ],
+   "default": "Native",
+   "bits": [
+    74,
+    74
+   ],
+   "core_flags": [
+    "h7"
+   ],
+   "key": "Audio & Video/CRTC Frame Stacking",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Composite video",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    71,
+    71
+   ],
+   "core_flags": [
+    "h7"
+   ],
+   "key": "Audio & Video/Composite video",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Display",
+   "values": [
+    "Full Color",
+    "Green",
+    "Amber",
+    "B&W",
+    "Red",
+    "Blue",
+    "Fuchsia",
+    "Purple"
+   ],
+   "default": "Full Color",
+   "bits": [
+    14,
+    16
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Display",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "350-line CRT",
+   "values": [
+    "Native",
+    "480i 15 kHz",
+    "240p 15 kHz"
+   ],
+   "default": "Native",
+   "bits": [
+    34,
+    35
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/350-line CRT",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Monitor",
+   "values": [
+    "5154/ECD",
+    "5153/CGA",
+    "5151/MDA"
+   ],
+   "default": "5154/ECD",
+   "bits": [
+    80,
+    81
+   ],
+   "core_flags": [
+    "h8"
+   ],
+   "key": "Hardware/Monitor",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "2MB EMS D000-DFFF",
+   "values": [
+    "Enabled",
+    "Disabled"
+   ],
+   "default": "Enabled",
+   "bits": [
+    5,
+    5
+   ],
+   "core_flags": [
+    "h2"
+   ],
+   "key": "Hardware/2MB EMS D000-DFFF",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "UMB C400-CFFF",
+   "values": [
+    "Enabled",
+    "Disabled"
+   ],
+   "default": "Enabled",
+   "bits": [
+    82,
+    82
+   ],
+   "core_flags": [
+    "h2"
+   ],
+   "key": "Hardware/UMB C400-CFFF",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "A000 UMB",
+   "values": [
+    "Enabled",
+    "Disabled"
+   ],
+   "default": "Enabled",
+   "bits": [
+    79,
+    79
+   ],
+   "core_flags": [
+    "h1"
+   ],
+   "key": "Hardware/A000 UMB",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Joystick 1",
+   "values": [
+    " Analog",
+    " Digital",
+    " Disabled"
+   ],
+   "default": " Analog",
+   "bits": [
+    23,
+    24
+   ],
+   "core_flags": [],
+   "key": "Hardware/Joystick 1",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Joystick 2",
+   "values": [
+    " Analog",
+    " Digital",
+    " Disabled"
+   ],
+   "default": " Analog",
+   "bits": [
+    25,
+    26
+   ],
+   "core_flags": [],
+   "key": "Hardware/Joystick 2",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Sync Joy to CPU Speed",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    27,
+    27
+   ],
+   "core_flags": [
+    "h2"
+   ],
+   "key": "Hardware/Sync Joy to CPU Speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Swap Joysticks",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    86,
+    86
+   ],
+   "core_flags": [],
+   "key": "Hardware/Swap Joysticks",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Sound Blaster IRQ",
+   "values": [
+    "5",
+    "7"
+   ],
+   "default": "5",
+   "bits": [
+    70,
+    70
+   ],
+   "core_flags": [
+    "h2"
+   ],
+   "key": "Hardware/Sound Blaster IRQ",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "MPU-401",
+   "values": [
+    "Enabled",
+    "Disabled"
+   ],
+   "default": "Enabled",
+   "bits": [
+    88,
+    88
+   ],
+   "core_flags": [
+    "h2"
+   ],
+   "key": "Hardware/MPU-401",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "USER I/O",
+   "values": [
+    "MIDI",
+    "COM2"
+   ],
+   "default": "MIDI",
+   "bits": [
+    6,
+    6
+   ],
+   "core_flags": [
+    "h2"
+   ],
+   "key": "Hardware/USER I/O",
+   "mgl_ok": true
+  },
+  {
+   "page": "MT32-pi",
+   "name": "Use MT32-pi",
+   "values": [
+    "Yes",
+    "No"
+   ],
+   "default": "Yes",
+   "bits": [
+    13,
+    13
+   ],
+   "core_flags": [
+    "h3"
+   ],
+   "key": "MT32-pi/Use MT32-pi",
+   "mgl_ok": true
+  },
+  {
+   "page": "MT32-pi",
+   "name": "MT32-pi Mode",
+   "values": [
+    "MT-32",
+    "General MIDI"
+   ],
+   "default": "MT-32",
+   "bits": [
+    41,
+    41
+   ],
+   "core_flags": [
+    "h3"
+   ],
+   "key": "MT32-pi/MT32-pi Mode",
+   "mgl_ok": true
+  },
+  {
+   "page": "MT32-pi",
+   "name": "MT32-pi ROM",
+   "values": [
+    "MT-32 v1",
+    "MT-32 v2",
+    "CM-32L",
+    "Reserved"
+   ],
+   "default": "MT-32 v1",
+   "bits": [
+    3,
+    4
+   ],
+   "core_flags": [
+    "h3"
+   ],
+   "key": "MT32-pi/MT32-pi ROM",
+   "mgl_ok": true
+  },
+  {
+   "page": "MT32-pi",
+   "name": "MT32-pi SoundFont",
+   "values": [
+    "#0",
+    "#1",
+    "#2",
+    "#3",
+    "#4",
+    "#5",
+    "#6",
+    "#7"
+   ],
+   "default": "#0",
+   "bits": [
+    60,
+    62
+   ],
+   "core_flags": [
+    "h3"
+   ],
+   "key": "MT32-pi/MT32-pi SoundFont",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "PCXT_20261117.rbf",
+  "rbf_md5": "ea73e5ed1806615c2581883f83e4d8bd",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-18T22:09:43",
+  "confstr_sha1": "8ea419a12449b6b34b5a4a7bc28006ff884e1328"
+ }
+}

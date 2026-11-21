@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/TSConf_20260603.rbf",
+ "rbf_md5": "628c0c1a5d822de7c9697d56b818883a",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "TSConf;;SC0,VHD,Mount virtual SD;-;o01,Aspect ratio,Original,Full Screen,[ARC1],[ARC2];O12,Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%;-;d0o2,Vertical Crop,Disabled,270p(5x);o34,Scale,Normal,V-Integer,Narrower HV-Integer,Wider HV-Integer;-;O34,Stereo mix,None,25%,50%,100%;OST,General Sound,512KB,1MB,2MB;-;OU,CPU Type,NMOS,CMOS;O67,CPU Speed,3.5MHz,7MHz,14MHz;O8,CPU Cache,On,Off;O9A,#7FFD span,128K,128K Auto,1024K,512K;OLN,ZX Palette,Default,B.black,Light,Pale,Dark,Grayscale,Custom;OPR,INT Offset,1,2,3,4,5,6,7,0;-;OBD,F11 Reset,boot.$C,sys.rom,ROM;OEF,           bank,TR-DOS,Basic 48,Basic 128,SYS;OGI,Shift+F11 Reset,ROM,boot.$C,sys.rom;OJK,           bank,Basic 128,SYS,TR-DOS,Basic 48;- ;R0,Reset and apply settings;J,Fire 1,Fire 2;V,v260603",
+ "dumped": "2026-11-13T23:13:40"
+}

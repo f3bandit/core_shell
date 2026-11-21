@@ -1,0 +1,739 @@
+{
+ "coreshell_profile": 1,
+ "system": "gameboy",
+ "variant": "stock",
+ "name": "GAMEBOY",
+ "rbf": "_Console/Gameboy",
+ "setname": null,
+ "core_name": "GAMEBOY",
+ "config_file": "GAMEBOY.CFG",
+ "games_dir": "games/GAMEBOY",
+ "saves_dir": "saves/GAMEBOY",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "GBC",
+   "GB",
+   "BIN"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "GBC",
+    "GB",
+    "BIN"
+   ],
+   "label": "Load ROM"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "GBC",
+    "GB",
+    "BIN"
+   ],
+   "label": "Load ROM",
+   "page": 0,
+   "flags": [],
+   "remember_dir": true
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "SGB"
+   ],
+   "label": "Load SGB border",
+   "page": 0,
+   "flags": [
+    "d5"
+   ],
+   "remember_dir": false
+  },
+  {
+   "index": 3,
+   "type": "f",
+   "exts": [
+    "GBP"
+   ],
+   "label": "Load Palette",
+   "page": 1,
+   "flags": [
+    "h1"
+   ],
+   "remember_dir": false
+  },
+  {
+   "index": 7,
+   "type": "f",
+   "exts": [
+    "LUT"
+   ],
+   "label": "Load GBC Color LUT",
+   "page": 1,
+   "flags": [
+    "H9"
+   ],
+   "remember_dir": false
+  },
+  {
+   "index": 4,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load GBC Boot",
+   "page": 2,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 5,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load DMG Boot",
+   "page": 2,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 6,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load SGB Boot",
+   "page": 2,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Load Backup RAM",
+   "bits": [
+    9,
+    9
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "h2"
+   ]
+  },
+  {
+   "name": "Save Backup RAM",
+   "bits": [
+    10,
+    10
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "h2"
+   ]
+  },
+  {
+   "name": "Save state (Alt-F1)",
+   "bits": [
+    28,
+    28
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "h3"
+   ]
+  },
+  {
+   "name": "Restore state (F1)",
+   "bits": [
+    29,
+    29
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "h3"
+   ]
+  },
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": true,
+ "menu": [
+  {
+   "page": "",
+   "name": "System",
+   "values": [
+    "Auto",
+    "Gameboy",
+    "Gameboy Color",
+    "MegaDuck"
+   ],
+   "default": "Auto",
+   "bits": [
+    14,
+    15
+   ],
+   "core_flags": [],
+   "key": "System",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Mapper",
+   "values": [
+    "Auto",
+    "WisdomTree",
+    "Mani161",
+    "MBC1",
+    "MBC3"
+   ],
+   "default": "Auto",
+   "bits": [
+    39,
+    41
+   ],
+   "core_flags": [
+    "D7"
+   ],
+   "key": "Mapper",
+   "mgl_ok": false
+  },
+  {
+   "page": "",
+   "name": "Mapper",
+   "values": [
+    "Auto",
+    "MD0",
+    "MD1",
+    "MD2"
+   ],
+   "default": "Auto",
+   "bits": [
+    48,
+    50
+   ],
+   "core_flags": [
+    "d7"
+   ],
+   "key": "Mapper #2",
+   "mgl_ok": false
+  },
+  {
+   "page": "",
+   "name": "Super Game Boy",
+   "values": [
+    "Off",
+    "Palette",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    23,
+    24
+   ],
+   "core_flags": [],
+   "key": "Super Game Boy",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Cheats enabled",
+   "values": [
+    "Yes",
+    "No"
+   ],
+   "default": "Yes",
+   "bits": [
+    17,
+    17
+   ],
+   "core_flags": [
+    "h0"
+   ],
+   "key": "Cheats enabled",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Autosave",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    13,
+    13
+   ],
+   "core_flags": [],
+   "key": "Autosave",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Savestates to SDCard",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    31,
+    31
+   ],
+   "core_flags": [],
+   "key": "Savestates to SDCard",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Savestate Slot",
+   "values": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "default": "1",
+   "bits": [
+    32,
+    33
+   ],
+   "core_flags": [],
+   "key": "Savestate Slot",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Extra sprites",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    44,
+    44
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Extra sprites",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Inverted color",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    12,
+    12
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Inverted color",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Screen Shadow",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    36,
+    36
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Screen Shadow",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Custom Palette",
+   "values": [
+    "Off",
+    "Auto",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    1,
+    2
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Custom Palette",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Frame blend",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    16,
+    16
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Frame blend",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "GBC Colors",
+   "values": [
+    "Corrected",
+    "Raw"
+   ],
+   "default": "Corrected",
+   "bits": [
+    30,
+    30
+   ],
+   "core_flags": [
+    "d4"
+   ],
+   "key": "Audio & Video/GBC Colors",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Stabilize video(buffer)",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    5,
+    5
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Stabilize video(buffer)",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    3,
+    4
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    21,
+    22
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    18,
+    20
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Analog width",
+   "values": [
+    "Narrow",
+    "Wide"
+   ],
+   "default": "Narrow",
+   "bits": [
+    34,
+    34
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Analog width",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Stereo mix",
+   "values": [
+    "none",
+    "25%",
+    "50%",
+    "100%"
+   ],
+   "default": "none",
+   "bits": [
+    7,
+    8
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Stereo mix",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Audio mode",
+   "values": [
+    "Accurate",
+    "No Pops"
+   ],
+   "default": "Accurate",
+   "bits": [
+    43,
+    43
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Audio mode",
+   "mgl_ok": true
+  },
+  {
+   "page": "Bootroms",
+   "name": "GBC/GBA mode",
+   "values": [
+    "GBC",
+    "GBA"
+   ],
+   "default": "GBC",
+   "bits": [
+    37,
+    37
+   ],
+   "core_flags": [
+    "d6"
+   ],
+   "key": "Bootroms/GBC/GBA mode",
+   "mgl_ok": true
+  },
+  {
+   "page": "Bootroms",
+   "name": "Fast boot",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    42,
+    42
+   ],
+   "core_flags": [
+    "d8"
+   ],
+   "key": "Bootroms/Fast boot",
+   "mgl_ok": true
+  },
+  {
+   "page": "Misc.",
+   "name": "Link Port",
+   "values": [
+    "Disabled",
+    "Enabled"
+   ],
+   "default": "Disabled",
+   "bits": [
+    6,
+    6
+   ],
+   "core_flags": [],
+   "key": "Misc./Link Port",
+   "mgl_ok": true
+  },
+  {
+   "page": "Misc.",
+   "name": "WorkBoy Keyboard",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    45,
+    45
+   ],
+   "core_flags": [],
+   "key": "Misc./WorkBoy Keyboard",
+   "mgl_ok": true
+  },
+  {
+   "page": "Misc.",
+   "name": "iG Keyboard/Mouse",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    46,
+    46
+   ],
+   "core_flags": [],
+   "key": "Misc./iG Keyboard/Mouse",
+   "mgl_ok": true
+  },
+  {
+   "page": "Misc.",
+   "name": "MegaDuck Laptop",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    47,
+    47
+   ],
+   "core_flags": [
+    "d7"
+   ],
+   "key": "Misc./MegaDuck Laptop",
+   "mgl_ok": true
+  },
+  {
+   "page": "Misc.",
+   "name": "Rumble",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    38,
+    38
+   ],
+   "core_flags": [],
+   "key": "Misc./Rumble",
+   "mgl_ok": true
+  },
+  {
+   "page": "Misc.",
+   "name": "FastForward Sound",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    25,
+    25
+   ],
+   "core_flags": [],
+   "key": "Misc./FastForward Sound",
+   "mgl_ok": true
+  },
+  {
+   "page": "Misc.",
+   "name": "Pause when OSD is open",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    26,
+    26
+   ],
+   "core_flags": [],
+   "key": "Misc./Pause when OSD is open",
+   "mgl_ok": true
+  },
+  {
+   "page": "Misc.",
+   "name": "Rewind Capture",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    27,
+    27
+   ],
+   "core_flags": [],
+   "key": "Misc./Rewind Capture",
+   "mgl_ok": true
+  },
+  {
+   "page": "Misc.",
+   "name": "Super Game Boy + GBC",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    35,
+    35
+   ],
+   "core_flags": [],
+   "key": "Misc./Super Game Boy + GBC",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "Gameboy_20260603.rbf",
+  "rbf_md5": "9c98aae6d2981da6d1603c6c7fbedfe5",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:04:50",
+  "confstr_sha1": "2434849682ff27721bc8dd31af93bbda3eaeaaec"
+ }
+}

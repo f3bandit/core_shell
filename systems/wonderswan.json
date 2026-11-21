@@ -1,0 +1,519 @@
+{
+ "coreshell_profile": 1,
+ "system": "wonderswan",
+ "variant": "stock",
+ "name": "WonderSwan",
+ "rbf": "_Console/WonderSwan",
+ "setname": null,
+ "core_name": "WonderSwan",
+ "config_file": "WonderSwan.CFG",
+ "games_dir": "games/WonderSwan",
+ "saves_dir": "saves/WonderSwan",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "WSC",
+   "WS",
+   "PC2"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "WSC",
+    "WS",
+    "PC2"
+   ],
+   "label": "Load ROM"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "WSC",
+    "WS",
+    "PC2"
+   ],
+   "label": "Load ROM",
+   "page": 0,
+   "flags": [],
+   "remember_dir": true
+  }
+ ],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Reload Backup RAM",
+   "bits": [
+    41,
+    41
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "d0"
+   ]
+  },
+  {
+   "name": "Save Backup RAM",
+   "bits": [
+    42,
+    42
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "d0"
+   ]
+  },
+  {
+   "name": "Save state (Alt-F1)",
+   "bits": [
+    28,
+    28
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "h0"
+   ]
+  },
+  {
+   "name": "Restore state (F1)",
+   "bits": [
+    29,
+    29
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "h0"
+   ]
+  },
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "System",
+   "values": [
+    "Auto",
+    "WonderSwan",
+    "SwanColor",
+    "PocketChallengeV2"
+   ],
+   "default": "Auto",
+   "bits": [
+    39,
+    40
+   ],
+   "core_flags": [],
+   "key": "System",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Autosave",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    43,
+    43
+   ],
+   "core_flags": [
+    "d0"
+   ],
+   "key": "Autosave",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Savestates to SDCard",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    36,
+    36
+   ],
+   "core_flags": [],
+   "key": "Savestates to SDCard",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Autoincrement Slot",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    46,
+    46
+   ],
+   "core_flags": [],
+   "key": "Autoincrement Slot",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Savestate Slot",
+   "values": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "default": "1",
+   "bits": [
+    37,
+    38
+   ],
+   "core_flags": [],
+   "key": "Savestate Slot",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Orientation",
+   "values": [
+    "Horz",
+    "Vert",
+    "Vert180",
+    "Auto"
+   ],
+   "default": "Horz",
+   "bits": [
+    10,
+    11
+   ],
+   "core_flags": [],
+   "key": "Orientation",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Flipped Horz",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    12,
+    12
+   ],
+   "core_flags": [],
+   "key": "Flipped Horz",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "CRT H-Sync Adjust",
+   "values": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "-8",
+    "-7",
+    "-6",
+    "-5",
+    "-4",
+    "-3",
+    "-2",
+    "-1"
+   ],
+   "default": "0",
+   "bits": [
+    16,
+    19
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/CRT H-Sync Adjust",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "CRT V-Sync Adjust",
+   "values": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "-8",
+    "-7",
+    "-6",
+    "-5",
+    "-4",
+    "-3",
+    "-2",
+    "-1"
+   ],
+   "default": "0",
+   "bits": [
+    20,
+    23
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/CRT V-Sync Adjust",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    13,
+    14
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    2,
+    4
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    34,
+    35
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Refresh Rate",
+   "values": [
+    "60Hz",
+    "75Hz"
+   ],
+   "default": "60Hz",
+   "bits": [
+    44,
+    44
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Refresh Rate",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Video Timing for YC",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    45,
+    45
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Video Timing for YC",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Sync core to Video",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    24,
+    24
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Sync core to Video",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Buffer video",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    5,
+    5
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Buffer video",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Flickerblend",
+   "values": [
+    "Off",
+    "2 Frames",
+    "3 Frames"
+   ],
+   "default": "Off",
+   "bits": [
+    30,
+    31
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Flickerblend",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Stereo mix",
+   "values": [
+    "none",
+    "25%",
+    "50%",
+    "100%"
+   ],
+   "default": "none",
+   "bits": [
+    7,
+    8
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Stereo mix",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "FastForward Sound",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    25,
+    25
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/FastForward Sound",
+   "mgl_ok": true
+  },
+  {
+   "page": "Miscellaneous",
+   "name": "CPU Turbo",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    9,
+    9
+   ],
+   "core_flags": [],
+   "key": "Miscellaneous/CPU Turbo",
+   "mgl_ok": true
+  },
+  {
+   "page": "Miscellaneous",
+   "name": "Pause when OSD is open",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    26,
+    26
+   ],
+   "core_flags": [],
+   "key": "Miscellaneous/Pause when OSD is open",
+   "mgl_ok": true
+  },
+  {
+   "page": "Miscellaneous",
+   "name": "Rewind Capture",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    27,
+    27
+   ],
+   "core_flags": [],
+   "key": "Miscellaneous/Rewind Capture",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "WonderSwan_20260129.rbf",
+  "rbf_md5": "e2c6f633181207e29f44402f8dc7f0cd",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:09:41",
+  "confstr_sha1": "1cacd6331a4c35ca42797ce22e377944d7491d53"
+ }
+}

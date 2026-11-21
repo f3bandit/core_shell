@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/NeXT_20260924.rbf",
+ "rbf_md5": "9c8ea44735550bca8c871627d11b285f",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "NeXT;;F1,BINROM,Boot ROM;SC0,VHDIMG,SCSI Disk 0;SC1,VHDIMG,SCSI Disk 1;S3,ISOCUEBINCHD,CD-ROM;S4,IMGIMAFLPVFDFD ,Floppy;S5,IMGMO OD ,Magneto-optical;-;O[122:121],Aspect ratio,Original,Full Screen,[ARC1],[ARC2];O[54:52],Network,Off,eth0,eth1,macvlan,tap0;O[58],Ethernet cable,Connected,Disconnected;O[59],Audio input,Silence,ADC;O[57:55],Boot device,Auto,Disk,Floppy,Network,ROM Default,Optical,CD-ROM probe;-;T[0],Reset;R[0],Reset and close OSD;v,0;V,v260925",
+ "dumped": "2026-11-13T23:12:15"
+}

@@ -1,0 +1,7 @@
+{
+ "rbf": "_Console/SuperVision_20250708.rbf",
+ "rbf_md5": "16ef96d1f0ff822a55094af13880c92a",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "SuperVision;;-;F1,binsv,Load Cartridge;-;O[122:121],Aspect ratio,Original,Full Screen,[ARC1],[ARC2];O[20],Flickerblend,On,Off;O[21],Framerate,60hz,Original;O[3:2],Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%;O[11:10],Scale,Normal,V-Integer,Narrower HV-Integer,Wider HV-Integer;O[23:22],Center Audio,Off,25%,50%,100%;-;O7,Custom Palette,Off,On;D0FC3,SGBGBP,Load Palette;-;R0,Reset;J0,B,A,select,start;V,v250708",
+ "dumped": "2026-11-13T23:09:22"
+}

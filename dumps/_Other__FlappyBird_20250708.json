@@ -1,0 +1,7 @@
+{
+ "rbf": "_Other/FlappyBird_20250708.rbf",
+ "rbf_md5": "a33e83d8cefb4196ae049501b9c4a4af",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "FLAPPY;;-;O8,Aspect Ratio,4:3,16:9;-;R0,Reset;J1,Flap,Reset;jn,A,B;jp,A,B;V,v250708",
+ "dumped": "2026-11-13T23:15:38"
+}

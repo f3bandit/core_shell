@@ -1,0 +1,316 @@
+{
+ "coreshell_profile": 1,
+ "system": "creativision",
+ "variant": "stock",
+ "name": "CreatiVision",
+ "rbf": "_Console/CreatiVision",
+ "setname": null,
+ "core_name": "CreatiVision",
+ "config_file": "CreatiVision.CFG",
+ "games_dir": "games/CreatiVision",
+ "saves_dir": "saves/CreatiVision",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "rom",
+   "bin"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "rom",
+    "bin"
+   ],
+   "label": "Load Cartridge"
+  },
+  {
+   "index": 3,
+   "type": "f",
+   "exts": [
+    "bas"
+   ],
+   "label": "Load BASIC"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "rom",
+    "bin"
+   ],
+   "label": "Load Cartridge",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "rom",
+    "bin"
+   ],
+   "label": "Load Bios",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 3,
+   "type": "f",
+   "exts": [
+    "bas"
+   ],
+   "label": "Load BASIC",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Remove Cart",
+   "bits": [
+    8,
+    8
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "System Type",
+   "values": [
+    "CreatiVision",
+    "Laser 2001",
+    "Custom"
+   ],
+   "default": "CreatiVision",
+   "bits": [
+    13,
+    14
+   ],
+   "core_flags": [],
+   "key": "System Type",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "ZeroPage RAM",
+   "values": [
+    "1k",
+    "4k",
+    "Mirrored 4k"
+   ],
+   "default": "1k",
+   "bits": [
+    15,
+    16
+   ],
+   "core_flags": [
+    "h1"
+   ],
+   "key": "ZeroPage RAM",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Extra RAM",
+   "values": [
+    "None",
+    "$4000",
+    "Both"
+   ],
+   "default": "None",
+   "bits": [
+    17,
+    18
+   ],
+   "core_flags": [
+    "h1"
+   ],
+   "key": "Extra RAM",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Input Matrix",
+   "values": [
+    "CreatiVision",
+    "Laser 2001"
+   ],
+   "default": "CreatiVision",
+   "bits": [
+    19,
+    19
+   ],
+   "core_flags": [
+    "h1"
+   ],
+   "key": "Input Matrix",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Video Region",
+   "values": [
+    "NTSC",
+    "PAL"
+   ],
+   "default": "NTSC",
+   "bits": [
+    7,
+    7
+   ],
+   "core_flags": [],
+   "key": "Video Region",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Border",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    1,
+    1
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Border",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Vertical Crop",
+   "values": [
+    "Disabled",
+    "216p(5x)"
+   ],
+   "default": "Disabled",
+   "bits": [
+    6,
+    6
+   ],
+   "core_flags": [
+    "d0"
+   ],
+   "key": "Audio & Video/Vertical Crop",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Crop Offset",
+   "values": [
+    "0",
+    "2",
+    "4",
+    "8",
+    "10",
+    "12",
+    "-12",
+    "-10",
+    "-8",
+    "-6",
+    "-4",
+    "-2"
+   ],
+   "default": "0",
+   "bits": [
+    9,
+    12
+   ],
+   "core_flags": [
+    "d0"
+   ],
+   "key": "Audio & Video/Crop Offset",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    121,
+    122
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%"
+   ],
+   "default": "None",
+   "bits": [
+    2,
+    3
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    4,
+    5
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Scale",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "CreatiVision_20260303.rbf",
+  "rbf_md5": "81a74e448f324e597ed276f5b2291ca2",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:04:23",
+  "confstr_sha1": "f917c76336d22ef84622c53cd9d6ec6ea4b2a5ba"
+ }
+}

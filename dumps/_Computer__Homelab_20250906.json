@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/Homelab_20250906.rbf",
+ "rbf_md5": "e0d0ccf9406fb0c3b2836c0a42cca868",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "Homelab;;-;F1,HTP,Load Rom;T[10],Play;T[11],Stop;T[12],Rewind;O[13],Turbo HTP Loading,Off,On;-;FC2,CHR,Load Alternate CHR;-;O[122:121],Aspect ratio,Original,Full Screen,[ARC1],[ARC2];O[2],Screen mode,32 CH,64 CH;O[6:5],Screen Color,White,Green,Amber;O[3],Machine,Homelab3,Homelab4;-;R[0],Reset;V,v250906",
+ "dumped": "2026-11-13T23:11:23"
+}

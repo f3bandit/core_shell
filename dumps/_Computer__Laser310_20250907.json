@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/Laser310_20250907.rbf",
+ "rbf_md5": "24edaafc2a226db15fdb495731edc052",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "Laser;;-;F1,VZ ,Load VZ Image;-;O89,Aspect ratio,Original,Full Screen,[ARC1],[ARC2];O24,Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%,CRT 75%;O5,Turbo,Off,On;O6,Dos Rom,Off,On;O7,SHRG,Off,On;-;R0,Reset;J,Fire 1,Button 2;V,v250907",
+ "dumped": "2026-11-13T23:11:37"
+}

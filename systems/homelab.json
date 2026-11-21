@@ -1,0 +1,199 @@
+{
+ "coreshell_profile": 1,
+ "system": "homelab",
+ "variant": "stock",
+ "name": "Homelab",
+ "rbf": "_Computer/Homelab",
+ "setname": null,
+ "core_name": "Homelab",
+ "config_file": "Homelab.CFG",
+ "games_dir": "games/Homelab",
+ "saves_dir": "saves/Homelab",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "HTP"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "HTP"
+   ],
+   "label": "Load Rom"
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "CHR"
+   ],
+   "label": "Load Alternate CHR"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "HTP"
+   ],
+   "label": "Load Rom",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "CHR"
+   ],
+   "label": "Load Alternate CHR",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Play",
+   "bits": [
+    10,
+    10
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Stop",
+   "bits": [
+    11,
+    11
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Rewind",
+   "bits": [
+    12,
+    12
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Turbo HTP Loading",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    13,
+    13
+   ],
+   "core_flags": [],
+   "key": "Turbo HTP Loading",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    121,
+    122
+   ],
+   "core_flags": [],
+   "key": "Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Screen mode",
+   "values": [
+    "32 CH",
+    "64 CH"
+   ],
+   "default": "32 CH",
+   "bits": [
+    2,
+    2
+   ],
+   "core_flags": [],
+   "key": "Screen mode",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Screen Color",
+   "values": [
+    "White",
+    "Green",
+    "Amber"
+   ],
+   "default": "White",
+   "bits": [
+    5,
+    6
+   ],
+   "core_flags": [],
+   "key": "Screen Color",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Machine",
+   "values": [
+    "Homelab3",
+    "Homelab4"
+   ],
+   "default": "Homelab3",
+   "bits": [
+    3,
+    3
+   ],
+   "core_flags": [],
+   "key": "Machine",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "Homelab_20250906.rbf",
+  "rbf_md5": "e0d0ccf9406fb0c3b2836c0a42cca868",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:11:23",
+  "confstr_sha1": "6ea2c553b52584d84a0733a8ad97ab3c497960d2"
+ }
+}

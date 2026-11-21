@@ -1,0 +1,327 @@
+{
+ "coreshell_profile": 1,
+ "system": "tomytutor",
+ "variant": "stock",
+ "name": "TomyTutor",
+ "rbf": "_Computer/TomyTutor",
+ "setname": null,
+ "core_name": "TomyTutor",
+ "config_file": "TomyTutor.CFG",
+ "games_dir": "games/TomyTutor",
+ "saves_dir": "saves/TomyTutor",
+ "rom": {
+  "index": 2,
+  "type": "f",
+  "exts": [
+   "BIN"
+  ]
+ },
+ "slots": [
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load Cartridge"
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "CAS"
+   ],
+   "label": "Mount Tape Image"
+  }
+ ],
+ "files": [
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load Cartridge",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Select System Rom",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "CAS"
+   ],
+   "label": "Mount Tape Image",
+   "page": 1,
+   "flags": []
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Rewind [F6]",
+   "bits": [
+    7,
+    7
+   ],
+   "kind": "toggle",
+   "page": 1,
+   "flags": [
+    "D1"
+   ]
+  },
+  {
+   "name": "Eject Cartridge",
+   "bits": [
+    1,
+    1
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "Tape",
+   "name": "Tape Read Only",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    2,
+    2
+   ],
+   "core_flags": [
+    "D0"
+   ],
+   "key": "Tape/Tape Read Only",
+   "mgl_ok": true
+  },
+  {
+   "page": "Tape",
+   "name": "Tape Status",
+   "values": [
+    "Never",
+    "Always",
+    "When Mounted",
+    " With Activity"
+   ],
+   "default": "Never",
+   "bits": [
+    3,
+    4
+   ],
+   "core_flags": [],
+   "key": "Tape/Tape Status",
+   "mgl_ok": true
+  },
+  {
+   "page": "Tape",
+   "name": "Tape Audio",
+   "values": [
+    "Muted",
+    "UnMuted"
+   ],
+   "default": "Muted",
+   "bits": [
+    5,
+    5
+   ],
+   "core_flags": [],
+   "key": "Tape/Tape Audio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Dev Menu",
+   "name": "4000-5FFF Ram",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    13,
+    13
+   ],
+   "core_flags": [
+    "h2"
+   ],
+   "key": "Dev Menu/4000-5FFF Ram",
+   "mgl_ok": true
+  },
+  {
+   "page": "Dev Menu",
+   "name": "6000-7FFF Ram",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    14,
+    14
+   ],
+   "core_flags": [
+    "h2"
+   ],
+   "key": "Dev Menu/6000-7FFF Ram",
+   "mgl_ok": true
+  },
+  {
+   "page": "Dev Menu",
+   "name": "8000-9FFF Ram",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    15,
+    15
+   ],
+   "core_flags": [
+    "h2"
+   ],
+   "key": "Dev Menu/8000-9FFF Ram",
+   "mgl_ok": true
+  },
+  {
+   "page": "Dev Menu",
+   "name": "A000-BFFF Ram",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    16,
+    16
+   ],
+   "core_flags": [
+    "h2"
+   ],
+   "key": "Dev Menu/A000-BFFF Ram",
+   "mgl_ok": true
+  },
+  {
+   "page": "Dev Menu",
+   "name": "C000-DFFF Ram",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    17,
+    17
+   ],
+   "core_flags": [
+    "h2"
+   ],
+   "key": "Dev Menu/C000-DFFF Ram",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video Settings",
+   "name": "MAX Num of Sprites",
+   "values": [
+    "32",
+    "4"
+   ],
+   "default": "32",
+   "bits": [
+    8,
+    8
+   ],
+   "core_flags": [],
+   "key": "Video Settings/MAX Num of Sprites",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video Settings",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    9,
+    10
+   ],
+   "core_flags": [],
+   "key": "Video Settings/Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video Settings",
+   "name": "Aspect Ratio",
+   "values": [
+    "Original",
+    "Full Screen"
+   ],
+   "default": "Original",
+   "bits": [
+    11,
+    11
+   ],
+   "core_flags": [],
+   "key": "Video Settings/Aspect Ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video Settings",
+   "name": "Vertical Crop",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    12,
+    12
+   ],
+   "core_flags": [],
+   "key": "Video Settings/Vertical Crop",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "TomyTutor_20250622.rbf",
+  "rbf_md5": "fb12bf3212873ae3e4113036c0fa0bfc",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:13:52",
+  "confstr_sha1": "b6e66998f971449613be9d3d1e87d63f822f049a"
+ }
+}

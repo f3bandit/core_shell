@@ -1,0 +1,447 @@
+{
+ "coreshell_profile": 1,
+ "system": "svi328",
+ "variant": "stock",
+ "name": "SVI328",
+ "rbf": "_Computer/Svi328",
+ "setname": null,
+ "core_name": "SVI328",
+ "config_file": "SVI328_v1.CFG",
+ "games_dir": "games/SVI328",
+ "saves_dir": "saves/SVI328",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "BIN",
+   "ROM"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "BIN",
+    "ROM"
+   ],
+   "label": "Cartridge"
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "CAS"
+   ],
+   "label": "Tape"
+  },
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load ROM"
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "CAS"
+   ],
+   "label": "Tape save"
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Disk A"
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Disk B"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "BIN",
+    "ROM"
+   ],
+   "label": "Cartridge",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "CAS"
+   ],
+   "label": "Tape",
+   "page": 0,
+   "flags": [
+    "H1"
+   ],
+   "remember_dir": false
+  },
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load ROM",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "CAS"
+   ],
+   "label": "Tape save",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Disk A",
+   "page": 0,
+   "flags": [
+    "H2"
+   ]
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Disk B",
+   "page": 0,
+   "flags": [
+    "H2"
+   ]
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Apply and reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Rewind tape",
+   "bits": [
+    13,
+    13
+   ],
+   "kind": "toggle",
+   "page": 1,
+   "flags": [
+    "H1"
+   ]
+  },
+  {
+   "name": "Eject cartridge",
+   "bits": [
+    18,
+    18
+   ],
+   "kind": "toggle",
+   "page": 1,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Memory",
+   "values": [
+    "SV-807 (160K)",
+    "Standard"
+   ],
+   "default": "SV-807 (160K)",
+   "bits": [
+    22,
+    22
+   ],
+   "core_flags": [],
+   "key": "Memory",
+   "mgl_ok": true
+  },
+  {
+   "page": "Machine",
+   "name": "Model",
+   "values": [
+    "SVI-328",
+    "SVI-318"
+   ],
+   "default": "SVI-328",
+   "bits": [
+    21,
+    21
+   ],
+   "core_flags": [],
+   "key": "Machine/Model",
+   "mgl_ok": true
+  },
+  {
+   "page": "Machine",
+   "name": "SV-801 disk",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    23,
+    23
+   ],
+   "core_flags": [],
+   "key": "Machine/SV-801 disk",
+   "mgl_ok": true
+  },
+  {
+   "page": "Machine",
+   "name": "SV-806 80-column",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    24,
+    24
+   ],
+   "core_flags": [],
+   "key": "Machine/SV-806 80-column",
+   "mgl_ok": true
+  },
+  {
+   "page": "Machine",
+   "name": "Tape input",
+   "values": [
+    "File",
+    "ADC"
+   ],
+   "default": "File",
+   "bits": [
+    15,
+    15
+   ],
+   "core_flags": [],
+   "key": "Machine/Tape input",
+   "mgl_ok": true
+  },
+  {
+   "page": "Machine",
+   "name": "Tape speed",
+   "values": [
+    "4x",
+    "Normal"
+   ],
+   "default": "4x",
+   "bits": [
+    16,
+    16
+   ],
+   "core_flags": [
+    "H1"
+   ],
+   "key": "Machine/Tape speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Display",
+   "values": [
+    "Auto",
+    "80-column",
+    "VDP"
+   ],
+   "default": "Auto",
+   "bits": [
+    25,
+    26
+   ],
+   "core_flags": [
+    "H3"
+   ],
+   "key": "Video/Display",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Video standard",
+   "values": [
+    "PAL",
+    "NTSC"
+   ],
+   "default": "PAL",
+   "bits": [
+    20,
+    20
+   ],
+   "core_flags": [],
+   "key": "Video/Video standard",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Border",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    6,
+    6
+   ],
+   "core_flags": [],
+   "key": "Video/Border",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    1,
+    2
+   ],
+   "core_flags": [],
+   "key": "Video/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    10,
+    11
+   ],
+   "core_flags": [],
+   "key": "Video/Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    7,
+    9
+   ],
+   "core_flags": [],
+   "key": "Video/Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Tape overlay",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    17,
+    17
+   ],
+   "core_flags": [
+    "H1"
+   ],
+   "key": "Video/Tape overlay",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Joysticks swap",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    3,
+    3
+   ],
+   "core_flags": [],
+   "key": "Input/Joysticks swap",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio",
+   "name": "Tape audio",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    19,
+    19
+   ],
+   "core_flags": [
+    "H1"
+   ],
+   "key": "Audio/Tape audio",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "repo": "MiSTer-devel/Svi328_MiSTer",
+  "commit": "b61a72fdc0b9b99f26e11f6bfa85fb1b7a5b46e3",
+  "file": "Svi328.sv",
+  "rbf": "Svi328_20261118.rbf",
+  "rbf_md5": "d84455b988553c34ccf08d2df2f09fdf",
+  "confstr_sha1": "4571bb268ab0918503bebf307a5f2ed205ab680b"
+ }
+}

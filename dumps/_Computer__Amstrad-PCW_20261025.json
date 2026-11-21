@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/Amstrad-PCW_20261025.rbf",
+ "rbf_md5": "1aa38405bedd31aa7c4931f08c883ddf",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "Amstrad PCW;;S0,DSK,Mount A:;S1,DSK,Mount B:;-;O4,System Model,8256/8512,9256/9512+;OFG,Memory Size,256K,512K,1MB,2MB;O89,Clockspeed (MHz),4.00(1x),8.00(2x),16.00(4x),32.00(x8);-;P1,Video;P1-;P1O56,Screen Color,White,Green,Amber;P1O7,Video System,PAL,NTSC;P1F3,gbp,Load Palette;P1OQR,Fake Colour,None,Loaded palette, PCWPLUS, EGA;P1oAD,CRT H-Sync Adjust,0,1,2,3,4,5,6,7,-8,-7,-6,-5,-4,-3,-2,-1;P1oEH,CRT V-Sync Adjust,0,1,2,3,4,5,6,7,-8,-7,-6,-5,-4,-3,-2,-1;P1OKL,Aspect ratio,Original,Full Screen,[ARC1],[ARC2];P1O13,Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%, CRT 75%;P1OMN,Scale,Normal,V-Integer,Narrower HV-Integer,Wider HV-Integer;-;OAC,Joystick Type,None,Kempston,Spectravideo,Cascade,DKTronics;ODE,Mouse Type,None,AMX,Kempston,Keymouse;OH,DKTronics I/F,Disabled,Enabled;-;R0,Reset;J,Fire 1,Fire 2;V,v261025",
+ "dumped": "2026-11-13T23:09:55"
+}

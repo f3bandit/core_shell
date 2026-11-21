@@ -1,0 +1,211 @@
+{
+ "coreshell_profile": 1,
+ "system": "applelisa",
+ "variant": "stock",
+ "name": "Apple-Lisa",
+ "rbf": "_Computer/Apple-Lisa",
+ "setname": null,
+ "core_name": "Apple-Lisa",
+ "config_file": "Apple-Lisa.CFG",
+ "games_dir": "games/Apple-Lisa",
+ "saves_dir": "saves/Apple-Lisa",
+ "rom": {
+  "index": 0,
+  "type": "s",
+  "exts": [
+   "IMG",
+   "VHD"
+  ]
+ },
+ "slots": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "IMG",
+    "VHD"
+   ],
+   "label": "Mount Hard Disk"
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "DC4",
+    "DSK",
+    "IMG"
+   ],
+   "label": "Mount Floppy"
+  }
+ ],
+ "files": [],
+ "mounts": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "IMG",
+    "VHD"
+   ],
+   "label": "Mount Hard Disk",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "DC4",
+    "DSK",
+    "IMG"
+   ],
+   "label": "Mount Floppy",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Reset & Apply",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Aspect ratio",
+   "values": [
+    "4:3",
+    "Original",
+    "Full Screen",
+    "[ARC1]"
+   ],
+   "default": "4:3",
+   "bits": [
+    9,
+    10
+   ],
+   "core_flags": [],
+   "key": "Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    11,
+    12
+   ],
+   "core_flags": [],
+   "key": "Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "RAM Size",
+   "values": [
+    "512KB",
+    "1MB",
+    "1.5MB",
+    "2MB"
+   ],
+   "default": "512KB",
+   "bits": [
+    3,
+    4
+   ],
+   "core_flags": [],
+   "key": "RAM Size",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "CPU Speed",
+   "values": [
+    "1x (5MHz)",
+    "2x",
+    "3x"
+   ],
+   "default": "1x (5MHz)",
+   "bits": [
+    5,
+    6
+   ],
+   "core_flags": [],
+   "key": "CPU Speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "CPU ROM",
+   "values": [
+    "H ROM",
+    "3A ROM"
+   ],
+   "default": "H ROM",
+   "bits": [
+    7,
+    7
+   ],
+   "core_flags": [],
+   "key": "CPU ROM",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "I/O ROM",
+   "values": [
+    "A8 ROM",
+    "40 ROM"
+   ],
+   "default": "A8 ROM",
+   "bits": [
+    8,
+    8
+   ],
+   "core_flags": [],
+   "key": "I/O ROM",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Screen Color",
+   "values": [
+    "Paper White",
+    "Green CRT",
+    "Amber CRT"
+   ],
+   "default": "Paper White",
+   "bits": [
+    13,
+    14
+   ],
+   "core_flags": [],
+   "key": "Screen Color",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "Apple-Lisa_20260721.rbf",
+  "rbf_md5": "a648247c8c0c858be7a8b8019862b7c9",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:10:18",
+  "confstr_sha1": "e0fb47612eea22bdacfe6f560f174d78d5e1384e"
+ }
+}

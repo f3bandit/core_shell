@@ -1,0 +1,7 @@
+{
+ "rbf": "_Console/GnW_20250717.rbf",
+ "rbf_md5": "6e3fd7d7ab262bf925e9f97101bdd6e9",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "GameNWatch;;F,BIN,Load File;-;-;O[122:121],Aspect ratio,Original,Full Screen,[ARC1],[ARC2];O[3:2],Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%;O[11:10],Scale,Normal,V-Integer,Narrower HV-Integer,Wider HV-Integer;-;R0,Reset;-;J,jump,time,A,B,alarm;V,v250717",
+ "dumped": "2026-11-13T23:04:54"
+}

@@ -1,0 +1,7 @@
+{
+ "rbf": "_Utility/InputTest_20260810.rbf",
+ "rbf_md5": "ec883dbed783eb3bf16d5eeceb1739ac",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "InputTest;;-;O35,Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%,CRT 75%;OGJ,Analog Video H-Pos,0,-1,-2,-3,-4,-5,-6,-7,8,7,6,5,4,3,2,1;OKN,Analog Video V-Pos,0,-1,-2,-3,-4,-5,-6,-7,8,7,6,5,4,3,2,1;O89,Aspect ratio,Original,Full Screen,[ARC1],[ARC2];-;O6,Rotate video,Off,On;O7,Flip video,Off,On;-;RA,Open menu;-;F0,BIN,Load BIOS;F3,BIN,Load Sprite ROM;F4,YM,Load Music (YM5/6);-;R0,Reset;J,A,B,X,Y,L,R,Select,Start;V,v260810",
+ "dumped": "2026-11-13T23:17:45"
+}

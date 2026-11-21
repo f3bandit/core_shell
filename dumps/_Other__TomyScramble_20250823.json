@@ -1,0 +1,7 @@
+{
+ "rbf": "_Other/TomyScramble_20250823.rbf",
+ "rbf_md5": "756efb8109ed65ca2a47b0c47031c51c",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "TomyScramble;;-;O1,Aspect ratio,original,4:3;O2,Mode,Ama,Pro;-;F,rom,Load File;-;T0,Reset;R0,Reset and close OSD;V,v250823",
+ "dumped": "2026-11-13T23:17:36"
+}

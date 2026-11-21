@@ -1,0 +1,7 @@
+{
+ "rbf": "_Console/AY-3-8500_20260823.rbf",
+ "rbf_md5": "294d6c45eed9789182cbe83674a2dfc0",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "AY-3-8500;;-;O12,Aspect ratio,Original,Full Screen,[ARC1],[ARC2];O35,Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%,CRT 75%;O7A,Color Pallette,Mono,Greyscale,RGB1,RGB2,Field,Ice,Christmas,Marksman,Las Vegas;-;OBD,Game,Tennis,Soccer,Handicap,Squash,Practice;OE,Auto Serve,No,Yes;OF,Size,Big,Small;OG,Angle,1,2;OH,Speed,Slow,Fast;O6,Invisiball,OFF,ON;-;OIJ,Control P1,Digital,Y,X,Paddle;OM,Invert P1,No,Yes;OKL,Control P2,Digital,Y,X,Paddle;ON,Invert P2,No,Yes;-;R0,Reset;J,Serve;jn,Start;V,v260823",
+ "dumped": "2026-11-13T22:59:31"
+}

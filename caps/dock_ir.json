@@ -1,0 +1,10 @@
+{
+ "name": "Dock IR remote receiver",
+ "kind": "hardware",
+ "by": "Retro Remake (DockIR)",
+ "any": [
+  {
+   "usb": "1c4f:0002"
+  }
+ ]
+}

@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/Apogee_20260603.rbf",
+ "rbf_md5": "6904e6ef8646a819be3d4bbbf93e56f3",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "APOGEE;;-;F,RKARKRGAM;O5,Autostart,Yes,No;-;O1,Color,On,Off;O67,Aspect ratio,Original,Full Screen,[ARC1],[ARC2];O23,Scandoubler Fx,None,CRT 25%,CRT 50%,CRT 75%;-;O4,CPU speed,Normal,Double;R0,Reset;V,v260603",
+ "dumped": "2026-11-13T23:10:03"
+}

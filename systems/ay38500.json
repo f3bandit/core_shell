@@ -1,0 +1,267 @@
+{
+ "coreshell_profile": 1,
+ "system": "ay38500",
+ "variant": "stock",
+ "name": "AY-3-8500",
+ "rbf": "_Console/AY-3-8500",
+ "setname": null,
+ "core_name": "AY-3-8500",
+ "config_file": "AY-3-8500.CFG",
+ "games_dir": "games/AY-3-8500",
+ "saves_dir": "saves/AY-3-8500",
+ "rom": null,
+ "slots": [],
+ "files": [],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    1,
+    2
+   ],
+   "core_flags": [],
+   "key": "Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    3,
+    5
+   ],
+   "core_flags": [],
+   "key": "Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Color Pallette",
+   "values": [
+    "Mono",
+    "Greyscale",
+    "RGB1",
+    "RGB2",
+    "Field",
+    "Ice",
+    "Christmas",
+    "Marksman",
+    "Las Vegas"
+   ],
+   "default": "Mono",
+   "bits": [
+    7,
+    10
+   ],
+   "core_flags": [],
+   "key": "Color Pallette",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Game",
+   "values": [
+    "Tennis",
+    "Soccer",
+    "Handicap",
+    "Squash",
+    "Practice"
+   ],
+   "default": "Tennis",
+   "bits": [
+    11,
+    13
+   ],
+   "core_flags": [],
+   "key": "Game",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Auto Serve",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    14,
+    14
+   ],
+   "core_flags": [],
+   "key": "Auto Serve",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Size",
+   "values": [
+    "Big",
+    "Small"
+   ],
+   "default": "Big",
+   "bits": [
+    15,
+    15
+   ],
+   "core_flags": [],
+   "key": "Size",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Angle",
+   "values": [
+    "1",
+    "2"
+   ],
+   "default": "1",
+   "bits": [
+    16,
+    16
+   ],
+   "core_flags": [],
+   "key": "Angle",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Speed",
+   "values": [
+    "Slow",
+    "Fast"
+   ],
+   "default": "Slow",
+   "bits": [
+    17,
+    17
+   ],
+   "core_flags": [],
+   "key": "Speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Invisiball",
+   "values": [
+    "OFF",
+    "ON"
+   ],
+   "default": "OFF",
+   "bits": [
+    6,
+    6
+   ],
+   "core_flags": [],
+   "key": "Invisiball",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Control P1",
+   "values": [
+    "Digital",
+    "Y",
+    "X",
+    "Paddle"
+   ],
+   "default": "Digital",
+   "bits": [
+    18,
+    19
+   ],
+   "core_flags": [],
+   "key": "Control P1",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Invert P1",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    22,
+    22
+   ],
+   "core_flags": [],
+   "key": "Invert P1",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Control P2",
+   "values": [
+    "Digital",
+    "Y",
+    "X",
+    "Paddle"
+   ],
+   "default": "Digital",
+   "bits": [
+    20,
+    21
+   ],
+   "core_flags": [],
+   "key": "Control P2",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Invert P2",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    23,
+    23
+   ],
+   "core_flags": [],
+   "key": "Invert P2",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "AY-3-8500_20260823.rbf",
+  "rbf_md5": "294d6c45eed9789182cbe83674a2dfc0",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T22:59:31",
+  "confstr_sha1": "1c4b2e05e0ef1e7388fcc5a771a00da9651a89b8"
+ }
+}

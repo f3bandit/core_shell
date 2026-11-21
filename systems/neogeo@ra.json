@@ -1,0 +1,664 @@
+{
+ "coreshell_profile": 1,
+ "system": "neogeo",
+ "variant": "ra",
+ "name": "NEOGEO",
+ "rbf": "_RA_Cores/Cores/NeoGeo",
+ "setname": "RA_NeoGeo",
+ "core_name": "NEOGEO",
+ "config_file": "RA_NeoGeo.CFG",
+ "games_dir": "games/NEOGEO",
+ "saves_dir": "saves/NEOGEO",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "*"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "*"
+   ],
+   "label": "Load ROM set"
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "CUE",
+    "CHD"
+   ],
+   "label": "Load CD Image"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "*"
+   ],
+   "label": "Load ROM set",
+   "page": 0,
+   "flags": [],
+   "remember_dir": true
+  }
+ ],
+ "mounts": [
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "CUE",
+    "CHD"
+   ],
+   "label": "Load CD Image",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Reload Memory Card",
+   "bits": [
+    21,
+    21
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Save Memory Card",
+   "bits": [
+    12,
+    12
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "D4"
+   ]
+  },
+  {
+   "name": "Reset & apply",
+   "bits": [
+    14,
+    14
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "FM",
+   "values": [
+    "ON",
+    "OFF"
+   ],
+   "default": "ON",
+   "bits": [
+    25,
+    25
+   ],
+   "core_flags": [
+    "H3"
+   ],
+   "key": "FM",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "ADPCMA",
+   "values": [
+    "ON",
+    "OFF"
+   ],
+   "default": "ON",
+   "bits": [
+    26,
+    26
+   ],
+   "core_flags": [
+    "H3"
+   ],
+   "key": "ADPCMA",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "ADPCMB",
+   "values": [
+    "ON",
+    "OFF"
+   ],
+   "default": "ON",
+   "bits": [
+    27,
+    27
+   ],
+   "core_flags": [
+    "H3"
+   ],
+   "key": "ADPCMB",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "PSG",
+   "values": [
+    "ON",
+    "OFF"
+   ],
+   "default": "ON",
+   "bits": [
+    28,
+    28
+   ],
+   "core_flags": [
+    "H3"
+   ],
+   "key": "PSG",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "ADPCMA CH 1",
+   "values": [
+    "ON",
+    "OFF"
+   ],
+   "default": "ON",
+   "bits": [
+    57,
+    57
+   ],
+   "core_flags": [
+    "H3"
+   ],
+   "key": "ADPCMA CH 1",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "ADPCMA CH 2",
+   "values": [
+    "ON",
+    "OFF"
+   ],
+   "default": "ON",
+   "bits": [
+    58,
+    58
+   ],
+   "core_flags": [
+    "H3"
+   ],
+   "key": "ADPCMA CH 2",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "ADPCMA CH 3",
+   "values": [
+    "ON",
+    "OFF"
+   ],
+   "default": "ON",
+   "bits": [
+    59,
+    59
+   ],
+   "core_flags": [
+    "H3"
+   ],
+   "key": "ADPCMA CH 3",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "ADPCMA CH 4",
+   "values": [
+    "ON",
+    "OFF"
+   ],
+   "default": "ON",
+   "bits": [
+    60,
+    60
+   ],
+   "core_flags": [
+    "H3"
+   ],
+   "key": "ADPCMA CH 4",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "ADPCMA CH 5",
+   "values": [
+    "ON",
+    "OFF"
+   ],
+   "default": "ON",
+   "bits": [
+    61,
+    61
+   ],
+   "core_flags": [
+    "H3"
+   ],
+   "key": "ADPCMA CH 5",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "ADPCMA CH 6",
+   "values": [
+    "ON",
+    "OFF"
+   ],
+   "default": "ON",
+   "bits": [
+    62,
+    62
+   ],
+   "core_flags": [
+    "H3"
+   ],
+   "key": "ADPCMA CH 6",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "System Type",
+   "values": [
+    "Console(AES)",
+    "Arcade(MVS)"
+   ],
+   "default": "Console(AES)",
+   "bits": [
+    1,
+    1
+   ],
+   "core_flags": [],
+   "key": "System Type",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "BIOS",
+   "values": [
+    "UniBIOS",
+    "Original"
+   ],
+   "default": "UniBIOS",
+   "bits": [
+    22,
+    22
+   ],
+   "core_flags": [],
+   "key": "BIOS",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Video Mode",
+   "values": [
+    "NTSC",
+    "PAL"
+   ],
+   "default": "NTSC",
+   "bits": [
+    3,
+    3
+   ],
+   "core_flags": [],
+   "key": "Video Mode",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Input",
+   "values": [
+    "Joystick or Spinner",
+    "Joystick",
+    "Spinner",
+    "Mouse(Irr.Maze)"
+   ],
+   "default": "Joystick or Spinner",
+   "bits": [
+    41,
+    42
+   ],
+   "core_flags": [],
+   "key": "Input",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Multitap",
+   "values": [
+    "No",
+    "NEO-FTC1B",
+    "NeoTris"
+   ],
+   "default": "No",
+   "bits": [
+    43,
+    44
+   ],
+   "core_flags": [],
+   "key": "Multitap",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Memory Card",
+   "values": [
+    "Plugged",
+    "Unplugged"
+   ],
+   "default": "Plugged",
+   "bits": [
+    4,
+    4
+   ],
+   "core_flags": [
+    "H0"
+   ],
+   "key": "Memory Card",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Autosave",
+   "values": [
+    "OFF",
+    "ON"
+   ],
+   "default": "OFF",
+   "bits": [
+    24,
+    24
+   ],
+   "core_flags": [],
+   "key": "Autosave",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "CD Type",
+   "values": [
+    "CD",
+    "CDZ"
+   ],
+   "default": "CD",
+   "bits": [
+    2,
+    2
+   ],
+   "core_flags": [],
+   "key": "CD Type",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "CD Speed",
+   "values": [
+    "1x",
+    "2x",
+    "3x",
+    "4x"
+   ],
+   "default": "1x",
+   "bits": [
+    29,
+    30
+   ],
+   "core_flags": [],
+   "key": "CD Speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "CD Region",
+   "values": [
+    "US",
+    "EU",
+    "JP",
+    "AS"
+   ],
+   "default": "US",
+   "bits": [
+    10,
+    11
+   ],
+   "core_flags": [],
+   "key": "CD Region",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "CD lid",
+   "values": [
+    "Closed",
+    "Opened"
+   ],
+   "default": "Closed",
+   "bits": [
+    15,
+    15
+   ],
+   "core_flags": [],
+   "key": "CD lid",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "[DIP] Settings",
+   "values": [
+    "OFF",
+    "ON"
+   ],
+   "default": "OFF",
+   "bits": [
+    7,
+    7
+   ],
+   "core_flags": [
+    "H2"
+   ],
+   "key": "[DIP] Settings",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "[DIP] Freeplay",
+   "values": [
+    "OFF",
+    "ON"
+   ],
+   "default": "OFF",
+   "bits": [
+    8,
+    8
+   ],
+   "core_flags": [
+    "H2"
+   ],
+   "key": "[DIP] Freeplay",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "[DIP] Freeze",
+   "values": [
+    "OFF",
+    "ON"
+   ],
+   "default": "OFF",
+   "bits": [
+    9,
+    9
+   ],
+   "core_flags": [
+    "H2"
+   ],
+   "key": "[DIP] Freeze",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Width",
+   "values": [
+    "320px",
+    "304px"
+   ],
+   "default": "320px",
+   "bits": [
+    16,
+    16
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Width",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    32,
+    33
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    18,
+    20
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Vertical Crop",
+   "values": [
+    "Disabled",
+    "216p(5x)"
+   ],
+   "default": "Disabled",
+   "bits": [
+    34,
+    34
+   ],
+   "core_flags": [
+    "d5"
+   ],
+   "key": "Audio & Video/Vertical Crop",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Crop Offset",
+   "values": [
+    "0",
+    "2",
+    "4",
+    "8",
+    "10",
+    "12",
+    "-12",
+    "-10",
+    "-8",
+    "-6",
+    "-4",
+    "-2"
+   ],
+   "default": "0",
+   "bits": [
+    35,
+    38
+   ],
+   "core_flags": [
+    "d5"
+   ],
+   "key": "Audio & Video/Crop Offset",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    39,
+    40
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Stereo Mix",
+   "values": [
+    "none",
+    "25%",
+    "50%",
+    "100%"
+   ],
+   "default": "none",
+   "bits": [
+    5,
+    6
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Stereo Mix",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "NeoGeo.rbf",
+  "rbf_md5": "9990633aa1f355f9e59ba2b21706bbff",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:18:20",
+  "confstr_sha1": "14e7d9a85faa8fec378c39e3849ac78f99b3efac"
+ }
+}

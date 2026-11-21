@@ -1,0 +1,10 @@
+{
+ "name": "Background music (bgm.sh)",
+ "kind": "addon",
+ "by": "wizzomafizzo (MiSTer_BGM)",
+ "any": [
+  {
+   "path": "Scripts/bgm.sh"
+  }
+ ]
+}

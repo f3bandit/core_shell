@@ -1,0 +1,1610 @@
+{
+ "coreshell_profile": 1,
+ "system": "atari800",
+ "variant": "stock",
+ "name": "ATARI800",
+ "rbf": "_Computer/Atari800",
+ "setname": null,
+ "core_name": "ATARI800",
+ "config_file": "ATARI800.CFG",
+ "games_dir": "games/ATARI800",
+ "saves_dir": "saves/ATARI800",
+ "rom": {
+  "index": 8,
+  "type": "f",
+  "exts": [
+   "CAR",
+   "ROM",
+   "BIN"
+  ]
+ },
+ "slots": [
+  {
+   "index": 8,
+   "type": "f",
+   "exts": [
+    "CAR",
+    "ROM",
+    "BIN"
+   ],
+   "label": "Load Cart"
+  },
+  {
+   "index": 9,
+   "type": "f",
+   "exts": [
+    "CAR",
+    "ROM",
+    "BIN"
+   ],
+   "label": "Second Cart"
+  },
+  {
+   "index": 4,
+   "type": "f",
+   "exts": [
+    "ROM",
+    "BIN"
+   ],
+   "label": "OS 16K"
+  },
+  {
+   "index": 5,
+   "type": "f",
+   "exts": [
+    "ROM",
+    "BIN"
+   ],
+   "label": "Basic"
+  },
+  {
+   "index": 6,
+   "type": "f",
+   "exts": [
+    "ROM",
+    "BIN"
+   ],
+   "label": "OS 10K (400/800)"
+  },
+  {
+   "index": 3,
+   "type": "f",
+   "exts": [
+    "ROM",
+    "BIN"
+   ],
+   "label": "TurboFreezer"
+  },
+  {
+   "index": 5,
+   "type": "s",
+   "exts": [
+    "XEX",
+    "COM",
+    "EXE"
+   ],
+   "label": "Load XEX"
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "ATR",
+    "XEX",
+    "XFD",
+    "ATX"
+   ],
+   "label": "Mount D1"
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "ATR",
+    "XEX",
+    "XFD",
+    "ATX"
+   ],
+   "label": "Mount D2"
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "ATR",
+    "XEX",
+    "XFD",
+    "ATX"
+   ],
+   "label": "Mount D3"
+  },
+  {
+   "index": 3,
+   "type": "s",
+   "exts": [
+    "ATR",
+    "XEX",
+    "XFD",
+    "ATX"
+   ],
+   "label": "Mount D4"
+  },
+  {
+   "index": 4,
+   "type": "s",
+   "exts": [
+    "IMG"
+   ],
+   "label": "Mount HDD"
+  },
+  {
+   "index": 7,
+   "type": "s",
+   "exts": [
+    "CAS"
+   ],
+   "label": "Load Tape"
+  }
+ ],
+ "files": [
+  {
+   "index": 8,
+   "type": "f",
+   "exts": [
+    "CAR",
+    "ROM",
+    "BIN"
+   ],
+   "label": "Load Cart",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 9,
+   "type": "f",
+   "exts": [
+    "CAR",
+    "ROM",
+    "BIN"
+   ],
+   "label": "Second Cart",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 4,
+   "type": "f",
+   "exts": [
+    "ROM",
+    "BIN"
+   ],
+   "label": "OS 16K",
+   "page": 2,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 5,
+   "type": "f",
+   "exts": [
+    "ROM",
+    "BIN"
+   ],
+   "label": "Basic",
+   "page": 2,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 6,
+   "type": "f",
+   "exts": [
+    "ROM",
+    "BIN"
+   ],
+   "label": "OS 10K (400/800)",
+   "page": 2,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 3,
+   "type": "f",
+   "exts": [
+    "ROM",
+    "BIN"
+   ],
+   "label": "TurboFreezer",
+   "page": 2,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "ACT"
+   ],
+   "label": "VBXE Palette",
+   "page": 3,
+   "flags": [
+    "dB"
+   ],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [
+  {
+   "index": 6,
+   "type": "s",
+   "exts": [
+    "ATR",
+    "XEX",
+    "XDF",
+    "ATX"
+   ],
+   "label": "Boot D1",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 5,
+   "type": "s",
+   "exts": [
+    "XEX",
+    "COM",
+    "EXE"
+   ],
+   "label": "Load XEX",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 8,
+   "type": "s",
+   "exts": [
+    "CAS"
+   ],
+   "label": "Boot Tape",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "ATR",
+    "XEX",
+    "XFD",
+    "ATX"
+   ],
+   "label": "Mount D1",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "ATR",
+    "XEX",
+    "XFD",
+    "ATX"
+   ],
+   "label": "Mount D2",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "ATR",
+    "XEX",
+    "XFD",
+    "ATX"
+   ],
+   "label": "Mount D3",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 3,
+   "type": "s",
+   "exts": [
+    "ATR",
+    "XEX",
+    "XFD",
+    "ATX"
+   ],
+   "label": "Mount D4",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 4,
+   "type": "s",
+   "exts": [
+    "IMG"
+   ],
+   "label": "Mount HDD",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 7,
+   "type": "s",
+   "exts": [
+    "CAS"
+   ],
+   "label": "Load Tape",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Save cart(s)",
+   "bits": [
+    70,
+    70
+   ],
+   "kind": "reset",
+   "page": 1,
+   "flags": []
+  },
+  {
+   "name": "Warm Reset (F9)",
+   "bits": [
+    39,
+    39
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Cold Reset (F10)",
+   "bits": [
+    40,
+    40
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Reset (Detach All)",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "Drives Carts & Tape",
+   "name": "SIO Connected to",
+   "values": [
+    "Emu",
+    "User I/O"
+   ],
+   "default": "Emu",
+   "bits": [
+    16,
+    16
+   ],
+   "core_flags": [],
+   "key": "Drives Carts & Tape/SIO Connected to",
+   "mgl_ok": true
+  },
+  {
+   "page": "Drives Carts & Tape",
+   "name": "Mount images R/O",
+   "values": [
+    "Disabled",
+    "Enabled"
+   ],
+   "default": "Disabled",
+   "bits": [
+    57,
+    57
+   ],
+   "core_flags": [],
+   "key": "Drives Carts & Tape/Mount images R/O",
+   "mgl_ok": true
+  },
+  {
+   "page": "Drives Carts & Tape",
+   "name": "D1 mode",
+   "values": [
+    "OS/Stock",
+    "PBI",
+    "HSIO"
+   ],
+   "default": "OS/Stock",
+   "bits": [
+    44,
+    45
+   ],
+   "core_flags": [
+    "d2"
+   ],
+   "key": "Drives Carts & Tape/D1 mode",
+   "mgl_ok": true
+  },
+  {
+   "page": "Drives Carts & Tape",
+   "name": "D2 mode",
+   "values": [
+    "OS/Stock",
+    "PBI",
+    "HSIO"
+   ],
+   "default": "OS/Stock",
+   "bits": [
+    46,
+    47
+   ],
+   "core_flags": [
+    "d2"
+   ],
+   "key": "Drives Carts & Tape/D2 mode",
+   "mgl_ok": true
+  },
+  {
+   "page": "Drives Carts & Tape",
+   "name": "D3 mode",
+   "values": [
+    "OS/Stock",
+    "PBI",
+    "HSIO"
+   ],
+   "default": "OS/Stock",
+   "bits": [
+    48,
+    49
+   ],
+   "core_flags": [
+    "d2"
+   ],
+   "key": "Drives Carts & Tape/D3 mode",
+   "mgl_ok": true
+  },
+  {
+   "page": "Drives Carts & Tape",
+   "name": "D4 mode",
+   "values": [
+    "OS/Stock",
+    "PBI",
+    "HSIO"
+   ],
+   "default": "OS/Stock",
+   "bits": [
+    50,
+    51
+   ],
+   "core_flags": [
+    "d2"
+   ],
+   "key": "Drives Carts & Tape/D4 mode",
+   "mgl_ok": true
+  },
+  {
+   "page": "Drives Carts & Tape",
+   "name": "SIO drive speed",
+   "values": [
+    "Standard",
+    "Fast-6",
+    "Fast-5",
+    "Fast-4",
+    "Fast-3",
+    "Fast-2",
+    "Fast-1",
+    "Fast-0"
+   ],
+   "default": "Standard",
+   "bits": [
+    10,
+    12
+   ],
+   "core_flags": [],
+   "key": "Drives Carts & Tape/SIO drive speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "Drives Carts & Tape",
+   "name": "ATX drive timing",
+   "values": [
+    "1050",
+    "810"
+   ],
+   "default": "1050",
+   "bits": [
+    38,
+    38
+   ],
+   "core_flags": [],
+   "key": "Drives Carts & Tape/ATX drive timing",
+   "mgl_ok": true
+  },
+  {
+   "page": "Drives Carts & Tape",
+   "name": "On cart (u)mount",
+   "values": [
+    "PwrReset",
+    "Nothing"
+   ],
+   "default": "PwrReset",
+   "bits": [
+    68,
+    68
+   ],
+   "core_flags": [],
+   "key": "Drives Carts & Tape/On cart (u)mount",
+   "mgl_ok": true
+  },
+  {
+   "page": "Drives Carts & Tape",
+   "name": "Cart auto-save",
+   "values": [
+    "Disabled",
+    "Enabled"
+   ],
+   "default": "Disabled",
+   "bits": [
+    69,
+    69
+   ],
+   "core_flags": [],
+   "key": "Drives Carts & Tape/Cart auto-save",
+   "mgl_ok": true
+  },
+  {
+   "page": "Drives Carts & Tape",
+   "name": "Tape turbo system",
+   "values": [
+    "Standard",
+    "SIO/Cmd",
+    "Turbo-D",
+    "K.S.O.",
+    "K.S.O. 2",
+    "Blizzard",
+    "Rambit",
+    "T6000"
+   ],
+   "default": "Standard",
+   "bits": [
+    64,
+    66
+   ],
+   "core_flags": [],
+   "key": "Drives Carts & Tape/Tape turbo system",
+   "mgl_ok": true
+  },
+  {
+   "page": "Drives Carts & Tape",
+   "name": "Invert turbo PWM",
+   "values": [
+    "Disabled",
+    "Enabled"
+   ],
+   "default": "Disabled",
+   "bits": [
+    67,
+    67
+   ],
+   "core_flags": [],
+   "key": "Drives Carts & Tape/Invert turbo PWM",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware & OS",
+   "name": "CPU speed",
+   "values": [
+    "1x",
+    "2x",
+    "4x",
+    "8x",
+    "16x"
+   ],
+   "default": "1x",
+   "bits": [
+    7,
+    9
+   ],
+   "core_flags": [],
+   "key": "Hardware & OS/CPU speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware & OS",
+   "name": "Machine",
+   "values": [
+    "XL/XE",
+    "400/800"
+   ],
+   "default": "XL/XE",
+   "bits": [
+    2,
+    2
+   ],
+   "core_flags": [],
+   "key": "Hardware & OS/Machine",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware & OS",
+   "name": "400/800 OS ROM type",
+   "values": [
+    "10KB",
+    "16KB"
+   ],
+   "default": "10KB",
+   "bits": [
+    110,
+    110
+   ],
+   "core_flags": [
+    "d1"
+   ],
+   "key": "Hardware & OS/400/800 OS ROM type",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware & OS",
+   "name": "RAM XL",
+   "values": [
+    "64K",
+    "128K",
+    "320K(Compy)",
+    "320K(Rambo)",
+    "576K(Compy)",
+    "576K(Rambo)",
+    "1MB",
+    "4MB(Axlon)"
+   ],
+   "default": "64K",
+   "bits": [
+    13,
+    15
+   ],
+   "core_flags": [
+    "H1"
+   ],
+   "key": "Hardware & OS/RAM XL",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware & OS",
+   "name": "RAM 800",
+   "values": [
+    "8K",
+    "16K",
+    "32K",
+    "48K",
+    "52K",
+    "4MB(Axlon)"
+   ],
+   "default": "8K",
+   "bits": [
+    35,
+    37
+   ],
+   "core_flags": [
+    "h1"
+   ],
+   "key": "Hardware & OS/RAM 800",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware & OS",
+   "name": "PBI BIOS",
+   "values": [
+    "Disabled",
+    "Enabled"
+   ],
+   "default": "Disabled",
+   "bits": [
+    42,
+    42
+   ],
+   "core_flags": [
+    "d5"
+   ],
+   "key": "Hardware & OS/PBI BIOS",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware & OS",
+   "name": "PBI splash",
+   "values": [
+    "Disabled",
+    "Enabled"
+   ],
+   "default": "Disabled",
+   "bits": [
+    43,
+    43
+   ],
+   "core_flags": [
+    "d2"
+   ],
+   "key": "Hardware & OS/PBI splash",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware & OS",
+   "name": "PBI boot drive",
+   "values": [
+    "Default",
+    "APT",
+    "D1:",
+    "D2:",
+    "D3:",
+    "D4:",
+    "D5:",
+    "D6:"
+   ],
+   "default": "Default",
+   "bits": [
+    52,
+    54
+   ],
+   "core_flags": [
+    "d2"
+   ],
+   "key": "Hardware & OS/PBI boot drive",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware & OS",
+   "name": "Use bootX.rom",
+   "values": [
+    "Enabled",
+    "Disabled"
+   ],
+   "default": "Enabled",
+   "bits": [
+    41,
+    41
+   ],
+   "core_flags": [],
+   "key": "Hardware & OS/Use bootX.rom",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Video mode",
+   "values": [
+    "PAL",
+    "NTSC"
+   ],
+   "default": "PAL",
+   "bits": [
+    5,
+    5
+   ],
+   "core_flags": [],
+   "key": "Video/Video mode",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "NTSC rate Hz",
+   "values": [
+    "59.92",
+    "59.94",
+    "60"
+   ],
+   "default": "59.92",
+   "bits": [
+    111,
+    112
+   ],
+   "core_flags": [
+    "hC"
+   ],
+   "key": "Video/NTSC rate Hz",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "PAL rate Hz",
+   "values": [
+    "49.86",
+    "50"
+   ],
+   "default": "49.86",
+   "bits": [
+    113,
+    113
+   ],
+   "core_flags": [
+    "HC"
+   ],
+   "key": "Video/PAL rate Hz",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Interlace hack",
+   "values": [
+    "Disabled",
+    "Weave",
+    "Bob"
+   ],
+   "default": "Disabled",
+   "bits": [
+    61,
+    62
+   ],
+   "core_flags": [],
+   "key": "Video/Interlace hack",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "GTIA xcolor",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    114,
+    114
+   ],
+   "core_flags": [
+    "DB"
+   ],
+   "key": "Video/GTIA xcolor",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "VBXE",
+   "values": [
+    "Disabled",
+    "$D640",
+    "$D740"
+   ],
+   "default": "Disabled",
+   "bits": [
+    59,
+    60
+   ],
+   "core_flags": [],
+   "key": "Video/VBXE",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Fix VBXE NTSC bug",
+   "values": [
+    "Disabled",
+    "Enabled"
+   ],
+   "default": "Disabled",
+   "bits": [
+    63,
+    63
+   ],
+   "core_flags": [
+    "dB"
+   ],
+   "key": "Video/Fix VBXE NTSC bug",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    22,
+    23
+   ],
+   "core_flags": [],
+   "key": "Video/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Scandoubler FX",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    17,
+    19
+   ],
+   "core_flags": [],
+   "key": "Video/Scandoubler FX",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "NTSC artifacting",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    31,
+    31
+   ],
+   "core_flags": [
+    "d3"
+   ],
+   "key": "Video/NTSC artifacting",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Artifacting colors",
+   "values": [
+    "Set 1",
+    "Set 2"
+   ],
+   "default": "Set 1",
+   "bits": [
+    55,
+    55
+   ],
+   "core_flags": [
+    "d4"
+   ],
+   "key": "Video/Artifacting colors",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Swap artif. colors",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    58,
+    58
+   ],
+   "core_flags": [
+    "d4"
+   ],
+   "key": "Video/Swap artif. colors",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Clip sides",
+   "values": [
+    "Disabled",
+    "Enabled"
+   ],
+   "default": "Disabled",
+   "bits": [
+    34,
+    34
+   ],
+   "core_flags": [],
+   "key": "Video/Clip sides",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    29,
+    30
+   ],
+   "core_flags": [],
+   "key": "Video/Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Vertical Crop",
+   "values": [
+    "Disabled",
+    "216p(5x)"
+   ],
+   "default": "Disabled",
+   "bits": [
+    24,
+    24
+   ],
+   "core_flags": [
+    "d0"
+   ],
+   "key": "Video/Vertical Crop",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Crop Offset",
+   "values": [
+    "0",
+    "2",
+    "4",
+    "8",
+    "10",
+    "12",
+    "-12",
+    "-10",
+    "-8",
+    "-6",
+    "-4",
+    "-2"
+   ],
+   "default": "0",
+   "bits": [
+    25,
+    28
+   ],
+   "core_flags": [
+    "d0"
+   ],
+   "key": "Video/Crop Offset",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio",
+   "name": "Stereo mix (sys)",
+   "values": [
+    "None",
+    "25%",
+    "50%",
+    "100%"
+   ],
+   "default": "None",
+   "bits": [
+    3,
+    4
+   ],
+   "core_flags": [],
+   "key": "Audio/Stereo mix (sys)",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio",
+   "name": "PokeyMax",
+   "values": [
+    "Off/Mono",
+    "Enabled"
+   ],
+   "default": "Off/Mono",
+   "bits": [
+    20,
+    20
+   ],
+   "core_flags": [],
+   "key": "Audio/PokeyMax",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio",
+   "name": "Mono detect",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    71,
+    71
+   ],
+   "core_flags": [
+    "d6"
+   ],
+   "key": "Audio/Mono detect",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio",
+   "name": "Output Left Channel",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    32,
+    32
+   ],
+   "core_flags": [],
+   "key": "Audio/Output Left Channel",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio",
+   "name": "Output Right Channel",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    33,
+    33
+   ],
+   "core_flags": [],
+   "key": "Audio/Output Right Channel",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio",
+   "name": "Post-divide Left",
+   "values": [
+    "4",
+    "8",
+    "1",
+    "2"
+   ],
+   "default": "4",
+   "bits": [
+    72,
+    73
+   ],
+   "core_flags": [],
+   "key": "Audio/Post-divide Left",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio",
+   "name": "Post-divide Right",
+   "values": [
+    "4",
+    "8",
+    "1",
+    "2"
+   ],
+   "default": "4",
+   "bits": [
+    74,
+    75
+   ],
+   "core_flags": [],
+   "key": "Audio/Post-divide Right",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio",
+   "name": "GTIA mix-in",
+   "values": [
+    "Left+Right",
+    "None",
+    "Left",
+    "Right"
+   ],
+   "default": "Left+Right",
+   "bits": [
+    76,
+    77
+   ],
+   "core_flags": [],
+   "key": "Audio/GTIA mix-in",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio",
+   "name": "Tape volume",
+   "values": [
+    "2x",
+    "4x",
+    "0x",
+    "1x"
+   ],
+   "default": "2x",
+   "bits": [
+    78,
+    79
+   ],
+   "core_flags": [],
+   "key": "Audio/Tape volume",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio",
+   "name": "Number of Pokeys",
+   "values": [
+    "4",
+    "1",
+    "2"
+   ],
+   "default": "4",
+   "bits": [
+    80,
+    81
+   ],
+   "core_flags": [
+    "d6"
+   ],
+   "key": "Audio/Number of Pokeys",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio",
+   "name": "Pokey volume",
+   "values": [
+    "Saturated",
+    "Linear"
+   ],
+   "default": "Saturated",
+   "bits": [
+    82,
+    82
+   ],
+   "core_flags": [],
+   "key": "Audio/Pokey volume",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio",
+   "name": "Channel mode",
+   "values": [
+    "Normal",
+    "Split"
+   ],
+   "default": "Normal",
+   "bits": [
+    83,
+    83
+   ],
+   "core_flags": [],
+   "key": "Audio/Channel mode",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio",
+   "name": "Multi IRQs",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    84,
+    84
+   ],
+   "core_flags": [
+    "d6"
+   ],
+   "key": "Audio/Multi IRQs",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio",
+   "name": "SIDs",
+   "values": [
+    "Enabled",
+    "Disabled"
+   ],
+   "default": "Enabled",
+   "bits": [
+    85,
+    85
+   ],
+   "core_flags": [
+    "d6"
+   ],
+   "key": "Audio/SIDs",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio",
+   "name": "SID1 filter",
+   "values": [
+    "8580",
+    "6581"
+   ],
+   "default": "8580",
+   "bits": [
+    86,
+    86
+   ],
+   "core_flags": [
+    "d7"
+   ],
+   "key": "Audio/SID1 filter",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio",
+   "name": "SID2 filter",
+   "values": [
+    "8580",
+    "6581"
+   ],
+   "default": "8580",
+   "bits": [
+    87,
+    87
+   ],
+   "core_flags": [
+    "d7"
+   ],
+   "key": "Audio/SID2 filter",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio",
+   "name": "SID1 DFix/audio-in",
+   "values": [
+    "DigiFix",
+    "None",
+    "Mixer LB"
+   ],
+   "default": "DigiFix",
+   "bits": [
+    88,
+    89
+   ],
+   "core_flags": [
+    "d7"
+   ],
+   "key": "Audio/SID1 DFix/audio-in",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio",
+   "name": "SID2 DFix/audio-in",
+   "values": [
+    "DigiFix",
+    "None",
+    "Mixer LB"
+   ],
+   "default": "DigiFix",
+   "bits": [
+    90,
+    91
+   ],
+   "core_flags": [
+    "d7"
+   ],
+   "key": "Audio/SID2 DFix/audio-in",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio",
+   "name": "Covox/Sample",
+   "values": [
+    "Enabled",
+    "Disabled"
+   ],
+   "default": "Enabled",
+   "bits": [
+    95,
+    95
+   ],
+   "core_flags": [
+    "d6"
+   ],
+   "key": "Audio/Covox/Sample",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio",
+   "name": "SID/CVX1+2 LB src",
+   "values": [
+    "Pokey1+2",
+    "Pokey3+4",
+    "Covox",
+    "SID",
+    "PSG",
+    "GTIA",
+    "Tape"
+   ],
+   "default": "Pokey1+2",
+   "bits": [
+    92,
+    94
+   ],
+   "core_flags": [
+    "dA"
+   ],
+   "key": "Audio/SID/CVX1+2 LB src",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio",
+   "name": "Covox3+4 LB src",
+   "values": [
+    "Pokey3+4",
+    "Covox",
+    "SID",
+    "PSG",
+    "GTIA",
+    "Tape",
+    "Pokey1+2"
+   ],
+   "default": "Pokey3+4",
+   "bits": [
+    96,
+    98
+   ],
+   "core_flags": [
+    "d8"
+   ],
+   "key": "Audio/Covox3+4 LB src",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio",
+   "name": "PSGs",
+   "values": [
+    "Enabled",
+    "Disabled"
+   ],
+   "default": "Enabled",
+   "bits": [
+    99,
+    99
+   ],
+   "core_flags": [
+    "d6"
+   ],
+   "key": "Audio/PSGs",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio",
+   "name": "PSG clock",
+   "values": [
+    "2MHz",
+    "1MHz",
+    "1.79MHz"
+   ],
+   "default": "2MHz",
+   "bits": [
+    100,
+    101
+   ],
+   "core_flags": [
+    "d9"
+   ],
+   "key": "Audio/PSG clock",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio",
+   "name": "PSG stereo",
+   "values": [
+    "Polish",
+    "Czech",
+    "By chip",
+    "Mono"
+   ],
+   "default": "Polish",
+   "bits": [
+    102,
+    103
+   ],
+   "core_flags": [
+    "d9"
+   ],
+   "key": "Audio/PSG stereo",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio",
+   "name": "PSG envelope",
+   "values": [
+    "32 steps",
+    "16 steps"
+   ],
+   "default": "32 steps",
+   "bits": [
+    104,
+    104
+   ],
+   "core_flags": [
+    "d9"
+   ],
+   "key": "Audio/PSG envelope",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio",
+   "name": "PSG volume",
+   "values": [
+    "Log 0",
+    "Log 1",
+    "Log 2",
+    "Linear"
+   ],
+   "default": "Log 0",
+   "bits": [
+    105,
+    106
+   ],
+   "core_flags": [
+    "d9"
+   ],
+   "key": "Audio/PSG volume",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Swap Joysticks 1&2",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    21,
+    21
+   ],
+   "core_flags": [],
+   "key": "Input/Swap Joysticks 1&2",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Mouse X",
+   "values": [
+    "Normal",
+    "Inverted"
+   ],
+   "default": "Normal",
+   "bits": [
+    56,
+    56
+   ],
+   "core_flags": [],
+   "key": "Input/Mouse X",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Mouse Y",
+   "values": [
+    "Normal",
+    "Inverted"
+   ],
+   "default": "Normal",
+   "bits": [
+    6,
+    6
+   ],
+   "core_flags": [],
+   "key": "Input/Mouse Y",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "Atari800_20260823.rbf",
+  "rbf_md5": "7bcbbcef45687e37d9b2087a7800ee6a",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:10:27",
+  "confstr_sha1": "02f394e134c8b3e72dee54fd53053be38e0a36bc"
+ }
+}

@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/TatungEinstein_20250907.rbf",
+ "rbf_md5": "06e9fc3b361a5015c14e42229998b80c",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "TatungEinstein;;S0,DSK,Mount Disk 0:;-;O89,Aspect ratio,Original,Full Screen,[ARC1],[ARC2];O35,Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%,CRT 75%;-;OA,Einstein Version,TC01,256;-;O2,Joystick,Digital,Analog;O6,Diagnostic ROM mounted,Off,On;O7,Border,Off,On;-;T0,Reset;R0,Reset and close OSD;V,v250907",
+ "dumped": "2026-11-13T23:13:46"
+}

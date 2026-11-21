@@ -1,0 +1,506 @@
+{
+ "coreshell_profile": 1,
+ "system": "appleiigs",
+ "variant": "stock",
+ "name": "Apple-IIgs",
+ "rbf": "_Computer/Apple-IIgs",
+ "setname": null,
+ "core_name": "Apple-IIgs",
+ "config_file": "Apple-IIgs.CFG",
+ "games_dir": "games/Apple-IIgs",
+ "saves_dir": "saves/Apple-IIgs",
+ "rom": {
+  "index": 0,
+  "type": "s",
+  "exts": [
+   "HDV",
+   "PO",
+   "2MG"
+  ]
+ },
+ "slots": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "HDV",
+    "PO",
+    "2MG"
+   ],
+   "label": ""
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "HDV",
+    "PO",
+    "2MG"
+   ],
+   "label": ""
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "WOZ",
+    "PO",
+    "2MG"
+   ],
+   "label": "WOZ 3.5"
+  },
+  {
+   "index": 3,
+   "type": "s",
+   "exts": [
+    "WOZ",
+    "DSK",
+    "DO",
+    "PO",
+    "NIB",
+    "2MG"
+   ],
+   "label": "WOZ 5.25"
+  },
+  {
+   "index": 4,
+   "type": "s",
+   "exts": [
+    "RAM"
+   ],
+   "label": "PRAM NVRAM"
+  }
+ ],
+ "files": [],
+ "mounts": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "HDV",
+    "PO",
+    "2MG"
+   ],
+   "label": "",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "HDV",
+    "PO",
+    "2MG"
+   ],
+   "label": "",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "WOZ",
+    "PO",
+    "2MG"
+   ],
+   "label": "WOZ 3.5",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 3,
+   "type": "s",
+   "exts": [
+    "WOZ",
+    "DSK",
+    "DO",
+    "PO",
+    "NIB",
+    "2MG"
+   ],
+   "label": "WOZ 5.25",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 4,
+   "type": "s",
+   "exts": [
+    "RAM"
+   ],
+   "label": "PRAM NVRAM",
+   "page": 2,
+   "flags": []
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Save NVRAM",
+   "bits": [
+    21,
+    21
+   ],
+   "kind": "reset",
+   "page": 2,
+   "flags": []
+  },
+  {
+   "name": "Load NVRAM",
+   "bits": [
+    22,
+    22
+   ],
+   "kind": "reset",
+   "page": 2,
+   "flags": []
+  },
+  {
+   "name": "Warm Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Cold Reset",
+   "bits": [
+    1,
+    1
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "CPU Speed",
+   "values": [
+    "2.8 MHz (Std)",
+    "3.6 MHz",
+    "4.8 MHz",
+    "7.2 MHz",
+    "14.3 MHz"
+   ],
+   "default": "2.8 MHz (Std)",
+   "bits": [
+    12,
+    14
+   ],
+   "core_flags": [],
+   "key": "CPU Speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Serial Port",
+   "values": [
+    "Modem (Slot 2)",
+    "Printer (Slot 1)"
+   ],
+   "default": "Modem (Slot 2)",
+   "bits": [
+    26,
+    26
+   ],
+   "core_flags": [],
+   "key": "Serial Port",
+   "mgl_ok": true
+  },
+  {
+   "page": "Accelerator",
+   "name": "Card",
+   "values": [
+    "ZipGS",
+    "TransWarp GS",
+    "None (OSD speed only)"
+   ],
+   "default": "ZipGS",
+   "bits": [
+    15,
+    16
+   ],
+   "core_flags": [],
+   "key": "Accelerator/Card",
+   "mgl_ok": true
+  },
+  {
+   "page": "Accelerator",
+   "name": "Speaker Delay",
+   "values": [
+    "Enabled",
+    "Disabled"
+   ],
+   "default": "Enabled",
+   "bits": [
+    17,
+    17
+   ],
+   "core_flags": [
+    "H0"
+   ],
+   "key": "Accelerator/Speaker Delay",
+   "mgl_ok": true
+  },
+  {
+   "page": "Accelerator",
+   "name": "Joystick Delay",
+   "values": [
+    "Enabled",
+    "Disabled"
+   ],
+   "default": "Enabled",
+   "bits": [
+    18,
+    18
+   ],
+   "core_flags": [
+    "H0"
+   ],
+   "key": "Accelerator/Joystick Delay",
+   "mgl_ok": true
+  },
+  {
+   "page": "Accelerator",
+   "name": "Counter Delay",
+   "values": [
+    "Enabled",
+    "Disabled"
+   ],
+   "default": "Enabled",
+   "bits": [
+    20,
+    20
+   ],
+   "core_flags": [
+    "H0"
+   ],
+   "key": "Accelerator/Counter Delay",
+   "mgl_ok": true
+  },
+  {
+   "page": "Accelerator",
+   "name": "Sync to Sys 1MHz (CPS)",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    19,
+    19
+   ],
+   "core_flags": [
+    "H0"
+   ],
+   "key": "Accelerator/Sync to Sys 1MHz (CPS)",
+   "mgl_ok": true
+  },
+  {
+   "page": "Accelerator",
+   "name": "AppleTalk/IRQ Delay",
+   "values": [
+    "Enabled",
+    "Disabled"
+   ],
+   "default": "Enabled",
+   "bits": [
+    23,
+    23
+   ],
+   "core_flags": [],
+   "key": "Accelerator/AppleTalk/IRQ Delay",
+   "mgl_ok": true
+  },
+  {
+   "page": "Accelerator",
+   "name": "Startup Graphics",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    24,
+    24
+   ],
+   "core_flags": [
+    "h0"
+   ],
+   "key": "Accelerator/Startup Graphics",
+   "mgl_ok": true
+  },
+  {
+   "page": "Accelerator",
+   "name": "Startup Sound",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    25,
+    25
+   ],
+   "core_flags": [
+    "h0"
+   ],
+   "key": "Accelerator/Startup Sound",
+   "mgl_ok": true
+  },
+  {
+   "page": "System",
+   "name": "ROM Version",
+   "values": [
+    "ROM1",
+    "ROM3"
+   ],
+   "default": "ROM1",
+   "bits": [
+    11,
+    11
+   ],
+   "core_flags": [],
+   "key": "System/ROM Version",
+   "mgl_ok": true
+  },
+  {
+   "page": "System",
+   "name": "Force Self Test",
+   "values": [
+    "OFF",
+    "ON"
+   ],
+   "default": "OFF",
+   "bits": [
+    10,
+    10
+   ],
+   "core_flags": [],
+   "key": "System/Force Self Test",
+   "mgl_ok": true
+  },
+  {
+   "page": "System",
+   "name": "Uthernet II",
+   "values": [
+    "Off",
+    "Slot 3",
+    "Slot 4"
+   ],
+   "default": "Off",
+   "bits": [
+    27,
+    28
+   ],
+   "core_flags": [],
+   "key": "System/Uthernet II",
+   "mgl_ok": true
+  },
+  {
+   "page": "System",
+   "name": "Network",
+   "values": [
+    "eth0",
+    "macvlan",
+    "tap0",
+    "eth1"
+   ],
+   "default": "eth0",
+   "bits": [
+    29,
+    30
+   ],
+   "core_flags": [],
+   "key": "System/Network",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    121,
+    122
+   ],
+   "core_flags": [],
+   "key": "Video/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    31,
+    32
+   ],
+   "core_flags": [],
+   "key": "Video/Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Vertical crop",
+   "values": [
+    "Off",
+    "216p(5x)"
+   ],
+   "default": "Off",
+   "bits": [
+    33,
+    33
+   ],
+   "core_flags": [],
+   "key": "Video/Vertical crop",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    34,
+    36
+   ],
+   "core_flags": [],
+   "key": "Video/Scandoubler Fx",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "repo": "MiSTer-devel/Apple-IIgs_MiSTer",
+  "commit": "d75c8cea07ca1237bd2b6b1c9ce693ec46643d97",
+  "file": "Apple-IIgs.sv",
+  "rbf": "Apple-IIgs_20261110.rbf",
+  "rbf_md5": "2b80ac8d7865d4a96a1ca2e705b4b418",
+  "confstr_sha1": "7a8141f9704826d3860002ce5c68f24582afc393"
+ }
+}

@@ -1,0 +1,65 @@
+{
+ "coreshell_profile": 1,
+ "system": "slugcross",
+ "variant": "other",
+ "name": "SlugCross",
+ "rbf": "_Other/SlugCross",
+ "setname": null,
+ "core_name": "SlugCross",
+ "config_file": "SlugCross.CFG",
+ "games_dir": "games/SlugCross",
+ "saves_dir": "saves/SlugCross",
+ "rom": null,
+ "slots": [],
+ "files": [],
+ "mounts": [],
+ "triggers": [],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Difficulty",
+   "values": [
+    "0",
+    "1",
+    "2",
+    "3"
+   ],
+   "default": "0",
+   "bits": [
+    2,
+    3
+   ],
+   "core_flags": [],
+   "key": "Difficulty",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    8,
+    9
+   ],
+   "core_flags": [],
+   "key": "Aspect ratio",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "SlugCross_20240727.rbf",
+  "rbf_md5": "8d3b0b6f6da66788b39f9d3c3d4a2daa",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:16:45",
+  "confstr_sha1": "d8d24d1e849491ebd8cb28658f2527d076fd35ab"
+ }
+}

@@ -1,0 +1,228 @@
+{
+ "coreshell_profile": 1,
+ "system": "macplus",
+ "variant": "stock",
+ "name": "MACPLUS",
+ "rbf": "_Computer/MacPlus",
+ "setname": null,
+ "core_name": "MACPLUS",
+ "config_file": "MACPLUS.CFG",
+ "games_dir": "games/MACPLUS",
+ "saves_dir": "saves/MACPLUS",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "DSK"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Mount Pri Floppy"
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Mount Sec Floppy"
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "IMG",
+    "VHD"
+   ],
+   "label": "Mount SCSI-6"
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "IMG",
+    "VHD"
+   ],
+   "label": "Mount SCSI-5"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Mount Pri Floppy",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Mount Sec Floppy",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "IMG",
+    "VHD"
+   ],
+   "label": "Mount SCSI-6",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "IMG",
+    "VHD"
+   ],
+   "label": "Mount SCSI-5",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Reset & Apply CPU+Memory",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    7,
+    8
+   ],
+   "core_flags": [],
+   "key": "Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    11,
+    12
+   ],
+   "core_flags": [],
+   "key": "Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Model",
+   "values": [
+    "Plus",
+    "SE"
+   ],
+   "default": "Plus",
+   "bits": [
+    9,
+    9
+   ],
+   "core_flags": [],
+   "key": "Model",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Speed",
+   "values": [
+    "8MHz",
+    "16MHz"
+   ],
+   "default": "8MHz",
+   "bits": [
+    5,
+    5
+   ],
+   "core_flags": [],
+   "key": "Speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "CPU",
+   "values": [
+    "68000",
+    "68010",
+    "68020"
+   ],
+   "default": "68000",
+   "bits": [
+    13,
+    14
+   ],
+   "core_flags": [],
+   "key": "CPU",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Memory",
+   "values": [
+    "1MB",
+    "4MB"
+   ],
+   "default": "1MB",
+   "bits": [
+    4,
+    4
+   ],
+   "core_flags": [],
+   "key": "Memory",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "MacPlus_20260603.rbf",
+  "rbf_md5": "40a9d019e27b8ef574b1b76bcf6ff35c",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:11:55",
+  "confstr_sha1": "c6ba36f3d79e17de1c2729556cfd1ab260febf01"
+ }
+}

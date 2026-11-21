@@ -1,0 +1,7 @@
+{
+ "rbf": "_Other/DUKE3D.rbf",
+ "rbf_md5": "eb88c34f4a2c1abbd911786eb788ef7a",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "duke3d;O[10],Music,On,Off;O[12:11],FPS Overlay,Off,Simple,Detailed;O[14:13],Scanlines,Off,25%,50%,75%;O[38:37],Scale,V-Integer,Normal,Narrower HV-Integer,Wider HV-Integer;O[42:39],H Size,0,+1,+2,+3,+4,-4,-3,-2,-1;O[50:47],V Size,0,+1,+2,+3,+4,-4,-3,-2,-1;O[29:25],H Position,0,+1,+2,+3,+4,+5,+6,+7,+8,-8,-7,-6,-5,-4,-3,-2,-1;O[46:43],V Position,0,+1,+2,+3,+4,+5,+6,+7,-8,-7,-6,-5,-4,-3,-2,-1;-;T[22],Restart;-;J1,Fire,Jump,Next Weapon,Prev Weapon,Open,Run,Select,Start;jn,A,B,X,Y,L,R,Select,Start;V,v",
+ "dumped": "2026-11-13T23:14:44"
+}

@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/Sun-2_20261022.rbf",
+ "rbf_md5": "0ce8a33507a772861b410598428ea67b",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "Sun-2;UART9600;-;SC0,IMGVHD,Pri. disk (ID 0);S1,QIC,Tape (ID 4);O[4:3],Tape volume,1,2,3;F0,ROM,Load ROM;-;O[11:9],Network interface,eth0,None,eth1,macvlan,tap0;-;P1,Machine;P2,Video;P3,Input;P4,Audio;-;h0-,Changes pending;R[0],Apply and reset;P1O[12],Colour board,On,Off;P1-;P1T[13],Stop-A (abort);P2O[2:1],Aspect ratio,Original,Full Screen,[ARC1],[ARC2];P2O[6:5],Scale,V-Integer,Normal,Narrower HV-Integer,Wider HV-Integer;P3O[14],Swap Alt/Win keys,No,Yes;P4O[8:7],Keyboard bell,Normal,Loud,Quiet,Off;v,1;V,v261022",
+ "dumped": "2026-11-13T23:13:22"
+}

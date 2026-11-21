@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/CoCo2_20250312.rbf",
+ "rbf_md5": "18ba1fc0d599900ccb5682cb91ae7f18",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "CoCo2;;-;OE,Cart Slot,Cartridge,Disk;-;H1F1,CCCROM,Load Cartridge;H2S0,DSK,Load Disk Drive 0;H2S1,DSK,Load Disk Drive 1;H2S2,DSK,Load Disk Drive 2;H2S3,DSK,Load Disk Drive 3;-;OC,Tape Input,File,ADC;-;H0F2,CAS,Load Cassette;H0TR,Stop & Rewind;-;H0S4,CAS,Save Cassette;H0OS,Cass Rwd=0 / Rec=1,0,1;-;OD,Monitor Tape Sound,No,Yes;OQ,Show Tape Status,Yes,No;-;P1,Video Settings;P1-;P1-, -= Video Settings =-;P1-;P1OJ,Aspect ratio,Original,Full Screen;P1OFH,Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%,CRT 75%;P1O4,Overscan,Hidden,Visible;P1O3,Artifact,Enable,Disable;P1O2,Artifact Phase,Normal,Reverse;-;OM,Keyboard Layout,PC,CoCo;OL,D-Pad Joystick emu,No,Yes;OA,Swap Joysticks,Off,On;-;O89,Machine,CoCo2,Dragon32,Dragon64;-;OB,Debug display,Off,On;-;RN,Hard Reset;R0,Reset;J,Button;jn,A;V,v250312-002",
+ "dumped": "2026-11-13T23:10:56"
+}

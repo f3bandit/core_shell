@@ -1,0 +1,702 @@
+{
+ "coreshell_profile": 1,
+ "system": "gbmidi",
+ "variant": "other",
+ "name": "GBMidi",
+ "rbf": "_Other/GBMidi",
+ "setname": null,
+ "core_name": "GBMidi",
+ "config_file": "GBMidi.CFG",
+ "games_dir": "games/GBMidi",
+ "saves_dir": "saves/GBMidi",
+ "rom": {
+  "index": 0,
+  "type": "f",
+  "exts": [
+   "BIN"
+  ]
+ },
+ "slots": [],
+ "files": [
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load BIOS",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Midi Source",
+   "values": [
+    "USB",
+    "Din"
+   ],
+   "default": "USB",
+   "bits": [
+    2,
+    2
+   ],
+   "core_flags": [
+    "D1"
+   ],
+   "key": "Midi Source",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Musical Gamepad",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    3,
+    3
+   ],
+   "core_flags": [],
+   "key": "Musical Gamepad",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Midi Ch 1 Voice",
+   "values": [
+    "Pulse 1",
+    "Pulse 2",
+    "Wave",
+    "Noise"
+   ],
+   "default": "Pulse 1",
+   "bits": [
+    67,
+    68
+   ],
+   "core_flags": [
+    "DB"
+   ],
+   "key": "Midi Ch 1 Voice",
+   "mgl_ok": true
+  },
+  {
+   "page": "Pulse 1 Settings",
+   "name": "Patch",
+   "values": [
+    "Blank",
+    "Lead",
+    "Pad",
+    "Blip"
+   ],
+   "default": "Blank",
+   "bits": [
+    19,
+    21
+   ],
+   "core_flags": [],
+   "key": "Pulse 1 Settings/Patch",
+   "mgl_ok": true
+  },
+  {
+   "page": "Pulse 1 Settings",
+   "name": "Duty Cycle",
+   "values": [
+    "12.5",
+    "25",
+    "50"
+   ],
+   "default": "12.5",
+   "bits": [
+    5,
+    6
+   ],
+   "core_flags": [
+    "D3",
+    "D4"
+   ],
+   "key": "Pulse 1 Settings/Duty Cycle",
+   "mgl_ok": true
+  },
+  {
+   "page": "Pulse 1 Settings",
+   "name": "Duty ctrld by ModWheel",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    13,
+    13
+   ],
+   "core_flags": [
+    "D4"
+   ],
+   "key": "Pulse 1 Settings/Duty ctrld by ModWheel",
+   "mgl_ok": true
+  },
+  {
+   "page": "Pulse 1 Settings",
+   "name": "Auto-Duty",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    15,
+    15
+   ],
+   "core_flags": [],
+   "key": "Pulse 1 Settings/Auto-Duty",
+   "mgl_ok": true
+  },
+  {
+   "page": "Pulse 1 Settings",
+   "name": "Vibrato",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    14,
+    14
+   ],
+   "core_flags": [],
+   "key": "Pulse 1 Settings/Vibrato",
+   "mgl_ok": true
+  },
+  {
+   "page": "Pulse 1 Settings",
+   "name": "Blip",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    17,
+    17
+   ],
+   "core_flags": [],
+   "key": "Pulse 1 Settings/Blip",
+   "mgl_ok": true
+  },
+  {
+   "page": "Pulse 1 Settings",
+   "name": "Fade Out",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    8,
+    8
+   ],
+   "core_flags": [],
+   "key": "Pulse 1 Settings/Fade Out",
+   "mgl_ok": true
+  },
+  {
+   "page": "Pulse 1 Settings",
+   "name": " Fade Speed",
+   "values": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9"
+   ],
+   "default": "0",
+   "bits": [
+    9,
+    12
+   ],
+   "core_flags": [
+    "d2"
+   ],
+   "key": "Pulse 1 Settings/ Fade Speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "Pulse 2 Settings",
+   "name": "Patch",
+   "values": [
+    "Blank",
+    "Lead",
+    "Pad",
+    "Blip"
+   ],
+   "default": "Blank",
+   "bits": [
+    36,
+    38
+   ],
+   "core_flags": [],
+   "key": "Pulse 2 Settings/Patch",
+   "mgl_ok": true
+  },
+  {
+   "page": "Pulse 2 Settings",
+   "name": "Duty Cycle",
+   "values": [
+    "12.5",
+    "25",
+    "50"
+   ],
+   "default": "12.5",
+   "bits": [
+    22,
+    23
+   ],
+   "core_flags": [
+    "D6",
+    "D7"
+   ],
+   "key": "Pulse 2 Settings/Duty Cycle",
+   "mgl_ok": true
+  },
+  {
+   "page": "Pulse 2 Settings",
+   "name": "Duty ctrld by ModWheel",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    30,
+    30
+   ],
+   "core_flags": [
+    "D7"
+   ],
+   "key": "Pulse 2 Settings/Duty ctrld by ModWheel",
+   "mgl_ok": true
+  },
+  {
+   "page": "Pulse 2 Settings",
+   "name": "Auto-Duty",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    32,
+    32
+   ],
+   "core_flags": [],
+   "key": "Pulse 2 Settings/Auto-Duty",
+   "mgl_ok": true
+  },
+  {
+   "page": "Pulse 2 Settings",
+   "name": "Vibrato",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    31,
+    31
+   ],
+   "core_flags": [],
+   "key": "Pulse 2 Settings/Vibrato",
+   "mgl_ok": true
+  },
+  {
+   "page": "Pulse 2 Settings",
+   "name": "Blip",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    34,
+    34
+   ],
+   "core_flags": [],
+   "key": "Pulse 2 Settings/Blip",
+   "mgl_ok": true
+  },
+  {
+   "page": "Pulse 2 Settings",
+   "name": "Fade Out",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    25,
+    25
+   ],
+   "core_flags": [],
+   "key": "Pulse 2 Settings/Fade Out",
+   "mgl_ok": true
+  },
+  {
+   "page": "Pulse 2 Settings",
+   "name": " Fade Speed",
+   "values": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9"
+   ],
+   "default": "0",
+   "bits": [
+    26,
+    29
+   ],
+   "core_flags": [
+    "d8"
+   ],
+   "key": "Pulse 2 Settings/ Fade Speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "Wave Settings",
+   "name": "Patch",
+   "values": [
+    "Bass",
+    "Lead",
+    "Kick"
+   ],
+   "default": "Bass",
+   "bits": [
+    49,
+    51
+   ],
+   "core_flags": [],
+   "key": "Wave Settings/Patch",
+   "mgl_ok": true
+  },
+  {
+   "page": "Wave Settings",
+   "name": "Waveform",
+   "values": [
+    "Bass",
+    "Lead",
+    "Triangle",
+    "Saw",
+    "Square"
+   ],
+   "default": "Bass",
+   "bits": [
+    52,
+    55
+   ],
+   "core_flags": [],
+   "key": "Wave Settings/Waveform",
+   "mgl_ok": true
+  },
+  {
+   "page": "Wave Settings",
+   "name": "Vibrato",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    56,
+    56
+   ],
+   "core_flags": [],
+   "key": "Wave Settings/Vibrato",
+   "mgl_ok": true
+  },
+  {
+   "page": "Wave Settings",
+   "name": "Blip",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    57,
+    57
+   ],
+   "core_flags": [],
+   "key": "Wave Settings/Blip",
+   "mgl_ok": true
+  },
+  {
+   "page": "Wave Settings",
+   "name": "Pitch Fall",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    58,
+    58
+   ],
+   "core_flags": [],
+   "key": "Wave Settings/Pitch Fall",
+   "mgl_ok": true
+  },
+  {
+   "page": "Wave Settings",
+   "name": " Fall Speed",
+   "values": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5"
+   ],
+   "default": "0",
+   "bits": [
+    59,
+    61
+   ],
+   "core_flags": [
+    "dE"
+   ],
+   "key": "Wave Settings/ Fall Speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "Wave Settings",
+   "name": "Fade Out",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    62,
+    62
+   ],
+   "core_flags": [],
+   "key": "Wave Settings/Fade Out",
+   "mgl_ok": true
+  },
+  {
+   "page": "Wave Settings",
+   "name": " Fade Speed",
+   "values": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9"
+   ],
+   "default": "0",
+   "bits": [
+    63,
+    66
+   ],
+   "core_flags": [
+    "dA"
+   ],
+   "key": "Wave Settings/ Fade Speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "Noise Settings",
+   "name": "Patch",
+   "values": [
+    "Blank",
+    "Drum",
+    "Crash"
+   ],
+   "default": "Blank",
+   "bits": [
+    69,
+    71
+   ],
+   "core_flags": [],
+   "key": "Noise Settings/Patch",
+   "mgl_ok": true
+  },
+  {
+   "page": "Noise Settings",
+   "name": "Noise Type",
+   "values": [
+    "White",
+    "Periodic"
+   ],
+   "default": "White",
+   "bits": [
+    39,
+    39
+   ],
+   "core_flags": [],
+   "key": "Noise Settings/Noise Type",
+   "mgl_ok": true
+  },
+  {
+   "page": "Noise Settings",
+   "name": "Pitch Fall",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    40,
+    40
+   ],
+   "core_flags": [],
+   "key": "Noise Settings/Pitch Fall",
+   "mgl_ok": true
+  },
+  {
+   "page": "Noise Settings",
+   "name": " Fall Speed",
+   "values": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5"
+   ],
+   "default": "0",
+   "bits": [
+    41,
+    43
+   ],
+   "core_flags": [
+    "dD"
+   ],
+   "key": "Noise Settings/ Fall Speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "Noise Settings",
+   "name": "Fade Out",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    44,
+    44
+   ],
+   "core_flags": [],
+   "key": "Noise Settings/Fade Out",
+   "mgl_ok": true
+  },
+  {
+   "page": "Noise Settings",
+   "name": " Fade Speed",
+   "values": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9"
+   ],
+   "default": "0",
+   "bits": [
+    45,
+    48
+   ],
+   "core_flags": [
+    "d9"
+   ],
+   "key": "Noise Settings/ Fade Speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Echo (P1 to P2)",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    16,
+    16
+   ],
+   "core_flags": [
+    "DC"
+   ],
+   "key": "Echo (P1 to P2)",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Auto-Polyphony(P1+P2)x4",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    7,
+    7
+   ],
+   "core_flags": [
+    "D1",
+    "D5"
+   ],
+   "key": "Auto-Polyphony(P1+P2)x4",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "GBMidi_20240811.rbf",
+  "rbf_md5": "3e10abec4bce25684c675a7b03dd0758",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:15:41",
+  "confstr_sha1": "f3e520b1d91416508cdf91179fe9186e781795d7"
+ }
+}

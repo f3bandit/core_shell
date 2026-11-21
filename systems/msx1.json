@@ -1,0 +1,343 @@
+{
+ "coreshell_profile": 1,
+ "system": "msx1",
+ "variant": "stock",
+ "name": "MSX1",
+ "rbf": "_Computer/MSX1",
+ "setname": null,
+ "core_name": "MSX1",
+ "config_file": "MSX1.CFG",
+ "games_dir": "games/MSX1",
+ "saves_dir": "saves/MSX1",
+ "rom": {
+  "index": 2,
+  "type": "f",
+  "exts": [
+   "ROM"
+  ]
+ },
+ "slots": [
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "SLOT A load"
+  },
+  {
+   "index": 3,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "SLOT B load"
+  },
+  {
+   "index": 4,
+   "type": "f",
+   "exts": [
+    "CAS"
+   ],
+   "label": "Cas File"
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Mount Drive A:"
+  }
+ ],
+ "files": [
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "SLOT A load",
+   "page": 0,
+   "flags": [
+    "H3"
+   ],
+   "remember_dir": false
+  },
+  {
+   "index": 3,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "SLOT B load",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 4,
+   "type": "f",
+   "exts": [
+    "CAS"
+   ],
+   "label": "Cas File",
+   "page": 0,
+   "flags": [
+    "H0"
+   ],
+   "remember_dir": false
+  },
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load BIOS",
+   "page": 2,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Mount Drive A:",
+   "page": 0,
+   "flags": [
+    "h1"
+   ]
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Tape Rewind",
+   "bits": [
+    13,
+    13
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": [
+    "H0"
+   ]
+  },
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Reset & Detach ROM Cartridge",
+   "bits": [
+    15,
+    15
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Reset and close OSD",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "SLOT A",
+   "values": [
+    "ROM mapper auto",
+    "ROM mapper none",
+    "ROM mapper gamemaster2",
+    "ROM mapper Konami",
+    "ROM mapper KonamiSCC",
+    "ROM mapper ASCII8",
+    "ROM mapper ASCII16",
+    "ROM mapper linear64k",
+    "ROM mapper R-TYPE",
+    "FDD VY0010"
+   ],
+   "default": "ROM mapper auto",
+   "bits": [
+    17,
+    20
+   ],
+   "core_flags": [
+    "h2"
+   ],
+   "key": "SLOT A",
+   "mgl_ok": false
+  },
+  {
+   "page": "",
+   "name": "SLOT A",
+   "values": [
+    "Empty",
+    "FDD VY0010",
+    "Gamemaster2"
+   ],
+   "default": "Empty",
+   "bits": [
+    17,
+    20
+   ],
+   "core_flags": [
+    "H2"
+   ],
+   "key": "SLOT A #2",
+   "mgl_ok": false
+  },
+  {
+   "page": "",
+   "name": "SLOT B",
+   "values": [
+    "ROM mapper Auto",
+    "ROM mapper none",
+    "ROM mapper gamemaster2",
+    "ROM mapper Konami",
+    "ROM mapper KonamiSCC",
+    "ROM mapper ASCII8",
+    "ROM mapper ASCII16",
+    "ROM mapper linear64k",
+    "ROM mapper R-TYPE"
+   ],
+   "default": "ROM mapper Auto",
+   "bits": [
+    21,
+    24
+   ],
+   "core_flags": [],
+   "key": "SLOT B",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Tape Input",
+   "values": [
+    "File",
+    "ADC"
+   ],
+   "default": "File",
+   "bits": [
+    12,
+    12
+   ],
+   "core_flags": [],
+   "key": "Tape Input",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video settings",
+   "name": "Video mode",
+   "values": [
+    "PAL",
+    "NTSC"
+   ],
+   "default": "PAL",
+   "bits": [
+    16,
+    16
+   ],
+   "core_flags": [],
+   "key": "Video settings/Video mode",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video settings",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    1,
+    2
+   ],
+   "core_flags": [],
+   "key": "Video settings/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video settings",
+   "name": "Border",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    3,
+    3
+   ],
+   "core_flags": [],
+   "key": "Video settings/Border",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video settings",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%"
+   ],
+   "default": "None",
+   "bits": [
+    7,
+    9
+   ],
+   "core_flags": [],
+   "key": "Video settings/Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video settings",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    10,
+    11
+   ],
+   "core_flags": [],
+   "key": "Video settings/Scale",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "MSX1_20250108.rbf",
+  "rbf_md5": "0c2def7f3d8da9567b269978cd0d1564",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:11:43",
+  "confstr_sha1": "acf50e8d6aa6a9aa5d545a742ea6c06ee40dda6d"
+ }
+}

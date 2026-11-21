@@ -1,0 +1,39 @@
+{
+ "coreshell_profile": 1,
+ "system": "chipid",
+ "variant": "stock",
+ "name": "ChipID",
+ "rbf": "_Utility/ChipID",
+ "setname": null,
+ "core_name": "ChipID",
+ "config_file": "ChipID.CFG",
+ "games_dir": "games/ChipID",
+ "saves_dir": "saves/ChipID",
+ "rom": null,
+ "slots": [],
+ "files": [],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "ChipID.rbf",
+  "rbf_md5": "b76824424e180042b0af3141a88cf4ee",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:17:42",
+  "confstr_sha1": "ef4d45f31fb23c30a96de6778b53468ed6db27f2"
+ }
+}

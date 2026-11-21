@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/BasicMasterJr_20261031.rbf",
+ "rbf_md5": "576e5cbd1560429b8cb59b486a404b3c",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "BasicMasterJr;;-;FS1,BMTBINSAV,Tape;-;O[124],Tape speed,32x,Normal;T[126],Rewind tape;T[119],New tape recording;-;O[117:115],Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%,CRT 75%;O[122:121],Aspect ratio,Original,Full Screen,[ARC1],[ARC2];O[125],Tape overlay,On,Off;-;O[123],Keyboard layout,JIS,US;O[127],Swap Alt/Win keys,No,Yes;O[114],Gamepad to keys,On,Off;-;R[0],Reset and close OSD;I,Tape ready (rewound);J1,A,B,X,Y,L,R,Select,Start;jn,A,B,X,Y,L,R,Select,Start;V,v261031",
+ "dumped": "2026-11-13T23:10:39"
+}

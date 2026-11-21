@@ -1,0 +1,319 @@
+{
+ "coreshell_profile": 1,
+ "system": "loopy",
+ "variant": "stock",
+ "name": "Loopy",
+ "rbf": "_Console/Loopy",
+ "setname": null,
+ "core_name": "Loopy",
+ "config_file": "Loopy_v1.CFG",
+ "games_dir": "games/Loopy",
+ "saves_dir": "saves/Loopy",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "BIN"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load Cartridge"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load Cartridge",
+   "page": 0,
+   "flags": [],
+   "remember_dir": true
+  }
+ ],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Save state (Alt-F1)",
+   "bits": [
+    20,
+    20
+   ],
+   "kind": "reset",
+   "page": 3,
+   "flags": []
+  },
+  {
+   "name": "Restore state (F1)",
+   "bits": [
+    21,
+    21
+   ],
+   "kind": "reset",
+   "page": 3,
+   "flags": []
+  },
+  {
+   "name": "Save Backup RAM",
+   "bits": [
+    16,
+    16
+   ],
+   "kind": "toggle",
+   "page": 3,
+   "flags": [
+    "h0"
+   ]
+  },
+  {
+   "name": "Restore Backup RAM",
+   "bits": [
+    17,
+    17
+   ],
+   "kind": "toggle",
+   "page": 3,
+   "flags": [
+    "h0"
+   ]
+  },
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "Advanced",
+   "name": "Savestate slot",
+   "values": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "default": "1",
+   "bits": [
+    18,
+    19
+   ],
+   "core_flags": [],
+   "key": "Advanced/Savestate slot",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    121,
+    122
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    22,
+    24
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    25,
+    27
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Vertical Crop",
+   "values": [
+    "Disabled",
+    "216p(5x)"
+   ],
+   "default": "Disabled",
+   "bits": [
+    4,
+    4
+   ],
+   "core_flags": [
+    "d1"
+   ],
+   "key": "Audio & Video/Vertical Crop",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Border",
+   "values": [
+    "Crop",
+    "Show"
+   ],
+   "default": "Crop",
+   "bits": [
+    5,
+    5
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Border",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Port 1 device",
+   "values": [
+    "Gamepad",
+    "Mouse"
+   ],
+   "default": "Gamepad",
+   "bits": [
+    12,
+    12
+   ],
+   "core_flags": [],
+   "key": "Input/Port 1 device",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Multitap",
+   "values": [
+    "Off",
+    "2 pads",
+    "3 pads",
+    "4 pads"
+   ],
+   "default": "Off",
+   "bits": [
+    13,
+    14
+   ],
+   "core_flags": [],
+   "key": "Input/Multitap",
+   "mgl_ok": true
+  },
+  {
+   "page": "Advanced",
+   "name": "Autosave",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    15,
+    15
+   ],
+   "core_flags": [],
+   "key": "Advanced/Autosave",
+   "mgl_ok": true
+  },
+  {
+   "page": "Printer",
+   "name": "Seal cassette",
+   "values": [
+    "Absent",
+    "Fitted"
+   ],
+   "default": "Absent",
+   "bits": [
+    7,
+    7
+   ],
+   "core_flags": [],
+   "key": "Printer/Seal cassette",
+   "mgl_ok": true
+  },
+  {
+   "page": "Printer",
+   "name": "Print preview",
+   "values": [
+    "Off",
+    "Corner",
+    "Full"
+   ],
+   "default": "Off",
+   "bits": [
+    8,
+    9
+   ],
+   "core_flags": [],
+   "key": "Printer/Print preview",
+   "mgl_ok": true
+  },
+  {
+   "page": "Printer",
+   "name": "Ink order",
+   "values": [
+    "YMC",
+    "MCY",
+    "CYM",
+    "CMY"
+   ],
+   "default": "YMC",
+   "bits": [
+    10,
+    11
+   ],
+   "core_flags": [],
+   "key": "Printer/Ink order",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "Loopy_20261002.rbf",
+  "rbf_md5": "278f8c268394488265f7217bd7b32800",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:05:05",
+  "confstr_sha1": "de6ca18fe13e8b6e79a664ab746ca3c22c1a94d2"
+ }
+}

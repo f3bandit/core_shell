@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/PDP1_20260702.rbf",
+ "rbf_md5": "1adad346cb1923624b8251534fd053a2",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "PDP1;;-;F1,PDPRIMBIN,Load PDP/RIM/BIN;T[5],Enable RIM mode;T[6],Disable RIM mode;-;R[7],Reset;T[0],Reset;R[0],Reset and close OSD;-;O[1],Aspect Ratio,Original,Wide;O[4],Hardware multiply,No,Yes;-;O[8],Var. brightness,Yes,No;O[9],CRT wait,No,Yes;-;J,Left,Right,Thrust,Fire,HyperSpace;v,1;V,v260702",
+ "dumped": "2026-11-13T23:12:42"
+}

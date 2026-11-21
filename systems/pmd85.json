@@ -1,0 +1,167 @@
+{
+ "coreshell_profile": 1,
+ "system": "pmd85",
+ "variant": "stock",
+ "name": "PMD85",
+ "rbf": "_Computer/PMD85",
+ "setname": null,
+ "core_name": "PMD85",
+ "config_file": "PMD85.CFG",
+ "games_dir": "games/PMD85",
+ "saves_dir": "saves/PMD85",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "rmm",
+   "mrm"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "rmm",
+    "mrm"
+   ],
+   "label": "Load to ROM Pack"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "rmm",
+    "mrm"
+   ],
+   "label": "Load to ROM Pack",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Eject ROM Pack",
+   "bits": [
+    7,
+    7
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Reset PMD",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "PMD85 version",
+   "values": [
+    "2A",
+    "3"
+   ],
+   "default": "2A",
+   "bits": [
+    8,
+    8
+   ],
+   "core_flags": [],
+   "key": "PMD85 version",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Video",
+   "values": [
+    "Green",
+    "TV",
+    "RGB",
+    "ColorACE"
+   ],
+   "default": "Green",
+   "bits": [
+    1,
+    2
+   ],
+   "core_flags": [],
+   "key": "Video",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Sound",
+   "values": [
+    "Beeper",
+    "Beeper + MIF85 (K2)"
+   ],
+   "default": "Beeper",
+   "bits": [
+    9,
+    9
+   ],
+   "core_flags": [
+    "D6"
+   ],
+   "key": "Sound",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Joystick",
+   "values": [
+    "None",
+    "K3",
+    "K4"
+   ],
+   "default": "None",
+   "bits": [
+    4,
+    5
+   ],
+   "core_flags": [],
+   "key": "Joystick",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Mouse",
+   "values": [
+    "None",
+    "K2"
+   ],
+   "default": "None",
+   "bits": [
+    6,
+    6
+   ],
+   "core_flags": [
+    "D9"
+   ],
+   "key": "Mouse",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "PMD85_20251219.rbf",
+  "rbf_md5": "81e9249a382166f5f88d63f0c89c50ff",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:12:48",
+  "confstr_sha1": "b874e095426a6097a18c3f9f87d70f9404f30894"
+ }
+}

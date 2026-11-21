@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/AcornElectron_20250930.rbf",
+ "rbf_md5": "b48c3577463bdf02964096a3922ba933",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "AcornElectron;;-;S0,VHD;-;O89,Aspect ratio,Original,Full Screen,[ARC1],[ARC2];O35,Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%,CRT 75%;OA,Swap Joysticks,No,Yes;-;OC,Tape Input,File,ADC;H0F2,UEF,Load Cassette;H0TF,Stop & Rewind;OD,Monitor Tape Sound,No,Yes;OE,Show Tape Status,Yes,No;-;-;R0,Reset;JA,Fire;V,v250930",
+ "dumped": "2026-11-13T23:09:46"
+}

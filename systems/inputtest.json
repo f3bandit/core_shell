@@ -1,0 +1,236 @@
+{
+ "coreshell_profile": 1,
+ "system": "inputtest",
+ "variant": "stock",
+ "name": "InputTest",
+ "rbf": "_Utility/InputTest",
+ "setname": null,
+ "core_name": "InputTest",
+ "config_file": "InputTest.CFG",
+ "games_dir": "games/InputTest",
+ "saves_dir": "saves/InputTest",
+ "rom": {
+  "index": 3,
+  "type": "f",
+  "exts": [
+   "BIN"
+  ]
+ },
+ "slots": [
+  {
+   "index": 3,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load Sprite ROM"
+  },
+  {
+   "index": 4,
+   "type": "f",
+   "exts": [
+    "YM"
+   ],
+   "label": "Load Music (YM5/6)"
+  }
+ ],
+ "files": [
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load BIOS",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 3,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load Sprite ROM",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 4,
+   "type": "f",
+   "exts": [
+    "YM"
+   ],
+   "label": "Load Music (YM5/6)",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Open menu",
+   "bits": [
+    10,
+    10
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    3,
+    5
+   ],
+   "core_flags": [],
+   "key": "Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Analog Video H-Pos",
+   "values": [
+    "0",
+    "-1",
+    "-2",
+    "-3",
+    "-4",
+    "-5",
+    "-6",
+    "-7",
+    "8",
+    "7",
+    "6",
+    "5",
+    "4",
+    "3",
+    "2",
+    "1"
+   ],
+   "default": "0",
+   "bits": [
+    16,
+    19
+   ],
+   "core_flags": [],
+   "key": "Analog Video H-Pos",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Analog Video V-Pos",
+   "values": [
+    "0",
+    "-1",
+    "-2",
+    "-3",
+    "-4",
+    "-5",
+    "-6",
+    "-7",
+    "8",
+    "7",
+    "6",
+    "5",
+    "4",
+    "3",
+    "2",
+    "1"
+   ],
+   "default": "0",
+   "bits": [
+    20,
+    23
+   ],
+   "core_flags": [],
+   "key": "Analog Video V-Pos",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    8,
+    9
+   ],
+   "core_flags": [],
+   "key": "Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Rotate video",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    6,
+    6
+   ],
+   "core_flags": [],
+   "key": "Rotate video",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Flip video",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    7,
+    7
+   ],
+   "core_flags": [],
+   "key": "Flip video",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "InputTest_20260810.rbf",
+  "rbf_md5": "ec883dbed783eb3bf16d5eeceb1739ac",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:17:45",
+  "confstr_sha1": "1cda934de86a283fc05a98da70040eebeec9a10b"
+ }
+}

@@ -1,0 +1,200 @@
+{
+ "coreshell_profile": 1,
+ "system": "quake",
+ "variant": "other",
+ "name": "MiSTer_Quake",
+ "rbf": "_Other/Quake",
+ "setname": null,
+ "core_name": "MiSTer_Quake",
+ "config_file": "MiSTer_Quake.CFG",
+ "games_dir": "games/MiSTer_Quake",
+ "saves_dir": "saves/MiSTer_Quake",
+ "rom": null,
+ "slots": [],
+ "files": [],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Restart",
+   "bits": [
+    22,
+    22
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "FPS Overlay",
+   "values": [
+    "Off",
+    "Simple",
+    "Detailed"
+   ],
+   "default": "Off",
+   "bits": [
+    11,
+    12
+   ],
+   "core_flags": [],
+   "key": "FPS Overlay",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Scanlines",
+   "values": [
+    "Off",
+    "25%",
+    "50%",
+    "75%"
+   ],
+   "default": "Off",
+   "bits": [
+    13,
+    14
+   ],
+   "core_flags": [],
+   "key": "Scanlines",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    37,
+    38
+   ],
+   "core_flags": [],
+   "key": "Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "H Size",
+   "values": [
+    "0",
+    "+1",
+    "+2",
+    "+3",
+    "+4",
+    "-4",
+    "-3",
+    "-2",
+    "-1"
+   ],
+   "default": "0",
+   "bits": [
+    39,
+    42
+   ],
+   "core_flags": [],
+   "key": "H Size",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "V Size",
+   "values": [
+    "0",
+    "+1",
+    "+2",
+    "+3",
+    "+4",
+    "-4",
+    "-3",
+    "-2",
+    "-1"
+   ],
+   "default": "0",
+   "bits": [
+    47,
+    50
+   ],
+   "core_flags": [],
+   "key": "V Size",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "H Position",
+   "values": [
+    "0",
+    "+1",
+    "+2",
+    "+3",
+    "+4",
+    "+5",
+    "+6",
+    "+7",
+    "+8",
+    "-8",
+    "-7",
+    "-6",
+    "-5",
+    "-4",
+    "-3",
+    "-2",
+    "-1"
+   ],
+   "default": "0",
+   "bits": [
+    25,
+    29
+   ],
+   "core_flags": [],
+   "key": "H Position",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "V Position",
+   "values": [
+    "0",
+    "+1",
+    "+2",
+    "+3",
+    "+4",
+    "+5",
+    "+6",
+    "+7",
+    "-8",
+    "-7",
+    "-6",
+    "-5",
+    "-4",
+    "-3",
+    "-2",
+    "-1"
+   ],
+   "default": "0",
+   "bits": [
+    43,
+    46
+   ],
+   "core_flags": [],
+   "key": "V Position",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "Quake.rbf",
+  "rbf_md5": "f8d5b7290ba32867b0e4c065c95bd560",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:21:33",
+  "confstr_sha1": "0a1d5ba8ef7517f43224e9ba9939163db0676247"
+ }
+}

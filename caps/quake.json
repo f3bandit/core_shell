@@ -1,0 +1,10 @@
+{
+ "name": "Quake",
+ "kind": "port",
+ "by": "neofreno (Mister_Quake)",
+ "any": [
+  {
+   "path": "MiSTer_Quake"
+  }
+ ]
+}

@@ -1,0 +1,10 @@
+{
+ "name": "Solarus",
+ "kind": "addon",
+ "by": "the Solarus team",
+ "any": [
+  {
+   "path": "Scripts/Solarus.sh"
+  }
+ ]
+}

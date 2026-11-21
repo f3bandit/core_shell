@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/Oric_20260603.rbf",
+ "rbf_md5": "1d3541e97878492508dec4bf6f2096b2",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "Oric;;FS1,TAP,Load TAP file;FS4,SNA,Load Snapshot;h0T[53],Rewind Tape;-;h6S0,NIBDSKDO ,Mount Drive A:;h6S1,NIBDSKDO ,Mount Drive B:;H6S0,DSK,Mount Drive A:;H6S1,DSK,Mount Drive B:;H6S2,DSK,Mount Drive C:;H6S3,DSK,Mount Drive D:;H2O[17],Drive A Write Protect,Off,On;h2-,Drive A is Write Protected;H3O[18],Drive B Write Protect,Off,On;h3-,Drive B is Write Protected;H6H4O[19],Drive C Write Protect,Off,On;H6h4-,Drive C is Write Protected;H6H5O[20],Drive D Write Protect,Off,On;H6h5-,Drive D is Write Protected;-;P1,Settings;P1O[6:5],FDD Controller,Auto,Off,On;P1FC2,ROM,Load Alternative Bios;P1-;P1O[51:50],Tape Audio,Mute,Low,High;P1O[52],Tape Input,File,ADC;P1O[59:58],Tape Load,Fast,Ultra,Off;P1O[57],Autoload TAP,On,Off;P1O[60],Named CLOAD Rewind,On,Off;P1-;P1O[55:54],Joystick Adapter,None,PASE,IJK;P1-;P1O[122:121],Aspect ratio,Original,Full Screen,[ARC1],[ARC2];P1O[12:10],Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%;P1O[16:15],Scale,Normal,V-Integer,Narrower HV-Integer,Wider HV-Integer;P1-;P1O[9:8],Audio,Stereo,ABC (West Europe),ACB (East Europe);H1O[4:3],ROM,Pravetz 8D,Oric Atmos,Oric 1;h1O[4:3],ROM,Pravetz 8D,Oric Atmos,Oric 1,Loadable Bios;-;R0,Reset & Apply;J,Fire;V,v260603",
+ "dumped": "2026-11-13T23:12:27"
+}

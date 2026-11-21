@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/UKNC_20261025.rbf",
+ "rbf_md5": "736fc7ea8eb63bae7d9784be1819e06c",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "UKNC;UART19200;-;S0,DSK,Mount FDD 0;S1,DSK,Mount FDD 0;S2,VHD,Mount HDD;-;O[11],CPU Speed ,Normal,Turbo;O[12],Palette ,GRB,RGB;O[122:121],Aspect ratio,Original,Full Screen,[ARC1],[ARC2];O[10:8],Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%,CRT 75%;-;-;R[0],Reset;V,v261025",
+ "dumped": "2026-11-13T23:13:58"
+}

@@ -1,0 +1,20 @@
+{
+ "name": "Games from the drive",
+ "kind": "addon",
+ "by": "Anime0t4ku, bonna79 (Main_MiSTer_Physical_Disc)",
+ "needs": [
+  "disc_drive"
+ ],
+ "any": [
+  {
+   "path": "MiSTer_Physical-CD"
+  },
+  {
+   "path": "phosphor/bin/MiSTer_phosphor"
+  },
+  {
+   "path": "coreshell/bin/discfs"
+  }
+ ],
+ "note": "The A0CD-* Main (Update All: Physical CD Support), or a frontend Main with it merged."
+}

@@ -1,0 +1,17 @@
+#!/bin/sh
+# Coreshell's supervisor (coreshell.sh starts it): Coreshell started again at once if it stops, the frontend waiting
+# for it meanwhile (phosphord's coreshell.c). In ps: "sh .../core-shell-supervisor" and its child "core-shell".
+# Usage: core-shell-supervisor <socket> <log>
+# Copyright (c) 2026 f3bandit. Licensed under the Apache License 2.0 (LICENSE, NOTICE).
+trap 'kill $child 2>/dev/null; rm -f "$1"; exit 0' TERM INT
+first=--refresh-at-start
+while :; do
+  python3 -m coreshell serve --socket "$1" $first </dev/null >>"$2" 2>&1 &
+  child=$!
+  wait $child
+  rc=$?
+  rm -f "$1"                       # (down: the frontend waits for a new one, not a dead socket)
+  echo "coreshell: stopped ($rc), starting it again" >>"$2"
+  first=
+  sleep 0.3                        # (not a busy loop if it fails to start)
+done

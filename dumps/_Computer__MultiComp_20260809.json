@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/MultiComp_20260809.rbf",
+ "rbf_md5": "1089bb958572497047a19f4a9222679b",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "MultiComp;;S,IMG;OF,Reset after Mount,No,Yes;-;O68,CPU-ROM,Z80-CP/M,Z80-BASIC,6502-Basic,6809-Basic,6809-Forth;-;O9B,Baud Rate tty,115200,38400,19200,9600,4800,2400;OC,Serial Port,Console Port,User IO Port;OE,Flow Control,None,RTS/CTS;-;RE,Reset;V,v260809",
+ "dumped": "2026-11-13T23:12:09"
+}

@@ -1,0 +1,7 @@
+{
+ "rbf": "_Console/GameCom_20260903.rbf",
+ "rbf_md5": "d3088bbbe0185343f7831f26c80aefd1",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "Gamecom;SS3E000000:200000,UART115200:9600,Modem;-;FS1,TGC,Load Cartridge 1;F2,TGC,Load Cartridge 2 (No SS);-;O[46:45],Savestate Slot,1,2,3,4;d7rA,Save state(Alt+F1-F4);d7rB,Restore state(F1-F4);-;C,Cheats;-;P1,Input;P1-;P1O[18:17],Touch Control,Mouse,Stick,Hybrid,Off;P1O[20:19],Touch Speed,Normal,Slow,Fast,Turbo;P1O[23],Touch Cursor,On,Off;P1O[21],Serial Port,On,Off;P1O[26],Serial Route,Internal,SNAC;P2,Video;P2-;P2O[25],Video Output,Buffered 60Hz,Native 75Hz;P2O[3:1],Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%,CRT 75%;P2O[122:121],Aspect ratio,Original,Full Screen,[ARC1],[ARC2];P2O[120:119],Scale,Normal,V-Integer,Narrower HV-Integer,Wider HV-Integer;P2O[6:5],Custom Palette,Kit.com,Greenish,Greyish,Custom;H0P2FC3,GBP,Load Palette;P3,Advanced;P3-;P3O[22],Stop-Free Boot,On,Off;P3O[27],Cart SDRAM ROM,2-Cycle,Wait Ready;P3O[24],Reset During Cart Load,Off,On;P3OD,Autosave,On,Off;P3O[44],Savestates to SDCard,On,Off;-;R0,Reset;J1,A,B,C,D,Pause,Menu,Sound,Power,Touch Tap,Savestates;I,External BIOS is expected as boot.rom and arrives on ioctl index 0.,-,-,-,Slot=L/R Load=U Save=D,Active Slot 1,Active Slot 2,Active Slot 3,Active Slot 4,Save to state 1,Restore state 1,Save to state 2,Restore state 2,Save to state 3,Restore state 3,Save to state 4,Restore state 4;v,7;V,v260904",
+ "dumped": "2026-11-13T23:04:38"
+}

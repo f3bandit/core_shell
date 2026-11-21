@@ -1,0 +1,7 @@
+{
+ "rbf": "_Utility/memtest_20210130.rbf",
+ "rbf_md5": "9df7cc52a86d0a4710e074e990744687",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "MEMTEST;;J1, Reset Freq, Reset Test, Switch IC;jn, A, Start, B;jp, B, Start, A;V,v210130",
+ "dumped": "2026-11-13T23:17:51"
+}

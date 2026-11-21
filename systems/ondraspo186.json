@@ -1,0 +1,122 @@
+{
+ "coreshell_profile": 1,
+ "system": "ondraspo186",
+ "variant": "stock",
+ "name": "Ondra SPO 186",
+ "rbf": "_Computer/Ondra_SPO186",
+ "setname": null,
+ "core_name": "Ondra SPO 186",
+ "config_file": "Ondra SPO 186.CFG",
+ "games_dir": "games/Ondra SPO 186",
+ "saves_dir": "saves/Ondra SPO 186",
+ "rom": null,
+ "slots": [],
+ "files": [],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Reset Ondra",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "ROM",
+   "values": [
+    "ViLi",
+    "Tesla v5",
+    "Ondra PLUS 1.4",
+    "Test ROM"
+   ],
+   "default": "ViLi",
+   "bits": [
+    5,
+    6
+   ],
+   "core_flags": [],
+   "key": "ROM",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "ADC line pass through",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    7,
+    7
+   ],
+   "core_flags": [],
+   "key": "ADC line pass through",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Cassette out to audio",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    8,
+    8
+   ],
+   "core_flags": [],
+   "key": "Cassette out to audio",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Ondra SD",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    9,
+    9
+   ],
+   "core_flags": [],
+   "key": "Ondra SD",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Ondra Melodik",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    10,
+    10
+   ],
+   "core_flags": [],
+   "key": "Ondra Melodik",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "Ondra_SPO186_20251219.rbf",
+  "rbf_md5": "40b5086b40b9dac015c60ea67955d96d",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:12:24",
+  "confstr_sha1": "bdb57d64d2576e9316e5aeeaba97e49513030cf4"
+ }
+}

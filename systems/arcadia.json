@@ -1,0 +1,175 @@
+{
+ "coreshell_profile": 1,
+ "system": "arcadia",
+ "variant": "stock",
+ "name": "Arcadia",
+ "rbf": "_Console/Arcadia",
+ "setname": null,
+ "core_name": "Arcadia",
+ "config_file": "Arcadia.CFG",
+ "games_dir": "games/Arcadia",
+ "saves_dir": "saves/Arcadia",
+ "rom": {
+  "index": 0,
+  "type": "f",
+  "exts": [
+   "BIN"
+  ]
+ },
+ "slots": [
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load Cartridge"
+  }
+ ],
+ "files": [
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load Cartridge",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Reset and close OSD",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Auto-Center",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    3,
+    3
+   ],
+   "core_flags": [],
+   "key": "Auto-Center",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Swap Joystick XY",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    4,
+    4
+   ],
+   "core_flags": [],
+   "key": "Swap Joystick XY",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "D-Pad Analog Emulation",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    5,
+    5
+   ],
+   "core_flags": [],
+   "key": "D-Pad Analog Emulation",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Swap Controllers",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    8,
+    8
+   ],
+   "core_flags": [],
+   "key": "Swap Controllers",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Pause Core on OSD",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    9,
+    9
+   ],
+   "core_flags": [],
+   "key": "Pause Core on OSD",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    6,
+    7
+   ],
+   "core_flags": [],
+   "key": "Aspect ratio",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "Arcadia_20260816.rbf",
+  "rbf_md5": "d8050c1754629476092c0f15f34aad31",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:00:19",
+  "confstr_sha1": "de9a33e65c10814b40c28d66bd24b93cd07c4f04"
+ }
+}

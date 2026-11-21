@@ -1,0 +1,382 @@
+{
+ "coreshell_profile": 1,
+ "system": "zxnext",
+ "variant": "stock",
+ "name": "ZXNext",
+ "rbf": "_Computer/ZXNext",
+ "setname": null,
+ "core_name": "ZXNext",
+ "config_file": "ZXNext.CFG",
+ "games_dir": "games/ZXNext",
+ "saves_dir": "saves/ZXNext",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "TZX",
+   "CSW"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "TZX",
+    "CSW"
+   ],
+   "label": "Load Tape"
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "VHD"
+   ],
+   "label": "Mount C:"
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "VHD"
+   ],
+   "label": "Mount D:"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "TZX",
+    "CSW"
+   ],
+   "label": "Load Tape",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "VHD"
+   ],
+   "label": "Mount C:",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "VHD"
+   ],
+   "label": "Mount D:",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "triggers": [
+  {
+   "name": "CPU Clock:           3.5MHz",
+   "bits": [
+    10,
+    10
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": [
+    "h3"
+   ]
+  },
+  {
+   "name": "CPU Clock:             7MHz",
+   "bits": [
+    10,
+    10
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": [
+    "h4"
+   ]
+  },
+  {
+   "name": "CPU Clock:            14MHz",
+   "bits": [
+    10,
+    10
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": [
+    "h5"
+   ]
+  },
+  {
+   "name": "CPU Clock:            28MHz",
+   "bits": [
+    10,
+    10
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": [
+    "h6"
+   ]
+  },
+  {
+   "name": "Soft Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Hard Reset",
+   "bits": [
+    9,
+    9
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Hard Reset on C: mount",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    1,
+    1
+   ],
+   "core_flags": [],
+   "key": "Hard Reset on C: mount",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Aspect Ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    7,
+    8
+   ],
+   "core_flags": [],
+   "key": "Aspect Ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%"
+   ],
+   "default": "None",
+   "bits": [
+    5,
+    6
+   ],
+   "core_flags": [],
+   "key": "Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Narrow Border",
+   "values": [
+    "No",
+    "276",
+    "288",
+    "320"
+   ],
+   "default": "No",
+   "bits": [
+    13,
+    14
+   ],
+   "core_flags": [],
+   "key": "Narrow Border",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Center Image",
+   "values": [
+    "Yes",
+    "No"
+   ],
+   "default": "Yes",
+   "bits": [
+    15,
+    15
+   ],
+   "core_flags": [],
+   "key": "Center Image",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Vertical Crop",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    28,
+    28
+   ],
+   "core_flags": [
+    "H2",
+    "d1"
+   ],
+   "key": "Vertical Crop",
+   "mgl_ok": false
+  },
+  {
+   "page": "",
+   "name": "Vertical Crop",
+   "values": [
+    "No",
+    "270",
+    "216"
+   ],
+   "default": "No",
+   "bits": [
+    28,
+    29
+   ],
+   "core_flags": [
+    "h2",
+    "d1"
+   ],
+   "key": "Vertical Crop #2",
+   "mgl_ok": false
+  },
+  {
+   "page": "",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    26,
+    27
+   ],
+   "core_flags": [],
+   "key": "Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Stereo Mix",
+   "values": [
+    "none",
+    "25%",
+    "50%",
+    "100%"
+   ],
+   "default": "none",
+   "bits": [
+    3,
+    4
+   ],
+   "core_flags": [],
+   "key": "Stereo Mix",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Joysticks Swap",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    2,
+    2
+   ],
+   "core_flags": [],
+   "key": "Joysticks Swap",
+   "mgl_ok": true
+  },
+  {
+   "page": "Debug",
+   "name": "Machine",
+   "values": [
+    "Mister",
+    "Next"
+   ],
+   "default": "Mister",
+   "bits": [
+    11,
+    11
+   ],
+   "core_flags": [
+    "h7"
+   ],
+   "key": "Debug/Machine",
+   "mgl_ok": true
+  },
+  {
+   "page": "Debug",
+   "name": "Issue",
+   "values": [
+    "2",
+    "4"
+   ],
+   "default": "2",
+   "bits": [
+    12,
+    12
+   ],
+   "core_flags": [
+    "h7"
+   ],
+   "key": "Debug/Issue",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "ZXNext_20260603.rbf",
+  "rbf_md5": "4ed2e7e29d4093de1a6106baa3eda236",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:14:23",
+  "confstr_sha1": "b13af8f9493dcc01520bb640ca95d6612d0e4ee0"
+ },
+ "show": [
+  "Debug/Machine",
+  "Debug/Issue"
+ ]
+}

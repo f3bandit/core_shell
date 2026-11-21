@@ -1,0 +1,153 @@
+{
+ "coreshell_profile": 1,
+ "system": "scv",
+ "variant": "stock",
+ "name": "SCV",
+ "rbf": "_Console/SCV",
+ "setname": null,
+ "core_name": "SCV",
+ "config_file": "SCV_v1.CFG",
+ "games_dir": "games/SCV",
+ "saves_dir": "saves/SCV",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "ROM",
+   "BIN"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "ROM",
+    "BIN"
+   ],
+   "label": ""
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "ROM",
+    "BIN"
+   ],
+   "label": "",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Reset and close OSD",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    121,
+    122
+   ],
+   "core_flags": [],
+   "key": "Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Palette",
+   "values": [
+    "RGB",
+    "RF"
+   ],
+   "default": "RGB",
+   "bits": [
+    8,
+    8
+   ],
+   "core_flags": [],
+   "key": "Palette",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Overscan mask",
+   "values": [
+    "Large",
+    "Small",
+    "None"
+   ],
+   "default": "Large",
+   "bits": [
+    9,
+    10
+   ],
+   "core_flags": [],
+   "key": "Overscan mask",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Cartridge mapper",
+   "values": [
+    "automatic",
+    "rom8k",
+    "rom16k",
+    "rom32k",
+    "rom32k_ram",
+    "rom64k",
+    "rom128k",
+    "rom128_ram"
+   ],
+   "default": "automatic",
+   "bits": [
+    16,
+    19
+   ],
+   "core_flags": [],
+   "key": "Cartridge mapper",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "SCV_20250906.rbf",
+  "rbf_md5": "b7d7d45442eec995ead2e8dcf713b88a",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:08:42",
+  "confstr_sha1": "9fc7ae48296057d341be9db4af0a786803710e50"
+ }
+}

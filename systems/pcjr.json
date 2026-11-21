@@ -1,0 +1,537 @@
+{
+ "coreshell_profile": 1,
+ "system": "pcjr",
+ "variant": "stock",
+ "name": "PCjr",
+ "rbf": "_Computer/PCjr",
+ "setname": null,
+ "core_name": "PCjr",
+ "config_file": "PCjr.CFG",
+ "games_dir": "games/PCjr",
+ "saves_dir": "saves/PCjr",
+ "rom": {
+  "index": 2,
+  "type": "f",
+  "exts": [
+   "JRC"
+  ]
+ },
+ "slots": [
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "JRC"
+   ],
+   "label": "Cartridge 1 (JRC):"
+  },
+  {
+   "index": 3,
+   "type": "f",
+   "exts": [
+    "JRC"
+   ],
+   "label": "Cartridge 2 (JRC):"
+  },
+  {
+   "index": 4,
+   "type": "f",
+   "exts": [
+    "JRT"
+   ],
+   "label": "Cassette Tape (JRT):"
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "IMG",
+    "IMA",
+    "VFD"
+   ],
+   "label": "Floppy A:"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "PCjr BIOS:",
+   "page": 1,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "JRC"
+   ],
+   "label": "Cartridge 1 (JRC):",
+   "page": 1,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 3,
+   "type": "f",
+   "exts": [
+    "JRC"
+   ],
+   "label": "Cartridge 2 (JRC):",
+   "page": 1,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 4,
+   "type": "f",
+   "exts": [
+    "JRT"
+   ],
+   "label": "Cassette Tape (JRT):",
+   "page": 1,
+   "flags": [
+    "d1"
+   ],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "IMG",
+    "IMA",
+    "VFD"
+   ],
+   "label": "Floppy A:",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Reset & apply settings",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Write Protect",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    19,
+    19
+   ],
+   "core_flags": [],
+   "key": "Write Protect",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "RAM Size",
+   "values": [
+    "128KB",
+    "192KB",
+    "256KB",
+    "320KB",
+    "384KB",
+    "448KB",
+    "512KB",
+    "576KB",
+    "640KB"
+   ],
+   "default": "128KB",
+   "bits": [
+    3,
+    6
+   ],
+   "core_flags": [],
+   "key": "RAM Size",
+   "mgl_ok": true
+  },
+  {
+   "page": "System & BIOS",
+   "name": "Boot Splash Screen",
+   "values": [
+    "Yes",
+    "No"
+   ],
+   "default": "Yes",
+   "bits": [
+    7,
+    7
+   ],
+   "core_flags": [],
+   "key": "System & BIOS/Boot Splash Screen",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Speaker Volume",
+   "values": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "default": "1",
+   "bits": [
+    32,
+    33
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Speaker Volume",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Tape sound",
+   "values": [
+    "Disabled",
+    "Enabled"
+   ],
+   "default": "Disabled",
+   "bits": [
+    41,
+    41
+   ],
+   "core_flags": [
+    "d2"
+   ],
+   "key": "Audio & Video/Tape sound",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "PCjr Volume",
+   "values": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "default": "1",
+   "bits": [
+    34,
+    35
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/PCjr Volume",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Audio Boost",
+   "values": [
+    "No",
+    "2x",
+    "4x"
+   ],
+   "default": "No",
+   "bits": [
+    36,
+    37
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Audio Boost",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Stereo Mix",
+   "values": [
+    "none",
+    "25%",
+    "50%",
+    "100%"
+   ],
+   "default": "none",
+   "bits": [
+    38,
+    39
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Stereo Mix",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "CRT H offset",
+   "values": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15"
+   ],
+   "default": "0",
+   "bits": [
+    46,
+    49
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/CRT H offset",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "CRT V offset",
+   "values": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7"
+   ],
+   "default": "0",
+   "bits": [
+    50,
+    52
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/CRT V offset",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "VSync Width",
+   "values": [
+    "Auto",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7"
+   ],
+   "default": "Auto",
+   "bits": [
+    54,
+    56
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/VSync Width",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "HSync Width",
+   "values": [
+    "Auto",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7"
+   ],
+   "default": "Auto",
+   "bits": [
+    57,
+    59
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/HSync Width",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%"
+   ],
+   "default": "None",
+   "bits": [
+    1,
+    2
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    8,
+    9
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Border",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    29,
+    29
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Border",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Composite video",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    40,
+    40
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Composite video",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Display",
+   "values": [
+    "Full Color",
+    "Green",
+    "Amber",
+    "B&W",
+    "Red",
+    "Blue",
+    "Fuchsia",
+    "Purple"
+   ],
+   "default": "Full Color",
+   "bits": [
+    14,
+    16
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Display",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Joystick 1",
+   "values": [
+    " Analog",
+    " Digital",
+    " Disabled"
+   ],
+   "default": " Analog",
+   "bits": [
+    23,
+    24
+   ],
+   "core_flags": [],
+   "key": "Hardware/Joystick 1",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Joystick 2",
+   "values": [
+    " Analog",
+    " Digital",
+    " Disabled"
+   ],
+   "default": " Analog",
+   "bits": [
+    25,
+    26
+   ],
+   "core_flags": [],
+   "key": "Hardware/Joystick 2",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Sync Joy to CPU Speed",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    27,
+    27
+   ],
+   "core_flags": [],
+   "key": "Hardware/Sync Joy to CPU Speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Swap Joysticks",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    28,
+    28
+   ],
+   "core_flags": [],
+   "key": "Hardware/Swap Joysticks",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "PCjr_20260313.rbf",
+  "rbf_md5": "f6b6c85673997a07fa7796328766898f",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:12:39",
+  "confstr_sha1": "2665bf96c985d7a7fb240b376f3cc99457f1d9f4"
+ }
+}

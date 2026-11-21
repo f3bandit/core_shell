@@ -1,0 +1,99 @@
+{
+ "coreshell_profile": 1,
+ "system": "altair8800",
+ "variant": "stock",
+ "name": "Altair8800",
+ "rbf": "_Computer/Altair8800",
+ "setname": null,
+ "core_name": "Altair8800",
+ "config_file": "Altair8800.CFG",
+ "games_dir": "games/Altair8800",
+ "saves_dir": "saves/Altair8800",
+ "rom": {
+  "index": 0,
+  "type": "f",
+  "exts": [
+   "ROM"
+  ]
+ },
+ "slots": [
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load Program"
+  }
+ ],
+ "files": [
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load Program",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Enable TurnMon",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    10,
+    10
+   ],
+   "core_flags": [],
+   "key": "Enable TurnMon",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Serial Port",
+   "values": [
+    "Console Port",
+    "User IO Port"
+   ],
+   "default": "Console Port",
+   "bits": [
+    12,
+    12
+   ],
+   "core_flags": [],
+   "key": "Serial Port",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "Altair8800_20241230.rbf",
+  "rbf_md5": "ce91474e605bb7d9ad536c5e99583149",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:09:52",
+  "confstr_sha1": "ee09f0ac5695b01cb186c3650214702c8723af5e"
+ }
+}

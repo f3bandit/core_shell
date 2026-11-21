@@ -1,0 +1,7 @@
+{
+ "rbf": "_Console/MyVision_20250622.rbf",
+ "rbf_md5": "f93d7d38f6931bb9e13cd06d7f7dabf8",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "MyVision;;-;FC1,BIN,Load Cartridge;-;O[3:2],Aspect ratio,Original,Full Screen,[ARC1],[ARC2];-;R[0],Reset;J,Fire (E);V,v250622",
+ "dumped": "2026-11-13T23:08:12"
+}

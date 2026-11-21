@@ -1,0 +1,7 @@
+{
+ "rbf": "_Other/EpochGalaxyII_20260529.rbf",
+ "rbf_md5": "5b2f1af2a5388408299a51e1b7298fc4",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "EpochGalaxyII;;-;O1,Aspect ratio,original,4:3;O[3:2],Screen Rotate,None,90,180,270;O4,Screen Size,100%,50%;-;F,rom,Load File;-;T0,Reset;J0,Fire,Select,StartR0,Reset and close OSD;V,v260529",
+ "dumped": "2026-11-13T23:15:35"
+}

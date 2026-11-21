@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/SGIIndy_20261023.rbf",
+ "rbf_md5": "4dabb5c6524a5354d72394b9572356b1",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "SGIIndy;;-;SC1,IMGISOCHD,Pri. disk (ID 1);SC2,IMGISOCHD,Disk (ID 2);SC3,IMGISOCHD,CD-ROM (ID 6);F0,ROMBIN,Load ROM;-;O[13:12],Memory,32MB,48MB,64MB,128MB;-;P1,Machine;P2,Video;P3,Input;P4,Audio;P5,Advanced;-;h0-,Changes pending;R[0],Apply and reset;P1O[11],Primary caches,On,Off;P2O[10],Display,Graphics,Serial console;P2O[122:121],Aspect ratio,Original,Full Screen,[ARC1],[ARC2];P3O[23],Swap Alt/Win keys,No,Yes;P4O[18],Audio,On,Off;P5O[17],SCSI cache,On,Off;v,1;V,v261023",
+ "dumped": "2026-11-13T23:12:59"
+}

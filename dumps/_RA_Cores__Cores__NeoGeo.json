@@ -1,0 +1,7 @@
+{
+ "rbf": "_RA_Cores/Cores/NeoGeo.rbf",
+ "rbf_md5": "9990633aa1f355f9e59ba2b21706bbff",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "NEOGEO;;-;FS1,*,Load ROM set;S1,CUECHD,Load CD Image;-;H3OP,FM,ON,OFF;H3OQ,ADPCMA,ON,OFF;H3OR,ADPCMB,ON,OFF;H3OS,PSG,ON,OFF;H3oP,ADPCMA CH 1,ON,OFF;H3oQ,ADPCMA CH 2,ON,OFF;H3oR,ADPCMA CH 3,ON,OFF;H3oS,ADPCMA CH 4,ON,OFF;H3oT,ADPCMA CH 5,ON,OFF;H3oU,ADPCMA CH 6,ON,OFF;H3-;O1,System Type,Console(AES),Arcade(MVS);OM,BIOS,UniBIOS,Original;O3,Video Mode,NTSC,PAL;-;o9A,Input,Joystick or Spinner,Joystick,Spinner,Mouse(Irr.Maze);oBC,Multitap,No,NEO-FTC1B,NeoTris;-;H0O4,Memory Card,Plugged,Unplugged;RL,Reload Memory Card;D4RC,Save Memory Card;OO,Autosave,OFF,ON;-;O2,CD Type,CD,CDZ;OTU,CD Speed,1x,2x,3x,4x;OAB,CD Region,US,EU,JP,AS;OF,CD lid,Closed,Opened;H2-;H2O7,[DIP] Settings,OFF,ON;H2O8,[DIP] Freeplay,OFF,ON;H2O9,[DIP] Freeze,OFF,ON;-;P1,Audio & Video;P1-;P1OG,Width,320px,304px;P1o01,Aspect ratio,Original,Full Screen,[ARC1],[ARC2];P1OIK,Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%,CRT 75%;P1-;d5P1o2,Vertical Crop,Disabled,216p(5x);d5P1o36,Crop Offset,0,2,4,8,10,12,-12,-10,-8,-6,-4,-2;P1o78,Scale,Normal,V-Integer,Narrower HV-Integer,Wider HV-Integer;P1-;P1O56,Stereo Mix,none,25%,50%,100%;P1-;-;RE,Reset & apply;J1,A,B,C,D,Start,Select,Coin,ABC,A+B,C+D;jn,A,B,X,Y,Start,Select,L,R,L2,R2;jp,B,A,D,C,Start,Select,L,R,L2,R2;V,v260718",
+ "dumped": "2026-11-13T23:18:20"
+}

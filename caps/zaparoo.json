@@ -1,0 +1,13 @@
+{
+ "name": "Zaparoo",
+ "kind": "addon",
+ "by": "the Zaparoo Project",
+ "any": [
+  {
+   "path": "Scripts/zaparoo.sh"
+  },
+  {
+   "path": "zaparoo/MiSTer_Zaparoo"
+  }
+ ]
+}

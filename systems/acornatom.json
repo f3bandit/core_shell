@@ -1,0 +1,380 @@
+{
+ "coreshell_profile": 1,
+ "system": "acornatom",
+ "variant": "stock",
+ "name": "AcornAtom",
+ "rbf": "_Computer/AcornAtom",
+ "setname": null,
+ "core_name": "AcornAtom",
+ "config_file": "AcornAtom_v2.CFG",
+ "games_dir": "games/AcornAtom",
+ "saves_dir": "saves/AcornAtom",
+ "rom": {
+  "index": 0,
+  "type": "s",
+  "exts": [
+   "VHD"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "UEF",
+    "CSW"
+   ],
+   "label": "Tape"
+  },
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load ROM"
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "VHD"
+   ],
+   "label": "Pri. disk (SD)"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "UEF",
+    "CSW"
+   ],
+   "label": "Tape",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load ROM",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "VHD"
+   ],
+   "label": "Pri. disk (SD)",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Apply and reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "BREAK",
+   "bits": [
+    15,
+    15
+   ],
+   "kind": "toggle",
+   "page": 1,
+   "flags": []
+  },
+  {
+   "name": "Shift-BREAK (menu)",
+   "bits": [
+    20,
+    20
+   ],
+   "kind": "toggle",
+   "page": 1,
+   "flags": []
+  },
+  {
+   "name": "Ctrl-BREAK (no MMC)",
+   "bits": [
+    21,
+    21
+   ],
+   "kind": "toggle",
+   "page": 1,
+   "flags": []
+  },
+  {
+   "name": "Rewind tape",
+   "bits": [
+    18,
+    18
+   ],
+   "kind": "toggle",
+   "page": 1,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "Machine",
+   "name": "Model",
+   "values": [
+    "Atom",
+    "Atom (BBC BASIC)"
+   ],
+   "default": "Atom",
+   "bits": [
+    10,
+    10
+   ],
+   "core_flags": [],
+   "key": "Machine/Model",
+   "mgl_ok": true
+  },
+  {
+   "page": "Machine",
+   "name": "CPU speed",
+   "values": [
+    "1 MHz",
+    "2 MHz",
+    "4 MHz",
+    "8 MHz"
+   ],
+   "default": "1 MHz",
+   "bits": [
+    13,
+    14
+   ],
+   "core_flags": [],
+   "key": "Machine/CPU speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "Machine",
+   "name": "Tape speed",
+   "values": [
+    "8x",
+    "Normal"
+   ],
+   "default": "8x",
+   "bits": [
+    17,
+    17
+   ],
+   "core_flags": [],
+   "key": "Machine/Tape speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    11,
+    12
+   ],
+   "core_flags": [],
+   "key": "Video/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    1,
+    3
+   ],
+   "core_flags": [],
+   "key": "Video/Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Character set",
+   "values": [
+    "Original",
+    "Xtra"
+   ],
+   "default": "Original",
+   "bits": [
+    8,
+    8
+   ],
+   "core_flags": [],
+   "key": "Video/Character set",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Background",
+   "values": [
+    "Black",
+    "Dark"
+   ],
+   "default": "Black",
+   "bits": [
+    9,
+    9
+   ],
+   "core_flags": [],
+   "key": "Video/Background",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Border",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    23,
+    23
+   ],
+   "core_flags": [],
+   "key": "Video/Border",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Tape overlay",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    19,
+    19
+   ],
+   "core_flags": [],
+   "key": "Video/Tape overlay",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Keyboard layout",
+   "values": [
+    "PC (US)",
+    "PC (UK)",
+    "Atom (original)",
+    "Atom (game)"
+   ],
+   "default": "PC (US)",
+   "bits": [
+    6,
+    7
+   ],
+   "core_flags": [],
+   "key": "Input/Keyboard layout",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Swap Alt/Win keys",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    22,
+    22
+   ],
+   "core_flags": [],
+   "key": "Input/Swap Alt/Win keys",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio",
+   "name": "Speaker",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    4,
+    4
+   ],
+   "core_flags": [],
+   "key": "Audio/Speaker",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio",
+   "name": "SID",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    5,
+    5
+   ],
+   "core_flags": [],
+   "key": "Audio/SID",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio",
+   "name": "Tape audio",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    16,
+    16
+   ],
+   "core_flags": [],
+   "key": "Audio/Tape audio",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "repo": "MiSTer-devel/AcornAtom_MiSTer",
+  "commit": "83e204883a92d4662e9b86c8c0fae59cadf14813",
+  "file": "AcornAtom.sv",
+  "rbf": "AcornAtom_20261113.rbf",
+  "rbf_md5": "1d3f5b22c6fef589cc647dc7b44c7415",
+  "confstr_sha1": "38e15584cb6fbc1ff220d1567787c2583e904edc"
+ }
+}

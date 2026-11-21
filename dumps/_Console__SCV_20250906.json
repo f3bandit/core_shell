@@ -1,0 +1,7 @@
+{
+ "rbf": "_Console/SCV_20250906.rbf",
+ "rbf_md5": "b7d7d45442eec995ead2e8dcf713b88a",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "SCV;;-;F1,ROMBIN;-;O[122:121],Aspect ratio,Original,Full Screen,[ARC1],[ARC2];O[8],Palette,RGB,RF;O[10:9],Overscan mask,Large,Small,None;-;O[19:16],Cartridge mapper,automatic,rom8k,rom16k,rom32k,rom32k_ram,rom64k,rom128k,rom128_ram;-;T[0],Reset;R[0],Reset and close OSD;J,Trig 1,Trig 2,SELECT 1,SELECT 2,SELECT 3,SELECT 4,SELECT EN;jn,A,B,X,Y,L,R,Start;v,1;V,v250906",
+ "dumped": "2026-11-13T23:08:42"
+}

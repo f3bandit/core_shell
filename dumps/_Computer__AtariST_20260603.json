@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/AtariST_20260603.rbf",
+ "rbf_md5": "e9bf1cf47efd7cbd4769debda60dd421",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "AtariST;UART19200:9600:4800:2400:1200,MIDI;J,A,B,C,Option,Pause,#,*,0,1,2,3,4/L,5,6/R,7/Z,8/Y,9/X;jn,A,B,X,Select,Start,,,,,,,L,,R;I,ST joysticks,STe joysticks,MT32-pi: SoundFont #0,MT32-pi: SoundFont #1,MT32-pi: SoundFont #2,MT32-pi: SoundFont #3,MT32-pi: SoundFont #4,MT32-pi: SoundFont #5,MT32-pi: SoundFont #6,MT32-pi: SoundFont #7,MT32-pi: MT-32 v1,MT32-pi: MT-32 v2,MT32-pi: CM-32L,MT32-pi: Unknown mode;V,v260603",
+ "dumped": "2026-11-13T23:10:30"
+}

@@ -1,0 +1,56 @@
+{
+ "coreshell_profile": 1,
+ "system": "flappybird",
+ "variant": "other",
+ "name": "FLAPPY",
+ "rbf": "_Other/FlappyBird",
+ "setname": null,
+ "core_name": "FLAPPY",
+ "config_file": "FLAPPY.CFG",
+ "games_dir": "games/FLAPPY",
+ "saves_dir": "saves/FLAPPY",
+ "rom": null,
+ "slots": [],
+ "files": [],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Aspect Ratio",
+   "values": [
+    "4:3",
+    "16:9"
+   ],
+   "default": "4:3",
+   "bits": [
+    8,
+    8
+   ],
+   "core_flags": [],
+   "key": "Aspect Ratio",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "FlappyBird_20250708.rbf",
+  "rbf_md5": "a33e83d8cefb4196ae049501b9c4a4af",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:15:38",
+  "confstr_sha1": "71a94e9017c004e6a650392c6e5def5a5ba09bd3"
+ }
+}

@@ -1,0 +1,54 @@
+{
+ "files": {
+  "MiSTer": {
+   "db": "distribution_mister",
+   "md5": "2e99ab468073aa488d87f78b8797c7c6"
+  },
+  "MiSTer_3S-ARM": {
+   "db": "MultiDatabases/3s-arm",
+   "md5": "eec3c6ad763713b7beec38fd9ef2c857"
+  },
+  "MiSTer_DVDcss": {
+   "db": "MultiDatabases/mister-dvd",
+   "md5": "7bf1317827f61b5fb70fc424d7c24c5b"
+  },
+  "MiSTer_Physical-CD": {
+   "db": "MultiDatabases/physical-disc",
+   "md5": "b0467999560fee4f6cc81510d5bdb5da"
+  },
+  "MiSTer_Quake": {
+   "db": "MultiDatabases/mister-quake",
+   "md5": "72b727112b27980834cef9d7274a3a1b"
+  },
+  "MiSTer_RA": {
+   "db": "theypsilon/RetroAchievementsDB_MiSTer",
+   "md5": "b7d31ddd5470df046d7393a9df2963ce"
+  },
+  "MiSTer_SonicMania": {
+   "db": "MultiDatabases/sonic-mania",
+   "md5": "5f58c89bc424fda4071ddb0e3216f2d8"
+  },
+  "menu.rbf": {
+   "db": "distribution_mister",
+   "md5": "292b36d1976f67b464a31e9d5d0ce66b"
+  }
+ },
+ "linux": {
+  "md5": "7cec2206e2a1133aa307c541219aa08f",
+  "version": "260912"
+ },
+ "main_source": {
+  "commit": "f47acd3d71d302893d8ad49dde4268223cd4c9f8",
+  "date": "2026-11-16",
+  "failed": []
+ },
+ "needs_dump": [
+  "_Computer/MSX_20261118.rbf4859a5ed0c32612c41a457cf9728cca5",
+  "_Computer/MacIIcx_20261110.rbf8cac4f28c7cb1a74e013b618b3bfc3b7",
+  "_Console/GameAndWatch_20230630.rbf0e9a2dd421a781733d01816f430733ba",
+  "_Console/Studio-II_20261115.rbfbc1b9c88b8fab9b687bf895743e00b0a",
+  "_RA_Cores/Cores/MegaDrive.rbfba44684e4c23b38a69e9b423f248e022",
+  "_RA_Cores/Cores/NES.rbf1fda35b272d0ac202c7645100902c792",
+  "_RA_Cores/Cores/SNES.rbfceb180061b08b359a139c4271c3a330c"
+ ]
+}

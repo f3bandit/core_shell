@@ -1,0 +1,655 @@
+{
+ "coreshell_profile": 1,
+ "system": "coco3",
+ "variant": "stock",
+ "name": "COCO3",
+ "rbf": "_Computer/CoCo3",
+ "setname": null,
+ "core_name": "COCO3",
+ "config_file": "COCO3_v51.CFG",
+ "games_dir": "games/COCO3",
+ "saves_dir": "saves/COCO3",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "CCC"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "CCC"
+   ],
+   "label": "Load Cartridge"
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "CAS"
+   ],
+   "label": "Load Cassette"
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Load Disk Drive 0"
+  },
+  {
+   "index": 3,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Load Disk Drive 1"
+  },
+  {
+   "index": 4,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Load Disk Drive 2"
+  },
+  {
+   "index": 5,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Load Disk Drive 3"
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "DSK",
+    "VHD"
+   ],
+   "label": "Load SDC Drive 0"
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "DSK",
+    "VHD"
+   ],
+   "label": "Load SDC Drive 1"
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Load OS9 Floppy /d0"
+  },
+  {
+   "index": 3,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Load OS9 Floppy /d1"
+  },
+  {
+   "index": 4,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Load OS9 Floppy /d3"
+  },
+  {
+   "index": 5,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Load OS9 Floppy /d4"
+  },
+  {
+   "index": 6,
+   "type": "s",
+   "exts": [
+    "CAS"
+   ],
+   "label": "Save Cassette"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "CCC"
+   ],
+   "label": "Load Cartridge",
+   "page": 0,
+   "flags": [
+    "H2"
+   ],
+   "remember_dir": false
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "CAS"
+   ],
+   "label": "Load Cassette",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 3,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load COCO Font",
+   "page": 2,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Load Disk Drive 0",
+   "page": 0,
+   "flags": [
+    "H3"
+   ]
+  },
+  {
+   "index": 3,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Load Disk Drive 1",
+   "page": 0,
+   "flags": [
+    "H3"
+   ]
+  },
+  {
+   "index": 4,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Load Disk Drive 2",
+   "page": 0,
+   "flags": [
+    "H3"
+   ]
+  },
+  {
+   "index": 5,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Load Disk Drive 3",
+   "page": 0,
+   "flags": [
+    "H3"
+   ]
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "DSK",
+    "VHD"
+   ],
+   "label": "Load SDC Drive 0",
+   "page": 0,
+   "flags": [
+    "H1"
+   ]
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "DSK",
+    "VHD"
+   ],
+   "label": "Load SDC Drive 1",
+   "page": 0,
+   "flags": [
+    "H1"
+   ]
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Load OS9 Floppy /d0",
+   "page": 0,
+   "flags": [
+    "H1"
+   ]
+  },
+  {
+   "index": 3,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Load OS9 Floppy /d1",
+   "page": 0,
+   "flags": [
+    "H1"
+   ]
+  },
+  {
+   "index": 4,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Load OS9 Floppy /d3",
+   "page": 0,
+   "flags": [
+    "H1"
+   ]
+  },
+  {
+   "index": 5,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Load OS9 Floppy /d4",
+   "page": 0,
+   "flags": [
+    "H1"
+   ]
+  },
+  {
+   "index": 6,
+   "type": "s",
+   "exts": [
+    "CAS"
+   ],
+   "label": "Save Cassette",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Stop & Rewind",
+   "bits": [
+    15,
+    15
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Easter Egg",
+   "bits": [
+    10,
+    10
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Cold Boot",
+   "bits": [
+    22,
+    22
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Multi-Pak",
+   "values": [
+    "(Slot 2) CoCoSDC",
+    "(Slot3) ECB /Cart",
+    "(Slot 4) Disk"
+   ],
+   "default": "(Slot 2) CoCoSDC",
+   "bits": [
+    12,
+    13
+   ],
+   "core_flags": [],
+   "key": "Multi-Pak",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Monitor Tape Sound",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    17,
+    17
+   ],
+   "core_flags": [],
+   "key": "Monitor Tape Sound",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Cass Rwd=0 / Rec=1",
+   "values": [
+    "0",
+    "1"
+   ],
+   "default": "0",
+   "bits": [
+    14,
+    14
+   ],
+   "core_flags": [],
+   "key": "Cass Rwd=0 / Rec=1",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video Settings",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "Wide",
+    "[ARC1]"
+   ],
+   "default": "Original",
+   "bits": [
+    8,
+    9
+   ],
+   "core_flags": [],
+   "key": "Video Settings/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video Settings",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    3,
+    5
+   ],
+   "core_flags": [],
+   "key": "Video Settings/Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video Settings",
+   "name": "CoCo3 LC",
+   "values": [
+    "Yes",
+    "No-(SG6=Yes)"
+   ],
+   "default": "Yes",
+   "bits": [
+    21,
+    21
+   ],
+   "core_flags": [],
+   "key": "Video Settings/CoCo3 LC",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video Settings",
+   "name": "Artifact Type",
+   "values": [
+    "MESS",
+    "Simple",
+    "NONE"
+   ],
+   "default": "MESS",
+   "bits": [
+    37,
+    38
+   ],
+   "core_flags": [],
+   "key": "Video Settings/Artifact Type",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video Settings",
+   "name": "Artifact Color Set",
+   "values": [
+    "0",
+    "1"
+   ],
+   "default": "0",
+   "bits": [
+    18,
+    18
+   ],
+   "core_flags": [],
+   "key": "Video Settings/Artifact Color Set",
+   "mgl_ok": true
+  },
+  {
+   "page": "Debug Menu",
+   "name": "Swap MiSTer Uart",
+   "values": [
+    "RS CART",
+    "Default"
+   ],
+   "default": "RS CART",
+   "bits": [
+    16,
+    16
+   ],
+   "core_flags": [],
+   "key": "Debug Menu/Swap MiSTer Uart",
+   "mgl_ok": true
+  },
+  {
+   "page": "Debug Menu",
+   "name": "Swap Uart to IO",
+   "values": [
+    "RS IO",
+    "MiSTer"
+   ],
+   "default": "RS IO",
+   "bits": [
+    30,
+    30
+   ],
+   "core_flags": [],
+   "key": "Debug Menu/Swap Uart to IO",
+   "mgl_ok": true
+  },
+  {
+   "page": "Debug Menu",
+   "name": "Display Debug",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    29,
+    29
+   ],
+   "core_flags": [],
+   "key": "Debug Menu/Display Debug",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "D-Pad Joystick emu",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    23,
+    23
+   ],
+   "core_flags": [],
+   "key": "D-Pad Joystick emu",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Swap Joysticks",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    6,
+    6
+   ],
+   "core_flags": [],
+   "key": "Swap Joysticks",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Use Mouse for Rt Joystk",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    28,
+    28
+   ],
+   "core_flags": [],
+   "key": "Use Mouse for Rt Joystk",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Force Turbo",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    24,
+    24
+   ],
+   "core_flags": [],
+   "key": "Force Turbo",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Turbo Speed",
+   "values": [
+    "CoCo Ctrl",
+    " 0.89 Mhz",
+    "1.78 Mhz",
+    "2.86 Mhz",
+    " 3.58 Mhz",
+    "7.16 Mhz",
+    "9.54 Mhz"
+   ],
+   "default": "CoCo Ctrl",
+   "bits": [
+    32,
+    34
+   ],
+   "core_flags": [],
+   "key": "Turbo Speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Memory Size",
+   "values": [
+    "512K",
+    "1M",
+    "2M",
+    "16M"
+   ],
+   "default": "512K",
+   "bits": [
+    25,
+    27
+   ],
+   "core_flags": [],
+   "key": "Memory Size",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Auto Run",
+   "values": [
+    "No",
+    "DOS",
+    "AUTO.BAS"
+   ],
+   "default": "No",
+   "bits": [
+    40,
+    41
+   ],
+   "core_flags": [],
+   "key": "Auto Run",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "CoCo3_20260927.rbf",
+  "rbf_md5": "574a5c379baa30746bc3bfd9b94d6213",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:11:01",
+  "confstr_sha1": "33e95769988ed5d5dcd41382d13e573f509bfbdd"
+ }
+}

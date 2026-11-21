@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/Apple-I_20251001.rbf",
+ "rbf_md5": "fa0f38d4e30c861129352a9946d988ef",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "APPLE-I;;F,TXT,Load Ascii;O1,Scanlines,Off,On;O2,RAM Size,8K,32K;-;R0,Reset;V,v251001",
+ "dumped": "2026-11-13T23:10:15"
+}

@@ -1,0 +1,9 @@
+.cache/
+__pycache__/
+*.pyc
+alert.md
+core_changes.json
+update.log
+discfs/discfs
+corepatch/corepatch
+display/csd_test

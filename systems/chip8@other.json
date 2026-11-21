@@ -1,0 +1,118 @@
+{
+ "coreshell_profile": 1,
+ "system": "chip8",
+ "variant": "other",
+ "name": "Chip8",
+ "rbf": "_Other/Chip8",
+ "setname": null,
+ "core_name": "Chip8",
+ "config_file": "Chip8.CFG",
+ "games_dir": "games/Chip8",
+ "saves_dir": "saves/Chip8",
+ "rom": {
+  "index": 0,
+  "type": "f",
+  "exts": [
+   "CH8"
+  ]
+ },
+ "slots": [
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "CH8"
+   ],
+   "label": ""
+  }
+ ],
+ "files": [
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "CH8"
+   ],
+   "label": "",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Aspect ratio",
+   "values": [
+    "4:3",
+    "16:9"
+   ],
+   "default": "4:3",
+   "bits": [
+    4,
+    4
+   ],
+   "core_flags": [],
+   "key": "Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    8,
+    10
+   ],
+   "core_flags": [],
+   "key": "Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "CPU Speed",
+   "values": [
+    "Fast",
+    "Slow"
+   ],
+   "default": "Fast",
+   "bits": [
+    2,
+    2
+   ],
+   "core_flags": [],
+   "key": "CPU Speed",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "Chip8_20250905.rbf",
+  "rbf_md5": "fda536d4de337fa224a1f0b2eb74147e",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:14:41",
+  "confstr_sha1": "9eb373a62e06c0e26f2579c34bf1f82955bb7151"
+ }
+}

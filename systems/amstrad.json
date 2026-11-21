@@ -1,0 +1,585 @@
+{
+ "coreshell_profile": 1,
+ "system": "amstrad",
+ "variant": "stock",
+ "name": "Amstrad",
+ "rbf": "_Computer/Amstrad",
+ "setname": null,
+ "core_name": "Amstrad",
+ "config_file": "Amstrad.CFG",
+ "games_dir": "games/Amstrad",
+ "saves_dir": "saves/Amstrad",
+ "rom": {
+  "index": 0,
+  "type": "f",
+  "exts": [
+   "ROM"
+  ]
+ },
+ "slots": [
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load Main ROM"
+  },
+  {
+   "index": 3,
+   "type": "f",
+   "exts": [
+    "E??"
+   ],
+   "label": "Load expansion"
+  },
+  {
+   "index": 4,
+   "type": "f",
+   "exts": [
+    "CDT"
+   ],
+   "label": "Load tape"
+  },
+  {
+   "index": 5,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load Dandanator ROM"
+  },
+  {
+   "index": 6,
+   "type": "f",
+   "exts": [
+    "SNA"
+   ],
+   "label": "Load snapshot"
+  },
+  {
+   "index": 7,
+   "type": "f",
+   "exts": [
+    "E??"
+   ],
+   "label": "Load CPC464 ROM"
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Mount A:"
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Mount B:"
+  }
+ ],
+ "files": [
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load Main ROM",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 3,
+   "type": "f",
+   "exts": [
+    "E??"
+   ],
+   "label": "Load expansion",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 4,
+   "type": "f",
+   "exts": [
+    "CDT"
+   ],
+   "label": "Load tape",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 5,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load Dandanator ROM",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 6,
+   "type": "f",
+   "exts": [
+    "SNA"
+   ],
+   "label": "Load snapshot",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 7,
+   "type": "f",
+   "exts": [
+    "E??"
+   ],
+   "label": "Load CPC464 ROM",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Mount A:",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "DSK"
+   ],
+   "label": "Mount B:",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Reset & apply model",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Reset & Detach Cartridge",
+   "bits": [
+    32,
+    32
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Tape sound",
+   "values": [
+    "Disabled",
+    "Enabled"
+   ],
+   "default": "Disabled",
+   "bits": [
+    20,
+    20
+   ],
+   "core_flags": [],
+   "key": "Tape sound",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "SNAC",
+   "values": [
+    "Off",
+    "Player 1",
+    "Player 2"
+   ],
+   "default": "Off",
+   "bits": [
+    61,
+    62
+   ],
+   "core_flags": [],
+   "key": "SNAC",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Joysticks swap",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    18,
+    18
+   ],
+   "core_flags": [],
+   "key": "Joysticks swap",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    25,
+    26
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%"
+   ],
+   "default": "None",
+   "bits": [
+    9,
+    10
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Vertical Crop",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    27,
+    27
+   ],
+   "core_flags": [
+    "d1"
+   ],
+   "key": "Audio & Video/Vertical Crop",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    28,
+    29
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Pixel Clock",
+   "values": [
+    "16MHz",
+    "Adaptive"
+   ],
+   "default": "16MHz",
+   "bits": [
+    30,
+    30
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Pixel Clock",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "CRTC",
+   "values": [
+    "Type 1",
+    "Type 0"
+   ],
+   "default": "Type 1",
+   "bits": [
+    2,
+    2
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/CRTC",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Display",
+   "values": [
+    "Color(GA)",
+    "Color(ASIC)",
+    "Green",
+    "Amber",
+    "Cyan",
+    "White"
+   ],
+   "default": "Color(GA)",
+   "bits": [
+    11,
+    13
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Display",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Stereo mix",
+   "values": [
+    "none",
+    "25%",
+    "50%",
+    "100%"
+   ],
+   "default": "none",
+   "bits": [
+    7,
+    8
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Stereo mix",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio & Video",
+   "name": "Playcity",
+   "values": [
+    "Disabled",
+    "Enabled"
+   ],
+   "default": "Disabled",
+   "bits": [
+    24,
+    24
+   ],
+   "core_flags": [],
+   "key": "Audio & Video/Playcity",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Mouse",
+   "values": [
+    "Enabled",
+    "Disabled"
+   ],
+   "default": "Enabled",
+   "bits": [
+    19,
+    19
+   ],
+   "core_flags": [],
+   "key": "Hardware/Mouse",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "AMX Mouse",
+   "values": [
+    "Disabled",
+    "Joystick 1"
+   ],
+   "default": "Disabled",
+   "bits": [
+    21,
+    21
+   ],
+   "core_flags": [],
+   "key": "Hardware/AMX Mouse",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Right Shift",
+   "values": [
+    "Backslash",
+    "Shift"
+   ],
+   "default": "Backslash",
+   "bits": [
+    22,
+    22
+   ],
+   "core_flags": [],
+   "key": "Hardware/Right Shift",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Keypad",
+   "values": [
+    "Numbers",
+    "Symbols"
+   ],
+   "default": "Numbers",
+   "bits": [
+    23,
+    23
+   ],
+   "core_flags": [],
+   "key": "Hardware/Keypad",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Multiface 2",
+   "values": [
+    "Enabled",
+    "Hidden",
+    "Disabled"
+   ],
+   "default": "Enabled",
+   "bits": [
+    14,
+    15
+   ],
+   "core_flags": [],
+   "key": "Hardware/Multiface 2",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "CPU timings",
+   "values": [
+    "Original",
+    "Fast"
+   ],
+   "default": "Original",
+   "bits": [
+    6,
+    6
+   ],
+   "core_flags": [],
+   "key": "Hardware/CPU timings",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "FDC",
+   "values": [
+    "Original",
+    "Fast",
+    "Disabled"
+   ],
+   "default": "Original",
+   "bits": [
+    16,
+    17
+   ],
+   "core_flags": [],
+   "key": "Hardware/FDC",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Distributor",
+   "values": [
+    "Amstrad",
+    "Orion",
+    "Schneider",
+    "Awa",
+    "Solavox",
+    "Saisho",
+    "Triumph",
+    "Isp"
+   ],
+   "default": "Amstrad",
+   "bits": [
+    42,
+    44
+   ],
+   "core_flags": [],
+   "key": "Hardware/Distributor",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Model",
+   "values": [
+    "CPC 6128",
+    "CPC 664",
+    "CPC 464"
+   ],
+   "default": "CPC 6128",
+   "bits": [
+    4,
+    5
+   ],
+   "core_flags": [],
+   "key": "Hardware/Model",
+   "mgl_ok": true
+  },
+  {
+   "page": "Hardware",
+   "name": "Tape progressbar",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    31,
+    31
+   ],
+   "core_flags": [],
+   "key": "Hardware/Tape progressbar",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "Amstrad_20260603.rbf",
+  "rbf_md5": "c6f2e1a187f679f7167d73113ff2b52a",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:09:59",
+  "confstr_sha1": "bb7673c41b56f49678da265d28afbedcc4a6fb79"
+ }
+}

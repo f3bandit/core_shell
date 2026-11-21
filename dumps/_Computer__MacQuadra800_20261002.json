@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/MacQuadra800_20261002.rbf",
+ "rbf_md5": "1928f231dd9ac9ef5935e69272d305a4",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "MacQuadra800;UART57600:115200,MIDI;SC0,HDAVHD,Mount SCSI disk 0;SC1,HDAVHD,Mount SCSI disk 1;SC2,NVR,Mount PRAM;SC4,ISOTO*CUEBINCHD,Mount CD-ROM;-;O[4:3],RAM (on reset),32MB,64MB,128MB;O[5],Monitor (on reset),13in 640x480,12in 512x384;O[122:121],Aspect ratio,Original,Full Screen,[ARC1],[ARC2];O[13:12],Scale,Normal,V-Integer,Narrower HV-Integer,Wider HV-Integer;-;O[6],Ethernet (on reset),Off,On;O[8:7],Net interface,eth0,eth1,wlan0,tap0;-;O[46:44],ADB controller (on reset),Gravis GamePad,None,Gravis MouseStick II,Gravis Firebird,SideWinder 3D Pro;O[47],Stick moves pointer,No,Yes;-;T[0],Reset;R[0],Reset and close OSD;-;P1,MT32-pi;P1-;P1O[35],Use MT32-pi,Yes,No;P1O[36],Synth,Munt,FluidSynth;P1O[38:37],Munt ROM,MT-32 v1,MT-32 v2,CM-32L;P1O[41:39],SoundFont,0,1,2,3,4,5,6,7;P1O[43:42],Show Info,No,Yes,LCD-On,LCD-Auto;I,MT32-pi: SoundFont #0,MT32-pi: SoundFont #1,MT32-pi: SoundFont #2,MT32-pi: SoundFont #3,MT32-pi: SoundFont #4,MT32-pi: SoundFont #5,MT32-pi: SoundFont #6,MT32-pi: SoundFont #7,MT32-pi: MT-32 v1,MT32-pi: MT-32 v2,MT32-pi: CM-32L,MT32-pi: Unknown mode;v,0;J,Trigger,Thumb,Button 3,Button 4,Button 5,Base 1,Base 2,Base 3;jn,A,B,X,Y,L,R,Select,Start;jp,B,A,Y,X,L,R,Select,Start;V,v261002",
+ "dumped": "2026-11-13T23:11:58"
+}

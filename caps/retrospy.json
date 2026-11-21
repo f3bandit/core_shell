@@ -1,0 +1,10 @@
+{
+ "name": "RetroSpy reader",
+ "kind": "addon",
+ "by": "the RetroSpy team (retro-spy.com)",
+ "any": [
+  {
+   "path": "retrospy/retrospy"
+  }
+ ]
+}

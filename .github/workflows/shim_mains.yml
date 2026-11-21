@@ -1,0 +1,122 @@
+name: Shim Mains
+
+# Once a day (and by hand): every Main fork Coreshell knows (python3 -m coreshell mains forks) checked for a new
+# release; each new one built with the Super MemCard / Coreshell shim and put in the release "shim-mains" with its
+# mains.json entry, where `python3 -m coreshell update` on a MiSTer finds the build for its Mains by md5.
+# Releases already built are skipped (their stock md5 is in mains.json), so a quiet day costs a few minutes.
+# The shim builds are GPL-3.0 forks of each Main (Main_MiSTer's licence), credited to their authors in mains.json.
+
+on:
+  schedule:
+    - cron: '41 8 * * *'
+  workflow_dispatch:
+    inputs:
+      forks:
+        description: 'Forks to build (all, or one: main, ra, physical-cd, zaparoo, dvd, quake, duke3d, hybrid, 3s-arm)'
+        default: all
+      rebuild:
+        description: 'Build even releases already built (a new shim)'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: shim-mains
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GITHUB_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: The shim (super-memcard's Main patch, and Phosphor's in-game link; the repository is public)
+        uses: actions/checkout@v4
+        with:
+          repository: f3bandit/super-memcard
+          path: super-memcard
+          sparse-checkout: |
+            main/patch
+            main/link
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: ARM toolchain, patchelf
+        uses: actions/cache@v4
+        id: tc
+        with:
+          path: /opt/gcc-arm
+          key: gcc-arm-10.2-2020.11
+      - if: steps.tc.outputs.cache-hit != 'true'
+        run: |
+          sudo mkdir -p /opt/gcc-arm && sudo chown $USER /opt/gcc-arm
+          curl -sSL https://developer.arm.com/-/media/Files/downloads/gnu-a/10.2-2020.11/binrel/gcc-arm-10.2-2020.11-x86_64-arm-none-linux-gnueabihf.tar.xz \
+            | tar xJ -C /opt/gcc-arm --strip-components=1
+      - run: pip install patchelf
+
+      - name: Fork sources (cached)
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/coreshell/src
+          key: fork-src-${{ github.run_id }}
+          restore-keys: fork-src-
+
+      - name: What's built already
+        run: |
+          mkdir -p out
+          gh release view shim-mains >/dev/null 2>&1 || gh release create shim-mains --title "Shim Mains" \
+            --notes "Main_MiSTer and its forks with the Super MemCard / Coreshell shim (GPL-3.0; each credited to its authors in mains.json). Fetched by \`python3 -m coreshell update\`."
+          gh release download shim-mains -p mains.json -D out || echo '{}' > out/mains.json
+          cp out/mains.json known.json
+          [ "${{ github.event.inputs.rebuild }}" = "true" ] && echo '{}' > known.json || true
+
+      - name: Build
+        run: |
+          export PATH=/opt/gcc-arm/bin:$PATH
+          git config --global user.name coreshell-ci; git config --global user.email ci@localhost
+          export SHIM_COMMIT=$(git -C super-memcard rev-parse HEAD)   # (each build's mains.json entry names it)
+          python3 -m coreshell mains build "${{ github.event.inputs.forks || 'all' }}" \
+            --patch super-memcard/main/patch/main-mister-super-memcard.patch --link super-memcard/main/link \
+            --out out --known known.json \
+            | tee build.log
+
+      - name: Upload
+        if: always()
+        run: |
+          ls out
+          n=$(ls out | grep -c '_shim$' || true)
+          [ "$n" -gt 0 ] && gh release upload shim-mains out/*_shim --clobber
+          gh release upload shim-mains out/mains.json --clobber
+          # the release notes: every binary with the exact source it was built from (GPL-3.0)
+          python3 - > notes.md <<'PY'
+          import json
+          m = json.load(open('out/mains.json'))
+          print('Main_MiSTer and its forks with the Super MemCard / Coreshell shim (GPL-3.0; each credited to its authors).')
+          print('Fetched by `python3 -m coreshell update`. Each binary was built from:\n')
+          seen = set()
+          for e in sorted(m.values(), key=lambda e: e['shim']):
+              if e['shim'] in seen:
+                  continue
+              seen.add(e['shim'])
+              src = e.get('src') or e.get('release', '')
+              shim = e.get('shim_src') or 'super-memcard main/patch (sha256 %s)' % e.get('shim_patch_sha256', '?')
+              extra = ' + Main_MiSTer %s' % e['main_commit'] if e.get('main_commit') else ''
+              print('- `%s` (%s): %s%s, shim %s' % (e['shim'], e.get('by', ''), src, extra, shim))
+          PY
+          gh release edit shim-mains --notes-file notes.md
+
+      - name: 'Alert: a build that failed (a GitHub issue; GitHub emails the owner)'
+        if: failure()
+        run: |
+          { echo "A fork's new release didn't build with the shim: the log below. Settle the conflicts it lists"
+            echo "(devtools.py _settle) or fix the patch in super-memcard, then run the workflow again."
+            echo; echo '```'; tail -80 build.log; echo '```'; } > alert.md
+          gh issue create --title "Shim Mains: a build failed" --body-file alert.md

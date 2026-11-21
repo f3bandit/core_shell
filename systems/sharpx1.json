@@ -1,0 +1,326 @@
+{
+ "coreshell_profile": 1,
+ "system": "sharpx1",
+ "variant": "stock",
+ "name": "SharpX1",
+ "rbf": "_Computer/SharpX1",
+ "setname": null,
+ "core_name": "SharpX1",
+ "config_file": "SharpX1_v2.CFG",
+ "games_dir": "games/SharpX1",
+ "saves_dir": "saves/SharpX1",
+ "rom": {
+  "index": 4,
+  "type": "f",
+  "exts": [
+   "X1"
+  ]
+ },
+ "slots": [
+  {
+   "index": 4,
+   "type": "f",
+   "exts": [
+    "X1"
+   ],
+   "label": "Load 16-row ANK"
+  },
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load ROM"
+  },
+  {
+   "index": 3,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load X1 IPL"
+  },
+  {
+   "index": 6,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load tape ctrl."
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "D88",
+    "2D"
+   ],
+   "label": "Pri. Drive A"
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "D88",
+    "2D"
+   ],
+   "label": "Drive B"
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "TAP"
+   ],
+   "label": "Tape"
+  }
+ ],
+ "files": [
+  {
+   "index": 4,
+   "type": "f",
+   "exts": [
+    "X1"
+   ],
+   "label": "Load 16-row ANK",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load ROM",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 3,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load X1 IPL",
+   "page": 5,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 5,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load Kanji font",
+   "page": 5,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 6,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load tape ctrl.",
+   "page": 5,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "D88",
+    "2D"
+   ],
+   "label": "Pri. Drive A",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "D88",
+    "2D"
+   ],
+   "label": "Drive B",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "TAP"
+   ],
+   "label": "Tape",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Apply and reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Rewind tape",
+   "bits": [
+    2,
+    2
+   ],
+   "kind": "toggle",
+   "page": 1,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "Machine",
+   "name": "Model",
+   "values": [
+    "X1 Turbo Z",
+    "X1",
+    "X1 Turbo"
+   ],
+   "default": "X1 Turbo Z",
+   "bits": [
+    6,
+    7
+   ],
+   "core_flags": [],
+   "key": "Machine/Model",
+   "mgl_ok": true
+  },
+  {
+   "page": "Machine",
+   "name": "Tape speed",
+   "values": [
+    "5x + quick start",
+    "5x",
+    "Normal"
+   ],
+   "default": "5x + quick start",
+   "bits": [
+    11,
+    12
+   ],
+   "core_flags": [],
+   "key": "Machine/Tape speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Monitor",
+   "values": [
+    "Standard",
+    "High-res"
+   ],
+   "default": "Standard",
+   "bits": [
+    8,
+    8
+   ],
+   "core_flags": [
+    "H1"
+   ],
+   "key": "Video/Monitor",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    121,
+    122
+   ],
+   "core_flags": [],
+   "key": "Video/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Tape overlay",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    10,
+    10
+   ],
+   "core_flags": [],
+   "key": "Video/Tape overlay",
+   "mgl_ok": true
+  },
+  {
+   "page": "Advanced",
+   "name": "Boot device",
+   "values": [
+    "2D",
+    "2DD",
+    "2HD",
+    "SASI"
+   ],
+   "default": "2D",
+   "bits": [
+    4,
+    5
+   ],
+   "core_flags": [
+    "H1"
+   ],
+   "key": "Advanced/Boot device",
+   "mgl_ok": true
+  },
+  {
+   "page": "Advanced",
+   "name": "Disk writes",
+   "values": [
+    "Protected",
+    "Enabled"
+   ],
+   "default": "Protected",
+   "bits": [
+    1,
+    1
+   ],
+   "core_flags": [],
+   "key": "Advanced/Disk writes",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "SharpX1_20261103.rbf",
+  "rbf_md5": "abcddcca595b10fa31aaaa81e1c3325c",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:13:10",
+  "confstr_sha1": "1ee6913131ab0317ccd04f6b978705f063898c4d"
+ }
+}

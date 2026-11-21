@@ -1,0 +1,7 @@
+{
+ "rbf": "_Other/3S-ARM.rbf",
+ "rbf_md5": "aa872f87f1b22edf3f7d02c5d7f35c85",
+ "main": "phosphor/bin/MiSTer_3S-ARM",
+ "confstr": "3S-ARM;;O[13],Game Mode,Console,Arcade;O[24],Hold to Pause,Off,On;O[11:10],FPS Counter,Off,FPS,Debug;T[23],Button Check;-;O[12],Aspect Ratio,4:3,Full;O[32],Vertical Crop,Disabled,216p(5x);O[36:33],Crop Offset,0,2,4,6,8,10,-12,-10,-8,-6,-4,-2;O[38:37],Scale,Normal,V-Integer,Narrower HV-Integer,Wider HV-Integer;O[42:39],H Size,0,+1,+2,+3,+4,-4,-3,-2,-1;O[28:25],H Position,0,+1,+2,+3,+4,+5,+6,+7,-8,-7,-6,-5,-4,-3,-2,-1;O[46:43],V Position,0,+1,+2,+3,+4,+5,+6,+7,-8,-7,-6,-5,-4,-3,-2,-1;-;P1,Performance;P1O[20:19],Overclock,Stock,1000MHz,1200MHz;P1O[14],SA Activation,Full,Cached BG;P1O[15],SA Ghost Res,Full,Half;P1O[18:16],SA Ghost Count,0,1,2,3,4;-;T[21],Reset to Default;T[22],Restart;-;J1,LP,MP,HP,LK,MK,HK,Select,Start;jn,Y,X,L,B,A,R,Select,Start;V,v260416",
+ "dumped": "2026-11-13T23:14:32"
+}

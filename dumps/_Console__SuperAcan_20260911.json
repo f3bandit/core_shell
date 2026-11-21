@@ -1,0 +1,7 @@
+{
+ "rbf": "_Console/SuperAcan_20260911.rbf",
+ "rbf_md5": "0151b5fdb477a099624302e77be41a7e",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "SuperAcan;SS3E000000:100000;FS1,BIN,Load Cartridge;-;C,Cheats;-;d0O[19:18],Savestate slot,1,2,3,4;d0R[20],Save state (Alt-F1);d0R[21],Restore state (F1);-;P1,Audio & Video;P1-;P1O[122:121],Aspect ratio,Original,Full Screen,[ARC1],[ARC2];P1O[16:15],Crop,224,240,Auto;P1O[27:25],Scale,Normal,V-Integer,Narrower HV-Integer,Wider HV-Integer;P1O[24:22],Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%,CRT 75%;P2,Advanced;P2-;P2O[12],Autosave,On,Off;h1P2T[13],Save Backup RAM;h1P2T[14],Restore Backup RAM;P2-;P2O[31:30],Cartridge byte order,Auto,Word-swapped,Big-endian;-;O[29:28],Multitap,Off,Port 1,Both;-;R[0],Reset;-;J1,A,B,X,Y,L,R,Select,Start,Savestates;jn,A,B,X,Y,L,R,Select,Start;I,-,-,-,-,Slot=L/R Load=U Save=D,Active Slot 1,Active Slot 2,Active Slot 3,Active Slot 4,Save to state 1,Restore state 1,Save to state 2,Restore state 2,Save to state 3,Restore state 3,Save to state 4,Restore state 4;v,0;V,v260911",
+ "dumped": "2026-11-13T23:09:20"
+}

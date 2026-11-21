@@ -1,0 +1,204 @@
+{
+ "coreshell_profile": 1,
+ "system": "supervision",
+ "variant": "stock",
+ "name": "SuperVision",
+ "rbf": "_Console/SuperVision",
+ "setname": null,
+ "core_name": "SuperVision",
+ "config_file": "SuperVision.CFG",
+ "games_dir": "games/SuperVision",
+ "saves_dir": "saves/SuperVision",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "bin",
+   "sv"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "bin",
+    "sv"
+   ],
+   "label": "Load Cartridge"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "bin",
+    "sv"
+   ],
+   "label": "Load Cartridge",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 3,
+   "type": "f",
+   "exts": [
+    "SGB",
+    "GBP"
+   ],
+   "label": "Load Palette",
+   "page": 0,
+   "flags": [
+    "D0"
+   ],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    121,
+    122
+   ],
+   "core_flags": [],
+   "key": "Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Flickerblend",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    20,
+    20
+   ],
+   "core_flags": [],
+   "key": "Flickerblend",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Framerate",
+   "values": [
+    "60hz",
+    "Original"
+   ],
+   "default": "60hz",
+   "bits": [
+    21,
+    21
+   ],
+   "core_flags": [],
+   "key": "Framerate",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%"
+   ],
+   "default": "None",
+   "bits": [
+    2,
+    3
+   ],
+   "core_flags": [],
+   "key": "Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    10,
+    11
+   ],
+   "core_flags": [],
+   "key": "Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Center Audio",
+   "values": [
+    "Off",
+    "25%",
+    "50%",
+    "100%"
+   ],
+   "default": "Off",
+   "bits": [
+    22,
+    23
+   ],
+   "core_flags": [],
+   "key": "Center Audio",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Custom Palette",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    7,
+    7
+   ],
+   "core_flags": [],
+   "key": "Custom Palette",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "SuperVision_20250708.rbf",
+  "rbf_md5": "16ef96d1f0ff822a55094af13880c92a",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:09:22",
+  "confstr_sha1": "a8cfacbf8994a94191e6cf8a265e290219cc91a9"
+ }
+}

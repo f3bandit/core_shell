@@ -1,0 +1,222 @@
+{
+ "coreshell_profile": 1,
+ "system": "odyssey2",
+ "variant": "stock",
+ "name": "ODYSSEY2",
+ "rbf": "_Console/Odyssey2",
+ "setname": null,
+ "core_name": "ODYSSEY2",
+ "config_file": "ODYSSEY2.CFG",
+ "games_dir": "games/ODYSSEY2",
+ "saves_dir": "saves/ODYSSEY2",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "BIN"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load catridge"
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load XROM"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "BIN"
+   ],
+   "label": "Load catridge",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load XROM",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 3,
+   "type": "f",
+   "exts": [
+    "CHR"
+   ],
+   "label": "Change VDC font",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "System",
+   "values": [
+    "Odyssey2",
+    "Videopac"
+   ],
+   "default": "Odyssey2",
+   "bits": [
+    15,
+    15
+   ],
+   "core_flags": [],
+   "key": "System",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "G7200",
+   "values": [
+    "Off",
+    "Contrast 1",
+    "Contrast 2",
+    "Contrast 3",
+    "Contrast 4",
+    "Contrast 5",
+    "Contrast 6",
+    "Contrast 7"
+   ],
+   "default": "Off",
+   "bits": [
+    12,
+    14
+   ],
+   "core_flags": [],
+   "key": "G7200",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    18,
+    19
+   ],
+   "core_flags": [],
+   "key": "Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    9,
+    11
+   ],
+   "core_flags": [],
+   "key": "Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "The Voice",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    1,
+    1
+   ],
+   "core_flags": [],
+   "key": "The Voice",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Audio",
+   "values": [
+    "voice(R)/Console(L)",
+    "25%",
+    "50%",
+    "Center mixed"
+   ],
+   "default": "voice(R)/Console(L)",
+   "bits": [
+    2,
+    3
+   ],
+   "core_flags": [],
+   "key": "Audio",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Swap Joysticks",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    7,
+    7
+   ],
+   "core_flags": [],
+   "key": "Swap Joysticks",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "Odyssey2_20250717.rbf",
+  "rbf_md5": "c386e0fed9f944c265f1810ad20ce082",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:08:27",
+  "confstr_sha1": "c3672e7433d30a6218793a6c3970b6a03b2f5fbc"
+ }
+}

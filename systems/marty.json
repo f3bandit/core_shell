@@ -1,0 +1,784 @@
+{
+ "coreshell_profile": 1,
+ "system": "marty",
+ "variant": "stock",
+ "name": "Marty",
+ "rbf": "_Console/Marty",
+ "setname": null,
+ "core_name": "Marty",
+ "config_file": "Marty_v1.CFG",
+ "games_dir": "games/Marty",
+ "saves_dir": "saves/Marty",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "M36"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "M36"
+   ],
+   "label": "Mask ROM mrom.m36"
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "M37"
+   ],
+   "label": "Mask ROM mrom.m37"
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "CUE",
+    "CHD",
+    "ISO"
+   ],
+   "label": "CD-ROM:"
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "D88",
+    "D77",
+    "BIN",
+    "HDM"
+   ],
+   "label": "Floppy 1:"
+  },
+  {
+   "index": 5,
+   "type": "s",
+   "exts": [
+    "D88",
+    "D77",
+    "BIN",
+    "HDM"
+   ],
+   "label": "Floppy 2:"
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "ICM"
+   ],
+   "label": "IC Card:"
+  },
+  {
+   "index": 4,
+   "type": "s",
+   "exts": [
+    "VHD",
+    "HDD",
+    "H0"
+   ],
+   "label": "Hard Disk 1:"
+  },
+  {
+   "index": 6,
+   "type": "s",
+   "exts": [
+    "VHD",
+    "HDD",
+    "H1"
+   ],
+   "label": "Hard Disk 2:"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "M36"
+   ],
+   "label": "Mask ROM mrom.m36",
+   "page": 0,
+   "flags": [
+    "H2"
+   ],
+   "remember_dir": false
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "M37"
+   ],
+   "label": "Mask ROM mrom.m37",
+   "page": 0,
+   "flags": [
+    "H2"
+   ],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "CUE",
+    "CHD",
+    "ISO"
+   ],
+   "label": "CD-ROM:",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "D88",
+    "D77",
+    "BIN",
+    "HDM"
+   ],
+   "label": "Floppy 1:",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 5,
+   "type": "s",
+   "exts": [
+    "D88",
+    "D77",
+    "BIN",
+    "HDM"
+   ],
+   "label": "Floppy 2:",
+   "page": 0,
+   "flags": [
+    "h3"
+   ]
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "ICM"
+   ],
+   "label": "IC Card:",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 4,
+   "type": "s",
+   "exts": [
+    "VHD",
+    "HDD",
+    "H0"
+   ],
+   "label": "Hard Disk 1:",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 6,
+   "type": "s",
+   "exts": [
+    "VHD",
+    "HDD",
+    "H1"
+   ],
+   "label": "Hard Disk 2:",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Eject CD",
+   "bits": [
+    36,
+    36
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Eject floppy 1",
+   "bits": [
+    37,
+    37
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Eject floppy 2",
+   "bits": [
+    39,
+    39
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": [
+    "h3"
+   ]
+  },
+  {
+   "name": "Eject hard disk 1",
+   "bits": [
+    38,
+    38
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Eject hard disk 2",
+   "bits": [
+    53,
+    53
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "New floppy 1 (1232K)",
+   "bits": [
+    33,
+    33
+   ],
+   "kind": "reset",
+   "page": 2,
+   "flags": []
+  },
+  {
+   "name": "New floppy 2 (1232K)",
+   "bits": [
+    48,
+    48
+   ],
+   "kind": "reset",
+   "page": 2,
+   "flags": [
+    "h3"
+   ]
+  },
+  {
+   "name": "New IC card (4M)",
+   "bits": [
+    34,
+    34
+   ],
+   "kind": "reset",
+   "page": 2,
+   "flags": []
+  },
+  {
+   "name": "New hard disk 1",
+   "bits": [
+    35,
+    35
+   ],
+   "kind": "reset",
+   "page": 2,
+   "flags": []
+  },
+  {
+   "name": "New hard disk 2",
+   "bits": [
+    54,
+    54
+   ],
+   "kind": "reset",
+   "page": 2,
+   "flags": []
+  },
+  {
+   "name": "Reset Hanging Notes",
+   "bits": [
+    22,
+    22
+   ],
+   "kind": "reset",
+   "page": 1,
+   "flags": [
+    "h1"
+   ]
+  },
+  {
+   "name": "Save state",
+   "bits": [
+    42,
+    42
+   ],
+   "kind": "reset",
+   "page": 5,
+   "flags": []
+  },
+  {
+   "name": "Load state",
+   "bits": [
+    43,
+    43
+   ],
+   "kind": "reset",
+   "page": 5,
+   "flags": []
+  },
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "New blank image",
+   "name": "Automount IC with CD",
+   "values": [
+    "Yes",
+    "No"
+   ],
+   "default": "Yes",
+   "bits": [
+    26,
+    26
+   ],
+   "core_flags": [],
+   "key": "New blank image/Automount IC with CD",
+   "mgl_ok": true
+  },
+  {
+   "page": "New blank image",
+   "name": "Automount FD with CD",
+   "values": [
+    "Yes",
+    "No"
+   ],
+   "default": "Yes",
+   "bits": [
+    52,
+    52
+   ],
+   "core_flags": [],
+   "key": "New blank image/Automount FD with CD",
+   "mgl_ok": true
+  },
+  {
+   "page": "New blank image",
+   "name": "Hard disk size",
+   "values": [
+    "40M",
+    "80M"
+   ],
+   "default": "40M",
+   "bits": [
+    30,
+    30
+   ],
+   "core_flags": [],
+   "key": "New blank image/Hard disk size",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video & Audio",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    121,
+    122
+   ],
+   "core_flags": [],
+   "key": "Video & Audio/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video & Audio",
+   "name": "Video output",
+   "values": [
+    "Real Marty",
+    "240p",
+    "480p"
+   ],
+   "default": "Real Marty",
+   "bits": [
+    1,
+    2
+   ],
+   "core_flags": [],
+   "key": "Video & Audio/Video output",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video & Audio",
+   "name": "Drive lights",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    24,
+    24
+   ],
+   "core_flags": [],
+   "key": "Video & Audio/Drive lights",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video & Audio",
+   "name": "Blanking area",
+   "values": [
+    "Draw black",
+    "Trim"
+   ],
+   "default": "Draw black",
+   "bits": [
+    3,
+    3
+   ],
+   "core_flags": [],
+   "key": "Video & Audio/Blanking area",
+   "mgl_ok": true
+  },
+  {
+   "page": "System Options",
+   "name": "Use Settings Database",
+   "values": [
+    "Yes",
+    "No"
+   ],
+   "default": "Yes",
+   "bits": [
+    5,
+    5
+   ],
+   "core_flags": [],
+   "key": "System Options/Use Settings Database",
+   "mgl_ok": true
+  },
+  {
+   "page": "System Options",
+   "name": "Reset on CD Change",
+   "values": [
+    "Yes",
+    "No"
+   ],
+   "default": "Yes",
+   "bits": [
+    51,
+    51
+   ],
+   "core_flags": [],
+   "key": "System Options/Reset on CD Change",
+   "mgl_ok": true
+  },
+  {
+   "page": "System Options",
+   "name": "Pad 1",
+   "values": [
+    "Towns pad",
+    "6-button pad",
+    "Mouse",
+    "Analog stick",
+    "Analog pad",
+    "None",
+    "Capcom 6-button",
+    "Marty pad"
+   ],
+   "default": "Towns pad",
+   "bits": [
+    10,
+    12
+   ],
+   "core_flags": [],
+   "key": "System Options/Pad 1",
+   "mgl_ok": true
+  },
+  {
+   "page": "System Options",
+   "name": "Pad 2",
+   "values": [
+    "Towns pad",
+    "6-button pad",
+    "Mouse",
+    "Analog stick",
+    "Analog pad",
+    "None",
+    "Capcom 6-button",
+    "Marty pad"
+   ],
+   "default": "Towns pad",
+   "bits": [
+    44,
+    46
+   ],
+   "core_flags": [],
+   "key": "System Options/Pad 2",
+   "mgl_ok": true
+  },
+  {
+   "page": "System Options",
+   "name": "Swap controllers",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    47,
+    47
+   ],
+   "core_flags": [],
+   "key": "System Options/Swap controllers",
+   "mgl_ok": true
+  },
+  {
+   "page": "System Options",
+   "name": "Machine ID",
+   "values": [
+    "FM Towns",
+    "Marty"
+   ],
+   "default": "FM Towns",
+   "bits": [
+    27,
+    27
+   ],
+   "core_flags": [],
+   "key": "System Options/Machine ID",
+   "mgl_ok": true
+  },
+  {
+   "page": "System Options",
+   "name": "System Speed",
+   "values": [
+    "Original",
+    "Plus",
+    "Great Scott"
+   ],
+   "default": "Original",
+   "bits": [
+    49,
+    50
+   ],
+   "core_flags": [],
+   "key": "System Options/System Speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "System Options",
+   "name": "Main RAM",
+   "values": [
+    "2 MB",
+    "4 MB",
+    "6 MB",
+    "8 MB(Caution!)"
+   ],
+   "default": "2 MB",
+   "bits": [
+    8,
+    9
+   ],
+   "core_flags": [],
+   "key": "System Options/Main RAM",
+   "mgl_ok": true
+  },
+  {
+   "page": "System Options",
+   "name": "FDD Count",
+   "values": [
+    "1 (stock)",
+    "2 (mod)"
+   ],
+   "default": "1 (stock)",
+   "bits": [
+    31,
+    31
+   ],
+   "core_flags": [],
+   "key": "System Options/FDD Count",
+   "mgl_ok": true
+  },
+  {
+   "page": "System Options",
+   "name": "MIDI card (FMT-40x)",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    23,
+    23
+   ],
+   "core_flags": [],
+   "key": "System Options/MIDI card (FMT-40x)",
+   "mgl_ok": true
+  },
+  {
+   "page": "System Options",
+   "name": "RS-232C modem",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    25,
+    25
+   ],
+   "core_flags": [],
+   "key": "System Options/RS-232C modem",
+   "mgl_ok": true
+  },
+  {
+   "page": "MT32-pi",
+   "name": "Use MT32-pi",
+   "values": [
+    "Yes",
+    "No"
+   ],
+   "default": "Yes",
+   "bits": [
+    13,
+    13
+   ],
+   "core_flags": [
+    "h1"
+   ],
+   "key": "MT32-pi/Use MT32-pi",
+   "mgl_ok": true
+  },
+  {
+   "page": "MT32-pi",
+   "name": "Show Info",
+   "values": [
+    "No",
+    "Yes",
+    "LCD-On(non-FB)",
+    "LCD-Auto(non-FB)"
+   ],
+   "default": "No",
+   "bits": [
+    14,
+    15
+   ],
+   "core_flags": [
+    "h1"
+   ],
+   "key": "MT32-pi/Show Info",
+   "mgl_ok": true
+  },
+  {
+   "page": "MT32-pi",
+   "name": "Synth",
+   "values": [
+    "Munt",
+    "FluidSynth"
+   ],
+   "default": "Munt",
+   "bits": [
+    16,
+    16
+   ],
+   "core_flags": [
+    "h1"
+   ],
+   "key": "MT32-pi/Synth",
+   "mgl_ok": true
+  },
+  {
+   "page": "MT32-pi",
+   "name": "Munt ROM",
+   "values": [
+    "MT-32 v1",
+    "MT-32 v2",
+    "CM-32L"
+   ],
+   "default": "MT-32 v1",
+   "bits": [
+    17,
+    18
+   ],
+   "core_flags": [
+    "h1"
+   ],
+   "key": "MT32-pi/Munt ROM",
+   "mgl_ok": true
+  },
+  {
+   "page": "MT32-pi",
+   "name": "SoundFont",
+   "values": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7"
+   ],
+   "default": "0",
+   "bits": [
+    19,
+    21
+   ],
+   "core_flags": [
+    "h1"
+   ],
+   "key": "MT32-pi/SoundFont",
+   "mgl_ok": true
+  },
+  {
+   "page": "Savestates",
+   "name": "Slot",
+   "values": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "default": "1",
+   "bits": [
+    40,
+    41
+   ],
+   "core_flags": [],
+   "key": "Savestates/Slot",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "Marty_20260929.rbf",
+  "rbf_md5": "7b4d3ca8fe3155228260e850fae62ecc",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:05:07",
+  "confstr_sha1": "8546af0e6f47a7391896bf76befff02cc9864236"
+ }
+}

@@ -1,0 +1,7 @@
+{
+ "rbf": "_Other/GBMidi_20240811.rbf",
+ "rbf_md5": "3e10abec4bce25684c675a7b03dd0758",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "GBMidi;UART31250,MIDI;-;D1O[2],Midi Source,USB,Din;-,FOR USB SETUP UART (PRESS->);-;O[3],Musical Gamepad,Off,On;-;DBO[68:67],Midi Ch 1 Voice,Pulse 1,Pulse 2,Wave,Noise;-;P1,Pulse 1 Settings;P1-;P1O[21:19],Patch,Blank,Lead,Pad,Blip;D3D4P1O[6:5],Duty Cycle,12.5,25,50;D4P1O[13],Duty ctrld by ModWheel,Off,On;P1O[15],Auto-Duty,Off,On;P1O[14],Vibrato,Off,On;P1O[17],Blip,Off,On;P1O[8],Fade Out,Off,On;d2P1O[12:9], Fade Speed,0,1,2,3,4,5,6,7,8,9;P1-;P2,Pulse 2 Settings;P2-;P2O[38:36],Patch,Blank,Lead,Pad,Blip;D6D7P2O[23:22],Duty Cycle,12.5,25,50;D7P2O[30],Duty ctrld by ModWheel,Off,On;P2O[32],Auto-Duty,Off,On;P2O[31],Vibrato,Off,On;P2O[34],Blip,Off,On;P2O[25],Fade Out,Off,On;d8P2O[29:26], Fade Speed,0,1,2,3,4,5,6,7,8,9;P2-;P3,Wave Settings;P3-;P3O[51:49],Patch,Bass,Lead,Kick;P3O[55:52],Waveform,Bass,Lead,Triangle,Saw,Square;P3O[56],Vibrato,Off,On;P3O[57],Blip,Off,On;P3O[58],Pitch Fall,Off,On;dEP3O[61:59], Fall Speed,0,1,2,3,4,5;P3O[62],Fade Out,Off,On;dAP3O[66:63], Fade Speed,0,1,2,3,4,5,6,7,8,9;P3-;P4,Noise Settings;P4-;P4O[71:69],Patch,Blank,Drum,Crash;P4O[39],Noise Type,White,Periodic;P4O[40],Pitch Fall,Off,On;dDP4O[43:41], Fall Speed,0,1,2,3,4,5;P4O[44],Fade Out,Off,On;d9P4O[48:45], Fade Speed,0,1,2,3,4,5,6,7,8,9;P4-;-;DCO[16],Echo (P1 to P2),Off,On;D1D5O[7],Auto-Polyphony(P1+P2)x4,Off,On;-;F0,BIN,Load BIOS;-;R0,Reset;J,A,B,X,Y,L,R,Select,Start;V,v240811",
+ "dumped": "2026-11-13T23:15:41"
+}

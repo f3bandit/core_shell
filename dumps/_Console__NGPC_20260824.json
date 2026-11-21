@@ -1,0 +1,7 @@
+{
+ "rbf": "_Console/NGPC_20260824.rbf",
+ "rbf_md5": "38e6cb691d9b17c0cd82bf99440f73d2",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "NGPC;SS32000000:800000,UART19200;FS1,NGPNGCNPC,Load Cartridge;-;C,Cheats;-;O[2:1],System,NGPC,Auto,NGP;-;d7O[46:45],Savestate Slot,1,2,3,4;d7R[42],Save State (Alt-F1..F4);d7R[43],Restore State (F1..F4);-;P1,Audio & Video;P1-;P1O[20],LCD Response,Raw,Panel;H0P1O[22:21],Saturation,75%,50%,25%,100%;P1O[122:121],Aspect ratio,Original,Full Screen,[ARC1],[ARC2];P1O[6:4],Scale,Normal,V-Integer,Narrower HV-Integer,Wider HV-Integer;P1O[8:7],Stereo Mix,None,25%,50%,100%;P2,BIOS Settings;P2-;P2O[3],Language,English,Japanese;H0P2O[16:14],NGP Palette,B&W,Red,Green,Blue,Classic;P2O[19],Skip BIOS Animation,On,Off;P3,Advanced;P3-;P3O[17],RTC,MiSTer Time,BIOS Default;P3O[18],Automatic Power,On,Off;P3-;P3O[10],Autosave,On,Off;P3R[11],Save Backup;P3R[12],Load Backup;P3-;d7P3O[44],Savestate to SD,On,Off;-;R[0],Reset;J1,A,B,Option,Power,Savestates;jn,A,B,Start,Select,L;I,-,-,-,-,Slot=L/R Load=U Save=D,Active Slot 1,Active Slot 2,Active Slot 3,Active Slot 4,Save to state 1,Restore state 1,Save to state 2,Restore state 2,Save to state 3,Restore state 3,Save to state 4,Restore state 4;v,11;V,v260824",
+ "dumped": "2026-11-13T23:08:21"
+}

@@ -1,0 +1,7 @@
+{
+ "rbf": "_Console/Casio_PV-1000_20250622.rbf",
+ "rbf_md5": "8668b1d7e2fe9077492b2c17e76f274d",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "Casio_PV-1000;;-;FC1,BIN,Load Cartridge;O[3:2],Aspect ratio,Original,Full Screen,[ARC1],[ARC2];-;R[0],Reset;J,Fire 1,Fire 2,Select,Start;V,v250622",
+ "dumped": "2026-11-13T23:04:14"
+}

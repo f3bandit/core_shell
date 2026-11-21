@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/SunSparcStation20_20261019.rbf",
+ "rbf_md5": "14ea4dfeb521719476382f84aa01fedb",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "SunSparcStation;;-;SC0,VHDIMGHDARAW,Pri. disk (ID 3);SC1,VHDIMGHDARAW,Disk (ID 1);SC2,ISOCUECHD,CD-ROM (ID 6);F0,ROM,Load ROM;-;O[23:22],Memory,464MB,256MB,128MB,64MB;O[26:24],Network interface,eth0,None,eth1,macvlan,tap0;-;P2,Video;P3,Input;P5,Advanced;-;h0-,Changes pending;R[0],Apply and reset;P2O[9],Display,Graphics,Serial console;P2O[7:6],Aspect ratio,Original,Full Screen,[ARC1],[ARC2];P2O[30:28],Scale,V-Integer,Normal,Narrower HV-Integer,Wider HV-Integer,HV-Integer;P3O[13:12],Keyboard layout,US,French,German,Spanish;P3O[27],Swap Alt/Win keys,No,Yes;P5O[8],Autoboot,On,Off;P5-;P5SC3,NVR,NVRAM image;V,v261019",
+ "dumped": "2026-11-13T23:13:28"
+}

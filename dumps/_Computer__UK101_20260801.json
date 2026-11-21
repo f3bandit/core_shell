@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/UK101_20260801.rbf",
+ "rbf_md5": "6b56d179ab0b64a2318d03c3ffe4dc90",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "UK101;;-;D0F,TXTBASLOD,Load Ascii;S0,TXT,Save Ascii;R[11],Save;S1,65D65U,Mount Disk;S2,65D65U,Mount Disk B;D7S3,65D65U,Mount Disk C;D8S4,65D65U,Mount Disk D;O[2:1],Drives fitted,2,3,4;O[20],Disk writes,Protected,Enabled;O[3],Load programs from,File,UART;O[7],Baud Rate,9600,300;-;O[9:8],Aspect ratio,Original,Full Screen,[ARC1],[ARC2];O[13:12],Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%;O[16:15],Scale,Normal,V-Integer,Narrower HV-Integer,Wider HV-Integer;H4d5O4,Screen resolution,Low,High;h4d5D6O56,Screen resolution,Low,High,Auto;-;D9O[28:27],Machine,UK101,OSI C2P,OSI C1P;O[19:17],Clock speed,1Mhz,2Mhz,4Mhz,8Mhz,10Mhz;O[26:24],Memory Size,4K,8K,32K,41K,48K (Basic disabled);H4H6O[22:21],Monitor,Cegmon,MonUK02,Wemon;h4D9O[23:22],Monitor,Cegmon,Synmon (Basic),Synmon (Disk);h6O[23],Monitor,Cegmon,Synmon;-;-;R[10],Reset;-;-;V,v260801",
+ "dumped": "2026-11-13T23:13:55"
+}

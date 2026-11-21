@@ -1,0 +1,43 @@
+Coreshell
+Copyright 2026 f3bandit (https://github.com/f3bandit)
+
+This product includes Coreshell, by f3bandit, licensed under the Apache License,
+Version 2.0 (LICENSE). Anyone shipping Coreshell, changed or not, in a product or
+otherwise, must pass this NOTICE on with it (Apache License 2.0, section 4(d)).
+
+Other people's work in or used by this repository, under their own licences:
+
+  nextpnr (YosysHQ and contributors) - ISC: corepatch/nextpnr-base.patch is a
+    change to nextpnr, under nextpnr's licence; nextpnr itself isn't included
+  Mistral (Olivier Galibert and contributors) - BSD 3-Clause: corepatch/tools
+    are built against it on a PC; it isn't included
+  Mistery (meathax) - BSD 3-Clause: used to study stock cores; not included
+
+Coreshell drives, but doesn't include, change or link with, the MiSTer-devel
+cores and Main_MiSTer (Alexey Melnikov "Sorgelig" and the MiSTer devs, GPL),
+odelot's RetroAchievements cores and MiSTer_RA, and every core Update All
+installs: each under its own licence, by its own authors. Update All's
+databases are fetched at run time and not included.
+
+The shim Mains Coreshell can build (python3 -m coreshell mains build) are
+GPL-3.0 forks of Main_MiSTer and of each fork (MiSTer_RA's with Phosphor's in-game link,
+super-memcard main/link), credited in mains.json to their
+authors (the MiSTer devs, odelot, Anime0t4ku, the Zaparoo Project, owenb321,
+neofreno, kimchiman52). The shim is in super-memcard, under GPL-3.0; Coreshell
+only runs git and make, and no GPL source is part of Coreshell.
+
+corehost (codename Fushi Tensei, https://github.com/f3bandit/corehost) is a fork
+of Main_MiSTer under GPL-3.0 or later, in its own repository. Coreshell starts
+it and talks to it over its local socket (/tmp/corehost.sock), and the launcher
+reads which Main is running; no corehost code is part of Coreshell, so
+Coreshell stays under the Apache License 2.0. The same holds for the other parts
+of Infinite Tsukuyomi (corehost's project), which keep their own licences.
+
+dumps/ and systems/ are taken from each core: its menu as the core reports it,
+including the core's own menu text (the "confstr" field, word for word) with its
+option names, values and bit positions. That text belongs to each core's authors
+under the core's own licence (most MiSTer cores are GPL); each file names the core
+and build it came from. These files are data Coreshell reads, never compiled or
+linked into it, and they are not covered by Coreshell's Apache License.
+
+Coreshell is not affiliated with or endorsed by any of the authors above.

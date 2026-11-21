@@ -1,0 +1,130 @@
+{
+ "coreshell_profile": 1,
+ "system": "casiopv2000",
+ "variant": "stock",
+ "name": "Casio_PV-2000",
+ "rbf": "_Computer/Casio_PV-2000",
+ "setname": null,
+ "core_name": "Casio_PV-2000",
+ "config_file": "Casio_PV-2000.CFG",
+ "games_dir": "games/Casio_PV-2000",
+ "saves_dir": "saves/Casio_PV-2000",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "BIN",
+   "ROM"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "BIN",
+    "ROM"
+   ],
+   "label": "Load Cartridge"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "BIN",
+    "ROM"
+   ],
+   "label": "Load Cartridge",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Eject Cartridge and Reset",
+   "bits": [
+    6,
+    6
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "Video Settings",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen"
+   ],
+   "default": "Original",
+   "bits": [
+    2,
+    2
+   ],
+   "core_flags": [],
+   "key": "Video Settings/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video Settings",
+   "name": "Show Border",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    3,
+    3
+   ],
+   "core_flags": [],
+   "key": "Video Settings/Show Border",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video Settings",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    4,
+    5
+   ],
+   "core_flags": [],
+   "key": "Video Settings/Scale",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "Casio_PV-2000_20250622.rbf",
+  "rbf_md5": "8f0ebe64d7418b98800359de19ad6196",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:10:53",
+  "confstr_sha1": "2a4ac6afa60a9c7ee8b4c176fae95fa1d72b4e68"
+ }
+}

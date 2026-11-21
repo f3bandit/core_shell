@@ -1,0 +1,722 @@
+[
+ {
+  "rbf": "_Computer/3B1_20261109.rbf",
+  "md5": "67ce0e50b80eb69c2b9bc6a310c67ae4",
+  "db": "distribution_mister",
+  "has_profile": false
+ },
+ {
+  "rbf": "_Computer/MSX_20261118.rbf",
+  "md5": "4859a5ed0c32612c41a457cf9728cca5",
+  "db": "distribution_mister",
+  "has_profile": true
+ },
+ {
+  "rbf": "_Computer/MTX512_20261108.rbf",
+  "md5": "19430e90ec8ee4dca21bd5a9e66a1ee7",
+  "db": "distribution_mister",
+  "has_profile": false
+ },
+ {
+  "rbf": "_Computer/MacIIcx_20261110.rbf",
+  "md5": "8cac4f28c7cb1a74e013b618b3bfc3b7",
+  "db": "distribution_mister",
+  "has_profile": true
+ },
+ {
+  "rbf": "_Computer/PC6001_20261113.rbf",
+  "md5": "4acf86cd7b43e58e86b84fd8c5f01fe4",
+  "db": "distribution_mister",
+  "has_profile": false
+ },
+ {
+  "rbf": "_Computer/PC8001_20261114.rbf",
+  "md5": "dcdf8e9b47347ef292f260f603891ba1",
+  "db": "distribution_mister",
+  "has_profile": false
+ },
+ {
+  "rbf": "_Computer/SunSparcStation20_55mhz_20261114.rbf",
+  "md5": "9fb8290e380aac5f226a10aa6456cfcf",
+  "db": "distribution_mister",
+  "has_profile": false
+ },
+ {
+  "rbf": "_Computer/SunSparcStation20_60mhz_20261119.rbf",
+  "md5": "521b4867acc3f6822c849fff982493c0",
+  "db": "distribution_mister",
+  "has_profile": false
+ },
+ {
+  "rbf": "_Console (Dual SDRAM)/Jaguar_20260811.rbf",
+  "md5": "c32d9dfc7e97d1715f431bc497ab4da5",
+  "db": "TheJesusFish/Dual-Ram-Console-Cores",
+  "has_profile": false
+ },
+ {
+  "rbf": "_Console (Dual SDRAM)/PSX_20261108.rbf",
+  "md5": "7ae2f7b28464a9d91e70ea78e5c606f4",
+  "db": "TheJesusFish/Dual-Ram-Console-Cores",
+  "has_profile": false
+ },
+ {
+  "rbf": "_Console (Dual SDRAM)/Saturn_20250927.rbf",
+  "md5": "fbc628a990d9806e156ebac620826253",
+  "db": "TheJesusFish/Dual-Ram-Console-Cores",
+  "has_profile": false
+ },
+ {
+  "rbf": "_Console/GameAndWatch_20230630.rbf",
+  "md5": "0e9a2dd421a781733d01816f430733ba",
+  "db": "agg23_db",
+  "has_profile": true
+ },
+ {
+  "rbf": "_Console/Studio-II_20261115.rbf",
+  "md5": "bc1b9c88b8fab9b687bf895743e00b0a",
+  "db": "distribution_mister",
+  "has_profile": true
+ },
+ {
+  "rbf": "_Custom Cores/Cores/MegaDrive_Paprium_20261013.rbf",
+  "md5": "3af5ef57dbd83c281ae6a3b897756d32",
+  "db": "MultiDatabases/paprium",
+  "has_profile": false
+ },
+ {
+  "rbf": "_Custom Cores/Cores/MegaVGMdrive_MiSTer.rbf",
+  "md5": "dfde3921de9092245c764bd3e9bbaee2",
+  "db": "MultiDatabases/megavgmdrive",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI Enhanced/cores/1943-LLAPI-SNAC.rbf",
+  "md5": "29e60b058785155249c614e52c0defa1",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI Enhanced/cores/Contra-LLAPI-Diag.rbf",
+  "md5": "974e1e00f05ab02f2ddf5ddf2f7cd5f8",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI Enhanced/cores/Contra-LLAPI-SNAC.rbf",
+  "md5": "7b09c85d6a2d49152e40730731e2fc16",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI Enhanced/cores/Darius_llapi10.rbf",
+  "md5": "fdfde71cea18462681c70151927a2be6",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI Enhanced/cores/S32_ga2_llapi10_exp.rbf",
+  "md5": "f686fb5d9b2c16b28e1ca7835994b0cb",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI Enhanced/cores/jt1942_llapi10.rbf",
+  "md5": "5ceaa86e2881ad4719654a54e8b6ac62",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI Enhanced/cores/jt1944_llapi050.rbf",
+  "md5": "c054e996ca8e95acd24ba6b564cb2306",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI Enhanced/cores/jt1944_llapi_enhanced_v0_2_0_20261101.rbf",
+  "md5": "67512471b22752436c33fb5e1fc328d1",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI Enhanced/cores/jtbtiger_llapi10.rbf",
+  "md5": "b3269fed9db99428b2617edfe1f7782d",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI Enhanced/cores/jtcastle_llapi10.rbf",
+  "md5": "d30d2b54a90e0b3a85dd119455837d1a",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI Enhanced/cores/jtcircus_llapi10.rbf",
+  "md5": "7f3a71cc999904c93a62337735f92e98",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI Enhanced/cores/jtcommnd_llapi10.rbf",
+  "md5": "113951b4d827b138fb3400f2b23cd469",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI Enhanced/cores/jtdd_llapi10.rbf",
+  "md5": "2d2b8c9ef6badba17c56a0eef67dff86",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI Enhanced/cores/jtffight_llapi10.rbf",
+  "md5": "9545c92adc95cc14b4f00cb127d20d29",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI Enhanced/cores/jtgng_llapi10.rbf",
+  "md5": "3f7e08589048a18071e0bb1f0c75a715",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI Enhanced/cores/jtgoldnaxe_llapi10.rbf",
+  "md5": "e56a775fcd5e10a28f0ef1c427a33184",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI Enhanced/cores/jtkarnov_llapi10.rbf",
+  "md5": "95c2bfb27d73dea48a12a6516ca8fc70",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI Enhanced/cores/jtkicker_llapi10.rbf",
+  "md5": "0b5c0aebde60890c1f7aefb34c15fee9",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI Enhanced/cores/jtlabrun_llapi10.rbf",
+  "md5": "2a19992d14f18cca67e74e5746fb0f0a",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI Enhanced/cores/jtpunish_llapi10.rbf",
+  "md5": "9ebadf5b308a533613244b96b5f7ebd5",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI Enhanced/cores/jtrastan_llapi10.rbf",
+  "md5": "1fb3e8e2ab7afca5a0a996489c83cf2c",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI Enhanced/cores/jtsectnz_llapi10.rbf",
+  "md5": "f6f01e45e41e976b53f4631f5ce8cfb0",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI Enhanced/cores/jttora_llapi10.rbf",
+  "md5": "dc6cf90dad7e1d0d65a9e0f71b923a7c",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI Enhanced/cores/jttrojan_llapi10.rbf",
+  "md5": "95eb69153b98a51519bd6b531a449341",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI Enhanced/cores/jtyiear_llapi10.rbf",
+  "md5": "712d3a674d4749d1b9b5670508100899",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI/Atari7800_LLAPI_20250209.rbf",
+  "md5": "9904e0ece5aea1b6362f3a3f924ca4ac",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI/AtariLynx_LLAPI_20250215.rbf",
+  "md5": "b44b2adeca3500fac680995ca46f9177",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI/ColecoVision_LLAPI_20250214.rbf",
+  "md5": "3441037fe08993e8efc4bd974cb0e430",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI/GBA_LLAPI_20251205.rbf",
+  "md5": "70e21eb040cf66978a89e7a072fe9bab",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI/GBA_accuracy_LLAPI_20251205.rbf",
+  "md5": "301e5d1de0134494909302fd5ce109eb",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI/Gameboy_LLAPI_20251204.rbf",
+  "md5": "f3f2dd260395aa3721c373caf8b5814a",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI/MegaCD_LLAPI_20251205.rbf",
+  "md5": "04e8f5e54f710e4ee4440a185bdb7391",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI/MegaDrive_LLAPI_20250711.rbf",
+  "md5": "9630917b625358b482715f3600eb2902",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI/N64_80MHz_LLAPI_20251207.rbf",
+  "md5": "d7da472d69328582ad5f6721d7183553",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI/N64_LLAPI_20251207.rbf",
+  "md5": "57034eb4cb107d07b2b8cfdd1c834082",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI/NES_LLAPI_20251206.rbf",
+  "md5": "f799bd38a81ca01a651a1706a27118bb",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI/NeoGeo_LLAPI_20251206.rbf",
+  "md5": "7d997a99586ff5f475157ff903a69621",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI/PSX_LLAPI_20251206.rbf",
+  "md5": "868e913e9bfc0ecce19ad128307f6899",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI/S32X_LLAPI_20251206.rbf",
+  "md5": "31a774d309a38ddba4c78896461e47ae",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI/SGB_LLAPI_20250209.rbf",
+  "md5": "4d5cd454e502ce87ac8a7c8a76ff5c9f",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI/SMS_LLAPI_20250215.rbf",
+  "md5": "222fee316113d919888469b1c2e3ebc9",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI/SNES_LLAPI_20251204.rbf",
+  "md5": "76a15e41637600e1e846359ddadb251f",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI/Saturn_DS_LLAPI_20261028.rbf",
+  "md5": "141c2b3b07b56e1f638856586fe0f37c",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI/Saturn_LLAPI_20261028.rbf",
+  "md5": "2b6e2ec0a7be46c90d30b34c34d24e9c",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI/TurboGrafx16_LLAPI_20251204.rbf",
+  "md5": "877f82f44ca2dfb5a728f310072d3e66",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI/_Experimental/Amiga_LLAPI-2P_20261029.rbf",
+  "md5": "64d0309461e91b8f7e95d893647a3dc9",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI/_Experimental/PSX_LLAPI_DS_20261031.rbf",
+  "md5": "f330eb880274a26d485325fd413305fa",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI/_Experimental/PSX_LLAPI_SingleRAM_Diagnostic_20261031.rbf",
+  "md5": "310b39f9bce6814c9f735626110a4061",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI/cores/DonkeyKong_LLAPI_20241024.rbf",
+  "md5": "f2226e4530d1d09a47934e9ed764421d",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI/cores/IremM62_LLAPI_20240602.rbf",
+  "md5": "9a9a620622f8368b18df2c265912e862",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI/cores/IremM72_LLAPI_20240602.rbf",
+  "md5": "1d48818617cbe69f078c7167e7c6af44",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI/cores/IremM92_LLAPI_20250321.rbf",
+  "md5": "038fa011cc9ce849666191c0620c33f1",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI/cores/NinjaKun_LLAPI_20241018.rbf",
+  "md5": "ed6bb51156dcde992bda8ae0520b1b89",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI/cores/Pacman_LLAPI_20241024.rbf",
+  "md5": "29cc1e04b44afe8638c24beae98b8f13",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI/cores/SEGASYS1_LLAPI_20240609.rbf",
+  "md5": "f67cf3bfa938369bc793df6d5d297191",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI/cores/Tecmo_LLAPI_20251205.rbf",
+  "md5": "fd392fe8bd91dbb90f9965eef89bc089",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI/cores/jt1943_llapi_snac_20261030_freebuttons.rbf",
+  "md5": "df253f50e1b65b378c2cb30f40d75842",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI/cores/jt1944_llapi_snac_20261030_freebuttons.rbf",
+  "md5": "d5c9d5874a34c4e3290354dc74adf939",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_Other/Diablo.rbf",
+  "md5": "54d9afe4733803f5c161038c86f2a99e",
+  "db": "MultiDatabases/diablo",
+  "has_profile": false
+ },
+ {
+  "rbf": "_Other/Diablo/Diablo.rbf",
+  "md5": "54d9afe4733803f5c161038c86f2a99e",
+  "db": "MultiDatabases/diablo",
+  "has_profile": false
+ },
+ {
+  "rbf": "_Other/Hellfire.rbf",
+  "md5": "54d9afe4733803f5c161038c86f2a99e",
+  "db": "MultiDatabases/diablo",
+  "has_profile": false
+ },
+ {
+  "rbf": "_Other/MalditaCastilla_20260927.rbf",
+  "md5": "c46faaedec44a0202ddb488fd5230253",
+  "db": "MultiDatabases/maldita-castilla",
+  "has_profile": false
+ },
+ {
+  "rbf": "_Other/NBlood.rbf",
+  "md5": "22641e66faa6590e8bc48cf57c57db8a",
+  "db": "MultiDatabases/nblood",
+  "has_profile": false
+ },
+ {
+  "rbf": "_Other/Sonic_Mania_20260427.rbf",
+  "md5": "5209b7838f5919294e75957c897d2ed5",
+  "db": "MultiDatabases/sonic-mania",
+  "has_profile": false
+ },
+ {
+  "rbf": "_Other/Sonic_Mania_43_20260427.rbf",
+  "md5": "5422aa6fdd663524c8377d63190ee296",
+  "db": "MultiDatabases/sonic-mania",
+  "has_profile": false
+ },
+ {
+  "rbf": "_Other/cores/Tamagotchi_20230427.rbf",
+  "md5": "5e7eb429f758c17bdc2c4afb8d9b74af",
+  "db": "agg23_db",
+  "has_profile": false
+ },
+ {
+  "rbf": "_RA_Cores/Cores/MegaDrive.rbf",
+  "md5": "ba44684e4c23b38a69e9b423f248e022",
+  "db": "theypsilon/RetroAchievementsDB_MiSTer",
+  "has_profile": true
+ },
+ {
+  "rbf": "_RA_Cores/Cores/NES.rbf",
+  "md5": "1fda35b272d0ac202c7645100902c792",
+  "db": "theypsilon/RetroAchievementsDB_MiSTer",
+  "has_profile": true
+ },
+ {
+  "rbf": "_RA_Cores/Cores/SNES.rbf",
+  "md5": "ceb180061b08b359a139c4271c3a330c",
+  "db": "theypsilon/RetroAchievementsDB_MiSTer",
+  "has_profile": true
+ },
+ {
+  "rbf": "_YCComputer/C64YC2_20260623.rbf",
+  "md5": "3ab92007254948e66b206ae0286b7724",
+  "db": "MikeS11/YC_Builds-MiSTer",
+  "has_profile": false
+ },
+ {
+  "rbf": "_YCComputer/Casio_PV-2000YC_20221121.rbf",
+  "md5": "e8096b4714fbef18f369d3e768026133",
+  "db": "MikeS11/YC_Builds-MiSTer",
+  "has_profile": false
+ },
+ {
+  "rbf": "_YCComputer/InteractYC_20221121.rbf",
+  "md5": "2790009f80644c8feca3b8aa155f6212",
+  "db": "MikeS11/YC_Builds-MiSTer",
+  "has_profile": false
+ },
+ {
+  "rbf": "_YCComputer/MSX1YC_20221203.rbf",
+  "md5": "10a57cf05fff9e1f8041fce3b973bc34",
+  "db": "MikeS11/YC_Builds-MiSTer",
+  "has_profile": false
+ },
+ {
+  "rbf": "_YCComputer/Ondra_SPO186YC_20221121.rbf",
+  "md5": "6e9db9f4559f1da75e5483390f7e75de",
+  "db": "MikeS11/YC_Builds-MiSTer",
+  "has_profile": false
+ },
+ {
+  "rbf": "_YCComputer/PCXTYC_20230205.rbf",
+  "md5": "f44567f0cab15ed638fe7739668a6661",
+  "db": "MikeS11/YC_Builds-MiSTer",
+  "has_profile": false
+ },
+ {
+  "rbf": "_YCComputer/SordM5YC_20221121.rbf",
+  "md5": "682a7818e505cd293fb82bc38e3e5839",
+  "db": "MikeS11/YC_Builds-MiSTer",
+  "has_profile": false
+ },
+ {
+  "rbf": "_YCComputer/TatungEinsteinYC_20221121.rbf",
+  "md5": "5d29ea1115269bfef3447cf822cc1cf3",
+  "db": "MikeS11/YC_Builds-MiSTer",
+  "has_profile": false
+ },
+ {
+  "rbf": "_YCComputer/Ti994aYC_20221229.rbf",
+  "md5": "75559a0bde80f07db3a13a9c27cd4e05",
+  "db": "MikeS11/YC_Builds-MiSTer",
+  "has_profile": false
+ },
+ {
+  "rbf": "_YCComputer/eg2000YC_20220923.rbf",
+  "md5": "7123d4ce99a8bca75be58550a10bec48",
+  "db": "MikeS11/YC_Builds-MiSTer",
+  "has_profile": false
+ },
+ {
+  "rbf": "_YCConsole/GBAYC2_20260623.rbf",
+  "md5": "281ac0ea129b2b24fbab8abf3554f1ef",
+  "db": "MikeS11/YC_Builds-MiSTer",
+  "has_profile": false
+ },
+ {
+  "rbf": "_YCConsole/GameboyYC2_20260623.rbf",
+  "md5": "c2eb77a88bfd6db88dd80442354ec916",
+  "db": "MikeS11/YC_Builds-MiSTer",
+  "has_profile": false
+ },
+ {
+  "rbf": "_YCConsole/MegaCDYC2_20260623.rbf",
+  "md5": "cce8611ae39b206c607c1db3a6032063",
+  "db": "MikeS11/YC_Builds-MiSTer",
+  "has_profile": false
+ },
+ {
+  "rbf": "_YCConsole/MegaDriveYC2_20260623.rbf",
+  "md5": "6da7da86834bf19ff65ac636e575b374",
+  "db": "MikeS11/YC_Builds-MiSTer",
+  "has_profile": false
+ },
+ {
+  "rbf": "_YCConsole/N64YC2_20260623.rbf",
+  "md5": "9b813cedc705d1c67ef1cd182b5fa53f",
+  "db": "MikeS11/YC_Builds-MiSTer",
+  "has_profile": false
+ },
+ {
+  "rbf": "_YCConsole/NESYC2_20260623.rbf",
+  "md5": "bd52dffb7af20675f89219c5b1a69b5e",
+  "db": "MikeS11/YC_Builds-MiSTer",
+  "has_profile": false
+ },
+ {
+  "rbf": "_YCConsole/NES_NativeCVBS.rbf",
+  "md5": "fad501fcfcb4407d99d69d6865d7a684",
+  "db": "MikeS11/YC_Builds-MiSTer",
+  "has_profile": false
+ },
+ {
+  "rbf": "_YCConsole/NeoGeoYC2_20260623.rbf",
+  "md5": "5ec880b4e1ae385756a7f808786b1970",
+  "db": "MikeS11/YC_Builds-MiSTer",
+  "has_profile": false
+ },
+ {
+  "rbf": "_YCConsole/Odyssey2YC_20220619.rbf",
+  "md5": "e4a2e9c809fdc0aa20ed7af8aa176d96",
+  "db": "MikeS11/YC_Builds-MiSTer",
+  "has_profile": false
+ },
+ {
+  "rbf": "_YCConsole/PSX2XYC_20230114.rbf",
+  "md5": "30def6980fce83bb3482237b5023ad0b",
+  "db": "MikeS11/YC_Builds-MiSTer",
+  "has_profile": false
+ },
+ {
+  "rbf": "_YCConsole/PSXYC2_20260623.rbf",
+  "md5": "ff0abf4a1c0afa180a075ad3cb496f0a",
+  "db": "MikeS11/YC_Builds-MiSTer",
+  "has_profile": false
+ },
+ {
+  "rbf": "_YCConsole/S32XYC2_20260623.rbf",
+  "md5": "f08c2b79c7c4a604098c02b5f733e9d3",
+  "db": "MikeS11/YC_Builds-MiSTer",
+  "has_profile": false
+ },
+ {
+  "rbf": "_YCConsole/SNESYC2_20260623.rbf",
+  "md5": "ee5a40f6adb62a177f5a85f005c0ba0d",
+  "db": "MikeS11/YC_Builds-MiSTer",
+  "has_profile": false
+ },
+ {
+  "rbf": "_YCConsole/SaturnYC2_20260623.rbf",
+  "md5": "1880f6320e0da41da5478058eedf45bd",
+  "db": "MikeS11/YC_Builds-MiSTer",
+  "has_profile": false
+ },
+ {
+  "rbf": "_YCConsole/TurboGrafx16YC2_20260623.rbf",
+  "md5": "e9d4b44d57959edaa2821132dc67efa3",
+  "db": "MikeS11/YC_Builds-MiSTer",
+  "has_profile": false
+ },
+ {
+  "rbf": "games/MEMTEST/old/memtest_060MHz.rbf",
+  "md5": "697e5d22ad44d7dabc91ea8e8048b492",
+  "db": "distribution_mister",
+  "has_profile": false
+ },
+ {
+  "rbf": "games/MEMTEST/old/memtest_100MHz.rbf",
+  "md5": "a581f4dc8a57c6b8828fb7bac9faf2bc",
+  "db": "distribution_mister",
+  "has_profile": false
+ },
+ {
+  "rbf": "games/MEMTEST/old/memtest_110MHz.rbf",
+  "md5": "68dfd81b4cb9474350a9a5d6f8c3e4f4",
+  "db": "distribution_mister",
+  "has_profile": false
+ },
+ {
+  "rbf": "games/MEMTEST/old/memtest_120MHz.rbf",
+  "md5": "df3e0e23aaccb6906a320ada2416064f",
+  "db": "distribution_mister",
+  "has_profile": false
+ },
+ {
+  "rbf": "games/MEMTEST/old/memtest_130MHz.rbf",
+  "md5": "dc969dbc4926419b509cc6b25f5647ed",
+  "db": "distribution_mister",
+  "has_profile": false
+ },
+ {
+  "rbf": "games/MEMTEST/old/memtest_140MHz.rbf",
+  "md5": "e56994666d165e343a3d4e0a3ee11672",
+  "db": "distribution_mister",
+  "has_profile": false
+ },
+ {
+  "rbf": "games/MEMTEST/old/memtest_150MHz.rbf",
+  "md5": "33d557b3dd2fb7db4bebcf60c025787f",
+  "db": "distribution_mister",
+  "has_profile": false
+ },
+ {
+  "rbf": "games/MEMTEST/old/memtest_160MHz.rbf",
+  "md5": "2645cc9b28147ba7da1c5f0295515aca",
+  "db": "distribution_mister",
+  "has_profile": false
+ },
+ {
+  "rbf": "games/MEMTEST/old/memtest_167MHz.rbf",
+  "md5": "71c8bedcde23e881169aaf7476b125d0",
+  "db": "distribution_mister",
+  "has_profile": false
+ },
+ {
+  "rbf": "menu.rbf",
+  "md5": "292b36d1976f67b464a31e9d5d0ce66b",
+  "db": "distribution_mister",
+  "has_profile": false
+ },
+ {
+  "rbf": "minicast/polly2-rtl.rbf",
+  "md5": "4855cc5ef17183eaa66b140af0192769",
+  "db": "MultiDatabases/dreamster",
+  "has_profile": false
+ }
+]

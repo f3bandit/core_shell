@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/ZX81_20260603.rbf",
+ "rbf_md5": "2e4cab9ce9ab653b01f153257065e54a",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "ZX81;;F,O  P  ,Load tape;-;OLM,Aspect ratio,Original,Full Screen,[ARC1],[ARC2];O6,Video frequency,50Hz,60Hz;O7,Inverse video,Off,On;O5,Black border,Off,On;OCD,Scandoubler Fx,None,HQ2x,CRT 25%,CRT 50%;-;d1ON,Vertical Crop,Disabled,216p/270p(5x);OOP,Scale,Normal,V-Integer,Narrower HV-Integer,Wider HV-Integer;-;O23,Stereo mix,none,25%,50%,100%;-;O4,Model,ZX81,ZX80;OHI,Slow mode speed,Original,NoWait,x2,x8;OAB,Main RAM,16KB,32KB,48KB,1KB;OG,Low RAM,Off,8KB;D0OEF,CHR$128/UDG,128 Chars,64 Chars,Disabled;OJ,QS CHRS,Enabled(F1),Disabled;OK,CHROMA81,Disabled,Enabled;-;O89,Joystick,Cursor,Sinclair,ZX81;OQR,Keyboard,Normal,Ghosting,Recreated ZX,Recr+Ghosting;-;R0,Reset;V,v260603",
+ "dumped": "2026-11-13T23:14:20"
+}

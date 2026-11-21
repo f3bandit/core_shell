@@ -1,0 +1,117 @@
+{
+ "coreshell_profile": 1,
+ "system": "epochgalaxyii",
+ "variant": "other",
+ "name": "EpochGalaxyII",
+ "rbf": "_Other/EpochGalaxyII",
+ "setname": null,
+ "core_name": "EpochGalaxyII",
+ "config_file": "EpochGalaxyII.CFG",
+ "games_dir": "games/EpochGalaxyII",
+ "saves_dir": "saves/EpochGalaxyII",
+ "rom": {
+  "index": 0,
+  "type": "f",
+  "exts": [
+   "rom"
+  ]
+ },
+ "slots": [
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "rom"
+   ],
+   "label": "Load File"
+  }
+ ],
+ "files": [
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "rom"
+   ],
+   "label": "Load File",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [],
+ "triggers": [
+  {
+   "name": "Reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "toggle",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Aspect ratio",
+   "values": [
+    "original",
+    "4:3"
+   ],
+   "default": "original",
+   "bits": [
+    1,
+    1
+   ],
+   "core_flags": [],
+   "key": "Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Screen Rotate",
+   "values": [
+    "None",
+    "90",
+    "180",
+    "270"
+   ],
+   "default": "None",
+   "bits": [
+    2,
+    3
+   ],
+   "core_flags": [],
+   "key": "Screen Rotate",
+   "mgl_ok": true
+  },
+  {
+   "page": "",
+   "name": "Screen Size",
+   "values": [
+    "100%",
+    "50%"
+   ],
+   "default": "100%",
+   "bits": [
+    4,
+    4
+   ],
+   "core_flags": [],
+   "key": "Screen Size",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "from": "dump",
+  "rbf": "EpochGalaxyII_20260529.rbf",
+  "rbf_md5": "5b2f1af2a5388408299a51e1b7298fc4",
+  "main": "phosphor/bin/MiSTer_phosphor",
+  "dumped": "2026-11-13T23:15:35",
+  "confstr_sha1": "97e8cf725dbb32a2583ff33455ba7f8353572d78"
+ }
+}

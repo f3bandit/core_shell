@@ -1,0 +1,7 @@
+{
+ "rbf": "_Computer/TK2000_20251124.rbf",
+ "rbf_md5": "1f4c511c95f053edb43f221bef3d07c4",
+ "main": "phosphor/bin/MiSTer_phosphor",
+ "confstr": "TK2000;;-;O56,Display,Color,B&W,Green,Amber;-;S0,NIBDSKDO PO ;S1,NIBDSKDO PO ;OA,Disk Rom,On,Off;-;R0,Reset;J,Fire 1,Fire 2;V,v250807",
+ "dumped": "2026-11-13T23:13:34"
+}
