@@ -1,10 +1,20 @@
 # Core patches: Super MemCard's only
 
 A core patch changes a **stock** core's bitstream on the MiSTer, as the core loads, without its source and without
-Quartus. Coreshell applies **only Super MemCard patches** (`<core>.memcard.vN.cspatch`), and only when the user has
-turned them on (`"memcard_patch": true` in `coreshell/settings/coreshell.json`; off by default). Today that's one:
-the PSX core reaching the real card in the front port while a USB pad plays (the stock core only lets the card in
-when Pad1 is the front port's controller).
+Quartus. Coreshell applies **only Super MemCard patches** (`patches/<core>.memcard.cspatch`), and only when the user has
+turned them on: **SuperCard**, the Pad1 or Pad2 choice "USB pad + front-port card" in the core's menu (per system or per
+game; the choice is only there when a patch for the installed core is, and SNAC MemCard then shows "Real": the
+core's own labels say the opposite of what the patched core does with them), or `"memcard_patch": true` in `coreshell/settings/coreshell.json` for
+every launch (off by default). Today that's one: the PSX core reaching the real card in the front port while a USB pad
+plays (the stock core only lets the card in when Pad1 is the front port's controller).
+
+`PSX_20260807.memcard.cspatch` turns the core's virtual-card switch round: with SNAC MemCard on "Virtual", a pad
+command (01) goes to the core's own pad (USB) and a card command (81) stays on the front port. Only the first byte
+a game sends after selecting the port counts (Nov 22 2026: the first patch read a byte left over from the previous
+exchange, so card reads after a pad read went to the virtual card). A SuperCard launch
+runs the patched core with Pad1 = SNAC-port1 and SNAC MemCard = Virtual for that launch only (the handoff's status
+bits), so the core's own Pad1 and SNAC MemCard options stay as the user left them. It needs a Main that takes the
+handoff (Phosphor's, corehost); with another Main the launch says so and starts without it.
 
 No core is patched for the front port's controller. Controllers are USB (or Bluetooth) in Main, the frontend and
 every core, as on a stock MiSTer. (A front-port pad patch, `frontpad.v`, was built and tested on NES and SNES on

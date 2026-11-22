@@ -40,7 +40,7 @@ HOME = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REPO = 'f3bandit/core_shell'
 MAINS_TAG = 'shim-mains'
 # What a release replaces (whole folders: code; merged: data)
-CODE = ['coreshell', 'tools', 'scripts', 'quirks', 'corepatch', 'docs']
+CODE = ['coreshell', 'tools', 'scripts', 'quirks', 'corepatch', 'patches', 'docs']
 FILES = ['coreshell.sh', 'VERSION', 'README.md', 'LICENSE']
 BINS = ['bin/corepatch']
 KEEP_BACKUPS = 3

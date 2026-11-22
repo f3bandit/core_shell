@@ -42,6 +42,7 @@ import sys
 import threading
 import time
 
+from . import corepatches as cpatch
 from . import launcher as ln
 from .mains import bridge_replaced
 from .cmdpipe import write_main
@@ -533,6 +534,9 @@ class Coreshell(object):
                           'per_display': src in ('display', 'game_display')})
         # Super MemCard: its page on every system it keeps saves for (no core built for it)
         items += self.smc.menu_items(p)
+        # SuperCard (USB pad and the real card) as a Pad1 and Pad2 choice, when a patch for the installed core is here
+        items = cpatch.decorate_menu(items, self.paths, ln.installed_rbf(self.paths, p['rbf']), sysv, gamev,
+                                     [k for k, _ in cpatch.PORTS.values() if game and k in gamev])
         return {'menu': items, 'display': self.display()[1], 'profile': self._pid(req),
                 'name': p['name'], 'variant': p.get('variant', 'stock')}
 
@@ -541,11 +545,41 @@ class Coreshell(object):
         if req['key'] == smc.CARD_KEY:
             # the card a system plays from is the card's, for every game and display
             return {'card': self.smc.pick(p, req['value'])}
+        if req['key'] in (cpatch.SUPERCARD_KEY, cpatch.SUPERCARD2_KEY):
+            if req['value'] not in cpatch.SUPERCARD_VALUES:
+                raise ValueError('%r is not one of %s' % (req['value'], cpatch.SUPERCARD_VALUES))
+            if not cpatch.available(self.paths, ln.installed_rbf(self.paths, p['rbf'])):
+                raise KeyError('SuperCard: no core patch for the installed %s core' % p['system'])
+            key = p['system'] + _vsuffix(p)
+            with self.lock:
+                vals = ln.read_settings(self.paths, key, req.get('game'))
+                vals[req['key']] = req['value']
+                ln.write_settings(self.paths, key, vals, req.get('game'))
+            return {}
+        patch_here = req['key'] in cpatch.PORTS and cpatch.available(self.paths,
+                                                                     ln.installed_rbf(self.paths, p['rbf']))
+        sc_key = cpatch.PORTS[req['key']][0] if patch_here else None
+        if patch_here and req['value'] == cpatch.SUPERCARD_CHOICE:
+            # a Pad's "USB pad + front-port card": SuperCard on for that port; the Pad the user had stays for later
+            key = p['system'] + _vsuffix(p)
+            with self.lock:
+                vals = ln.read_settings(self.paths, key, req.get('game'))
+                vals[sc_key] = 'On'
+                ln.write_settings(self.paths, key, vals, req.get('game'))
+            return {}
         o = pf.find_option(p, req['key'])
         if not o:
             raise KeyError('no option %r' % req['key'])
         if req['value'] not in o['values']:
             raise ValueError('%r is not one of %s' % (req['value'], o['values']))
+        if patch_here:
+            # any other choice for that Pad: its SuperCard off where it was picked
+            key = p['system'] + _vsuffix(p)
+            with self.lock:
+                vals = ln.read_settings(self.paths, key, req.get('game'))
+                if vals.get(sc_key) == 'On':
+                    vals[sc_key] = 'Off'
+                    ln.write_settings(self.paths, key, vals, req.get('game'))
         key = p['system'] + _vsuffix(p)
         disp = self._disp(req)
         with self.lock:
@@ -568,6 +602,11 @@ class Coreshell(object):
             else:
                 vals = {}
             ln.write_settings(self.paths, key, vals, req.get('game'), disp)
+            if req.get('key') in cpatch.PORTS:
+                # a Pad back to its default: its SuperCard (a Pad choice in the menu) goes with it
+                vals = ln.read_settings(self.paths, key, req.get('game'))
+                if vals.pop(cpatch.PORTS[req['key']][0], None) is not None:
+                    ln.write_settings(self.paths, key, vals, req.get('game'))
         return {}
 
     def _plan_args(self, req):

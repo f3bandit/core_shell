@@ -58,7 +58,7 @@ jobs:
         run: |
           set -e
           rm -rf pkg && mkdir -p pkg/bin pkg/mains
-          cp -r coreshell tools scripts quirks corepatch docs systems addons caps compat pkg/
+          cp -r coreshell tools scripts quirks corepatch patches docs systems addons caps compat pkg/
           cp bin/run-script pkg/bin/            # (the Mains run scripts through it: addons/, compat/)
           cp bin/restore-points pkg/bin/        # (restore points of the system files, before an update)
           cp scripts/coreshell.sh pkg/coreshell.sh
