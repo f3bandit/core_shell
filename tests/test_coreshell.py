@@ -774,6 +774,52 @@ class Displays(unittest.TestCase):
         self.assertEqual(ln.ini_main(self.paths, ['TEST']), 'MiSTer')
 
 
+    def test_ini_list_follows_the_menus_main(self):
+        r = self.tmp.name
+        for n in ('MiSTer_SVID.ini', 'MiSTer_RGHV.ini'):
+            open(os.path.join(r, n), 'w').close()
+        os.makedirs(os.path.join(r, 'INI', 'sub.ini'))                      # (a folder: not an INI)
+        for n in ('b.ini', 'a.ini', '.hidden.ini', 'notes.txt'):
+            open(os.path.join(r, 'INI', n), 'w').close()
+        # MiSTer's Main with the INI folder: 3 from the root in name order, then the folder's (slots 4 on)
+        self.assertEqual(ln.alt_ini_names(self.paths, (3, True)),
+                         ['MiSTer_RGHV.ini', 'MiSTer_RGsB.ini', 'MiSTer_SVID.ini', 'INI/a.ini', 'INI/b.ini'])
+        # Phosphor's from before the INI folder: 4 from the root (the SuperStation's four video profiles)
+        self.assertEqual(ln.alt_ini_names(self.paths, (4, False)),
+                         ['MiSTer_RGHV.ini', 'MiSTer_RGsB.ini', 'MiSTer_SVID.ini', 'MiSTer_YPbP.ini'])
+        # an older Main: no folder, the first 3 found
+        self.assertEqual(len(ln.alt_ini_names(self.paths, (3, False))), 3)
+        # fewer root INIs than slots: the folder's still start after them, as in Main
+        for n in ('MiSTer_SVID.ini', 'MiSTer_RGHV.ini', 'MiSTer_YPbP.ini'):
+            os.remove(os.path.join(r, n))
+        names = ln.alt_ini_names(self.paths, (3, True))
+        self.assertEqual(names, ['MiSTer_RGsB.ini', '', '', 'INI/a.ini', 'INI/b.ini'])
+        ln._INI_RULE.clear()
+        main = os.path.join(r, 'MiSTer')
+        with open(main, 'wb') as f:
+            f.write(b'xx /tmp/phosphor-main.sock\0 Config: %s\0yy')
+        self.assertEqual(ln.ini_rule(main), (3, True))                            # (Phosphor's follows MiSTer's)
+        with open(os.path.join(r, 'oldphos'), 'wb') as f:
+            f.write(b'xx /tmp/phosphor-main.sock\0 Config:\0yy')
+        self.assertEqual(ln.ini_rule(os.path.join(r, 'oldphos')), (4, False))
+        with open(os.path.join(r, 'old'), 'wb') as f:
+            f.write(b' Config:\0')
+        self.assertEqual(ln.ini_rule(os.path.join(r, 'old')), (3, False))
+        orig = ln.ini_rule
+        self.addCleanup(setattr, ln, 'ini_rule', orig)
+        ln.ini_rule = lambda path: (3, True)
+        self.assertEqual(ln.ini_list(self.paths), ['MiSTer.ini', 'MiSTer_RGsB.ini', 'INI/a.ini', 'INI/b.ini'])
+        self.slot = 4
+        self.assertEqual(ln.active_ini(self.paths, 4), 'INI/a.ini')
+        self.assertEqual(ln.active_ini(self.paths, 2), 'MiSTer.ini')               # (an empty slot)
+        mem = os.path.join(r, 'mem')
+        with open(mem, 'wb') as f:
+            f.truncate(ln.ALTCFG_PHYS + 0x1000)
+        ln.set_ini(self.paths, 'INI/b.ini', fifo=os.path.join(r, 'cmd'), mem=mem, corename=os.path.join(r, 'none'))
+        with open(mem, 'rb') as f:
+            f.seek(ln.ALTCFG_PHYS + 0xF04)
+            self.assertEqual(f.read(4), bytes([0x34, 0x99, 0xBA, 5]))
+
     def test_set_ini(self):
         mem = os.path.join(self.tmp.name, 'mem')
         with open(mem, 'wb') as f:

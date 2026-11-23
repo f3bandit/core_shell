@@ -126,23 +126,82 @@ _MAIN_CAPS = {}
 ALTCFG_PHYS = 0x1FFFF000        # Main's shared page; altcfg() keeps the INI slot at +0xF04
 
 
-def alt_ini_names(paths):
-    """Main's alternate INIs: the first 3 MiSTer_*.ini files in directory
-    order, then sorted (cfg_get_name in Main's cfg.cpp)."""
-    names = []
+INI_DIR = 'INI'                 # Main's CFG_INI_DIR: more INIs, in a folder of their own (Main Nov 2026 on)
+INI_MAX = 64                    # Main's CFG_ALT_MAX: the most INIs it switches between (MiSTer.ini aside)
+_INI_RULE = {}
+
+
+def menu_main_path(paths, proc='/proc'):
+    """The Main that has the menu (it keeps the INI list and the slot): the Main running now (one at a time, named
+    MiSTer*), else the one MiSTer.ini's [MiSTer] main= starts, else MiSTer."""
     try:
-        for n in os.listdir(paths.root):
-            if len(names) == 3:
-                break
-            if n.lower().startswith('mister_') and n.lower().endswith('.ini'):
-                names.append(n)
+        for pid in os.listdir(proc):
+            if pid.isdigit():
+                try:
+                    exe = os.readlink(os.path.join(proc, pid, 'exe'))
+                except OSError:
+                    continue
+                if exe.endswith(' (deleted)'):
+                    exe = exe[:-10]
+                if os.path.basename(exe).lower().startswith('mister'):
+                    return exe
     except OSError:
         pass
-    return sorted(names, key=str.lower)
+    main = ini_main(paths, [], 'MiSTer.ini')
+    return main if os.path.isabs(main) else os.path.join(paths.root, main)
+
+
+def ini_rule(path):
+    """How this Main lists its INIs: (root, folder). folder: True for a Main with the INI folder (MiSTer Main 84b52d4,
+    Nov 2026 on: its OSD's " Config: %s" line), False for an older one. root: how many MiSTer_*.ini it takes from
+    the SD card's root: 3, as MiSTer's; 4 only in Phosphor's Mains from before the INI folder (the SuperStation's
+    four video profiles; Phosphor's Main follows MiSTer's since)."""
+    try:
+        st = os.stat(path)
+        key = (path, st.st_mtime, st.st_size)
+    except (OSError, TypeError):
+        return (3, False)
+    if key not in _INI_RULE:
+        with open(path, 'rb') as f:
+            b = f.read()
+        folder = b' Config: %s\0' in b
+        _INI_RULE[key] = (4 if b'/tmp/phosphor-main.sock' in b and not folder else 3, folder)
+    return _INI_RULE[key]
+
+
+def alt_ini_names(paths, rule=None):
+    """Main's alternate INIs, by slot (1 on; '' for a slot with none), as the menu's Main lists them (cfg_get_name in
+    its cfg.cpp). An older Main: the first <root> MiSTer_*.ini in directory order, sorted. A Main with the INI folder:
+    the first <root> MiSTer_*.ini in name order (the slots after them kept even when there are fewer), then the INI
+    folder's *.ini in name order, up to 64 in all."""
+    root, folder = rule or ini_rule(menu_main_path(paths))
+
+    def scan(path, prefix, keep, first_found):
+        names = []
+        try:
+            for n in os.listdir(path):
+                if first_found and len(names) == keep:
+                    break
+                low = n.lower()
+                if n.startswith('.') or len(n) < 5 or not low.endswith('.ini') or os.path.isdir(os.path.join(path, n)):
+                    continue
+                if prefix and not low.startswith(prefix):
+                    continue
+                names.append(n)
+        except OSError:
+            pass
+        return sorted(names, key=str.lower)[:keep]
+
+    if not folder:
+        return scan(paths.root, 'mister_', root, True)
+    names = scan(paths.root, 'mister_', root, False)
+    names += [''] * (root - len(names))
+    names += [INI_DIR + '/' + n for n in scan(os.path.join(paths.root, INI_DIR), '', INI_MAX - root, False)]
+    return names
 
 
 def active_ini_slot(mem='/dev/mem'):
-    """0 = MiSTer.ini, 1-3 = alternate INI, as Main's altcfg() stores it."""
+    """0 = MiSTer.ini, 1 on = alternate INI (up to 64), as Main's altcfg() stores it."""
     import mmap
     try:
         fd = os.open(mem, os.O_RDONLY | getattr(os, 'O_SYNC', 0))
@@ -156,7 +215,7 @@ def active_ini_slot(mem='/dev/mem'):
         return 0
     finally:
         os.close(fd)
-    return par[3] if par[:3] == b'\x34\x99\xba' and 0 <= par[3] <= 3 else 0
+    return par[3] if par[:3] == b'\x34\x99\xba' and 0 <= par[3] <= INI_MAX else 0
 
 
 def set_ini_slot(slot, mem='/dev/mem'):
@@ -172,9 +231,9 @@ def set_ini_slot(slot, mem='/dev/mem'):
 
 
 def ini_list(paths):
-    """The INIs Main can switch between, in its order: MiSTer.ini, then up to 3 MiSTer_*.ini."""
+    """The INIs Main can switch between, in its order: MiSTer.ini, then its alternate INIs (alt_ini_names)."""
     names = ['MiSTer.ini'] + alt_ini_names(paths)
-    return [n for n in names if os.path.exists(os.path.join(paths.root, n))]
+    return [n for n in names if n and os.path.exists(os.path.join(paths.root, n))]
 
 
 def set_ini(paths, ini, fifo=None, mem='/dev/mem', corename='/tmp/CORENAME'):
@@ -182,7 +241,7 @@ def set_ini(paths, ini, fifo=None, mem='/dev/mem', corename='/tmp/CORENAME'):
     the slot into Main's shared page, then the menu core loaded again so Main restarts
     reading that INI (video mode, scaler, everything). From the menu only."""
     names = ['MiSTer.ini'] + alt_ini_names(paths)
-    match = [i for i, n in enumerate(names) if n.lower() == ini.lower()]
+    match = [i for i, n in enumerate(names) if n and n.lower() == ini.lower()]
     if not match or not os.path.exists(os.path.join(paths.root, names[match[0]])):
         raise KeyError('%s is not one of the INIs Main can switch to: %s' % (ini, ', '.join(ini_list(paths))))
     try:
@@ -202,7 +261,7 @@ def set_ini(paths, ini, fifo=None, mem='/dev/mem', corename='/tmp/CORENAME'):
 def active_ini(paths, slot=None):
     slot = active_ini_slot() if slot is None else slot
     names = alt_ini_names(paths)
-    if slot and slot <= len(names):
+    if slot and slot <= len(names) and names[slot - 1]:
         return names[slot - 1]
     return 'MiSTer.ini'
 
