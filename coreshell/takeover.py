@@ -145,6 +145,35 @@ def addon_processes(home):
     return out
 
 
+_ini_cache = {}
+
+
+def ini_mains_of(root):
+    """Every Main MiSTer.ini names (any section's main=, not a commented one) and /media/fat/MiSTer, as full paths:
+    a Main of these starting for the first time since boot (MiSTer_Physical-CD for a disc, MiSTer_RA) is a Main
+    restarting, not an add-on, while it hasn't opened the pipe yet. Read again only when the file changes."""
+    ini = os.path.join(root, 'MiSTer.ini')
+    try:
+        mt = os.stat(ini).st_mtime
+    except OSError:
+        mt = None
+    if _ini_cache.get('key') != (ini, mt):
+        out = {os.path.join(root, 'MiSTer')}
+        try:
+            with open(ini, 'r', encoding='utf-8', errors='replace') as f:
+                for line in f:
+                    t = line.strip()
+                    if '=' in t and not t.startswith(';'):
+                        k, v = t.split('=', 1)
+                        v = v.split(';', 1)[0].strip()
+                        if k.strip().lower() == 'main' and v:
+                            out.add(os.path.normpath(os.path.join(root, v)))
+        except OSError:
+            pass
+        _ini_cache.update(key=(ini, mt), mains=out)
+    return _ini_cache['mains']
+
+
 def addon_name(home):
     for e in ad.entries(home):
         for p in addon_processes(home):
@@ -155,7 +184,7 @@ def addon_name(home):
 
 class Takeover:
     def __init__(self, home, root, emit=None, log=None, mains=main_processes, start=None, kill=None, clock=time.time,
-                 in_menu=None, exes=exes_running):
+                 in_menu=None, exes=exes_running, ini_mains=None):
         self.home, self.root = home, root
         self.emit = emit or (lambda *a, **k: None)
         self.log = log or (lambda s: None)
@@ -165,6 +194,7 @@ class Takeover:
         self.clock = clock
         self.in_menu = in_menu or self._in_menu
         self.exes = exes
+        self.ini_mains = ini_mains or (lambda: ini_mains_of(root))
         self.main_exes = set()          # the Mains' binaries seen with the pipe open
         self.state = 'none'             # none (no Main seen yet: boot) | main | gone | addon
         self.since = clock()
@@ -205,7 +235,7 @@ class Takeover:
         if running:
             self.main_exes |= {exe for _, exe in running.values()}
         elif self.state in ('main', 'gone') and self.main_exes and \
-                any(exe in self.main_exes for exe in self.exes().values()):
+                any(exe in self.main_exes or exe in self.ini_mains() for exe in self.exes().values()):
             # a Main restarting, not an add-on: stock Main execs itself on every core load (and the frontend's
             # Main does as stock does), and opens the pipe again a few seconds later
             self.since = now

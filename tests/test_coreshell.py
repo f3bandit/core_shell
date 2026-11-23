@@ -560,6 +560,12 @@ class SuperMemCardPage(unittest.TestCase):
         self.assertEqual(self.card_item('c64'), [])     # not a Super MemCard system
         self.assertFalse(self.q(cmd='set', profile='psx', key=self.smc.CARD_KEY, value='1')['ok'])
 
+    def test_a_launch_pauses_the_card_reader(self):
+        import time as _t
+        self.assertLess(self.shell.smc._pause_until, _t.time())
+        self.q(cmd='launch', profile='nes', rom=os.path.join(self.tmp.name, 'x.nes'))
+        self.assertGreater(self.shell.smc._pause_until, _t.time() + 10)   # (the reader waits while the game starts)
+
     def test_no_smcd(self):
         self.fake.close()
         os.unlink(os.path.join(self.tmp.name, 'smcd.sock'))

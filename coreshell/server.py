@@ -626,6 +626,8 @@ class Coreshell(object):
 
     def cmd_launch(self, req):
         self.refresher.cancel()          # a game wins over updating core menus
+        if hasattr(self.smc, 'pause'):
+            self.smc.pause()             # (and over reading the cards' lists for the menu)
         if req.get('kind') == 'arcade':
             return self._arcade_launch(req)
         try:

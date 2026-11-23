@@ -85,6 +85,7 @@ class SuperMemCard(object):
         self._qlock = threading.Lock()
         self._queue = []
         self._full = False
+        self._pause_until = 0.0              # (a game starting: the reader waits, so the launch never queues behind it)
         self.background = background
         if background:
             self.warm()
@@ -115,6 +116,8 @@ class SuperMemCard(object):
                         names = sorted(n for n in self.systems() if n not in no_picker())
                         with self._qlock:
                             self._queue += [n for n in names if n not in self._queue]
+                    while time.time() < self._pause_until:
+                        time.sleep(0.2)
                     with self._qlock:
                         if not self._queue:
                             self._busy.release()   # (released under the lock: a warm() now finds the reader gone)
@@ -128,6 +131,11 @@ class SuperMemCard(object):
                 self._busy.release()
                 raise
         threading.Thread(target=run, daemon=True).start()
+
+    def pause(self, s=20.0):
+        """A game is starting: the background reader asks smcd nothing more for s seconds (at most the one it's
+        asking finishes), so the launch's card steps aren't queued behind every system's CARDS (7 s, Nov 23 2026)."""
+        self._pause_until = time.time() + s
 
     def cached_cards(self, sys_name):
         t, c = self._cards.get(sys_name, (0, None))

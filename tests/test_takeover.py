@@ -88,6 +88,19 @@ class Takeover(unittest.TestCase):
         self.tick()
         self.assertEqual(self.events, [])
 
+    def test_another_main_from_the_ini_starting_is_not_an_addon(self):
+        with open(os.path.join(self.tmp, 'MiSTer.ini'), 'w') as f:
+            f.write('[MiSTer]\nmain=phosphor/MiSTer_phosphor\n;main=MiSTer_old\n[A0CD-*]\nmain=MiSTer_Physical-CD\n')
+        cd = os.path.join(self.tmp, 'MiSTer_Physical-CD')
+        self.tick()
+        self.running = {}                                  # (Phosphor's Main exec'd the disc's Main, seen for the first time)
+        self.procs = {1: cd}
+        self.tick(5)
+        self.assertEqual(self.events, [])
+        self.procs = {1: os.path.join(self.tmp, 'MiSTer_old')}   # (a commented main= is no Main)
+        self.tick(2.5)
+        self.assertEqual(self.events[0][0], 'addon_started')
+
     def test_main_binary_gone_is_an_addon(self):
         self.tick()
         self.running = {}
