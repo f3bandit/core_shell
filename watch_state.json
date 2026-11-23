@@ -6,15 +6,15 @@
   },
   "MiSTer_3S-ARM": {
    "db": "MultiDatabases/3s-arm",
-   "md5": "eec3c6ad763713b7beec38fd9ef2c857"
+   "md5": "36d0d58c50a1ce02c69c6f10cb958292"
   },
   "MiSTer_DVDcss": {
    "db": "MultiDatabases/mister-dvd",
-   "md5": "7bf1317827f61b5fb70fc424d7c24c5b"
+   "md5": "05fcb19a7c7ea878ab217e7704485112"
   },
   "MiSTer_Physical-CD": {
    "db": "MultiDatabases/physical-disc",
-   "md5": "b0467999560fee4f6cc81510d5bdb5da"
+   "md5": "96cfe74d9b283cf64efe5f4e9a6bcd33"
   },
   "MiSTer_Quake": {
    "db": "MultiDatabases/mister-quake",
@@ -38,8 +38,8 @@
   "version": "260912"
  },
  "main_source": {
-  "commit": "fb7d444c81e0598abe74c41a5210ab0bacde1b8d",
-  "date": "2026-11-21",
+  "commit": "ac2e102990fd4e3df83809565873db2d25037ecf",
+  "date": "2026-11-23",
   "failed": []
  },
  "needs_dump": [
@@ -47,6 +47,8 @@
   "_Computer/MacIIcx_20261110.rbf8cac4f28c7cb1a74e013b618b3bfc3b7",
   "_Console/GameAndWatch_20230630.rbf0e9a2dd421a781733d01816f430733ba",
   "_Console/Studio-II_20261115.rbfbc1b9c88b8fab9b687bf895743e00b0a",
+  "_Other/3S-ARM_20261021.rbfd4a8e7ab1305f62b7c32cce83617213a",
+  "_Other/DVD_20261122.rbf53a913f3903720c9fc1d112ca7f553ae",
   "_RA_Cores/Cores/MegaDrive.rbfba44684e4c23b38a69e9b423f248e022",
   "_RA_Cores/Cores/NES.rbf1fda35b272d0ac202c7645100902c792",
   "_RA_Cores/Cores/SNES.rbfceb180061b08b359a139c4271c3a330c"

@@ -1,0 +1,282 @@
+{
+ "coreshell_profile": 1,
+ "system": "vg5000",
+ "variant": "stock",
+ "name": "VG5000",
+ "rbf": "_Computer/VG5000",
+ "setname": null,
+ "core_name": "VG5000",
+ "config_file": "VG5000.CFG",
+ "games_dir": "games/VG5000",
+ "saves_dir": "saves/VG5000",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "K7",
+   "WAV"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "K7",
+    "WAV"
+   ],
+   "label": "Tape"
+  },
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "ROM",
+    "BIN"
+   ],
+   "label": "Load ROM"
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "K7"
+   ],
+   "label": "Tape save"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "K7",
+    "WAV"
+   ],
+   "label": "Tape",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "ROM",
+    "BIN"
+   ],
+   "label": "Load ROM",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "K7"
+   ],
+   "label": "Tape save",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Apply and reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Rewind tape",
+   "bits": [
+    6,
+    6
+   ],
+   "kind": "toggle",
+   "page": 1,
+   "flags": []
+  },
+  {
+   "name": "Delta key (NMI)",
+   "bits": [
+    7,
+    7
+   ],
+   "kind": "toggle",
+   "page": 1,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "",
+   "name": "Memory",
+   "values": [
+    "16 KB",
+    "32 KB",
+    "48 KB"
+   ],
+   "default": "16 KB",
+   "bits": [
+    2,
+    3
+   ],
+   "core_flags": [],
+   "key": "Memory",
+   "mgl_ok": true
+  },
+  {
+   "page": "Machine",
+   "name": "Tape speed",
+   "values": [
+    "4x",
+    "Normal"
+   ],
+   "default": "4x",
+   "bits": [
+    5,
+    5
+   ],
+   "core_flags": [],
+   "key": "Machine/Tape speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    8,
+    9
+   ],
+   "core_flags": [],
+   "key": "Video/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    10,
+    11
+   ],
+   "core_flags": [],
+   "key": "Video/Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    12,
+    14
+   ],
+   "core_flags": [],
+   "key": "Video/Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Tape overlay",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    15,
+    15
+   ],
+   "core_flags": [],
+   "key": "Video/Tape overlay",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Keyboard",
+   "values": [
+    "PC (US)",
+    "AZERTY"
+   ],
+   "default": "PC (US)",
+   "bits": [
+    16,
+    16
+   ],
+   "core_flags": [],
+   "key": "Input/Keyboard",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Swap joysticks",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    17,
+    17
+   ],
+   "core_flags": [],
+   "key": "Input/Swap joysticks",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio",
+   "name": "Tape audio",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    18,
+    18
+   ],
+   "core_flags": [],
+   "key": "Audio/Tape audio",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "repo": "MiSTer-devel/VG5000_MiSTer",
+  "commit": "4122eda4512ee01eb6c90a90c9b7e80e757e1078",
+  "file": "VG5000.sv",
+  "rbf": "VG5000_20261121.rbf",
+  "rbf_md5": "079b00887b71119d226825138c4bb3b6",
+  "from": "source"
+ }
+}

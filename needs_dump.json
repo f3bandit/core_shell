@@ -54,8 +54,8 @@
   "has_profile": false
  },
  {
-  "rbf": "_Console (Dual SDRAM)/PSX_20261108.rbf",
-  "md5": "7ae2f7b28464a9d91e70ea78e5c606f4",
+  "rbf": "_Console (Dual SDRAM)/PSX_20261120.rbf",
+  "md5": "e87d6c1a13c498a5bb751c05f28a49ac",
   "db": "TheJesusFish/Dual-Ram-Console-Cores",
   "has_profile": false
  },
@@ -90,289 +90,415 @@
   "has_profile": false
  },
  {
-  "rbf": "_LLAPI Enhanced/_Console/SNES_Enhanced_1.0_20261121.rbf",
+  "rbf": "_LLAPI+SNAC Enhanced/_Console/SNES_Enhanced_1.0_20261121.rbf",
   "md5": "acc807925f3cb16ea8adbe92558ede8e",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
-  "rbf": "_LLAPI Enhanced/cores/1943-LLAPI-SNAC.rbf",
+  "rbf": "_LLAPI+SNAC Enhanced/cores/1943-LLAPI-SNAC.rbf",
   "md5": "29e60b058785155249c614e52c0defa1",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
-  "rbf": "_LLAPI Enhanced/cores/Contra-LLAPI-Diag.rbf",
+  "rbf": "_LLAPI+SNAC Enhanced/cores/Contra-LLAPI-Diag.rbf",
   "md5": "974e1e00f05ab02f2ddf5ddf2f7cd5f8",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
-  "rbf": "_LLAPI Enhanced/cores/Contra-LLAPI-SNAC.rbf",
+  "rbf": "_LLAPI+SNAC Enhanced/cores/Contra-LLAPI-SNAC.rbf",
   "md5": "7b09c85d6a2d49152e40730731e2fc16",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
-  "rbf": "_LLAPI Enhanced/cores/Darius_llapi10.rbf",
+  "rbf": "_LLAPI+SNAC Enhanced/cores/Darius_llapi10.rbf",
   "md5": "fdfde71cea18462681c70151927a2be6",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
-  "rbf": "_LLAPI Enhanced/cores/DonkeyKong_llapi10.rbf",
+  "rbf": "_LLAPI+SNAC Enhanced/cores/DonkeyKong_llapi10.rbf",
   "md5": "3a8ba0fd400b369f1e592c9f7468ad0d",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
-  "rbf": "_LLAPI Enhanced/cores/Pacman_llapi10.rbf",
+  "rbf": "_LLAPI+SNAC Enhanced/cores/Pacman_llapi10.rbf",
   "md5": "8e71347675de0fdebcbb4c7f2095a991",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
-  "rbf": "_LLAPI Enhanced/cores/PinballAction_llapi10.rbf",
+  "rbf": "_LLAPI+SNAC Enhanced/cores/PinballAction_llapi10.rbf",
   "md5": "17d2efc3034278a6b4fe70db84bbd3f5",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
-  "rbf": "_LLAPI Enhanced/cores/S32_ga2_llapi10.rbf",
+  "rbf": "_LLAPI+SNAC Enhanced/cores/S32_ga2_llapi10.rbf",
   "md5": "c97b2919b87718f65952b6cef7398568",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
-  "rbf": "_LLAPI Enhanced/cores/S32_ga2_llapi10_exp.rbf",
+  "rbf": "_LLAPI+SNAC Enhanced/cores/S32_ga2_llapi10_exp.rbf",
   "md5": "f686fb5d9b2c16b28e1ca7835994b0cb",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
-  "rbf": "_LLAPI Enhanced/cores/jt1942_llapi10.rbf",
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jt1941_llapi10.rbf",
+  "md5": "26dcde70a62382d9a0603c8db6c0bf83",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jt1942_llapi10.rbf",
   "md5": "5ceaa86e2881ad4719654a54e8b6ac62",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
-  "rbf": "_LLAPI Enhanced/cores/jt1943_llapi10.rbf",
-  "md5": "1978b8a95dfb21a838a03d5748c4b8a1",
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jt1943_llapi10.rbf",
+  "md5": "d1febf4e7d45e72737e1e7a7699951d0",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
-  "rbf": "_LLAPI Enhanced/cores/jt1944_llapi050.rbf",
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jt1944_llapi050.rbf",
   "md5": "c054e996ca8e95acd24ba6b564cb2306",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
-  "rbf": "_LLAPI Enhanced/cores/jtajax_llapi10.rbf",
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jtajax_llapi10.rbf",
   "md5": "0a33f0ecaa8a07f97119988ada44bb1e",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
-  "rbf": "_LLAPI Enhanced/cores/jtaliens_llapi10.rbf",
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jtaliens_llapi10.rbf",
   "md5": "72c8527dc0971e58834b4c2ab776e19d",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
-  "rbf": "_LLAPI Enhanced/cores/jtaliens_scontra_llapi10.rbf",
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jtaliens_scontra_llapi10.rbf",
   "md5": "72c8527dc0971e58834b4c2ab776e19d",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
-  "rbf": "_LLAPI Enhanced/cores/jtbtiger_llapi10.rbf",
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jtarblst_llapi10.rbf",
+  "md5": "8e1b080bfa68c38646f78eb50f1b4175",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jtbiocom_llapi10.rbf",
+  "md5": "48a454303180072d0f2e451683014147",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jtbtiger_llapi10.rbf",
   "md5": "b3269fed9db99428b2617edfe1f7782d",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
-  "rbf": "_LLAPI Enhanced/cores/jtcastle_llapi10.rbf",
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jtbubl_llapi10.rbf",
+  "md5": "ad85a6235415f5615302ac960f02c30f",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jtcastle_llapi10.rbf",
   "md5": "d30d2b54a90e0b3a85dd119455837d1a",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
-  "rbf": "_LLAPI Enhanced/cores/jtcircus_llapi10.rbf",
-  "md5": "7f3a71cc999904c93a62337735f92e98",
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jtcawing_llapi10.rbf",
+  "md5": "26dcde70a62382d9a0603c8db6c0bf83",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
-  "rbf": "_LLAPI Enhanced/cores/jtcommnd_llapi10.rbf",
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jtcircus_llapi10.rbf",
+  "md5": "a95114572911ffd7316205597a964d6e",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jtcommnd_llapi10.rbf",
   "md5": "113951b4d827b138fb3400f2b23cd469",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
-  "rbf": "_LLAPI Enhanced/cores/jtdd_llapi10.rbf",
-  "md5": "2d2b8c9ef6badba17c56a0eef67dff86",
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jtcomsc_llapi10.rbf",
+  "md5": "b50849fb1174aebbc55d5c84e4da0d0d",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
-  "rbf": "_LLAPI Enhanced/cores/jtexed_llapi10.rbf",
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jtdd2_llapi10.rbf",
+  "md5": "f0f421632927a27be2db7365a56dba54",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jtdd_llapi10.rbf",
+  "md5": "d577204d6cb1e76f32c79364eedb97cf",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jtexed_llapi10.rbf",
   "md5": "3f0b4e3d45157b3d4b66e6669f438f33",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
-  "rbf": "_LLAPI Enhanced/cores/jtffight_llapi10.rbf",
-  "md5": "9545c92adc95cc14b4f00cb127d20d29",
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jtffight_llapi10.rbf",
+  "md5": "26dcde70a62382d9a0603c8db6c0bf83",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
-  "rbf": "_LLAPI Enhanced/cores/jtflane_llapi10.rbf",
-  "md5": "f27ef45813c5cd2e663aa20f5dcfd665",
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jtflane_llapi10.rbf",
+  "md5": "03c7284084d1ec2524f2afe60d8e6e22",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
-  "rbf": "_LLAPI Enhanced/cores/jtgaiden_llapi10.rbf",
-  "md5": "37b360cb5b11d6c5880821b424aa8d6d",
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jtgaiden_llapi10.rbf",
+  "md5": "f465da50323eb9cbc363648b8725dc60",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
-  "rbf": "_LLAPI Enhanced/cores/jtgng_llapi10.rbf",
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jtgals_llapi10.rbf",
+  "md5": "a6de22e5b80ac73aa3fe82e993e87304",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jtgng_llapi10.rbf",
   "md5": "3f7e08589048a18071e0bb1f0c75a715",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
-  "rbf": "_LLAPI Enhanced/cores/jtgoldnaxe_llapi10.rbf",
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jtgoldnaxe_llapi10.rbf",
   "md5": "e56a775fcd5e10a28f0ef1c427a33184",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
-  "rbf": "_LLAPI Enhanced/cores/jtgrad3_llapi10.rbf",
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jtgrad3_llapi10.rbf",
   "md5": "42a1c62842cc4427c7a4974d5ddbf647",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
-  "rbf": "_LLAPI Enhanced/cores/jtgunsmk_llapi10.rbf",
-  "md5": "8a6a2a3c1c4aae150a46fcf6312aeb42",
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jtgunsmk_llapi10.rbf",
+  "md5": "e56f6cd5e24d188901acea4c9f344591",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
-  "rbf": "_LLAPI Enhanced/cores/jtkarnov_llapi10.rbf",
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jtkarnov_llapi10.rbf",
   "md5": "95c2bfb27d73dea48a12a6516ca8fc70",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
-  "rbf": "_LLAPI Enhanced/cores/jtkicker_llapi10.rbf",
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jtkicker_llapi10.rbf",
   "md5": "0b5c0aebde60890c1f7aefb34c15fee9",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
-  "rbf": "_LLAPI Enhanced/cores/jtlabrun_llapi10.rbf",
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jtkiwi_llapi10.rbf",
+  "md5": "2986d1e93cd857ced0a965681d26dcb9",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jtlabrun_llapi10.rbf",
   "md5": "2a19992d14f18cca67e74e5746fb0f0a",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
-  "rbf": "_LLAPI Enhanced/cores/jtpang_llapi10.rbf",
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jtmikie_llapi10.rbf",
+  "md5": "587c1eaa24c101d340744b6ae1f1cf5a",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jtmx5k_llapi10.rbf",
+  "md5": "41fa3c4ffd74a6370656e3a42b3b2593",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jtpaclan_llapi10.rbf",
+  "md5": "d7ff2ae93ff16e2a5cb7821a17d4946c",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jtpang_llapi10.rbf",
   "md5": "22be6778d97e41ac449e78c658a95720",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
-  "rbf": "_LLAPI Enhanced/cores/jtparoda_llapi10.rbf",
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jtparoda_llapi10.rbf",
   "md5": "3643e5f311b039faf75fd836a25e35d1",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
-  "rbf": "_LLAPI Enhanced/cores/jtpunish_llapi10.rbf",
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jtpunish_llapi10.rbf",
   "md5": "9ebadf5b308a533613244b96b5f7ebd5",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
-  "rbf": "_LLAPI Enhanced/cores/jtrastan_llapi10.rbf",
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jtrastan_llapi10.rbf",
   "md5": "1fb3e8e2ab7afca5a0a996489c83cf2c",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
-  "rbf": "_LLAPI Enhanced/cores/jtriders_llapi10.rbf",
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jtriders_llapi10.rbf",
   "md5": "d14babbd31c3ee2f2dbe00eed8c7139b",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
-  "rbf": "_LLAPI Enhanced/cores/jtsectnz_llapi10.rbf",
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jtroadf_llapi10.rbf",
+  "md5": "4ab31343af98e3e3a86db18382446561",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jtroc_llapi10.rbf",
+  "md5": "1856be4bb3ca8ad8d9df2b24687e3394",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jtsarms_llapi10.rbf",
+  "md5": "457c1eb7f5ce09d27766ea99b6db481f",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jtsbaskt_llapi10.rbf",
+  "md5": "64b6c1153c99a49796db7d40309587b7",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jtsectnz_llapi10.rbf",
   "md5": "f6f01e45e41e976b53f4631f5ce8cfb0",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
-  "rbf": "_LLAPI Enhanced/cores/jtsimson_llapi10.rbf",
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jtsimson_llapi10.rbf",
   "md5": "b4b86a047a3421ff5f67c9e297c098f6",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
-  "rbf": "_LLAPI Enhanced/cores/jtsimson_vendetta_llapi10.rbf",
-  "md5": "2eaf611c56a709bc50668628f2477699",
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jtsimson_vendetta_llapi10.rbf",
+  "md5": "b4b86a047a3421ff5f67c9e297c098f6",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
-  "rbf": "_LLAPI Enhanced/cores/jtthundr_llapi10.rbf",
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jtskykid_llapi10.rbf",
+  "md5": "dd31af489844514cce130df52a009fdf",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jtslyspy_llapi10.rbf",
+  "md5": "8b8c40c03ac7a9036b6ec906dbe99430",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jtthundr_llapi10.rbf",
   "md5": "5aec22a637baf3e6dd42d705f0955f95",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
-  "rbf": "_LLAPI Enhanced/cores/jttmnt_llapi10.rbf",
-  "md5": "cae5e7b23fbc8cb42db79d71d95641be",
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jttmnt_llapi10.rbf",
+  "md5": "aa1d472dcc3d3e7367562da71bc0d7cd",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
-  "rbf": "_LLAPI Enhanced/cores/jttoki_llapi10.rbf",
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jttoki_llapi10.rbf",
   "md5": "c4967409cbe0092f0d20a7746dafef3a",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
-  "rbf": "_LLAPI Enhanced/cores/jttora_llapi10.rbf",
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jttora_llapi10.rbf",
   "md5": "dc6cf90dad7e1d0d65a9e0f71b923a7c",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
-  "rbf": "_LLAPI Enhanced/cores/jttrojan_llapi10.rbf",
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jttrack_llapi10.rbf",
+  "md5": "d6633ab53a7dc3c3c9cc26d1cd766e18",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jttrojan_llapi10.rbf",
   "md5": "95eb69153b98a51519bd6b531a449341",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
-  "rbf": "_LLAPI Enhanced/cores/jtvigil_llapi10.rbf",
-  "md5": "8276dd20545e2052388e3e23c88f938b",
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jtvigil_llapi10.rbf",
+  "md5": "40f32857bd71315af0549190054a23cd",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
-  "rbf": "_LLAPI Enhanced/cores/jtyiear_llapi10.rbf",
-  "md5": "712d3a674d4749d1b9b5670508100899",
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jtvlfied_llapi10.rbf",
+  "md5": "a4ccad09c3ddcb50fe8cf9474c5b8ff1",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
-  "rbf": "_LLAPI Enhanced/cores/ninjakun_llapi10.rbf",
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jtwardnr_llapi10.rbf",
+  "md5": "f9e69c1cb607caf1b694f9ffdb89f238",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI+SNAC Enhanced/cores/jtyiear_llapi10.rbf",
+  "md5": "244daeb625bcbc137d502d4b50b9dd31",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_LLAPI+SNAC Enhanced/cores/ninjakun_llapi10.rbf",
   "md5": "b17bad50bed0d7740abf08060a61b273",
   "db": "llapi_folder",
   "has_profile": false
@@ -568,6 +694,18 @@
   "md5": "df253f50e1b65b378c2cb30f40d75842",
   "db": "llapi_folder",
   "has_profile": false
+ },
+ {
+  "rbf": "_Other/3S-ARM_20261021.rbf",
+  "md5": "d4a8e7ab1305f62b7c32cce83617213a",
+  "db": "MultiDatabases/3s-arm",
+  "has_profile": true
+ },
+ {
+  "rbf": "_Other/DVD_20261122.rbf",
+  "md5": "53a913f3903720c9fc1d112ca7f553ae",
+  "db": "MultiDatabases/mister-dvd",
+  "has_profile": true
  },
  {
   "rbf": "_Other/Diablo.rbf",
