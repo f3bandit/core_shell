@@ -1,0 +1,387 @@
+{
+ "coreshell_profile": 1,
+ "system": "laser500",
+ "variant": "stock",
+ "name": "LASER500",
+ "rbf": "_Computer/Laser500",
+ "setname": null,
+ "core_name": "LASER500",
+ "config_file": "LASER500_v1.CFG",
+ "games_dir": "games/LASER500",
+ "saves_dir": "saves/LASER500",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "PRG",
+   "BIN"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "PRG",
+    "BIN"
+   ],
+   "label": "Load Program"
+  },
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load ROM"
+  },
+  {
+   "index": 3,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load Char ROM"
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "NIC",
+    "DSK"
+   ],
+   "label": "Pri. disk 1"
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "NIC",
+    "DSK"
+   ],
+   "label": "Disk 2"
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "WAV",
+    "CAS"
+   ],
+   "label": "Tape"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "PRG",
+    "BIN"
+   ],
+   "label": "Load Program",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load ROM",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 3,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load Char ROM",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "NIC",
+    "DSK"
+   ],
+   "label": "Pri. disk 1",
+   "page": 0,
+   "flags": [
+    "H1"
+   ]
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "NIC",
+    "DSK"
+   ],
+   "label": "Disk 2",
+   "page": 0,
+   "flags": [
+    "H1"
+   ]
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "WAV",
+    "CAS"
+   ],
+   "label": "Tape",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Apply and reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Rewind tape",
+   "bits": [
+    17,
+    17
+   ],
+   "kind": "reset",
+   "page": 1,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "Machine",
+   "name": "Model",
+   "values": [
+    "Laser 500",
+    "Laser 350",
+    "Laser 700"
+   ],
+   "default": "Laser 500",
+   "bits": [
+    21,
+    22
+   ],
+   "core_flags": [],
+   "key": "Machine/Model",
+   "mgl_ok": true
+  },
+  {
+   "page": "Machine",
+   "name": "Disk interface",
+   "values": [
+    "Auto",
+    "Off"
+   ],
+   "default": "Auto",
+   "bits": [
+    6,
+    6
+   ],
+   "core_flags": [],
+   "key": "Machine/Disk interface",
+   "mgl_ok": true
+  },
+  {
+   "page": "Machine",
+   "name": "Tape speed",
+   "values": [
+    "2x",
+    "Normal"
+   ],
+   "default": "2x",
+   "bits": [
+    14,
+    14
+   ],
+   "core_flags": [],
+   "key": "Machine/Tape speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Character set",
+   "values": [
+    "English",
+    "German",
+    "French",
+    "Alternate"
+   ],
+   "default": "English",
+   "bits": [
+    23,
+    24
+   ],
+   "core_flags": [],
+   "key": "Video/Character set",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    121,
+    122
+   ],
+   "core_flags": [],
+   "key": "Video/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    8,
+    9
+   ],
+   "core_flags": [],
+   "key": "Video/Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Vertical crop",
+   "values": [
+    "Off",
+    "216p(5x)"
+   ],
+   "default": "Off",
+   "bits": [
+    10,
+    10
+   ],
+   "core_flags": [],
+   "key": "Video/Vertical crop",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    11,
+    13
+   ],
+   "core_flags": [],
+   "key": "Video/Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Tape overlay",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    15,
+    15
+   ],
+   "core_flags": [],
+   "key": "Video/Tape overlay",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio",
+   "name": "Tape audio",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    16,
+    16
+   ],
+   "core_flags": [],
+   "key": "Audio/Tape audio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Advanced",
+   "name": "Tape deck",
+   "values": [
+    "Auto",
+    "Play"
+   ],
+   "default": "Auto",
+   "bits": [
+    18,
+    18
+   ],
+   "core_flags": [],
+   "key": "Advanced/Tape deck",
+   "mgl_ok": true
+  },
+  {
+   "page": "Advanced",
+   "name": "Tape pitch",
+   "values": [
+    "Wow",
+    "Steady",
+    "+1.6%",
+    "-1.6%"
+   ],
+   "default": "Wow",
+   "bits": [
+    19,
+    20
+   ],
+   "core_flags": [],
+   "key": "Advanced/Tape pitch",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "repo": "MiSTer-devel/Laser500_MiSTer",
+  "commit": "48aeaf5b0726177c6513a248df3d6c0776c75da6",
+  "file": "Laser500.sv",
+  "rbf": "Laser500_20261123.rbf",
+  "rbf_md5": "f1e2d7744d5d28b1d63060c82b584275",
+  "from": "source"
+ }
+}
