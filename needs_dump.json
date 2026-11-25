@@ -30,8 +30,8 @@
   "has_profile": false
  },
  {
-  "rbf": "_Computer/PC8001_20261114.rbf",
-  "md5": "dcdf8e9b47347ef292f260f603891ba1",
+  "rbf": "_Computer/PC8001_20261118.rbf",
+  "md5": "46b54ef14a8b6ab699fc9a07d466cc11",
   "db": "distribution_mister",
   "has_profile": false
  },
@@ -360,13 +360,13 @@
   "has_profile": true
  },
  {
-  "rbf": "_SNAC+LLAPI Enhanced/_Console/NeoGeo_LLAPI_1.0.0_20261124.rbf",
-  "md5": "8a8f84bfadd217bf8bbfceda7eeeaea0",
+  "rbf": "_SNAC+LLAPI Enhanced/_Console/NeoGeo_Turbo_20261125.rbf",
+  "md5": "2e714d62dab2d7000009443880e20718",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
-  "rbf": "_SNAC+LLAPI Enhanced/_Console/SNES_LLAPI_1.0.0_20261124.rbf",
+  "rbf": "_SNAC+LLAPI Enhanced/_Console/SNES_20261124.rbf",
   "md5": "c06f53567529c6239449259a5960f61a",
   "db": "llapi_folder",
   "has_profile": false
@@ -438,14 +438,26 @@
   "has_profile": false
  },
  {
+  "rbf": "_SNAC+LLAPI Enhanced/cores/jt1942_llapi21.rbf",
+  "md5": "e2cd8abb4c8b791fd8188e32c60f9b2d",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
   "rbf": "_SNAC+LLAPI Enhanced/cores/jt1943_llapi10.rbf",
   "md5": "58901ae418e87b94af808234ba364735",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
+  "rbf": "_SNAC+LLAPI Enhanced/cores/jt1943_llapi21.rbf",
+  "md5": "ffdabcaf9c6d469ad97ff9beff6844ac",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
   "rbf": "_SNAC+LLAPI Enhanced/cores/jt1944_llapi050.rbf",
-  "md5": "8a8388ebd3e89c0fada8030d90d0591c",
+  "md5": "e1c941acd69c6c7b06795eddc1074746",
   "db": "llapi_folder",
   "has_profile": false
  },
@@ -462,6 +474,12 @@
   "has_profile": false
  },
  {
+  "rbf": "_SNAC+LLAPI Enhanced/cores/jtaliens_llapi21.rbf",
+  "md5": "bd7a81e7df687267452bdd2af83c127e",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
   "rbf": "_SNAC+LLAPI Enhanced/cores/jtaliens_scontra_llapi10.rbf",
   "md5": "72c8527dc0971e58834b4c2ab776e19d",
   "db": "llapi_folder",
@@ -470,6 +488,12 @@
  {
   "rbf": "_SNAC+LLAPI Enhanced/cores/jtarblst_llapi10.rbf",
   "md5": "8e1b080bfa68c38646f78eb50f1b4175",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_SNAC+LLAPI Enhanced/cores/jtarblst_llapi21.rbf",
+  "md5": "b427e8084e687bfd6a2ad860fb490f36",
   "db": "llapi_folder",
   "has_profile": false
  },
@@ -600,6 +624,12 @@
   "has_profile": false
  },
  {
+  "rbf": "_SNAC+LLAPI Enhanced/cores/jtgaiden_llapi21.rbf",
+  "md5": "5eea50b9208fb9dcd07c11fd4ddf0d82",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
   "rbf": "_SNAC+LLAPI Enhanced/cores/jtgals_llapi10.rbf",
   "md5": "a6de22e5b80ac73aa3fe82e993e87304",
   "db": "llapi_folder",
@@ -613,7 +643,7 @@
  },
  {
   "rbf": "_SNAC+LLAPI Enhanced/cores/jtgoldnaxe_llapi10.rbf",
-  "md5": "e56a775fcd5e10a28f0ef1c427a33184",
+  "md5": "c21ca888fe97fe9b971f88c07f4d7417",
   "db": "llapi_folder",
   "has_profile": false
  },
@@ -696,6 +726,12 @@
   "has_profile": false
  },
  {
+  "rbf": "_SNAC+LLAPI Enhanced/cores/jtoutrun_llapi21.rbf",
+  "md5": "48846acc7e4d31998fe59fa96a8293d4",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
   "rbf": "_SNAC+LLAPI Enhanced/cores/jtpaclan_llapi10.rbf",
   "md5": "d7ff2ae93ff16e2a5cb7821a17d4946c",
   "db": "llapi_folder",
@@ -708,8 +744,20 @@
   "has_profile": false
  },
  {
+  "rbf": "_SNAC+LLAPI Enhanced/cores/jtpang_llapi21.rbf",
+  "md5": "de3e7f6485bfdb4682e41676f9aaea49",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
   "rbf": "_SNAC+LLAPI Enhanced/cores/jtparoda_llapi10.rbf",
   "md5": "3643e5f311b039faf75fd836a25e35d1",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_SNAC+LLAPI Enhanced/cores/jtparoda_llapi21.rbf",
+  "md5": "d7755c0bbd0c1f52a3c9e14b77266515",
   "db": "llapi_folder",
   "has_profile": false
  },
@@ -750,6 +798,12 @@
   "has_profile": false
  },
  {
+  "rbf": "_SNAC+LLAPI Enhanced/cores/jtroadf_llapi21.rbf",
+  "md5": "44a5dead9fa90ae6202a2adc31e7c4b7",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
   "rbf": "_SNAC+LLAPI Enhanced/cores/jtroc_llapi10.rbf",
   "md5": "1856be4bb3ca8ad8d9df2b24687e3394",
   "db": "llapi_folder",
@@ -758,6 +812,18 @@
  {
   "rbf": "_SNAC+LLAPI Enhanced/cores/jtrumble_llapi20.rbf",
   "md5": "d01ab35cdeb378121f8217f92e3e27fc",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_SNAC+LLAPI Enhanced/cores/jts16_llapi21.rbf",
+  "md5": "6c6d3a0b2928dbb3c8b408934f757624",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_SNAC+LLAPI Enhanced/cores/jts18_llapi21.rbf",
+  "md5": "630bf6c7f35067ec46b58f41ee7fa6e3",
   "db": "llapi_folder",
   "has_profile": false
  },
@@ -780,14 +846,38 @@
   "has_profile": false
  },
  {
+  "rbf": "_SNAC+LLAPI Enhanced/cores/jtsectnz_llapi21.rbf",
+  "md5": "365fd92b46bfd427f9289fbcfc01c746",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
   "rbf": "_SNAC+LLAPI Enhanced/cores/jtsf_llapi20.rbf",
   "md5": "0ae55827af32af3e31e74781f06d9acf",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
+  "rbf": "_SNAC+LLAPI Enhanced/cores/jtshanon_llapi21.rbf",
+  "md5": "60c2e457ff86aed3346eaa8747bdf318",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_SNAC+LLAPI Enhanced/cores/jtshouse_llapi21.rbf",
+  "md5": "1160c394df3c56ca3b012be657f71ed6",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
   "rbf": "_SNAC+LLAPI Enhanced/cores/jtsimson_llapi10.rbf",
   "md5": "b4b86a047a3421ff5f67c9e297c098f6",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_SNAC+LLAPI Enhanced/cores/jtsimson_llapi21.rbf",
+  "md5": "e996d2bce8804950a1a9ab7d9567a020",
   "db": "llapi_folder",
   "has_profile": false
  },
@@ -800,6 +890,12 @@
  {
   "rbf": "_SNAC+LLAPI Enhanced/cores/jtskykid_llapi10.rbf",
   "md5": "dd31af489844514cce130df52a009fdf",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_SNAC+LLAPI Enhanced/cores/jtskykid_llapi21.rbf",
+  "md5": "f9a8d5ca1b176ab34ccf1307a6df1799",
   "db": "llapi_folder",
   "has_profile": false
  },
@@ -822,14 +918,32 @@
   "has_profile": false
  },
  {
+  "rbf": "_SNAC+LLAPI Enhanced/cores/jttmnt_llapi21.rbf",
+  "md5": "78048b53f7a7991c5587ec3198cbb1af",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
   "rbf": "_SNAC+LLAPI Enhanced/cores/jttoki_llapi10.rbf",
   "md5": "c4967409cbe0092f0d20a7746dafef3a",
   "db": "llapi_folder",
   "has_profile": false
  },
  {
+  "rbf": "_SNAC+LLAPI Enhanced/cores/jttoki_llapi21.rbf",
+  "md5": "27a4f36ef455d053cf33da9478cefc0e",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
   "rbf": "_SNAC+LLAPI Enhanced/cores/jttora_llapi10.rbf",
   "md5": "dc6cf90dad7e1d0d65a9e0f71b923a7c",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_SNAC+LLAPI Enhanced/cores/jttora_llapi21.rbf",
+  "md5": "2a6849db3c0b8b84d4d73dc492273d44",
   "db": "llapi_folder",
   "has_profile": false
  },
@@ -842,6 +956,18 @@
  {
   "rbf": "_SNAC+LLAPI Enhanced/cores/jttrojan_llapi10.rbf",
   "md5": "95eb69153b98a51519bd6b531a449341",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_SNAC+LLAPI Enhanced/cores/jttrojan_llapi21.rbf",
+  "md5": "9378026ed5e80b44c2cf6d9f0c93562b",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_SNAC+LLAPI Enhanced/cores/jttwin16_llapi20.rbf",
+  "md5": "9e9a88c688b85a34b9c2414bbd8a7f81",
   "db": "llapi_folder",
   "has_profile": false
  },
@@ -871,7 +997,7 @@
  },
  {
   "rbf": "_SNAC+LLAPI Enhanced/cores/jtwwfss_llapi20.rbf",
-  "md5": "20f88f202c4e464bdeadd9a911cb5cf6",
+  "md5": "672c7fe9d4dc749b4011f0daa3eaea02",
   "db": "llapi_folder",
   "has_profile": false
  },

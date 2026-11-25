@@ -308,10 +308,11 @@
  "hide": [],
  "source": {
   "repo": "MiSTer-devel/MacIIci_MiSTer",
-  "commit": "6c2aaaf4c696b6940598725db1126876ca8c82e3",
+  "commit": "e7af4e56f2c6d1bc53d0e64bda926dea6a4090d5",
   "file": "MacIIci.sv",
-  "rbf": "MacIIci_20261123.rbf",
-  "rbf_md5": "c31ddae0284fbf74b7b7b951c12ce71d",
-  "from": "source"
+  "rbf": "MacIIci_20261125.rbf",
+  "rbf_md5": "e340b29c0c0e13e477d59a87e30d6da3",
+  "from": "source",
+  "confstr_sha1": "5fb3271dee9da04c3fd57c0b9ced6f49941165d1"
  }
 }

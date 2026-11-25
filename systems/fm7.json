@@ -230,12 +230,13 @@
    "name": "Machine",
    "values": [
     "FM-7",
-    "FM77AV"
+    "FM77AV",
+    "FM-8"
    ],
    "default": "FM-7",
    "bits": [
-    12,
-    12
+    23,
+    24
    ],
    "core_flags": [],
    "key": "Machine",
@@ -243,7 +244,7 @@
   },
   {
    "page": "",
-   "name": "System ROM",
+   "name": "System ROM (FM-7)",
    "values": [
     "Japanese",
     "Spanish"
@@ -254,7 +255,7 @@
     19
    ],
    "core_flags": [],
-   "key": "System ROM",
+   "key": "System ROM (FM-7)",
    "mgl_ok": true
   },
   {
@@ -294,11 +295,12 @@
  ],
  "hide": [],
  "source": {
-  "from": "dump",
-  "rbf": "FM-7_20261102.rbf",
-  "rbf_md5": "56a1dc66b482062278030eba0c697f40",
-  "main": "phosphor/bin/MiSTer_phosphor",
-  "dumped": "2026-11-13T23:11:17",
-  "confstr_sha1": "21023180419fcfb023f49c35871bd8a096cd1c9f"
+  "repo": "MiSTer-devel/FM-7_MiSTer",
+  "commit": "b1d52ea5776704637eb5ef3c55052edebe4027ae",
+  "file": "FM-7_MiSTer.sv",
+  "rbf": "FM-7_20261123.rbf",
+  "rbf_md5": "7bd44d94348a8adcc0c74a0d88bebbb3",
+  "from": "source",
+  "confstr_sha1": "4c72e31f71c9b12e435cb7855d30a90b55fd7c58"
  }
 }
