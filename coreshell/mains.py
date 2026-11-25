@@ -102,7 +102,14 @@ def bridge_replaced(root='/media/fat', exes=None, say=None):
         _bridges.add(exe)
         if say:
             say('mains: %s was replaced while it runs: its next restart starts the new file' % real)
-    for p in set(glob.glob(os.path.join(glob.escape(root), '*' + DELETED))) | set(_bridges):
+    # (left ones looked for at the SD card's root and beside each Main running: one made beside a Main in a folder,
+    # phosphor/bin's, stayed after Coreshell restarted and forgot it)
+    dirs = {root} | {os.path.dirname(e[:-len(DELETED)] if e.endswith(DELETED) else e) for e in exes
+                     if e.startswith(root + '/')}
+    left = set()
+    for d in dirs:
+        left |= set(glob.glob(os.path.join(glob.escape(d), '*' + DELETED)))
+    for p in left | set(_bridges):
         if p in want:
             continue
         _bridges.discard(p)

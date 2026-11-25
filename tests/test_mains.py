@@ -116,3 +116,27 @@ def test_bridge_replaced_main():
     assert os.path.exists(gone)
     os.remove(real)
     assert bridge_replaced(root, exes=[real + ' (deleted)']) == []   # (no new file: nothing to start)
+
+
+def test_bridge_left_in_a_folder():
+    """A script left beside a Main in a folder (phosphor/bin), from before Coreshell restarted: removed once that
+    Main runs from its own file again; a real file there never touched."""
+    import tempfile
+    from coreshell import mains
+    from coreshell.mains import bridge_replaced, BRIDGE_MARK
+    root = tempfile.mkdtemp()
+    d = os.path.join(root, 'phosphor', 'bin')
+    os.makedirs(d)
+    real = os.path.join(d, 'MiSTer_phosphor')
+    open(real, 'w').write('x')
+    left = real + ' (deleted)'
+    open(left, 'w').write('#!/bin/sh\n%s\nrm -f "$0"\n' % BRIDGE_MARK)
+    mains._bridges.discard(left)                             # (Coreshell restarted: it doesn't know the script)
+    bridge_replaced(root, exes=[left])                       # still needed while that Main runs from the old file
+    assert os.path.exists(left)
+    bridge_replaced(root, exes=[real])                       # that Main runs from its file again
+    assert not os.path.exists(left)
+    other = os.path.join(d, 'MiSTer_x (deleted)')
+    open(other, 'wb').write(b'\x7fELF\x00\xff')
+    bridge_replaced(root, exes=[real])
+    assert os.path.exists(other)
