@@ -18,8 +18,8 @@
   "has_profile": false
  },
  {
-  "rbf": "_Computer/MacIIcx_20261110.rbf",
-  "md5": "8cac4f28c7cb1a74e013b618b3bfc3b7",
+  "rbf": "_Computer/MacIIcx_20261125.rbf",
+  "md5": "91f42054a27cea58937ec791608b7b03",
   "db": "distribution_mister",
   "has_profile": true
  },
@@ -30,8 +30,8 @@
   "has_profile": false
  },
  {
-  "rbf": "_Computer/PC8001_20261118.rbf",
-  "md5": "46b54ef14a8b6ab699fc9a07d466cc11",
+  "rbf": "_Computer/PC8001_20261125.rbf",
+  "md5": "307d3e895ee0dc791373be4697c6b640",
   "db": "distribution_mister",
   "has_profile": false
  },
@@ -361,7 +361,7 @@
  },
  {
   "rbf": "_SNAC+LLAPI Enhanced/_Console/NeoGeo_Turbo_20261125.rbf",
-  "md5": "2e714d62dab2d7000009443880e20718",
+  "md5": "786a8d65774f9af9e4c658be57f35741",
   "db": "llapi_folder",
   "has_profile": false
  },
@@ -457,7 +457,7 @@
  },
  {
   "rbf": "_SNAC+LLAPI Enhanced/cores/jt1944_llapi050.rbf",
-  "md5": "e1c941acd69c6c7b06795eddc1074746",
+  "md5": "91e6247a6e247189e22abe0852a7ac7d",
   "db": "llapi_folder",
   "has_profile": false
  },
@@ -625,7 +625,7 @@
  },
  {
   "rbf": "_SNAC+LLAPI Enhanced/cores/jtgaiden_llapi21.rbf",
-  "md5": "5eea50b9208fb9dcd07c11fd4ddf0d82",
+  "md5": "766e3142ca3b9bf45ee267ea0dd9a7ff",
   "db": "llapi_folder",
   "has_profile": false
  },
@@ -642,8 +642,8 @@
   "has_profile": false
  },
  {
-  "rbf": "_SNAC+LLAPI Enhanced/cores/jtgoldnaxe_llapi10.rbf",
-  "md5": "c21ca888fe97fe9b971f88c07f4d7417",
+  "rbf": "_SNAC+LLAPI Enhanced/cores/jtgoldnaxe_llapi21.rbf",
+  "md5": "0cbb099f44e39f067c2579db30bfbe8c",
   "db": "llapi_folder",
   "has_profile": false
  },
@@ -799,7 +799,7 @@
  },
  {
   "rbf": "_SNAC+LLAPI Enhanced/cores/jtroadf_llapi21.rbf",
-  "md5": "44a5dead9fa90ae6202a2adc31e7c4b7",
+  "md5": "1c3a78b83b89264ffdee9a160d86f3b2",
   "db": "llapi_folder",
   "has_profile": false
  },
@@ -908,6 +908,12 @@
  {
   "rbf": "_SNAC+LLAPI Enhanced/cores/jtthundr_llapi10.rbf",
   "md5": "5aec22a637baf3e6dd42d705f0955f95",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_SNAC+LLAPI Enhanced/cores/jtthundr_llapi21.rbf",
+  "md5": "09db15c999f5b8d0e647f7ed0da27071",
   "db": "llapi_folder",
   "has_profile": false
  },

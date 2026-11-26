@@ -38,13 +38,13 @@
   "version": "260912"
  },
  "main_source": {
-  "commit": "8b692cb5f12310049dfaec199d8e05cabb4fa558",
-  "date": "2026-11-25",
+  "commit": "f739cc4dafd23cb808e355b63719a88356646b8c",
+  "date": "2026-11-26",
   "failed": []
  },
  "needs_dump": [
   "_Computer/MSX_20261118.rbf4859a5ed0c32612c41a457cf9728cca5",
-  "_Computer/MacIIcx_20261110.rbf8cac4f28c7cb1a74e013b618b3bfc3b7",
+  "_Computer/MacIIcx_20261125.rbf91f42054a27cea58937ec791608b7b03",
   "_Console/GameAndWatch_20230630.rbf0e9a2dd421a781733d01816f430733ba",
   "_Console/Studio-II_20261115.rbfbc1b9c88b8fab9b687bf895743e00b0a",
   "_Other/3S-ARM_20261021.rbfd4a8e7ab1305f62b7c32cce83617213a",

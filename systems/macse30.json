@@ -258,12 +258,12 @@
  ],
  "hide": [],
  "source": {
-  "from": "source",
   "repo": "MiSTer-devel/MacSE30_MiSTer",
-  "commit": "82aff539a4d97d83476d7c52aa16062e939bbee1",
+  "commit": "b2db60be1708ebe90fface641c60048b91ef5b04",
   "file": "MacSE30.sv",
-  "rbf": "MacSE30_20261110.rbf",
-  "rbf_md5": "df1e13147a8ba19c1ad9b5692843b8d5",
+  "rbf": "MacSE30_20261125.rbf",
+  "rbf_md5": "68adb679e89e8cbe37829a0fb1b130ce",
+  "from": "source",
   "confstr_sha1": "7ad7d30368281ea3e31ad3ed095c1669d9807bae"
  }
 }
