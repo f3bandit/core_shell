@@ -169,6 +169,22 @@ running answers `card busy`. PSX has no Card entry (it keeps its own cards), nor
 Super MemCard shim passes the front ports; it tells smcd about every game itself, also one handed to MiSTer_RA or
 MiSTer_Physical-CD by `main=`).
 
+## PSX controller setup (Auto)
+
+The PSX menu has `Controllers/Setup` (`Manual` / `Auto`, Coreshell's own: `"live": false`, so don't hand it to the
+running core; it counts from the game's next start). On Auto, a launch gives each port the controller type the game
+takes and SNAC MemCard by what's in the front ports, for that launch only (the .CFG is never written).
+
+While that game runs, `menu` (with the game's `rom`) shows Pad1 / Pad2 / SNAC MemCard as the core runs them, the
+user's own setting in their `note` (`note_plain`: the note to show once the user changes it). Coreshell asks the running Main (`opt` on `/tmp/phosphor-main.sock` or
+`/tmp/corehost.sock`), so a change in the core's own menu counts too. Under a Main without that API it goes by what
+Auto gave the core, and by what you tell it: when the user changes one of them in your in-game menu and you give the
+running core the change too, say so with `"live": true`:
+```
+-> {"v":1,"cmd":"set","profile":"psx","key":"Pad1","value":"Analog","rom":"<the game's path>","live":true}
+```
+Without `live` the change is saved for the next start and the menu keeps showing what the core runs.
+
 ## Core updates (refresh)
 
 After Update All changes cores, Coreshell rebuilds their profiles on the console itself: it starts doing so

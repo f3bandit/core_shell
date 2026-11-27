@@ -69,6 +69,8 @@ def _log(msg):
 
 
 LAUNCH_LOG = '/tmp/coreshell/launch.log'
+MAIN_SOCKS = ('/tmp/phosphor-main.sock', '/tmp/corehost.sock')   # the running Main's API (opt: an option's value)
+AUTO_FILE = '/tmp/coreshell/auto.json'    # what Auto gave the running game's core (kept over a restart of Coreshell)
 
 
 def _step(step, msg):
@@ -119,10 +121,18 @@ class Coreshell(object):
         self._fifo = fifo
         self.pipe = None                 # cmdpipe: /dev/MiSTer_cmd is Coreshell's (start_pipe)
         self._announced = None           # the game Coreshell wrote in /tmp (ACTIVEGAME...)
+        self._auto_last = None           # the last launch's PSX controller setup on Auto: {rom, serial, values}
         try:                             # (started again mid-game: the game a Coreshell before this one wrote)
             if open(os.path.join(STATE_DIR, 'CORENAME')).read().strip() not in ('', 'MENU'):
                 self._announced = open(os.path.join(STATE_DIR, 'ACTIVEGAME')).read().strip() or None
         except OSError:
+            pass
+        try:                             # (and what Auto gave that game's core)
+            with open(AUTO_FILE, encoding='utf-8') as f:
+                last = json.load(f)
+            if self._announced and last.get('rom') == self._announced:
+                self._auto_last = last
+        except (OSError, ValueError, AttributeError):
             pass
         self.events = evm.Events(say=_log)   # what happens, for whoever asks (cmd events / subscribe)
         self.lock = threading.Lock()
@@ -567,11 +577,19 @@ class Coreshell(object):
                           'per_display': src in ('display', 'game_display')})
         # Super MemCard: its page on every system it keeps saves for (no core built for it)
         items += self.smc.menu_items(p)
-        # the PSX controller setup (Manual / Auto: controllers.py)
+        # the PSX controller setup (Manual / Auto: controllers.py); while the game Auto started runs, what the core
+        # has now: asked from the running Main (a change in its own menu or the frontend's counts), else Auto's record
+        last = self._auto_running(req.get('rom'), p) if pf.find_option(p, 'Pad1') else None
+        if last:
+            last = dict(last, auto=last.get('auto') or dict(last['values']),     # (what Auto gave it at the launch)
+                        values=dict(last['values'], **self._core_values(p, last['values'])))
         if pf.find_option(p, 'Pad1'):
-            items.append(ct.menu_item(sysv, gamev, game))
+            items.append(ct.menu_item(sysv, gamev, game, last))
         # SNAC MemCard "Real" with the core patch: front-port cards under any Pad type (the note says so)
         items = cpatch.decorate_menu(items, self.paths, ln.installed_rbf(self.paths, p['rbf']))
+        # while a game Auto started runs: its Pads and SNAC MemCard as the core has them, not the user's settings
+        if last:
+            ct.show_running(items, last)
         return {'menu': items, 'display': self.display()[1], 'profile': self._pid(req),
                 'name': p['name'], 'variant': p.get('variant', 'stock')}
 
@@ -596,6 +614,11 @@ class Coreshell(object):
             raise KeyError('no option %r' % req['key'])
         if req['value'] not in o['values']:
             raise ValueError('%r is not one of %s' % (req['value'], o['values']))
+        # the frontend gave the running core this change too ("live": Phosphor through its Main): its menus show it
+        last = self._auto_running(req.get('rom')) if req.get('live') else None
+        if last and pf.option_key(o) in last['values']:
+            last['values'][pf.option_key(o)] = req['value']
+            self._keep_auto()
         key = p['system'] + _vsuffix(p)
         disp = self._disp(req)
         with self.lock:
@@ -670,6 +693,13 @@ class Coreshell(object):
                 ln.remember_written(self.paths, p, p['system'] + _vsuffix(p), game, self.display()[1], handed)
         if out.get('auto'):
             _step('auto', ', '.join('%s %s' % kv for kv in sorted(out['auto'].items())))
+        # (what the core got with Auto, for the menu of this game: controllers.menu_item)
+        self._auto_last = None if auto is None else {
+            'rom': rom, 'serial': auto.get('serial'),
+            'values': {k: out['values'].get(k) for k in sorted(ct.PORTS) + [ct.MEMCARD] if k in out['values']}}
+        if self._auto_last:
+            self._auto_last['auto'] = dict(self._auto_last['values'])     # (what Auto gave the core at the launch)
+        self._keep_auto()
         self._smc_note(p, out)
         if card:
             out['card'] = card
@@ -724,6 +754,65 @@ class Coreshell(object):
         if rom:
             self._announce(rom)
         return {'plan': {'mode': 'bare', 'mgl_file': mgl}}
+
+    def _keep_auto(self):
+        """_auto_last into AUTO_FILE (a Coreshell started again mid-game reads it), or the file gone (None)."""
+        try:
+            if self._auto_last is None:
+                if os.path.exists(AUTO_FILE):
+                    os.remove(AUTO_FILE)
+                return
+            os.makedirs(os.path.dirname(AUTO_FILE), exist_ok=True)
+            with open(AUTO_FILE + '.tmp', 'w', encoding='utf-8') as f:
+                json.dump(self._auto_last, f)
+            os.replace(AUTO_FILE + '.tmp', AUTO_FILE)
+        except OSError:
+            pass
+
+    def _auto_running(self, rom, p=None):
+        """The running game's launch with Auto ({rom, serial, values}), when rom is that game and it's still running
+        (not back at the menu, and p's core is the one running); else None."""
+        last = self._auto_last
+        if not (last and rom and last['rom'] == rom == self._announced) or self._in_menu():
+            return None
+        if p is not None:
+            try:
+                core = open(os.path.join(STATE_DIR, 'CORENAME')).read().strip()
+            except OSError:
+                core = ''
+            if core.lower() != (p.get('core_name') or '').lower():
+                return None
+        return last
+
+    def _core_values(self, p, keys):
+        """{option key: value} the running core has, asked from the running Main's API (opt); {} when no Main
+        answers (a stock Main) or it doesn't know."""
+        for path in MAIN_SOCKS:
+            if not os.path.exists(path):
+                continue
+            out = {}
+            s = socket.socket(socket.AF_UNIX)
+            try:
+                s.settimeout(1.0)
+                s.connect(path)
+                f = s.makefile('rw')
+                for k in keys:
+                    o = pf.find_option(p, k)
+                    if not o or not o.get('bits'):
+                        continue
+                    lo, hi = o['bits']
+                    f.write('opt O[%s]\n' % (lo if lo == hi else '%d:%d' % (hi, lo)))
+                    f.flush()
+                    a = json.loads(f.readline() or '{}')
+                    v = a.get('value')
+                    if a.get('ok') and isinstance(v, int) and 0 <= v < len(o['values']):
+                        out[pf.option_key(o)] = o['values'][v]
+            except (OSError, ValueError):
+                continue
+            finally:
+                s.close()
+            return out
+        return {}
 
     def _auto(self, p, rom, req, sysv, gamev, card=None, look=False):
         """The PSX controller setup on Auto (controllers.py): the disc's serial and, for a launch (look) from the menu
@@ -792,9 +881,15 @@ class Coreshell(object):
         parts = line[len(verb):].strip().split('\t')   # (LAUNCH <rbf>\t<mgl>; ROM <rbf>\t<file>\t<index>)
         if verb == 'MENU':
             self._announce(None)         # (the game's over: ACTIVEGAME emptied, if Coreshell wrote it)
+            self._auto_last = None
+            self._keep_auto()
             self.events.game_over(by='main')
         elif verb == 'ROM' and len(parts) > 1 and parts[1]:
+            last = self._auto_running(self._announced)
             self._announce(parts[1])     # (a file picked in the core's OSD: the game now)
+            if last:                     # (the core keeps the Pads Auto gave it: the menus show them for this disc)
+                last.update(rom=parts[1], serial=gid.psx(parts[1]))
+                self._keep_auto()
             self.events.game = parts[1]
             self.events._live = True
             self.events.emit('rom_loaded', game=parts[1], rbf=parts[0] or None)

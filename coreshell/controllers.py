@@ -103,13 +103,43 @@ def picks(values, game_vals, serial, ports=None, gun=False):
     return out
 
 
-def menu_item(system_vals, game_vals, game=None):
-    """The Controllers page's Setup entry for the PSX menu."""
+def show_running(items, last):
+    """The menu while a game Auto started runs: its Pads and SNAC MemCard show what the core runs (last['values']),
+    what Auto gave it (last['auto']) and the user's own setting in the note; note_plain: the item's own note, for a
+    frontend to show once the user changes it (the value is then the user's)."""
+    gave = last.get('auto') or last['values']
+    for it in items:
+        v = last['values'].get(it.get('key'))
+        if v is None or it.get('value') == v:
+            continue
+        mine, a = it.get('value'), gave.get(it['key'])
+        said = ('Auto set %s for this game while it runs' % v if a in (None, v) else
+                'The core runs %s now (Auto started it with %s)' % (v, a))
+        it['value'] = v
+        it['note_plain'] = it.get('note') or ''       # (its note once the user changes it: the frontend's)
+        it['note'] = '%s. Your setting: %s. %s' % (said, mine, it.get('note') or '')
+    return items
+
+
+def menu_item(system_vals, game_vals, game=None, last=None):
+    """The Controllers page's Setup entry for the PSX menu. last: that game's last launch with Auto ({serial,
+    values}: what the core got), said first in the note. live False: Coreshell's own, not one of the core's options
+    (a frontend doesn't hand it to the running core: it counts from the next launch)."""
     in_game = bool(game) and SETTING in (game_vals or {})
     v = (game_vals or {}).get(SETTING) if in_game else (system_vals or {}).get(SETTING)
+    note = ('Auto: each game gets the controller type it takes (NeGcon in Wipeout XL, a DualShock in Ape '
+            'Escape...) and the memory card in the front port when one is there, for that game only. A '
+            'controller you set for a game stays. Manual: the core as you set it.')
+    if last:
+        keys = [k for k in sorted(PORTS) + [MEMCARD] if last['values'].get(k)]
+        got = ', '.join('%s %s' % (k, last['values'][k]) for k in keys)
+        gave = last.get('auto') or last['values']
+        takes = ' '.join(PAD[t] for t in psx(last.get('serial'))) or 'not listed'
+        if all(gave.get(k) == last['values'][k] for k in keys):
+            note = 'The core runs %s, set by Auto (this game takes: %s). %s' % (got, takes, note)
+        else:
+            note = 'The core runs %s now; Auto started it with %s (this game takes: %s). %s' % (
+                got, ', '.join('%s %s' % (k, gave[k]) for k in keys if gave.get(k)), takes, note)
     return {'key': SETTING, 'page': 'Controllers', 'name': 'Setup', 'values': list(VALUES),
             'value': v if v in VALUES else 'Manual', 'default': 'Manual', 'from': 'game' if in_game else 'system',
-            'per_game': in_game, 'per_display': False,
-            'note': ('Auto: each game gets the controller type it takes (NeGcon in Wipeout XL, a DualShock in Ape '
-                     'Escape...) and the memory card in the front port when one is there, for that game only. A '
-                     'controller you set for a game stays. Manual: the core as you set it.')}
+            'per_game': in_game, 'per_display': False, 'live': False, 'note': note}
