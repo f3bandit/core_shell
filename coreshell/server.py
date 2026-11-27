@@ -43,6 +43,7 @@ import threading
 import time
 
 from . import corepatches as cpatch
+from . import controllers as ct
 from . import launcher as ln
 from .mains import bridge_replaced
 from .cmdpipe import write_main
@@ -566,6 +567,9 @@ class Coreshell(object):
                           'per_display': src in ('display', 'game_display')})
         # Super MemCard: its page on every system it keeps saves for (no core built for it)
         items += self.smc.menu_items(p)
+        # the PSX controller setup (Manual / Auto: controllers.py)
+        if pf.find_option(p, 'Pad1'):
+            items.append(ct.menu_item(sysv, gamev, game))
         # SNAC MemCard "Real" with the core patch: front-port cards under any Pad type (the note says so)
         items = cpatch.decorate_menu(items, self.paths, ln.installed_rbf(self.paths, p['rbf']))
         return {'menu': items, 'display': self.display()[1], 'profile': self._pid(req),
@@ -576,6 +580,17 @@ class Coreshell(object):
         if req['key'] == smc.CARD_KEY:
             # the card a system plays from is the card's, for every game and display
             return {'card': self.smc.pick(p, req['value'])}
+        if req['key'] == ct.SETTING:
+            if not pf.find_option(p, 'Pad1'):
+                raise KeyError('no option %r' % req['key'])
+            if req['value'] not in ct.VALUES:
+                raise ValueError('%r is not one of %s' % (req['value'], ct.VALUES))
+            key = p['system'] + _vsuffix(p)
+            with self.lock:
+                vals = ln.read_settings(self.paths, key, req.get('game'))
+                vals[ct.SETTING] = req['value']
+                ln.write_settings(self.paths, key, vals, req.get('game'))
+            return {}
         o = pf.find_option(p, req['key'])
         if not o:
             raise KeyError('no option %r' % req['key'])
@@ -603,10 +618,10 @@ class Coreshell(object):
             else:
                 vals = {}
             ln.write_settings(self.paths, key, vals, req.get('game'), disp)
-            if req.get('key') in cpatch.PORTS:
-                # a Pad back to its default: its SuperCard (a Pad choice in the menu) goes with it
+            if req.get('key') == ct.SETTING and disp:
+                # (kept without a display: cmd_set)
                 vals = ln.read_settings(self.paths, key, req.get('game'))
-                if vals.pop(cpatch.PORTS[req['key']][0], None) is not None:
+                if vals.pop(ct.SETTING, None) is not None:
                     ln.write_settings(self.paths, key, vals, req.get('game'))
         return {}
 
@@ -620,7 +635,8 @@ class Coreshell(object):
 
     def cmd_plan(self, req):
         p, rom, sysv, gamev = self._plan_args(req)
-        out = ln.plan(self.paths, p, rom, None, gamev, sysv, req.get('files'))
+        out = ln.plan(self.paths, p, rom, None, gamev, sysv, req.get('files'),
+                      auto=self._auto(p, rom, req, sysv, gamev))
         self._smc_note(p, out)
         out['ini'], out['display'] = self.display()
         return {'plan': out}
@@ -640,9 +656,10 @@ class Coreshell(object):
         p, rom, sysv, gamev = self._plan_args(req)
         _step('start', '%s %s' % (p.get('system'), rom or '(no game)'))
         card = self._card_in(p, rom, req.get('game_id'))
+        auto = self._auto(p, rom, req, sysv, gamev, card, look=True)
         with self.lock:
             out = ln.launch(self.paths, p, rom, req.get('save'), gamev, sysv, fifo=self.fifo,
-                            files=req.get('files'), before_start=self._ini_for_main, log=_log)
+                            files=req.get('files'), before_start=self._ini_for_main, log=_log, auto=auto)
             if out['mode'] in ('exact', 'handoff'):
                 game = req.get('game') or (rom and os.path.basename(rom))
                 handed = None
@@ -651,6 +668,8 @@ class Coreshell(object):
                     base = ln.read_cfg(self.paths, p) or bytes(16)
                     handed = bytes((b & ~m | v & m) & 0xFF for b, m, v in zip(base.ljust(16, b'\0'), mask, val))
                 ln.remember_written(self.paths, p, p['system'] + _vsuffix(p), game, self.display()[1], handed)
+        if out.get('auto'):
+            _step('auto', ', '.join('%s %s' % kv for kv in sorted(out['auto'].items())))
         self._smc_note(p, out)
         if card:
             out['card'] = card
@@ -705,6 +724,23 @@ class Coreshell(object):
         if rom:
             self._announce(rom)
         return {'plan': {'mode': 'bare', 'mgl_file': mgl}}
+
+    def _auto(self, p, rom, req, sysv, gamev, card=None, look=False):
+        """The PSX controller setup on Auto (controllers.py): the disc's serial and, for a launch (look) from the menu
+        core, what the front ports hold (smcd's PROBE); None when Auto is off or it isn't the PSX core."""
+        if not pf.find_option(p, 'Pad1') or not ct.auto_on(sysv, gamev):
+            return None
+        serial = (card or {}).get('game_id') or req.get('game_id') or (rom and gid.psx(rom))
+        ports = None
+        # the front ports answer only through the menu core (a launch from a running game: not known)
+        if look and self.smc.up() and self._in_menu():
+            try:
+                ports = self.smc.probe()
+            except OSError:
+                ports = None
+        _step('auto', 'PSX %s: %s; front ports %s' % (serial or '?', ' '.join(ct.psx(serial)) or 'not listed',
+                                                       ports if ports is not None else 'not known'))
+        return {'serial': serial, 'ports': ports}
 
     def _card_in(self, p, rom, game_id=None):
         """Launch step 2, card in: with a Super MemCard, the card is told the game before its core loads. PSX: that

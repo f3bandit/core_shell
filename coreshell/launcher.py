@@ -31,6 +31,7 @@ from xml.sax.saxutils import quoteattr
 
 from . import profile as pf
 from . import corepatches as cp
+from . import controllers as ct
 
 MGL_MAX_OPTIONS = 16
 CMD_FIFO = '/dev/MiSTer_cmd'
@@ -757,8 +758,9 @@ def build_mgl(prof, rom, values, send_options, extra=None, status=None, ini=None
     return '\n'.join(lines) + '\n'
 
 
-def plan(paths, prof, rom=None, save=None, game_vals=None, system_vals=None, files=None, running=None):
-    """Work out a launch without touching anything (used by the API and tests)."""
+def plan(paths, prof, rom=None, save=None, game_vals=None, system_vals=None, files=None, running=None, auto=None):
+    """Work out a launch without touching anything (used by the API and tests). auto: {'serial', 'ports'} for the
+    PSX controller setup on Auto (controllers.py; the server reads the disc and the front ports)."""
     if system_vals is None:
         system_vals = read_settings(paths, prof['system'])
     if game_vals is None and rom:
@@ -799,6 +801,17 @@ def plan(paths, prof, rom=None, save=None, game_vals=None, system_vals=None, fil
         mode = 'handoff' if handoff else 'exact'
     else:
         mode = 'name' if main_supports_options(paths, main) else 'core'
+    # PSX controller setup on Auto (controllers.py): the game's Pad types and SNAC MemCard, for this launch only, so
+    # only with a Main that takes them for the launch (the handoff, or MGL options): never written into the .CFG
+    auto_set = {}
+    if auto is not None and pf.find_option(prof, 'Pad1') and ct.auto_on(system_vals, game_vals):
+        if mode in ('handoff', 'name'):
+            auto_set = ct.picks(values, game_vals, auto.get('serial'), auto.get('ports'))
+            values = dict(values, **auto_set)
+            changed = changed + [k for k in auto_set if k not in changed]
+        else:
+            warnings.append('Controller setup Auto needs a Main that takes settings for one launch: the core as you '
+                            'set it')
     status = handoff_status(prof, values, changed) if mode == 'handoff' else None
     ini = dict(prof.get('ini') or {}) if handoff else {}     # the profile's INI settings for this core
     if prof.get('ini') and not handoff:
@@ -840,6 +853,7 @@ def plan(paths, prof, rom=None, save=None, game_vals=None, system_vals=None, fil
         'main': main,
         'values': values,
         'set': changed,               # the options Coreshell sets (the user's choices); every other one stays as is
+        'auto': auto_set,             # (of them, Auto's picks for this game)
         'hybrid': {'section': names[0], 'main': hybrid} if hybrid else None,     # (the INI view's [<core>] main=)
         'mgl': build_mgl(prof, rom, values, send, extra, status, ini),
         'handoff': handoff,
@@ -850,8 +864,8 @@ def plan(paths, prof, rom=None, save=None, game_vals=None, system_vals=None, fil
 
 
 def launch(paths, prof, rom=None, save=None, game_vals=None, system_vals=None,
-           fifo=CMD_FIFO, files=None, before_start=None, running=None, log=None):
-    p = plan(paths, prof, rom, save, game_vals, system_vals, files, running)
+           fifo=CMD_FIFO, files=None, before_start=None, running=None, log=None, auto=None):
+    p = plan(paths, prof, rom, save, game_vals, system_vals, files, running, auto)
     if not p['rbf_file']:
         raise RuntimeError('core not installed: %s' % prof['rbf'])
     # a core patch for this exact stock core (corepatches.py): the patched copy, from /tmp, instead

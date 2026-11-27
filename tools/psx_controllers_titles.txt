@@ -1,0 +1,139 @@
+# The PS1 games that take a controller other than a pad, by title, for tools/psx_controllers.py (which turns them into
+# serials with the redump list). One title per line; "A / B" for the same game under another name (a region's);
+# "(Japan only)" style notes and anything after " #" are ignored. Fix a game here, then run the tool again.
+
+[negcon]
+# NeGcon: full support. brittens.org/NegCon.html (Full Support), MobyGames "Gamepads Supported > NeGcon (SLEH-0003)"
+Air Combat / Ace Combat
+Ace Combat 2
+Ace Combat 3: Electrosphere / Ace Combat 3
+ADVAN Racing
+Andretti Racing
+Arcade's Greatest Hits: The Midway Collection 2
+Atari Anniversary Edition Redux
+Auto Destruct
+Ayrton Senna Kart Duel
+Ayrton Senna Kart Duel Special
+Burning Road
+C1 Circuit
+C3 Racing: Car Constructors Championship / Max Power Racing
+Car and Driver Presents: Grand Tour Racing '98 / Total Drivin / Grand Tour Racing '98
+Castrol Honda Superbike Racing
+Circuit Beat
+Colin McRae Rally
+Colin McRae Rally 2.0
+Cyber Sled / CyberSled
+Dakar '97
+Demolition Racer
+Destruction Derby
+Destruction Derby 2
+Explosive Racing
+Extreme 500
+Felony 11-79
+Firebugs
+Ford Racing
+Formula 1
+Formula 1 Championship Edition / Formula 1 97
+Formula Karts: Special Edition
+Galaxian 3
+Gran Turismo
+Gran Turismo 2
+Hydro Thunder
+Initial D
+Italian Job, The
+Jarrett & Labonte Stock Car Racing / TOCA World Touring Cars
+Mobil 1 Rally Championship
+Monaco Grand Prix / Monaco Grand Prix Racing Simulation 2
+Moto Racer
+Moto Racer 2
+Motor Toon Grand Prix 2 / Motor Toon Grand Prix
+Namco Soccer Prime Goal / J-League Prime Goal EX
+NASCAR 2000
+NASCAR Rumble
+Road & Track Presents: The Need for Speed / Need for Speed, The
+Need for Speed II / Need for Speed 2
+Need for Speed III: Hot Pursuit / Need for Speed 3 - Hot Pursuit
+Need for Speed: High Stakes / Need for Speed: Road Challenge
+No Fear Downhill Mountain Biking
+Porsche Challenge
+Race Drivin' a Go! Go!
+Rage Racer
+Rally de Africa
+Rally de Europe
+Raven Project, The
+Ray Tracers
+RC de Go!
+Ridge Racer
+Ridge Racer Revolution
+R4: Ridge Racer Type 4 / Ridge Racer Type 4
+Runabout 2
+Rush Hour / Speedster / BattleRound
+Soul Blade / Soul Edge
+Sports Superbike
+Supercross 2000
+Syndicate Wars
+Team Losi RC Racer
+Tempest X3
+Test Drive 4
+Test Drive 5
+Test Drive 6
+TNN Motorsports Hardcore 4x4 / Hardcore 4x4
+TOCA 2: Touring Cars / TOCA 2: Touring Car Challenge
+TOCA Championship Racing / TOCA Touring Car Championship
+Tommi Makinen Rally
+Rapid Racer / Turbo Prop Racing
+V-Rally 2 / V-Rally: Championship Edition 2 / Need for Speed: V-Rally 2
+V-Rally: 97 Championship Edition / V-Rally: Championship Edition / Need for Speed: V-Rally
+Wangan Trial
+Wipeout 2097 / Wipeout XL
+Wipeout 3 / Wipeout 3: Special Edition
+World Stadium 2
+World Stadium EX
+Xevious 3D/G+
+
+[guncon]
+# GunCon (G-Con 45). Wikipedia "List of light-gun games" (PlayStation), MobyGames "Light Guns > Guncon / G-Con 45"
+Cellophanes
+Die Hard Trilogy 2: Viva Las Vegas
+Elemental Gearbolt
+Extreme Ghostbusters: The Ultimate Invasion
+Ghoul Panic
+Oh! Bakyuuun
+Gunbare! Game Tengoku: The Game Paradise 2 / Gun Bare! The Game Paradise 2
+Simple 1500 Series Vol. 24: The Gun Shooting
+Simple 1500 Series Vol. 63: The Gun Shooting 2
+Gunfighter: The Legend of Jesse James
+Guntu: Western Front June, 1944: Tetsu no Kioku / Guntu: Western Front June, 1944
+Judge Dredd
+Maximum Force
+Mighty Hits Special
+Moorhuhn 2: Die Jagd geht weiter
+Moorhuhn 3: ...Es gibt Huhn! / Moorhen 3: ...Chicken Chase
+Moorhuhn X
+Point Blank / Gun Bullet
+Point Blank 2 / Gunbarl
+Point Blank 3
+Puffy no P.S. I Love You
+Rescue Shot
+Resident Evil: Survivor / Biohazard: Gun Survivor
+Time Crisis
+Time Crisis: Project Titan
+
+[justifier]
+# Justifier / Hyper Blaster (Konami). Wikipedia "List of light-gun games" (PlayStation)
+Area 51
+Crypt Killer
+Die Hard Trilogy
+Die Hard Trilogy 2: Viva Las Vegas
+Elemental Gearbolt
+Extreme Ghostbusters: The Ultimate Invasion
+Judge Dredd
+Lethal Enforcers I & II
+Maximum Force
+Mighty Hits
+Mighty Hits Special
+Moorhuhn 2: Die Jagd geht weiter
+Moorhuhn 3: ...Es gibt Huhn! / Moorhen 3: ...Chicken Chase
+Moorhuhn X
+Project: Horned Owl
+Star Wars: Rebel Assault II: The Hidden Empire

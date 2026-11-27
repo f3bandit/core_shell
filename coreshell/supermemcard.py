@@ -152,6 +152,12 @@ class SuperMemCard(object):
     def up(self):
         return os.path.exists(self.sock)
 
+    def probe(self):
+        """What each front port holds (smcd's PROBE, through Main while the menu core runs): {1: 'smc'|'ps1'|'empty',
+        2: ...}, or None when it couldn't look (busy, no front ports, no answer)."""
+        from . import controllers as ct
+        return ct.parse_probe(_ask('PROBE', self.sock, timeout=15.0))
+
     def select(self, sys_name, game_id):
         """(launch, before the core loads) the game being started: smcd's SELECT. PSX: that game's own PS1
         card goes on the bus. Returns smcd's first answer line: "select ok", "select failed", "nocard"..."""

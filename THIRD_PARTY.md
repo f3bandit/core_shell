@@ -8,6 +8,7 @@ These are the other people's works it contains or is built with, and their licen
 | [nextpnr](https://github.com/YosysHQ/nextpnr) | YosysHQ and contributors | ISC | `corepatch/nextpnr-base.patch` is a change to nextpnr (at the revision in `corepatch/nextpnr-base.rev`), under nextpnr's licence. nextpnr itself isn't included. |
 | [Mistral](https://github.com/Ravenslofty/mistral) | Olivier Galibert and contributors | BSD 3-Clause | The PC tools in `corepatch/tools/` are built against it. It isn't included. |
 | Mistery | meathax | BSD 3-Clause | Used to study stock cores. It isn't included. |
+| [libretro-database](https://github.com/libretro/libretro-database) | libretro and its contributors (its redump list: redump.org) | CC BY-SA 4.0 | `coreshell/data/psx_controllers.tsv` (the controllers each PS1 game takes, by serial) is made by `tools/psx_controllers.py` from its PS1 analog and redump lists, and is under CC BY-SA 4.0 too. The game titles in `tools/psx_controllers_titles.txt` come from brittens.org's NeGcon list, MobyGames and Wikipedia's light-gun list. |
 | Core menus (`dumps/`, `systems/`) | Each core's authors (most MiSTer cores: Alexey Melnikov "Sorgelig" and the MiSTer devs) | Each core's own licence (most are GPL) | Each core's menu text (its `CONF_STR`), word for word, as data Coreshell reads. Each file names the core and build it came from. Never compiled or linked into Coreshell, and not covered by Coreshell's licence. |
 
 Coreshell starts, but doesn't include, change or link with, Main_MiSTer and its forks (MiSTer_RA by odelot,
