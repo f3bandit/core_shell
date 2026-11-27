@@ -122,5 +122,26 @@ class Install(unittest.TestCase):
             self.assertEqual(up.main(['--check'], home=self.home), 0)
 
 
+
+class Restart(unittest.TestCase):
+    """update's restart(): the server under its own name (core-shell), or as python3 -m coreshell serve; never the
+    supervisor, never itself."""
+
+    def test_finds_the_server(self):
+        procs = {'100': b'core-shell\x00\x00\x00\x00', '101': b'sh\x00/media/fat/coreshell/scripts/core-shell-supervisor\x00',
+                 '102': b'/usr/bin/python3\x00-m\x00coreshell\x00serve\x00', '103': b'/usr/bin/python3\x00-m\x00coreshell\x00update\x00',
+                 str(os.getpid()): b'core-shell\x00'}
+        real_open = open
+
+        def fake_open(path, *a, **k):
+            if path.startswith('/proc/') and path.endswith('/cmdline'):
+                return io.BytesIO(procs[path.split('/')[2]])
+            return real_open(path, *a, **k)
+        with mock.patch.object(up.os, 'listdir', return_value=list(procs) + ['self']), \
+                mock.patch('builtins.open', fake_open), mock.patch.object(up.os, 'kill') as kill:
+            up.restart(log=lambda m: None)
+        self.assertEqual(sorted(c.args for c in kill.call_args_list), [(100, 15), (102, 15)])
+
+
 if __name__ == '__main__':
     unittest.main()

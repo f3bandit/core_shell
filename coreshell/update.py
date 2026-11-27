@@ -313,7 +313,9 @@ def restart(log=_say):
                 cmd = f.read().split(b'\0')
         except OSError:
             continue
-        if cmd[:1] and cmd[0].endswith(b'python3') and b'serve' in cmd and b'coreshell' in cmd:
+        # the server names itself core-shell (__main__.py _title); python3 -m coreshell serve when that was refused
+        if cmd[:1] == [b'core-shell'] or (cmd[:1] and cmd[0].endswith(b'python3') and b'serve' in cmd
+                                         and b'coreshell' in cmd):
             os.kill(int(pid), 15)
             log('update: Coreshell started again')
 
