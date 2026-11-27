@@ -360,8 +360,8 @@
   "has_profile": true
  },
  {
-  "rbf": "_SNAC+LLAPI Enhanced/_Console/NeoGeo_Turbo_20261125.rbf",
-  "md5": "786a8d65774f9af9e4c658be57f35741",
+  "rbf": "_SNAC+LLAPI Enhanced/_Console/NeoGeo_Turbo_20261127.rbf",
+  "md5": "6f78f0c80a36917927b03081a7b9d971",
   "db": "llapi_folder",
   "has_profile": false
  },
@@ -564,6 +564,12 @@
   "has_profile": false
  },
  {
+  "rbf": "_SNAC+LLAPI Enhanced/cores/jtcps1_llapi21.rbf",
+  "md5": "28b175329d7cee7395bbcbdd8b7e67a9",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
   "rbf": "_SNAC+LLAPI Enhanced/cores/jtdd2_llapi10.rbf",
   "md5": "f0f421632927a27be2db7365a56dba54",
   "db": "llapi_folder",
@@ -684,6 +690,12 @@
   "has_profile": false
  },
  {
+  "rbf": "_SNAC+LLAPI Enhanced/cores/jtkiwi_llapi21.rbf",
+  "md5": "19fb968489e66fad027e8bfd5ef197d4",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
   "rbf": "_SNAC+LLAPI Enhanced/cores/jtkunio_llapi20.rbf",
   "md5": "1fe80bc7967d9dca3cabf0339adf3654",
   "db": "llapi_folder",
@@ -786,8 +798,20 @@
   "has_profile": false
  },
  {
+  "rbf": "_SNAC+LLAPI Enhanced/cores/jtrastan_llapi21.rbf",
+  "md5": "5c246b84428e96fa62b8d559a6dc6530",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
   "rbf": "_SNAC+LLAPI Enhanced/cores/jtriders_llapi10.rbf",
   "md5": "d14babbd31c3ee2f2dbe00eed8c7139b",
+  "db": "llapi_folder",
+  "has_profile": false
+ },
+ {
+  "rbf": "_SNAC+LLAPI Enhanced/cores/jtriders_llapi21.rbf",
+  "md5": "e1c9396effc782325299b4d950123ab0",
   "db": "llapi_folder",
   "has_profile": false
  },
@@ -925,7 +949,7 @@
  },
  {
   "rbf": "_SNAC+LLAPI Enhanced/cores/jttmnt_llapi21.rbf",
-  "md5": "78048b53f7a7991c5587ec3198cbb1af",
+  "md5": "31b71db469041ec8605f98c2206bcc1e",
   "db": "llapi_folder",
   "has_profile": false
  },
@@ -937,7 +961,7 @@
  },
  {
   "rbf": "_SNAC+LLAPI Enhanced/cores/jttoki_llapi21.rbf",
-  "md5": "27a4f36ef455d053cf33da9478cefc0e",
+  "md5": "11f5c11ecb982bb7115e5ab58c0cd46f",
   "db": "llapi_folder",
   "has_profile": false
  },

@@ -6,7 +6,7 @@
  "rbf": "_Computer/Cray-XMP",
  "setname": null,
  "core_name": "Cray-XMP",
- "config_file": "Cray-XMP_v1.CFG",
+ "config_file": "Cray-XMP_v2.CFG",
  "games_dir": "games/Cray-XMP",
  "saves_dir": "saves/Cray-XMP",
  "rom": {
@@ -167,25 +167,6 @@
   },
   {
    "page": "",
-   "name": "Scandoubler Fx",
-   "values": [
-    "None",
-    "HQ2x",
-    "CRT 25%",
-    "CRT 50%",
-    "CRT 75%"
-   ],
-   "default": "None",
-   "bits": [
-    7,
-    9
-   ],
-   "core_flags": [],
-   "key": "Scandoubler Fx",
-   "mgl_ok": true
-  },
-  {
-   "page": "",
    "name": "Text color",
    "values": [
     "White",
@@ -214,7 +195,9 @@
     14,
     14
    ],
-   "core_flags": [],
+   "core_flags": [
+    "D0"
+   ],
    "key": "Font",
    "mgl_ok": true
   },
@@ -237,11 +220,12 @@
  ],
  "hide": [],
  "source": {
-  "from": "dump",
-  "rbf": "Cray-XMP_20261025.rbf",
-  "rbf_md5": "39e65c4b6fe59108bbc34ca698fe88bc",
-  "main": "phosphor/bin/MiSTer_phosphor",
-  "dumped": "2026-11-13T23:11:08",
-  "confstr_sha1": "871a682c05daf3cdc2491cb20fe8ff2fd115f6a6"
+  "repo": "MiSTer-devel/Cray-XMP_MiSTer",
+  "commit": "ce477f3c78fe25d30e0ccfcf0dd303d165501844",
+  "file": "Cray-XMP.sv",
+  "rbf": "Cray-XMP_20261126.rbf",
+  "rbf_md5": "a244b9ec948c05cd59b21127175293e8",
+  "from": "source",
+  "confstr_sha1": "1788bd707d1589fbee6e1ee9b3bedc02d4669841"
  }
 }

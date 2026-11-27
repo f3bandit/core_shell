@@ -201,6 +201,16 @@
    "kind": "reset",
    "page": 0,
    "flags": []
+  },
+  {
+   "name": "FujiNet: boot CONFIG",
+   "bits": [
+    20,
+    20
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
   }
  ],
  "cheats": false,
@@ -380,11 +390,12 @@
  ],
  "hide": [],
  "source": {
-  "from": "dump",
-  "rbf": "ColecoAdam_20260922.rbf",
-  "rbf_md5": "d06c748cfec60b315e1198c40f69eef2",
-  "main": "phosphor/bin/MiSTer_phosphor",
-  "dumped": "2026-11-13T23:11:04",
-  "confstr_sha1": "d22ec366b20a1532c8c9cea36e6d90b017183baf"
+  "repo": "MiSTer-devel/ColecoAdam_MiSTer",
+  "commit": "c0f56cf36fae774fbb69b288fbe2d872af4f364b",
+  "file": "ColecoAdam.sv",
+  "rbf": "ColecoAdam_20261125.rbf",
+  "rbf_md5": "7aa39ac256bb0cf1cfe177169d08949e",
+  "from": "source",
+  "confstr_sha1": "4e61aad3c7afb582329c40d35b655d79c5ccc578"
  }
 }

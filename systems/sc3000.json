@@ -1,0 +1,418 @@
+{
+ "coreshell_profile": 1,
+ "system": "sc3000",
+ "variant": "stock",
+ "name": "SC3000",
+ "rbf": "_Computer/SC3000",
+ "setname": null,
+ "core_name": "SC3000",
+ "config_file": "SC3000_v1.CFG",
+ "games_dir": "games/SC3000",
+ "saves_dir": "saves/SC3000",
+ "rom": {
+  "index": 1,
+  "type": "f",
+  "exts": [
+   "SG",
+   "SC",
+   "BIN",
+   "ROM"
+  ]
+ },
+ "slots": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "SG",
+    "SC",
+    "BIN",
+    "ROM"
+   ],
+   "label": "Cartridge"
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "WAV",
+    "BIT"
+   ],
+   "label": "Tape"
+  },
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load ROM"
+  },
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "BIT"
+   ],
+   "label": "Tape save"
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "SF7"
+   ],
+   "label": "SF-7000 disk"
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "TXT",
+    "PRN"
+   ],
+   "label": "SF-7000 printer"
+  }
+ ],
+ "files": [
+  {
+   "index": 1,
+   "type": "f",
+   "exts": [
+    "SG",
+    "SC",
+    "BIN",
+    "ROM"
+   ],
+   "label": "Cartridge",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 2,
+   "type": "f",
+   "exts": [
+    "WAV",
+    "BIT"
+   ],
+   "label": "Tape",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  },
+  {
+   "index": 0,
+   "type": "f",
+   "exts": [
+    "ROM"
+   ],
+   "label": "Load ROM",
+   "page": 0,
+   "flags": [],
+   "remember_dir": false
+  }
+ ],
+ "mounts": [
+  {
+   "index": 1,
+   "type": "s",
+   "exts": [
+    "BIT"
+   ],
+   "label": "Tape save",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 0,
+   "type": "s",
+   "exts": [
+    "SF7"
+   ],
+   "label": "SF-7000 disk",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "index": 2,
+   "type": "s",
+   "exts": [
+    "TXT",
+    "PRN"
+   ],
+   "label": "SF-7000 printer",
+   "page": 0,
+   "flags": []
+  }
+ ],
+ "triggers": [
+  {
+   "name": "Apply and reset",
+   "bits": [
+    0,
+    0
+   ],
+   "kind": "reset",
+   "page": 0,
+   "flags": []
+  },
+  {
+   "name": "Rewind tape",
+   "bits": [
+    17,
+    17
+   ],
+   "kind": "toggle",
+   "page": 1,
+   "flags": []
+  },
+  {
+   "name": "Eject cartridge",
+   "bits": [
+    18,
+    18
+   ],
+   "kind": "toggle",
+   "page": 1,
+   "flags": []
+  }
+ ],
+ "cheats": false,
+ "menu": [
+  {
+   "page": "Machine",
+   "name": "Model",
+   "values": [
+    "SC-3000",
+    "SG-1000",
+    "Othello Multivision"
+   ],
+   "default": "SC-3000",
+   "bits": [
+    25,
+    26
+   ],
+   "core_flags": [],
+   "key": "Machine/Model",
+   "mgl_ok": true
+  },
+  {
+   "page": "Machine",
+   "name": "Mapper",
+   "values": [
+    "Auto",
+    "ROM",
+    "BASIC Level 3",
+    "The Castle",
+    "Othello/BASIC 2",
+    "Terebi Oekaki",
+    "Dahjee A",
+    "Dahjee B"
+   ],
+   "default": "Auto",
+   "bits": [
+    14,
+    16
+   ],
+   "core_flags": [],
+   "key": "Machine/Mapper",
+   "mgl_ok": true
+  },
+  {
+   "page": "Machine",
+   "name": "SF-7000",
+   "values": [
+    "Auto",
+    "On",
+    "Off"
+   ],
+   "default": "Auto",
+   "bits": [
+    20,
+    21
+   ],
+   "core_flags": [
+    "H1"
+   ],
+   "key": "Machine/SF-7000",
+   "mgl_ok": true
+  },
+  {
+   "page": "Machine",
+   "name": "Tape speed",
+   "values": [
+    "4x",
+    "Normal"
+   ],
+   "default": "4x",
+   "bits": [
+    23,
+    23
+   ],
+   "core_flags": [],
+   "key": "Machine/Tape speed",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Video standard",
+   "values": [
+    "NTSC",
+    "PAL"
+   ],
+   "default": "NTSC",
+   "bits": [
+    13,
+    13
+   ],
+   "core_flags": [],
+   "key": "Video/Video standard",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Border",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    6,
+    6
+   ],
+   "core_flags": [],
+   "key": "Video/Border",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Aspect ratio",
+   "values": [
+    "Original",
+    "Full Screen",
+    "[ARC1]",
+    "[ARC2]"
+   ],
+   "default": "Original",
+   "bits": [
+    1,
+    2
+   ],
+   "core_flags": [],
+   "key": "Video/Aspect ratio",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Scale",
+   "values": [
+    "Normal",
+    "V-Integer",
+    "Narrower HV-Integer",
+    "Wider HV-Integer"
+   ],
+   "default": "Normal",
+   "bits": [
+    10,
+    11
+   ],
+   "core_flags": [],
+   "key": "Video/Scale",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Scandoubler Fx",
+   "values": [
+    "None",
+    "HQ2x",
+    "CRT 25%",
+    "CRT 50%",
+    "CRT 75%"
+   ],
+   "default": "None",
+   "bits": [
+    7,
+    9
+   ],
+   "core_flags": [],
+   "key": "Video/Scandoubler Fx",
+   "mgl_ok": true
+  },
+  {
+   "page": "Video",
+   "name": "Tape overlay",
+   "values": [
+    "On",
+    "Off"
+   ],
+   "default": "On",
+   "bits": [
+    24,
+    24
+   ],
+   "core_flags": [],
+   "key": "Video/Tape overlay",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Keyboard",
+   "values": [
+    "PC",
+    "SC-3000"
+   ],
+   "default": "PC",
+   "bits": [
+    22,
+    22
+   ],
+   "core_flags": [],
+   "key": "Input/Keyboard",
+   "mgl_ok": true
+  },
+  {
+   "page": "Input",
+   "name": "Joysticks swap",
+   "values": [
+    "No",
+    "Yes"
+   ],
+   "default": "No",
+   "bits": [
+    3,
+    3
+   ],
+   "core_flags": [],
+   "key": "Input/Joysticks swap",
+   "mgl_ok": true
+  },
+  {
+   "page": "Audio",
+   "name": "Tape audio",
+   "values": [
+    "Off",
+    "On"
+   ],
+   "default": "Off",
+   "bits": [
+    19,
+    19
+   ],
+   "core_flags": [],
+   "key": "Audio/Tape audio",
+   "mgl_ok": true
+  }
+ ],
+ "hide": [],
+ "source": {
+  "repo": "MiSTer-devel/SC3000_MiSTer",
+  "commit": "7528f78ce7764b5da0041d75865319115ad6ce37",
+  "file": "SC3000.sv",
+  "rbf": "SC3000_20261125.rbf",
+  "rbf_md5": "7141c8ac2c217eec3c687514f40ce0a9",
+  "from": "source"
+ }
+}

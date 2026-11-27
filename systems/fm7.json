@@ -296,10 +296,10 @@
  "hide": [],
  "source": {
   "repo": "MiSTer-devel/FM-7_MiSTer",
-  "commit": "b1d52ea5776704637eb5ef3c55052edebe4027ae",
+  "commit": "ce2c9bc2cd367c81353e8b2f898764ee70f8c2f0",
   "file": "FM-7_MiSTer.sv",
-  "rbf": "FM-7_20261123.rbf",
-  "rbf_md5": "7bd44d94348a8adcc0c74a0d88bebbb3",
+  "rbf": "FM-7_20261126.rbf",
+  "rbf_md5": "37c992451cb31472261ecce66d6b8eeb",
   "from": "source",
   "confstr_sha1": "4c72e31f71c9b12e435cb7855d30a90b55fd7c58"
  }

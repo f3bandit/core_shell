@@ -280,12 +280,12 @@
  ],
  "hide": [],
  "source": {
-  "from": "source",
   "repo": "MiSTer-devel/Lynx48_MiSTer",
-  "commit": "5083814cd85a9fc3c46a860365fc2fd785775973",
+  "commit": "c42501e8b940e26a1f57f3d885cb65b58fdeebe0",
   "file": "Lynx48.sv",
-  "rbf": "Lynx48_20261118.rbf",
-  "rbf_md5": "52f857c43a15d8e06f28526fbadf4bb2",
+  "rbf": "Lynx48_20261126.rbf",
+  "rbf_md5": "a3e5d72b525b4805019af6169970ad91",
+  "from": "source",
   "confstr_sha1": "a5af749095de7a30884dde686d028de63eda0c55"
  }
 }
