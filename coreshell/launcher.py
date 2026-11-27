@@ -799,13 +799,6 @@ def plan(paths, prof, rom=None, save=None, game_vals=None, system_vals=None, fil
         mode = 'handoff' if handoff else 'exact'
     else:
         mode = 'name' if main_supports_options(paths, main) else 'core'
-    # Super MemCard's core patch (corepatches.py): the PSX core with SNAC MemCard = Real under any Pad type. Needed
-    # when the core will run that way: its own settings (.CFG) with what Coreshell sets over them; nothing extra set
-    supercard = False
-    if cp.available(paths, rbf_file):
-        run = values_from_status(prof, read_cfg(paths, prof))
-        run.update({k: values[k] for k in changed if k in values})
-        supercard = cp.needed(run)
     status = handoff_status(prof, values, changed) if mode == 'handoff' else None
     ini = dict(prof.get('ini') or {}) if handoff else {}     # the profile's INI settings for this core
     if prof.get('ini') and not handoff:
@@ -828,6 +821,18 @@ def plan(paths, prof, rom=None, save=None, game_vals=None, system_vals=None, fil
         if len(changed) > MGL_MAX_OPTIONS:
             warnings.append('%d settings changed, Main takes %d per launch: %s not sent'
                             % (len(changed), MGL_MAX_OPTIONS, ', '.join(changed[MGL_MAX_OPTIONS:])))
+    # Super MemCard's core patch (corepatches.py): the PSX core with SNAC MemCard = Real under any Pad type. Needed
+    # when the core will run that way: its own settings (.CFG) with what reaches it over them (handoff and exact:
+    # every option Coreshell sets; name: the ones sent; core: none); nothing extra set
+    supercard = False
+    if pf.find_option(prof, cp.MEMCARD_KEY):
+        run = values_from_status(prof, read_cfg(paths, prof))
+        run.update({k: values[k] for k in (send if mode in ('name', 'core') else changed) if k in values})
+        if cp.needed(run):
+            supercard = cp.available(paths, rbf_file)
+            if not supercard:
+                warnings.append('SNAC MemCard Real: no core patch for this core build, so the front-port card is '
+                                'only used with Pad = SNAC-port (the core as stock)')
     return {
         'system': prof['system'],
         'rbf_file': rbf_file,

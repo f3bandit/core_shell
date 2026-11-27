@@ -110,7 +110,9 @@ class AnyPad(unittest.TestCase):
     def test_stock_cases(self):
         self.assertFalse(self.plan({'SNAC MemCard': 'Virtual'})['supercard'])
         self.assertFalse(self.plan({'SNAC MemCard': 'Real', 'Pad1': 'SNAC-port1', 'Pad2': 'Off'})['supercard'])
-        self.assertFalse(self.plan({'SNAC MemCard': 'Real', 'Pad1': 'NeGcon'}, available=False)['supercard'])
+        p = self.plan({'SNAC MemCard': 'Real', 'Pad1': 'NeGcon'}, available=False)
+        self.assertFalse(p['supercard'])
+        self.assertTrue(any('no core patch' in w for w in p['warnings']))     # (a new core build: said)
 
     def test_any_main(self):
         """No settings to hand over: a Main without the handoff gets the patched core too."""
@@ -118,6 +120,16 @@ class AnyPad(unittest.TestCase):
             p = self.plan({'Pad1': 'Digital', 'SNAC MemCard': 'Real'})
         self.assertTrue(p['supercard'])
         self.assertEqual(p['mode'], 'exact')
+
+    def test_only_what_reaches_the_core(self):
+        """A Main that takes nothing at launch (mode core): the .CFG alone decides."""
+        with mock.patch.object(self.ln, 'is_exact', return_value=False), \
+                mock.patch.object(self.ln, 'main_supports_options', return_value=False):
+            p = self.plan({'Pad1': 'NeGcon', 'SNAC MemCard': 'Real'}, cfg={'SNAC MemCard': 'Virtual'})
+            self.assertEqual(p['mode'], 'core')
+            self.assertFalse(p['supercard'])
+            p = self.plan({}, cfg={'Pad1': 'NeGcon', 'SNAC MemCard': 'Real'})
+            self.assertTrue(p['supercard'])
 
     def test_menu_note(self):
         items = [{'key': 'Pad1', 'values': ['Dualshock', 'SNAC-port1'], 'value': 'Dualshock'},
