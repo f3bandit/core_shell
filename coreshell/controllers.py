@@ -79,12 +79,15 @@ def parse_probe(lines):
 
 def picks(values, game_vals, serial, ports=None, gun=False):
     """Auto's options for a PSX launch: {option: value}. values: the options as the user has them (profile defaults
-    under the user's layers); game_vals: the game's own choices (they win); serial: the disc's (SLUS-00405);
-    ports: the front ports (parse_probe) or None (not known: SNAC MemCard left as it is)."""
+    under the user's layers); game_vals: the game's own choices (they win); serial: the disc's (SLUS-00405), None
+    when it couldn't be read (the pads left as they are); ports: the front ports (parse_probe) or None (not known:
+    SNAC MemCard left as it is)."""
     game_vals = game_vals or {}
     out = {}
     pad = psx_pad(serial, gun)
     for key, front in sorted(PORTS.items()):
+        if not serial:
+            break                            # the disc couldn't be read: its pads not known, as the user has them
         if key in game_vals:
             continue
         cur = values.get(key, 'Dualshock')

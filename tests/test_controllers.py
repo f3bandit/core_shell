@@ -79,6 +79,9 @@ class Auto(unittest.TestCase):
                          {'SNAC MemCard': 'Virtual'})
         self.assertEqual(ct.picks({}, {}, 'SCUS-94423', None), {})          # (Dualshock already)
         self.assertEqual(ct.picks({'Pad1': 'NeGcon'}, {}, 'SLUS-99999', None), {'Pad1': 'Dualshock'})
+        # the disc couldn't be read: the pads as the user has them, the card still by the front ports
+        self.assertEqual(ct.picks({'Pad1': "Pop'n", 'Pad2': "Pop'n"}, {}, None, ports_card), {'SNAC MemCard': 'Real'})
+        self.assertEqual(ct.picks({'Pad1': "Pop'n"}, {}, '', None), {})
 
     def test_probe(self):
         self.assertEqual(ct.parse_probe(['port 1 smc ABCD 120', 'port 2 empty']), {1: 'smc', 2: 'empty'})
