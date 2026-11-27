@@ -10,13 +10,17 @@ logic. At launch, if one matches the installed stock core's MD5, bin/corepatch w
 Main's loader takes <rbf> relative to the SD card's root and picks the newest file with that name, so
 ../../tmp/coreshell/cores/NES finds NES_20260823.rbf there. No patch, or anything wrong: the stock core, as always.
 
-Turned on by the user, per system (or per game): SuperCard, the Pad1 / Pad2 choice "USB pad + front-port card" in the
-core's menu (shown only when a patch for the installed core is here; f3bandit, Nov 22 2026). Its patch makes the PSX
-core's "SNAC MemCard: Virtual" mean the other way round: the controller from USB (a pad command goes to the core's own
-pad), the memory card the real one in the front port. So a SuperCard launch runs the patched core with that port's Pad
-= SNAC-portN and SNAC MemCard = Virtual, set for that launch only (the handoff's status bits): the core's own Pad and
-SNAC MemCard options stay as the user left them (f3bandit, Nov 14 2026). Also on for every launch with "memcard_patch": true in coreshell/settings/coreshell.json
-(off by default).
+With the patch the PSX core's own options mean what they say (f3bandit, Nov 27 2026): SNAC MemCard "Real" is the
+memory cards in the front ports under any Pad type (a USB NeGcon, DualShock... from Main, the card from the front port);
+a Pad set to Off keeps that port's virtual card; Pad = SNAC-portN (the front port's own controller), SNAC MemCard
+"Virtual" and multitap are stock. So the patched core is used for a launch whenever the core will run with SNAC MemCard
+= Real and a Pad that is neither SNAC-portN nor Off (its .CFG with what Coreshell sets over it): nothing extra is set,
+the user picks the Pad type and SNAC MemCard in the core's menu as usual. Also on for every launch with
+"memcard_patch": true in coreshell/settings/coreshell.json (off by default).
+
+Before Nov 27 2026 SuperCard was a Pad1 / Pad2 choice ("USB pad + front-port card", settings keys
+'Super MemCard/SuperCard' and '... port 2'), digital pads only: migrate_supercard() turns those picks into SNAC MemCard
+= Real with the Pad they had (SNAC-portN -> Dualshock).
 
 Copyright (c) 2026 f3bandit. Licensed under the Apache License 2.0 (LICENSE, NOTICE).
 """
@@ -35,14 +39,11 @@ _md5_cache = {}      # path -> ((size, mtime), md5)
 _index = {}          # (dir mtime) -> {stock md5: (patch path, result md5)}
 
 
-SUPERCARD_KEY = 'Super MemCard/SuperCard'          # port 1 (the key from before port 2 had one)
-SUPERCARD2_KEY = 'Super MemCard/SuperCard port 2'
-SUPERCARD_VALUES = ['Off', 'On']
-# what the patched PSX core takes for "USB pad, real card" on a port: that Pad on the front port, SNAC MemCard
-# "Virtual" (the patch turns the virtual-card switch round: the pad goes virtual, the card stays real)
-PORTS = {'Pad1': (SUPERCARD_KEY, 'SNAC-port1'), 'Pad2': (SUPERCARD2_KEY, 'SNAC-port2')}
 MEMCARD_KEY = 'SNAC MemCard'
-SUPERCARD_SET = {'Pad1': 'SNAC-port1', MEMCARD_KEY: 'Virtual'}   # port 1 alone (kept for older callers)
+# a Pad's front-port value (the front port's own controller): with it, or Off, that port is stock
+PORTS = {'Pad1': 'SNAC-port1', 'Pad2': 'SNAC-port2'}
+# the old SuperCard picks (a Pad choice before Nov 27 2026), migrated by migrate_supercard()
+OLD_KEYS = {'Super MemCard/SuperCard': 'Pad1', 'Super MemCard/SuperCard port 2': 'Pad2'}
 
 
 def settings(paths):
@@ -101,62 +102,47 @@ def available(paths, rbf_file):
         return False
 
 
-def supercard_value(system_vals, game_vals, key=SUPERCARD_KEY):
-    """A port's SuperCard choice from the settings layers (game first), 'Off' when none."""
-    for src in (game_vals, system_vals):
-        v = (src or {}).get(key)
-        if v in SUPERCARD_VALUES:
-            return v
-    return 'Off'
+def needed(values):
+    """The core will run with SNAC MemCard = Real and a Pad that isn't the front port's controller or Off: the
+    patched core (values: the options as the core will have them; a Pad not there is the core's default, Dualshock)."""
+    if values.get(MEMCARD_KEY) != 'Real':
+        return False
+    return any(values.get(pad, 'Dualshock') not in (front, 'Off') for pad, front in PORTS.items())
 
 
-def supercard_ports(system_vals, game_vals):
-    """The Pad keys ('Pad1', 'Pad2') with SuperCard on."""
-    return [pad for pad, (key, _) in sorted(PORTS.items()) if supercard_value(system_vals, game_vals, key) == 'On']
-
-
-def supercard_set(pads):
-    """The options a SuperCard launch sets for those ports."""
-    out = {pad: PORTS[pad][1] for pad in pads}
-    if pads:
+def migrate_supercard(vals, below=None):
+    """A settings layer with the old SuperCard picks -> SNAC MemCard = Real with the Pad they had (SNAC-portN ->
+    Dualshock). below: the layers under it, merged (a game's "Off" under a system "On" keeps the game's card
+    virtual). Returns the new layer, or None when there was nothing to migrate."""
+    if not any(k in vals for k in OLD_KEYS):
+        return None
+    out = {k: v for k, v in vals.items() if k not in OLD_KEYS}
+    on = [pad for k, pad in sorted(OLD_KEYS.items(), key=lambda kv: kv[1]) if vals.get(k) == 'On']
+    if on:
+        out[MEMCARD_KEY] = 'Real'
+        for pad in on:
+            if out.get(pad, (below or {}).get(pad)) == PORTS[pad]:
+                out[pad] = 'Dualshock'
+    elif any((below or {}).get(k) == 'On' for k in OLD_KEYS) and MEMCARD_KEY not in out:
         out[MEMCARD_KEY] = 'Virtual'
     return out
 
 
-# In Phosphor's (any frontend's) menu SuperCard is one more Pad1 / Pad2 choice, named for what it does: the core's own
-# labels (Pad "SNAC-portN", SNAC MemCard "Virtual") say the opposite of what the patched core does with them.
-SUPERCARD_CHOICE = 'USB pad + front-port card'
-
-
-def decorate_menu(items, paths, rbf_file, system_vals, game_vals, game_vals_keys=()):
-    """The core's menu with SuperCard as a Pad1 and Pad2 choice (unchanged when there's no patch for the installed
-    core). game_vals_keys: the SuperCard keys set for this game (their choice shows as the game's)."""
+def decorate_menu(items, paths, rbf_file):
+    """SNAC MemCard's note says what "Real" does with the patch (unchanged when there's no patch for the installed
+    core)."""
     if not available(paths, rbf_file):
         return items
-    on = supercard_ports(system_vals, game_vals)
     for it in items:
-        if it['key'] in PORTS:
-            key = PORTS[it['key']][0]
-            n = it['key'][-1]
-            it['values'] = list(it['values']) + [SUPERCARD_CHOICE]
-            it['note'] = ('%s: your USB controller is player %s and the saves go to the memory card in front port %s '
-                          '(the PSX core is patched for it at launch). The next time the game starts.'
-                          % (SUPERCARD_CHOICE, n, n))
-            if it['key'] in on:
-                it['value'] = SUPERCARD_CHOICE
-                it['from'] = 'game' if key in game_vals_keys else 'system'
-                it['per_game'] = key in game_vals_keys
-                it['per_display'] = False
-        elif it['key'] == MEMCARD_KEY and on:
-            it['value'] = 'Real'
-            it['note'] = 'The card in front port %s: %s "%s".' % (
-                ' and '.join(p[-1] for p in on), ' and '.join(on), SUPERCARD_CHOICE)
+        if it['key'] == MEMCARD_KEY:
+            it['note'] = ('Real: the memory cards in the front ports, with any controller type from USB (a Pad set to '
+                          'Off keeps its virtual card). The PSX core is patched for it at launch.')
     return items
 
 
 def patched_rbf(paths, prof, rbf_file, log=None, on=False):
     """The <rbf> for a launch of prof's stock rbf_file with its patch applied, or None (no patch / turned off /
-    anything failed: the stock core). on: SuperCard was picked for this launch."""
+    anything failed: the stock core). on: the launch needs it (needed())."""
     log = log or (lambda m: None)
     if not rbf_file or not (on or settings(paths)['memcard_patch']):
         return None

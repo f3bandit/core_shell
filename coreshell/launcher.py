@@ -799,21 +799,13 @@ def plan(paths, prof, rom=None, save=None, game_vals=None, system_vals=None, fil
         mode = 'handoff' if handoff else 'exact'
     else:
         mode = 'name' if main_supports_options(paths, main) else 'core'
-    # SuperCard (corepatches.py): the patched core, with the two options it needs set for this launch only
-    sc_pads = cp.supercard_ports(system_vals, game_vals) if cp.available(paths, rbf_file) else []
-    supercard = bool(sc_pads)
-    if supercard and mode != 'handoff':
-        warnings.append('SuperCard needs a Main that takes Coreshell\'s settings at launch: started without it')
-        supercard = False
-    if supercard:
-        sc = cp.supercard_set(sc_pads)
-        for pad, (_, snac) in sorted(cp.PORTS.items()):
-            if pad not in sc_pads and values.get(pad) == snac:
-                # the patch is for the whole core: that port's own front-port controller is read from USB too
-                warnings.append('SuperCard: %s is the front port\'s controller, but with SuperCard its pad is the '
-                                'USB controller' % pad)
-        values = dict(values, **sc)
-        changed = changed + [k for k in sc if k not in changed]
+    # Super MemCard's core patch (corepatches.py): the PSX core with SNAC MemCard = Real under any Pad type. Needed
+    # when the core will run that way: its own settings (.CFG) with what Coreshell sets over them; nothing extra set
+    supercard = False
+    if cp.available(paths, rbf_file):
+        run = values_from_status(prof, read_cfg(paths, prof))
+        run.update({k: values[k] for k in changed if k in values})
+        supercard = cp.needed(run)
     status = handoff_status(prof, values, changed) if mode == 'handoff' else None
     ini = dict(prof.get('ini') or {}) if handoff else {}     # the profile's INI settings for this core
     if prof.get('ini') and not handoff:
@@ -860,7 +852,7 @@ def launch(paths, prof, rom=None, save=None, game_vals=None, system_vals=None,
     # a core patch for this exact stock core (corepatches.py): the patched copy, from /tmp, instead
     patched = cp.patched_rbf(paths, prof, p['rbf_file'], log=log, on=p['supercard'])
     if p['supercard'] and not patched:
-        raise RuntimeError('SuperCard: the core patch couldn\'t be applied (the stock core would ignore the card)')
+        raise RuntimeError('SNAC MemCard Real: the core patch couldn\'t be applied (the stock core would ignore the card)')
     if patched:
         p['mgl'] = p['mgl'].replace('\t<rbf>%s</rbf>' % prof['rbf'], '\t<rbf>%s</rbf>' % patched, 1)
     p['core_patch'] = bool(patched)

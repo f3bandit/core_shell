@@ -46,9 +46,9 @@ class MemcardOnly(unittest.TestCase):
 
 
 
-class SuperCard(unittest.TestCase):
-    """SuperCard (f3bandit, Nov 14 2026): its own entry; on, the patched PSX core with Pad1 = SNAC-port1 and SNAC MemCard =
-    Virtual for that launch only (what the patch reads as "USB pad, real card"); the user's own options untouched."""
+class AnyPad(unittest.TestCase):
+    """The PSX patch (f3bandit, Nov 27 2026): the core's own options mean what they say. SNAC MemCard = Real with a Pad
+    that isn't SNAC-portN or Off: the patched core, nothing else set; the user's own options sent as they are."""
 
     def setUp(self):
         import json
@@ -58,6 +58,8 @@ class SuperCard(unittest.TestCase):
         self.prof = json.load(open(os.path.join(here, '..', 'systems', 'psx.json')))
         self.d = tempfile.mkdtemp()
         self.paths = Paths(self.d)
+        self.paths.config = os.path.join(self.d, 'config')
+        os.makedirs(self.paths.config)
         self.rbf = os.path.join(self.d, 'PSX_20260807.rbf')
         with open(self.rbf, 'wb') as f:
             f.write(b'stock core')
@@ -70,87 +72,76 @@ class SuperCard(unittest.TestCase):
         self.patches.start()
         self.addCleanup(self.patches.stop)
 
+    def plan(self, user, cfg=None, available=True):
+        if cfg is not None:
+            with open(os.path.join(self.paths.config, self.prof['config_file']), 'wb') as f:
+                f.write(self.ln.status_bytes(self.prof, cfg))
+        with mock.patch.object(cp, 'available', return_value=available):
+            return self.ln.plan(self.paths, self.prof, None, game_vals={}, system_vals=user)
+
     def bits(self, plan, lo, hi):
         v = int.from_bytes(self.ln.handoff_status(self.prof, plan['values'], plan['set'])[1], 'little')
         return (v >> lo) & ((1 << (hi - lo + 1)) - 1)
 
-    def test_on_with_a_patch(self):
-        user = {'Pad1': 'Dualshock', 'SNAC MemCard': 'Real', cp.SUPERCARD_KEY: 'On'}
-        with mock.patch.object(cp, 'available', return_value=True):
-            p = self.ln.plan(self.paths, self.prof, None, game_vals={}, system_vals=user)
-        self.assertTrue(p['supercard'])
-        self.assertEqual(self.bits(p, 45, 48), 0b1010)    # Pad1: SNAC-port1
-        self.assertEqual(self.bits(p, 66, 66), 0)         # SNAC MemCard: Virtual (the patch: the pad virtual)
-        self.assertEqual(user['Pad1'], 'Dualshock')       # the user's own choices aren't changed
+    def test_needed(self):
+        self.assertTrue(cp.needed({'SNAC MemCard': 'Real', 'Pad1': 'NeGcon', 'Pad2': 'Off'}))
+        self.assertTrue(cp.needed({'SNAC MemCard': 'Real'}))                       # (Dualshock, the default)
+        self.assertFalse(cp.needed({'SNAC MemCard': 'Virtual', 'Pad1': 'NeGcon'}))
+        self.assertFalse(cp.needed({'SNAC MemCard': 'Real', 'Pad1': 'SNAC-port1', 'Pad2': 'Off'}))   # stock does it
+        self.assertFalse(cp.needed({'SNAC MemCard': 'Real', 'Pad1': 'Off', 'Pad2': 'SNAC-port2'}))
 
-    def test_off_is_the_users_settings(self):
-        user = {'Pad1': 'Dualshock', 'SNAC MemCard': 'Real'}
-        with mock.patch.object(cp, 'available', return_value=True):
-            p = self.ln.plan(self.paths, self.prof, None, game_vals={}, system_vals=user)
-        self.assertFalse(p['supercard'])
-        self.assertEqual(self.bits(p, 45, 48), 0)         # Dualshock
+    def test_real_with_a_usb_pad(self):
+        user = {'Pad1': 'NeGcon', 'SNAC MemCard': 'Real'}
+        p = self.plan(user)
+        self.assertTrue(p['supercard'])
+        self.assertEqual(self.bits(p, 45, 48), 0b0101)    # NeGcon, as the user chose
         self.assertEqual(self.bits(p, 66, 66), 1)         # Real
-
-    def test_no_patch_no_supercard(self):
-        with mock.patch.object(cp, 'available', return_value=False):
-            p = self.ln.plan(self.paths, self.prof, None, game_vals={}, system_vals={cp.SUPERCARD_KEY: 'On'})
-            self.assertFalse(p['supercard'])
-            items = [{'key': 'Pad1', 'values': ['Dualshock', 'SNAC-port1'], 'value': 'Dualshock'}]
-            self.assertEqual(cp.decorate_menu(items, self.paths, self.rbf, {}, {})[0]['values'],
-                             ['Dualshock', 'SNAC-port1'])   # and no Pad1 choice for it in the menu
-
-    def test_game_choice_wins(self):
-        self.assertEqual(cp.supercard_value({cp.SUPERCARD_KEY: 'On'}, {cp.SUPERCARD_KEY: 'Off'}), 'Off')
-        self.assertEqual(cp.supercard_value({cp.SUPERCARD_KEY: 'On'}, {}), 'On')
-        self.assertEqual(cp.supercard_value({}, None), 'Off')
-
-    def menu(self, system_vals, game_vals=None, game_keys=()):
-        items = [{'key': 'Pad1', 'values': ['Dualshock', 'SNAC-port1'], 'value': 'Dualshock', 'from': 'default',
-                  'per_game': False, 'per_display': False},
-                 {'key': 'Pad2', 'values': ['Dualshock', 'SNAC-port2'], 'value': 'Dualshock', 'from': 'default',
-                  'per_game': False, 'per_display': False},
-                 {'key': 'SNAC MemCard', 'values': ['Virtual', 'Real'], 'value': 'Virtual', 'from': 'default'}]
-        with mock.patch.object(cp, 'available', return_value=True):
-            return cp.decorate_menu(items, self.paths, self.rbf, system_vals, game_vals or {}, game_keys)
-
-    def test_a_pad_choice_in_the_menu(self):
-        """SuperCard is a Pad1 / Pad2 choice named for what it does, not the core's own labels (f3bandit, Nov 22 2026)."""
-        off = self.menu({})
-        self.assertEqual(off[0]['values'], ['Dualshock', 'SNAC-port1', cp.SUPERCARD_CHOICE])
-        self.assertEqual(off[1]['values'], ['Dualshock', 'SNAC-port2', cp.SUPERCARD_CHOICE])
-        self.assertEqual([it['value'] for it in off], ['Dualshock', 'Dualshock', 'Virtual'])
-        on = self.menu({cp.SUPERCARD_KEY: 'On'})
-        self.assertEqual([it['value'] for it in on], [cp.SUPERCARD_CHOICE, 'Dualshock', 'Real'])
-        self.assertEqual(on[0]['from'], 'system')
-        two = self.menu({cp.SUPERCARD2_KEY: 'On'})
-        self.assertEqual([it['value'] for it in two], ['Dualshock', cp.SUPERCARD_CHOICE, 'Real'])
-        game = self.menu({}, {cp.SUPERCARD2_KEY: 'On'}, [cp.SUPERCARD2_KEY])
-        self.assertEqual(game[1]['value'], cp.SUPERCARD_CHOICE)
-        self.assertTrue(game[1]['per_game'])
-
-    def test_port_2(self):
-        user = {'Pad1': 'Dualshock', 'Pad2': 'Dualshock', 'SNAC MemCard': 'Real', cp.SUPERCARD2_KEY: 'On'}
-        with mock.patch.object(cp, 'available', return_value=True):
-            p = self.ln.plan(self.paths, self.prof, None, game_vals={}, system_vals=user)
-        self.assertTrue(p['supercard'])
-        self.assertEqual(self.bits(p, 45, 48), 0)         # Pad1: the user's Dualshock
-        self.assertEqual(self.bits(p, 49, 52), 0b1010)    # Pad2: SNAC-port2
-        self.assertEqual(self.bits(p, 66, 66), 0)         # SNAC MemCard: Virtual
+        self.assertEqual(sorted(p['set']), ['Pad1', 'SNAC MemCard'])   # nothing else set
         self.assertEqual(p['warnings'], [])
 
-    def test_both_ports(self):
-        user = {cp.SUPERCARD_KEY: 'On', cp.SUPERCARD2_KEY: 'On'}
-        with mock.patch.object(cp, 'available', return_value=True):
-            p = self.ln.plan(self.paths, self.prof, None, game_vals={}, system_vals=user)
-        self.assertEqual(self.bits(p, 45, 48), 0b1010)
-        self.assertEqual(self.bits(p, 49, 52), 0b1010)
+    def test_from_the_cores_own_settings(self):
+        """Set in the core's own menu (its .CFG), not in a frontend: still the patched core, nothing sent."""
+        p = self.plan({}, cfg={'Pad1': 'Analog', 'SNAC MemCard': 'Real'})
+        self.assertTrue(p['supercard'])
+        self.assertEqual(p['set'], [])
+        p = self.plan({'SNAC MemCard': 'Virtual'}, cfg={'Pad1': 'Analog', 'SNAC MemCard': 'Real'})
+        self.assertFalse(p['supercard'])                  # (what Coreshell sets over the .CFG wins)
 
-    def test_the_other_port_on_its_own_front_port_pad(self):
-        """The patch is for the whole core: a real pad in the other front port is read from USB too: said."""
-        user = {cp.SUPERCARD_KEY: 'On', 'Pad2': 'SNAC-port2'}
+    def test_stock_cases(self):
+        self.assertFalse(self.plan({'SNAC MemCard': 'Virtual'})['supercard'])
+        self.assertFalse(self.plan({'SNAC MemCard': 'Real', 'Pad1': 'SNAC-port1', 'Pad2': 'Off'})['supercard'])
+        self.assertFalse(self.plan({'SNAC MemCard': 'Real', 'Pad1': 'NeGcon'}, available=False)['supercard'])
+
+    def test_any_main(self):
+        """No settings to hand over: a Main without the handoff gets the patched core too."""
+        with mock.patch.object(self.ln, 'handoff_main', return_value=False):
+            p = self.plan({'Pad1': 'Digital', 'SNAC MemCard': 'Real'})
+        self.assertTrue(p['supercard'])
+        self.assertEqual(p['mode'], 'exact')
+
+    def test_menu_note(self):
+        items = [{'key': 'Pad1', 'values': ['Dualshock', 'SNAC-port1'], 'value': 'Dualshock'},
+                 {'key': 'SNAC MemCard', 'values': ['Virtual', 'Real'], 'value': 'Virtual'}]
         with mock.patch.object(cp, 'available', return_value=True):
-            p = self.ln.plan(self.paths, self.prof, None, game_vals={}, system_vals=user)
-        self.assertTrue(any('Pad2' in w for w in p['warnings']))
+            out = cp.decorate_menu([dict(i) for i in items], self.paths, self.rbf)
+        self.assertEqual(out[0]['values'], ['Dualshock', 'SNAC-port1'])   # the core's own list, nothing added
+        self.assertIn('any controller type', out[1]['note'])
+        with mock.patch.object(cp, 'available', return_value=False):
+            out = cp.decorate_menu([dict(i) for i in items], self.paths, self.rbf)
+        self.assertNotIn('note', out[1])
+
+    def test_migrate_old_supercard(self):
+        old1, old2 = sorted(cp.OLD_KEYS)
+        self.assertIsNone(cp.migrate_supercard({'Pad1': 'NeGcon'}))
+        self.assertEqual(cp.migrate_supercard({old1: 'On', 'Pad1': 'Digital'}),
+                         {'Pad1': 'Digital', 'SNAC MemCard': 'Real'})
+        self.assertEqual(cp.migrate_supercard({old2: 'On', 'Pad2': 'SNAC-port2'}),
+                         {'Pad2': 'Dualshock', 'SNAC MemCard': 'Real'})   # (the front port's pad: Dualshock)
+        self.assertEqual(cp.migrate_supercard({old1: 'Off'}), {})
+        # a game's "Off" under a system's "On": that game stays on its virtual card
+        self.assertEqual(cp.migrate_supercard({old1: 'Off'}, {old1: 'On'}), {'SNAC MemCard': 'Virtual'})
+        self.assertEqual(cp.migrate_supercard({old1: 'On'}, {'Pad1': 'SNAC-port1'}),
+                         {'SNAC MemCard': 'Real', 'Pad1': 'Dualshock'})
 
     def test_patched_rbf_follows_the_choice(self):
         exe = os.path.join(self.d, cp.EXE)
@@ -160,9 +151,29 @@ class SuperCard(unittest.TestCase):
         os.chmod(exe, 0o755)
         with mock.patch.object(cp, 'index', return_value={}) as idx:
             self.assertIsNone(cp.patched_rbf(self.paths, {'rbf': '_Console/PSX'}, self.rbf, on=False))
-            idx.assert_not_called()                       # off (and memcard_patch off): not looked for
+            idx.assert_not_called()                       # not needed (and memcard_patch off): not looked for
             cp.patched_rbf(self.paths, {'rbf': '_Console/PSX'}, self.rbf, on=True)
-            idx.assert_called()                           # on: looked for (none here: the stock core)
+            idx.assert_called()                           # needed: looked for (none here: the stock core)
+
+
+class Migration(unittest.TestCase):
+    """The server turns old SuperCard picks into SNAC MemCard Real once, at start."""
+
+    def test_settings_files(self):
+        import json
+        from coreshell import server
+        d = tempfile.mkdtemp()
+        old1 = sorted(cp.OLD_KEYS)[0]
+        os.makedirs(os.path.join(d, 'psx'))
+        with open(os.path.join(d, 'psx.json'), 'w') as f:
+            json.dump({old1: 'On', 'Pad1': 'SNAC-port1'}, f)
+        with open(os.path.join(d, 'psx', 'Game.json'), 'w') as f:
+            json.dump({old1: 'Off'}, f)
+        fake = mock.Mock()
+        fake.paths.settings = d
+        server.Coreshell._migrate_supercard(fake)
+        self.assertEqual(json.load(open(os.path.join(d, 'psx.json'))), {'Pad1': 'Dualshock', 'SNAC MemCard': 'Real'})
+        self.assertEqual(json.load(open(os.path.join(d, 'psx', 'Game.json'))), {'SNAC MemCard': 'Virtual'})
 
 
 if __name__ == '__main__':

@@ -1,20 +1,21 @@
 # Core patches: Super MemCard's only
 
 A core patch changes a **stock** core's bitstream on the MiSTer, as the core loads, without its source and without
-Quartus. Coreshell applies **only Super MemCard patches** (`patches/<core>.memcard.cspatch`), and only when the user has
-turned them on: **SuperCard**, the Pad1 or Pad2 choice "USB pad + front-port card" in the core's menu (per system or per
-game; the choice is only there when a patch for the installed core is, and SNAC MemCard then shows "Real": the
-core's own labels say the opposite of what the patched core does with them), or `"memcard_patch": true` in `coreshell/settings/coreshell.json` for
-every launch (off by default). Today that's one: the PSX core reaching the real card in the front port while a USB pad
-plays (the stock core only lets the card in when Pad1 is the front port's controller).
+Quartus. Coreshell applies **only Super MemCard patches**
+(`patches/<core>.memcard.cspatch`), and only when a launch needs one, or with `"memcard_patch": true` in
+`coreshell/settings/coreshell.json` for every launch (off by default). Today that's one: the PSX core with the real
+memory cards in the front ports under any controller type (the stock core only lets a card in when that Pad is the
+front port's controller, SNAC-portN).
 
-`PSX_20260807.memcard.cspatch` turns the core's virtual-card switch round: with SNAC MemCard on "Virtual", a pad
-command (01) goes to the core's own pad (USB) and a card command (81) stays on the front port. Only the first byte
-a game sends after selecting the port counts (Nov 22 2026: the first patch read a byte left over from the previous
-exchange, so card reads after a pad read went to the virtual card). A SuperCard launch
-runs the patched core with Pad1 = SNAC-port1 and SNAC MemCard = Virtual for that launch only (the handoff's status
-bits), so the core's own Pad1 and SNAC MemCard options stay as the user left them. It needs a Main that takes the
-handoff (Phosphor's, corehost); with another Main the launch says so and starts without it.
+`PSX_20260807.memcard.cspatch` (Nov 27 2026) makes the core's own options mean what they say: **SNAC MemCard =
+Real** is the memory cards in the front ports with any Pad type from USB (NeGcon, DualShock, GunCon...: a pad command
+goes to the core's own pad of that type, a card command to the card in that front port; only the first byte a game
+sends after selecting the port counts). A Pad set to Off keeps its virtual card; Pad = SNAC-portN, SNAC MemCard =
+Virtual and multitap are stock. Coreshell uses the patched core when the core will run with SNAC MemCard = Real and
+a Pad that is neither SNAC-portN nor Off (its .CFG with what Coreshell sets over it); nothing else is set, with any
+Main. (It replaces the first patch, Nov 22, digital pads only, picked as a Pad choice "USB pad + front-port card":
+old picks become SNAC MemCard = Real with the Pad they had.) Built by `psx_anypad/build.sh`, checked by
+`psx_anypad/check.py` (every input of the changed logic, and the stock core's behaviour from the same checker).
 
 No core is patched for the front port's controller. Controllers are USB (or Bluetooth) in Main, the frontend and
 every core, as on a stock MiSTer. (A front-port pad patch, `frontpad.v`, was built and tested on NES and SNES on
@@ -27,6 +28,13 @@ stock core it was made for.
 
 A change to logic the core already has (the PSX card's): `tools/lutpatch` (libmistral) changes one ALM's LUT mask
 (and input mode) and refuses unless the ALM is what it was worked out on; then `mkpatch.py` makes the difference.
+
+A few LUTs with no flip-flops (the PSX patch): nextpnr places them into ALMs the stock core leaves unused inside its
+own logic blocks (`NPNR_FREE_ALMS`; the block's clock and clear lines stay the stock core's), reads stock nodes
+(`NPNR_TAPS` NAME=RNODE) and takes over the stock LAB inputs it drives (`NPNR_SINKS`); `lutpatch` then makes the
+stock LUTs behind those inputs pass them through. A free ALM ahead of a stock adder chain has to be checked by hand: the
+chain must not take its carry from it (the PSX patch: LAB 030.046's chain makes its own carry at ALM 2, so it reads
+none from the new ALM 0; the other new ALMs have no stock chain after them).
 
 New logic in free space: `build_patch.py STOCK.rbf --design DESIGN.v --name memcard.vN` (it refuses any other name):
 

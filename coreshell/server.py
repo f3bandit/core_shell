@@ -139,6 +139,38 @@ class Coreshell(object):
             _ic.restore(self.paths.root)
         except OSError:
             pass
+        self._migrate_supercard()
+
+    def _migrate_supercard(self):
+        """The old SuperCard picks (a Pad choice before Nov 27 2026) -> SNAC MemCard = Real with the Pad they had
+        (corepatches.migrate_supercard). A game's layer is migrated against its system's as it was (its own picks)."""
+        root = self.paths.settings
+
+        def load(f):
+            try:
+                with open(f, encoding='utf-8') as fh:
+                    return json.load(fh)
+            except (OSError, ValueError):
+                return None
+        systems = {f: load(f) for f in glob.glob(os.path.join(root, '*.json'))}
+        games = glob.glob(os.path.join(root, '*', '*.json'))
+        for f in sorted(systems) + sorted(games):
+            vals = systems[f] if f in systems else load(f)
+            if not isinstance(vals, dict):
+                continue
+            below = None
+            if f not in systems:                      # a game's layer: its system's (before migrating) under it
+                below = systems.get(os.path.join(root, os.path.basename(os.path.dirname(f)) + '.json')) or {}
+            new = cpatch.migrate_supercard(vals, below)
+            if new is None:
+                continue
+            try:
+                with open(f + '.tmp', 'w', encoding='utf-8') as fh:
+                    json.dump(new, fh, indent=1, ensure_ascii=False)
+                os.replace(f + '.tmp', f)
+                _log('settings %s: SuperCard -> SNAC MemCard Real' % os.path.relpath(f, root))
+            except OSError:
+                pass
 
     # -------------------------------------------------------------- profiles
     def profiles(self):
@@ -534,9 +566,8 @@ class Coreshell(object):
                           'per_display': src in ('display', 'game_display')})
         # Super MemCard: its page on every system it keeps saves for (no core built for it)
         items += self.smc.menu_items(p)
-        # SuperCard (USB pad and the real card) as a Pad1 and Pad2 choice, when a patch for the installed core is here
-        items = cpatch.decorate_menu(items, self.paths, ln.installed_rbf(self.paths, p['rbf']), sysv, gamev,
-                                     [k for k, _ in cpatch.PORTS.values() if game and k in gamev])
+        # SNAC MemCard "Real" with the core patch: front-port cards under any Pad type (the note says so)
+        items = cpatch.decorate_menu(items, self.paths, ln.installed_rbf(self.paths, p['rbf']))
         return {'menu': items, 'display': self.display()[1], 'profile': self._pid(req),
                 'name': p['name'], 'variant': p.get('variant', 'stock')}
 
@@ -545,41 +576,11 @@ class Coreshell(object):
         if req['key'] == smc.CARD_KEY:
             # the card a system plays from is the card's, for every game and display
             return {'card': self.smc.pick(p, req['value'])}
-        if req['key'] in (cpatch.SUPERCARD_KEY, cpatch.SUPERCARD2_KEY):
-            if req['value'] not in cpatch.SUPERCARD_VALUES:
-                raise ValueError('%r is not one of %s' % (req['value'], cpatch.SUPERCARD_VALUES))
-            if not cpatch.available(self.paths, ln.installed_rbf(self.paths, p['rbf'])):
-                raise KeyError('SuperCard: no core patch for the installed %s core' % p['system'])
-            key = p['system'] + _vsuffix(p)
-            with self.lock:
-                vals = ln.read_settings(self.paths, key, req.get('game'))
-                vals[req['key']] = req['value']
-                ln.write_settings(self.paths, key, vals, req.get('game'))
-            return {}
-        patch_here = req['key'] in cpatch.PORTS and cpatch.available(self.paths,
-                                                                     ln.installed_rbf(self.paths, p['rbf']))
-        sc_key = cpatch.PORTS[req['key']][0] if patch_here else None
-        if patch_here and req['value'] == cpatch.SUPERCARD_CHOICE:
-            # a Pad's "USB pad + front-port card": SuperCard on for that port; the Pad the user had stays for later
-            key = p['system'] + _vsuffix(p)
-            with self.lock:
-                vals = ln.read_settings(self.paths, key, req.get('game'))
-                vals[sc_key] = 'On'
-                ln.write_settings(self.paths, key, vals, req.get('game'))
-            return {}
         o = pf.find_option(p, req['key'])
         if not o:
             raise KeyError('no option %r' % req['key'])
         if req['value'] not in o['values']:
             raise ValueError('%r is not one of %s' % (req['value'], o['values']))
-        if patch_here:
-            # any other choice for that Pad: its SuperCard off where it was picked
-            key = p['system'] + _vsuffix(p)
-            with self.lock:
-                vals = ln.read_settings(self.paths, key, req.get('game'))
-                if vals.get(sc_key) == 'On':
-                    vals[sc_key] = 'Off'
-                    ln.write_settings(self.paths, key, vals, req.get('game'))
         key = p['system'] + _vsuffix(p)
         disp = self._disp(req)
         with self.lock:

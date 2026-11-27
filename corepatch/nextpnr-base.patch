@@ -32,7 +32,7 @@ index 9dd2e81..d11d86c 100644
          return is_alm_legal(data.lab_data.lab, data.lab_data.alm) && check_lab_input_count(data.lab_data.lab) &&
                 check_mlab_groups(data.lab_data.lab);
 diff --git a/mistral/arch.h b/mistral/arch.h
-index 10309bf..068c6d8 100644
+index 10309bf..8a81d9b 100644
 --- a/mistral/arch.h
 +++ b/mistral/arch.h
 @@ -357,7 +357,7 @@ struct Arch : BaseArch<ArchRanges>
@@ -61,7 +61,7 @@ index 10309bf..068c6d8 100644
              return false;
          return BaseArch::checkPipAvailForNet(pip, net);
      }
-@@ -482,6 +482,33 @@ struct Arch : BaseArch<ArchRanges>
+@@ -482,6 +482,34 @@ struct Arch : BaseArch<ArchRanges>
      void create_control(int x, int y);                 // globals.cc
      void create_hps_mpu_general_purpose(int x, int y); // globals.cc
  
@@ -72,6 +72,7 @@ index 10309bf..068c6d8 100644
 +    pool<int> base_tiles;
 +    pool<BelId> base_bels;
 +    pool<int> only_tiles;
++    pool<int> free_alms; // pos * 16 + alm: unused ALMs in the base's blocks, open to new LUTs (no flip-flops)
 +    dict<IdString, BelId> tap_bels, sink_bels;
 +    void init_base();
 +    void bind_base_cells();
@@ -97,10 +98,10 @@ index 10309bf..068c6d8 100644
      bool is_comb_cell(IdString cell_type) const;        // lab.cc
 diff --git a/mistral/base.cc b/mistral/base.cc
 new file mode 100644
-index 0000000..e0414f9
+index 0000000..a9bce1e
 --- /dev/null
 +++ b/mistral/base.cc
-@@ -0,0 +1,244 @@
+@@ -0,0 +1,256 @@
 +/*
 + *  nextpnr -- Next Generation Place and Route
 + *
@@ -114,6 +115,8 @@ index 0000000..e0414f9
 + *                                (attribute PIN="<PIN>") can read, even though the base already uses the pin
 + *  NPNR_SINKS=<NAME>=<RNODE>,... routing nodes a MISTRAL_SINK cell (attribute NODE="<NAME>") drives, taking them
 + *                                over from the base (e.g. the HPS UART's RXD input node)
++ *  NPNR_FREE_ALMS=x,y,z;...      ALMs the base leaves unused inside its own logic blocks, open to the new design's
++ *                                LUTs only (no flip-flops: those share the block's clock and enable lines)
 + *
 + *  Permission to use, copy, modify, and/or distribute this software for any
 + *  purpose with or without fee is hereby granted, provided that the above
@@ -302,6 +305,14 @@ index 0000000..e0414f9
 +        log_info("placement limited to %d logic blocks\n", int(only_tiles.size()));
 +    }
 +
++    if (const char *fa = getenv("NPNR_FREE_ALMS")) {
++        for (auto &xyz : split(fa, ';')) {
++            auto v = split(xyz, ',');
++            free_alms.insert(int(CycloneV::xy2pos(std::stoi(v.at(0)), std::stoi(v.at(1)))) * 16 + std::stoi(v.at(2)));
++        }
++        log_info("%d unused ALMs in the base's blocks open to LUTs\n", int(free_alms.size()));
++    }
++
 +    // Any other block (clock buffers, ...) with a pin on the base's routing is the base's
 +    for (auto &w : wires)
 +        if (base_blocked.count(w.first))
@@ -320,6 +331,8 @@ index 0000000..e0414f9
 +        return true;
 +    IdString t = bel_data(bel).type;
 +    bool logic = t.in(id_MISTRAL_COMB, id_MISTRAL_MCOMB, id_MISTRAL_FF, id_MISTRAL_M10K);
++    if (t == id_MISTRAL_COMB && free_alms.count(int(bel.pos) * 16 + bel_data(bel).lab_data.alm))
++        return false;
 +    if (logic && !only_tiles.empty() && !only_tiles.count(int(bel.pos)))
 +        return true;
 +    return logic && base_tiles.count(int(bel.pos));
@@ -346,10 +359,19 @@ index 0000000..e0414f9
 +
 +NEXTPNR_NAMESPACE_END
 diff --git a/mistral/bitstream.cc b/mistral/bitstream.cc
-index b46a9f6..9ff1da8 100644
+index b46a9f6..c27a16d 100644
 --- a/mistral/bitstream.cc
 +++ b/mistral/bitstream.cc
-@@ -377,8 +377,13 @@ struct MistralBitgen
+@@ -346,6 +346,8 @@ struct MistralBitgen
+         auto &lab_data = ctx->labs.at(lab);
+         auto pos = lab_data.alms.at(0).lut_bels[0].pos;
+         auto block_type = ctx->labs.at(lab).is_mlab ? CycloneV::MLAB : CycloneV::LAB;
++        if (ctx->have_base && ctx->base_tiles.count(int(pos)))
++            return; // a base block with new LUTs only: its clear and clock lines stay the base's
+ 
+         const std::array<CycloneV::bmux_type_t, 2> aclr_inp{CycloneV::ACLR0_SEL, CycloneV::ACLR1_SEL};
+         for (int i = 0; i < 2; i++) {
+@@ -377,8 +379,13 @@ struct MistralBitgen
  
      void run()
      {
@@ -396,10 +418,31 @@ index 0d97133..60ea4c3 100644
                  continue;
              }
 diff --git a/mistral/pack.cc b/mistral/pack.cc
-index 5dae403..f053064 100644
+index 5dae403..22ea57b 100644
 --- a/mistral/pack.cc
 +++ b/mistral/pack.cc
-@@ -507,6 +507,7 @@ bool Arch::pack()
+@@ -499,6 +499,20 @@ struct MistralPacker
+         constrain_carries();
+         constrain_lutram();
+         setup_m10ks();
++        if (ctx->have_base) {
++            // into an existing core: a constant driver nothing reads would still take (and configure) an ALM
++            for (auto n : {ctx->id("$PACKER_GND_NET"), ctx->id("$PACKER_VCC_NET")}) {
++                auto it = ctx->nets.find(n);
++                if (it == ctx->nets.end() || !it->second->users.empty())
++                    continue;
++                IdString drv = it->second->driver.cell ? it->second->driver.cell->name : IdString();
++                if (drv != IdString()) {
++                    ctx->cells.at(drv)->disconnectPort(id_Q);
++                    ctx->cells.erase(drv);
++                }
++                ctx->nets.erase(n);
++            }
++        }
+     }
+ };
+ }; // namespace
+@@ -507,6 +521,7 @@ bool Arch::pack()
  {
      MistralPacker packer(getCtx());
      packer.run();
